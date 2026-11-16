@@ -25,7 +25,7 @@ Please distinguish modified distributions and do not imply maintainer endorsemen
 - [ ] Keep scope focused; include migration for saved-data changes.
 - [ ] Run scripts/build.ps1 and relevant regression tests.
 - [ ] Describe actual Windows/hardware tests and anything not tested.
-- [ ] Add English/Danish UI text with UiText.T; update docs and changelog as needed.
+- [ ] Add English/Danish/German UI text with UiText.T; update docs and changelog as needed.
 - [ ] Review dependencies, license notices and privacy impact.
 - [ ] Confirm no keys, certificates, credentials or personal profiles are included.
 

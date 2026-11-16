@@ -32,3 +32,8 @@ have not been executed. The Dockerfile reuses scripts/build.ps1.
 MSIX/documentation additions: manifest XML and local Markdown links checked.
 Windows SDK MakeAppx, PowerShell packaging, Store certification and installed MSIX
 behaviour have not been executed here. No signed or compiled MSIX is included.
+
+0.6.2: 167 embedded UI messages covered in English, Danish and German.
+Language selection, OS detection, English fallback and atomic preference storage
+tested. Translation key coverage and guide links checked. Native Windows layout
+with German text and installer/MSIX languages still require Windows testing.

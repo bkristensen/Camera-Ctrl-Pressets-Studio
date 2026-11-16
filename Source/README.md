@@ -1,9 +1,9 @@
 # Cam Pressets Studio
 
-[Documentation](docs/INDEX.md) · [FAQ](faq.md) · [Project description](docs/PROJECT.md) · [Compatibility](docs/COMPATIBILITY.md) · [MSIX / Store](docs/MSIX-AND-STORE.md) · [Code signing policy](CODE-SIGNING-POLICY.md)
+[English guides](docs/en/INDEX.md) · [Danske guider](docs/da/INDEX.md) · [Deutsche Anleitungen](docs/de/INDEX.md) · [Documentation](docs/INDEX.md) · [FAQ](faq.md) · [Project description](docs/PROJECT.md) · [Compatibility](docs/COMPATIBILITY.md) · [MSIX / Store](docs/MSIX-AND-STORE.md) · [Code signing policy](CODE-SIGNING-POLICY.md)
 
 A single C# Windows camera controller with a blue, resizable interface inspired
-by the supplied design. Version **0.6.1-beta.1** replaces the separate Studio and
+by the supplied design. Version **0.6.2-beta.1** replaces the separate Studio and
 compact downloads. It uses the actual camera driver, not the simulated coordinates
 in the original design demo.
 
@@ -18,8 +18,12 @@ Programs directory and creates a Start-menu shortcut. It does not modify Windows
 security or PowerShell execution policy. If scripts are restricted, run the
 portable EXE or build the Inno Setup installer on Windows instead.
 
-English is the default; Danish follows the Windows **display language**.
-Override with `--lang=en` or `--lang=da`.
+Use Settings > Language to choose Automatic, English, Dansk or Deutsch. Click
+Save language and restart Studio. Automatic follows the Windows display language
+for Danish/German and otherwise uses English. A `--lang=en`, `--lang=da`,
+`--lang=de` or `--lang=auto` command-line option takes priority for that launch.
+Language is saved per Windows user in `%LOCALAPPDATA%\CamPressets\language.txt`,
+independently of camera profiles. Windows-owned dialogs may use the OS language.
 
 ## Camera startup gate (enabled by default)
 
@@ -126,7 +130,7 @@ With Inno Setup 6 installed:
 ./scripts/build-installer.ps1
 ```
 
-The installer includes only Studio, with English/Danish language detection and
+The installer includes only Studio, with English/Danish/German language detection and
 per-user installation. The GitHub Actions workflow builds unsigned test artifacts;
 it does not publish a release. The exported project is MIT-licensed. The supplied
 icon is embedded in the EXE and installer configuration.

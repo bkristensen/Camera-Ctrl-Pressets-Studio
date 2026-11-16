@@ -4,7 +4,7 @@ param(
     [Parameter(Mandatory)][string]$Publisher,
     [Parameter(Mandatory)][string]$PublisherDisplayName,
     [string]$DisplayName = 'Cam Pressets Studio',
-    [string]$PackageVersion = '0.6.1.0',
+    [string]$PackageVersion = '0.6.2.0',
     [string]$MakeAppxPath = 'MakeAppx.exe'
 )
 $ErrorActionPreference = 'Stop'

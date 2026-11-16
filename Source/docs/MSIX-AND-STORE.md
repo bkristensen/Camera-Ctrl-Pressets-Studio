@@ -45,7 +45,7 @@ Run from the project root, replacing the example values with Partner Center valu
 
 The script runs the normal build/tests, builds explicit x64 binaries, generates
 three PNG logo sizes from the existing icon, fills the manifest and calls MakeAppx
-with validation enabled. Output: `artifacts/Cam-Pressets-Studio-0.6.1.0-x64.msix`.
+with validation enabled. Output: `artifacts/Cam-Pressets-Studio-0.6.2.0-x64.msix`.
 Pass `-PackageVersion` for updates; this script requires four parts ending in zero.
 Pass `-DisplayName` if the reserved name differs. It refuses template identity values.
 
@@ -64,7 +64,7 @@ is a manifest compatibility value, not evidence of actual platform testing.
 - [ ] Test configured external executable/shortcut launches and process detection.
 - [ ] Test profile read/write, legacy import, updates, uninstall and reinstall under
   MSIX file-system redirection. Back up profiles; portable/Store data sharing is unverified.
-- [ ] Test keyboard access, window sizes, DPI and English/Danish display language.
+- [ ] Test keyboard access, window sizes, DPI and English/Danish/German display language.
 
 ## Listing and review
 

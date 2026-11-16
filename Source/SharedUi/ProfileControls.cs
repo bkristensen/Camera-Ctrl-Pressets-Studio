@@ -14,7 +14,7 @@ namespace BrioPresets {
   public ProfileControls(Form form,Action<ProfileEntry> onApply,Func<bool> hasUnsaved,Func<bool> isBusy,Action<string> report,Action openSettings) {
    owner=form;apply=onApply;dirty=hasUnsaved;busy=isBusy;status=report;
    Dock=DockStyle.Fill;ColumnCount=4;RowCount=1;Margin=Padding.Empty;
-   ColumnStyles.Add(new ColumnStyle(SizeType.Percent,100));ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,48));ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,62));ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,86));
+   ColumnStyles.Add(new ColumnStyle(SizeType.Percent,100));ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,48));ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,100));ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,110));
    var create=new Button {Text=UiText.T("New", "Ny"),Dock=DockStyle.Fill};
    var refresh=new Button {Text=UiText.T("Refresh", "Opdater"),Dock=DockStyle.Fill};
    var settings=new Button {Text=UiText.T("Settings", "Indstillinger"),Dock=DockStyle.Fill};

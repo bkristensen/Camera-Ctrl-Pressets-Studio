@@ -1,5 +1,7 @@
 # Documentation
 
+[English guides](en/INDEX.md) · [Danske guider](da/INDEX.md) · [Deutsche Anleitungen](de/INDEX.md)
+
 Start with [Quick start](QUICK-START.md) and [FAQ](../faq.md).
 
 | Need | Document |
@@ -18,5 +20,5 @@ Start with [Quick start](QUICK-START.md) and [FAQ](../faq.md).
 | Store description draft | [Store listing](STORE-LISTING.md) |
 | What has actually been validated | [Validation](VALIDATION.md) |
 
-English is the primary documentation language. Danish user-interface translations
+English is the primary documentation language. Danish and German user-interface translations
 are included; contributions to additional translations are welcome.

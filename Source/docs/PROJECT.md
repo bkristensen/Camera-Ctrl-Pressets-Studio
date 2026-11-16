@@ -34,7 +34,7 @@ The main window contains the camera wheel, zoom buttons, profile selector and
 preset list. A collapsible settings panel contains step sizes, transition duration,
 image adjustments, startup-program settings, camera selection and always-on-top.
 The window can be resized within documented minimum dimensions. English is the
-default; Danish is selected for a Danish Windows display language.
+default fallback; automatic Danish/German detection and an explicit language selector are available. Restart after changing the language.
 
 Presets store PTZ coordinates only. They do not store a video composition, a
 screen-sharing scene, HDR mode, field of view or the complete camera configuration.

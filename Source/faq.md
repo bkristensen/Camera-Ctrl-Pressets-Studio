@@ -65,3 +65,9 @@ CONTRIBUTING.md and docs/COMMUNITY.md.
 MIT allows modifications. For changes to be merged upstream, preserve the compact
 blue design and core camera-control workflow. This review policy does not restrict
 what the license permits in independently maintained forks.
+
+## How do I change the interface language?
+Choose Automatic, English, Dansk or Deutsch under Settings > Language. Click Save
+language and restart. A --lang=en/da/de/auto option overrides the saved preference.
+The language is per Windows user, not per camera profile. Windows-owned dialogs
+and vendor error messages may remain in the OS language.

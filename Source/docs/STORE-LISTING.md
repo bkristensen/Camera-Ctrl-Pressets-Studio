@@ -21,7 +21,7 @@ and applications are not yet verified. The default startup safeguard requires Zo
 to be running and asks you to confirm that its meeting is ready before camera access.
 For other workflows, this Zoom-specific safeguard must be explicitly disabled.
 
-English and Danish interface. Open source under MIT. No preview, virtual camera,
+English, Danish and German interface. Open source under MIT. No preview, virtual camera,
 screen-sharing automation or multi-source video composition is included.
 
 ## Required publisher additions

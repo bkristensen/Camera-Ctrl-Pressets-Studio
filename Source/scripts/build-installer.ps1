@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$Version = '0.6.1-beta.1',
+    [string]$Version = '0.6.2-beta.1',
     [string]$IsccPath = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe",
     [string]$CertificateThumbprint = '',
     [string]$SignToolPath = 'signtool.exe'

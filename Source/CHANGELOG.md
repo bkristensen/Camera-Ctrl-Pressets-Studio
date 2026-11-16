@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.2-beta.1
+- Added German UI resources and per-user language selection with restart.
+- Added English, Danish and German daily-use, setup and translation guides.
+- Added translation-key validation and language fallback tests.
+
 ## Unreleased
 - Added an unsigned MSIX packaging path with explicit Store identity parameters.
 - Added Store, SignPath, compatibility, licensing and release documentation.

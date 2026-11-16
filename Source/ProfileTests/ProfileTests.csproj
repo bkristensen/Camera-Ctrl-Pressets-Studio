@@ -4,4 +4,4 @@
   <Compile Include="../SharedProfiles/*.cs" Link="SharedProfiles/%(Filename)%(Extension)" />
   <Compile Include="../SharedUi/UiText.cs" Link="UiText.cs" />
  </ItemGroup>
-</Project>
+<ItemGroup><EmbeddedResource Include="../SharedUi/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" /></ItemGroup></Project>

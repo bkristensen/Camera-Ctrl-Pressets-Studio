@@ -9,9 +9,15 @@ namespace BrioPresets {
    UiText.Initialize(new[]{"--lang=da"});Assert(UiText.T("Save", "Gem")=="Gem","Danish override");
    var oldCulture=System.Globalization.CultureInfo.CurrentUICulture;
    System.Globalization.CultureInfo.CurrentUICulture=new System.Globalization.CultureInfo("da-DK");
-   UiText.Initialize(new string[0]);Assert(UiText.IsDanish,"Danish Windows language");
+   UiText.Initialize(new[]{"--lang=auto"});Assert(UiText.IsDanish,"Danish Windows language");
    System.Globalization.CultureInfo.CurrentUICulture=new System.Globalization.CultureInfo("de-DE");
-   UiText.Initialize(new string[0]);Assert(!UiText.IsDanish,"English fallback for other display languages");
+   UiText.Initialize(new[]{"--lang=auto"});Assert(UiText.Language=="de"&&UiText.T("Save","Gem")=="Speichern","German Windows language");
+   UiText.Initialize(new[]{"--lang=de"});Assert(UiText.T("Language","Sprog")=="Sprache","German override");
+   string langTest=System.IO.Path.Combine(System.IO.Path.GetTempPath(),"cam-language-"+Guid.NewGuid()+".txt");
+   try{string currentLanguage=UiText.Language;UiText.SavePreferenceAt("da",langTest);Assert(System.IO.File.ReadAllText(langTest)=="da","Language persisted");UiText.SavePreferenceAt("en",langTest);Assert(System.IO.File.ReadAllText(langTest)=="en","Language atomically replaced");Assert(UiText.Language==currentLanguage,"Saving language requires restart");}finally{if(System.IO.File.Exists(langTest))System.IO.File.Delete(langTest);}
+   Assert(UiText.ResolveLanguage("auto","fr-FR")=="en","Unsupported OS language falls back to English");
+   Assert(UiText.ResolveLanguage("da","de-DE")=="da","Explicit language beats OS language");
+   Assert(UiText.T("Unknown untranslated text","Ukendt tekst")=="Unknown untranslated text","Missing German key uses English");
    System.Globalization.CultureInfo.CurrentUICulture=oldCulture;UiText.Initialize(new string[0]);
    Assert(Motion.Ease(0)==0&&Motion.Ease(1)==1,"endpoints");double previous=0;
    for(int i=0;i<=10000;i++){double x=Motion.Ease(i/10000.0);Assert(x>=previous-1e-12&&x>=0&&x<=1,"monotonic easing");previous=x;}

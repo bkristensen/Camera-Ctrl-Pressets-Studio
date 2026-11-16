@@ -86,7 +86,7 @@ namespace BrioPresets {
    profiles=new ProfileControls(this,ApplyProfile,()=>settingsDirty,()=>timer.Enabled||manualTimer.Enabled||devices.DroppedDown||panelOpen,text=>status.Text=text,ToggleSettings);
    startup=new StartupCoordinator(this,text=>status.Text=text);profiles.ProfileSelected+=()=>startup.Start(saved);center.Controls.Add(profiles,0,0);
    var card=new BluePanel {Dock=DockStyle.Fill};var presetLayout=new TableLayoutPanel {Dock=DockStyle.Fill,ColumnCount=1,RowCount=3};presetLayout.RowStyles.Add(new RowStyle(SizeType.Absolute,44));presetLayout.RowStyles.Add(new RowStyle(SizeType.Percent,100));presetLayout.RowStyles.Add(new RowStyle(SizeType.Absolute,60));
-   presetLayout.Controls.Add(new Label {Text="☷  Presets",Font=new Font("Segoe UI",19,FontStyle.Bold),Dock=DockStyle.Fill},0,0);
+   presetLayout.Controls.Add(new Label {Text="☷  "+UiText.T("Presets","Positioner"),Font=new Font("Segoe UI",19,FontStyle.Bold),Dock=DockStyle.Fill},0,0);
    presets.DrawMode=DrawMode.OwnerDrawFixed;presets.ItemHeight=62;presets.BorderStyle=BorderStyle.None;presets.BackColor=BlueTheme.Panel;presets.ForeColor=Color.White;presets.DrawItem+=DrawPreset;presets.MouseClick+=(o,e)=>{int index=presets.IndexFromPoint(e.Location);if(index<0)return;presets.SelectedIndex=index;if(e.X>presets.ClientSize.Width-45)Safe(RenamePreset);else if(e.X>presets.ClientSize.Width-90)Safe(Recall);};presetLayout.Controls.Add(presets,0,1);
    var saveRow=new TableLayoutPanel {Dock=DockStyle.Fill,ColumnCount=2};saveRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent,100));saveRow.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,56));
    var save=Button(UiText.T("Save current position","Gem aktuel position"),()=>{NeedCamera();string title=Prompt(UiText.T("Preset name","Navn på position"),"");if(title!=null){name.Text=title;SavePreset();}},230);((BlueButton)save).Primary=true;save.Dock=DockStyle.Fill;saveRow.Controls.Add(save,0,0);var del=Button("⌫",Delete,48);del.Dock=DockStyle.Fill;saveRow.Controls.Add(del,1,0);presetLayout.Controls.Add(saveRow,0,2);card.Controls.Add(presetLayout);center.Controls.Add(card,0,1);body.Controls.Add(center,1,0);
@@ -210,6 +210,9 @@ namespace BrioPresets {
    row.Controls.Add(Button("▲",()=>Nudge("Tilt",1,fine),44));row.Controls.Add(Button("▼",()=>Nudge("Tilt",-1,fine),44));position.Controls.Add(row);
   }
   void BuildSpecial() {
+   special.Controls.Add(new Label {Text=UiText.T("Language","Sprog"),AutoSize=true,Font=new Font(Font,FontStyle.Bold)});
+   var language=new ComboBox {DropDownStyle=ComboBoxStyle.DropDownList,Width=285};language.Items.AddRange(UiText.LanguageNames);language.SelectedIndex=Array.IndexOf(UiText.LanguageCodes,UiText.Preference);special.Controls.Add(language);
+   special.Controls.Add(Button(UiText.T("Save language","Gem sprog"),()=>{UiText.SavePreference(UiText.LanguageCodes[language.SelectedIndex]);MessageBox.Show(this,UiText.T("Language saved. Close and reopen Studio to apply it. A --lang shortcut option overrides this choice.","Sprog gemt. Luk og åbn Studio igen for at anvende det. En --lang-indstilling i genvejen tilsidesætter dette valg."),Text);},230));
    special.Padding=new Padding(8);
    special.Controls.Add(new Label {Text=UiText.T("Camera movement (steps)","Kamerabevægelse (steps)"),AutoSize=true,Font=new Font(Font,FontStyle.Bold)});
    foreach(var pair in new[]{Tuple.Create(UiText.T("Normal steps","Normale trin"),panSteps),Tuple.Create(UiText.T("Fast steps","Hurtige trin"),fastPanSteps),Tuple.Create(UiText.T("Zoom steps","Zoomtrin"),zoomSteps)}){
@@ -255,7 +258,7 @@ namespace BrioPresets {
     status.Text=reached?UiText.T("Preset recalled. Camera step size determines how smooth the movement looks.", "Position valgt. Kameraets trinstørrelse bestemmer, hvor glidende skiftet ses."):UiText.T("The camera did not reach every target value. Check the image and camera zoom limits.", "Kameraet nåede ikke alle målværdier. Kontrollér billedet og kameraets zoombegrænsninger.");
    }
   }
-  void ListPresets(){presets.Items.Clear();presets.Items.AddRange(Current.ToArray());cameraStatus.Text="●  "+devices.SelectedItem+"   |   "+profiles.SelectedName+"   |   Presets: "+presets.Items.Count;}
+  void ListPresets(){presets.Items.Clear();presets.Items.AddRange(Current.ToArray());cameraStatus.Text="●  "+devices.SelectedItem+"   |   "+profiles.SelectedName+"   |   "+UiText.T("Presets","Positioner")+": "+presets.Items.Count;}
   void SavePreset() {
    if(!storageReady)throw new InvalidOperationException(UiText.T("The preset file could not be read. Move or repair it first: ", "Presetfilen kunne ikke læses. Flyt eller reparer den først: ")+path);
    Stop();string text=name.Text.Trim();if(text.Length==0 || text.Length>60)throw new InvalidOperationException(UiText.T("Enter a name of 1–60 characters.", "Skriv et navn på 1–60 tegn."));

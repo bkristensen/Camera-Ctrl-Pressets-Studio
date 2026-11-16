@@ -4,6 +4,7 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
 Push-Location $root
 try {
+    & "$PSScriptRoot/check-translations.ps1"
     & dotnet build 'BrioPresets/BrioPresets.csproj' -c $Configuration --nologo
     if ($LASTEXITCODE -ne 0) { throw 'Studio build failed.' }
     foreach ($test in @('CoreTests', 'ShareTests', 'ProfileTests')) {

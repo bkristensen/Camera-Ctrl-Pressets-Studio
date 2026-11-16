@@ -1,7 +1,7 @@
 ; Build from Windows with scripts/build-installer.ps1.
 ; This installer is unsigned until a publisher signing process is configured.
 #ifndef AppVersion
-  #define AppVersion "0.6.1-beta.1"
+  #define AppVersion "0.6.2-beta.1"
 #endif
 #define RepoRoot AddBackslash(SourcePath) + ".."
 
@@ -31,10 +31,13 @@ UninstallDisplayIcon={app}\Cam Pressets Studio.exe
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "danish"; MessagesFile: "compiler:Languages\Danish.isl"
+Name: "german"; MessagesFile: "compiler:Languages\German.isl"
 
 [CustomMessages]
 english.NetRequired=Cam Pressets requires .NET Framework 4.8. Install it from Microsoft, then run this installer again.
 danish.NetRequired=Cam Pressets kræver .NET Framework 4.8. Installér det fra Microsoft, og kør derefter installationsprogrammet igen.
+
+german.NetRequired=Cam Pressets benötigt .NET Framework 4.8. Installieren Sie es von Microsoft und starten Sie die Installation erneut.
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
@@ -42,7 +45,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "{#RepoRoot}\BrioPresets\bin\Release\net48\Cam Pressets Studio.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#RepoRoot}\BrioPresets\bin\Release\net48\Cam Pressets Studio.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#RepoRoot}\README.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#RepoRoot}\*.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#RepoRoot}\docs\*"; DestDir: "{app}\docs"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#RepoRoot}\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
