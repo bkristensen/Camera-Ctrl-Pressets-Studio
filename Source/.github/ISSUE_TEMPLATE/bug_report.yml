@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a camera, interface, startup or packaging problem.
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include the exact error and steps to reproduce it. Remove private meeting details.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: App version and variant
+      placeholder: 0.6.1-beta.1, Cam Pressets Studio
+  - type: input
+    attributes:
+      label: Windows and display language
+  - type: input
+    attributes:
+      label: Camera model and driver
+  - type: input
+    attributes:
+      label: Zoom version and language, if relevant

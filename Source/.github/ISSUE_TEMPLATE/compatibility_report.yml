@@ -1,0 +1,27 @@
+name: Compatibility report
+description: Tell us which camera and application combination works or fails.
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Studio version, Windows build and distribution type
+      description: Portable, installer or MSIX; include display scaling if relevant.
+    validations:
+      required: true
+  - type: input
+    id: camera
+    attributes:
+      label: Camera model, firmware and driver
+    validations:
+      required: true
+  - type: input
+    id: application
+    attributes:
+      label: Video application and version
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Report read/save/recall, pan/tilt/zoom, smoothness, simultaneous video access and startup order. Remove private meeting details.
+    validations:
+      required: true

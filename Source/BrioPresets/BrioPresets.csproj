@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <LangVersion>latest</LangVersion>
+    <ApplicationIcon>Assets/CamPressetsStudio.ico</ApplicationIcon>
+    <AssemblyName>Cam Pressets Studio</AssemblyName>
+    <RootNamespace>BrioPresets</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <Compile Include="../SharedUi/*.cs" Link="SharedUi/%(Filename)%(Extension)" />
+    <Compile Include="../SharedProfiles/*.cs" Link="SharedProfiles/%(Filename)%(Extension)" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Compile Include="../SharedZoom/*.cs" Link="Zoom/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

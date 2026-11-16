@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose an improvement while keeping camera control simple.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Describe the user need rather than only the requested button.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Design and core-function impact
+      description: Explain how the compact interface, presets and startup safeguards remain usable.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Hardware, applications and acceptance criteria

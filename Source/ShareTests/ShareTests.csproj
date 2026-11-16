@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework></PropertyGroup>
+ <ItemGroup><Compile Include="../SharedZoom/ShareWorkflow.cs" Link="ShareWorkflow.cs" /><Compile Include="../SharedUi/UiText.cs" Link="UiText.cs" /></ItemGroup>
+</Project>
