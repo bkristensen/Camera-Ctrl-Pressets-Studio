@@ -1,21 +1,26 @@
-# Cam Pressets Studio — WPF design prototype
+# Cam Pressets Studio — WPF control panel demo
 
-Scalable, blue WPF (.NET 8) three-column control panel with two-ring pan/tilt wheel, zoom buttons, profiles, presets, settings, and shadows.
+A scalable WPF (.NET 8) interface with a two-speed pan/tilt wheel, zoom buttons, profiles, and a preset list. The palette is based on the user's supplied blue reference and includes soft shadows.
 
 ## Run
-Open `CamPressetsControlDemo.csproj` using Visual Studio 2022 with the .NET desktop development workload (Windows 10/11, .NET 8 SDK). Build and run.
+- Windows 10/11 with .NET 8 SDK and Visual Studio WPF workload, or run `dotnet run --project CamPressetsControlDemo.csproj`.
 
-## What's implemented
-- Inner wheel ring = normal movement, outer ring = fast. Mouse hold to move, release to stop.
-- Zoom +/- controls; step speed sliders for normal, fast and zoom speeds (1–50). Speed values affect simulated movement.
-- Profile dropdown and create profile; add, rename, select presets; delete the most recently saved preset.
-- Default startup-program selections: **JW Library** and **Zoom**; optional additional executable paths.
-- A **single shared** `Start programmer ved opstart` checkbox below the program list.
-- Camera selection field intentionally shows **Demo (intet kamera tilsluttet)** instead of claiming a real webcam connection.
-- `Altid øverst` toggles WPF window Topmost immediately.
-- Settings stored in `%APPDATA%\CamPressetsControlDemo\settings.json`; profiles stored in the same folder as `profiles.json`.
+## Features
+- Inner ring: normal pan/tilt; outer ring: fast pan/tilt. Hold mouse and release to stop.
+- Hold + or − to zoom.
+- Pick profiles from the drop-down. The + beside it creates a profile.
+- Click **Gem aktuel position** to name and save the current **simulated** position.
+- Click a preset to restore its simulated position.
+- Profiles and presets are stored in `%APPDATA%\CamPressetsControlDemo\profiles.json` and shared across runs of this demo.
+- The UI elements are scalable WPF vectors. There is no camera preview and no speed slider.
 
-## Limitations
-**Prototype only.** A real Logitech Brio PTZ driver is **not** connected. Camera positions, preset recalls, and movement are simulated. The startup-program preferences are saved but executables are **not automatically launched**; that behavior must be wired to the final startup policy. JW Library and Zoom are included as named choices only, not assumed installed at particular paths.
+## Important limitation
+This is a **UI and state simulation only**: **no physical camera is controlled** and saved coordinates are not actual Logitech Brio values. Before using presets with a webcam, replace simulated position updates in `MainWindow.xaml.cs` with a camera adapter that queries real absolute coordinates, moves to them, reports failures and respects the supported ranges.
 
-The project was not compiled here because the Windows WPF SDK is unavailable in the environment.
+The project has not been compiled in this environment because the Windows .NET SDK is unavailable.
+
+## Application branding
+- Window title: **Cam Pressets Studio**.
+- Windows executable and titlebar icon: `Assets/CamPressetsStudio.ico`.
+- App header icon: `Assets/CamPressetsStudio.png`.
+- Editable vector source: `Assets/camera-arrows.svg` (simple camera with four directional arrows).

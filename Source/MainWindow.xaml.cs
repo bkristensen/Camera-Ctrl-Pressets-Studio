@@ -21,26 +21,6 @@ public sealed class CameraPreset
     public double Zoom { get; set; }
 }
 
-public sealed class StartupProgram
-{
-    public string Name { get; set; } = "";
-    public string Path { get; set; } = "";
-    public bool Enabled { get; set; } = true;
-}
-
-public sealed class UiSettings
-{
-    public int NormalSpeed { get; set; } = 8;
-    public int FastSpeed { get; set; } = 32;
-    public int ZoomSpeed { get; set; } = 12;
-    public bool JwEnabled { get; set; } = true;
-    public bool ZoomEnabled { get; set; } = true;
-    public bool LaunchAtStartup { get; set; } = true;
-    public bool AlwaysOnTop { get; set; }
-    public string CameraName { get; set; } = "Demo (intet kamera tilsluttet)";
-    public List<StartupProgram> ExtraPrograms { get; set; } = new();
-}
-
 public sealed class CameraProfile
 {
     public string Name { get; set; } = "Standard";
@@ -55,11 +35,6 @@ public partial class MainWindow : Window
         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
         "CamPressetsControlDemo", "profiles.json");
 
-    private static readonly string UiSettingsPath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-        "CamPressetsControlDemo", "settings.json");
-    private readonly ObservableCollection<StartupProgram> _extraPrograms = new();
-    private bool _loadingSettings = true;
     private CameraProfile? CurrentProfile => ProfilePicker.SelectedItem as CameraProfile;
     private MoveDirection? _direction;
     private MoveSpeed _speed;
@@ -73,102 +48,7 @@ public partial class MainWindow : Window
         LoadProfiles();
         ProfilePicker.ItemsSource = _profiles;
         ProfilePicker.SelectedIndex = 0;
-        CameraPicker.ItemsSource = new[] { "Demo (intet kamera tilsluttet)" };
-        ExtraProgramsList.ItemsSource = _extraPrograms;
-        LoadUiSettings();
-        _loadingSettings = false;
-        Closed += (_, _) => { StopAllMovement(); SaveProfiles(); SaveUiSettings(); };
-    }
-
-    private void LoadUiSettings()
-    {
-        try
-        {
-            var config = File.Exists(UiSettingsPath)
-                ? JsonSerializer.Deserialize<UiSettings>(File.ReadAllText(UiSettingsPath)) ?? new UiSettings()
-                : new UiSettings();
-            NormalSpeed.Value = Math.Clamp(config.NormalSpeed, 1, 50);
-            FastSpeed.Value = Math.Clamp(config.FastSpeed, 1, 50);
-            ZoomSpeed.Value = Math.Clamp(config.ZoomSpeed, 1, 50);
-            JwEnabled.IsChecked = config.JwEnabled;
-            ZoomEnabled.IsChecked = config.ZoomEnabled;
-            LaunchAtStartup.IsChecked = config.LaunchAtStartup;
-            AlwaysOnTop.IsChecked = config.AlwaysOnTop;
-            Topmost = config.AlwaysOnTop;
-            CameraPicker.SelectedItem = "Demo (intet kamera tilsluttet)";
-            foreach (var program in config.ExtraPrograms ?? new()) _extraPrograms.Add(program);
-        }
-        catch (Exception ex) { Status.Text = $"Indstillinger kunne ikke indlæses: {ex.Message}"; }
-    }
-
-    private void SaveUiSettings()
-    {
-        if (_loadingSettings) return;
-        try
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(UiSettingsPath)!);
-            var config = new UiSettings
-            {
-                NormalSpeed = (int)NormalSpeed.Value,
-                FastSpeed = (int)FastSpeed.Value,
-                ZoomSpeed = (int)ZoomSpeed.Value,
-                JwEnabled = JwEnabled.IsChecked == true,
-                ZoomEnabled = ZoomEnabled.IsChecked == true,
-                LaunchAtStartup = LaunchAtStartup.IsChecked == true,
-                AlwaysOnTop = AlwaysOnTop.IsChecked == true,
-                CameraName = CameraPicker.SelectedItem as string ?? "Demo (intet kamera tilsluttet)",
-                ExtraPrograms = _extraPrograms.ToList()
-            };
-            File.WriteAllText(UiSettingsPath, JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true }));
-        }
-        catch (Exception ex) { Status.Text = $"Indstillinger kunne ikke gemmes: {ex.Message}"; }
-    }
-
-    private void SettingsChanged(object sender, RoutedEventArgs e)
-    {
-        if (_loadingSettings || AlwaysOnTop is null || CameraPicker is null) return;
-        Topmost = AlwaysOnTop.IsChecked == true;
-        SaveUiSettings();
-    }
-
-    private void ExtraProgram_Click(object sender, RoutedEventArgs e) => SaveUiSettings();
-
-    private void AddProgram_Click(object sender, RoutedEventArgs e)
-    {
-        var fileDialog = new Microsoft.Win32.OpenFileDialog
-        {
-            Title = "Vælg program", Filter = "Programmer (*.exe)|*.exe|Alle filer (*.*)|*.*"
-        };
-        if (fileDialog.ShowDialog(this) != true) return;
-        _extraPrograms.Add(new StartupProgram
-        {
-            Name = Path.GetFileNameWithoutExtension(fileDialog.FileName),
-            Path = fileDialog.FileName
-        });
-        SaveUiSettings();
-    }
-
-    private void RenamePreset_Click(object sender, RoutedEventArgs e)
-    {
-        if ((sender as Button)?.Tag is not CameraPreset preset || CurrentProfile is null) return;
-        var name = PromptForName("Omdøb preset", "Navn:", preset.Name);
-        if (name is null) return;
-        if (CurrentProfile.Presets.Any(p => !ReferenceEquals(p, preset) && string.Equals(p.Name, name, StringComparison.OrdinalIgnoreCase)))
-        {
-            MessageBox.Show(this, "Navnet bruges allerede."); return;
-        }
-        preset.Name = name;
-        PresetList.Items.Refresh();
-        SaveProfiles();
-    }
-
-    private void DeletePreset_Click(object sender, RoutedEventArgs e)
-    {
-        if (CurrentProfile?.Presets.Count is not > 0) return;
-        var preset = CurrentProfile.Presets[^1];
-        if (MessageBox.Show(this, $"Slet preset '{preset.Name}'?", "Bekræft sletning", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
-        CurrentProfile.Presets.RemoveAt(CurrentProfile.Presets.Count - 1);
-        PresetList.Items.Refresh(); SaveProfiles();
+        Closed += (_, _) => { _movementTimer.Stop(); SaveProfiles(); };
     }
 
     private void LoadProfiles()
@@ -336,7 +216,7 @@ public partial class MainWindow : Window
 
     private void MovementTimer_Tick(object? sender, EventArgs e)
     {
-        double step = (_speed == MoveSpeed.Fast ? FastSpeed.Value : NormalSpeed.Value) / 20.0;
+        double step = _speed == MoveSpeed.Fast ? 1.2 : 0.4;
         switch (_direction)
         {
             case MoveDirection.Left: _pan = Math.Clamp(_pan - step, -100, 100); break;
@@ -344,7 +224,7 @@ public partial class MainWindow : Window
             case MoveDirection.Up: _tilt = Math.Clamp(_tilt + step, -100, 100); break;
             case MoveDirection.Down: _tilt = Math.Clamp(_tilt - step, -100, 100); break;
         }
-        _zoom = Math.Clamp(_zoom + _zoomDirection * ZoomSpeed.Value / 20.0, 0, 100);
+        _zoom = Math.Clamp(_zoom + _zoomDirection * 0.5, 0, 100);
     }
     private void StopAllMovement()
     {
@@ -354,5 +234,19 @@ public partial class MainWindow : Window
         if (ZoomIn.IsMouseCaptured) ZoomIn.ReleaseMouseCapture();
         if (ZoomOut.IsMouseCaptured) ZoomOut.ReleaseMouseCapture();
         if (Wheel.IsMouseCaptured) Wheel.ReleaseMouseCapture();
+    }
+    private void Home_Click(object sender, RoutedEventArgs e)
+    {
+        StopAllMovement();
+        _pan = _tilt = _zoom = 0;
+        Status.Text = "Startposition (demo)";
+        // TODO: camera.MoveHome();
+    }
+    private void Center_Click(object sender, RoutedEventArgs e)
+    {
+        StopAllMovement();
+        _pan = _tilt = 0;
+        Status.Text = "Pan/Tilt centreret (demo)";
+        // TODO: camera.Center();
     }
 }
