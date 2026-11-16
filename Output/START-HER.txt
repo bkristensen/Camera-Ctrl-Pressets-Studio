@@ -1,0 +1,14 @@
+﻿Cam Pressets Studio 0.6.1 beta
+
+Luk den gamle app, pak hele mappen ud, og start Cam Pressets Studio.exe.
+
+Kameraet forbindes som standard IKKE ved opstart.
+1. Start programmerne i listen (automatisk hvis tilvalgt).
+2. Start eller tilslut Zoom-mødet, og kontrollér kamerabilledet.
+3. Åbn Indstillinger. Tryk Zoom-mødet er klar — aktivér kamera. Bekræft først, når mødet er åbent.
+
+Fluebenet Aktivér først kamera efter programmer og Zoom-møde er som standard sat, også for gamle profiler. Gem indstillinger gemmer dit valg. Fjernes fluebenet, tillades øjeblikkelig kameraforbindelse.
+
+Appen kontrollerer processer, men kan ikke automatisk bevise, at Zoom-mødet er startet. Derfor kræves din bekræftelse hver gang appen starter eller en profil indlæses.
+
+Profiler bevares i %LOCALAPPDATA%\CamPressets\profiles.json. Denne beta er usigneret. Windows- og kameratest skal stadig udføres på jeres pc.
