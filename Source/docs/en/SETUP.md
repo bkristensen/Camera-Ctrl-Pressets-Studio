@@ -1,22 +1,18 @@
-[English](../en/SETUP.md) · [Dansk](../da/SETUP.md) · [Deutsch](../de/SETUP.md)
+[English](../en/SETUP.md) · [Dansk](../da/SETUP.md) · [Deutsch](../de/SETUP.md) · [All guide languages](../USER-GUIDES.md)
 
 # Set up the application
 
-Open the gear button **B**. Settings open on the right. Your position list stays visible.
-
-![Labelled settings illustration](../images/en-settings.svg)
-
-*Layout illustration, not a Windows screenshot. Letters match the controls described below. See [image capture](../SCREENSHOTS.md).*
+Open the gear in the footer. Settings open on the right. Your position list stays visible.
 
 ## 1. Choose a profile and camera
 
-Use **A** in the main window to select a profile. To create one, open **Settings → Profiles** (**I**). Choose **New** for default settings or **Copy** for a copy of the active profile. Name it after a person or setup. New profiles become active.
+Use the profile picker in the footer to select a profile. To create one, open **Settings → Profiles**. Choose **New** for default settings or **Copy** for a copy of the active profile. Name it after a person or setup. New profiles become active.
 
-Click the camera symbol in the middle of **C** to select a camera. The program remembers it. If that camera is missing, choose another source. Positions belong to a camera within a profile.
+Click the camera symbol in the centre of the direction wheel to select a camera. The program remembers it. If that camera is missing, choose another source. Positions belong to a camera within a profile.
 
 ## 2. Decide when camera control may start
 
-Under **Settings** (**J**), enable **Ask whether streaming has started before using the camera** if your capture program must start first. This option is off by default.
+Under **Settings**, enable **Ask whether streaming has started before using the camera** if your capture program must start first. This option is off by default.
 
 With the option enabled, the first camera action asks whether streaming has started. Choose **Yes** only when it has. Choose **No** to keep camera control disconnected. After Yes, further actions do not ask again until you change profile, change this option or restart the app. The app does not detect or start a streaming session for you.
 
@@ -24,7 +20,7 @@ If you need this order on first use, set the option before your next session. Th
 
 ## 3. Set movement and zoom
 
-Change the values in **J**. Start with small steps. Test the result in your capture program.
+Change the values on the **Settings** tab. Start with small steps. Test the result in your capture program.
 
 | Setting | What it changes | Default |
 | --- | --- | --- |
@@ -40,21 +36,19 @@ For an upside-down camera, enable **Reverse up / down** and test Up. Enable **Re
 
 ## 4. Adjust the image and save permanent positions
 
-Open **Image** in **I**, then load the image controls if needed. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
+Open **Image** in the settings pane, then load the image controls if needed. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
 
-![Permanent preset controls](../images/en-presets.svg)
+Move the camera first. Open **Presets** in the settings pane. Choose **Add**. Select an icon at the top, check the name, then save. If the name is blank and unused, choosing an icon suggests its name. Combined symbols show their subjects from left to right.
 
-*Labelled layout illustration.*
+Select a position in the settings list to change it. Use **Edit name and symbol** to rename it, **Replace with current position** to update its coordinates, or **Delete permanent preset** to remove it. Permanent positions stay at the top of the main list in bold.
 
-Move the camera first. Open **Presets** in **I**. Choose **Add** (**L**). Select an icon at the top, check the name, then save. If the name is blank and unused, choosing an icon suggests its name. Combined symbols show their subjects from left to right.
-
-Select a position in **K** to change it. **M** changes name and icon. **N** replaces its coordinates with the current camera position. **O** deletes it after confirmation. Permanent positions stay at the top of the main list in bold.
+Selecting a permanent row in the main list also selects that preset in Settings. A newly saved preset is selected in Settings.
 
 ## 5. Set layout and language
 
-Drag the divider **E** between the controller and position list. Resize or move the window. The app saves the window bounds, divider, settings panel and selected settings tab in the active profile. The initial window is 900 × 500 at normal Windows scaling.
+Drag the vertical divider between the controller and position list. Resize or move the window. The app saves the window bounds, divider and selected settings tab in the active profile. The initial size is 900 × 500, and the minimum is 670 × 450. The settings pane starts closed on every launch.
 
-When selecting a profile with **A**, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
+When selecting a profile in the footer, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
 
 Choose the language in **Settings**, then restart. Automatic follows the Windows display language when the app supports it and uses English otherwise. The language choice applies to the whole application.
 

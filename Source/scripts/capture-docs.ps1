@@ -13,4 +13,4 @@ foreach ($lang in @('en','da','de')) {
     }
 }
 Write-Host 'Review all nine PNG files for cropping, labels and overlap before committing.'
-Write-Host 'Replace SVG links with PNG links in the guides and update their image captions after review.'
+Write-Host 'Use approved captures in release notes or supporting documentation.'

@@ -1,8 +1,8 @@
-# Camera Control & Pressets Studio
+# Camera Control Studio
 
 A small Windows camera controller with named positions, precise movement and smooth preset transitions. Developed as open source by **Brian Kristensen, Vejle Uhrhøj, DK**.
 
-**Version 0.7.0-beta.1.** Built and logic-tested. This revised Windows interface still needs a Windows and camera acceptance test. The supplied executable is unsigned.
+**Version 0.7.0-beta.2.** The beta downloads are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
 
 | Language | Set up | Daily use |
 | --- | --- | --- |
@@ -10,7 +10,7 @@ A small Windows camera controller with named positions, precise movement and smo
 | Dansk | [Opsætning](docs/da/SETUP.md) | [Daglig brug](docs/da/DAILY-USE.md) |
 | Deutsch | [Einrichtung](docs/de/SETUP.md) | [Tägliche Nutzung](docs/de/DAILY-USE.md) |
 
-The guides currently use labelled layout illustrations. [Capture real Windows screenshots](docs/SCREENSHOTS.md) before publishing the release.
+The installer and portable ZIP include [user guides for all 12 supported languages](docs/USER-GUIDES.md). The installer adds a user-guides shortcut to the Start menu.
 
 ## Use
 
@@ -28,7 +28,7 @@ Open **`Camera-Control-Pressets-Studio.sln`** in Visual Studio. Import `.vsconfi
 
 If WinGet is unavailable, install the SDK from [Microsoft](https://dotnet.microsoft.com/download/dotnet/8.0), reopen the terminal, then run the command above. The application targets .NET Framework 4.8; the tests target .NET 8. This is WinForms, not WPF.
 
-[Visual editing](docs/en/DEVELOPMENT.md) · [Project details](docs/PROJECT.md) · [FAQ](FAQ.md) · [Release checklist](docs/RELEASE-CHECKLIST.md)
+[Build and release guide](docs/en/BUILD-AND-RELEASE.md) · [Visual editing](docs/en/DEVELOPMENT.md) · [Project details](docs/PROJECT.md) · [FAQ](FAQ.md) · [Release checklist](docs/RELEASE-CHECKLIST.md)
 
 ## Contribute
 

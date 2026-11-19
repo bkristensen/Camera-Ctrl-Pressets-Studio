@@ -1,7 +1,7 @@
 ; Build from Windows with scripts/build-installer.ps1.
 ; This installer is unsigned until a publisher signing process is configured.
 #ifndef AppVersion
-  #define AppVersion "0.7.0-beta.1"
+  #define AppVersion "0.7.0-beta.2"
 #endif
 #define RepoRoot AddBackslash(SourcePath) + ".."
 
@@ -10,6 +10,11 @@ AppId={{B9D05FC2-137E-4AA9-B006-7013227FCDB5}
 AppName=Camera Control Studio
 AppVersion={#AppVersion}
 AppPublisher=Brian Kristensen
+AppPublisherURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio
+AppSupportURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues
+AppUpdatesURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases
+VersionInfoCompany=Brian Kristensen
+VersionInfoCopyright=Copyright (c) 2026 Cam Pressets contributors
 DefaultDirName={localappdata}\Programs\CamCtrlStudio
 DefaultGroupName=Camera Control Studio
 DisableProgramGroupPage=yes
@@ -37,6 +42,9 @@ Name: "german"; MessagesFile: "compiler:Languages\German.isl"
 english.NetRequired=Camera Control Studio requires .NET Framework 4.8. Install it from Microsoft, then run this installer again.
 danish.NetRequired=Kamera Kontrol Studio kræver .NET Framework 4.8. Installér det fra Microsoft, og kør derefter installationsprogrammet igen.
 german.NetRequired=Camera Control Studio benötigt .NET Framework 4.8. Installieren Sie es von Microsoft und starten Sie die Installation erneut.
+english.UserGuides=Camera Control Studio User Guides
+danish.UserGuides=Camera Control Studio Brugervejledninger
+german.UserGuides=Camera Control Studio Benutzerhandbücher
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
@@ -50,6 +58,7 @@ Source: "{#RepoRoot}\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\Camera Control Studio"; Filename: "{app}\Camera Control Studio.exe"
+Name: "{group}\{cm:UserGuides}"; Filename: "{win}\explorer.exe"; Parameters: """{app}\docs"""; WorkingDir: "{app}\docs"
 Name: "{autodesktop}\Camera Control Studio"; Filename: "{app}\Camera Control Studio.exe"; Tasks: desktopicon
 
 [Run]

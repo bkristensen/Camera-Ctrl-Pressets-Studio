@@ -1,7 +1,7 @@
-# Validation for 0.7.0-beta.1
+# Validation for 0.7.0-beta.2
 
-The application and test project compile with .NET SDK 8.0.408. The logic test suite passes for movement arithmetic, preset state, streaming confirmation, profile serialization and migration, layout selection, image value persistence, independent zoom steps, temporary positions, profile renaming and revision conflicts.
+The Windows Release build uses locked dependencies. The automated suite checks motion arithmetic, preset state, profile and settings persistence, translation coverage, and zoom range mapping.
 
-The test build emits Windows-platform warnings for the linked DirectShow COM implementation. The tests do not invoke COM on Linux. UI rendering, physical camera behaviour, Visual Studio Designer round trips, screenshot capture, PowerShell scripts, Docker, Inno Setup and MSIX have not been executed in this environment. They remain acceptance checks, not claimed test results.
+Release preparation checked that the portable ZIP contains the Release executable and guides for all 12 languages. The Inno Setup 7 compiler packaged the same language guides and the user-guide shortcut into the Windows installer. SHA-256 hashes identify the final local packages.
 
-The checked-in documentation visuals are explicitly labelled illustrations. No screenshots of this new build have been represented as real Windows captures.
+Use the [release checklist](RELEASE-CHECKLIST.md) for clean Windows install, upgrade and uninstall testing, physical camera checks, and per-monitor layout checks. See the [build and release guide](en/BUILD-AND-RELEASE.md) for the packaging and signing commands. The staged beta downloads are unsigned.

@@ -14,7 +14,7 @@ Use the Properties panel to change `Dock`, `Margin`, `Padding`, row sizes and co
 
 Each window has a public, parameterless constructor and inherits from `AppForm`. Layout is in its `.Designer.cs` file. Event handling is in the corresponding `.cs` file. The designer structure has compiled, but opening and saving each Form in Visual Studio still needs verification on Windows.
 
-The camera wheel and blue buttons are drawn in `Controls/BlueControls.cs`. The designer can move and size these controls, but their gradients, rings and symbols are C# drawing code. Preset symbols are in `Controls/PresetIcons.cs`. Image sliders are created at runtime according to driver capabilities.
+The camera wheel and blue buttons are drawn in `Controls/BlueControls.cs`. The vertical divider and zoom controls are in `Controls/MainViewControls.cs`. The designer can move and size these controls. Preset icon images and their neutral titles are in `Assets/PressetIcons.resx`, and `Controls/PresetIcons.cs` loads them. Image sliders are created at runtime according to driver capabilities.
 
 ## Set defaults
 
@@ -22,7 +22,7 @@ Edit `Shared/Models.cs`, in `SavedData.Defaults`, for new-profile settings. Edit
 
 ## Update a translation
 
-Edit the matching value in `Shared/Locales/en.xml`, `da.xml` or `de.xml`. Keep the `key` unchanged. XML requires `&amp;` for an ampersand. All files must have the same keys. Stored camera and icon IDs must not be translated.
+Edit the matching value in the relevant language file under `Shared/Locales`. Keep the `key` unchanged. XML requires `&amp;` for an ampersand. All files must have the same keys. Keep stored camera and icon IDs unchanged.
 
 Run `scripts/check-translations.ps1`, then build. Test with `"Camera Control Studio.exe" --lang=de` or the language selector in settings. Restart after changing the saved language choice.
 

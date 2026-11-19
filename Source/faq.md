@@ -8,7 +8,9 @@
 
 **Why did the camera not connect?** It may be disconnected, busy, unsupported, or waiting for your streaming confirmation. Click the central camera button to select a source. This app cannot detect whether your stream has begun.
 
-**Can it show video or share a screen?** No. Use your capture or streaming application for those tasks.
+**What is Camera Control Studio designed for?** Use it alongside video meeting and streaming apps such as Zoom Meetings to adjust your camera and recall saved positions. Your meeting or streaming app displays and shares the video.
+
+**Why might zoom work in Zoom Meetings but show no visible change in Windows Camera?** This has been observed with the same camera. Whether live zoom changes appear can depend on the camera driver and the app displaying the video. Test camera controls in the app you intend to use for your meeting or stream.
 
 **Where are profiles stored?** `%LOCALAPPDATA%\CamPressets\profiles.json`. A `.bak` copy is written when the file is replaced. Close the app before copying or restoring these files. Keep the original backup when upgrading from 0.6.x: removed startup-program options are discarded when the updated profile is saved.
 

@@ -14,7 +14,7 @@ Brug Properties til at ændre `Dock`, `Margin`, `Padding`, rækkehøjder og kolo
 
 Hvert vindue har en offentlig konstruktør uden parametre og arver fra `AppForm`. Layout ligger i `.Designer.cs`. Hændelser ligger i den tilhørende `.cs`-fil. Strukturen er kompileret, men åbning og lagring af hver Form i Visual Studio skal stadig testes på Windows.
 
-Kamerahjulet og de blå knapper tegnes i `Controls/BlueControls.cs`. Designeren kan flytte og ændre størrelsen på dem. Farveovergange, ringe og symboler tegnes i C#-kode. Positionssymboler ligger i `Controls/PresetIcons.cs`. Billedskydere oprettes under kørsel efter kameraets funktioner.
+Kamerahjulet og de blå knapper tegnes i `Controls/BlueControls.cs`. Den lodrette skillelinje og zoomstyringen ligger i `Controls/MainViewControls.cs`. Designeren kan flytte og ændre størrelsen på dem. Positionsikoner og neutrale titler ligger i `Assets/PressetIcons.resx` og indlæses af `Controls/PresetIcons.cs`. Billedskydere oprettes under kørsel efter kameraets funktioner.
 
 ## Ret standardværdier
 
@@ -22,7 +22,7 @@ Ret `SavedData.Defaults` i `Shared/Models.cs` for nye profilers indstillinger. R
 
 ## Ret en oversættelse
 
-Ret værdien i `Shared/Locales/en.xml`, `da.xml` eller `de.xml`. Behold `key` uændret. Skriv et og-tegn som `&amp;` i XML. Alle filer skal have de samme nøgler. Gemte kamera- og ikon-ID'er må ikke oversættes.
+Ret værdien i den relevante sprogfil under `Shared/Locales`. Behold `key` uændret. Skriv et og-tegn som `&amp;` i XML. Alle filer skal have de samme nøgler. Behold gemte kamera- og ikon-id'er.
 
 Kør `scripts/check-translations.ps1`, og byg programmet. Test med `"Camera Control Studio.exe" --lang=da` eller sprogvalget under indstillinger. Genstart efter ændring af det gemte sprogvalg.
 

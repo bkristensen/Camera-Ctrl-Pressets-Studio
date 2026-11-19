@@ -6,6 +6,8 @@ Before applying, publish the source under its open-source licence, maintain the 
 
 After acceptance, follow the required artifact rules and release approval process. Publish a “Code signing policy” with the required attribution, named team roles and privacy statement. Do not claim sponsored signing before approval. Every signed release requires manual approval under the Foundation's current terms.
 
-Signing does not change what the app does and is not a guarantee that every download warning disappears.
+For direct GitHub downloads, a valid signature identifies the publisher and protects the binary's integrity. A new download can still trigger SmartScreen while reputation builds. For first-run distribution through the Store, Microsoft signs accepted MSIX packages.
 
-Read the [official terms](https://signpath.org/terms) and [Foundation website](https://signpath.org/). Checked 18 November 2026. For the Store route, see [MSIX and Store](MSIX-AND-STORE.md).
+For a publicly trusted code-signing certificate available through the current user's Windows certificate store, use `scripts/build.ps1 -CertificateThumbprint <thumbprint> -SignToolPath <path>` for the portable ZIP. Use the same parameters with `scripts/build-installer.ps1` to sign both the app executable and the generated installer. SignPath approval requires its own signing workflow.
+
+Read the [official terms](https://signpath.org/terms.html), the [Foundation website](https://signpath.org/), and Microsoft's [SmartScreen guidance](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation). Checked 19 November 2026. For the Store route, see [MSIX and Store](MSIX-AND-STORE.md).
