@@ -28,6 +28,6 @@ Führen Sie `scripts/check-translations.ps1` aus und erstellen Sie die Anwendung
 
 ## Sprache hinzufügen
 
-Kopieren Sie `en.xml` in eine Datei mit dem neuen Sprachcode. Übersetzen Sie alle Werte. Ergänzen Sie Code und Namen in `Shared/UiText.cs`. Ergänzen Sie den Code im Übersetzungsprüfskript, in der Sprachschleife des Testprogramms und im Screenshot-Skript. Erstellen Sie den passenden Ordner für Anleitungen und ergänzen Sie die Sprachlinks oben in allen Anleitungen. Ergänzen Sie die Sprache im MSIX-Manifest und Installer, soweit dort unterstützt.
+Kopieren Sie `en.xml` in eine Datei mit dem neuen Sprachcode. Übersetzen Sie alle Werte und registrieren Sie Code und Namen in `Shared/UiText.cs`. Die Übersetzungsprüfung und die Sprachtests erkennen die neue Datei und Registrierung automatisch. Tragen Sie die Anwendungssprache im MSIX-Manifest ein.
 
 Die automatische Auswahl nutzt das Windows-Sprachpräfix. Nicht unterstützte Sprachen fallen auf Englisch zurück. Prüfen Sie schmale Fenster und lange Texte, damit keine Bedienelemente verdeckt werden.

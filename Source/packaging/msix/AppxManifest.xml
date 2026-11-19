@@ -12,7 +12,20 @@
     <Logo>Assets\StoreLogo.png</Logo>
     <Description>Camera position presets and precise camera controls.</Description>
   </Properties>
-  <Resources><Resource Language="en-US"/><Resource Language="da-DK"/><Resource Language="de-DE"/></Resources>
+  <Resources>
+    <Resource Language="en-US"/>
+    <Resource Language="da-DK"/>
+    <Resource Language="de-DE"/>
+    <Resource Language="zh-Hans"/>
+    <Resource Language="hi-IN"/>
+    <Resource Language="es"/>
+    <Resource Language="ar"/>
+    <Resource Language="fr"/>
+    <Resource Language="bn"/>
+    <Resource Language="pt-BR"/>
+    <Resource Language="id-ID"/>
+    <Resource Language="ur"/>
+  </Resources>
   <Dependencies><TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.19041.0"/></Dependencies>
   <Applications>
     <Application Id="Studio" Executable="Camera Control Studio.exe" uap10:RuntimeBehavior="packagedClassicApp" uap10:TrustLevel="mediumIL">

@@ -6,11 +6,16 @@ using System.Reflection;
 using System.Xml;
 namespace CameraControlStudio {
     public static class UiText {
-        public static readonly string[] LanguageCodes = { "auto", "en", "da", "de" };
-        public static readonly string[] LanguageNames = { "Automatic / Automatisk / Automatisch", "English", "Dansk", "Deutsch" };
+        public static readonly string[] LanguageCodes = { "auto", "en", "da", "de", "zh", "hi", "es", "ar", "fr", "bn", "pt", "id", "ur" };
+        public static readonly string[] LanguageNames = {
+            "Automatic", "English", "Dansk", "Deutsch",
+            "简体中文", "हिन्दी", "Español", "العربية الفصحى", "Français", "বাংলা",
+            "Português (Brasil)", "Bahasa Indonesia", "اردو"
+        };
         static readonly Dictionary<string, string> translations = new Dictionary<string, string>();
         public static string Language { get; private set; } = "en";
         public static string Preference { get; private set; } = "auto";
+        public static bool IsRightToLeft => Language == "ar" || Language == "ur";
         public static bool IsDanish {
             get {
                 return Language == "da";

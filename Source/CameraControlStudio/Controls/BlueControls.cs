@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 namespace CameraControlStudio {
     public static class BlueTheme {
@@ -45,6 +46,7 @@ namespace CameraControlStudio {
         }
     }
     public class BlueButton : Button {
+        protected virtual Image DisplayImage => Image;
         bool over, down; public bool Primary {
             get; set;
         }
@@ -98,7 +100,10 @@ namespace CameraControlStudio {
                 g.FillPath(brush, p);
                 g.DrawPath(pen, p);
             }
-            if (Text == "+" || Text == "−" || Text == "++" || Text == "−−") {
+            var image = DisplayImage;
+            if (image != null)
+                DrawButtonImage(g, image, Rectangle.Round(r));
+            else if (Text == "+" || Text == "−" || Text == "++" || Text == "−−") {
                 int count = Text.Length;
                 float arm = Math.Min(7, Math.Min(r.Height / 4, (r.Width - 8) / (count * 3))), gap = arm * 2.8f, cx = r.X + r.Width / 2, cy = r.Y + r.Height / 2;
                 using (var glyph = new Pen(Enabled ? ForeColor : Color.Gray, 2.5f)) {
@@ -110,10 +115,39 @@ namespace CameraControlStudio {
                             g.DrawLine(glyph, x, cy - arm, x, cy + arm);
                     }
                 }
-            } else
-                TextRenderer.DrawText(g, Text, Font, Rectangle.Round(r), Enabled ? ForeColor : Color.Gray, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis | TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
+            } else {
+                var flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis | TextFormatFlags.NoPadding | TextFormatFlags.SingleLine;
+                if (RightToLeft == RightToLeft.Yes)
+                    flags |= TextFormatFlags.RightToLeft;
+                TextRenderer.DrawText(g, Text, Font, Rectangle.Round(r), Enabled ? ForeColor : Color.Gray, flags);
+            }
             if (Focused)
                 ControlPaint.DrawFocusRectangle(g, new Rectangle(7, 7, Width - 15, Height - 15));
+        }
+
+        void DrawButtonImage(Graphics graphics, Image image, Rectangle bounds) {
+            bounds.Inflate(-4, -4);
+            if (bounds.Width <= 0 || bounds.Height <= 0)
+                return;
+
+            double scale = Math.Min((double)bounds.Width / image.Width, (double)bounds.Height / image.Height);
+            int width = Math.Max(1, (int)Math.Round(image.Width * scale));
+            int height = Math.Max(1, (int)Math.Round(image.Height * scale));
+            var target = new Rectangle(bounds.X + (bounds.Width - width) / 2,
+                bounds.Y + (bounds.Height - height) / 2, width, height);
+
+            var state = graphics.Save();
+            try {
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                using (var attributes = new ImageAttributes()) {
+                    attributes.SetWrapMode(WrapMode.TileFlipXY);
+                    if (!Enabled)
+                        attributes.SetColorMatrix(new ColorMatrix { Matrix33 = .45f });
+                    graphics.DrawImage(image, target, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
+                }
+            } finally {
+                graphics.Restore(state);
+            }
         }
     }
     public sealed class PanWheel : Control {

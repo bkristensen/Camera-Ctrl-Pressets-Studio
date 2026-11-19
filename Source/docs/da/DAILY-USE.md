@@ -28,7 +28,7 @@ Grøn bekræfter de meldte koordinater. Kontrollér selve billedet i dit optagep
 
 ## 3. Finjustér billedudsnittet
 
-Brug de inderste pile i **C** til normal bevægelse. De yderste pile bruger større trin. I **D** giver − og + normal zoom. −− og ++ giver hurtig zoom. Hold en knap nede for at gentage bevægelsen.
+Brug de inderste pile i **C** til normal bevægelse og de yderste til større trin. I **D** giver knapperne med lup normal zoom. Hold Skift nede for større zoomtrin, eller hold en knap nede for at gentage. Træk og slip skyderen for at indstille zoom direkte.
 
 Manuel panorering, lodret bevægelse eller zoom afbryder positionsskiftet og fjerner den aktive farve. Escape stopper et skift. Når hjulet har fokus, kan du bruge piletasterne. Hold Shift nede for hurtige trin.
 

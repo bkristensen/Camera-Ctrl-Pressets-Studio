@@ -31,7 +31,7 @@ Change the values in **J**. Start with small steps. Test the result in your capt
 | Normal pan steps | Inner arrow ring | 5 |
 | Fast pan steps | Outer arrow ring | 32 |
 | Normal zoom steps | − and + | 5 |
-| Fast zoom steps | −− and ++ | 32 |
+| Fast zoom steps | Shift + a zoom button | 32 |
 | Transition seconds | Time requested for a preset change | 2 |
 
 One step means one step supported by the camera driver. It is not a fixed distance or percentage. The driver limits movement and smoothness.
@@ -56,6 +56,6 @@ Drag the divider **E** between the controller and position list. Resize or move 
 
 When selecting a profile with **A**, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
 
-Choose the language in **Settings**, then restart. Automatic uses Danish or German when Windows uses that language. Otherwise it uses English. The language choice applies to the application, not to an individual profile.
+Choose the language in **Settings**, then restart. Automatic follows the Windows display language when the app supports it and uses English otherwise. The language choice applies to the whole application.
 
 Next: [Daily use](DAILY-USE.md). For a backup, close the app and copy `%LOCALAPPDATA%\CamPressets`. Temporary positions are not part of the backup.

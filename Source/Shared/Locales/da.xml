@@ -7,12 +7,12 @@
   <text key="Add temporary preset">Tilføj midlertidig position</text>
   <text key="Always on top">Altid øverst</text>
   <text key="Ask whether streaming has started before using the camera">Spørg om streaming er startet før kameraet bruges</text>
-  <text key="Automatic ">Automatisk </text>
+  <text key="Automatic">Automatisk</text>
+  <text key="Automatic {0}">Automatisk {0}</text>
   <text key="Backlight compensation">Modlyskompensation</text>
   <text key="Brightness">Lysstyrke</text>
   <text key="Buy me a coffee">Buy me a coffee</text>
   <text key="Camera">Kamera</text>
-  <text key="Camera Control &amp; Pressets">Kamerastyring &amp; positioner</text>
   <text key="Camera direction wheel. Inner ring normal, outer ring fast.">Kamerahjul. Inderste ring normal, yderste ring hurtig.</text>
   <text key="Camera: not connected">Kamera: ikke tilsluttet</text>
   <text key="Cancel">Annuller</text>
@@ -130,4 +130,13 @@
   <text key="Preset icon: Zoom in">Zoom ind</text>
   <text key="Preset icon: Zoom out">Zoom ud</text>
   <text key="Preset icon: Zoom reset">Nulstil zoom</text>
+  <text key="Empty preset.">Positionen er tom.</text>
+  <text key="Fast zoom in">Zoom hurtigt ind</text>
+  <text key="Fast zoom out">Zoom hurtigt ud</text>
+  <text key="Replace with current position?">Erstat med aktuel position?</text>
+  <text key="Delete permanent preset: {0}?">Slet den permanente position »{0}«?</text>
+  <text key="Recall preset">Kør til position</text>
+  <text key="Delete temporary preset">Slet midlertidig position</text>
+  <text key="Hold Shift for fast zoom.">Hold Skift nede for hurtig zoom.</text>
+  <text key="Drag and release to set zoom.">Træk og slip for at indstille zoom.</text>
 </translations>

@@ -28,6 +28,6 @@ Run `scripts/check-translations.ps1`, then build. Test with `"Camera Control Stu
 
 ## Add a language
 
-Copy `en.xml` to a new language-code file. Translate every value. Add its code and name in `Shared/UiText.cs`. Add the code to the translation check script, locale test loop and screenshot script. Create matching guide folders and add the new relative language links at the top of all guides. Add the language to the MSIX manifest and installer if it is supported there.
+Copy `en.xml` to a new language-code file. Translate every value and register the code and name in `Shared/UiText.cs`. The translation checker and locale tests pick up the new file and registration automatically. Declare the app language in the MSIX manifest.
 
 Automatic selection uses the Windows language prefix. Unsupported languages fall back to English. Test narrow windows and long labels; translation must not hide controls.

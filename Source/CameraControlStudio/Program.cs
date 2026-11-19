@@ -16,7 +16,8 @@ namespace CameraControlStudio {
             bool created;
             using (var mutex = new Mutex(true, "Local\\CameraControlStudio", out created)) {
                 if (!created) {
-                    MessageBox.Show(UiText.T("The application is already running.", "Programmet kører allerede."));
+                    MessageBox.Show(UiText.T("The application is already running.", "Programmet kører allerede."), "",
+                        MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, AppForm.MessageDirection);
                     return;
                 }
                 Application.EnableVisualStyles();

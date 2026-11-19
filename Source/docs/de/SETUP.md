@@ -31,7 +31,7 @@ Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten
 | Normale Schwenkschritte | Innerer Pfeilring | 5 |
 | Schnelle Schwenkschritte | Äußerer Pfeilring | 32 |
 | Normale Zoomschritte | − und + | 5 |
-| Schnelle Zoomschritte | −− und ++ | 32 |
+| Schnelle Zoomschritte | Umschalttaste + eine Zoomtaste | 32 |
 | Übergang in Sekunden | Gewünschte Dauer eines Positionswechsels | 2 |
 
 Ein Schritt entspricht einem Schritt des Kameratreibers. Er ist keine feste Strecke oder Prozentzahl. Der Treiber begrenzt die Bewegung und ihre Gleichmäßigkeit.
@@ -56,6 +56,6 @@ Ziehen Sie die Trennlinie **E** zwischen Steuerung und Positionsliste. Verschieb
 
 Lassen Sie beim Profilwechsel über **A** die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
 
-Wählen Sie die Sprache unter **Einstellungen** und starten Sie die Anwendung neu. Automatisch verwendet Deutsch oder Dänisch, wenn Windows diese Sprache nutzt. Sonst wird Englisch verwendet. Die Sprachwahl gilt für die gesamte Anwendung, nicht nur für ein Profil.
+Wählen Sie die Sprache unter **Einstellungen** und starten Sie die Anwendung neu. Die automatische Auswahl folgt der Windows-Anzeigesprache, sofern die Anwendung sie unterstützt. Andernfalls verwendet sie Englisch. Die Sprachwahl gilt für die gesamte Anwendung.
 
 Weiter: [Tägliche Nutzung](DAILY-USE.md). Für eine Sicherung schließen Sie die Anwendung und kopieren `%LOCALAPPDATA%\CamPressets`. Temporäre Positionen sind nicht enthalten.

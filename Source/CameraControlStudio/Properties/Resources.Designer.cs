@@ -69,5 +69,45 @@ namespace CameraControlStudio.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Zoom_In {
+            get {
+                object obj = ResourceManager.GetObject("Zoom In", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Zoom_In_Fast {
+            get {
+                object obj = ResourceManager.GetObject("Zoom In Fast", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Zoom_Out {
+            get {
+                object obj = ResourceManager.GetObject("Zoom Out", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Zoom_Out_Fast {
+            get {
+                object obj = ResourceManager.GetObject("Zoom Out Fast", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

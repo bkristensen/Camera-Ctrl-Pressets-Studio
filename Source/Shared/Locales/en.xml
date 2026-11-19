@@ -7,12 +7,12 @@
   <text key="Add temporary preset">Add temporary preset</text>
   <text key="Always on top">Always on top</text>
   <text key="Ask whether streaming has started before using the camera">Ask whether streaming has started before using the camera</text>
-  <text key="Automatic ">Automatic </text>
+  <text key="Automatic">Automatic</text>
+  <text key="Automatic {0}">Automatic {0}</text>
   <text key="Backlight compensation">Backlight compensation</text>
   <text key="Brightness">Brightness</text>
   <text key="Buy me a coffee">Buy me a coffee</text>
   <text key="Camera">Camera</text>
-  <text key="Camera Control &amp; Pressets">Camera Control &amp; Pressets</text>
   <text key="Camera direction wheel. Inner ring normal, outer ring fast.">Camera direction wheel. Inner ring normal, outer ring fast.</text>
   <text key="Camera: not connected">Camera: not connected</text>
   <text key="Cancel">Cancel</text>
@@ -130,4 +130,13 @@
   <text key="Preset icon: Zoom in">Zoom in</text>
   <text key="Preset icon: Zoom out">Zoom out</text>
   <text key="Preset icon: Zoom reset">Zoom reset</text>
+  <text key="Empty preset.">Empty preset.</text>
+  <text key="Fast zoom in">Fast zoom in</text>
+  <text key="Fast zoom out">Fast zoom out</text>
+  <text key="Replace with current position?">Replace with current position?</text>
+  <text key="Delete permanent preset: {0}?">Delete permanent preset “{0}”?</text>
+  <text key="Recall preset">Recall preset</text>
+  <text key="Delete temporary preset">Delete temporary preset</text>
+  <text key="Hold Shift for fast zoom.">Hold Shift for fast zoom.</text>
+  <text key="Drag and release to set zoom.">Drag and release to set zoom.</text>
 </translations>

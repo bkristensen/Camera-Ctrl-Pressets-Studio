@@ -15,7 +15,16 @@ namespace CameraControlStudio {
     public sealed class ProfileLayout {
         [DataMember] public bool HasBounds, Maximized, SettingsOpen;
         [DataMember] public int X, Y, Width = 900, Height = 500, SettingsTab;
-        [DataMember] public double ControllerRatio = .36;
+        [DataMember] public double ControllerRatio = LayoutPolicy.DefaultControllerRatio;
+        [DataMember(EmitDefaultValue = false)] bool CompactMainView = true;
+
+        [OnDeserialized]
+        void RestoreControllerRatio(StreamingContext context) {
+            if (!CompactMainView && ControllerRatio == .36)
+                ControllerRatio = LayoutPolicy.DefaultControllerRatio;
+            CompactMainView = true;
+        }
+
         public ProfileLayout Copy() {
             return (ProfileLayout)MemberwiseClone();
         }
@@ -58,11 +67,13 @@ namespace CameraControlStudio {
         }
     }
     public static class LayoutPolicy {
+        public const double DefaultControllerRatio = .55;
         public static ProfileLayout OnSwitch(ProfileLayout current, ProfileLayout target, bool keep) {
             return (keep ? current : target).Copy();
         }
         public static double Ratio(double value) {
-            return double.IsNaN(value) || double.IsInfinity(value) ? .36 : Math.Max(.2, Math.Min(.7, value));
+            return double.IsNaN(value) || double.IsInfinity(value) || value == 0
+                ? DefaultControllerRatio : Math.Max(.2, Math.Min(.7, value));
         }
     }
 }

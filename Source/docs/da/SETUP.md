@@ -31,7 +31,7 @@ Ret værdierne i **J**. Start med små trin. Se resultatet i dit optageprogram.
 | Normale panoreringstrin | Den inderste ring med pile | 5 |
 | Hurtige panoreringstrin | Den yderste ring med pile | 32 |
 | Normale zoomtrin | − og + | 5 |
-| Hurtige zoomtrin | −− og ++ | 32 |
+| Hurtige zoomtrin | Skift + en zoomknap | 32 |
 | Skiftetid i sekunder | Ønsket tid til en gemt position | 2 |
 
 Et trin er ét trin, som kameradriveren understøtter. Det er ikke en fast afstand eller procent. Kameraets driver sætter grænsen for bevægelse og bløde skift.
@@ -56,6 +56,6 @@ Træk skillelinjen **E** mellem styringen og positionslisten. Flyt vinduet, og r
 
 Når du vælger profil med **A**, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 
-Vælg sprog under **Indstillinger**, og genstart. Automatisk bruger dansk eller tysk, hvis Windows bruger det sprog. Ellers bruges engelsk. Sprogvalget gælder hele programmet, ikke kun en profil.
+Vælg sprog under **Indstillinger**, og genstart. Automatisk følger Windows' visningssprog, når programmet understøtter det, og bruger ellers engelsk. Sprogvalget gælder hele programmet.
 
 Fortsæt med [Daglig brug](DAILY-USE.md). Tag backup ved at lukke programmet og kopiere `%LOCALAPPDATA%\CamPressets`. Midlertidige positioner er ikke med i backup.

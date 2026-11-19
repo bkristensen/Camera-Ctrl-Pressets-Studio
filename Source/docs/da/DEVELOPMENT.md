@@ -28,6 +28,6 @@ Kør `scripts/check-translations.ps1`, og byg programmet. Test med `"Camera Cont
 
 ## Tilføj et sprog
 
-Kopiér `en.xml` til en fil med den nye sprogkode. Oversæt alle værdier. Tilføj kode og navn i `Shared/UiText.cs`. Tilføj koden i oversættelsestesten, sprogløkken i testprogrammet og skærmbilled-scriptet. Opret en mappe til guiderne, og tilføj sproglinks øverst i alle guider. Tilføj sproget i MSIX-manifest og installer, hvis det understøttes der.
+Kopiér `en.xml` til en fil med den nye sprogkode. Oversæt alle værdier, og registrér kode og navn i `Shared/UiText.cs`. Oversættelseskontrollen og sprogtestene finder automatisk den nye fil og registrering. Angiv appens sprog i MSIX-manifestet.
 
 Automatisk valg bruger Windows-sprogets første del. Ukendte sprog falder tilbage til engelsk. Test smalle vinduer og lange tekster, så knapperne ikke skjules.

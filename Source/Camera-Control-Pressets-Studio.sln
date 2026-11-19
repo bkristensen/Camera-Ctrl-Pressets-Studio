@@ -1,19 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.12.12405.243 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraControlStudio", "CameraControlStudio\CameraControlStudio.csproj", "{4E4594B0-15D7-46FC-87DF-7C8EF846512A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{DD81FB7B-8E35-4212-9DD8-68CFA37B695B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{6CF036F9-0E8C-4BDE-AC5D-6E54ED9BFA1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4E4594B0-15D7-46FC-87DF-7C8EF846512A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +23,11 @@ Global
 		{DD81FB7B-8E35-4212-9DD8-68CFA37B695B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD81FB7B-8E35-4212-9DD8-68CFA37B695B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD81FB7B-8E35-4212-9DD8-68CFA37B695B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5CC63FB-4320-47B9-BB6D-3D3889D05A74}
 	EndGlobalSection
 EndGlobal

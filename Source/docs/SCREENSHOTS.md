@@ -15,7 +15,7 @@ Capture mode uses actual Forms, rendered by Windows, with synthetic positions. I
 | Label | Control |
 | --- | --- |
 | A / B | Profile selection / settings gear |
-| C / D | Direction controller and central source selector / zoom buttons |
+| C / D | Direction controller and central source selector / zoom buttons and slider |
 | E / F | Draggable divider / position list |
 | G / H | Add temporary position / status area |
 | I / J | Settings tabs / general settings fields |

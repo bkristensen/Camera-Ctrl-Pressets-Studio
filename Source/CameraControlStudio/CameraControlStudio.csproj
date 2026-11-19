@@ -13,29 +13,25 @@
   <EmbeddedResource Remove="Assets\PressetIcons.resx" />
   <None Include="Assets\PressetIcons.resx" />
   <!-- Keep the comments and package the linked images without bitmap serialization at build time. -->
-  <EmbeddedResource Include="Assets/PressetIcons.resx" Type="Non-Resx" WithCulture="false"
-                    LogicalName="CameraControlStudio.Assets.PressetIcons.xml" />
+  <EmbeddedResource Include="Assets/PressetIcons.resx" Type="Non-Resx" WithCulture="false" LogicalName="CameraControlStudio.Assets.PressetIcons.xml" />
+  <EmbeddedResource Update="Forms\MainForm.resx" LogicalName="CameraControlStudio.MainForm.resources" />
   <EmbeddedResource Update="Properties\Resources.resx">
     <Generator>ResXFileCodeGenerator</Generator>
     <LastGenOutput>Resources.Designer.cs</LastGenOutput>
   </EmbeddedResource>
 </ItemGroup>
 <Target Name="EmbedLinkedPresetIcons" BeforeTargets="AssignTargetPaths">
-  <XmlPeek XmlInputPath="Assets/PressetIcons.resx"
-           Query="/root/data[starts-with(@type, 'System.Resources.ResXFileRef,')]/value/text()">
+  <XmlPeek XmlInputPath="Assets/PressetIcons.resx" Query="/root/data[starts-with(@type, 'System.Resources.ResXFileRef,')]/value/text()">
     <Output TaskParameter="Result" ItemName="_PresetIconFileReference" />
   </XmlPeek>
   <ItemGroup>
-    <_PresetIconPath Include="$([System.String]::Copy('%(_PresetIconFileReference.Identity)').Split(';')[0])"
-                     Condition="'%(_PresetIconFileReference.Identity)' != ''" />
+    <_PresetIconPath Include="$([System.String]::Copy('%(_PresetIconFileReference.Identity)').Split(';')[0])" Condition="'%(_PresetIconFileReference.Identity)' != ''" />
   </ItemGroup>
   <RemoveDuplicates Inputs="@(_PresetIconPath)">
     <Output TaskParameter="Filtered" ItemName="_UniquePresetIconPath" />
   </RemoveDuplicates>
   <ItemGroup>
-    <EmbeddedResource Include="Assets/%(_UniquePresetIconPath.Identity)" Type="Non-Resx" WithCulture="false"
-                      LogicalName="CameraControlStudio.PresetIconFiles/%(_UniquePresetIconPath.Identity)"
-                      Condition="'%(_UniquePresetIconPath.Identity)' != ''" />
+    <EmbeddedResource Include="Assets/%(_UniquePresetIconPath.Identity)" Type="Non-Resx" WithCulture="false" LogicalName="CameraControlStudio.PresetIconFiles/%(_UniquePresetIconPath.Identity)" Condition="'%(_UniquePresetIconPath.Identity)' != ''" />
   </ItemGroup>
 </Target>
 </Project>

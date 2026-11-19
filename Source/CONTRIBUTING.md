@@ -4,7 +4,7 @@ Fork the repository and create a focused branch. Describe the problem and expect
 
 Preserve these primary behaviours: quick pan/tilt/zoom, permanent and temporary positions, profile separation, optional camera-access confirmation, and a compact readable interface. Settings open beside the position list. No camera access should occur while confirmation is pending. Icons must survive connection and status changes.
 
-Keep camera ranges in driver units. Keep stored icon IDs stable. Maintain English, Danish and German text keys together. Do not add vendor-specific assumptions to the normal workflow.
+Keep camera ranges in driver units. Keep stored icon IDs stable. Keep the text keys in every locale in sync with the English catalog. Do not add vendor-specific assumptions to the normal workflow.
 
 Build the solution, run the logic tests and complete relevant Windows checks in `docs/RELEASE-CHECKLIST.md`. Include screenshots for UI changes. Never include real user profiles, credentials, private meeting content or signing keys.
 

@@ -51,7 +51,7 @@ namespace CameraControlStudio {
                     return;
                 }
                 if (exists?.Invoke(PresetName) ?? false) {
-                    MessageBox.Show(this, UiText.T("Name already exists.", "Navnet findes allerede."));
+                    ShowMessage(UiText.T("Name already exists.", "Navnet findes allerede."));
                     return;
                 }
                 DialogResult = DialogResult.OK;
@@ -63,11 +63,15 @@ namespace CameraControlStudio {
                 return;
 
             var id = (string)choices.Items[e.Index];
+            bool rightToLeft = choices.RightToLeft == RightToLeft.Yes;
+            var flags = TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis;
+            if (rightToLeft)
+                flags |= TextFormatFlags.RightToLeft | TextFormatFlags.Right;
+            var iconBounds = new Rectangle(rightToLeft ? e.Bounds.Right - 66 : e.Bounds.X + 6, e.Bounds.Y + 5, 60, 30);
+            var textBounds = new Rectangle(e.Bounds.X + (rightToLeft ? 2 : 78), e.Bounds.Y, e.Bounds.Width - 80, e.Bounds.Height);
             e.DrawBackground();
-            PresetIcons.Draw(e.Graphics, id, new Rectangle(e.Bounds.X + 6, e.Bounds.Y + 5, 60, 30));
-            TextRenderer.DrawText(e.Graphics, PresetIcons.GetTitle(id), e.Font,
-                new Rectangle(e.Bounds.X + 78, e.Bounds.Y, e.Bounds.Width - 80, e.Bounds.Height),
-                e.ForeColor, TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
+            PresetIcons.Draw(e.Graphics, id, iconBounds);
+            TextRenderer.DrawText(e.Graphics, PresetIcons.GetTitle(id), e.Font, textBounds, e.ForeColor, flags);
             e.DrawFocusRectangle();
         }
     }
