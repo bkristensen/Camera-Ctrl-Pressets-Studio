@@ -11,11 +11,10 @@ namespace CameraControlStudio {
   internal MainForm(string outputDirectory):this(){documentationMode=true;documentationDirectory=Path.GetFullPath(outputDirectory);}
   void InitializeDocumentation(){
    config=new SavedData {CameraId="documentation-only"};
-   config.Cameras[config.CameraId]=new List<Preset>{
-    new Preset{Name=UiText.T("Icon: stage","Hele scenen"),IconId="stage"},
-    new Preset{Name=UiText.T("Icon: lectern","Talerstol"),IconId="lectern"},
-    new Preset{Name=UiText.T("Icon: combo:lectern+cafe-table","Talerstol + Cafebord"),IconId="combo:lectern+cafe-table"},
-    new Preset{Name=UiText.T("Icon: combo:table+lectern+cafe-table","Bord + Talerstol + Cafebord"),IconId="combo:table+lectern+cafe-table"}};
+   var examples = new[] { "stage", "lectern", "combo:lectern+cafe-table", "combo:table+lectern+cafe-table" };
+   config.Cameras[config.CameraId]=new List<Preset>();
+   foreach (var example in examples)
+    config.Cameras[config.CameraId].Add(new Preset { Name = PresetIcons.GetTitle(example), IconId = example });
    Temporary.Add(new Preset{Name=UiText.T("Temporary preset name","Midlertidig position")});
    panSteps.Value=5;fastPanSteps.Value=32;zoomSteps.Value=5;fastZoomSteps.Value=32;seconds.Value=2;
    profilesList.Items.Add("Standard");profileButton.Text="Standard ▾";

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -244,11 +244,11 @@
   </data>
   <data name="presset_32_schene1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Pressets\presset_32_schene1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Schene 1</comment>
+    <comment>Scene 1</comment>
   </data>
   <data name="presset_33_schene2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Pressets\presset_33_schene2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Schene 2</comment>
+    <comment>Scene 2</comment>
   </data>
   <data name="presset_34_lectern_cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Pressets\presset_34_lectern_cafe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -257,5 +257,49 @@
   <data name="presset_35_cafe_lectern" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Pressets\presset_35_cafe_lectern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Cafe Table + Lectern</comment>
+  </data>
+  <data name="presset_36_more" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_36_more.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>More</comment>
+  </data>
+  <data name="presset_37_group" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_37_group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Group</comment>
+  </data>
+  <data name="presset_38_lectern_table2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_38_lectern_table2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Lectern + Table 2</comment>
+  </data>
+  <data name="presset_39_table2_lectern" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_39_table2_lectern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Table 2 + Lectern</comment>
+  </data>
+  <data name="presset_40_table2_lectern_cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_40_table2_lectern_cafe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Table 2 + Lectern + Cafe Table</comment>
+  </data>
+  <data name="presset_41_cafe_lectern_table2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_41_cafe_lectern_table2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Cafe Table + Lectern + Table 2</comment>
+  </data>
+  <data name="presset_42_cafe_lectern_cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_42_cafe_lectern_cafe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Cafe Table + Lectern + Cafe Table</comment>
+  </data>
+  <data name="presset_43_lectern_round_table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_43_lectern_round_table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Lectern + Round Table</comment>
+  </data>
+  <data name="presset_44_round_table_lectern" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_44_round_table_lectern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Round Table + Lectern</comment>
+  </data>
+  <data name="presset_45_round_table_lectern_cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_45_round_table_lectern_cafe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Round Table + Lectern + Cafe Table</comment>
+  </data>
+  <data name="presset_46_cafe_lectern_round_table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Pressets\presset_46_cafe_lectern_round_table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Cafe Table + Lectern + Round Table</comment>
   </data>
 </root>

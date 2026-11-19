@@ -76,6 +76,11 @@ namespace CameraControlStudio {
             Invalidate();
             base.OnMouseUp(e);
         }
+        protected override void OnEnabledChanged(EventArgs e) {
+            over = down = false;
+            base.OnEnabledChanged(e);
+            Invalidate();
+        }
         protected override void OnPaint(PaintEventArgs e) {
             var g = e.Graphics;
             g.Clear(Parent == null ? BackColor : Parent.BackColor);
@@ -83,9 +88,13 @@ namespace CameraControlStudio {
             var r = new RectangleF(2, 2, Width - 5, Height - 5);
             if (r.Width <= 0 || r.Height <= 0)
                 return;
+            bool highlighted = Enabled && (Primary || over);
+            var top = !Enabled ? Color.FromArgb(31, 58, 86) : down ? Color.FromArgb(0, 65, 125)
+                : highlighted ? Color.FromArgb(10, 155, 255) : Color.FromArgb(39, 106, 175);
+            var border = !Enabled ? Color.FromArgb(52, 75, 101) : highlighted ? Color.FromArgb(80, 219, 255) : BlueTheme.Line;
             using (var p = BlueTheme.Round(r, 10))
-            using (var brush = new LinearGradientBrush(r, down ? Color.FromArgb(0, 65, 125) : Primary || over ? Color.FromArgb(10, 155, 255) : Color.FromArgb(39, 106, 175), Color.FromArgb(6, 46, 88), 90))
-            using (var pen = new Pen(Primary || over ? Color.FromArgb(80, 219, 255) : BlueTheme.Line, 1.5f)) {
+            using (var brush = new LinearGradientBrush(r, top, Color.FromArgb(6, 46, 88), 90))
+            using (var pen = new Pen(border, 1.5f)) {
                 g.FillPath(brush, p);
                 g.DrawPath(pen, p);
             }
@@ -109,12 +118,25 @@ namespace CameraControlStudio {
     }
     public sealed class PanWheel : Control {
         public event Action<string, int, bool> MovementRequested; public event Action Released; public event Action SourceRequested;
+        readonly bool[] available = { true, true, true, true };
         int active = -1; public PanWheel() {
             DoubleBuffered = true;
             SetStyle(ControlStyles.ResizeRedraw, true);
             BackColor = BlueTheme.Background;
             AccessibleName = UiText.T("Camera direction wheel. Inner ring normal, outer ring fast.", "Kamerahjul. Inderste ring normal, yderste ring hurtig.");
             TabStop = true;
+        }
+        internal void SetDirectionAvailability(string axis, bool negative, bool positive) {
+            int minus = axis == "Pan" ? 2 : 1;
+            int plus = axis == "Pan" ? 0 : 3;
+            if (available[minus] == negative && available[plus] == positive)
+                return;
+            available[minus] = negative;
+            available[plus] = positive;
+            if (active >= 0 && !available[active % 4])
+                Release();
+            else
+                Invalidate();
         }
         int Hit(Point p) {
             float size = Math.Min(Width, Height) - 24, cx = Width / 2f, cy = Height / 2f, dx = p.X - cx, dy = p.Y - cy, r = (float)Math.Sqrt(dx * dx + dy * dy);
@@ -124,7 +146,7 @@ namespace CameraControlStudio {
             return direction + (r > size * .315 ? 4 : 0);
         }
         void Trigger(int n) {
-            if (n < 0)
+            if (n < 0 || !available[n % 4])
                 return;
             MovementRequested?.Invoke(n % 4 == 0 || n % 4 == 2 ? "Pan" : "Tilt", n % 4 == 0 || n % 4 == 3 ? 1 : -1, n >= 4);
         }
@@ -138,8 +160,9 @@ namespace CameraControlStudio {
                 SourceRequested?.Invoke();
                 return;
             }
-            active = Hit(e.Location);
-            if (active >= 0) {
+            int hit = Hit(e.Location);
+            if (hit >= 0 && available[hit % 4]) {
+                active = hit;
                 Capture = true;
                 Trigger(active);
             }
@@ -190,6 +213,7 @@ namespace CameraControlStudio {
                 return;
             for (int ring = 0; ring < 2; ring++)
             for (int dir = 0; dir < 4; dir++) {
+                bool enabled = Enabled && available[dir];
                 float outer = size * (ring == 0 ? .305f : .5f), inner = size * (ring == 0 ? .18f : .325f);
                 float angle = dir * 90 - 43;
                 using (var p = new GraphicsPath()) {
@@ -198,19 +222,21 @@ namespace CameraControlStudio {
                     p.CloseFigure();
                     var r = p.GetBounds();
                     bool selected = active == dir + ring * 4;
-                    using (var b = new LinearGradientBrush(r, selected ? Color.FromArgb(65, 210, 255) : ring == 1 ? Color.FromArgb(0, 142, 238) : Color.FromArgb(38, 100, 160), Color.FromArgb(3, 44, 85), 90))
+                    var top = !enabled ? Color.FromArgb(31, 58, 86) : selected ? Color.FromArgb(65, 210, 255)
+                        : ring == 1 ? Color.FromArgb(0, 142, 238) : Color.FromArgb(38, 100, 160);
+                    using (var b = new LinearGradientBrush(r, top, Color.FromArgb(3, 44, 85), 90))
                         g.FillPath(b, p);
-                    if (ring == 1)
+                    if (enabled && ring == 1)
                     using (var glow = new Pen(Color.FromArgb(40, 0, 200, 255), 8))
                         g.DrawPath(glow, p);
-                    using (var pen = new Pen(ring == 1 ? Color.FromArgb(92, 222, 255) : BlueTheme.Line, 2))
+                    using (var pen = new Pen(!enabled ? Color.FromArgb(52, 75, 101) : ring == 1 ? Color.FromArgb(92, 222, 255) : BlueTheme.Line, 2))
                         g.DrawPath(pen, p);
                 }
                 float radius = (outer + inner) / 2;
                 var state = g.Save();
                 g.TranslateTransform(cx + (float)Math.Cos(dir * Math.PI / 2) * radius, cy + (float)Math.Sin(dir * Math.PI / 2) * radius);
                 g.RotateTransform(dir * 90);
-                using (var pen = new Pen(Enabled ? Color.White : Color.SlateGray, Math.Max(3, size / 75))) {
+                using (var pen = new Pen(enabled ? Color.White : Color.SlateGray, Math.Max(3, size / 75))) {
                     pen.StartCap = pen.EndCap = LineCap.Round;
                     float a = size * .025f;
                     for (int n = 0; n < (ring == 1 ? 2 : 1); n++) {

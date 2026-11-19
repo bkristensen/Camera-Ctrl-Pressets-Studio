@@ -79,10 +79,10 @@ namespace CameraControlStudio {
             } finally { if (File.Exists(temp)) File.Delete(temp); }
         }
         public static string T(string english, string dansk) {
-            string value;
-            if (translations.TryGetValue(english, out value))
-                return value;
-            return IsDanish ? dansk : english;
+            return Translate(english, IsDanish ? dansk : english);
+        }
+        internal static string Translate(string key, string fallback) {
+            return translations.TryGetValue(key, out var value) ? value : fallback;
         }
     }
 }

@@ -2,11 +2,7 @@
 <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net48</TargetFramework><UseWindowsForms>true</UseWindowsForms><EnableWindowsTargeting>true</EnableWindowsTargeting><AssemblyName>Camera Control Studio</AssemblyName><RootNamespace>CameraControlStudio</RootNamespace><ApplicationIcon>Assets/CameraControlStudio.ico</ApplicationIcon></PropertyGroup>
 <ItemGroup><PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" /><Reference Include="System.Runtime.Serialization" /><Compile Include="../Shared/*.cs" Link="Shared/%(Filename)%(Extension)" /><EmbeddedResource Include="../Shared/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" /><Compile Update="Forms/*Form.cs"><SubType>Form</SubType></Compile><Compile Update="Forms/*.Designer.cs"><DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer','')).cs</DependentUpon></Compile></ItemGroup>
 <ItemGroup>
-  <Compile Update="Assets\PressetIcons.Designer.cs">
-    <DesignTime>True</DesignTime>
-    <AutoGen>True</AutoGen>
-    <DependentUpon>PressetIcons.resx</DependentUpon>
-  </Compile>
+  <Compile Remove="Assets\PressetIcons.Designer.cs" />
   <Compile Update="Properties\Resources.Designer.cs">
     <DesignTime>True</DesignTime>
     <AutoGen>True</AutoGen>
@@ -14,13 +10,32 @@
   </Compile>
 </ItemGroup>
 <ItemGroup>
-  <EmbeddedResource Update="Assets\PressetIcons.resx">
-    <Generator>ResXFileCodeGenerator</Generator>
-    <LastGenOutput>PressetIcons.Designer.cs</LastGenOutput>
-  </EmbeddedResource>
+  <EmbeddedResource Remove="Assets\PressetIcons.resx" />
+  <None Include="Assets\PressetIcons.resx" />
+  <!-- Keep the comments and package the linked images without bitmap serialization at build time. -->
+  <EmbeddedResource Include="Assets/PressetIcons.resx" Type="Non-Resx" WithCulture="false"
+                    LogicalName="CameraControlStudio.Assets.PressetIcons.xml" />
   <EmbeddedResource Update="Properties\Resources.resx">
     <Generator>ResXFileCodeGenerator</Generator>
     <LastGenOutput>Resources.Designer.cs</LastGenOutput>
   </EmbeddedResource>
 </ItemGroup>
+<Target Name="EmbedLinkedPresetIcons" BeforeTargets="AssignTargetPaths">
+  <XmlPeek XmlInputPath="Assets/PressetIcons.resx"
+           Query="/root/data[starts-with(@type, 'System.Resources.ResXFileRef,')]/value/text()">
+    <Output TaskParameter="Result" ItemName="_PresetIconFileReference" />
+  </XmlPeek>
+  <ItemGroup>
+    <_PresetIconPath Include="$([System.String]::Copy('%(_PresetIconFileReference.Identity)').Split(';')[0])"
+                     Condition="'%(_PresetIconFileReference.Identity)' != ''" />
+  </ItemGroup>
+  <RemoveDuplicates Inputs="@(_PresetIconPath)">
+    <Output TaskParameter="Filtered" ItemName="_UniquePresetIconPath" />
+  </RemoveDuplicates>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets/%(_UniquePresetIconPath.Identity)" Type="Non-Resx" WithCulture="false"
+                      LogicalName="CameraControlStudio.PresetIconFiles/%(_UniquePresetIconPath.Identity)"
+                      Condition="'%(_UniquePresetIconPath.Identity)' != ''" />
+  </ItemGroup>
+</Target>
 </Project>
