@@ -1,4 +1,8 @@
+![Camera Control Studio main window with settings closed](docs/images/screenshots/main.png)
+
 # Camera Control Studio
+
+**[Windows downloads on GitHub Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)**
 
 A small Windows camera controller with named positions, precise movement and smooth preset transitions. Developed as open source by **Brian Kristensen, Vejle Uhrhøj, DK**.
 

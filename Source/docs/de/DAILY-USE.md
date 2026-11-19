@@ -4,6 +4,8 @@
 
 Starten Sie zuerst Ihr Aufnahmeprogramm und Ihren Stream, falls Ihr Aufbau dies erfordert. Öffnen Sie **Camera Control Studio.exe**.
 
+![Hauptfenster mit geschlossenem Einstellungsbereich](../images/screenshots/main.png)
+
 ## 1. Aufbau wählen
 
 Öffnen Sie die Profilauswahl unten und wählen Sie Ihr Profil. Lassen Sie die Layout-Option aus, um das gespeicherte Fenster zu laden. Aktivieren Sie sie nur, wenn Sie das aktuelle Layout behalten möchten.

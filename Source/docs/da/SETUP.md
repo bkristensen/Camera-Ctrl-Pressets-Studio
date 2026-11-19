@@ -10,6 +10,8 @@ Brug profilvælgeren i bunden til at vælge profil. Opret en profil under **Inds
 
 Tryk på kamerasymbolet midt i kamerahjulet for at vælge kamera. Programmet husker valget. Hvis kameraet mangler, skal du vælge en anden kilde. Positioner hører til et bestemt kamera i en profil.
 
+![Fanen Profiler med profillisten og knapperne](../images/screenshots/profiles.png)
+
 ## 2. Vælg, hvornår kamerastyringen må starte
 
 Sæt flueben ved **Spørg om streaming er startet før kameraet bruges** under **Indstillinger**, hvis dit optageprogram skal starte først. Fluebenet er slået fra som standard.
@@ -21,6 +23,8 @@ Har du brug for denne rækkefølge, skal du sætte fluebenet før næste session
 ## 3. Indstil bevægelse og zoom
 
 Ret værdierne på fanen **Indstillinger**. Start med små trin. Se resultatet i dit optageprogram.
+
+![Fanen Indstillinger med bevægelse, overgang og sprog](../images/screenshots/settings.png)
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
@@ -36,6 +40,8 @@ Hænger kameraet på hovedet, så prøv **Omvend op / ned**. Test pil op. Slå k
 
 ## 4. Tilpas billedet og gem faste positioner
 
+![Fanen Billede med fokus, eksponering og andre kameraværdier](../images/screenshots/image.png)
+
 Vælg **Billede** i indstillingspanelet. Indlæs billedindstillinger, hvis det er nødvendigt. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
 
 Indstil først kameraet. Vælg **Positioner** i indstillingspanelet, og tryk **Tilføj**. Vælg ikon øverst. Kontrollér navnet, og gem. Er navnefeltet tomt, og er navnet ledigt, foreslår ikonet et navn. Kombinerede symboler viser motiverne fra venstre mod højre.
@@ -44,6 +50,8 @@ Vælg en position i listen under indstillinger for at ændre den. Her kan du æn
 
 En fast position, du markerer i hovedlisten, markeres også i indstillingerne. Når du gemmer en ny fast position, markeres den i indstillingerne.
 
+![Fanen Positioner med listen over faste positioner og knapperne](../images/screenshots/presets.png)
+
 ## 5. Tilpas udseende og sprog
 
 Træk den lodrette skillelinje mellem styringen og positionslisten. Flyt vinduet, og ret størrelsen. Programmet gemmer placering, størrelse, skillelinje og valgt indstillingsfane i den aktive profil. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne er altid lukket ved programstart.
@@ -51,5 +59,11 @@ Træk den lodrette skillelinje mellem styringen og positionslisten. Flyt vinduet
 Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 
 Vælg sprog under **Indstillinger**, og genstart. Automatisk følger Windows' visningssprog, når programmet understøtter det, og bruger ellers engelsk. Sprogvalget gælder hele programmet.
+
+## 6. Version og projektoplysninger
+
+Åbn **Om** for at se den installerede version, udvikleren og links til projektet og support.
+
+![Fanen Om med version, udvikler og projektlinks](../images/screenshots/about.png)
 
 Fortsæt med [Daglig brug](DAILY-USE.md). Tag backup ved at lukke programmet og kopiere `%LOCALAPPDATA%\CamPressets`. Midlertidige positioner er ikke med i backup.

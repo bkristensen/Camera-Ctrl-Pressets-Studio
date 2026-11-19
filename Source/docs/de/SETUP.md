@@ -10,6 +10,8 @@ Wählen Sie das Profil über die Profilauswahl unten. Öffnen Sie **Einstellunge
 
 Klicken Sie auf das Kamerasymbol in der Mitte des Steuerrads, um die Kamera zu wählen. Die Anwendung merkt sich die Auswahl. Fehlt die Kamera, wählen Sie eine andere Quelle. Positionen gehören zu einer Kamera innerhalb eines Profils.
 
+![Registerkarte Profile mit Profilliste und Aktionen](../images/screenshots/profiles.png)
+
 ## 2. Kamerazugriff festlegen
 
 Aktivieren Sie unter **Einstellungen** die Option **Vor der Kameranutzung fragen, ob das Streaming gestartet wurde**, wenn Ihr Aufnahmeprogramm zuerst starten muss. Die Option ist standardmäßig aus.
@@ -21,6 +23,8 @@ Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten
 ## 3. Bewegung und Zoom einstellen
 
 Ändern Sie die Werte auf der Registerkarte **Einstellungen**. Beginnen Sie mit kleinen Schritten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
+
+![Registerkarte Einstellungen mit Schritten, Übergangszeit und Sprache](../images/screenshots/settings.png)
 
 | Einstellung | Wirkung | Standard |
 | --- | --- | --- |
@@ -36,6 +40,8 @@ Hängt die Kamera kopfüber, testen Sie **Oben / unten umkehren** mit dem Pfeil 
 
 ## 4. Bild anpassen und feste Positionen speichern
 
+![Registerkarte Bild mit Fokus, Belichtung und weiteren Kamerawerten](../images/screenshots/image.png)
+
 Öffnen Sie **Bild** im Einstellungsbereich. Laden Sie die Bildregler bei Bedarf. Es erscheinen nur Funktionen, die der Treiber bereitstellt. Stellen Sie Helligkeit, Kontrast, Farbsättigung, Fokus oder Weißabgleich ein, soweit verfügbar. Schalten Sie die Automatik vor einer manuellen Änderung aus. Bildwerte werden pro Kamera und Profil gespeichert. Die Rücksetztaste stellt die Treiberstandardwerte wieder her.
 
 Richten Sie zuerst die Kamera aus. Öffnen Sie **Positionen** im Einstellungsbereich und wählen Sie **Hinzufügen**. Wählen Sie oben ein Symbol. Prüfen Sie den Namen und speichern Sie. Ist das Namensfeld leer und der Name noch frei, schlägt das Symbol einen Namen vor. Kombinierte Symbole zeigen ihre Motive von links nach rechts.
@@ -44,6 +50,8 @@ Wählen Sie eine Position in der Einstellungsliste zum Bearbeiten. Hier können 
 
 Eine feste Position, die in der Hauptliste ausgewählt ist, wird auch in den Einstellungen ausgewählt. Eine neu gespeicherte feste Position wird in den Einstellungen ausgewählt.
 
+![Registerkarte Positionen mit der Liste fester Positionen und den Aktionen](../images/screenshots/presets.png)
+
 ## 5. Layout und Sprache einstellen
 
 Ziehen Sie die vertikale Trennlinie zwischen Steuerung und Positionsliste. Verschieben Sie das Fenster oder ändern Sie seine Größe. Fensterlage, Größe, Trennlinie und gewählte Registerkarte werden im aktiven Profil gespeichert. Die Anfangsgröße beträgt 900 × 500 und die Mindestgröße 670 × 450. Der Einstellungsbereich ist bei jedem Programmstart geschlossen.
@@ -51,5 +59,11 @@ Ziehen Sie die vertikale Trennlinie zwischen Steuerung und Positionsliste. Versc
 Lassen Sie beim Profilwechsel über die Profilauswahl unten die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
 
 Wählen Sie die Sprache unter **Einstellungen** und starten Sie die Anwendung neu. Die automatische Auswahl folgt der Windows-Anzeigesprache, sofern die Anwendung sie unterstützt. Andernfalls verwendet sie Englisch. Die Sprachwahl gilt für die gesamte Anwendung.
+
+## 6. Version und Projektinformationen
+
+Unter **Info** findest du die installierte Version, den Entwickler sowie Links zum Projekt und zum Support.
+
+![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/about.png)
 
 Weiter: [Tägliche Nutzung](DAILY-USE.md). Für eine Sicherung schließen Sie die Anwendung und kopieren `%LOCALAPPDATA%\CamPressets`. Temporäre Positionen sind nicht enthalten.

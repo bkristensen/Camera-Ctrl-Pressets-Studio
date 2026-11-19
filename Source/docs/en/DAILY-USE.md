@@ -4,6 +4,8 @@
 
 Start your capture or streaming session first if your setup requires it. Open **Camera Control Studio.exe**.
 
+![Main window with the settings pane closed](../images/screenshots/main.png)
+
 ## 1. Select the setup
 
 Open the profile picker in the footer and choose your profile. Leave the layout checkbox off to restore its saved window. Check it only when you want to keep the current layout.

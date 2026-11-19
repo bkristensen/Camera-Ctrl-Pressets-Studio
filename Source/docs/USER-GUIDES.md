@@ -16,3 +16,5 @@ The guides are included with both the Windows installer and the portable ZIP. Op
 | Português (Brasil) | [Uso e configurações](pt/USER-GUIDE.md) |
 | Bahasa Indonesia | [Penggunaan dan pengaturan](id/USER-GUIDE.md) |
 | اردو | [استعمال اور ترتیبات](ur/USER-GUIDE.md) |
+
+The guides use shared screenshots of the English interface. See the [screenshot index](SCREENSHOTS.md) for all six views.
