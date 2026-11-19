@@ -3,8 +3,8 @@ param(
     [Parameter(Mandatory)][ValidatePattern('^[A-Za-z0-9.-]{3,50}$')][string]$IdentityName,
     [Parameter(Mandatory)][string]$Publisher,
     [Parameter(Mandatory)][string]$PublisherDisplayName,
-    [string]$DisplayName = 'Cam Pressets Studio',
-    [string]$PackageVersion = '0.6.2.0',
+    [string]$DisplayName = 'Camera Control Studio',
+    [string]$PackageVersion = '0.7.0.0',
     [string]$MakeAppxPath = 'MakeAppx.exe'
 )
 $ErrorActionPreference = 'Stop'
@@ -18,12 +18,12 @@ Push-Location $root
 try {
     & "$PSScriptRoot/build.ps1"
     # Package an explicit x64 build; portable builds retain their original target.
-    & dotnet build BrioPresets/BrioPresets.csproj -c Release -p:PlatformTarget=x64 -p:Prefer32Bit=false -o artifacts/msix-bin --nologo
+    & dotnet build CameraControlStudio/CameraControlStudio.csproj -c Release -p:PlatformTarget=x64 -p:Prefer32Bit=false -o artifacts/msix-bin --nologo
     if ($LASTEXITCODE -ne 0) { throw 'x64 build failed.' }
     $stage = Join-Path $root 'artifacts/msix-stage'
     if (Test-Path $stage) { Remove-Item $stage -Recurse -Force }
     New-Item -ItemType Directory -Path "$stage/Assets" -Force | Out-Null
-    Copy-Item 'artifacts/msix-bin/Cam Pressets Studio.exe', 'artifacts/msix-bin/Cam Pressets Studio.exe.config', 'LICENSE', 'README.md' $stage
+    Copy-Item 'artifacts/msix-bin/Camera Control Studio.exe', 'artifacts/msix-bin/Camera Control Studio.exe.config', 'LICENSE', 'README.md' $stage
     Copy-Item '*.md' $stage
     Copy-Item 'docs' (Join-Path $stage 'docs') -Recurse
     [xml]$manifest = Get-Content 'packaging/msix/AppxManifest.xml' -Raw
@@ -37,7 +37,7 @@ try {
     $manifest.SelectSingleNode('//uap:VisualElements',$ns).SetAttribute('DisplayName',$DisplayName)
     $manifest.Save((Join-Path $stage 'AppxManifest.xml'))
     Add-Type -AssemblyName System.Drawing
-    $icon = [System.Drawing.Icon]::new((Join-Path $root 'BrioPresets/Assets/CamPressetsStudio.ico'),256,256)
+    $icon = [System.Drawing.Icon]::new((Join-Path $root 'CameraControlStudio/Assets/CameraControlStudio.ico'),256,256)
     $source = $icon.ToBitmap()
     try {
         foreach ($item in @(@('StoreLogo',50),@('Square44x44Logo',44),@('Square150x150Logo',150))) {
@@ -51,7 +51,7 @@ try {
             } finally { $graphics.Dispose(); $bitmap.Dispose() }
         }
     } finally { $source.Dispose(); $icon.Dispose() }
-    $output = Join-Path $root "artifacts/Cam-Pressets-Studio-$PackageVersion-x64.msix"
+    $output = Join-Path $root "artifacts/Camera-Control-Studio-$PackageVersion-x64.msix"
     & $MakeAppxPath pack /d $stage /p $output /o
     if ($LASTEXITCODE -ne 0) { throw 'MakeAppx packaging or manifest validation failed.' }
     Write-Host "Unsigned Store submission candidate: $output"

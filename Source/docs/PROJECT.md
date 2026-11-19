@@ -1,83 +1,31 @@
-# Cam Pressets Studio — project description
+# Project description
 
-## Purpose
+Camera Control & Pressets Studio is a small Windows desktop tool for people who need repeatable camera framing. It can be used in presentations, classrooms, studios, demonstrations and other capture workflows. It is not tied to a particular event or streaming service.
 
-Cam Pressets Studio is a small, open-source Windows desktop tool for precise
-camera positioning and repeatable framing. It lets an operator save and recall
-camera pan, tilt and zoom settings without managing a video production system.
-It is intended for any suitable presentation, recording, conferencing, teaching,
-demonstration or streaming workflow. No particular venue, organisation, subject,
-meeting platform or content library defines the project.
+## Core behaviour
 
-The application controls camera properties. It does not capture, display, record,
-transcode or transmit video or audio. The image is viewed in a separate application.
-A camera may implement pan/tilt/zoom mechanically or as digital cropping; controls
-are available only when its Windows driver exposes the relevant properties.
+A two-ring controller provides normal and fast pan/tilt. Four zoom buttons provide normal and fast zoom. Each speed is a configurable number of driver steps. A central source button selects a camera without opening a video preview.
 
-## Primary functions
+Permanent positions contain a name, a stable symbol ID and supported camera coordinates. Combined symbols depict a left-to-right arrangement of subjects. Permanent positions are bold and listed first. Temporary positions are separate in-memory items and have no icon. Double-click and the play button recall either type.
 
-1. Read the actual camera position and store named presets per camera/profile.
-2. Recall presets with configurable transition duration and eased interpolation.
-3. Provide precise normal/fast directional steps and independent zoom steps through
-   a compact dual-ring wheel, with a consistent blue visual design.
-4. Preserve profiles and settings reliably, including startup order and direction
-   reversal, while remaining useful with settings hidden.
-5. Avoid early camera access in workflows requiring other applications to initialise
-   first. The default startup gate also requires explicit Zoom-meeting confirmation.
+A smooth interpolation requests intermediate coordinates. A row is yellow during the transition. It is green only when readback matches the target. A manual action, cancellation or failed transition clears that state. The driver determines actual motion granularity and latency.
 
-The last point currently contains a Zoom-specific readiness check. Generalising
-that check to other applications is future work, not an existing generic detector.
+Profiles contain camera selection, permanent positions, image values, normal/fast step sizes, transition time, direction reversal, camera confirmation and window layout. The last selected profile and language are application preferences. Optional camera confirmation blocks enumeration and connection until the user confirms streaming has started.
 
-## Interface and workflow
+## Architecture
 
-The main window contains the camera wheel, zoom buttons, profile selector and
-preset list. A collapsible settings panel contains step sizes, transition duration,
-image adjustments, startup-program settings, camera selection and always-on-top.
-The window can be resized within documented minimum dimensions. English is the
-default fallback; automatic Danish/German detection and an explicit language selector are available. Restart after changing the language.
+`CameraControlStudio` is a .NET Framework 4.8 WinForms application. `Forms/*.Designer.cs` hold layout. `Forms/*.cs` hold event handling. `AppForm` is the common base. `Controls` contains vector rendering. `Camera.cs` uses Windows DirectShow camera and video-proc interfaces without a capture graph.
 
-Presets store PTZ coordinates only. They do not store a video composition, a
-screen-sharing scene, HDR mode, field of view or the complete camera configuration.
-Direction reversal changes arrow commands; it does not rotate the actual image.
+`Shared` holds models, persistence, translation, movement arithmetic, session positions and state logic. `Tests` is a .NET 8 console regression suite. Profiles use atomic file replacement, backups and revision checks. Existing 0.6 profile storage is retained; obsolete program-start settings are ignored and discarded on save.
 
-## Profiles and data
+## Scope and compatibility
 
-Standard is the initial profile. New profiles can be empty or copied. Per-camera
-preset lists, movement preferences, startup order and optional startup-settings
-code are stored locally. The unpackaged app uses
-`%LOCALAPPDATA%\CamPressets\profiles.json`.
+The owner has reported that the earlier application worked on their laptop and camera setup. This 0.7 rewrite has compiled and passed logic tests but has not been exercised against physical hardware in this build environment. No additional camera or capture software is claimed tested.
 
-The persistence layer performs revision checks and atomic replacement with a
-backup. Legacy Studio/Mini files can be imported without deleting the originals.
-Store/MSIX data redirection and migration still need packaged Windows testing;
-identical data behaviour between portable and Store editions is not promised.
+Other Windows cameras may work when their drivers implement the needed standard controls. Concurrent access with capture, meeting or streaming software is driver-dependent. Virtual cameras may expose no physical controls. This is not a generic network-PTZ controller. Linux and macOS can be build hosts via the Docker workflow, but cannot run this Windows UI natively.
 
-## Technical structure
+Please report successful combinations, including Windows version, camera model, driver version, capture application and which controls worked. Also report limitations so the compatibility list can be evidence-based.
 
-- C# / .NET Framework 4.8 Windows Forms desktop application.
-- Custom drawn wheel/buttons; native Windows window controls and dialogs.
-- DirectShow COM camera control and video-property interfaces through the driver.
-- Shared profile models and storage under SharedProfiles; UI support under SharedUi.
-- Timed PTZ interpolation with snapped driver-supported values, cancellation and
-  directional step controls. Hardware resolution determines visible smoothness.
-- Optional process detection and ordered program launch in the current Windows
-  session. A process being present is not proof that its UI or meeting is ready.
-- No application network client, telemetry service, web backend or virtual camera.
+## Possible future work
 
-The Linux Docker image compiles/tests and exports Windows artifacts. It does not
-provide a Linux camera-control edition. MSIX preparation targets Windows x64;
-Store publication, hardware compatibility and certification are separate steps.
-
-## Boundaries
-
-This is not a replacement for OBS, a conferencing client or vendor firmware tools.
-The current UI does not offer reliable automatic screen sharing, preview or scene
-composition. No universal UVC-camera support or hardware step smoothness is claimed.
-See the compatibility matrix before choosing hardware.
-
-## Contributions and identity
-
-Forks, translations and new functionality are welcome under MIT. For inclusion in
-the maintained project, preserve the primary functions, safe startup behaviour,
-data compatibility and uncluttered design. Put optional complexity in settings.
-These are upstream review criteria, not additional restrictions on MIT forks.
+Windows UI regression automation; better accessibility and keyboard discovery; optional import/export of individual profiles; verified hardware matrix; signed releases after approval; additional camera backends if they preserve the simple core workflow. These are ideas, not delivered features.

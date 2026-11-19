@@ -1,25 +1,9 @@
-# Privacy policy
+# Privacy
 
-Cam Pressets Studio is a local camera-control application. Its current application
-code does not capture video/audio, record meetings, collect analytics, display ads,
-create accounts, or send application data to a server.
+The application stores profiles, camera identifiers, coordinates, image settings and layout locally in your Windows user account. It does not include analytics, telemetry, video recording or automatic upload functionality.
 
-It reads device names/identifiers and supported camera properties. It reads process
-names in the current Windows session to check configured startup programs. Profiles
-store camera identifiers, preset names/coordinates, preferences, program paths and
-arguments, and an optional salted settings-code hash locally. Do not put secrets in
-startup arguments: they are not encrypted.
+About links open an external website only when you select them. Those websites apply their own privacy policies. Build tools may contact Microsoft, NuGet, GitHub or signing services when the developer runs them.
 
-Applications launched by Studio, such as meeting or recording software, have their
-own privacy behaviour. Microsoft Store, GitHub and signing providers also operate
-under their own policies. Build tools may contact NuGet and container registries;
-that is distinct from running the desktop app.
+Temporary positions are stored only in memory. Documentation capture mode uses example data and does not connect to a camera or load/save profiles. Screenshots capture the visible application area; keep other windows away during capture.
 
-You can remove local profiles after closing the app, following a backup if needed.
-Portable/installer profile retention differs from possible MSIX data redirection;
-packaged uninstall behaviour must be verified before a Store release.
-
-For public support, remove private meeting information and sensitive file paths.
-Before publishing this policy in a Store listing, maintainers must add an actual
-project contact URL and verify it against the exact released behaviour. This draft
-must not be represented as a completed Store privacy listing without that review.
+Bug reports are public. Remove personal paths and session details before posting. The author cannot access local profiles through the app.

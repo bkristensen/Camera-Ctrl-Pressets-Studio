@@ -1,41 +1,47 @@
+[English](../en/DAILY-USE.md) · [Dansk](../da/DAILY-USE.md) · [Deutsch](../de/DAILY-USE.md)
+
 # Daily use
 
-## Start in the correct order
+Start your capture or streaming session first if your setup requires it. Open **Camera Control Studio.exe**.
 
-1. Open Studio. The camera is intentionally disconnected with the startup gate on.
-2. Let the configured programs start, or open them yourself if automatic startup
-   is off. Start or join the Zoom meeting and verify the image there.
-3. Open Settings and click **Zoom meeting is ready — enable camera**. Confirm only
-   when the actual meeting is ready. A running Zoom process is not sufficient.
-4. Select the camera if necessary. Close Settings to keep the main view compact.
+![Labelled main window illustration](../images/en-main.svg)
 
-Studio checks all configured processes plus Zoom before accepting confirmation.
-It does not automatically detect a joined meeting. Restarting or loading a profile
-requires a new confirmation. For non-Zoom use, the Zoom-specific gate must be
-explicitly disabled after checking your own startup order.
+*Layout illustration, not a Windows screenshot. Letters refer to the controls below. See [image capture](../SCREENSHOTS.md).*
 
-## Frame and save
+## 1. Select the setup
 
-Use the inner ring for normal steps and the outer ring for fast steps. Hold to
-repeat. Use +/− for zoom. Save current position reads the camera, not a simulated
-position. Enter a descriptive name. Reusing a name asks before replacing it.
+Click **A** and choose your profile. Leave the layout checkbox off to restore its saved window. Check it only when you want to keep the current layout.
 
-Select a preset and click ▶ to recall it. ✎ or F2 renames it. The delete button
-removes the selected preset after confirmation. Presets store PTZ only, not screen
-sharing, field of view, exposure or a complete production scene.
+The app uses the last camera. To change it, click the camera symbol in **C**. If the streaming question appears, answer Yes only after your session has started. No leaves the camera disconnected.
 
-## During operation
+## 2. Activate a position
 
-Escape stops movement. Moving focus to another application stops ongoing movement.
-With the wheel focused, arrow keys move and Shift selects fast steps. Enter recalls
-a selected preset. Keep a video app open to see framing; Studio has no preview.
+Press ▶ on a row in **F**, or double-click its name. You can also select the row and press Enter.
 
-Choose the appropriate profile before operating. Standard is the initial profile;
-New can copy a saved configuration. Save edited settings before switching profiles.
-If another instance changed the file, refresh before reapplying edits.
+| Colour | Meaning |
+| --- | --- |
+| Yellow | The app is moving towards that position. |
+| Green | The camera driver reports the saved coordinates. |
+| Blue | The position is not marked active. |
 
-## Finish
+Green confirms the reported coordinates. Check the actual picture in your capture program. If the driver does not report the target in time, the row returns to blue and **H** shows a message. Icons remain visible throughout.
 
-Stop movement, save changed settings and close Studio. It does not close Zoom or
-other launched programs. Back up profiles before upgrades. The language preference
-is separate from profiles and persists when profiles change.
+## 3. Make a small adjustment
+
+Use the inner arrows in **C** for normal movement. Use the outer arrows for larger steps. In **D**, use − or + for normal zoom, and −− or ++ for fast zoom. Hold a button to repeat movement.
+
+Manual pan, tilt or zoom cancels the preset movement and clears its active colour. Press Escape to stop a transition. With the wheel focused, arrow keys move the camera; Shift uses fast steps.
+
+## 4. Keep a temporary position
+
+Click **G**, type a name and save. The current position appears below permanent positions. Temporary positions have no icon and are kept only for this run of the app, separately for each profile and camera.
+
+Select a temporary row and press the delete button next to **G** to remove it. Closing the app removes all temporary positions. To keep a position for later, create it under **B → Presets**. The main list cannot edit or delete permanent positions.
+
+## 5. Finish
+
+Check messages in **H** if a control fails. The camera may lack that feature or may be unavailable.
+
+Close the app normally. Its active profile and layout are remembered. There is no video preview or recording in this app. Watch the picture in your capture program.
+
+See [Setup](SETUP.md) for image settings, profiles and movement steps.

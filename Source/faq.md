@@ -1,73 +1,21 @@
-# Frequently asked questions
+# FAQ
 
-## Is Cam Pressets Studio free and open source?
-Yes. The project uses the MIT license. You may use, modify, fork and redistribute
-it, including commercially, with the required license notice. See LICENSE.
+**Why is the row yellow?** The app is moving towards the stored position. It becomes green when the camera driver reports the stored coordinates. Manual movement clears the colour. Green does not verify the actual video picture.
 
-## Which camera has been tested?
-The owner reports development use with Logitech BRIO and Zoom. This does not certify
-the latest release. Other combinations are expected only where compatible driver
-controls exist; see docs/COMPATIBILITY.md and send a compatibility report.
+**Why does movement still look stepped?** The camera driver accepts a limited set of positions. Longer transition time cannot create finer hardware steps.
 
-## Does it work without Zoom?
-The camera backend is not a Zoom API. However, the current default startup gate
-requires Zoom plus manual meeting confirmation. For another video application,
-explicitly disable that gate after assessing the startup order. Generic readiness
-rules are planned, not implemented.
+**Where are my positions?** Permanent positions belong to the selected camera and profile. Temporary positions last until the app closes. Permanent positions are managed under Settings → Presets.
 
-## Why does the app not connect immediately?
-The default gate prevents camera access before required applications and the Zoom
-meeting are ready. Start them first, then confirm in Settings. Detecting a running
-Zoom process cannot prove a meeting is active.
+**Why did the camera not connect?** It may be disconnected, busy, unsupported, or waiting for your streaming confirmation. Click the central camera button to select a source. This app cannot detect whether your stream has begun.
 
-## Can it preview or record my camera?
-No. View video in your conferencing, recording or streaming application. Studio
-controls properties and saves coordinates; it does not capture video or audio.
+**Can it show video or share a screen?** No. Use your capture or streaming application for those tasks.
 
-## Can presets share a screen or combine camera and slides?
-No. Current presets contain camera PTZ only. The earlier experimental Zoom sharing
-button is not exposed. Use your meeting or production software for screen sharing.
+**Where are profiles stored?** `%LOCALAPPDATA%\CamPressets\profiles.json`. A `.bak` copy is written when the file is replaced. Close the app before copying or restoring these files. Keep the original backup when upgrading from 0.6.x: removed startup-program options are discarded when the updated profile is saved.
 
-## Why is movement not perfectly smooth?
-Interpolation is limited by the driver's discrete steps and camera processing.
-A longer transition helps only when the hardware supports enough intermediate values.
+**Does language follow a profile?** No. Language is an application preference. Camera, movement, image controls and window layout are profile settings.
 
-## Do reverse switches rotate the picture?
-No. They reverse arrow commands for a camera mounted in a different orientation.
+**Will this work with another camera?** It may work if its Windows driver exposes the standard controls used by the app. Please report the model, driver version and controls that work. Do not assume that every USB camera supports pan or zoom.
 
-## Where are settings stored?
-The unpackaged app uses %LOCALAPPDATA%\CamPressets\profiles.json and a .bak backup.
-Store/MSIX data isolation and migration still need validation; do not assume the
-portable and packaged editions share the same effective file.
+**Why does Windows warn about the download?** The supplied build is unsigned. Read the source, download from the project's release page and compare published hashes. A checksum checks file integrity; it does not establish publisher identity. Do not turn off Windows protection to install it.
 
-## Is the settings code a security feature?
-It prevents accidental changes to startup-program settings. It does not encrypt
-profiles or prevent somebody with file access from changing them.
-
-## Why does Windows warn about the download?
-Current beta binaries are unsigned. A normal installer or ZIP does not establish
-publisher trust. Never disable SmartScreen globally. Store MSIX distribution and
-approved signing are separate release steps; see docs/DISTRIBUTION.md.
-
-## Does Docker run the app?
-No. It builds/tests and exports Windows artifacts. The camera GUI runs on Windows.
-
-## Is there a Store version or SignPath approval already?
-No. MSIX preparation and checklists are supplied. Publisher registration, packaged
-testing, certification and any SignPath application remain pending.
-
-## How do I request a feature or report a bug?
-Use GitHub Issues with the matching template after the repository is published.
-Search existing issues first. Discussion is useful for open-ended ideas. See
-CONTRIBUTING.md and docs/COMMUNITY.md.
-
-## Can I change the design in my own fork?
-MIT allows modifications. For changes to be merged upstream, preserve the compact
-blue design and core camera-control workflow. This review policy does not restrict
-what the license permits in independently maintained forks.
-
-## How do I change the interface language?
-Choose Automatic, English, Dansk or Deutsch under Settings > Language. Click Save
-language and restart. A --lang=en/da/de/auto option overrides the saved preference.
-The language is per Windows user, not per camera profile. Windows-owned dialogs
-and vendor error messages may remain in the OS language.
+**Where can I request a feature?** Open an issue and describe the problem, expected behaviour and one example. Use Discussions when you want to explore an idea first.

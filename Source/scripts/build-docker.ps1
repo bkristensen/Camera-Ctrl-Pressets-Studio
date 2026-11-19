@@ -21,7 +21,7 @@ try {
     & docker cp "${container}:/artifacts/." $output
     if ($LASTEXITCODE -ne 0) { throw 'Could not export build artifacts.' }
     Write-Host "Image: $Image"
-    Write-Host "Windows ZIP: $(Join-Path $output 'Cam-Pressets-Studio-portable.zip')"
+    Write-Host "Windows ZIP: $(Join-Path $output 'Camera-Control-Studio-portable.zip')"
 } finally {
     if ($container) { & docker rm $container | Out-Null }
     Pop-Location

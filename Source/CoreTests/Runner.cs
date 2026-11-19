@@ -1,1 +1,0 @@
-BrioPresets.SelfTest.Run(); System.Console.WriteLine("All core tests passed.");

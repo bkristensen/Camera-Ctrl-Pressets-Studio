@@ -1,12 +1,7 @@
 **/bin/
 **/obj/
 .vs/
-.build/
 artifacts/
 *.user
-*.suo
 *.pfx
 *.p12
-*.key
-self-test-result.txt
-presets.json*

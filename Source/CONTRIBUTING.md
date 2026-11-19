@@ -1,35 +1,11 @@
 # Contributing
 
-Forks, fixes, documentation, translations and new functionality are welcome.
-Use an issue or discussion for major changes before opening a pull request.
-English is the primary project language; Danish translations and reports are welcome.
+Fork the repository and create a focused branch. Describe the problem and expected behaviour in an issue before large changes.
 
-## Upstream design and behaviour
+Preserve these primary behaviours: quick pan/tilt/zoom, permanent and temporary positions, profile separation, optional camera-access confirmation, and a compact readable interface. Settings open beside the position list. No camera access should occur while confirmation is pending. Icons must survive connection and status changes.
 
-Contributions to this maintained project should preserve:
-1. Reliable camera-specific preset save/recall from real driver coordinates.
-2. Precise normal/fast directional control, zoom and cancellable eased transitions.
-3. A compact blue main view with optional complexity inside settings.
-4. The default camera-startup gate and explicit readiness confirmation.
-5. Backward-compatible profiles, safe writes, local operation and clear errors.
+Keep camera ranges in driver units. Keep stored icon IDs stable. Maintain English, Danish and German text keys together. Do not add vendor-specific assumptions to the normal workflow.
 
-Do not silently add preview capture, telemetry, automatic screen sharing or new
-network dependencies. Discuss those changes first. Include keyboard, resize and
-DPI implications in UI changes. These are merge criteria, not extra restrictions
-on MIT-licensed forks. Independent forks may change functionality and design.
-Please distinguish modified distributions and do not imply maintainer endorsement.
+Build the solution, run the logic tests and complete relevant Windows checks in `docs/RELEASE-CHECKLIST.md`. Include screenshots for UI changes. Never include real user profiles, credentials, private meeting content or signing keys.
 
-## Pull request checklist
-
-- [ ] Explain the user problem and before/after behaviour.
-- [ ] Keep scope focused; include migration for saved-data changes.
-- [ ] Run scripts/build.ps1 and relevant regression tests.
-- [ ] Describe actual Windows/hardware tests and anything not tested.
-- [ ] Add English/Danish/German UI text with UiText.T; update docs and changelog as needed.
-- [ ] Review dependencies, license notices and privacy impact.
-- [ ] Confirm no keys, certificates, credentials or personal profiles are included.
-
-Contributions are submitted under the project's MIT license. Only contribute code
-and assets you have permission to license. No separate CLA is currently required.
-Source comments and issue text should be clear; do not translate device IDs or
-user-defined preset names. A simulated test is not a hardware compatibility result.
+Pull requests should state what changed, why, how it was tested, and any remaining limits. Contributions are offered under the MIT licence. Forks may change the design; the design preferences here govern contributions to this repository, not the licence.

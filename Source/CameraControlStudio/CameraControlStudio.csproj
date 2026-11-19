@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net48</TargetFramework><UseWindowsForms>true</UseWindowsForms><EnableWindowsTargeting>true</EnableWindowsTargeting><AssemblyName>Camera Control Studio</AssemblyName><RootNamespace>CameraControlStudio</RootNamespace><ApplicationIcon>Assets/CameraControlStudio.ico</ApplicationIcon></PropertyGroup>
+<ItemGroup><PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" /><Reference Include="System.Runtime.Serialization" /><Compile Include="../Shared/*.cs" Link="Shared/%(Filename)%(Extension)" /><EmbeddedResource Include="../Shared/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" /><Compile Update="Forms/*Form.cs"><SubType>Form</SubType></Compile><Compile Update="Forms/*.Designer.cs"><DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer','')).cs</DependentUpon></Compile></ItemGroup>
+<ItemGroup>
+  <Compile Update="Assets\PressetIcons.Designer.cs">
+    <DesignTime>True</DesignTime>
+    <AutoGen>True</AutoGen>
+    <DependentUpon>PressetIcons.resx</DependentUpon>
+  </Compile>
+  <Compile Update="Properties\Resources.Designer.cs">
+    <DesignTime>True</DesignTime>
+    <AutoGen>True</AutoGen>
+    <DependentUpon>Resources.resx</DependentUpon>
+  </Compile>
+</ItemGroup>
+<ItemGroup>
+  <EmbeddedResource Update="Assets\PressetIcons.resx">
+    <Generator>ResXFileCodeGenerator</Generator>
+    <LastGenOutput>PressetIcons.Designer.cs</LastGenOutput>
+  </EmbeddedResource>
+  <EmbeddedResource Update="Properties\Resources.resx">
+    <Generator>ResXFileCodeGenerator</Generator>
+    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+  </EmbeddedResource>
+</ItemGroup>
+</Project>

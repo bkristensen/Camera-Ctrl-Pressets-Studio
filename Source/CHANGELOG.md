@@ -1,24 +1,14 @@
-# Changelog
+# 0.7.0-beta.1
 
-## 0.6.2-beta.1
-- Added German UI resources and per-user language selection with restart.
-- Added English, Danish and German daily-use, setup and translation guides.
-- Added translation-key validation and language fallback tests.
+- Generic CameraControlStudio namespaces, source filenames and solution. Removed external-program startup integration and its settings.
+- Designer-separated WinForms, compact layout, right-hand settings and a draggable controller/preset divider.
+- Per-profile window/layout persistence and optional carry-over during profile selection.
+- Separate normal/fast zoom buttons and steps. Zoom glyphs are drawn around the button centre.
+- Yellow preset rows during transitions; green after matching driver readback. Manual movement clears active state without removing symbols.
+- Fifteen unique combined symbols cover all requested left/right orders; the symmetric café/lectern/café arrangement appears once. Forty-five symbols in total.
+- English, Danish and German setup, daily-use and development guides. Labelled layout illustrations and an isolated Windows screenshot capture mode.
+- Generic build, Docker, installer and MSIX paths. No signature is included.
 
-## Unreleased
-- Added an unsigned MSIX packaging path with explicit Store identity parameters.
-- Added Store, SignPath, compatibility, licensing and release documentation.
-- Added GitHub feature/compatibility forms and contribution guidance.
-- Added Docker build/export scripts; Docker execution remains unverified here.
+Before upgrading, close the previous app and copy `%LOCALAPPDATA%\CamPressets` as a backup. Existing permanent positions and confirmation choices are retained. Removed program-start fields are discarded on save. Keep the backup for rollback to an older version. Temporary positions do not survive app closure.
 
-## 0.6.1-beta.1
-- Camera startup gate enabled for new and older profiles by default.
-- Required-program/Zoom process checks and explicit meeting-readiness confirmation.
-- Camera enumeration/connection blocked until permission is granted.
-
-## 0.6.0-beta.1
-- Consolidated distribution into one Studio app with blue dual-ring camera controls.
-- Collapsible settings, per-profile movement settings and camera selection.
-- Retained shared profiles, legacy import, ordered startup and optional settings code.
-
-These entries describe implemented changes, not full Windows/hardware certification.
+This build compiles and passes logic tests. Windows UI, hardware, Designer round trips and packaging execution remain unverified. See `docs/VALIDATION.md`.

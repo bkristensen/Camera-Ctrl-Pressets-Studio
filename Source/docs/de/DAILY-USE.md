@@ -1,46 +1,47 @@
-# Tägliche Verwendung
+[English](../en/DAILY-USE.md) · [Dansk](../da/DAILY-USE.md) · [Deutsch](../de/DAILY-USE.md)
 
-## In der richtigen Reihenfolge starten
+# Tägliche Nutzung
 
-1. Studio öffnen. Bei aktivierter Startsperre bleibt die Kamera zunächst getrennt.
-2. Die konfigurierten Programme starten lassen oder selbst öffnen, wenn der
-   automatische Start ausgeschaltet ist. Das Zoom-Meeting starten oder ihm
-   beitreten und das Bild in Zoom prüfen.
-3. Einstellungen öffnen und **Zoom-Meeting ist bereit — Kamera aktivieren** wählen.
-   Erst bestätigen, wenn das Meeting wirklich bereit ist. Ein laufender Zoom-Prozess
-   allein reicht nicht aus.
-4. Bei Bedarf die Kamera auswählen. Die Einstellungen für die kompakte Ansicht schließen.
+Starten Sie zuerst Ihr Aufnahmeprogramm und Ihren Stream, falls Ihr Aufbau dies erfordert. Öffnen Sie **Camera Control Studio.exe**.
 
-Studio prüft alle aufgelisteten Prozesse und Zoom vor der Bestätigung. Es erkennt
-nicht automatisch, ob Sie einem Meeting beigetreten sind. Nach Neustart oder Laden
-eines Profils ist eine neue Bestätigung erforderlich. Ohne Zoom muss die spezielle
-Startsperre nach Prüfung der eigenen Startreihenfolge ausdrücklich deaktiviert werden.
+![Hauptfenster mit Markierungen](../images/de-main.svg)
 
-## Bildausschnitt einstellen und speichern
+*Layout-Abbildung, kein Windows-Screenshot. Die Buchstaben verweisen auf die Bedienelemente unten. Siehe [Bildaufnahme](../SCREENSHOTS.md).*
 
-Der innere Ring verwendet normale, der äußere schnelle Schritte. Gedrückt halten
-wiederholt die Bewegung. +/− steuert den Zoom. Aktuelle Position speichern liest die
-tatsächlichen Kamerawerte aus. Einen eindeutigen Namen vergeben. Ein vorhandener Name
-wird erst nach Bestätigung ersetzt.
+## 1. Aufbau wählen
 
-Eine Position auswählen und mit ▶ abrufen. ✎ oder F2 benennt sie um. Die Löschtaste
-entfernt die gewählte Position nach Bestätigung. Gespeichert werden nur Pan, Tilt
-und Zoom, keine Bildschirmfreigabe, Belichtung, Sichtfelder oder vollständigen Szenen.
+Klicken Sie auf **A** und wählen Sie Ihr Profil. Lassen Sie die Layout-Option aus, um das gespeicherte Fenster zu laden. Aktivieren Sie sie nur, wenn Sie das aktuelle Layout behalten möchten.
 
-## Während der Verwendung
+Die Anwendung verwendet die letzte Kamera. Klicken Sie auf das Kamerasymbol in **C**, um sie zu wechseln. Falls die Streaming-Frage erscheint, antworten Sie erst nach Beginn der Sitzung mit Ja. Nein lässt die Kamera getrennt.
 
-Escape stoppt die Bewegung. Der Wechsel zu einer anderen Anwendung stoppt eine
-laufende Bewegung. Bei fokussiertem Rad funktionieren die Pfeiltasten; Umschalt
-wählt schnelle Schritte. Enter ruft eine ausgewählte Position ab. Das Bild wird in
-einer anderen Videoanwendung betrachtet; Studio besitzt keine Vorschau.
+## 2. Position aktivieren
 
-Zuerst das richtige Profil wählen. Standard ist das anfängliche Profil. Neu kann
-eine gespeicherte Konfiguration kopieren. Änderungen vor einem Profilwechsel
-speichern. Wenn eine andere Instanz die Datei geändert hat, vor erneutem Speichern
-aktualisieren und die gewünschten Änderungen wiederholen.
+Klicken Sie auf ▶ in einer Zeile von **F**, oder doppelklicken Sie auf den Namen. Sie können auch eine Zeile auswählen und Enter drücken.
 
-## Beenden
+| Farbe | Bedeutung |
+| --- | --- |
+| Gelb | Die Anwendung fährt die Position an. |
+| Grün | Der Kameratreiber meldet die gespeicherten Koordinaten. |
+| Blau | Die Position ist nicht als aktiv markiert. |
 
-Bewegung stoppen, Einstellungen speichern und Studio schließen. Gestartete Programme
-werden nicht geschlossen. Profile vor Updates sichern. Die Sprache wird unabhängig
-von Profilen gespeichert und bleibt bei einem Profilwechsel erhalten.
+Grün bestätigt die gemeldeten Koordinaten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm. Meldet der Treiber das Ziel nicht rechtzeitig, wird die Zeile blau und **H** zeigt eine Meldung. Die Symbole bleiben sichtbar.
+
+## 3. Bildausschnitt anpassen
+
+Die inneren Pfeile in **C** bewegen die Kamera normal. Die äußeren Pfeile nutzen größere Schritte. In **D** steuern − und + den normalen Zoom. −− und ++ steuern den schnellen Zoom. Halten Sie eine Taste gedrückt, um die Bewegung zu wiederholen.
+
+Manuelles Schwenken, Neigen oder Zoomen bricht den Positionswechsel ab und entfernt die aktive Farbe. Escape stoppt einen Übergang. Hat das Steuerrad den Fokus, können Sie die Pfeiltasten verwenden. Shift wählt schnelle Schritte.
+
+## 4. Temporäre Position speichern
+
+Klicken Sie auf **G**, geben Sie einen Namen ein und speichern Sie. Die aktuelle Position erscheint unter den festen Positionen. Temporäre Positionen haben kein Symbol. Sie gelten nur bis zum Schließen der Anwendung und werden je Profil und Kamera getrennt gehalten.
+
+Wählen Sie eine temporäre Zeile und klicken Sie auf die Löschtaste neben **G**, um sie zu entfernen. Beim Schließen gehen alle temporären Positionen verloren. Für spätere Sitzungen legen Sie eine feste Position unter **B → Positionen** an. Feste Positionen lassen sich nicht in der Hauptliste ändern oder löschen.
+
+## 5. Beenden
+
+Lesen Sie die Meldung in **H**, falls eine Funktion fehlschlägt. Die Kamera unterstützt die Funktion möglicherweise nicht oder ist nicht verfügbar.
+
+Schließen Sie die Anwendung normal. Das aktive Profil und das Layout werden gespeichert. Diese Anwendung zeigt und speichert kein Video. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
+
+Siehe [Einrichtung](SETUP.md) für Bildwerte, Profile und Bewegungsschritte.

@@ -1,18 +1,9 @@
-# Third-party material and build dependencies
+# Third-party notices
 
-| Component | Use | Distribution note |
-| --- | --- | --- |
-| .NET Framework 4.8 | Windows runtime prerequisite | Not bundled; provided by Microsoft/Windows |
-| Microsoft.NETFramework.ReferenceAssemblies 1.0.3 and net48 reference package | Compile-time references, PrivateAssets=all | Not included in app payload; retain upstream terms if redistributing build packages |
-| .NET SDK / official Microsoft container images | Build and tests | Governed by upstream image/component licenses; not part of portable EXE payload |
-| Inno Setup | Optional Windows installer generation | Build tool not included; review its license for generated installer redistribution |
-| GitHub Actions | Hosted build workflows | Upstream actions and service terms apply; no action implementation is bundled |
-| Supplied project icon and design assets | Application/packaging branding | Provided with the project input; maintainer must confirm rights for public MIT distribution |
+The application uses the Windows and .NET Framework platform APIs. Platform components are not redistributed in the portable ZIP.
 
-The application uses Windows COM interfaces directly and does not bundle Logitech
-or Zoom SDK libraries. Logitech, BRIO, Zoom and other product names belong to their
-respective owners. No affiliation or endorsement is claimed.
+The build restores Microsoft.NETFramework.ReferenceAssemblies 1.0.3 and its net48 reference package. These are build-only dependencies. Preserve their upstream licence files when redistributing those packages themselves. See the package metadata at https://www.nuget.org/packages/Microsoft.NETFramework.ReferenceAssemblies/1.0.3 and `packages.lock.json` for resolved versions.
 
-This inventory is not a claim of a completed legal audit. Review actual release
-contents and dependency metadata when publishing. Do not copy proprietary vendor
-assets, binaries or screenshots into the repository without permission.
+The icon drawing code and documentation diagrams are included with this project's source. No third-party icon font or runtime UI toolkit is bundled. Inno Setup and the Windows SDK are external build tools; their installers are not bundled.
+
+The MIT licence in `LICENSE` covers this project's code. It does not replace licences for separately installed tools or platform components.

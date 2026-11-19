@@ -1,7 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
- <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework></PropertyGroup>
- <ItemGroup>
-  <Compile Include="../SharedProfiles/*.cs" Link="SharedProfiles/%(Filename)%(Extension)" />
-  <Compile Include="../SharedUi/UiText.cs" Link="UiText.cs" />
- </ItemGroup>
-<ItemGroup><EmbeddedResource Include="../SharedUi/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" /></ItemGroup></Project>

@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+namespace CameraControlStudio {
+    [DataContract]
+    public class Preset {
+        [DataMember] public string Name;
+        [DataMember(EmitDefaultValue = false)] public string IconId;
+        [DataMember] public Dictionary<string, int> Position = new Dictionary<string, int>();
+        public override string ToString() {
+            return Name;
+        }
+    }
+    [DataContract]
+    public sealed class ProfileLayout {
+        [DataMember] public bool HasBounds, Maximized, SettingsOpen;
+        [DataMember] public int X, Y, Width = 900, Height = 500, SettingsTab;
+        [DataMember] public double ControllerRatio = .36;
+        public ProfileLayout Copy() {
+            return (ProfileLayout)MemberwiseClone();
+        }
+    }
+    [DataContract]
+    public sealed class ImageValue {
+        [DataMember] public int Value; [DataMember] public bool Automatic;
+    }
+    [DataContract]
+    public class SavedData {
+        [DataMember] public Dictionary<string, List<Preset>> Cameras;
+        [DataMember] public decimal Seconds;
+        [DataMember] public int PanSteps, FastPanSteps, ZoomSteps, FastZoomSteps;
+        [DataMember] public bool ReverseHorizontal, ReverseVertical, AlwaysOnTop;
+        [DataMember] public string CameraId;
+        // Retain the serialized key so existing user choices survive the upgrade.
+        [DataMember(Name = "WaitForStartup")] public bool RequireStreamingConfirmation;
+        [DataMember] public bool KeepLayoutOnSwitch;
+        [DataMember] public ProfileLayout Layout;
+        [DataMember] public Dictionary<string, Dictionary<string, ImageValue>> ImageValues;
+        public SavedData() {
+            Defaults(default(StreamingContext));
+        }
+        [OnDeserializing]
+        void Defaults(StreamingContext context) {
+            ImageValues = new Dictionary<string, Dictionary<string, ImageValue>>();
+            Cameras = new Dictionary<string, List<Preset>>();
+            Seconds = 2;
+            PanSteps = 5;
+            FastPanSteps = 32;
+            ZoomSteps = 5;
+            FastZoomSteps = 32;
+            Layout = new ProfileLayout();
+        }
+    }
+    public static class Motion {
+        public static double Ease(double t) {
+            t = Math.Max(0, Math.Min(1, t));
+            return t * t * t * (t * (t * 6 - 15) + 10);
+        }
+    }
+    public static class LayoutPolicy {
+        public static ProfileLayout OnSwitch(ProfileLayout current, ProfileLayout target, bool keep) {
+            return (keep ? current : target).Copy();
+        }
+        public static double Ratio(double value) {
+            return double.IsNaN(value) || double.IsInfinity(value) ? .36 : Math.Max(.2, Math.Min(.7, value));
+        }
+    }
+}

@@ -1,0 +1,14 @@
+Cam Pressets Studio 0.6.4-beta.1
+
+Pak hele mappen ud. Start Cam Pressets Studio.exe.
+Programmet er ikke signeret.
+
+Presets og profiler ligger separat i din brugerprofil og overskrives ikke af denne ZIP.
+Ny streamingbekræftelse: se docs/da/DEFAULTS-AND-STREAMING.md.
+Gem aktuel position: vælg navn og symbol. Blyanten redigerer navn og symbol.
+Dobbeltklik på presetnavnet, eller brug play for at aktivere positionen.
+
+Windows-test af den nye grafik er stadig nødvendig.
+Dansk UI-guide: docs/da/UI-DEVELOPMENT.md
+English: docs/en/UI-DEVELOPMENT.md
+Deutsch: docs/de/UI-DEVELOPMENT.md
