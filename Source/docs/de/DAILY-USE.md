@@ -2,48 +2,68 @@
 
 # Tägliche Nutzung
 
-Starten Sie zuerst Ihr Aufnahmeprogramm und Ihren Stream, falls Ihr Aufbau dies erfordert. Öffnen Sie **Camera Control Studio.exe**.
+Starten Sie zuerst Ihr Streaming-Meeting, zum Beispiel in Zoom. Öffnen Sie anschließend **Camera Control Studio**.
 
 ![Hauptfenster mit geschlossenem Einstellungsbereich](../images/screenshots/main.png)
 
-Mit **?** in der Fußleiste öffnen Sie die Anleitung für die tägliche Nutzung. Bei geöffneten Einstellungen erscheint die Einrichtungsanleitung. **Drucken** ergänzt Titel, Programmversion, Datum und Seitenzahlen.
+## Allgemeines
 
-## 1. Aufbau wählen
+Klicken Sie unten auf **?**, um Hilfe zur Nutzung und Einrichtung der Anwendung zu erhalten.
+Halten Sie den Mauszeiger über die kleinen Schaltflächen, um ihre Funktion zu sehen.
+Wenn die Kamera das Ende ihres Bewegungsbereichs erreicht, wird die Steuerung in dieser Richtung deaktiviert.
 
-Öffnen Sie die Profilauswahl unten und wählen Sie Ihr Profil. Lassen Sie die Layout-Option aus, um das gespeicherte Fenster zu laden. Aktivieren Sie sie nur, wenn Sie das aktuelle Layout behalten möchten.
+## 1. Position aktivieren
 
-Die Anwendung verwendet die letzte Kamera. Klicken Sie auf das Kamerasymbol in der Mitte des Steuerrads, um sie zu wechseln. Falls die Streaming-Frage erscheint, antworten Sie erst nach Beginn der Sitzung mit Ja. Nein lässt die Kamera getrennt.
-
-## 2. Position aktivieren
-
-Klicken Sie auf ▶ in einer Zeile der Positionsliste, oder doppelklicken Sie auf den Namen. Sie können auch eine Zeile auswählen und Enter drücken.
+Klicken Sie in einer Zeile der Positionsliste auf ▶ oder doppelklicken Sie auf den Namen.
+Sie können die Zeile auch auswählen und die Eingabetaste drücken.
 
 | Farbe | Bedeutung |
 | --- | --- |
 | Gelb | Die Anwendung fährt die Position an. |
-| Grün | Der Kameratreiber meldet die gespeicherten Koordinaten. |
+| Grün | Der Kameratreiber meldet, dass die gespeicherten Koordinaten erreicht wurden. |
 | Blau | Die Position ist nicht als aktiv markiert. |
 
-Grün bestätigt die gemeldeten Koordinaten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm. Meldet der Treiber das Ziel nicht rechtzeitig, wird die Zeile blau und die Statusanzeige meldet das Problem. Die Symbole bleiben sichtbar.
+Grün bestätigt die vom Treiber gemeldeten Koordinaten. Prüfen Sie das Bild in Ihrem Stream.
+Meldet der Treiber das Erreichen der Position nicht rechtzeitig, wird die Zeile blau und im Statusbereich erscheint eine Meldung. Die Symbole bleiben durchgehend sichtbar.
 
-## 3. Bildausschnitt anpassen
+## 2. Bildausschnitt feinjustieren
 
-Die inneren Pfeile am Steuerrad bewegen die Kamera in normalen Schritten, die äußeren in größeren. Die Lupentasten steuern den normalen Zoom. Halten Sie die Umschalttaste für größere Zoomschritte oder eine Lupentaste für wiederholtes Zoomen gedrückt. Ziehen Sie den Schieberegler und lassen Sie ihn los, um den Zoom direkt einzustellen.
+### Schwenken
 
-Manuelles Schwenken, Neigen oder Zoomen bricht den Positionswechsel ab und entfernt die aktive Farbe. Escape stoppt einen Übergang. Hat das Steuerrad den Fokus, können Sie die Pfeiltasten verwenden. Shift wählt schnelle Schritte.
+Verwenden Sie die inneren Pfeile am Steuerrad für normale Bewegungen und die äußeren für größere Schritte.
 
-Am Ende des Bewegungsbereichs wird die betreffende Richtung deaktiviert. Halten Sie den Mauszeiger über eine kleine Taste, um ihren Hinweis zu sehen.
+### Zoomen
 
-## 4. Temporäre Position speichern
+Verwenden Sie die Lupentasten zum Zoomen. Halten Sie eine Lupentaste gedrückt, um den Vorgang zu wiederholen.
+Ziehen Sie den Schieberegler und lassen Sie ihn los, um den Zoom direkt einzustellen.
 
-Klicken Sie über der Positionsliste auf **+**, geben Sie einen Namen ein und speichern Sie. Die aktuelle Position erscheint unter den festen Positionen. Temporäre Positionen haben kein Symbol. Sie gelten nur bis zum Schließen der Anwendung und werden je Profil und Kamera getrennt gehalten.
+### Schwenken abbrechen
 
-Wählen Sie eine temporäre Zeile und klicken Sie auf **×** über der Positionsliste, um sie zu entfernen. Beim Schließen gehen alle temporären Positionen verloren. Für spätere Sitzungen legen Sie eine feste Position unter **Einstellungen → Positionen** an. Feste Positionen lassen sich nicht in der Hauptliste ändern oder löschen.
+Drücken Sie Esc, um einen laufenden Schwenk abzubrechen.
 
-## 5. Beenden
+> Manuelles Schwenken, Neigen oder Zoomen bricht den Positionswechsel ab und hebt die farbliche Markierung der aktiven Position auf.
 
-Lesen Sie die Meldung in der Statusanzeige unten, falls eine Funktion fehlschlägt. Die Kamera unterstützt die Funktion möglicherweise nicht oder ist nicht verfügbar.
+### Pfeiltasten
 
-Schließen Sie die Anwendung normal. Das aktive Profil und das Layout werden gespeichert. Diese Anwendung zeigt und speichert kein Video. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
+Wenn das Steuerrad den Fokus hat, können Sie die Pfeiltasten verwenden.
+Halten Sie die Umschalttaste gedrückt, um schnelle Schritte auszuführen.
 
-Siehe [Einrichtung](SETUP.md) für Bildwerte, Profile und Bewegungsschritte.
+## 3. Temporäre Position speichern
+
+Klicken Sie über der Positionsliste auf **+**, geben Sie einen Namen ein und speichern Sie. Die aktuelle Position erscheint unter den festen Positionen.
+Temporäre Positionen haben kein Symbol. Sie bleiben bis zum Schließen der Anwendung erhalten und werden für jedes Profil und jede Kamera getrennt gespeichert.
+
+Wählen Sie eine temporäre Zeile aus und klicken Sie über der Positionsliste auf **×**, um sie zu entfernen. Beim Schließen der Anwendung werden alle temporären Positionen entfernt.
+Wenn Sie eine Position später wiederverwenden möchten, legen Sie sie unter **Einstellungen → Positionen** an. Feste Positionen lassen sich in der Hauptliste weder bearbeiten noch löschen.
+
+## 4. Beenden
+
+Lesen Sie bei einer Störung die Meldung im Statusbereich unten. Möglicherweise unterstützt die Kamera die Funktion nicht oder ist nicht verfügbar.
+
+Schließen Sie die Anwendung wie gewohnt. Das aktive Profil und das Fensterlayout werden gespeichert.
+
+## 5. Probleme melden
+
+Melden Sie Fehler oder fehlende Funktionen unter **Einstellungen → Fehler melden**.
+
+Siehe [Einrichtung](SETUP.md) für Kamerarichtung, feste Positionen, Bildeinstellungen, Profile und Bewegungsschritte.

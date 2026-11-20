@@ -13,7 +13,7 @@ See the [step-by-step build and release guide](en/BUILD-AND-RELEASE.md) for comm
 - [ ] Launch at 900 × 500 and verify the 670 × 450 minimum. Resize, maximize and restore at 100%, 125%, 150% and 200% display scaling. Check the footer, inputs, combined icons and zoom glyphs.
 - [ ] Open settings on the right. Drag the divider. Close and reopen. Test a saved layout after disconnecting a monitor.
 - [ ] Recall a position: yellow during movement, green only after matching readback. Pan/tilt/zoom clears the active colour. Disconnect during a transition: no false green. Icons never disappear after confirmation.
-- [ ] Test each combined icon, including every reversed order. Test both zoom speeds and both direction reversals.
+- [ ] Test each combined icon, including every reversed order. Test zoom buttons, the zoom slider and both direction reversals.
 - [ ] Enable camera confirmation. Restart. Verify no camera enumeration or connection before Yes. Test No, then retry from a pan/zoom button. Test profile change and source selection.
 
 ## Data and editing
@@ -23,7 +23,7 @@ See the [step-by-step build and release guide](en/BUILD-AND-RELEASE.md) for comm
 - [ ] Test image automatic/manual settings and defaults with the actual camera.
 - [ ] Open every Form with Shift+F7 in Visual Studio. Adjust a layout property, save and rebuild. Custom drawing stays in the control classes.
 - [ ] Open the guide viewer from the extracted ZIP in a 64-bit Windows process. Open it again and print a guide to PDF. Confirm the installer and ZIP include the matching WebView2 native loader under `runtimes` for each supported architecture.
-- [ ] Check the [user-guide index](USER-GUIDES.md) and confirm every language guide is present in both packages. If publishing screenshots, check the nine captures for cropping and overlap.
+- [ ] Check the [user-guide index](USER-GUIDES.md) and confirm every language guide is present in both packages. Check the [guide screenshots](SCREENSHOTS.md) for complete tab and subtab coverage, cropping, and overlap.
 
 ## Distribution
 

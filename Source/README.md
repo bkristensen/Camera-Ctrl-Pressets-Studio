@@ -14,7 +14,7 @@ A small Windows camera controller with named positions, precise movement and smo
 | Dansk | [Opsætning](docs/da/SETUP.md) | [Daglig brug](docs/da/DAILY-USE.md) |
 | Deutsch | [Einrichtung](docs/de/SETUP.md) | [Tägliche Nutzung](docs/de/DAILY-USE.md) |
 
-The installer and portable ZIP include [user guides for all 12 supported languages](docs/USER-GUIDES.md). The installer adds a user-guides shortcut to the Start menu.
+The installer and portable ZIP include [user guides for all 12 supported languages](docs/USER-GUIDES.md). The installer adds a user-guides shortcut to the Start menu. See the [screenshots](docs/SCREENSHOTS.md) for each settings tab and subtab.
 
 ## Use
 

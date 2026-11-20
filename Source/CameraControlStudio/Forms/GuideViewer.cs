@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -13,11 +12,10 @@ using Markdig;
 using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using Microsoft.Web.WebView2.Core;
-using Microsoft.Web.WebView2.WinForms;
 
 namespace CameraControlStudio
 {
-    internal sealed class GuideViewer : AppForm
+    public partial class GuideViewer : AppForm
     {
         internal const string ReleasesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases";
         internal const string OnlineGuidesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/USER-GUIDES.md";
@@ -26,60 +24,39 @@ namespace CameraControlStudio
         const string AssetHost = "guide-assets.invalid";
         const string DocumentUrl = "https://guide-document.invalid/current.html";
         static bool loaderConfigured;
-        readonly WebView2 page = new WebView2 { Dock = DockStyle.Fill, AllowExternalDrop = false };
         readonly Dictionary<string, Uri> links = new Dictionary<string, Uri>();
-        readonly Button print = new Button { AutoSize = true, Enabled = false };
+        readonly bool openSetup;
         string documentTitle;
         byte[] documentHtml;
         bool scrollToSettings;
 
-        internal GuideViewer(bool setup)
+        public GuideViewer()
         {
-            Text = UiText.T("User guides", "Brugervejledninger");
-            StartPosition = FormStartPosition.CenterParent;
-            MinimumSize = new Size(590, 360);
-            ClientSize = new Size(940, 650);
-            var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RightToLeft = RightToLeft.No };
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 210));
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            var sidebar = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill, FlowDirection = FlowDirection.TopDown, WrapContents = false,
-                AutoScroll = true, Padding = new Padding(10), BackColor = BlueTheme.Panel
-            };
+            InitializeComponent();
+            if (InDesigner)
+                return;
+            FormText.Translate(this);
             string languageFolder = Path.Combine(root, UiText.Language);
             string combined = Path.Combine(languageFolder, "USER-GUIDE.md");
-            string daily = Path.Combine(languageFolder, "DAILY-USE.md");
-            string settings = Path.Combine(languageFolder, "SETUP.md");
-            if (File.Exists(combined))
-            {
-                daily = settings = combined;
-                AddLink(sidebar, UiText.T("Daily use", "Daglig brug"), () => LoadGuide(combined));
-                AddLink(sidebar, UiText.T("Setup guide", "Opsætningsvejledning"), () => LoadGuide(combined, true));
-            }
-            else
-            {
-                if (!File.Exists(daily))
-                    daily = Path.Combine(root, "en", "DAILY-USE.md");
-                if (!File.Exists(settings))
-                    settings = Path.Combine(root, "en", "SETUP.md");
-                AddLink(sidebar, UiText.T("Daily use", "Daglig brug"), () => LoadGuide(daily));
-                AddLink(sidebar, UiText.T("Setup guide", "Opsætningsvejledning"), () => LoadGuide(settings));
-            }
-            AddIfPresent(sidebar, languageFolder, "DEVELOPMENT.md", UiText.T("Development guide", "Udviklervejledning"));
-            AddIfPresent(sidebar, languageFolder, "BUILD-AND-RELEASE.md", UiText.T("Build and release guide", "Bygge- og udgivelsesvejledning"));
-            AddLink(sidebar, UiText.T("GitHub releases", "Udgivelser på GitHub"), () => OpenBrowser(ReleasesUrl));
-            AddLink(sidebar, UiText.T("User guides on GitHub", "Brugervejledninger på GitHub"), () => OpenBrowser(OnlineGuidesUrl));
-            print.Text = UiText.T("Print", "Udskriv");
+            bool hasCombined = File.Exists(combined);
+            string daily = hasCombined ? combined : Path.Combine(languageFolder, "DAILY-USE.md");
+            string settings = hasCombined ? combined : Path.Combine(languageFolder, "SETUP.md");
+            if (!File.Exists(daily))
+                daily = Path.Combine(root, "en", "DAILY-USE.md");
+            if (!File.Exists(settings))
+                settings = Path.Combine(root, "en", "SETUP.md");
+            BindLink(dailyLink, () => LoadGuide(daily));
+            BindLink(setupLink, () => LoadGuide(settings, hasCombined));
+            BindGuideLink(developmentLink, Path.Combine(languageFolder, "DEVELOPMENT.md"));
+            BindGuideLink(buildReleaseLink, Path.Combine(languageFolder, "BUILD-AND-RELEASE.md"));
+            BindLink(releasesLink, () => OpenBrowser(ReleasesUrl));
+            BindLink(onlineGuidesLink, () => OpenBrowser(OnlineGuidesUrl));
+            print.Enabled = false;
             print.Click += async (sender, args) =>
             {
                 try { await PrintGuide(); }
                 catch (Exception ex) { ShowGuideError(ex); }
             };
-            sidebar.Controls.Add(print);
-            layout.Controls.Add(sidebar, 0, 0);
-            layout.Controls.Add(page, 1, 0);
-            Controls.Add(layout);
             sidebar.Enabled = false;
             Shown += async (sender, args) =>
             {
@@ -129,7 +106,7 @@ namespace CameraControlStudio
                         catch (Exception ex) { ShowGuideError(ex); }
                     };
                     sidebar.Enabled = true;
-                    LoadGuide(setup ? settings : daily, setup && settings == combined);
+                    LoadGuide(openSetup ? settings : daily, openSetup && hasCombined);
                 }
                 catch (WebView2RuntimeNotFoundException)
                 {
@@ -141,23 +118,21 @@ namespace CameraControlStudio
             };
         }
 
-        void AddIfPresent(FlowLayoutPanel sidebar, string folder, string file, string caption)
+        internal GuideViewer(bool setup) : this()
         {
-            string path = Path.Combine(folder, file);
-            if (File.Exists(path))
-                AddLink(sidebar, caption, () => LoadGuide(path));
+            openSetup = setup;
         }
 
-        void AddLink(FlowLayoutPanel sidebar, string caption, Action action)
+        void BindGuideLink(LinkLabel link, string path)
         {
-            var link = new LinkLabel
-            {
-                Text = caption, AutoSize = true, MaximumSize = new Size(170, 0),
-                LinkColor = Color.LightSkyBlue, VisitedLinkColor = Color.LightSkyBlue,
-                RightToLeft = UiText.IsRightToLeft ? RightToLeft.Yes : RightToLeft.No
-            };
+            link.Visible = File.Exists(path);
+            BindLink(link, () => LoadGuide(path));
+        }
+
+        void BindLink(LinkLabel link, Action action)
+        {
+            link.RightToLeft = UiText.IsRightToLeft ? RightToLeft.Yes : RightToLeft.No;
             link.LinkClicked += (sender, args) => TryGuideAction(action);
-            sidebar.Controls.Add(link);
         }
 
         void LoadGuide(string path, bool openSettingsSection = false)
@@ -222,42 +197,38 @@ namespace CameraControlStudio
                     "Opdatér Microsoft Edge WebView2 Runtime for at udskrive vejledningerne."), Text);
                 return;
             }
-            using (var dialog = new PrintDialog { UseEXDialog = true })
+            if (printDialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            print.Enabled = false;
+            page.Enabled = false;
+            sidebar.Enabled = false;
+            try
             {
-                if (dialog.ShowDialog(this) != DialogResult.OK)
-                    return;
-                print.Enabled = false;
-                page.Enabled = false;
-                var sidebar = print.Parent;
-                sidebar.Enabled = false;
-                try
+                await ApplyPrintFooter();
+                var printer = printDialog.PrinterSettings;
+                var settings = web.Environment.CreatePrintSettings();
+                settings.PrinterName = printer.PrinterName;
+                settings.Copies = printer.Copies;
+                settings.ShouldPrintHeaderAndFooter = false;
+                var paper = printer.DefaultPageSettings.PaperSize;
+                if (paper.Width > 0 && paper.Height > 0)
                 {
-                    await ApplyPrintFooter();
-                    var printer = dialog.PrinterSettings;
-                    var settings = web.Environment.CreatePrintSettings();
-                    settings.PrinterName = printer.PrinterName;
-                    settings.Copies = printer.Copies;
-                    settings.ShouldPrintHeaderAndFooter = false;
-                    var paper = printer.DefaultPageSettings.PaperSize;
-                    if (paper.Width > 0 && paper.Height > 0)
-                    {
-                        settings.MediaSize = CoreWebView2PrintMediaSize.Custom;
-                        settings.PageWidth = paper.Width / 100.0;
-                        settings.PageHeight = paper.Height / 100.0;
-                    }
-                    if (printer.DefaultPageSettings.Landscape)
-                        settings.Orientation = CoreWebView2PrintOrientation.Landscape;
-                    if (await web.PrintAsync(settings) != CoreWebView2PrintStatus.Succeeded)
-                        throw new IOException("The browser did not complete the print job.");
+                    settings.MediaSize = CoreWebView2PrintMediaSize.Custom;
+                    settings.PageWidth = paper.Width / 100.0;
+                    settings.PageHeight = paper.Height / 100.0;
                 }
-                finally
+                if (printer.DefaultPageSettings.Landscape)
+                    settings.Orientation = CoreWebView2PrintOrientation.Landscape;
+                if (await web.PrintAsync(settings) != CoreWebView2PrintStatus.Succeeded)
+                    throw new IOException("The browser did not complete the print job.");
+            }
+            finally
+            {
+                if (!IsDisposed)
                 {
-                    if (!IsDisposed)
-                    {
-                        sidebar.Enabled = true;
-                        page.Enabled = true;
-                        print.Enabled = true;
-                    }
+                    sidebar.Enabled = true;
+                    page.Enabled = true;
+                    print.Enabled = true;
                 }
             }
         }

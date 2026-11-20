@@ -6,7 +6,7 @@ namespace CameraControlStudio {
  public partial class CameraSourceForm:AppForm {
   public Device Selected {get{return choices.SelectedItem as Device;}}
   public CameraSourceForm(){
-   InitializeComponent();if(InDesigner)return;Prepare(this);FormText.Translate(this);Text=prompt.Text=UiText.T("Choose camera source","Vælg kamerakilde");
+   InitializeComponent();if(InDesigner)return;FormText.Translate(this);
    ok.Enabled=Selected!=null;
    choices.SelectedIndexChanged+=(o,e)=>ok.Enabled=Selected!=null;
    ok.Click+=(o,e)=>{if(Selected!=null)DialogResult=DialogResult.OK;};

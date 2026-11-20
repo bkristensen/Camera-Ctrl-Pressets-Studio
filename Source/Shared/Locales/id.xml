@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">Edit profil aktif di Pengaturan.</text>
   <text key="Exposure">Pencahayaan</text>
   <text key="Fast pan steps">Langkah putar cepat</text>
-  <text key="Fast zoom steps">Langkah zoom cepat</text>
   <text key="Focus">Fokus</text>
   <text key="Gain">Penguatan</text>
   <text key="Gamma">Gama</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">Apakah siaran sudah dimulai? Pilih Ya untuk mengaktifkan kontrol kamera.</text>
   <text key="Hue">Rona</text>
-  <text key="Image">Gambar</text>
+  <text key="Video">Video</text>
   <text key="Join the project discussion">Ikuti diskusi proyek</text>
   <text key="Keep current position and layout">Pertahankan posisi dan tata letak saat ini</text>
   <text key="Language">Bahasa</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">Kamera tidak ditemukan.</text>
   <text key="No image controls available through the driver.">Driver tidak menyediakan kontrol gambar.</text>
   <text key="Normal pan steps">Langkah putar normal</text>
-  <text key="Normal zoom steps">Langkah zoom normal</text>
+  <text key="Zoom steps">Langkah zoom</text>
   <text key="Outer buttons: fast">Tombol luar: cepat</text>
   <text key="Position reached.">Posisi tercapai.</text>
   <text key="Preset name">Nama preset</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">Laporkan bug atau fitur yang belum tersedia</text>
   <text key="Reset image to driver defaults">Pulihkan pengaturan gambar bawaan driver</text>
   <text key="Restart the application to change language.">Mulai ulang aplikasi untuk mengganti bahasa.</text>
-  <text key="Reverse left / right">Balik arah kiri/kanan</text>
-  <text key="Reverse up / down">Balik arah atas/bawah</text>
+  <text key="Camera pan reverse left / right">Balik gerakan kamera kiri/kanan</text>
+  <text key="Camera pan reverse up / down">Balik gerakan kamera atas/bawah</text>
   <text key="Saturation">Saturasi</text>
   <text key="Save">Simpan</text>
   <text key="Select a preset for this camera.">Pilih preset untuk kamera ini.</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">Perkecil</text>
   <text key="Preset icon: Zoom reset">Setel ulang zoom</text>
   <text key="Empty preset.">Preset kosong.</text>
-  <text key="Fast zoom in">Perbesar dengan cepat</text>
-  <text key="Fast zoom out">Perkecil dengan cepat</text>
   <text key="Replace with current position?">Ganti dengan posisi saat ini?</text>
   <text key="Delete permanent preset: {0}?">Hapus preset permanen “{0}”?</text>
   <text key="Recall preset">Buka posisi preset</text>
   <text key="Delete temporary preset">Hapus preset sementara</text>
-  <text key="Hold Shift for fast zoom.">Tahan Shift untuk zoom cepat.</text>
   <text key="Drag and release to set zoom.">Seret lalu lepas penggeser untuk mengatur zoom.</text>
   <text key="User guides">Panduan pengguna</text>
   <text key="Daily use">Penggunaan sehari-hari</text>
@@ -180,4 +176,9 @@
   <text key="Colour">Warna</text>
   <text key="Light and detail">Cahaya dan detail</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">Kamera tidak tersedia. Gunakan kontrol kamera untuk menghubungkan ulang.</text>
+  <text key="Permanent presets">Preset permanen</text>
+  <text key="Move selected preset up">Pindahkan preset terpilih ke atas</text>
+  <text key="Move selected preset down">Pindahkan preset terpilih ke bawah</text>
+  <text key="Copy active profile">Salin profil aktif</text>
+  <text key="Rename selected profile">Ubah nama profil terpilih</text>
 </translations>
