@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">عدّل ملف التعريف النشط في الإعدادات.</text>
   <text key="Exposure">التعريض الضوئي</text>
   <text key="Fast pan steps">خطوات التدوير السريع</text>
-  <text key="Fast zoom steps">خطوات التقريب السريع</text>
   <text key="Focus">التركيز البؤري</text>
   <text key="Gain">الكسب</text>
   <text key="Gamma">غاما</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">هل بدأ البث؟ اختر «نعم» لتفعيل عناصر التحكم في الكاميرا.</text>
   <text key="Hue">درجة اللون</text>
-  <text key="Image">الصورة</text>
+  <text key="Video">الفيديو</text>
   <text key="Join the project discussion">المشاركة في نقاش المشروع</text>
   <text key="Keep current position and layout">الإبقاء على الموضع والتخطيط الحاليين</text>
   <text key="Language">اللغة</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">لم يتم العثور على كاميرا.</text>
   <text key="No image controls available through the driver.">برنامج التشغيل لا يوفّر إعدادات للصورة.</text>
   <text key="Normal pan steps">خطوات التدوير العادي</text>
-  <text key="Normal zoom steps">خطوات التقريب العادي</text>
+  <text key="Zoom steps">خطوات التقريب</text>
   <text key="Outer buttons: fast">الأزرار الخارجية: سريعة</text>
   <text key="Position reached.">تم الوصول إلى الموضع.</text>
   <text key="Preset name">اسم الإعداد المسبق</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">الإبلاغ عن خطأ أو ميزة ناقصة</text>
   <text key="Reset image to driver defaults">استعادة إعدادات الصورة الافتراضية لبرنامج التشغيل</text>
   <text key="Restart the application to change language.">أعد تشغيل التطبيق لتغيير اللغة.</text>
-  <text key="Reverse left / right">عكس اليسار واليمين</text>
-  <text key="Reverse up / down">عكس الأعلى والأسفل</text>
+  <text key="Camera pan reverse left / right">عكس حركة الكاميرا يسارًا ويمينًا</text>
+  <text key="Camera pan reverse up / down">عكس حركة الكاميرا لأعلى ولأسفل</text>
   <text key="Saturation">التشبّع</text>
   <text key="Save">حفظ</text>
   <text key="Select a preset for this camera.">اختر إعدادًا مسبقًا لهذه الكاميرا.</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">إبعاد</text>
   <text key="Preset icon: Zoom reset">إعادة ضبط التقريب</text>
   <text key="Empty preset.">الإعداد المسبق فارغ.</text>
-  <text key="Fast zoom in">تقريب سريع</text>
-  <text key="Fast zoom out">إبعاد سريع</text>
   <text key="Replace with current position?">هل تريد الاستبدال بالموضع الحالي؟</text>
   <text key="Delete permanent preset: {0}?">هل تريد حذف الإعداد المسبق الدائم «{0}»؟</text>
   <text key="Recall preset">الانتقال إلى موضع الإعداد المسبق</text>
   <text key="Delete temporary preset">حذف الإعداد المسبق المؤقت</text>
-  <text key="Hold Shift for fast zoom.">اضغط مطولًا على Shift للتقريب أو الإبعاد السريع.</text>
   <text key="Drag and release to set zoom.">اسحب شريط التمرير وأفلته لضبط التقريب.</text>
   <text key="User guides">أدلة المستخدم</text>
   <text key="Daily use">الاستخدام اليومي</text>
@@ -180,4 +176,9 @@
   <text key="Colour">اللون</text>
   <text key="Light and detail">الإضاءة والتفاصيل</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">الكاميرا غير متاحة. استخدم أحد عناصر التحكم بالكاميرا لإعادة الاتصال.</text>
+  <text key="Permanent presets">الإعدادات المسبقة الدائمة</text>
+  <text key="Move selected preset up">نقل الإعداد المسبق المحدد لأعلى</text>
+  <text key="Move selected preset down">نقل الإعداد المسبق المحدد لأسفل</text>
+  <text key="Copy active profile">نسخ ملف التعريف النشط</text>
+  <text key="Rename selected profile">إعادة تسمية ملف التعريف المحدد</text>
 </translations>

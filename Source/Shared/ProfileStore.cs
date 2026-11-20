@@ -108,7 +108,7 @@ namespace CameraControlStudio {
                 throw Invalid();
             if (data.FastPanSteps < 1 || data.FastPanSteps > 100)
                 throw Invalid();
-            if (data.PanSteps < 1 || data.PanSteps > 100 || data.ZoomSteps < 1 || data.ZoomSteps > 100 || data.FastZoomSteps < 1 || data.FastZoomSteps > 100)
+            if (data.PanSteps < 1 || data.PanSteps > 100 || data.ZoomSteps < 1 || data.ZoomSteps > 100)
                 throw Invalid();
             if (data.Layout == null)
                 data.Layout = new ProfileLayout();

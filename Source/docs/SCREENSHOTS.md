@@ -1,18 +1,24 @@
 # Application screenshots
 
-The user guides share these screenshots of the English interface. The displayed camera, presets and profiles are examples.
+The user guides share these screenshots of the English interface. They show the Standard profile with a demo camera and sample presets. The Video examples illustrate controls that a camera driver may expose.
 
 | View | What it shows |
 | --- | --- |
-| [Main window](images/screenshots/main.png) | Direction wheel, camera selector, zoom, presets and status with settings closed |
-| [Settings](images/screenshots/settings.png) | Movement steps, transition time, direction reversal, streaming confirmation and language |
-| [Image](images/screenshots/image.png) | Focus, exposure and other driver-provided controls |
-| [Presets](images/screenshots/presets.png) | Permanent preset list and editing actions |
-| [Profiles](images/screenshots/profiles.png) | Profiles and actions to create, copy or rename them |
-| [About](images/screenshots/about.png) | Version, developer credit and links to the project |
+| [Main window](images/screenshots/main.png) | Direction wheel, camera selector, zoom, presets and status with Settings closed |
+| [Main window with Settings open](images/screenshots/main-settings.png) | The settings pane alongside the camera controls and preset list |
+| [Settings → Movement](images/screenshots/settings.png) | Pan and zoom steps, transition time and direction reversal |
+| [Settings → Application](images/screenshots/application.png) | Streaming confirmation, always-on-top behaviour and profile language |
+| [Video before loading controls](images/screenshots/video.png) | Where to load the controls available from the camera driver |
+| [Video → Focus and exposure](images/screenshots/image.png) | Focus, exposure and gain |
+| [Video → Colour](images/screenshots/video-colour.png) | Hue, gamma, saturation and white balance |
+| [Video → Light and detail](images/screenshots/video-light-detail.png) | Sharpness, backlight compensation, brightness and contrast |
+| [Presets](images/screenshots/presets.png) | Permanent presets and editing actions |
+| [Profiles](images/screenshots/profiles.png) | Profile list and actions to create, copy or rename a profile |
+| [Issues](images/screenshots/issues.png) | Diagnostic logs and GitHub reporting |
+| [About](images/screenshots/about.png) | Version, developer credit and project links |
 
 ## Refresh the guide images
 
-On Windows, capture the full application window with settings closed for `main.png`, then open each tab for the remaining screenshots. Keep the settings pane wide enough for its labels and review the screenshots for personal details before committing them. Save the PNGs in `docs/images/screenshots` under the same filenames so the links in the guides and GitHub README continue to work.
+Open the Windows app with the English Standard profile and a selected camera or a demo camera. Capture the full window. Open the settings pane and capture each tab and subtab in the table. Save the PNGs under the existing names in `docs/images/screenshots` to preserve links from the guides and README. Check that the window fits the screen and that the images contain only sample data.
 
-For separate captures with synthetic sample data, run `./scripts/capture-docs.ps1` from the source folder. Use 100% display scaling and a desktop of at least 1280 × 720 pixels. Keep the app visible during capture. The script writes nine language-specific PNGs directly to `docs/images`. Capture mode uses the actual Windows forms with sample positions and leaves your camera and saved profiles untouched.
+The separate `./scripts/capture-docs.ps1` script builds the app and generates nine **annotated** examples in `docs/images` using the built-in demo mode. Use 100% display scaling and at least 1280 × 720 available desktop space for that script. Demo mode leaves real cameras and saved profiles untouched.

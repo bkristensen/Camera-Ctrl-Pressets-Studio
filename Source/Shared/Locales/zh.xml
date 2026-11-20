@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">在设置中编辑当前配置。</text>
   <text key="Exposure">曝光</text>
   <text key="Fast pan steps">快速转动步数</text>
-  <text key="Fast zoom steps">快速缩放步数</text>
   <text key="Focus">对焦</text>
   <text key="Gain">增益</text>
   <text key="Gamma">伽马</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">直播已开始吗？请选择“是”以启用摄像头控制。</text>
   <text key="Hue">色相</text>
-  <text key="Image">图像</text>
+  <text key="Video">视频</text>
   <text key="Join the project discussion">参与项目讨论</text>
   <text key="Keep current position and layout">保留当前位置和布局</text>
   <text key="Language">语言</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">未找到摄像头。</text>
   <text key="No image controls available through the driver.">驱动程序未提供图像设置。</text>
   <text key="Normal pan steps">正常转动步数</text>
-  <text key="Normal zoom steps">正常缩放步数</text>
+  <text key="Zoom steps">缩放步数</text>
   <text key="Outer buttons: fast">外侧按钮：快速</text>
   <text key="Position reached.">已到达位置。</text>
   <text key="Preset name">预设名称</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">报告错误或缺少的功能</text>
   <text key="Reset image to driver defaults">将图像设置恢复为驱动程序默认值</text>
   <text key="Restart the application to change language.">请重启应用以切换语言。</text>
-  <text key="Reverse left / right">反转左右</text>
-  <text key="Reverse up / down">反转上下</text>
+  <text key="Camera pan reverse left / right">反转摄像头左右转动</text>
+  <text key="Camera pan reverse up / down">反转摄像头上下转动</text>
   <text key="Saturation">饱和度</text>
   <text key="Save">保存</text>
   <text key="Select a preset for this camera.">请选择此摄像头的预设。</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">缩小</text>
   <text key="Preset icon: Zoom reset">重置缩放</text>
   <text key="Empty preset.">预设为空。</text>
-  <text key="Fast zoom in">快速放大</text>
-  <text key="Fast zoom out">快速缩小</text>
   <text key="Replace with current position?">替换为当前位置吗？</text>
   <text key="Delete permanent preset: {0}?">删除永久预设“{0}”吗？</text>
   <text key="Recall preset">调用预设</text>
   <text key="Delete temporary preset">删除临时预设</text>
-  <text key="Hold Shift for fast zoom.">按住 Shift 键可快速缩放。</text>
   <text key="Drag and release to set zoom.">拖动滑块并松开以设置缩放。</text>
   <text key="User guides">用户指南</text>
   <text key="Daily use">日常使用</text>
@@ -180,4 +176,9 @@
   <text key="Colour">颜色</text>
   <text key="Light and detail">光线与细节</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">摄像头不可用。请操作摄像头控件重新连接。</text>
+  <text key="Permanent presets">永久预设</text>
+  <text key="Move selected preset up">向上移动所选预设</text>
+  <text key="Move selected preset down">向下移动所选预设</text>
+  <text key="Copy active profile">复制当前配置</text>
+  <text key="Rename selected profile">重命名所选配置</text>
 </translations>

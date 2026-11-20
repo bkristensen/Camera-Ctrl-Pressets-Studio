@@ -4,7 +4,7 @@ Camera Control & Pressets Studio is a small Windows desktop tool for people who 
 
 ## Core behaviour
 
-A two-ring controller provides normal and fast pan and tilt. The two zoom buttons use normal steps or fast steps with Shift. The vertical slider sets the zoom directly. The central button selects a camera without opening a video preview.
+A two-ring controller provides normal and fast pan and tilt. The two zoom buttons use the configured zoom steps. The vertical slider sets the zoom directly. The central button selects a camera without opening a video preview.
 
 Permanent positions contain a name, a stable symbol ID and supported camera coordinates. Combined symbols depict a left-to-right arrangement of subjects. Permanent positions are bold and listed first. Temporary positions are separate in-memory items and have no icon. Double-click and the play button recall either type.
 

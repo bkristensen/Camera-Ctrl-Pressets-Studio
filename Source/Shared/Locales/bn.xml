@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">সেটিংসে সক্রিয় প্রোফাইল সম্পাদনা করুন।</text>
   <text key="Exposure">এক্সপোজার</text>
   <text key="Fast pan steps">দ্রুত প্যানের ধাপ</text>
-  <text key="Fast zoom steps">দ্রুত জুমের ধাপ</text>
   <text key="Focus">ফোকাস</text>
   <text key="Gain">গেইন</text>
   <text key="Gamma">গামা</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">স্ট্রিমিং শুরু হয়েছে? ক্যামেরা নিয়ন্ত্রণ চালু করতে ‘হ্যাঁ’ বেছে নিন।</text>
   <text key="Hue">রঙের আভা</text>
-  <text key="Image">ছবি</text>
+  <text key="Video">ভিডিও</text>
   <text key="Join the project discussion">প্রকল্পের আলোচনায় যোগ দিন</text>
   <text key="Keep current position and layout">বর্তমান অবস্থান ও বিন্যাস রাখুন</text>
   <text key="Language">ভাষা</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">কোনো ক্যামেরা পাওয়া যায়নি।</text>
   <text key="No image controls available through the driver.">ড্রাইভার ছবির কোনো নিয়ন্ত্রণ দেয় না।</text>
   <text key="Normal pan steps">স্বাভাবিক প্যানের ধাপ</text>
-  <text key="Normal zoom steps">স্বাভাবিক জুমের ধাপ</text>
+  <text key="Zoom steps">জুমের ধাপ</text>
   <text key="Outer buttons: fast">বাইরের বোতাম: দ্রুত</text>
   <text key="Position reached.">অবস্থানে পৌঁছেছে।</text>
   <text key="Preset name">প্রিসেটের নাম</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">ত্রুটি বা অনুপস্থিত সুবিধার কথা জানান</text>
   <text key="Reset image to driver defaults">ড্রাইভারের ডিফল্ট ছবি সেটিংস ফিরিয়ে আনুন</text>
   <text key="Restart the application to change language.">ভাষা বদলাতে অ্যাপটি আবার চালু করুন।</text>
-  <text key="Reverse left / right">বাম ও ডান উল্টে দিন</text>
-  <text key="Reverse up / down">ওপর ও নিচ উল্টে দিন</text>
+  <text key="Camera pan reverse left / right">ক্যামেরার বাম ও ডান চলাচল উল্টান</text>
+  <text key="Camera pan reverse up / down">ক্যামেরার ওপর ও নিচ চলাচল উল্টান</text>
   <text key="Saturation">স্যাচুরেশন</text>
   <text key="Save">সংরক্ষণ করুন</text>
   <text key="Select a preset for this camera.">এই ক্যামেরার জন্য একটি প্রিসেট বেছে নিন।</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">জুম আউট</text>
   <text key="Preset icon: Zoom reset">জুম রিসেট করুন</text>
   <text key="Empty preset.">প্রিসেটটি খালি।</text>
-  <text key="Fast zoom in">দ্রুত জুম ইন</text>
-  <text key="Fast zoom out">দ্রুত জুম আউট</text>
   <text key="Replace with current position?">বর্তমান অবস্থান দিয়ে প্রতিস্থাপন করবেন?</text>
   <text key="Delete permanent preset: {0}?">স্থায়ী প্রিসেট ‘{0}’ মুছবেন?</text>
   <text key="Recall preset">প্রিসেট অবস্থানে যান</text>
   <text key="Delete temporary preset">অস্থায়ী প্রিসেট মুছুন</text>
-  <text key="Hold Shift for fast zoom.">দ্রুত জুমের জন্য Shift চেপে ধরুন।</text>
   <text key="Drag and release to set zoom.">জুম ঠিক করতে স্লাইডার টেনে ছেড়ে দিন।</text>
   <text key="User guides">ব্যবহার নির্দেশিকা</text>
   <text key="Daily use">দৈনন্দিন ব্যবহার</text>
@@ -180,4 +176,9 @@
   <text key="Colour">রং</text>
   <text key="Light and detail">আলো ও সূক্ষ্মতা</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">ক্যামেরা উপলব্ধ নেই। পুনরায় সংযোগের জন্য ক্যামেরার একটি নিয়ন্ত্রণ ব্যবহার করুন।</text>
+  <text key="Permanent presets">স্থায়ী প্রিসেট</text>
+  <text key="Move selected preset up">নির্বাচিত প্রিসেট ওপরে সরান</text>
+  <text key="Move selected preset down">নির্বাচিত প্রিসেট নিচে সরান</text>
+  <text key="Copy active profile">সক্রিয় প্রোফাইল কপি করুন</text>
+  <text key="Rename selected profile">নির্বাচিত প্রোফাইলের নাম বদলান</text>
 </translations>

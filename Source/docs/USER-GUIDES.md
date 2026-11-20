@@ -19,4 +19,4 @@ The viewer uses [Microsoft Edge WebView2 Runtime](https://developer.microsoft.co
 | Bahasa Indonesia | [Penggunaan dan pengaturan](id/USER-GUIDE.md) |
 | اردو | [استعمال اور ترتیبات](ur/USER-GUIDE.md) |
 
-The guides use shared screenshots of the English interface. See the [screenshot index](SCREENSHOTS.md) for all six views.
+The guides use shared screenshots of the English interface. See the [screenshot index](SCREENSHOTS.md) for the main window and every settings tab and subtab.

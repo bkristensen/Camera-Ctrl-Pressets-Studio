@@ -6,7 +6,7 @@ namespace CameraControlStudio {
   public string Selected {get{return choices.SelectedItem as string;}}
   public bool KeepLayout {get{return keepLayout.Checked;}}
   public ProfilePickerForm(){
-   InitializeComponent();if(InDesigner)return;Prepare(this);FormText.Translate(this);Text=prompt.Text=UiText.T("Choose profile","Vælg profil");
+   InitializeComponent();if(InDesigner)return;FormText.Translate(this);
    ok.Enabled=Selected!=null;
    choices.SelectedIndexChanged+=(o,e)=>ok.Enabled=Selected!=null;
    ok.Click+=(o,e)=>{if(Selected!=null)DialogResult=DialogResult.OK;};
