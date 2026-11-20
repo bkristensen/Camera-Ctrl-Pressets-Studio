@@ -2,6 +2,9 @@
 <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net48</TargetFramework><UseWindowsForms>true</UseWindowsForms><EnableWindowsTargeting>true</EnableWindowsTargeting><AssemblyName>Camera Control Studio</AssemblyName><RootNamespace>CameraControlStudio</RootNamespace><ApplicationIcon>Assets/CameraControlStudio.ico</ApplicationIcon></PropertyGroup>
 <ItemGroup><PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" /><Reference Include="System.Runtime.Serialization" /><Compile Include="../Shared/*.cs" Link="Shared/%(Filename)%(Extension)" /><EmbeddedResource Include="../Shared/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" /><Compile Update="Forms/*Form.cs"><SubType>Form</SubType></Compile><Compile Update="Forms/*.Designer.cs"><DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer','')).cs</DependentUpon></Compile></ItemGroup>
 <ItemGroup>
+  <PackageReference Include="Markdig" Version="1.6.0" />
+  <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
+  <Content Include="../docs/**/*.md;../docs/**/*.png" Link="docs/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   <Compile Remove="Assets\PressetIcons.Designer.cs" />
   <Compile Update="Properties\Resources.Designer.cs">
     <DesignTime>True</DesignTime>
@@ -9,6 +12,10 @@
     <DependentUpon>Resources.resx</DependentUpon>
   </Compile>
 </ItemGroup>
+<PropertyGroup>
+  <PlatformTarget Condition="'$(PlatformTarget)' == ''">AnyCPU</PlatformTarget>
+  <Prefer32Bit>false</Prefer32Bit>
+</PropertyGroup>
 <ItemGroup>
   <EmbeddedResource Remove="Assets\PressetIcons.resx" />
   <None Include="Assets\PressetIcons.resx" />

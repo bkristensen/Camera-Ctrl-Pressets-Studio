@@ -1,7 +1,7 @@
-# Validation for 0.7.0-beta.2
+# Validation for 0.7.0-beta.3
 
-The Windows Release build uses locked dependencies. The automated suite checks motion arithmetic, preset state, profile and settings persistence, translation coverage, and zoom range mapping.
+The Windows Release build uses locked dependencies. Translation parity and the automated tests passed. The tests cover motion, presets, profile language, persistence, logging and the camera-not-ready HRESULT reported after hibernation.
 
-Release preparation checked that the portable ZIP contains the Release executable and guides for all 12 languages. The Inno Setup 7 compiler packaged the same language guides and the user-guide shortcut into the Windows installer. SHA-256 hashes identify the final local packages.
+The extracted portable ZIP was tested in x86 and x64 Windows processes. Both opened and reopened the daily-use and setup guides, displayed their screenshots, and printed to PDF. The x64 PDF had the title, version, date and correct page count on all five pages. The **?** button was present during WinForms design-time initialization. The ARM64 loader was checked for the correct binary architecture.
 
-Use the [release checklist](RELEASE-CHECKLIST.md) for clean Windows install, upgrade and uninstall testing, physical camera checks, and per-monitor layout checks. See the [build and release guide](en/BUILD-AND-RELEASE.md) for the packaging and signing commands. The staged beta downloads are unsigned.
+Inno Setup 7 compiled the installer with the guides for all 12 languages and the x86, x64 and ARM64 loaders. Both packages are unsigned, with SHA-256 hashes supplied. A clean-account installation and uninstall, a physical camera hibernation cycle, and an ARM64 runtime test are pending. See the [release checklist](RELEASE-CHECKLIST.md) and [build and release guide](en/BUILD-AND-RELEASE.md).

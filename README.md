@@ -2,7 +2,7 @@
 
 # Camera Control Studio
 
-**[Download Camera Control Studio from GitHub Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/FAQ.md)
+**[Download Camera Control Studio 0.7.0-beta.2](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases/tag/Beta)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/FAQ.md)
 
 Camera Control Studio is a Windows app for controlling a supported camera during video meetings, recordings and live streams. Move and zoom the camera manually, then save useful framings as named presets so you can switch between them during a session. For example, save a wide shot of a stage, a close-up of the speaker and a shot of the demonstration table.
 
@@ -10,7 +10,7 @@ Use it alongside Zoom Meetings or your preferred capture or streaming app. That 
 
 ## Download and install
 
-Open the [GitHub Releases page](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) and look under **Assets** on the newest published release. Beta versions are marked **Pre-release**. If the page is empty, downloads are pending publication.
+Download the installer or portable ZIP under **Assets** on the [Beta release page](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases/tag/Beta). Browse [all releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) for other versions.
 
 | Download | How to use it |
 | --- | --- |

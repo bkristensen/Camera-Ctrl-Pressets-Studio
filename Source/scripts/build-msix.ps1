@@ -18,12 +18,16 @@ Push-Location $root
 try {
     & "$PSScriptRoot/build.ps1"
     # Package an explicit x64 build; portable builds retain their original target.
-    & dotnet build CameraControlStudio/CameraControlStudio.csproj -c Release -p:PlatformTarget=x64 -p:Prefer32Bit=false -o artifacts/msix-bin --nologo
+    & dotnet build CameraControlStudio/CameraControlStudio.csproj -c Release --no-restore -p:PlatformTarget=x64 -p:RuntimeIdentifier= -o artifacts/msix-bin --nologo
     if ($LASTEXITCODE -ne 0) { throw 'x64 build failed.' }
     $stage = Join-Path $root 'artifacts/msix-stage'
     if (Test-Path $stage) { Remove-Item $stage -Recurse -Force }
     New-Item -ItemType Directory -Path "$stage/Assets" -Force | Out-Null
     Copy-Item 'artifacts/msix-bin/Camera Control Studio.exe', 'artifacts/msix-bin/Camera Control Studio.exe.config', 'LICENSE', 'README.md' $stage
+    Copy-Item 'artifacts/msix-bin/*.dll' $stage -Exclude 'WebView2Loader.dll'
+    $loaderDirectory = Join-Path $stage 'runtimes/win-x64/native'
+    New-Item -ItemType Directory -Path $loaderDirectory -Force | Out-Null
+    Copy-Item 'artifacts/msix-bin/runtimes/win-x64/native/WebView2Loader.dll' $loaderDirectory
     Copy-Item '*.md' $stage
     Copy-Item 'docs' (Join-Path $stage 'docs') -Recurse
     [xml]$manifest = Get-Content 'packaging/msix/AppxManifest.xml' -Raw

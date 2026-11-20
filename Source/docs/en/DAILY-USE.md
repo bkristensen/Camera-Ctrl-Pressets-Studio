@@ -6,6 +6,8 @@ Start your capture or streaming session first if your setup requires it. Open **
 
 ![Main window with the settings pane closed](../images/screenshots/main.png)
 
+Open **?** in the footer. It opens the daily-use guide with Settings closed and the setup guide with Settings open. Use **Print** to add the guide title, app version, date and page numbers to the printout.
+
 ## 1. Select the setup
 
 Open the profile picker in the footer and choose your profile. Leave the layout checkbox off to restore its saved window. Check it only when you want to keep the current layout.

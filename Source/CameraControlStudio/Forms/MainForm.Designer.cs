@@ -77,6 +77,7 @@ namespace CameraControlStudio {
             this.cameraStatus = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
             this.profileButton = new CameraControlStudio.BlueButton();
+            this.helpButton = new CameraControlStudio.BlueButton();
             this.settingsButton = new CameraControlStudio.BlueButton();
             this.root.SuspendLayout();
             this.body.SuspendLayout();
@@ -1004,13 +1005,15 @@ namespace CameraControlStudio {
             // 
             // footer
             // 
-            this.footer.ColumnCount = 3;
+            this.footer.ColumnCount = 4;
             this.footer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.footer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.footer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.footer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.footer.Controls.Add(this.footerLabels, 0, 0);
             this.footer.Controls.Add(this.profileButton, 1, 0);
-            this.footer.Controls.Add(this.settingsButton, 2, 0);
+            this.footer.Controls.Add(this.helpButton, 2, 0);
+            this.footer.Controls.Add(this.settingsButton, 3, 0);
             this.footer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.footer.Location = new System.Drawing.Point(18, 438);
             this.footer.Margin = new System.Windows.Forms.Padding(0);
@@ -1067,7 +1070,7 @@ namespace CameraControlStudio {
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileButton.ForeColor = System.Drawing.Color.White;
-            this.profileButton.Location = new System.Drawing.Point(578, 9);
+            this.profileButton.Location = new System.Drawing.Point(530, 9);
             this.profileButton.Margin = new System.Windows.Forms.Padding(3, 9, 0, 7);
             this.profileButton.Name = "profileButton";
             this.profileButton.Primary = false;
@@ -1076,6 +1079,23 @@ namespace CameraControlStudio {
             this.profileButton.Text = "Profiles";
             this.profileButton.UseVisualStyleBackColor = false;
             // 
+            // helpButton
+            //
+            this.helpButton.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.helpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.helpButton.ForeColor = System.Drawing.Color.White;
+            this.helpButton.Location = new System.Drawing.Point(683, 9);
+            this.helpButton.Margin = new System.Windows.Forms.Padding(6, 9, 0, 7);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Primary = false;
+            this.helpButton.Size = new System.Drawing.Size(42, 46);
+            this.helpButton.TabIndex = 2;
+            this.helpButton.Text = "?";
+            this.helpButton.UseVisualStyleBackColor = false;
+            //
             // settingsButton
             // 
             this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -1089,7 +1109,7 @@ namespace CameraControlStudio {
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Primary = false;
             this.settingsButton.Size = new System.Drawing.Size(53, 46);
-            this.settingsButton.TabIndex = 2;
+            this.settingsButton.TabIndex = 3;
             this.settingsButton.Text = "⚙";
             this.settingsButton.UseVisualStyleBackColor = false;
             // 
@@ -1200,6 +1220,7 @@ namespace CameraControlStudio {
         private Label cameraStatus;
         private Label status;
         private BlueButton settingsButton;
+        private BlueButton helpButton;
         private DataGridView presetGrid;
     }
 }

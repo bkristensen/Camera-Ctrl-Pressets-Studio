@@ -8,15 +8,18 @@ $source = Join-Path $PSScriptRoot $exeName
 if (-not (Test-Path -LiteralPath $source)) { throw 'Extract the complete portable ZIP before running this script.' }
 if (Get-Process -Name 'Camera Control Studio' -ErrorAction SilentlyContinue) { throw 'Close Camera Control Studio before installing.' }
 New-Item -ItemType Directory -Force -Path $destination | Out-Null
-foreach ($name in @($exeName, "$exeName.config", 'README.md', 'LICENSE')) {
+$runtime = Get-ChildItem -LiteralPath $PSScriptRoot -Filter '*.dll' -File | ForEach-Object Name
+foreach ($name in @($exeName, "$exeName.config", 'README.md', 'LICENSE', 'THIRD-PARTY-NOTICES.md') + @($runtime)) {
     $from = Join-Path $PSScriptRoot $name
     $to = Join-Path $destination $name
     if ([IO.Path]::GetFullPath($from) -ne [IO.Path]::GetFullPath($to)) { Copy-Item -LiteralPath $from -Destination $to -Force }
 }
-$docsSource = Join-Path $PSScriptRoot 'docs'
-$docsTarget = Join-Path $destination 'docs'
-if ((Test-Path $docsSource) -and [IO.Path]::GetFullPath($docsSource) -ne [IO.Path]::GetFullPath($docsTarget)) {
-    Copy-Item -LiteralPath $docsSource -Destination $destination -Recurse -Force
+foreach ($folder in 'docs', 'runtimes') {
+    $from = Join-Path $PSScriptRoot $folder
+    $to = Join-Path $destination $folder
+    if ((Test-Path -LiteralPath $from) -and [IO.Path]::GetFullPath($from) -ne [IO.Path]::GetFullPath($to)) {
+        Copy-Item -LiteralPath $from -Destination $destination -Recurse -Force
+    }
 }
 $shell = New-Object -ComObject WScript.Shell
 $shortcutPath = Join-Path ([Environment]::GetFolderPath('Programs')) 'Camera Control Studio.lnk'

@@ -14,7 +14,7 @@ Click the camera symbol in the centre of the direction wheel to select a camera.
 
 ## 2. Decide when camera control may start
 
-Under **Settings**, enable **Ask whether streaming has started before using the camera** if your capture program must start first. This option is off by default.
+Under **Settings → Application**, enable **Ask whether streaming has started before using the camera** if your capture program must start first. This option is off by default.
 
 With the option enabled, the first camera action asks whether streaming has started. Choose **Yes** only when it has. Choose **No** to keep camera control disconnected. After Yes, further actions do not ask again until you change profile, change this option or restart the app. The app does not detect or start a streaming session for you.
 
@@ -22,7 +22,7 @@ If you need this order on first use, set the option before your next session. Th
 
 ## 3. Set movement and zoom
 
-Change the values on the **Settings** tab. Start with small steps. Test the result in your capture program.
+Change the values under **Settings → Movement**. Start with small steps. Test the result in your capture program.
 
 ![Settings tab with movement, transition and language controls](../images/screenshots/settings.png)
 
@@ -42,7 +42,7 @@ For an upside-down camera, enable **Reverse up / down** and test Up. Enable **Re
 
 ![Image tab with focus, exposure and other camera controls](../images/screenshots/image.png)
 
-Open **Image** in the settings pane, then load the image controls if needed. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
+Open **Image** in the settings pane, then load the image controls if needed. Choose a group such as **Focus and exposure**, **Colour**, or **Light and detail**. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
 
 Move the camera first. Open **Presets** in the settings pane. Choose **Add**. Select an icon at the top, check the name, then save. If the name is blank and unused, choosing an icon suggests its name. Combined symbols show their subjects from left to right.
 
@@ -58,12 +58,18 @@ Drag the vertical divider between the controller and position list. Resize or mo
 
 When selecting a profile in the footer, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
 
-Choose the language in **Settings**, then restart. Automatic follows the Windows display language when the app supports it and uses English otherwise. The language choice applies to the whole application.
+Choose a language under **Settings → Application → Profile language**, then restart to apply it. **Automatic** uses the Windows display language if supported and English otherwise. Switching profiles restarts the application with the selected profile’s language. Temporary presets end at restart.
 
 ## 6. Version and project information
 
 Open **About** to find the installed version, developer credit and links to the project and support.
 
 ![About tab with the version, developer credit and project links](../images/screenshots/about.png)
+
+## 7. Diagnostic logs and issue reporting
+
+Open **Issues** in the settings pane to choose a log folder, a maximum file size, and the number of log files to keep, including the current file. By default, logs go in the application folder or to `%LOCALAPPDATA%\CamPressets\Logs` if the first location is unavailable.
+
+**Report on GitHub** opens an issue draft and the local folder with the diagnostic report files. Review the files and attach them in the issue editor.
 
 Next: [Daily use](DAILY-USE.md). For a backup, close the app and copy `%LOCALAPPDATA%\CamPressets`. Temporary positions are not part of the backup.

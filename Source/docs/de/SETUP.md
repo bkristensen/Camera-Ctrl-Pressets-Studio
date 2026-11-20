@@ -58,12 +58,18 @@ Ziehen Sie die vertikale Trennlinie zwischen Steuerung und Positionsliste. Versc
 
 Lassen Sie beim Profilwechsel über die Profilauswahl unten die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
 
-Wählen Sie die Sprache unter **Einstellungen** und starten Sie die Anwendung neu. Die automatische Auswahl folgt der Windows-Anzeigesprache, sofern die Anwendung sie unterstützt. Andernfalls verwendet sie Englisch. Die Sprachwahl gilt für die gesamte Anwendung.
+Wählen Sie die Sprache unter **Einstellungen → Anwendung → Profilsprache**. Starten Sie das Programm neu, um die Sprache anzuwenden. **Automatisch** verwendet die Windows-Anzeigesprache, sofern sie unterstützt wird, und sonst Englisch. Beim Profilwechsel startet das Programm mit der Sprache des gewählten Profils neu. Temporäre Positionen gehen beim Neustart verloren.
 
 ## 6. Version und Projektinformationen
 
 Unter **Info** findest du die installierte Version, den Entwickler sowie Links zum Projekt und zum Support.
 
 ![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/about.png)
+
+## 7. Diagnoseprotokolle und Fehlermeldungen
+
+Unter **Fehler melden** können Sie den Protokollordner, die maximale Dateigröße und die Anzahl der aufzubewahrenden Dateien einschließlich des aktiven Protokolls einstellen. Standardmäßig nutzt die Anwendung den Programmordner oder ersatzweise `%LOCALAPPDATA%\CamPressets\Logs`.
+
+**Auf GitHub melden** öffnet einen Entwurf und den lokalen Ordner mit den Berichtsdateien. Prüfen Sie die Dateien und hängen Sie sie im GitHub-Editor an.
 
 Weiter: [Tägliche Nutzung](DAILY-USE.md). Für eine Sicherung schließen Sie die Anwendung und kopieren `%LOCALAPPDATA%\CamPressets`. Temporäre Positionen sind nicht enthalten.

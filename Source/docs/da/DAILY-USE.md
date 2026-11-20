@@ -6,6 +6,8 @@ Start først dit optageprogram og din stream, hvis din opstilling kræver det. �
 
 ![Hovedvinduet med indstillingerne lukket](../images/screenshots/main.png)
 
+Brug **?** nederst for at se daglig brug, eller åbn Indstillinger først for at se opsætningsvejledningen. Knappen **Udskriv** føjer vejledningens titel, programversion, dato og sidenumre til udskriften.
+
 ## 1. Vælg din opstilling
 
 Åbn profilvælgeren i bunden, og vælg en profil. Lad fluebenet for vinduets udseende være slået fra for at hente profilens gemte vindue. Sæt det kun, hvis du vil beholde det nuværende udseende.

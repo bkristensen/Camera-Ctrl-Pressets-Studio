@@ -40,6 +40,7 @@ namespace CameraControlStudio {
         [DataMember] public int PanSteps, FastPanSteps, ZoomSteps, FastZoomSteps;
         [DataMember] public bool ReverseHorizontal, ReverseVertical, AlwaysOnTop;
         [DataMember] public string CameraId;
+        [DataMember(EmitDefaultValue = false)] public string Language;
         // Retain the serialized key so existing user choices survive the upgrade.
         [DataMember(Name = "WaitForStartup")] public bool RequireStreamingConfirmation;
         [DataMember] public bool KeepLayoutOnSwitch;

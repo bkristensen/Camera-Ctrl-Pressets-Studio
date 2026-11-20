@@ -58,12 +58,18 @@ Træk den lodrette skillelinje mellem styringen og positionslisten. Flyt vinduet
 
 Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 
-Vælg sprog under **Indstillinger**, og genstart. Automatisk følger Windows' visningssprog, når programmet understøtter det, og bruger ellers engelsk. Sprogvalget gælder hele programmet.
+Vælg sprog under **Indstillinger → Program → Profilsprog**, og genstart for at anvende det. **Automatisk** følger Windows' visningssprog, hvis programmet understøtter det, og bruger ellers engelsk. Ved profilskift genstarter programmet med den valgte profils sprog. Midlertidige positioner forsvinder ved genstart.
 
 ## 6. Version og projektoplysninger
 
 Åbn **Om** for at se den installerede version, udvikleren og links til projektet og support.
 
 ![Fanen Om med version, udvikler og projektlinks](../images/screenshots/about.png)
+
+## 7. Diagnoselogfiler og fejlrapporter
+
+Åbn fanen **Fejlrapport** for at vælge logmappe, maksimal filstørrelse og antal logfiler inklusive den aktive. Som standard skrives loggen i programmappen eller i `%LOCALAPPDATA%\CamPressets\Logs`, hvis programmappen ikke kan bruges.
+
+**Rapportér på GitHub** åbner en kladde og den lokale mappe med rapportfilerne. Gennemgå filerne, og vedhæft dem i GitHub-editoren.
 
 Fortsæt med [Daglig brug](DAILY-USE.md). Tag backup ved at lukke programmet og kopiere `%LOCALAPPDATA%\CamPressets`. Midlertidige positioner er ikke med i backup.

@@ -22,6 +22,7 @@ See the [step-by-step build and release guide](en/BUILD-AND-RELEASE.md) for comm
 - [ ] Test new/copy/rename profiles, restore layout and keep-current-layout behaviour. Verify temporary positions remain session-only.
 - [ ] Test image automatic/manual settings and defaults with the actual camera.
 - [ ] Open every Form with Shift+F7 in Visual Studio. Adjust a layout property, save and rebuild. Custom drawing stays in the control classes.
+- [ ] Open the guide viewer from the extracted ZIP in a 64-bit Windows process. Open it again and print a guide to PDF. Confirm the installer and ZIP include the matching WebView2 native loader under `runtimes` for each supported architecture.
 - [ ] Check the [user-guide index](USER-GUIDES.md) and confirm every language guide is present in both packages. If publishing screenshots, check the nine captures for cropping and overlap.
 
 ## Distribution

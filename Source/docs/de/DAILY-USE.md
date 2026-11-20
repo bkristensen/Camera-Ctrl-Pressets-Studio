@@ -6,6 +6,8 @@ Starten Sie zuerst Ihr Aufnahmeprogramm und Ihren Stream, falls Ihr Aufbau dies 
 
 ![Hauptfenster mit geschlossenem Einstellungsbereich](../images/screenshots/main.png)
 
+Mit **?** in der Fußleiste öffnen Sie die Anleitung für die tägliche Nutzung. Bei geöffneten Einstellungen erscheint die Einrichtungsanleitung. **Drucken** ergänzt Titel, Programmversion, Datum und Seitenzahlen.
+
 ## 1. Aufbau wählen
 
 Öffnen Sie die Profilauswahl unten und wählen Sie Ihr Profil. Lassen Sie die Layout-Option aus, um das gespeicherte Fenster zu laden. Aktivieren Sie sie nur, wenn Sie das aktuelle Layout behalten möchten.
