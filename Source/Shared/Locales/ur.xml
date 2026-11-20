@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">ترتیبات میں فعال پروفائل میں ترمیم کریں۔</text>
   <text key="Exposure">ایکسپوژر</text>
   <text key="Fast pan steps">تیز پین کے مراحل</text>
-  <text key="Fast zoom steps">تیز زوم کے مراحل</text>
   <text key="Focus">فوکس</text>
   <text key="Gain">گین</text>
   <text key="Gamma">گاما</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">کیا نشریات شروع ہو گئی ہیں؟ کیمرے کے کنٹرول فعال کرنے کے لیے «ہاں» منتخب کریں۔</text>
   <text key="Hue">رنگ کا شیڈ</text>
-  <text key="Image">تصویر</text>
+  <text key="Video">ویڈیو</text>
   <text key="Join the project discussion">پروجیکٹ کی گفتگو میں شامل ہوں</text>
   <text key="Keep current position and layout">موجودہ پوزیشن اور ترتیب برقرار رکھیں</text>
   <text key="Language">زبان</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">کوئی کیمرہ نہیں ملا۔</text>
   <text key="No image controls available through the driver.">ڈرائیور تصویر کے کنٹرول فراہم نہیں کرتا۔</text>
   <text key="Normal pan steps">معمول کے پین کے مراحل</text>
-  <text key="Normal zoom steps">معمول کے زوم کے مراحل</text>
+  <text key="Zoom steps">زوم کے مراحل</text>
   <text key="Outer buttons: fast">بیرونی بٹن: تیز</text>
   <text key="Position reached.">مطلوبہ پوزیشن تک پہنچ گیا۔</text>
   <text key="Preset name">پری سیٹ کا نام</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">خرابی یا کسی غائب فیچر کی اطلاع دیں</text>
   <text key="Reset image to driver defaults">تصویر کے لیے ڈرائیور کی طے شدہ ترتیبات بحال کریں</text>
   <text key="Restart the application to change language.">زبان بدلنے کے لیے ایپ دوبارہ شروع کریں۔</text>
-  <text key="Reverse left / right">بائیں اور دائیں الٹ دیں</text>
-  <text key="Reverse up / down">اوپر اور نیچے الٹ دیں</text>
+  <text key="Camera pan reverse left / right">کیمرا کی بائیں/دائیں حرکت الٹ دیں</text>
+  <text key="Camera pan reverse up / down">کیمرا کی اوپر/نیچے حرکت الٹ دیں</text>
   <text key="Saturation">رنگ کی گہرائی</text>
   <text key="Save">محفوظ کریں</text>
   <text key="Select a preset for this camera.">اس کیمرے کے لیے ایک پری سیٹ منتخب کریں۔</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">زوم آؤٹ</text>
   <text key="Preset icon: Zoom reset">زوم ری سیٹ کریں</text>
   <text key="Empty preset.">پری سیٹ خالی ہے۔</text>
-  <text key="Fast zoom in">تیز زوم اِن</text>
-  <text key="Fast zoom out">تیز زوم آؤٹ</text>
   <text key="Replace with current position?">موجودہ پوزیشن سے بدلیں؟</text>
   <text key="Delete permanent preset: {0}?">مستقل پری سیٹ «{0}» حذف کریں؟</text>
   <text key="Recall preset">پری سیٹ پوزیشن پر جائیں</text>
   <text key="Delete temporary preset">عارضی پری سیٹ حذف کریں</text>
-  <text key="Hold Shift for fast zoom.">تیز زوم کے لیے Shift دبائے رکھیں۔</text>
   <text key="Drag and release to set zoom.">زوم مقرر کرنے کے لیے سلائیڈر کھینچ کر چھوڑیں۔</text>
   <text key="User guides">صارف کی رہنمائیں</text>
   <text key="Daily use">روزمرہ استعمال</text>
@@ -180,4 +176,9 @@
   <text key="Colour">رنگ</text>
   <text key="Light and detail">روشنی اور تفصیل</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">کیمرا دستیاب نہیں۔ دوبارہ منسلک کرنے کے لیے کیمرا کنٹرول استعمال کریں۔</text>
+  <text key="Permanent presets">مستقل پیش سیٹ</text>
+  <text key="Move selected preset up">منتخب پیش سیٹ اوپر لے جائیں</text>
+  <text key="Move selected preset down">منتخب پیش سیٹ نیچے لے جائیں</text>
+  <text key="Copy active profile">فعال پروفائل کی نقل بنائیں</text>
+  <text key="Rename selected profile">منتخب پروفائل کا نام بدلیں</text>
 </translations>

@@ -3,6 +3,9 @@
 <ItemGroup><PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" /><Reference Include="System.Runtime.Serialization" /><Compile Include="../Shared/*.cs" Link="Shared/%(Filename)%(Extension)" /><EmbeddedResource Include="../Shared/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" /><Compile Update="Forms/*Form.cs"><SubType>Form</SubType></Compile><Compile Update="Forms/*.Designer.cs"><DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer','')).cs</DependentUpon></Compile></ItemGroup>
 <ItemGroup>
   <PackageReference Include="Markdig" Version="1.6.0" />
+  <Compile Update="Forms/GuideViewer.cs;Forms/LoggingDialog.cs;Forms/ErrorDialog.cs">
+    <SubType>Form</SubType>
+  </Compile>
   <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
   <Content Include="../docs/**/*.md;../docs/**/*.png" Link="docs/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   <Compile Remove="Assets\PressetIcons.Designer.cs" />

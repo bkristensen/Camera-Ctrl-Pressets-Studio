@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">Edite o perfil ativo nas configurações.</text>
   <text key="Exposure">Exposição</text>
   <text key="Fast pan steps">Passos de giro rápido</text>
-  <text key="Fast zoom steps">Passos de zoom rápido</text>
   <text key="Focus">Foco</text>
   <text key="Gain">Ganho</text>
   <text key="Gamma">Gama</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">A transmissão começou? Selecione Sim para ativar os controles da câmera.</text>
   <text key="Hue">Matiz</text>
-  <text key="Image">Imagem</text>
+  <text key="Video">Vídeo</text>
   <text key="Join the project discussion">Participar da discussão do projeto</text>
   <text key="Keep current position and layout">Manter a posição e o layout atuais</text>
   <text key="Language">Idioma</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">Nenhuma câmera encontrada.</text>
   <text key="No image controls available through the driver.">O driver não oferece controles de imagem.</text>
   <text key="Normal pan steps">Passos de giro normal</text>
-  <text key="Normal zoom steps">Passos de zoom normal</text>
+  <text key="Zoom steps">Passos de zoom</text>
   <text key="Outer buttons: fast">Botões externos: rápidos</text>
   <text key="Position reached.">Posição alcançada.</text>
   <text key="Preset name">Nome da predefinição</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">Relatar erros ou funcionalidades ausentes</text>
   <text key="Reset image to driver defaults">Restaurar padrões de imagem do driver</text>
   <text key="Restart the application to change language.">Reinicie o aplicativo para mudar o idioma.</text>
-  <text key="Reverse left / right">Inverter esquerda/direita</text>
-  <text key="Reverse up / down">Inverter cima/baixo</text>
+  <text key="Camera pan reverse left / right">Inverter movimento da câmera esquerda/direita</text>
+  <text key="Camera pan reverse up / down">Inverter movimento da câmera para cima/baixo</text>
   <text key="Saturation">Saturação</text>
   <text key="Save">Salvar</text>
   <text key="Select a preset for this camera.">Selecione uma predefinição para esta câmera.</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">Reduzir</text>
   <text key="Preset icon: Zoom reset">Redefinir zoom</text>
   <text key="Empty preset.">A predefinição está vazia.</text>
-  <text key="Fast zoom in">Ampliar rapidamente</text>
-  <text key="Fast zoom out">Reduzir rapidamente</text>
   <text key="Replace with current position?">Substituir pela posição atual?</text>
   <text key="Delete permanent preset: {0}?">Excluir a predefinição permanente “{0}”?</text>
   <text key="Recall preset">Ir para a posição predefinida</text>
   <text key="Delete temporary preset">Excluir predefinição temporária</text>
-  <text key="Hold Shift for fast zoom.">Mantenha Shift pressionada para usar o zoom rápido.</text>
   <text key="Drag and release to set zoom.">Arraste e solte para ajustar o zoom.</text>
   <text key="User guides">Guias do usuário</text>
   <text key="Daily use">Uso diário</text>
@@ -180,4 +176,9 @@
   <text key="Colour">Cor</text>
   <text key="Light and detail">Luz e detalhes</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">Câmera indisponível. Use um controle da câmera para reconectar.</text>
+  <text key="Permanent presets">Predefinições permanentes</text>
+  <text key="Move selected preset up">Mover a predefinição selecionada para cima</text>
+  <text key="Move selected preset down">Mover a predefinição selecionada para baixo</text>
+  <text key="Copy active profile">Copiar o perfil ativo</text>
+  <text key="Rename selected profile">Renomear o perfil selecionado</text>
 </translations>

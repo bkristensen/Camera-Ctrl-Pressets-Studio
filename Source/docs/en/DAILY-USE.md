@@ -28,7 +28,7 @@ Green confirms the reported coordinates. Check the actual picture in your captur
 
 ## 3. Make a small adjustment
 
-Use the inner arrows on the wheel for normal movement and the outer arrows for larger steps. Use the magnifier buttons for normal zoom. Hold Shift for larger zoom steps or hold a button to repeat. Drag the slider and release it to set the zoom directly.
+Use the inner arrows on the wheel for normal movement and the outer arrows for larger steps. Use the magnifier buttons to zoom. Hold a button to repeat. Drag the slider and release it to set the zoom directly.
 
 Manual pan, tilt or zoom cancels the preset movement and clears its active colour. Press Escape to stop a transition. With the wheel focused, arrow keys move the camera; Shift uses fast steps.
 

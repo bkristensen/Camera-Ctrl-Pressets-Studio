@@ -74,7 +74,7 @@ namespace CameraControlStudio {
         bool dragging;
 
         internal event Action<double> PositionRequested;
-        internal event Action<int, bool> StepRequested;
+        internal event Action<int> StepRequested;
 
         public ZoomSlider() {
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
@@ -150,7 +150,7 @@ namespace CameraControlStudio {
             switch (e.KeyCode) {
                 case Keys.Up:
                 case Keys.Down:
-                    StepRequested?.Invoke(e.KeyCode == Keys.Up ? 1 : -1, e.Shift);
+                    StepRequested?.Invoke(e.KeyCode == Keys.Up ? 1 : -1);
                     break;
                 case Keys.Home:
                 case Keys.End:

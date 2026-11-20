@@ -14,6 +14,7 @@ namespace CameraControlStudio {
             this.SuspendLayout();
             this.layout = new TableLayoutPanel();
             this.layout.Name = "layout";
+            this.layout.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.layout.Dock = DockStyle.Fill;
             this.layout.ColumnCount = 1;
             this.layout.RowCount = 4;
@@ -27,11 +28,15 @@ namespace CameraControlStudio {
             this.Controls.Add(this.layout);
             this.prompt = new Label();
             this.prompt.Name = "prompt";
+            this.prompt.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.prompt.Text = "Name";
             this.prompt.Dock = DockStyle.Fill;
             this.layout.Controls.Add(this.prompt, 0, 0);
             this.input = new TextBox();
             this.input.Name = "input";
+            this.input.BackColor = System.Drawing.Color.FromArgb(5, 40, 79);
+            this.input.ForeColor = System.Drawing.Color.White;
+            this.input.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.input.MaxLength = 60;
             this.input.Dock = DockStyle.Top;
             this.input.Height = 28;
@@ -39,12 +44,14 @@ namespace CameraControlStudio {
             this.layout.Controls.Add(this.input, 0, 1);
             this.hint = new Label();
             this.hint.Name = "hint";
+            this.hint.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.hint.Text = "";
             this.hint.Dock = DockStyle.Fill;
             this.hint.AutoEllipsis = true;
             this.layout.Controls.Add(this.hint, 0, 2);
             this.buttons = new TableLayoutPanel();
             this.buttons.Name = "buttons";
+            this.buttons.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.buttons.Dock = DockStyle.Fill;
             this.buttons.ColumnCount = 3;
             this.buttons.RowCount = 1;
@@ -71,7 +78,7 @@ namespace CameraControlStudio {
             this.MinimumSize = new Size(360, 220);
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.Text = "TextEntryForm";
+            this.Text = "Name";
             this.StartPosition = FormStartPosition.CenterParent;
             this.ShowInTaskbar = false;
             this.MaximizeBox = false;

@@ -26,12 +26,7 @@ namespace CameraControlStudio {
 
             exists = nameExists;
             originalIconId = preset?.IconId;
-            Prepare(this);
             FormText.Translate(this);
-            Text = UiText.T("Edit preset", "Rediger position");
-            prompt.Text = UiText.T("Preset symbol", "Symbol for position");
-            choices.DrawMode = DrawMode.OwnerDrawFixed;
-            choices.ItemHeight = 42;
             choices.Items.AddRange(PresetIcons.Ids.ToArray());
             input.Text = preset?.Name ?? "";
             ok.Enabled = PresetName.Length != 0;

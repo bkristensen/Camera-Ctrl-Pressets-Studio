@@ -9,7 +9,7 @@ using CameraControlStudio;
 class Program {
  static void Check(bool value,string message){if(!value)throw new Exception(message);}
  static void Main(){
-  var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"normal zoom uses driver units");Check(ManualMotion.Target(setting,50,1,32,false)==114,"fast zoom independent steps");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
+  var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,1,false)&&ManualMotion.CanMove(setting,200,-1,false),"maximum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,-1,true)&&ManualMotion.CanMove(setting,200,1,true),"reversed direction swaps blocked side");
@@ -55,18 +55,23 @@ class Program {
    var singleLog=diagnostics.FindLatest();File.WriteAllText(singleLog,new string('x',3*1024*1024));
    diagnostics.Write("WARNING","Replace only file");
    Check(Directory.GetFiles(loggingSettings.DirectoryPath,"*.log").Length==1&&File.ReadAllText(singleLog).Contains("Replace only file"),"retention counts the active log");
-   var store=new ProfileStore(Path.Combine(dir,"profiles.json"));var entry=store.Read().Profiles[ProfileStore.Standard];Check(!entry.Config.RequireStreamingConfirmation&&!entry.Config.KeepLayoutOnSwitch&&entry.Config.FastZoomSteps==32,"safe defaults");
-   entry.Config.Layout=from;entry.Config.FastZoomSteps=19;entry.Config.KeepLayoutOnSwitch=true;entry.Config.Cameras["cam"]=new List<Preset>{new Preset{Name="Scene",IconId="combo:lectern+cafe-table",Position=new Dictionary<string,int>{{"Zoom",50}}}};
+   var store=new ProfileStore(Path.Combine(dir,"profiles.json"));var entry=store.Read().Profiles[ProfileStore.Standard];Check(!entry.Config.RequireStreamingConfirmation&&!entry.Config.KeepLayoutOnSwitch,"safe defaults");
+   Check(entry.Config.PanSteps==1&&entry.Config.FastPanSteps==4&&entry.Config.ZoomSteps==1&&entry.Config.Seconds==1.0m,"new movement defaults");
+   entry.Config.Layout=from;entry.Config.ZoomSteps=19;entry.Config.Seconds=2.5m;entry.Config.KeepLayoutOnSwitch=true;entry.Config.Cameras["cam"]=new List<Preset>{new Preset{Name="Scene",IconId="combo:lectern+cafe-table",Position=new Dictionary<string,int>{{"Zoom",50}}}};
    entry.Config.ImageValues["cam"]=new Dictionary<string,ImageValue>{{"Brightness",new ImageValue{Value=45,Automatic=false}}};
-   store.Save(ProfileStore.Standard,entry.Config,entry.Revision);var saved=store.Read().Profiles[ProfileStore.Standard];Check(saved.Config.FastZoomSteps==19&&saved.Config.Layout.Width==1000&&saved.Config.KeepLayoutOnSwitch,"layout and zoom persisted");Check(saved.Config.Cameras["cam"][0].IconId=="combo:lectern+cafe-table","combined icon persisted");Check(saved.Config.ImageValues["cam"]["Brightness"].Value==45,"image values persisted");
+   store.Save(ProfileStore.Standard,entry.Config,entry.Revision);
+   var serialized=File.ReadAllText(store.FilePath).Replace("\"ZoomSteps\":19","\"FastZoomSteps\":999,\"ZoomSteps\":19");
+   File.WriteAllText(store.FilePath,serialized);
+   var saved=store.Read().Profiles[ProfileStore.Standard];Check(saved.Config.ZoomSteps==19&&saved.Config.Seconds==2.5m&&saved.Config.Layout.Width==1000&&saved.Config.KeepLayoutOnSwitch,"layout, zoom and transition survive legacy fast zoom setting");Check(saved.Config.Cameras["cam"][0].IconId=="combo:lectern+cafe-table","combined icon persisted");Check(saved.Config.ImageValues["cam"]["Brightness"].Value==45,"image values persisted");
    bool conflict=false;try{store.Save(ProfileStore.Standard,entry.Config,entry.Revision);}catch(IOException){conflict=true;}Check(conflict,"stale saves refused");
    saved.Config.Language="de";
    store.Save(ProfileStore.Standard,saved.Config,saved.Revision);
+   Check(!File.ReadAllText(store.FilePath).Contains("FastZoomSteps"),"retired zoom setting is discarded on save");
    var copied=store.Create("Person A",ProfileStore.Standard).Profiles["Person A"];store.Rename("Person A","Person B",copied.Revision);Check(store.Read().Profiles["Person B"].Config.Layout.Width==1000&&copied.Config.Language=="de","profile copy and rename retain language");
    UiText.Initialize(Array.Empty<string>(),"da");Check(UiText.Language=="da"&&UiText.Preference=="da","selected profile language used before constructing forms");
    UiText.Initialize(new[]{"--lang=fr"},"da");Check(UiText.Language=="fr"&&UiText.Preference=="da","command line override preserves the profile preference");
    var sessions=new SessionPresets();sessions.For("Person B","cam").Add(new Preset{Name="Temporary"});Check(sessions.For("Standard","cam").Count==0,"temporary profile isolation");sessions.RenameProfile("Person B","Person C");Check(sessions.For("Person C","cam").Count==1,"session presets survive rename");Check(!File.ReadAllText(store.FilePath).Contains("Temporary"),"temporary not serialized");
-   using(var stream=new MemoryStream(Encoding.UTF8.GetBytes("{\"WaitForStartup\":true,\"AutoStartPrograms\":true,\"StartupPrograms\":[{\"Name\":\"Legacy\",\"FileName\":\"unused.exe\"}]}"))){var migrated=(SavedData)new DataContractJsonSerializer(typeof(SavedData)).ReadObject(stream);Check(migrated.RequireStreamingConfirmation&&migrated.FastZoomSteps==32&&migrated.Layout!=null,"old profile loads and new defaults apply");Check(!typeof(SavedData).GetFields().Any(f=>f.Name=="StartupPrograms"),"program launch data removed");}
+   using(var stream=new MemoryStream(Encoding.UTF8.GetBytes("{\"WaitForStartup\":true,\"AutoStartPrograms\":true,\"StartupPrograms\":[{\"Name\":\"Legacy\",\"FileName\":\"unused.exe\"}]}"))){var migrated=(SavedData)new DataContractJsonSerializer(typeof(SavedData)).ReadObject(stream);Check(migrated.RequireStreamingConfirmation&&migrated.ZoomSteps==1&&migrated.Seconds==1.0m&&migrated.Layout!=null,"old profile loads and new defaults apply");Check(!typeof(SavedData).GetFields().Any(f=>f.Name=="StartupPrograms"),"program launch data removed");}
    Check(UiText.LanguageCodes.Length==UiText.LanguageNames.Length,"one menu name per language");
    Check(UiText.ResolveLanguage("auto","ja-JP")=="en","unsupported Windows language falls back to English");
    var languageFile=Path.Combine(dir,"language.txt");
@@ -85,6 +90,6 @@ class Program {
     }
    }
   }finally{Directory.Delete(dir,true);}
-  Console.WriteLine("PASS: motion, activity colours, camera consent, profile/layout migration, image persistence, independent zoom steps, session presets and concurrency.");
+  Console.WriteLine("PASS: motion, activity colours, camera consent, profile/layout migration, image persistence, movement defaults, session presets and concurrency.");
  }
 }

@@ -6,7 +6,7 @@ The user guides share these screenshots of the English interface. The displayed 
 | --- | --- |
 | [Main window](images/screenshots/main.png) | Direction wheel, camera selector, zoom, presets and status with settings closed |
 | [Settings](images/screenshots/settings.png) | Movement steps, transition time, direction reversal, streaming confirmation and language |
-| [Image](images/screenshots/image.png) | Focus, exposure and other driver-provided controls |
+| [Video](images/screenshots/image.png) | Focus, exposure and other driver-provided controls |
 | [Presets](images/screenshots/presets.png) | Permanent preset list and editing actions |
 | [Profiles](images/screenshots/profiles.png) | Profiles and actions to create, copy or rename them |
 | [About](images/screenshots/about.png) | Version, developer credit and links to the project |

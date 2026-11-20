@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -8,86 +7,22 @@ namespace CameraControlStudio
 {
     public partial class MainForm
     {
-        TableLayoutPanel imagePages;
-        TabControl imageCategories;
+        TabPage[] savedTabOrder;
+        TabPage[] videoTabs;
+        bool refreshingVideo;
 
-        void OrganizeSettings()
+        void WireSettings()
         {
-            var categories = new TabControl { Dock = DockStyle.Fill };
-            var motion = new TabPage(UiText.T("Movement", "Bevægelse")) { BackColor = BlueTheme.Background };
-            var app = new TabPage(UiText.T("Application", "Program")) { BackColor = BlueTheme.Background };
-            generalTab.Controls.Add(categories);
-            categories.TabPages.AddRange(new[] { motion, app });
-            var movementGroup = SettingsGroup(UiText.T("Pan, tilt and zoom", "Panorering, vipning og zoom"));
-            movementGroup.Dock = DockStyle.Fill;
-            motion.Controls.Add(movementGroup);
-            movementGroup.Controls.Add(generalFields);
-            foreach (RowStyle row in generalFields.RowStyles)
-                if (row.SizeType == SizeType.Absolute)
-                    row.Height = 30;
+            // Profile files use the original tab order as their stable numeric IDs.
+            savedTabOrder = new[] { generalTab, imageTab, presetsTab, profilesTab, aboutTab, issuesTab };
 
-            var preferences = new TableLayoutPanel
-            {
-                Dock = DockStyle.Fill, ColumnCount = 1, AutoScroll = true, Padding = new Padding(4)
-            };
-            var behaviour = SettingsGroup(UiText.T("Window and streaming", "Vindue og streaming"));
-            var languageGroup = SettingsGroup(UiText.T("Profile language", "Profilsprog"));
-            var behaviourRows = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 2 };
-            behaviourRows.RowStyles.Add(new RowStyle(SizeType.Absolute, 52));
-            behaviourRows.RowStyles.Add(new RowStyle(SizeType.Absolute, 29));
-            behaviourRows.Controls.Add(streamingCheck, 0, 0);
-            behaviourRows.Controls.Add(alwaysTop, 0, 1);
-            behaviour.Controls.Add(behaviourRows);
-            behaviour.Dock = DockStyle.Fill;
-            languageGroup.Dock = DockStyle.Fill;
-            languageGroup.Controls.Add(language);
-            language.Dock = DockStyle.Top;
-            generalFields.Controls.Remove(languageLabel);
-            languageLabel.Dispose();
-            preferences.RowStyles.Add(new RowStyle(SizeType.Absolute, 114));
-            preferences.RowStyles.Add(new RowStyle(SizeType.Absolute, 61));
-            preferences.Controls.Add(behaviour, 0, 0);
-            preferences.Controls.Add(languageGroup, 0, 1);
-            app.Controls.Add(preferences);
-            generalFields.RowCount = 7;
-            while (generalFields.RowStyles.Count > generalFields.RowCount)
-                generalFields.RowStyles.RemoveAt(generalFields.RowStyles.Count - 1);
-
-            var reporting = new TabPage(UiText.T("Issues", "Fejlrapport")) { BackColor = BlueTheme.Background };
-            var reportActions = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill, FlowDirection = FlowDirection.TopDown, WrapContents = false, AutoScroll = true
-            };
-            var logGroup = SettingsGroup(UiText.T("Diagnostic logs", "Diagnoselogfiler"));
-            logGroup.Controls.Add(SettingsActions(
-                SettingsLink(UiText.T("Log settings", "Logindstillinger"), () => LoggingDialog.Show(this)),
-                SettingsLink(UiText.T("Show log file", "Vis logfil"), () => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()))));
-            var reportGroup = SettingsGroup(UiText.T("Report a problem", "Rapportér et problem"));
-            reportGroup.Height = 124;
-            reportGroup.Controls.Add(SettingsActions(
-                new Label { AutoSize = true, MaximumSize = new Size(246, 0), Text = UiText.T(
-                    "Review the exported logs and attach them to your GitHub issue.",
-                    "Gennemgå de eksporterede logfiler, og vedhæft dem til din fejlrapport på GitHub.") },
-                SettingsLink(UiText.T("Report on GitHub", "Rapportér på GitHub"), () => ErrorDialog.Report(this, DiagnosticLog.Current.FindLatest()))));
-            reportActions.Controls.AddRange(new Control[] { logGroup, reportGroup });
-            reporting.Controls.Add(reportActions);
-            settingsTabs.TabPages.Add(reporting);
-
-            foreach (Control item in aboutPanel.Controls)
-                item.Margin = new Padding(5, 3, 5, 3);
-            aboutPanel.Controls.Add(SettingsLink(UiText.T("GitHub releases", "Udgivelser på GitHub"),
-                () => GuideViewer.OpenBrowser(GuideViewer.ReleasesUrl)));
-            aboutPanel.Controls.Add(SettingsLink(UiText.T("User guides on GitHub", "Brugervejledninger på GitHub"),
-                () => GuideViewer.OpenBrowser(GuideViewer.OnlineGuidesUrl)));
-            var guide = new BlueButton
-            {
-                Text = UiText.T("Open guide viewer", "Åbn vejledningsviser"), Primary = false, Size = new Size(225, 30)
-            };
-            guide.Click += (sender, args) => Run(OpenGuide);
-            aboutPanel.Controls.Add(guide);
-
+            logSettingsLink.LinkClicked += (sender, args) => Run(() => LoggingDialog.ShowSettings(this));
+            showLogLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()));
+            reportLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.Report(this, DiagnosticLog.Current.FindLatest()));
+            Link(releasesLink, GuideViewer.ReleasesUrl);
+            Link(guideIndexLink, GuideViewer.OnlineGuidesUrl);
+            openGuideButton.Click += (sender, args) => Run(OpenGuide);
             helpButton.Click += (sender, args) => Run(OpenGuide);
-            SetMainToolTip(helpButton, UiText.T("User guides", "Brugervejledninger"));
         }
 
         void OpenGuide()
@@ -96,106 +31,148 @@ namespace CameraControlStudio
                 viewer.ShowDialog(this);
         }
 
-        static GroupBox SettingsGroup(string title) => new GroupBox
+        void ConfigureSettingsToolTips()
         {
-            Text = title, Padding = new Padding(5, 4, 5, 4), ForeColor = Color.White,
-            Size = new Size(270, 95)
-        };
-
-        static FlowLayoutPanel SettingsActions(params Control[] controls)
-        {
-            var panel = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill, FlowDirection = FlowDirection.TopDown, WrapContents = false
-            };
-            panel.Controls.AddRange(controls);
-            return panel;
+            SetMainToolTip(addPermanent, UiText.T("Add permanent preset", "Tilføj fast position"));
+            SetMainToolTip(editPermanent, UiText.T("Edit name and symbol", "Ret navn og symbol"));
+            SetMainToolTip(updatePermanent, UiText.T("Replace with current position", "Erstat med aktuel position"));
+            SetMainToolTip(deletePermanent, UiText.T("Delete permanent preset", "Slet fast position"));
+            SetMainToolTip(movePermanentUp, UiText.T("Move selected preset up", "Flyt valgt position op"));
+            SetMainToolTip(movePermanentDown, UiText.T("Move selected preset down", "Flyt valgt position ned"));
+            SetMainToolTip(newProfile, UiText.T("New profile", "Ny profil"));
+            SetMainToolTip(copyProfile, UiText.T("Copy active profile", "Kopiér aktiv profil"));
+            SetMainToolTip(renameProfile, UiText.T("Rename selected profile", "Omdøb valgt profil"));
+            foreach (var button in new ButtonBase[] { reverseX, reverseY, streamingCheck, alwaysTop })
+                SetMainToolTip(button, button.Text);
+            foreach (var action in new Control[] { logSettingsLink, showLogLink, reportLink, openGuideButton,
+                loadVideoControls, resetVideoControls })
+                SetMainToolTip(action, action.Text);
+            SetMainToolTip(helpButton, UiText.T("User guides", "Brugervejledninger"));
         }
 
-        LinkLabel SettingsLink(string title, Action action)
+        void WireVideoControls()
         {
-            var link = new LinkLabel
+            videoTabs = imageCategories.TabPages.Cast<TabPage>().ToArray();
+            foreach (var editor in videoTabs.SelectMany(VideoEditors))
             {
-                Text = title, AutoSize = true, MaximumSize = new Size(250, 0), LinkColor = Color.LightSkyBlue,
-                VisitedLinkColor = Color.LightSkyBlue, Margin = new Padding(5, 3, 5, 3)
-            };
-            link.LinkClicked += (sender, args) => Run(action);
-            return link;
-        }
-
-        static int ImageCategory(string name)
-        {
-            switch (name)
-            {
-                case "Focus":
-                case "Exposure":
-                case "Gain":
-                    return 0;
-                case "Hue":
-                case "Saturation":
-                case "White balance":
-                case "Gamma":
-                    return 1;
-                default:
-                    return 2;
-            }
-        }
-
-        Dictionary<int, Panel> CreateImagePages(Setting[] settings)
-        {
-            string selectedPage = imageCategories?.SelectedTab?.Name;
-            ResetImagePages();
-            while (imageFields.Controls.Count != 0)
-                imageFields.Controls[0].Dispose();
-            var result = new Dictionary<int, Panel>();
-            if (settings.Length == 0)
-            {
-                imageFields.Controls.Add(new Label
+                SetMainToolTip(editor.Automatic, string.Format(UiText.T("Automatic {0}", "Automatisk {0}"), editor.Group.Text));
+                editor.Slider.Scroll += (sender, args) => Run(() =>
                 {
-                    Text = UiText.T("No image controls available through the driver.", "Driveren tilbyder ingen billedindstillinger."),
-                    AutoSize = true, MaximumSize = new Size(260, 0)
+                    if (TryGetVideoSetting(editor.Group, out var setting))
+                    {
+                        var slider = editor.Slider;
+                        double fraction = (slider.Value - (double)slider.Minimum) / (slider.Maximum - (double)slider.Minimum);
+                        camera.Set(setting.Name, setting.Min + fraction * (setting.Max - (double)setting.Min));
+                        SaveImageValue(setting.Name);
+                    }
                 });
-                return result;
-            }
-            imageFields.Hide();
-            imagePages = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 2 };
-            imagePages.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-            imagePages.RowStyles.Add(new RowStyle(SizeType.Absolute, 32));
-            imageCategories = new TabControl { Dock = DockStyle.Fill };
-            var titles = new[] { UiText.T("Focus and exposure", "Fokus og eksponering"), UiText.T("Colour", "Farve"), UiText.T("Light and detail", "Lys og detaljer") };
-            foreach (var category in settings.Select(setting => ImageCategory(setting.Name)).Distinct().OrderBy(index => index))
-            {
-                var tab = new TabPage(titles[category]) { Name = category.ToString(), BackColor = BlueTheme.Background };
-                var panel = new Panel { Dock = DockStyle.Fill, AutoScroll = true };
-                result.Add(category, panel);
-                tab.Controls.Add(panel);
-                imageCategories.TabPages.Add(tab);
-            }
-            if (selectedPage != null && imageCategories.TabPages.ContainsKey(selectedPage))
-                imageCategories.SelectTab(selectedPage);
-            var reset = new BlueButton { Text = UiText.T("Reset image to driver defaults", "Gendan driverens billedstandarder"), Dock = DockStyle.Fill };
-            reset.Click += (sender, args) => Run(() =>
-            {
-                NeedCamera();
-                foreach (var setting in settings)
+                editor.Automatic.CheckedChanged += (sender, args) =>
                 {
-                    camera.Set(setting.Name, setting.Default, (setting.Caps & 2) == 0);
-                    SaveImageValue(setting.Name);
-                }
-                BuildImageControls();
-            });
-            imagePages.Controls.Add(imageCategories, 0, 0);
-            imagePages.Controls.Add(reset, 0, 1);
-            imageTab.Controls.Add(imagePages);
-            return result;
+                    if (refreshingVideo)
+                        return;
+                    Run(() =>
+                    {
+                        if (!TryGetVideoSetting(editor.Group, out var setting))
+                            return;
+                        camera.Set(setting.Name, camera.Get(setting.Name), editor.Automatic.Checked);
+                        SaveImageValue(setting.Name);
+                        UpdateVideoState(editor.Slider, editor.Automatic, setting);
+                    });
+                };
+            }
+            loadVideoControls.Click += (sender, args) => Run(NeedCamera);
+            resetVideoControls.Click += (sender, args) => Run(ResetVideoControls);
+            ShowVideoControls(false);
         }
 
-        void ResetImagePages()
+        static IEnumerable<(GroupBox Group, TrackBar Slider, CheckBox Automatic)> VideoEditors(Control container)
         {
-            imagePages?.Dispose();
-            imagePages = null;
-            imageCategories = null;
-            imageFields.Show();
+            foreach (Control child in container.Controls)
+            {
+                if (child is GroupBox group && group.Tag is string)
+                    yield return (group, group.Controls.OfType<TrackBar>().Single(), group.Controls.OfType<CheckBox>().Single());
+                else
+                    foreach (var nested in VideoEditors(child))
+                        yield return nested;
+            }
+        }
+
+        bool TryGetVideoSetting(GroupBox editor, out Setting setting)
+        {
+            setting = null;
+            return camera != null && editor.Tag is string name
+                && camera.Settings.TryGetValue(name, out setting) && (setting.Caps & 3) != 0;
+        }
+
+        void BuildImageControls()
+        {
+            var selected = imageCategories.SelectedTab;
+            var supportedTabs = new List<TabPage>();
+            refreshingVideo = true;
+            try
+            {
+                foreach (var tab in videoTabs)
+                {
+                    bool available = false;
+                    foreach (var editor in VideoEditors(tab))
+                    {
+                        bool supported = TryGetVideoSetting(editor.Group, out var setting);
+                        editor.Group.Visible = supported;
+                        if (!supported)
+                            continue;
+                        available = true;
+                        int value = camera.Get(setting.Name, out int flags);
+                        double fraction = (value - (double)setting.Min) / (setting.Max - (double)setting.Min);
+                        var slider = editor.Slider;
+                        slider.Value = slider.Minimum + (int)(Math.Max(0, Math.Min(1, fraction)) * (slider.Maximum - slider.Minimum));
+                        editor.Automatic.Visible = (setting.Caps & 1) != 0;
+                        editor.Automatic.Checked = (flags & 1) != 0;
+                        UpdateVideoState(editor.Slider, editor.Automatic, setting);
+                    }
+                    if (available)
+                        supportedTabs.Add(tab);
+                }
+                if (!imageCategories.TabPages.Cast<TabPage>().SequenceEqual(supportedTabs))
+                {
+                    imageCategories.TabPages.Clear();
+                    imageCategories.TabPages.AddRange(supportedTabs.ToArray());
+                    if (supportedTabs.Contains(selected))
+                        imageCategories.SelectedTab = selected;
+                }
+                ShowVideoControls(supportedTabs.Count != 0);
+            }
+            finally
+            {
+                refreshingVideo = false;
+            }
+        }
+
+        static void UpdateVideoState(TrackBar slider, CheckBox automatic, Setting setting)
+        {
+            bool allowsManual = (setting.Caps & 2) != 0;
+            slider.Enabled = allowsManual && !automatic.Checked;
+            automatic.Enabled = allowsManual || !automatic.Checked;
+        }
+
+        void ShowVideoControls(bool available)
+        {
+            imagePages.Visible = available;
+            videoStatus.Visible = !available;
+            loadVideoControls.Visible = camera == null;
+            noVideoControls.Visible = camera != null && !available;
+        }
+
+        void ResetVideoControls()
+        {
+            NeedCamera();
+            foreach (var editor in videoTabs.SelectMany(VideoEditors))
+            {
+                if (!TryGetVideoSetting(editor.Group, out var setting))
+                    continue;
+                camera.Set(setting.Name, setting.Default, (setting.Caps & 2) == 0);
+                SaveImageValue(setting.Name);
+            }
+            BuildImageControls();
         }
     }
 }

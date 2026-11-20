@@ -28,7 +28,7 @@ Grün bestätigt die gemeldeten Koordinaten. Prüfen Sie das Bild in Ihrem Aufna
 
 ## 3. Bildausschnitt anpassen
 
-Die inneren Pfeile am Steuerrad bewegen die Kamera in normalen Schritten, die äußeren in größeren. Die Lupentasten steuern den normalen Zoom. Halten Sie die Umschalttaste für größere Zoomschritte oder eine Lupentaste für wiederholtes Zoomen gedrückt. Ziehen Sie den Schieberegler und lassen Sie ihn los, um den Zoom direkt einzustellen.
+Die inneren Pfeile am Steuerrad bewegen die Kamera in normalen Schritten, die äußeren in größeren. Verwenden Sie die Lupentasten zum Zoomen. Halten Sie eine Lupentaste gedrückt, um mehrere Schritte auszuführen. Ziehen Sie den Schieberegler und lassen Sie ihn los, um den Zoom direkt einzustellen.
 
 Manuelles Schwenken, Neigen oder Zoomen bricht den Positionswechsel ab und entfernt die aktive Farbe. Escape stoppt einen Übergang. Hat das Steuerrad den Fokus, können Sie die Pfeiltasten verwenden. Shift wählt schnelle Schritte.
 

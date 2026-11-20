@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">सेटिंग्स में सक्रिय प्रोफ़ाइल बदलें।</text>
   <text key="Exposure">एक्सपोज़र</text>
   <text key="Fast pan steps">तेज़ पैन के चरण</text>
-  <text key="Fast zoom steps">तेज़ ज़ूम के चरण</text>
   <text key="Focus">फ़ोकस</text>
   <text key="Gain">गेन</text>
   <text key="Gamma">गामा</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">क्या स्ट्रीमिंग शुरू हो गई है? कैमरा नियंत्रण चालू करने के लिए हाँ चुनें।</text>
   <text key="Hue">रंगत</text>
-  <text key="Image">छवि</text>
+  <text key="Video">वीडियो</text>
   <text key="Join the project discussion">परियोजना की चर्चा में शामिल हों</text>
   <text key="Keep current position and layout">मौजूदा स्थिति और लेआउट बनाए रखें</text>
   <text key="Language">भाषा</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">कोई कैमरा नहीं मिला।</text>
   <text key="No image controls available through the driver.">ड्राइवर में कोई छवि नियंत्रण उपलब्ध नहीं है।</text>
   <text key="Normal pan steps">सामान्य पैन के चरण</text>
-  <text key="Normal zoom steps">सामान्य ज़ूम के चरण</text>
+  <text key="Zoom steps">ज़ूम के चरण</text>
   <text key="Outer buttons: fast">बाहरी बटन: तेज़</text>
   <text key="Position reached.">स्थिति पर पहुँच गया।</text>
   <text key="Preset name">प्रीसेट का नाम</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">बग या अनुपलब्ध सुविधाओं की सूचना दें</text>
   <text key="Reset image to driver defaults">छवि के डिफ़ॉल्ट ड्राइवर मान बहाल करें</text>
   <text key="Restart the application to change language.">भाषा बदलने के लिए ऐप फिर से शुरू करें।</text>
-  <text key="Reverse left / right">बाएँ/दाएँ उलटें</text>
-  <text key="Reverse up / down">ऊपर/नीचे उलटें</text>
+  <text key="Camera pan reverse left / right">कैमरे की बाएँ/दाएँ गति उलटें</text>
+  <text key="Camera pan reverse up / down">कैमरे की ऊपर/नीचे गति उलटें</text>
   <text key="Saturation">संतृप्ति</text>
   <text key="Save">सहेजें</text>
   <text key="Select a preset for this camera.">इस कैमरे के लिए कोई प्रीसेट चुनें।</text>
@@ -132,13 +131,10 @@
   <text key="Preset icon: Zoom out">ज़ूम आउट</text>
   <text key="Preset icon: Zoom reset">ज़ूम रीसेट करें</text>
   <text key="Empty preset.">प्रीसेट खाली है।</text>
-  <text key="Fast zoom in">तेज़ ज़ूम इन</text>
-  <text key="Fast zoom out">तेज़ ज़ूम आउट</text>
   <text key="Replace with current position?">मौजूदा स्थिति से बदलें?</text>
   <text key="Delete permanent preset: {0}?">स्थायी प्रीसेट “{0}” हटाएँ?</text>
   <text key="Recall preset">प्रीसेट पर जाएँ</text>
   <text key="Delete temporary preset">अस्थायी प्रीसेट हटाएँ</text>
-  <text key="Hold Shift for fast zoom.">तेज़ ज़ूम के लिए Shift दबाए रखें।</text>
   <text key="Drag and release to set zoom.">ज़ूम सेट करने के लिए स्लाइडर खींचकर छोड़ें।</text>
   <text key="User guides">उपयोगकर्ता मार्गदर्शिकाएँ</text>
   <text key="Daily use">दैनिक उपयोग</text>
@@ -180,4 +176,9 @@
   <text key="Colour">रंग</text>
   <text key="Light and detail">रोशनी और विवरण</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">कैमरा उपलब्ध नहीं है। फिर से कनेक्ट करने के लिए कैमरा नियंत्रण इस्तेमाल करें।</text>
+  <text key="Permanent presets">स्थायी प्रीसेट</text>
+  <text key="Move selected preset up">चुने हुए प्रीसेट को ऊपर ले जाएँ</text>
+  <text key="Move selected preset down">चुने हुए प्रीसेट को नीचे ले जाएँ</text>
+  <text key="Copy active profile">सक्रिय प्रोफ़ाइल की प्रतिलिपि बनाएँ</text>
+  <text key="Rename selected profile">चुनी हुई प्रोफ़ाइल का नाम बदलें</text>
 </translations>

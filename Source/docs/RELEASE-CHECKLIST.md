@@ -13,7 +13,7 @@ See the [step-by-step build and release guide](en/BUILD-AND-RELEASE.md) for comm
 - [ ] Launch at 900 × 500 and verify the 670 × 450 minimum. Resize, maximize and restore at 100%, 125%, 150% and 200% display scaling. Check the footer, inputs, combined icons and zoom glyphs.
 - [ ] Open settings on the right. Drag the divider. Close and reopen. Test a saved layout after disconnecting a monitor.
 - [ ] Recall a position: yellow during movement, green only after matching readback. Pan/tilt/zoom clears the active colour. Disconnect during a transition: no false green. Icons never disappear after confirmation.
-- [ ] Test each combined icon, including every reversed order. Test both zoom speeds and both direction reversals.
+- [ ] Test each combined icon, including every reversed order. Test zoom buttons, the zoom slider and both direction reversals.
 - [ ] Enable camera confirmation. Restart. Verify no camera enumeration or connection before Yes. Test No, then retry from a pan/zoom button. Test profile change and source selection.
 
 ## Data and editing

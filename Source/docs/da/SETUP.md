@@ -6,7 +6,7 @@ Tryk på tandhjulet i bunden. Indstillinger åbner til højre. Positionslisten b
 
 ## 1. Vælg profil og kamera
 
-Brug profilvælgeren i bunden til at vælge profil. Opret en profil under **Indstillinger → Profiler**. Vælg **Ny** for standardindstillinger eller **Kopiér** for at kopiere den aktive profil. Brug et navn for personen eller opstillingen. Den nye profil bliver aktiv.
+Brug profilvælgeren i bunden til at vælge profil. Opret en profil under **Indstillinger → Profiler**. Vælg **Ny** for standardindstillinger eller **Kopiér** for at kopiere den aktive profil. Brug et navn for personen eller opstillingen. Den nye profil bliver aktiv. Markér en profil under **Profiler**, og klik på **✎** for at omdøbe den. Standardprofilen har et fast navn.
 
 Tryk på kamerasymbolet midt i kamerahjulet for at vælge kamera. Programmet husker valget. Hvis kameraet mangler, skal du vælge en anden kilde. Positioner hører til et bestemt kamera i en profil.
 
@@ -28,25 +28,24 @@ Ret værdierne på fanen **Indstillinger**. Start med små trin. Se resultatet i
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
-| Normale panoreringstrin | Den inderste ring med pile | 5 |
-| Hurtige panoreringstrin | Den yderste ring med pile | 32 |
-| Normale zoomtrin | − og + | 5 |
-| Hurtige zoomtrin | Skift + en zoomknap | 32 |
-| Skiftetid i sekunder | Ønsket tid til en gemt position | 2 |
+| Normale panoreringstrin | Den inderste ring med pile | 1 |
+| Hurtige panoreringstrin | Den yderste ring med pile | 4 |
+| Zoomtrin | − og + | 1 |
+| Skiftetid i sekunder | Ønsket tid til en gemt position | 1,0 |
 
 Et trin er ét trin, som kameradriveren understøtter. Det er ikke en fast afstand eller procent. Kameraets driver sætter grænsen for bevægelse og bløde skift.
 
-Hænger kameraet på hovedet, så prøv **Omvend op / ned**. Test pil op. Slå kun **Omvend venstre / højre** til, hvis venstre bevæger sig forkert. Disse valg vender styringen. De drejer ikke videobilledet.
+Hænger kameraet på hovedet, så prøv **Vend kamerapanorering op / ned**. Test pil op. Slå kun **Vend kamerapanorering venstre / højre** til, hvis venstre bevæger sig forkert. Disse valg vender styringen. De drejer ikke videobilledet.
 
 ## 4. Tilpas billedet og gem faste positioner
 
 ![Fanen Billede med fokus, eksponering og andre kameraværdier](../images/screenshots/image.png)
 
-Vælg **Billede** i indstillingspanelet. Indlæs billedindstillinger, hvis det er nødvendigt. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
+Vælg **Video** i indstillingspanelet. Indlæs billedindstillinger, hvis det er nødvendigt. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
 
-Indstil først kameraet. Vælg **Positioner** i indstillingspanelet, og tryk **Tilføj**. Vælg ikon øverst. Kontrollér navnet, og gem. Er navnefeltet tomt, og er navnet ledigt, foreslår ikonet et navn. Kombinerede symboler viser motiverne fra venstre mod højre.
+Indstil først kameraet. Vælg **Positioner** i indstillingspanelet, og klik på **+** for at tilføje en fast position. Vælg ikon øverst. Kontrollér navnet, og gem. Er navnefeltet tomt, og er navnet ledigt, foreslår ikonet et navn. Kombinerede symboler viser motiverne fra venstre mod højre.
 
-Vælg en position i listen under indstillinger for at ændre den. Her kan du ændre navn og ikon, erstatte koordinaterne med kameraets aktuelle position eller slette positionen efter bekræftelse. Faste positioner står altid øverst i hovedlisten med fed skrift.
+Under **Faste positioner** kan du holde musen over symbolerne for at se deres funktion. Vælg en position, og brug **✎** til navn og symbol, **↻** til at erstatte med kameraets aktuelle position og **−** til at slette. Flyt positionen med **↑** eller **↓**. Rækkefølgen gemmes og vises også i hovedlisten.
 
 En fast position, du markerer i hovedlisten, markeres også i indstillingerne. Når du gemmer en ny fast position, markeres den i indstillingerne.
 
@@ -54,7 +53,7 @@ En fast position, du markerer i hovedlisten, markeres også i indstillingerne. N
 
 ## 5. Tilpas udseende og sprog
 
-Træk den lodrette skillelinje mellem styringen og positionslisten. Flyt vinduet, og ret størrelsen. Programmet gemmer placering, størrelse, skillelinje og valgt indstillingsfane i den aktive profil. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne er altid lukket ved programstart.
+Træk den lodrette skillelinje mellem styringen og positionslisten. Flyt vinduet, og ret størrelsen. Programmet gemmer placering, størrelse, skillelinje og valgt indstillingsfane i den aktive profil. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne er altid lukket ved programstart. Vinduets gemte bredde svarer til bredden med indstillingerne lukket.
 
 Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 

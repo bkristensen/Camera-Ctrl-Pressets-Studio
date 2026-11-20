@@ -29,14 +29,13 @@
   <text key="Edit the active profile in Settings.">Ret den aktive profil i Indstillinger.</text>
   <text key="Exposure">Eksponering</text>
   <text key="Fast pan steps">Hurtige panoreringstrin</text>
-  <text key="Fast zoom steps">Hurtige zoomtrin</text>
   <text key="Focus">Fokus</text>
   <text key="Gain">Forstærkning</text>
   <text key="Gamma">Gamma</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">Er streaming startet? Vælg Ja for at aktivere kamerastyringen.</text>
   <text key="Hue">Farvetone</text>
-  <text key="Image">Billede</text>
+  <text key="Video">Video</text>
   <text key="Join the project discussion">Deltag i projektets diskussion</text>
   <text key="Keep current position and layout">Behold nuværende placering og layout</text>
   <text key="Language">Sprog</text>
@@ -49,7 +48,7 @@
   <text key="No camera found.">Intet kamera fundet.</text>
   <text key="No image controls available through the driver.">Driveren tilbyder ingen billedindstillinger.</text>
   <text key="Normal pan steps">Normale panoreringstrin</text>
-  <text key="Normal zoom steps">Normale zoomtrin</text>
+  <text key="Zoom steps">Zoomtrin</text>
   <text key="Outer buttons: fast">Yderste knapper: hurtig</text>
   <text key="Position reached.">Positionen er nået.</text>
   <text key="Preset name">Navn på position</text>
@@ -62,8 +61,8 @@
   <text key="Report bugs or missing features">Rapportér fejl eller mangler</text>
   <text key="Reset image to driver defaults">Gendan driverens billedstandarder</text>
   <text key="Restart the application to change language.">Genstart programmet for at skifte sprog.</text>
-  <text key="Reverse left / right">Omvend venstre / højre</text>
-  <text key="Reverse up / down">Omvend op / ned</text>
+  <text key="Camera pan reverse left / right">Vend kamerapanorering venstre / højre</text>
+  <text key="Camera pan reverse up / down">Vend kamerapanorering op / ned</text>
   <text key="Saturation">Farveintensitet</text>
   <text key="Save">Gem</text>
   <text key="Select a preset for this camera.">Vælg en position til dette kamera.</text>
@@ -131,13 +130,10 @@
   <text key="Preset icon: Zoom out">Zoom ud</text>
   <text key="Preset icon: Zoom reset">Nulstil zoom</text>
   <text key="Empty preset.">Positionen er tom.</text>
-  <text key="Fast zoom in">Zoom hurtigt ind</text>
-  <text key="Fast zoom out">Zoom hurtigt ud</text>
   <text key="Replace with current position?">Erstat med aktuel position?</text>
   <text key="Delete permanent preset: {0}?">Slet den permanente position »{0}«?</text>
   <text key="Recall preset">Kør til position</text>
   <text key="Delete temporary preset">Slet midlertidig position</text>
-  <text key="Hold Shift for fast zoom.">Hold Skift nede for hurtig zoom.</text>
   <text key="Drag and release to set zoom.">Træk og slip for at indstille zoom.</text>
   <text key="User guides">Brugervejledninger</text>
   <text key="Daily use">Daglig brug</text>
@@ -179,4 +175,9 @@
   <text key="Colour">Farve</text>
   <text key="Light and detail">Lys og detaljer</text>
   <text key="Camera unavailable. Use a camera control to reconnect.">Kameraet er ikke tilgængeligt. Brug en kameraknap for at forbinde igen.</text>
+  <text key="Permanent presets">Faste positioner</text>
+  <text key="Move selected preset up">Flyt valgt position op</text>
+  <text key="Move selected preset down">Flyt valgt position ned</text>
+  <text key="Copy active profile">Kopiér aktiv profil</text>
+  <text key="Rename selected profile">Omdøb valgt profil</text>
 </translations>

@@ -1,14 +1,24 @@
 using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
 namespace CameraControlStudio
 {
-    internal static class ErrorDialog
+    public partial class ErrorDialog : AppForm
     {
         const string NewIssueUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues/new";
+        string logPath;
+
+        public ErrorDialog()
+        {
+            InitializeComponent();
+            if (InDesigner)
+                return;
+            FormText.Translate(this);
+            report.Click += (sender, args) => Report(this, logPath);
+            showLog.Click += (sender, args) => OpenLog(this, logPath);
+        }
 
         internal static void Show(IWin32Window owner, string logPath, bool closing = false)
         {
@@ -18,36 +28,14 @@ namespace CameraControlStudio
             string detail = logPath == null
                 ? UiText.T("No diagnostic log is available.", "Der er ingen diagnoselog tilgængelig.")
                 : UiText.T("Review the diagnostic log before attaching it to a public issue.", "Gennemgå diagnoseloggen, før du vedhæfter den til en offentlig fejlrapport.");
-            using (var dialog = new AppForm
+            using (var dialog = new ErrorDialog())
             {
-                Text = "Camera Control Studio",
-                AutoSize = true,
-                AutoSizeMode = AutoSizeMode.GrowAndShrink,
-                StartPosition = owner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent,
-                FormBorderStyle = FormBorderStyle.FixedDialog,
-                MinimizeBox = false,
-                MaximizeBox = false,
-                ShowInTaskbar = owner == null
-            })
-            {
-                var content = new FlowLayoutPanel
-                {
-                    AutoSize = true, AutoSizeMode = AutoSizeMode.GrowAndShrink, Dock = DockStyle.Fill,
-                    FlowDirection = FlowDirection.TopDown, WrapContents = false, Padding = new Padding(14)
-                };
-                var buttons = new FlowLayoutPanel { AutoSize = true, WrapContents = false };
-                var report = new Button { AutoSize = true, Text = UiText.T("Report on GitHub", "Rapportér på GitHub") };
-                var showLog = new Button { AutoSize = true, Text = UiText.T("Show log file", "Vis logfil"), Enabled = logPath != null };
-                var close = new Button { AutoSize = true, Text = UiText.T("Close", "Luk"), DialogResult = DialogResult.OK };
-                report.Click += (sender, args) => Report(dialog, logPath);
-                showLog.Click += (sender, args) => OpenLog(dialog, logPath);
-                buttons.Controls.AddRange(new Control[] { report, showLog, close });
-                content.Controls.Add(new Label { AutoSize = true, MaximumSize = new Size(440, 0), Text = message });
-                content.Controls.Add(new Label { AutoSize = true, MaximumSize = new Size(440, 0), Text = detail });
-                content.Controls.Add(buttons);
-                dialog.Controls.Add(content);
-                dialog.AcceptButton = close;
-                dialog.CancelButton = close;
+                dialog.logPath = logPath;
+                dialog.messageLabel.Text = message;
+                dialog.detailLabel.Text = detail;
+                dialog.showLog.Enabled = logPath != null;
+                dialog.StartPosition = owner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
+                dialog.ShowInTaskbar = owner == null;
                 dialog.ShowDialog(owner);
             }
         }

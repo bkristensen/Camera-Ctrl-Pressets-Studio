@@ -92,7 +92,7 @@ namespace CameraControlStudio {
                 return;
             bool highlighted = Enabled && (Primary || over);
             var top = !Enabled ? Color.FromArgb(31, 58, 86) : down ? Color.FromArgb(0, 65, 125)
-                : highlighted ? Color.FromArgb(10, 155, 255) : Color.FromArgb(39, 106, 175);
+                : highlighted ? Color.FromArgb(12, 112, 190) : Color.FromArgb(39, 106, 175);
             var border = !Enabled ? Color.FromArgb(52, 75, 101) : highlighted ? Color.FromArgb(80, 219, 255) : BlueTheme.Line;
             using (var p = BlueTheme.Round(r, 10))
             using (var brush = new LinearGradientBrush(r, top, Color.FromArgb(6, 46, 88), 90))
@@ -100,13 +100,14 @@ namespace CameraControlStudio {
                 g.FillPath(brush, p);
                 g.DrawPath(pen, p);
             }
+            var textColor = Enabled ? ForeColor : Color.FromArgb(176, 193, 211);
             var image = DisplayImage;
             if (image != null)
                 DrawButtonImage(g, image, Rectangle.Round(r));
             else if (Text == "+" || Text == "−" || Text == "++" || Text == "−−") {
                 int count = Text.Length;
                 float arm = Math.Min(7, Math.Min(r.Height / 4, (r.Width - 8) / (count * 3))), gap = arm * 2.8f, cx = r.X + r.Width / 2, cy = r.Y + r.Height / 2;
-                using (var glyph = new Pen(Enabled ? ForeColor : Color.Gray, 2.5f)) {
+                using (var glyph = new Pen(textColor, 2.5f)) {
                     glyph.StartCap = glyph.EndCap = LineCap.Round;
                     for (int n = 0; n < count; n++) {
                         float x = cx + (n - (count - 1) / 2f) * gap;
@@ -119,7 +120,7 @@ namespace CameraControlStudio {
                 var flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis | TextFormatFlags.NoPadding | TextFormatFlags.SingleLine;
                 if (RightToLeft == RightToLeft.Yes)
                     flags |= TextFormatFlags.RightToLeft;
-                TextRenderer.DrawText(g, Text, Font, Rectangle.Round(r), Enabled ? ForeColor : Color.Gray, flags);
+                TextRenderer.DrawText(g, Text, Font, Rectangle.Round(r), textColor, flags);
             }
             if (Focused)
                 ControlPaint.DrawFocusRectangle(g, new Rectangle(7, 7, Width - 15, Height - 15));
