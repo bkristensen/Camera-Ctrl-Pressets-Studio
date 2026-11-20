@@ -49,6 +49,7 @@ namespace CameraControlStudio
 
         T Locked<T>(Func<T> action)
         {
+            // All instances targeting this file must serialize the full read-modify-write operation.
             using (var mutex = new Mutex(false, mutexName))
             {
                 bool held = false;
@@ -182,18 +183,19 @@ namespace CameraControlStudio
         {
             return Locked(() =>
             {
-                var c = Load();
-                ProfileEntry old;
-                if (!c.Profiles.TryGetValue(name, out old) || old.Revision != expectedRevision)
-                    throw new IOException(UiText.T("This profile was changed elsewhere. Restart the application before saving again.", "Profilen er ændret et andet sted. Genstart programmet før du gemmer igen."));
+                var catalog = Load();
+                if (!catalog.Profiles.TryGetValue(name, out var previous) || previous.Revision != expectedRevision)
+                    throw new IOException(UiText.T(
+                        "This profile was changed elsewhere. Restart the application before saving again.",
+                        "Profilen er ændret et andet sted. Genstart programmet før du gemmer igen."));
                 Validate(data);
                 var updated = new ProfileEntry
                 {
-                    Revision = checked(old.Revision + 1),
+                    Revision = checked(previous.Revision + 1),
                     Config = Copy(data)
                 };
-                c.Profiles[name] = updated;
-                Write(c);
+                catalog.Profiles[name] = updated;
+                Write(catalog);
                 return updated;
             });
         }
@@ -237,7 +239,9 @@ namespace CameraControlStudio
                 if (oldName == Standard)
                     throw new InvalidOperationException(UiText.T("The Standard profile cannot be renamed.", "Standardprofilen kan ikke omdøbes."));
                 if (!c.Profiles.ContainsKey(oldName) || c.Profiles[oldName].Revision != revision)
-                    throw new IOException(UiText.T("This profile was changed elsewhere. Restart the application before saving again.", "Profilen er ændret et andet sted. Genstart programmet før du gemmer igen."));
+                    throw new IOException(UiText.T(
+                        "This profile was changed elsewhere. Restart the application before saving again.",
+                        "Profilen er ændret et andet sted. Genstart programmet før du gemmer igen."));
                 if (c.Profiles.Keys.Any(k => k != oldName && string.Equals(k, newName, StringComparison.OrdinalIgnoreCase)))
                     throw new InvalidOperationException(UiText.T("Name already exists.", "Navnet findes allerede."));
                 var entry = c.Profiles[oldName];
@@ -257,6 +261,7 @@ namespace CameraControlStudio
             {
                 using (var f = File.Create(temp))
                     new DataContractJsonSerializer(typeof(ProfileCatalog)).WriteObject(f, data);
+                // Serialize beside the live file so replacement can be atomic and retain a backup.
                 if (File.Exists(FilePath))
                     File.Replace(temp, FilePath, FilePath + ".bak");
                 else

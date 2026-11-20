@@ -5,9 +5,7 @@ namespace CameraControlStudio
     // Session-only permission. No process name can establish that streaming is ready.
     public sealed class CameraAccessGate
     {
-        public bool Approved {
-            get; private set;
-        }
+        public bool Approved { get; private set; }
 
         public void Reset()
         {

@@ -67,8 +67,12 @@ namespace CameraControlStudio
         public bool Video;
         public int Snap(double value)
         {
-            double v = Min + Math.Round((value - Min) / Math.Max(1, Step)) * Math.Max(1, Step);
-            return (int)Math.Max(Min, Math.Min(Min + Math.Floor(((double)Max - Min) / Math.Max(1, Step)) * Math.Max(1, Step), v));
+            int driverStep = Math.Max(1, Step);
+            double snapped = Min + Math.Round((value - Min) / driverStep) * driverStep;
+
+            // A driver's advertised maximum can fall between two valid step positions.
+            double reachableMaximum = Min + Math.Floor(((double)Max - Min) / driverStep) * driverStep;
+            return (int)Math.Max(Min, Math.Min(reachableMaximum, snapped));
         }
     }
 
@@ -81,9 +85,9 @@ namespace CameraControlStudio
 
         internal static bool Matches(int error)
         {
-            return error == unchecked((int)0x80070015) // ERROR_NOT_READY
- || error == unchecked((int)0x8007048F) // ERROR_DEVICE_NOT_CONNECTED
- || error == unchecked((int)0x80070006); // ERROR_INVALID_HANDLE
+            return error == unchecked((int)0x80070015)     // ERROR_NOT_READY
+                || error == unchecked((int)0x8007048F)     // ERROR_DEVICE_NOT_CONNECTED
+                || error == unchecked((int)0x80070006);    // ERROR_INVALID_HANDLE
         }
     }
 
@@ -122,6 +126,7 @@ namespace CameraControlStudio
                     }
                     catch (COMException)
                     {
+                        // A device can disappear during enumeration. Keep the remaining results.
                     }
                     finally
                     {
@@ -172,7 +177,7 @@ namespace CameraControlStudio
                 Add("Saturation", 3, true);
                 Add("White balance", 7, true);
             }
-            catch (Exception ex)when (CameraUnavailableException.Matches(ex.HResult))
+            catch (Exception ex) when (CameraUnavailableException.Matches(ex.HResult))
             {
                 Dispose();
                 throw new CameraUnavailableException("Connect", ex.HResult);

@@ -14,7 +14,7 @@ namespace CameraControlStudio
         const string FileName = "CameraControlStudio.log";
         const string LogStem = "CameraControlStudio";
         static readonly Encoding LogEncoding = new UTF8Encoding(false);
-        readonly object sync = new object ();
+        readonly object sync = new object();
         readonly string programDirectory, userDirectory;
         internal static string AppVersion { get; } = typeof(DiagnosticLog).Assembly
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown";
@@ -68,7 +68,7 @@ namespace CameraControlStudio
                     return Append(Settings.DirectoryPath ?? programDirectory, content, Settings)
                         ?? Append(userDirectory, content, Settings);
             }
-            catch (Exception ex)when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
+            catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
             {
                 return null;
             }
@@ -82,7 +82,7 @@ namespace CameraControlStudio
                 {
                     return FindLatestCore();
                 }
-                catch (Exception ex)when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
+                catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
                 {
                     return null;
                 }
@@ -123,6 +123,7 @@ namespace CameraControlStudio
                     else
                     {
                         File.Delete(ArchivePath(directory, settings.FileCount - 1));
+                        // Move old archives first so each file can take the next free suffix.
                         for (int index = settings.FileCount - 2; index > 0; index--)
                         {
                             var archive = ArchivePath(directory, index);
@@ -137,7 +138,7 @@ namespace CameraControlStudio
                 File.AppendAllText(path, content, LogEncoding);
                 return path;
             }
-            catch (Exception ex)when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
+            catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
             {
                 return null;
             }

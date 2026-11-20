@@ -9,12 +9,8 @@ namespace CameraControlStudio
 
     public sealed class PresetActivity
     {
-        public string Name {
-            get; private set;
-        }
-        public PresetPhase Phase {
-            get; private set;
-        }
+        public string Name { get; private set; }
+        public PresetPhase Phase { get; private set; }
 
         public void Begin(string name)
         {

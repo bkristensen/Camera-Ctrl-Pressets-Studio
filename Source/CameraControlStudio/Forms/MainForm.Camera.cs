@@ -145,7 +145,7 @@ namespace CameraControlStudio
                     failedMotionReads.Remove(axis);
                     return;
                 }
-                catch (COMException ex)when (!(ex is CameraUnavailableException))
+                catch (COMException ex) when (!(ex is CameraUnavailableException))
                 {
                     if (failedMotionReads.Add(axis))
                         DiagnosticLog.Current.Write("WARNING", "Read camera position: " + axis, ex);

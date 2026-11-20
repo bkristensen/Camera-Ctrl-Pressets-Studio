@@ -149,7 +149,7 @@ namespace CameraControlStudio
                 {
                     RefreshMotionControls();
                 }
-                catch (Exception ex)when (!(ex is CameraUnavailableException))
+                catch (Exception ex) when (!(ex is CameraUnavailableException))
                 {
                     Disconnect();
                     throw;

@@ -64,9 +64,7 @@ namespace CameraControlStudio
         protected virtual Image DisplayImage => Image;
 
         bool over, down;
-        public bool Primary {
-            get; set;
-        }
+        public bool Primary { get; set; }
 
         public BlueButton()
         {

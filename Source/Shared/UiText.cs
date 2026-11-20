@@ -54,9 +54,7 @@ namespace CameraControlStudio
             }
         }
 
-        public static bool CommandLineOverride {
-            get; private set;
-        }
+        public static bool CommandLineOverride { get; private set; }
 
         public static string PreferencePath
         {
