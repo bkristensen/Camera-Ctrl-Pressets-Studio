@@ -308,7 +308,6 @@ namespace CameraControlStudio {
             // wheel
             // 
             this.wheel.AccessibleName = "Camera direction wheel. Inner ring normal, outer ring fast.";
-            this.wheel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.wheel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wheel.Location = new System.Drawing.Point(0, 52);
             this.wheel.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);

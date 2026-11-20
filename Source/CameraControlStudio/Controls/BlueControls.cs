@@ -209,7 +209,6 @@ namespace CameraControlStudio
         {
             DoubleBuffered = true;
             SetStyle(ControlStyles.ResizeRedraw, true);
-            BackColor = BlueTheme.Background;
             AccessibleName = UiText.T("Camera direction wheel. Inner ring normal, outer ring fast.", "Kamerahjul. Inderste ring normal, yderste ring hurtig.");
             TabStop = true;
         }
