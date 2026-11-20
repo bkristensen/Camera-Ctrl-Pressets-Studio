@@ -1036,7 +1036,7 @@ namespace CameraControlStudio {
             this.footerLabels.RowCount = 2;
             this.footerLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.footerLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.footerLabels.Size = new System.Drawing.Size(568, 59);
+            this.footerLabels.Size = new System.Drawing.Size(520, 59);
             this.footerLabels.TabIndex = 0;
             // 
             // cameraStatus
@@ -1046,7 +1046,7 @@ namespace CameraControlStudio {
             this.cameraStatus.Location = new System.Drawing.Point(4, 0);
             this.cameraStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cameraStatus.Name = "cameraStatus";
-            this.cameraStatus.Size = new System.Drawing.Size(560, 25);
+            this.cameraStatus.Size = new System.Drawing.Size(512, 25);
             this.cameraStatus.TabIndex = 0;
             this.cameraStatus.Text = "Camera: not connected";
             this.cameraStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1058,7 +1058,7 @@ namespace CameraControlStudio {
             this.status.Location = new System.Drawing.Point(4, 25);
             this.status.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(560, 34);
+            this.status.Size = new System.Drawing.Size(512, 34);
             this.status.TabIndex = 1;
             this.status.Text = "Ready";
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1080,8 +1080,8 @@ namespace CameraControlStudio {
             this.profileButton.UseVisualStyleBackColor = false;
             // 
             // helpButton
-            //
-            this.helpButton.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            // 
+            this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.helpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1095,7 +1095,7 @@ namespace CameraControlStudio {
             this.helpButton.TabIndex = 2;
             this.helpButton.Text = "?";
             this.helpButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // settingsButton
             // 
             this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
