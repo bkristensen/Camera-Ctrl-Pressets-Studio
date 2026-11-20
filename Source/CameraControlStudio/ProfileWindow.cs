@@ -1,9 +1,13 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-namespace CameraControlStudio {
-    internal static class ProfileWindow {
-        public static void Apply(Form form, ProfileLayout layout, Size minimumSize) {
+
+namespace CameraControlStudio
+{
+    internal static class ProfileWindow
+    {
+        public static void Apply(Form form, ProfileLayout layout, Size minimumSize)
+        {
             form.WindowState = FormWindowState.Normal;
             var desired = layout.HasBounds
                 ? new Rectangle(layout.X, layout.Y, Math.Max(minimumSize.Width, layout.Width), Math.Max(minimumSize.Height, layout.Height))
@@ -18,10 +22,14 @@ namespace CameraControlStudio {
             if (layout.Maximized)
                 form.WindowState = FormWindowState.Maximized;
         }
-        public static int WidthWithoutSettings(int width, int widthAdded, int minimumWidth) {
+
+        public static int WidthWithoutSettings(int width, int widthAdded, int minimumWidth)
+        {
             return widthAdded > 0 ? Math.Max(minimumWidth, width - widthAdded) : width;
         }
-        public static void Capture(Form form, ProfileLayout layout, bool maximized, int settingsWidthAdded) {
+
+        public static void Capture(Form form, ProfileLayout layout, bool maximized, int settingsWidthAdded)
+        {
             var bounds = form.WindowState == FormWindowState.Normal ? form.Bounds : form.RestoreBounds;
             layout.X = bounds.X;
             layout.Y = bounds.Y;

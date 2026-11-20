@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+
 namespace CameraControlStudio
 {
     public partial class MainForm : AppForm
@@ -18,23 +19,40 @@ namespace CameraControlStudio
         readonly Stopwatch clock = new Stopwatch();
         Font permanentFont;
         readonly Dictionary<string, Bitmap> iconImages = new Dictionary<string, Bitmap>();
-        ProfileEntry entry; SavedData config; string profile = ProfileStore.Standard;
-        Camera camera; List<Device> devices = new List<Device>();
-        bool loaded, applying, dirty, wasMaximized; string heldAxis; int heldDirection; bool heldFast;
+        ProfileEntry entry;
+        SavedData config;
+        string profile = ProfileStore.Standard;
+        Camera camera;
+        List<Device> devices = new List<Device>();
+        bool loaded, applying, dirty, wasMaximized;
+        string heldAxis;
+        int heldDirection;
+        bool heldFast;
         bool refreshingPresets;
-        Dictionary<string, int> start, target, last; double duration;
-        static readonly string[] axes = { "Zoom", "Pan", "Tilt" };
+        Dictionary<string, int> start, target, last;
+        double duration;
+        static readonly string[] axes =
+        {
+            "Zoom",
+            "Pan",
+            "Tilt"
+        };
         readonly Size preferredMinimumSize;
         readonly int settingsPanelWidth, temporaryDeleteWidth;
         int settingsWidthAdded;
         int iconColumnWidth, recallColumnWidth;
         internal bool RestartRequested { get; private set; }
+
         sealed class RowItem
         {
-            public Preset Preset; public bool Temporary; public string DeviceId;
+            public Preset Preset;
+            public bool Temporary;
+            public string DeviceId;
         }
+
         RowItem SelectedPresetRow => presetGrid.SelectedRows.Count == 0
             ? null : presetGrid.SelectedRows[0].Tag as RowItem;
+
         string CameraId
         {
             get
@@ -42,6 +60,7 @@ namespace CameraControlStudio
                 return config.CameraId ?? "";
             }
         }
+
         List<Preset> Permanent
         {
             get
@@ -51,6 +70,7 @@ namespace CameraControlStudio
                 return list;
             }
         }
+
         List<Preset> Temporary
         {
             get
@@ -58,6 +78,7 @@ namespace CameraControlStudio
                 return temporary.For(profile, CameraId);
             }
         }
+
         public MainForm()
         {
             InitializeComponent();
@@ -78,11 +99,13 @@ namespace CameraControlStudio
             RefreshActionButtons();
             RefreshMotionControls();
         }
+
         internal MainForm(ProfileEntry initialEntry, string initialProfile) : this()
         {
             entry = initialEntry;
             profile = initialProfile;
         }
+
         void Run(Action action)
         {
             try
@@ -115,6 +138,7 @@ namespace CameraControlStudio
                 ErrorDialog.Show(this, log ?? DiagnosticLog.Current.FindLatest());
             }
         }
+
         void WireEvents()
         {
             Shown += (o, e) =>
@@ -126,7 +150,8 @@ namespace CameraControlStudio
             };
             settingsButton.Click += (o, e) => Run(() =>
             {
-                SetSettings(!settingsTabs.Visible, true); MarkDirty();
+                SetSettings(!settingsTabs.Visible, true);
+                MarkDirty();
             });
             profileButton.Click += (o, e) => Run(ChooseProfile);
             wheel.MovementRequested += (axis, direction, fast) => Run(() => StartHeld(axis, direction, fast));
@@ -144,8 +169,15 @@ namespace CameraControlStudio
             });
             motionLimits.Tick += (o, e) => Run(() =>
             {
-                try { RefreshMotionControls(); }
-                catch (Exception ex) when (!(ex is CameraUnavailableException)) { Disconnect(); throw; }
+                try
+                {
+                    RefreshMotionControls();
+                }
+                catch (Exception ex)when (!(ex is CameraUnavailableException))
+                {
+                    Disconnect();
+                    throw;
+                }
             });
             saveTimer.Tick += (o, e) =>
             {
@@ -192,8 +224,12 @@ namespace CameraControlStudio
                 if (e.RowIndex < 0)
                     return;
                 var row = (RowItem)presetGrid.Rows[e.RowIndex].Tag;
-                if (row == null) return;
-                var c = row.Preset.Name == activity.Name ? (activity.Phase == PresetPhase.Moving ? Color.Gold : activity.Phase == PresetPhase.Reached ? Color.MediumSeaGreen : BlueTheme.Panel) : BlueTheme.Panel; e.CellStyle.BackColor = c; e.CellStyle.SelectionBackColor = c == BlueTheme.Panel ? Color.FromArgb(15, 90, 160) : c; e.CellStyle.ForeColor = e.CellStyle.SelectionForeColor = c == BlueTheme.Panel ? Color.White : Color.Black;
+                if (row == null)
+                    return;
+                var c = row.Preset.Name == activity.Name ? (activity.Phase == PresetPhase.Moving ? Color.Gold : activity.Phase == PresetPhase.Reached ? Color.MediumSeaGreen : BlueTheme.Panel) : BlueTheme.Panel;
+                e.CellStyle.BackColor = c;
+                e.CellStyle.SelectionBackColor = c == BlueTheme.Panel ? Color.FromArgb(15, 90, 160) : c;
+                e.CellStyle.ForeColor = e.CellStyle.SelectionForeColor = c == BlueTheme.Panel ? Color.White : Color.Black;
             };
             addPermanent.Click += (o, e) => Run(AddPermanent);
             editPermanent.Click += (o, e) => Run(EditPermanent);
@@ -205,14 +241,47 @@ namespace CameraControlStudio
             copyProfile.Click += (o, e) => Run(() => CreateProfile(true));
             renameProfile.Click += (o, e) => Run(RenameProfile);
             profilesList.SelectedIndexChanged += (o, e) => RefreshActionButtons();
-            profilesList.DoubleClick += (o, e) => Run(() => { if (profilesList.SelectedItem != null) ChooseProfile((string)profilesList.SelectedItem); });
-            foreach (var control in new[] { panSteps, fastPanSteps, zoomSteps, seconds })
+            profilesList.DoubleClick += (o, e) => Run(() =>
+            {
+                if (profilesList.SelectedItem != null)
+                    ChooseProfile((string)profilesList.SelectedItem);
+            });
+            foreach (var control in new[]
+            {
+                panSteps,
+                fastPanSteps,
+                zoomSteps,
+                seconds
+            }
+
+            )
                 control.ValueChanged += (o, e) => MarkDirty();
-            foreach (var control in new[] { reverseX, reverseY, alwaysTop })
-                control.CheckedChanged += (o, e) => { if (!applying) { TopMost = alwaysTop.Checked; MarkDirty(); } };
+            foreach (var control in new[]
+            {
+                reverseX,
+                reverseY,
+                alwaysTop
+            }
+
+            )
+                control.CheckedChanged += (o, e) =>
+                {
+                    if (!applying)
+                    {
+                        TopMost = alwaysTop.Checked;
+                        MarkDirty();
+                    }
+                };
             reverseX.CheckedChanged += (o, e) => Run(() => RefreshMotionAxis("Pan"));
             reverseY.CheckedChanged += (o, e) => Run(() => RefreshMotionAxis("Tilt"));
-            streamingCheck.CheckedChanged += (o, e) => { if (applying) return; permission.Reset(); Disconnect(); MarkDirty(); };
+            streamingCheck.CheckedChanged += (o, e) =>
+            {
+                if (applying)
+                    return;
+                permission.Reset();
+                Disconnect();
+                MarkDirty();
+            };
             language.DrawItem += DrawComboItem;
             language.Items.AddRange(UiText.LanguageNames);
             language.Items[0] = UiText.T("Automatic", "Automatisk");
@@ -228,8 +297,19 @@ namespace CameraControlStudio
                     ShowMessage(UiText.T("Restart the application to change language.", "Genstart programmet for at skifte sprog."));
                 });
             };
-            mainSplit.SplitterMoved += (o, e) => { if (!applying && loaded) { config.Layout.ControllerRatio = LayoutPolicy.Ratio(mainSplit.SplitterDistance / (double)Math.Max(1, mainSplit.ClientSize.Width)); MarkDirty(); } };
-            mainSplit.SizeChanged += (o, e) => { if (loaded && !applying) ApplySplitter(); };
+            mainSplit.SplitterMoved += (o, e) =>
+            {
+                if (!applying && loaded)
+                {
+                    config.Layout.ControllerRatio = LayoutPolicy.Ratio(mainSplit.SplitterDistance / (double)Math.Max(1, mainSplit.ClientSize.Width));
+                    MarkDirty();
+                }
+            };
+            mainSplit.SizeChanged += (o, e) =>
+            {
+                if (loaded && !applying)
+                    ApplySplitter();
+            };
             body.SizeChanged += (o, e) => SizeSettingsColumn(settingsTabs.Visible);
             Move += (o, e) => MarkDirty();
             Resize += (o, e) =>
@@ -247,8 +327,15 @@ namespace CameraControlStudio
                 MarkDirty();
             };
             KeyPreview = true;
-            KeyDown += (o, e) => { if (e.KeyCode == Keys.Escape) StopMotion(); };
-            Deactivate += (o, e) => { held.Stop(); };
+            KeyDown += (o, e) =>
+            {
+                if (e.KeyCode == Keys.Escape)
+                    StopMotion();
+            };
+            Deactivate += (o, e) =>
+            {
+                held.Stop();
+            };
             Link(repoLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio");
             Link(issuesLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues");
             Link(discussionLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions");
@@ -259,7 +346,10 @@ namespace CameraControlStudio
                 StopMotion();
                 if (!loaded || RestartRequested)
                     return;
-                try { SaveCurrent(); }
+                try
+                {
+                    SaveCurrent();
+                }
                 catch (Exception ex)
                 {
                     DiagnosticLog.Current.Write("ERROR", "Save profile on close", ex);
@@ -269,19 +359,23 @@ namespace CameraControlStudio
             FormClosed += (o, e) =>
             {
                 camera?.Dispose();
-                foreach (var d in devices) d.Dispose();
-                foreach (var image in iconImages.Values) image.Dispose();
+                foreach (var d in devices)
+                    d.Dispose();
+                foreach (var image in iconImages.Values)
+                    image.Dispose();
                 foreach (var tab in videoTabs)
                     if (tab.Parent == null)
                         tab.Dispose();
                 permanentFont?.Dispose();
             };
         }
+
         void Link(LinkLabel label, string url)
         {
             SetMainToolTip(label, label.Text);
             label.LinkClicked += (o, e) => Run(() => Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }));
         }
+
         void ConfigureMainToolTips()
         {
             SetMainToolTip(temporaryButton, UiText.T("Add temporary preset", "Tilføj midlertidig position"));
@@ -292,12 +386,14 @@ namespace CameraControlStudio
             SetMainToolTip(zoomSlider, UiText.T("Zoom", "Zoom"),
                 UiText.T("Drag and release to set zoom.", "Træk og slip for at indstille zoom."));
         }
+
         void SetMainToolTip(Control control, string label, string detail = null)
         {
             control.AccessibleName = label;
             control.AccessibleDescription = detail;
             mainToolTips.SetToolTip(control, detail == null ? label : label + "\n" + detail);
         }
+
         void WireZoom(Button button, int direction)
         {
             var title = direction > 0
@@ -310,7 +406,11 @@ namespace CameraControlStudio
                     Run(() => StartHeld("Zoom", direction, false));
             };
             button.MouseUp += (o, e) => held.Stop();
-            button.MouseCaptureChanged += (o, e) => { if (!button.Capture) held.Stop(); };
+            button.MouseCaptureChanged += (o, e) =>
+            {
+                if (!button.Capture)
+                    held.Stop();
+            };
             button.KeyDown += (o, e) =>
             {
                 if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Enter)
@@ -320,6 +420,7 @@ namespace CameraControlStudio
                 }
             };
         }
+
         void InitializeProfile()
         {
             if (entry == null)
@@ -328,6 +429,7 @@ namespace CameraControlStudio
                 profile = ProfileStore.ReadSelectedProfile(catalog);
                 entry = catalog.Profiles[profile];
             }
+
             config = entry.Config;
             loaded = true;
             ApplyProfile(settingsOpen: false);
@@ -335,6 +437,7 @@ namespace CameraControlStudio
             if (!config.RequireStreamingConfirmation)
                 NeedCamera();
         }
+
         void MarkDirty()
         {
             if (!loaded || applying)
@@ -343,6 +446,7 @@ namespace CameraControlStudio
             saveTimer.Stop();
             saveTimer.Start();
         }
+
         void ReadSettings()
         {
             config.PanSteps = (int)panSteps.Value;
@@ -358,6 +462,7 @@ namespace CameraControlStudio
             config.Layout.SettingsTab = Array.IndexOf(savedTabOrder, settingsTabs.SelectedTab);
             ProfileWindow.Capture(this, config.Layout, wasMaximized, settingsWidthAdded);
         }
+
         void SaveCurrent()
         {
             if (!loaded)
@@ -369,6 +474,7 @@ namespace CameraControlStudio
             dirty = false;
             RefreshPresets();
         }
+
         void ApplyProfile(bool settingsOpen)
         {
             applying = true;
@@ -396,8 +502,12 @@ namespace CameraControlStudio
                 profileButton.Text = profile + " ▾";
                 RefreshPresets();
             }
-            finally { applying = false; }
+            finally
+            {
+                applying = false;
+            }
         }
+
         void ApplySplitter()
         {
             if (config == null)
@@ -411,8 +521,12 @@ namespace CameraControlStudio
                     return;
                 mainSplit.SplitterDistance = Math.Max(mainSplit.Panel1MinSize, Math.Min(usable - mainSplit.Panel2MinSize, (int)(mainSplit.ClientSize.Width * config.Layout.ControllerRatio)));
             }
-            finally { applying = before; }
+            finally
+            {
+                applying = before;
+            }
         }
+
         void SetSettings(bool visible, bool resize)
         {
             bool was = settingsTabs.Visible;
@@ -436,16 +550,19 @@ namespace CameraControlStudio
                     else
                         RemoveSettingsWidth();
                 }
+
                 SizeSettingsColumn(visible);
             }
             finally
             {
                 body.ResumeLayout();
             }
+
             if (config != null)
                 config.Layout.ControllerRatio = ratio;
             ApplySplitter();
         }
+
         void RemoveSettingsWidth()
         {
             if (settingsWidthAdded == 0)
@@ -454,6 +571,7 @@ namespace CameraControlStudio
             settingsWidthAdded = 0;
             Width = closedWidth;
         }
+
         void SizeSettingsColumn(bool visible)
         {
             int mainMinimum = mainSplit.Panel1MinSize + mainSplit.Panel2MinSize + mainSplit.SplitterWidth;
@@ -461,6 +579,7 @@ namespace CameraControlStudio
             if (body.ColumnStyles[1].Width != width)
                 body.ColumnStyles[1].Width = width;
         }
+
         void RefreshProfiles(string selection = null)
         {
             profilesList.Items.Clear();
@@ -468,10 +587,12 @@ namespace CameraControlStudio
             profilesList.SelectedItem = selection ?? profile;
             RefreshActionButtons();
         }
+
         void ChooseProfile()
         {
             ChooseProfile(profile);
         }
+
         void ChooseProfile(string selected)
         {
             if (!loaded)
@@ -488,6 +609,7 @@ namespace CameraControlStudio
                 SwitchProfile(dialog.Selected, dialog.KeepLayout);
             }
         }
+
         void SwitchProfile(string next, bool keep)
         {
             if (keep)
@@ -496,10 +618,12 @@ namespace CameraControlStudio
                 destination.Config.Layout = LayoutPolicy.OnSwitch(config.Layout, destination.Config.Layout, true);
                 store.Save(next, destination.Config, destination.Revision);
             }
+
             ProfileStore.SelectProfile(next);
             RestartRequested = true;
             Close();
         }
+
         void CreateProfile(bool copy)
         {
             SaveCurrent();
@@ -511,6 +635,7 @@ namespace CameraControlStudio
                 SwitchProfile(dialog.Value, false);
             }
         }
+
         void RenameProfile()
         {
             var selected = profilesList.SelectedItem as string;
@@ -535,9 +660,11 @@ namespace CameraControlStudio
                     ProfileStore.SelectProfile(name);
                     profileButton.Text = name + " ▾";
                 }
+
                 RefreshProfiles(name);
             }
         }
+
         void AllowCamera()
         {
             if (!loaded)
@@ -545,6 +672,7 @@ namespace CameraControlStudio
             if (!permission.Allow(streamingCheck.Checked, () => ShowMessage(UiText.T("Has streaming started? Choose Yes to enable camera controls.", "Er streaming startet? Vælg Ja for at aktivere kamerastyringen."), UiText.T("Confirm streaming", "Bekræft streaming"), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes))
                 throw new OperationCanceledException();
         }
+
         void EnumerateDevices()
         {
             AllowCamera();
@@ -554,6 +682,7 @@ namespace CameraControlStudio
             devices.Clear();
             devices = Camera.Enumerate();
         }
+
         void NeedCamera()
         {
             AllowCamera();
@@ -568,6 +697,7 @@ namespace CameraControlStudio
                 throw new InvalidOperationException(UiText.T("No camera found.", "Intet kamera fundet."));
             Connect(d);
         }
+
         void Connect(Device device)
         {
             AllowCamera();
@@ -588,6 +718,7 @@ namespace CameraControlStudio
             status.Text = UiText.T("Ready", "Klar");
             motionLimits.Start();
         }
+
         void ChooseCamera()
         {
             StopMotion();
@@ -598,6 +729,7 @@ namespace CameraControlStudio
                     Connect(dialog.Selected);
             }
         }
+
         void Disconnect()
         {
             StopMotion();
@@ -605,16 +737,21 @@ namespace CameraControlStudio
             failedMotionReads.Clear();
             var disconnectedCamera = camera;
             camera = null;
-            try { disconnectedCamera?.Dispose(); }
+            try
+            {
+                disconnectedCamera?.Dispose();
+            }
             catch (Exception ex)
             {
                 DiagnosticLog.Current.Write("WARNING", "Release camera connection", ex);
             }
+
             RefreshMotionControls();
             RefreshActionButtons();
             ShowVideoControls(false);
             cameraStatus.Text = UiText.T("Camera: not connected", "Kamera: ikke tilsluttet");
         }
+
         void ConfigureGrid()
         {
             permanentFont = new Font(presetGrid.Font, FontStyle.Bold);
@@ -624,17 +761,18 @@ namespace CameraControlStudio
             presetGrid.SizeChanged += (sender, e) => SizePresetColumns();
             SizePresetColumns();
         }
+
         void SizePresetColumns()
         {
             bool compact = presetGrid.ClientSize.Width < 190;
             iconColumn.Width = compact ? Math.Min(34, iconColumnWidth) : iconColumnWidth;
             recallColumn.Width = compact ? Math.Min(30, recallColumnWidth) : recallColumnWidth;
         }
+
         void PaintRecallButton(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (e.RowIndex < 0 || e.ColumnIndex != recallColumn.Index)
                 return;
-
             e.Paint(e.ClipBounds, DataGridViewPaintParts.Background | DataGridViewPaintParts.Border | DataGridViewPaintParts.SelectionBackground);
             bool selected = (e.State & DataGridViewElementStates.Selected) != 0;
             var color = selected ? e.CellStyle.SelectionForeColor : e.CellStyle.ForeColor;
@@ -648,6 +786,7 @@ namespace CameraControlStudio
             e.Paint(e.ClipBounds, DataGridViewPaintParts.Focus);
             e.Handled = true;
         }
+
         Bitmap IconImage(string id)
         {
             id = PresetIcons.ResolveId(id);
@@ -658,8 +797,10 @@ namespace CameraControlStudio
                     PresetIcons.Draw(g, id, new Rectangle(2, 2, 60, 44));
                 iconImages[id] = image;
             }
+
             return image;
         }
+
         void RefreshPresets()
         {
             if (config == null)
@@ -686,6 +827,7 @@ namespace CameraControlStudio
                         && pair.Temporary == selected.Temporary && pair.Preset.Name == selected.Preset.Name)
                         selectedRow = row;
                 }
+
                 permanentList.Items.AddRange(Permanent.ToArray());
                 SelectPermanentPreset(edited);
                 presetGrid.CurrentCell = selectedRow?.Cells[positionColumn.Index];
@@ -697,24 +839,29 @@ namespace CameraControlStudio
             {
                 refreshingPresets = false;
             }
+
             RefreshActionButtons();
         }
+
         void ClearPresetSelection()
         {
             presetGrid.CurrentCell = null;
             presetGrid.ClearSelection();
             permanentList.ClearSelected();
         }
+
         void SelectPresetInSettings(RowItem row)
         {
             if (row != null)
                 SelectPermanentPreset(row.Temporary ? null : row.Preset.Name);
         }
+
         void SelectPermanentPreset(string name)
         {
             permanentList.SelectedItem = name == null ? null
                 : permanentList.Items.Cast<Preset>().FirstOrDefault(p => p.Name == name);
         }
+
         void RefreshActionButtons()
         {
             bool presetSelected = permanentList.SelectedItem is Preset;
@@ -732,10 +879,12 @@ namespace CameraControlStudio
             renameProfile.Enabled = loaded && profilesList.SelectedItem is string selectedProfile
                 && selectedProfile != ProfileStore.Standard;
         }
+
         bool NameExists(string name, Preset except = null)
         {
             return Permanent.Concat(Temporary).Any(p => p != except && string.Equals(p.Name, name, StringComparison.OrdinalIgnoreCase));
         }
+
         Dictionary<string, int> ReadPose()
         {
             NeedCamera();
@@ -747,6 +896,7 @@ namespace CameraControlStudio
                 throw new InvalidOperationException(UiText.T("The driver does not provide position or zoom controls.", "Driveren stiller ikke position eller zoom til rådighed."));
             return pose;
         }
+
         void AddTemporary()
         {
             NeedCamera();
@@ -760,6 +910,7 @@ namespace CameraControlStudio
                 RefreshPresets();
             }
         }
+
         void DeleteTemporary()
         {
             var row = SelectedPresetRow;
@@ -770,6 +921,7 @@ namespace CameraControlStudio
                 StopMotion();
             RefreshPresets();
         }
+
         void AddPermanent()
         {
             NeedCamera();
@@ -777,16 +929,27 @@ namespace CameraControlStudio
             {
                 if (dialog.ShowDialog(this) != DialogResult.OK)
                     return;
-                var p = new Preset { Name = dialog.PresetName, IconId = dialog.IconId, Position = ReadPose() };
+                var p = new Preset
+                {
+                    Name = dialog.PresetName,
+                    IconId = dialog.IconId,
+                    Position = ReadPose()
+                };
                 Permanent.Add(p);
                 try
                 {
                     SaveCurrent();
                 }
-                catch { Permanent.Remove(p); throw; }
+                catch
+                {
+                    Permanent.Remove(p);
+                    throw;
+                }
+
                 SelectPermanentPreset(p.Name);
             }
         }
+
         void EditPermanent()
         {
             var p = permanentList.SelectedItem as Preset;
@@ -803,11 +966,18 @@ namespace CameraControlStudio
                 {
                     SaveCurrent();
                 }
-                catch { p.Name = old; p.IconId = icon; throw; }
+                catch
+                {
+                    p.Name = old;
+                    p.IconId = icon;
+                    throw;
+                }
+
                 if (activity.Name == old)
                     StopMotion();
             }
         }
+
         void UpdatePermanent()
         {
             var p = permanentList.SelectedItem as Preset;
@@ -822,9 +992,15 @@ namespace CameraControlStudio
             {
                 SaveCurrent();
             }
-            catch { p.Position = old; throw; }
+            catch
+            {
+                p.Position = old;
+                throw;
+            }
+
             StopMotion();
         }
+
         void DeletePermanent()
         {
             var p = permanentList.SelectedItem as Preset;
@@ -839,9 +1015,15 @@ namespace CameraControlStudio
             {
                 SaveCurrent();
             }
-            catch { Permanent.Insert(i, p); throw; }
+            catch
+            {
+                Permanent.Insert(i, p);
+                throw;
+            }
+
             StopMotion();
         }
+
         void MovePermanent(int direction)
         {
             if (!loaded || !(permanentList.SelectedItem is Preset selected))
@@ -851,7 +1033,6 @@ namespace CameraControlStudio
             int to = from + direction;
             if (from < 0 || to < 0 || to >= presets.Count)
                 return;
-
             var neighbor = presets[to];
             presets[from] = neighbor;
             presets[to] = selected;
@@ -866,6 +1047,7 @@ namespace CameraControlStudio
                 throw;
             }
         }
+
         void StopMotion()
         {
             movement.Stop();
@@ -874,6 +1056,7 @@ namespace CameraControlStudio
             activity.Clear();
             presetGrid.Invalidate();
         }
+
         void StartHeld(string axis, int direction, bool fast)
         {
             held.Stop();
@@ -885,17 +1068,20 @@ namespace CameraControlStudio
             if ((Control.MouseButtons & MouseButtons.Left) != 0)
                 held.Start();
         }
+
         bool HasManualAxis(string axis, out Setting setting)
         {
             setting = null;
             return camera != null && camera.Settings.TryGetValue(axis, out setting) && (setting.Caps & 2) != 0;
         }
+
         bool AxisReversed(string axis) => axis == "Pan" ? reverseX.Checked : axis == "Tilt" && reverseY.Checked;
         void RefreshMotionControls()
         {
             foreach (var axis in axes)
                 RefreshMotionAxis(axis);
         }
+
         void RefreshMotionAxis(string axis)
         {
             if (HasManualAxis(axis, out var setting))
@@ -906,12 +1092,13 @@ namespace CameraControlStudio
                     failedMotionReads.Remove(axis);
                     return;
                 }
-                catch (COMException ex) when (!(ex is CameraUnavailableException))
+                catch (COMException ex)when (!(ex is CameraUnavailableException))
                 {
                     if (failedMotionReads.Add(axis))
                         DiagnosticLog.Current.Write("WARNING", "Read camera position: " + axis, ex);
                 }
             }
+
             bool canConnect = loaded && camera == null;
             if (axis == "Zoom")
             {
@@ -919,8 +1106,10 @@ namespace CameraControlStudio
                 if (camera == null)
                     zoomSlider.Position = .5;
             }
+
             SetMotionAvailability(axis, canConnect, canConnect);
         }
+
         void UpdateMotionAxis(string axis, Setting setting, int position)
         {
             bool reverse = AxisReversed(axis);
@@ -931,8 +1120,10 @@ namespace CameraControlStudio
                 zoomSlider.Position = ManualMotion.ZoomFraction(setting, position);
                 zoomSlider.Enabled = negative || positive;
             }
+
             SetMotionAvailability(axis, negative, positive);
         }
+
         void SetMotionAvailability(string axis, bool negative, bool positive)
         {
             if (axis == "Zoom")
@@ -945,6 +1136,7 @@ namespace CameraControlStudio
                 wheel.SetDirectionAvailability(axis, negative, positive);
             }
         }
+
         bool Nudge(string axis, int direction, bool fast)
         {
             NeedCamera();
@@ -957,17 +1149,18 @@ namespace CameraControlStudio
                 UpdateMotionAxis(axis, setting, position);
                 return false;
             }
+
             int steps = (int)(axis == "Zoom" ? zoomSteps.Value : (fast ? fastPanSteps.Value : panSteps.Value));
             SetManualPosition(axis, ManualMotion.Target(setting, position, direction, steps, reverse));
             position = camera.Get(axis);
             UpdateMotionAxis(axis, setting, position);
             return ManualMotion.CanMove(setting, position, direction, reverse);
         }
+
         void SetZoomPosition(double fraction)
         {
             if (!HasManualAxis("Zoom", out var setting))
                 return;
-
             int position = camera.Get("Zoom");
             int desired = ManualMotion.ZoomAtFraction(setting, fraction);
             if (position != desired)
@@ -976,8 +1169,10 @@ namespace CameraControlStudio
                 SetManualPosition("Zoom", desired);
                 position = camera.Get("Zoom");
             }
+
             UpdateMotionAxis("Zoom", setting, position);
         }
+
         void SetManualPosition(string axis, int position)
         {
             movement.Stop();
@@ -987,6 +1182,7 @@ namespace CameraControlStudio
             camera.Set(axis, position);
             status.Text = UiText.T("Manual movement", "Manuel bevægelse");
         }
+
         void Recall(RowItem row)
         {
             if (row == null)
@@ -1005,6 +1201,7 @@ namespace CameraControlStudio
                     throw new InvalidOperationException(UiText.T("The camera range has changed. Save this preset again.", "Kameraets område er ændret. Gem positionen igen."));
                 target[pair.Key] = pair.Value;
             }
+
             if (target.Count == 0)
                 throw new InvalidOperationException(UiText.T("Empty preset.", "Positionen er tom."));
             activity.Begin(row.Preset.Name);
@@ -1015,6 +1212,7 @@ namespace CameraControlStudio
             movement.Start();
             TickMotion();
         }
+
         void TickMotion()
         {
             double t = duration <= 0 ? 1 : Math.Min(1, clock.Elapsed.TotalSeconds / duration), f = Motion.Ease(t);
@@ -1027,6 +1225,7 @@ namespace CameraControlStudio
                     last[p.Key] = value;
                 }
             }
+
             if (t >= 1)
             {
                 bool reached = target.All(p => camera.Get(p.Key) == p.Value);
@@ -1042,15 +1241,21 @@ namespace CameraControlStudio
                 presetGrid.Invalidate();
             }
         }
+
         void SaveImageValue(string key)
         {
             if (!config.ImageValues.TryGetValue(CameraId, out var values))
                 config.ImageValues[CameraId] = values = new Dictionary<string, ImageValue>();
             int flags;
             int value = camera.Get(key, out flags);
-            values[key] = new ImageValue { Value = value, Automatic = (flags & 1) != 0 };
+            values[key] = new ImageValue
+            {
+                Value = value,
+                Automatic = (flags & 1) != 0
+            };
             MarkDirty();
         }
+
         void ApplyImageValues()
         {
             if (config.ImageValues == null)

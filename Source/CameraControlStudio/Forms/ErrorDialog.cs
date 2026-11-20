@@ -9,7 +9,6 @@ namespace CameraControlStudio
     {
         const string NewIssueUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues/new";
         string logPath;
-
         public ErrorDialog()
         {
             InitializeComponent();
@@ -64,6 +63,7 @@ namespace CameraControlStudio
                     "Camera Control Studio", MessageBoxButtons.OK, MessageBoxIcon.Warning,
                     MessageBoxDefaultButton.Button1, AppForm.MessageDirection);
             }
+
             const string body = "## What happened?\n\n## Steps to reproduce\n\n## Diagnostics\n\nReview and drag CameraControlStudio-report.log and CameraControlStudio-system.log into this issue if available.";
             Open(owner, NewIssueUrl + "?body=" + Uri.EscapeDataString(body));
         }
@@ -72,7 +72,9 @@ namespace CameraControlStudio
         {
             try
             {
-                using (Process.Start(new ProcessStartInfo(file, arguments) { UseShellExecute = true })) { }
+                using (Process.Start(new ProcessStartInfo(file, arguments) { UseShellExecute = true }))
+                {
+                }
             }
             catch (Exception ex)
             {

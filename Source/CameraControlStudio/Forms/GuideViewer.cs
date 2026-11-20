@@ -29,7 +29,6 @@ namespace CameraControlStudio
         string documentTitle;
         byte[] documentHtml;
         bool scrollToSettings;
-
         public GuideViewer()
         {
             InitializeComponent();
@@ -54,8 +53,14 @@ namespace CameraControlStudio
             print.Enabled = false;
             print.Click += async (sender, args) =>
             {
-                try { await PrintGuide(); }
-                catch (Exception ex) { ShowGuideError(ex); }
+                try
+                {
+                    await PrintGuide();
+                }
+                catch (Exception ex)
+                {
+                    ShowGuideError(ex);
+                }
             };
             sidebar.Enabled = false;
             Shown += async (sender, args) =>
@@ -71,6 +76,7 @@ namespace CameraControlStudio
                         CoreWebView2Environment.SetLoaderDllFolderPath(loader);
                         loaderConfigured = true;
                     }
+
                     var browser = await CoreWebView2Environment.CreateAsync(userDataFolder: data);
                     if (IsDisposed)
                         return;
@@ -103,7 +109,10 @@ namespace CameraControlStudio
                             if (!IsDisposed)
                                 print.Enabled = true;
                         }
-                        catch (Exception ex) { ShowGuideError(ex); }
+                        catch (Exception ex)
+                        {
+                            ShowGuideError(ex);
+                        }
                     };
                     sidebar.Enabled = true;
                     LoadGuide(openSetup ? settings : daily, openSetup && hasCombined);
@@ -114,7 +123,10 @@ namespace CameraControlStudio
                         "Installér Microsoft Edge WebView2 Runtime for at vise vejledningerne."), Text);
                     Close();
                 }
-                catch (Exception ex) { ShowGuideError(ex); }
+                catch (Exception ex)
+                {
+                    ShowGuideError(ex);
+                }
             };
         }
 
@@ -152,6 +164,7 @@ namespace CameraControlStudio
                     link.GetDynamicUrl = null;
                     link.Url = ResolveLink(path, url, link.IsImage);
                 }
+
                 string direction = UiText.IsRightToLeft ? "rtl" : "ltr";
                 documentHtml = Encoding.UTF8.GetBytes("<!doctype html><html dir='" + direction + "'><head>"
                     + "<meta charset='utf-8'><meta http-equiv='Content-Security-Policy' content=\"default-src 'none'; img-src https://"
@@ -171,7 +184,6 @@ namespace CameraControlStudio
 
         static string CssString(string value) => "\"" + string.Concat(value.Select(character =>
             "\\" + ((int)character).ToString("X", CultureInfo.InvariantCulture) + " ")) + "\"";
-
         static string PageCounter()
         {
             var parts = System.Text.RegularExpressions.Regex.Split(UiText.T("Page {0} of {1}", "Side {0} af {1}"), "(\\{[01]\\})");
@@ -197,6 +209,7 @@ namespace CameraControlStudio
                     "Opdatér Microsoft Edge WebView2 Runtime for at udskrive vejledningerne."), Text);
                 return;
             }
+
             if (printDialog.ShowDialog(this) != DialogResult.OK)
                 return;
             print.Enabled = false;
@@ -217,6 +230,7 @@ namespace CameraControlStudio
                     settings.PageWidth = paper.Width / 100.0;
                     settings.PageHeight = paper.Height / 100.0;
                 }
+
                 if (printer.DefaultPageSettings.Landscape)
                     settings.Orientation = CoreWebView2PrintOrientation.Landscape;
                 if (await web.PrintAsync(settings) != CoreWebView2PrintStatus.Succeeded)
@@ -279,8 +293,14 @@ namespace CameraControlStudio
 
         void TryGuideAction(Action action)
         {
-            try { action(); }
-            catch (Exception ex) { ShowGuideError(ex); }
+            try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                ShowGuideError(ex);
+            }
         }
 
         void ShowGuideError(Exception error)
@@ -292,7 +312,9 @@ namespace CameraControlStudio
 
         internal static void OpenBrowser(string url)
         {
-            using (Process.Start(new ProcessStartInfo(url) { UseShellExecute = true })) { }
+            using (Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }))
+            {
+            }
         }
     }
 }

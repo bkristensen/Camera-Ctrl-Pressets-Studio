@@ -14,13 +14,15 @@ namespace CameraControlStudio
         const string FileName = "CameraControlStudio.log";
         const string LogStem = "CameraControlStudio";
         static readonly Encoding LogEncoding = new UTF8Encoding(false);
-        readonly object sync = new object();
+        readonly object sync = new object ();
         readonly string programDirectory, userDirectory;
         internal static string AppVersion { get; } = typeof(DiagnosticLog).Assembly
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown";
+
         readonly string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         internal static DiagnosticLog Current { get; } = new DiagnosticLog(AppDomain.CurrentDomain.BaseDirectory,
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CamPressets", "Logs"));
+
         internal volatile string CameraName;
         internal DiagnosticLogSettings Settings { get; private set; } = DiagnosticLogSettings.Default;
 
@@ -58,6 +60,7 @@ namespace CameraControlStudio
                         entry.AppendLine();
                     }
                 }
+
                 var content = entry.AppendLine().ToString();
                 if (!string.IsNullOrEmpty(userProfile))
                     content = Regex.Replace(content, Regex.Escape(userProfile), "%USERPROFILE%", RegexOptions.IgnoreCase);
@@ -65,7 +68,7 @@ namespace CameraControlStudio
                     return Append(Settings.DirectoryPath ?? programDirectory, content, Settings)
                         ?? Append(userDirectory, content, Settings);
             }
-            catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
+            catch (Exception ex)when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
             {
                 return null;
             }
@@ -75,8 +78,11 @@ namespace CameraControlStudio
         {
             lock (sync)
             {
-                try { return FindLatestCore(); }
-                catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
+                try
+                {
+                    return FindLatestCore();
+                }
+                catch (Exception ex)when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
                 {
                     return null;
                 }
@@ -93,7 +99,6 @@ namespace CameraControlStudio
         }
 
         static string ArchivePath(string directory, int index) => Path.Combine(directory, $"{LogStem}.{index}.log");
-
         static string Append(string directory, string content, DiagnosticLogSettings settings)
         {
             try
@@ -110,6 +115,7 @@ namespace CameraControlStudio
                     if (int.TryParse(suffix, out int index) && index >= settings.FileCount)
                         File.Delete(archive);
                 }
+
                 if (file.Exists && file.Length + LogEncoding.GetByteCount(content) > maxBytes)
                 {
                     if (settings.FileCount == 1)
@@ -123,13 +129,15 @@ namespace CameraControlStudio
                             if (File.Exists(archive))
                                 File.Move(archive, ArchivePath(directory, index + 1));
                         }
+
                         File.Move(path, ArchivePath(directory, 1));
                     }
                 }
+
                 File.AppendAllText(path, content, LogEncoding);
                 return path;
             }
-            catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
+            catch (Exception ex)when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
             {
                 return null;
             }
