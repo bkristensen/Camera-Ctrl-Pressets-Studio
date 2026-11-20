@@ -42,6 +42,8 @@ Wählen Sie eine temporäre Zeile und klicken Sie auf **×** über der Positions
 
 ## 5. Beenden
 
+Wenn unten **Neue Version verfügbar** erscheint, öffnet ein Klick auf den Link die Veröffentlichung mit den Downloads auf GitHub.
+
 Lesen Sie die Meldung in der Statusanzeige unten, falls eine Funktion fehlschlägt. Die Kamera unterstützt die Funktion möglicherweise nicht oder ist nicht verfügbar.
 
 Schließen Sie die Anwendung normal. Das aktive Profil und das Layout werden gespeichert. Diese Anwendung zeigt und speichert kein Video. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.

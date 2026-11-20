@@ -42,6 +42,8 @@ Select a temporary row and press **×** above the preset list to remove it. Clos
 
 ## 5. Finish
 
+If **New release available** appears in the footer, select it to open the release on GitHub and see the downloads.
+
 Check the status messages in the footer if a control fails. The camera may lack that feature or may be unavailable.
 
 Close the app normally. Its active profile and layout are remembered. There is no video preview or recording in this app. Watch the picture in your capture program.

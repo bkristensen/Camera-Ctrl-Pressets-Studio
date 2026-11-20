@@ -42,6 +42,8 @@ Markér en midlertidig række, og tryk på **×** over positionslisten for at fj
 
 ## 5. Afslut
 
+Hvis **Ny version tilgængelig** vises i bunden, kan du klikke på linket for at åbne udgivelsen og dens downloads på GitHub.
+
 Læs beskeden i statusområdet i bunden, hvis en funktion fejler. Kameraet kan mangle funktionen eller være utilgængeligt.
 
 Luk programmet normalt. Den aktive profil og vinduets udseende huskes. Programmet har ikke videovisning eller optagelse. Se billedet i dit optageprogram.
