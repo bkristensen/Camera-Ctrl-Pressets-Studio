@@ -174,5 +174,32 @@ namespace CameraControlStudio
             }
             BuildImageControls();
         }
+
+        void SaveImageValue(string key)
+        {
+            if (!config.ImageValues.TryGetValue(CameraId, out var values))
+                config.ImageValues[CameraId] = values = new Dictionary<string, ImageValue>();
+            int flags;
+            int value = camera.Get(key, out flags);
+            values[key] = new ImageValue
+            {
+                Value = value,
+                Automatic = (flags & 1) != 0
+            };
+            MarkDirty();
+        }
+
+        void ApplyImageValues()
+        {
+            if (config.ImageValues == null)
+                config.ImageValues = new Dictionary<string, Dictionary<string, ImageValue>>();
+            if (!config.ImageValues.TryGetValue(CameraId, out var values))
+                return;
+            foreach (var p in values)
+            {
+                if (camera.Settings.TryGetValue(p.Key, out var setting) && !axes.Contains(p.Key) && (setting.Caps & (p.Value.Automatic ? 1 : 2)) != 0)
+                    camera.Set(p.Key, p.Value.Value, p.Value.Automatic);
+            }
+        }
     }
 }

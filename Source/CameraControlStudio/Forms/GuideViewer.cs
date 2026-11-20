@@ -71,6 +71,7 @@ namespace CameraControlStudio
                         "CamPressets", "GuideViewer");
                     if (!loaderConfigured)
                     {
+                        // An AnyCPU build needs the loader for the running process, including under emulation.
                         var architecture = RuntimeInformation.ProcessArchitecture.ToString().ToLowerInvariant();
                         var loader = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "runtimes", "win-" + architecture, "native");
                         CoreWebView2Environment.SetLoaderDllFolderPath(loader);
@@ -88,6 +89,7 @@ namespace CameraControlStudio
                     web.Settings.AreDefaultContextMenusEnabled = false;
                     web.Settings.AreDevToolsEnabled = false;
                     web.Settings.AreBrowserAcceleratorKeysEnabled = false;
+                    // Give local images their own origin so Markdown cannot access arbitrary files.
                     web.SetVirtualHostNameToFolderMapping(AssetHost, root, CoreWebView2HostResourceAccessKind.DenyCors);
                     web.AddWebResourceRequestedFilter(DocumentUrl, CoreWebView2WebResourceContext.Document, CoreWebView2WebResourceRequestSourceKinds.Document);
                     web.WebResourceRequested += (o, e) =>
