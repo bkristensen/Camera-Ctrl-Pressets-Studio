@@ -2,7 +2,7 @@
 
 # Camera Control Studio
 
-**[Download Camera Control Studio from GitHub Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/FAQ.md)
+**[Download Camera Control Studio](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/FAQ.md)
 
 Camera Control Studio is a Windows app for controlling a supported camera during video meetings, recordings and live streams. Move and zoom the camera manually, then save useful framings as named presets so you can switch between them during a session. For example, save a wide shot of a stage, a close-up of the speaker and a shot of the demonstration table.
 
@@ -10,7 +10,7 @@ Use it alongside Zoom Meetings or your preferred capture or streaming app. That 
 
 ## Download and install
 
-Open the [GitHub Releases page](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) and look under **Assets** on the newest published release. Beta versions are marked **Pre-release**. If the page is empty, downloads are pending publication.
+Download the installer or portable ZIP under **Assets** on the [GitHub Releases page](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases).
 
 | Download | How to use it |
 | --- | --- |
@@ -40,25 +40,33 @@ Preset transitions use the duration set in **Settings**. The camera driver deter
 
 | Tab | What you can do |
 | --- | --- |
-| [Settings](Source/docs/images/screenshots/settings.png) | Set normal and fast movement steps, transition time, direction reversal, always-on-top behaviour and the interface language. You can also ask the app to wait for your confirmation before controlling the camera. |
-| [Image](Source/docs/images/screenshots/image.png) | Adjust the controls exposed by the camera driver, such as focus, exposure, sharpness and backlight compensation. Image settings are saved per camera and profile. |
+| [Settings → Movement](Source/docs/images/screenshots/settings.png) | Set normal and fast movement steps, transition time and direction reversal. |
+| [Settings → Application](Source/docs/images/screenshots/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
+| [Video](Source/docs/images/screenshots/image.png) | Adjust the controls exposed by the camera driver, such as focus, exposure, sharpness and backlight compensation. Image settings are saved per camera and profile. |
 | [Profiles](Source/docs/images/screenshots/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
+| [Issues](Source/docs/images/screenshots/issues.png) | Set up local diagnostic logs and prepare a GitHub issue report. |
 | [About](Source/docs/images/screenshots/about.png) | Find the installed version, developer credit and links to the project, issue tracker and discussions. |
 
 Drag the vertical divider to resize the camera controls and preset list. Hover over compact buttons for tooltips. The settings pane starts closed each time the app opens.
 
 <details>
-<summary>See the Settings, Image, Profiles and About tabs</summary>
+<summary>See the settings pane and example tabs</summary>
 
-![Settings tab with movement steps, transition time and language options](Source/docs/images/screenshots/settings.png)
+![Main window with the settings pane open](Source/docs/images/screenshots/main-settings.png)
 
-![Image tab with camera controls for focus, exposure and sharpness](Source/docs/images/screenshots/image.png)
+![Movement tab with movement steps and transition settings](Source/docs/images/screenshots/settings.png)
+
+![Application tab with streaming confirmation and profile language](Source/docs/images/screenshots/application.png)
+
+![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/image.png)
 
 ![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/profiles.png)
 
 ![About tab with developer information, project links and the installed version](Source/docs/images/screenshots/about.png)
 
 </details>
+
+[See every tab and subtab](Source/docs/SCREENSHOTS.md).
 
 ## Camera compatibility
 

@@ -14,7 +14,14 @@ try {
     $stage=Join-Path $root 'artifacts/portable/Camera-Control-Studio'
     if (Test-Path $stage) { Remove-Item $stage -Recurse -Force }
     New-Item -ItemType Directory -Force -Path $stage | Out-Null
-    Copy-Item $exe, "$exe.config", 'LICENSE', 'README.md' $stage
+    Copy-Item $exe, "$exe.config", 'LICENSE', 'README.md', 'THIRD-PARTY-NOTICES.md' $stage
+    $bin = Split-Path $exe
+    Copy-Item (Join-Path $bin '*.dll') $stage -Exclude 'WebView2Loader.dll'
+    Copy-Item (Join-Path $bin 'runtimes') $stage -Recurse
+    foreach ($architecture in 'x86', 'x64', 'arm64') {
+        $loader = Join-Path $stage "runtimes/win-$architecture/native/WebView2Loader.dll"
+        if (-not (Test-Path -LiteralPath $loader -PathType Leaf)) { throw "Missing WebView2 loader for $architecture." }
+    }
     Copy-Item 'docs' (Join-Path $stage 'docs') -Recurse
     Copy-Item 'scripts/Install.ps1' $stage
     Compress-Archive -Path "$stage/*" -DestinationPath 'artifacts/Camera-Control-Studio-portable.zip' -Force

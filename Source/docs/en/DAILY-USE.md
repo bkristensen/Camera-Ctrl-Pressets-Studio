@@ -2,46 +2,68 @@
 
 # Daily use
 
-Start your capture or streaming session first if your setup requires it. Open **Camera Control Studio.exe**.
+Start your streaming meeting in an app such as Zoom. Then open **Camera Control Studio**.
 
 ![Main window with the settings pane closed](../images/screenshots/main.png)
 
-## 1. Select the setup
+## General
 
-Open the profile picker in the footer and choose your profile. Leave the layout checkbox off to restore its saved window. Check it only when you want to keep the current layout.
+Click **?** at the bottom for help with using and setting up the app.
+Hover over the small buttons to see what they do.
+When the camera reaches its limit, the control for that direction is disabled.
 
-The app uses the last camera. To change it, click the camera symbol at the centre of the direction wheel. If the streaming question appears, answer Yes only after your session has started. No leaves the camera disconnected.
+## 1. Activate a preset
 
-## 2. Activate a position
-
-Press ▶ on a row in **Presets**, or double-click its name. You can also select the row and press Enter.
+Click ▶ on a row in the preset list or double-click the name.
+You can also select the row and press Enter.
 
 | Colour | Meaning |
 | --- | --- |
-| Yellow | The app is moving towards that position. |
-| Green | The camera driver reports the saved coordinates. |
-| Blue | The position is not marked active. |
+| Yellow | The app is moving the camera towards the preset. |
+| Green | The camera driver reports that the saved coordinates have been reached. |
+| Blue | The preset is not marked as active. |
 
-Green confirms the reported coordinates. Check the actual picture in your capture program. If the driver does not report the target in time, the row returns to blue and the footer shows a message. Icons remain visible throughout.
+Green confirms the coordinates reported by the driver. Check the picture in your stream.
+If the driver does not report that the camera has reached the preset in time, the row turns blue and a message appears in the status area. The icons stay visible throughout.
 
-## 3. Make a small adjustment
+## 2. Fine-tune the framing
 
-Use the inner arrows on the wheel for normal movement and the outer arrows for larger steps. Use the magnifier buttons for normal zoom. Hold Shift for larger zoom steps or hold a button to repeat. Drag the slider and release it to set the zoom directly.
+### Pan
 
-Manual pan, tilt or zoom cancels the preset movement and clears its active colour. Press Escape to stop a transition. With the wheel focused, arrow keys move the camera; Shift uses fast steps.
+Use the inner arrows on the wheel for normal movement and the outer arrows for larger steps.
 
-At the end of a camera's range, the control for that direction is disabled. Hover over a compact button to see its tooltip.
+### Zoom
 
-## 4. Keep a temporary position
+Use the magnifier buttons to zoom. Hold a button down to repeat the action.
+Drag and release the slider to set the zoom directly.
 
-Click **+** above the preset list, type a name and save. The current position appears below permanent positions. Temporary positions have no icon and are kept only for this run of the app, separately for each profile and camera.
+### Stop panning
 
-Select a temporary row and press **×** above the preset list to remove it. Closing the app removes all temporary positions. To keep a position for later, create it under **Settings → Presets**. The main list cannot edit or delete permanent positions.
+Press Esc to stop a pan in progress.
 
-## 5. Finish
+> Manual pan, tilt or zoom cancels the move to the preset and clears the active colour.
 
-Check the status messages in the footer if a control fails. The camera may lack that feature or may be unavailable.
+### Arrow keys
 
-Close the app normally. Its active profile and layout are remembered. There is no video preview or recording in this app. Watch the picture in your capture program.
+You can use the arrow keys when the wheel has focus.
+Hold Shift for fast steps.
 
-See [Setup](SETUP.md) for image settings, profiles and movement steps.
+## 3. Save a temporary preset
+
+Click **+** above the preset list, enter a name and save. The current position appears below the permanent presets.
+Temporary presets have no icon. They last until you close the app and are kept separately for each profile and camera.
+
+Select a temporary row and click **×** above the preset list to remove it. All temporary presets are removed when the app closes.
+To use a position later, create it under **Settings → Presets**. You cannot edit or delete permanent presets in the main list.
+
+## 4. Exit
+
+If a control fails, read the message in the status area at the bottom. The camera may not support the feature or may be unavailable.
+
+Close the app normally. The app remembers the active profile and window layout.
+
+## 5. Report issues
+
+Report problems or missing features under **Settings → Issues**.
+
+See [Setup](SETUP.md) for camera direction, permanent presets, image settings, profiles and movement steps.

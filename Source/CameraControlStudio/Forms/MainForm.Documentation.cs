@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace CameraControlStudio {
  public partial class MainForm {
   // Documentation mode never sets loaded, opens a camera, or reads/writes profiles.
-  bool documentationMode;string documentationDirectory;Timer documentationTimer;int documentationStage;
+  bool documentationMode;string documentationDirectory;int documentationStage;
   internal MainForm(string outputDirectory):this(){documentationMode=true;documentationDirectory=Path.GetFullPath(outputDirectory);}
   void InitializeDocumentation(){
    config=new SavedData {CameraId="documentation-only"};
@@ -16,18 +16,18 @@ namespace CameraControlStudio {
    foreach (var example in examples)
     config.Cameras[config.CameraId].Add(new Preset { Name = PresetIcons.GetTitle(example), IconId = example });
    Temporary.Add(new Preset{Name=UiText.T("Temporary preset name","Midlertidig position")});
-   panSteps.Value=5;fastPanSteps.Value=32;zoomSteps.Value=5;fastZoomSteps.Value=32;seconds.Value=2;
+   panSteps.Value=config.PanSteps;fastPanSteps.Value=config.FastPanSteps;zoomSteps.Value=config.ZoomSteps;seconds.Value=config.Seconds;
    profilesList.Items.Add("Standard");profileButton.Text="Standard ▾";
    cameraStatus.Text="Documentation · Demo camera";
    status.Text=UiText.T("Position reached.","Positionen er nået.");
    RefreshPresets();activity.Begin(Permanent[1].Name);activity.Complete(true);
    StartPosition=FormStartPosition.Manual;Location=Screen.PrimaryScreen.WorkingArea.Location+new Size(12,12);Size=new Size(900,500);TopMost=true;
    Directory.CreateDirectory(documentationDirectory);
-   documentationTimer=new Timer{Interval=900};documentationTimer.Tick+=(o,e)=>{
+   documentationTimer.Tick+=(o,e)=>{
     try {
-     if(documentationStage==0){CaptureDocumentation("main",new Control[]{profileButton,settingsButton,wheel,zoomPanel,mainSplit,presetGrid,temporaryButton,footer},new[]{"A","B","C","D","E","F","G","H"});SetSettings(true,true);}
+     if(documentationStage==0){CaptureDocumentation("main",new Control[]{profileButton,settingsButton,wheel,zoomPanel,mainSplit,presetGrid,temporaryButton,footer},new[]{"A","B","C","D","E","F","G","H"});settingsTabs.SelectedTab=generalTab;SetSettings(true,true);}
      else if(documentationStage==1){CaptureDocumentation("settings",new Control[]{settingsTabs,generalFields},new[]{"I","J"});settingsTabs.SelectedTab=presetsTab;}
-     else {CaptureDocumentation("presets",new Control[]{permanentList,addPermanent,editPermanent,updatePermanent,deletePermanent},new[]{"K","L","M","N","O"});documentationTimer.Stop();documentationTimer.Dispose();Close();}
+     else {CaptureDocumentation("presets",new Control[]{permanentList,addPermanent,editPermanent,updatePermanent,deletePermanent},new[]{"K","L","M","N","O"});documentationTimer.Stop();Close();}
      documentationStage++;
     }catch(Exception ex){documentationTimer.Stop();MessageBox.Show(ex.Message);Close();}
    };documentationTimer.Start();

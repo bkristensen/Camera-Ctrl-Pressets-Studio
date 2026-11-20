@@ -33,7 +33,7 @@ namespace CameraControlStudio {
             string code = preference == "auto" ? windowsLanguage.Split('-')[0].ToLowerInvariant() : preference;
             return Array.IndexOf(LanguageCodes, code) > 0 ? code : "en";
         }
-        public static void Initialize(string[] args) {
+        public static void Initialize(string[] args, string profileLanguage = null) {
             Preference = "auto";
             CommandLineOverride = false;
             try {
@@ -43,6 +43,8 @@ namespace CameraControlStudio {
                         Preference = value;
                 }
             } catch (IOException) { } catch (UnauthorizedAccessException) { }
+            if (!string.IsNullOrEmpty(profileLanguage) && Array.IndexOf(LanguageCodes, profileLanguage) >= 0)
+                Preference = profileLanguage;
             string selected = Preference;
             foreach (string arg in args)
             if (arg.StartsWith("--lang=", StringComparison.OrdinalIgnoreCase)) {

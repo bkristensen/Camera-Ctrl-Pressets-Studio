@@ -1,3 +1,15 @@
+# 0.7.0-beta.3
+
+- Added an in-app Markdown guide viewer for the active profile’s language. The **?** button opens daily use or setup according to whether Settings is open. Printing adds the guide title, app version, date, and current and total page numbers.
+- Fixed the guide viewer’s WebView2 loading error on 64-bit Windows. The Windows packages include the x86, x64, and ARM64 loaders, and the viewer selects the one matching the running process. The **?** button is also visible in the WinForms Designer.
+- Grouped **Settings** into **Movement** and **Application**, and **Video** into **Focus and exposure**, **Colour**, and **Light and detail**. Added an **Issues** tab for local diagnostics and links to releases and online guides under **About**.
+- Language is saved per profile. Switching profiles restarts the app with the selected language. Temporary presets end when it restarts.
+- Recover when the camera driver reports that the device is no longer ready, including after hibernation. Use a camera control to reconnect.
+- Added local diagnostics with configurable folder, size, and retention. Reporting on GitHub prepares the error log and a separate system summary for review and manual attachment.
+- Updated the daily-use and setup guides in all 12 supported languages. Added English screenshots of the main window and every settings tab and subtab with a demo camera.
+
+The Windows installer and portable ZIP are unsigned. Guide viewing and printing use Microsoft Edge WebView2 Runtime. See the [validation notes](docs/VALIDATION.md) and the [user guides](docs/USER-GUIDES.md).
+
 # 0.7.0-beta.2
 
 - Compact main window with a vertical zoom slider, localized tooltips, footer controls and a profile-specific divider that repaints during resize.

@@ -43,6 +43,17 @@ namespace CameraControlStudio {
             return (int)Math.Max(Min, Math.Min(Min + Math.Floor(((double)Max - Min) / Math.Max(1, Step)) * Math.Max(1, Step), v));
         }
     }
+    internal sealed class CameraUnavailableException : COMException {
+        internal CameraUnavailableException(string operation, int error)
+            : base("Camera unavailable during " + operation + ".", error) { }
+
+        internal static bool Matches(int error) {
+            return error == unchecked((int)0x80070015) // ERROR_NOT_READY
+                || error == unchecked((int)0x8007048F) // ERROR_DEVICE_NOT_CONNECTED
+                || error == unchecked((int)0x80070006); // ERROR_INVALID_HANDLE
+        }
+    }
+
     public sealed class Camera : IDisposable {
         object filter; IAMCameraControl control; IAMVideoProcAmp video;
         public Dictionary<string, Setting> Settings = new Dictionary<string, Setting>();
@@ -93,6 +104,9 @@ namespace CameraControlStudio {
                 Add("Contrast", 1, true);
                 Add("Saturation", 3, true);
                 Add("White balance", 7, true);
+            } catch (Exception ex) when (CameraUnavailableException.Matches(ex.HResult)) {
+                Dispose();
+                throw new CameraUnavailableException("Connect", ex.HResult);
             } catch { Dispose(); throw; }
         }
         void Add(string name, int property, bool isVideo) {
@@ -106,6 +120,8 @@ namespace CameraControlStudio {
                     return;
                 hr = control.GetRange(property, out lo, out hi, out step, out def, out caps);
             }
+            if (CameraUnavailableException.Matches(hr))
+                throw new CameraUnavailableException("GetRange " + name, hr);
             if (hr >= 0 && hi > lo)
                 Settings[name] = new Setting { Name = name, Property = property, Video = isVideo, Min = lo, Max = hi, Step = Math.Max(1, step), Default = def, Caps = caps };
         }
@@ -113,7 +129,7 @@ namespace CameraControlStudio {
             var s = Settings[name];
             int value;
             int hr = s.Video ? video.Get(s.Property, out value, out flags) : control.Get(s.Property, out value, out flags);
-            Marshal.ThrowExceptionForHR(hr);
+            CheckControlResult(hr, "Get", name);
             return value;
         }
         public int Get(string name) {
@@ -126,7 +142,13 @@ namespace CameraControlStudio {
             if ((s.Caps & flag) == 0)
                 throw new InvalidOperationException(name + UiText.T(": this mode is not supported.", ": denne tilstand understøttes ikke."));
             int hr = s.Video ? video.Set(s.Property, s.Snap(value), flag) : control.Set(s.Property, s.Snap(value), flag);
-            Marshal.ThrowExceptionForHR(hr);
+            CheckControlResult(hr, "Set", name);
+        }
+        internal static void CheckControlResult(int error, string operation, string name) {
+            if (CameraUnavailableException.Matches(error))
+                throw new CameraUnavailableException(operation + " " + name, error);
+            if (error < 0)
+                throw new COMException(operation + " " + name + ": " + Marshal.GetExceptionForHR(error, new IntPtr(-1)).Message, error);
         }
         public void Dispose() {
             control = null;

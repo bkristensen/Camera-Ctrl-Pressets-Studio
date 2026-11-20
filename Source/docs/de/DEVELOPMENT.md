@@ -14,7 +14,7 @@ Installieren Sie die .NET-Desktop-Workload von Visual Studio über `.vsconfig`. 
 
 Jedes Fenster besitzt einen öffentlichen Konstruktor ohne Parameter und erbt von `AppForm`. Das Layout liegt in `.Designer.cs`, die Ereignisbehandlung in der zugehörigen `.cs`-Datei. Die Struktur wurde kompiliert. Das Öffnen und Speichern jeder Form im Visual-Studio-Designer muss noch unter Windows geprüft werden.
 
-Steuerrad und blaue Tasten werden in `Controls/BlueControls.cs` gezeichnet. Die vertikale Trennlinie und die Zoomsteuerung stehen in `Controls/MainViewControls.cs`. Der Designer kann diese Elemente verschieben und skalieren. Positionssymbole und ihre neutralen Titel stehen in `Assets/PressetIcons.resx` und werden von `Controls/PresetIcons.cs` geladen. Bildregler entstehen zur Laufzeit anhand der Treiberfunktionen.
+Steuerrad und blaue Tasten werden in `Controls/BlueControls.cs` gezeichnet. Die vertikale Trennlinie und die Zoomsteuerung stehen in `Controls/MainViewControls.cs`. Der Designer kann diese Elemente verschieben und skalieren. Positionssymbole und ihre neutralen Titel stehen in `Assets/PressetIcons.resx` und werden von `Controls/PresetIcons.cs` geladen. Die Regler im Reiter Video sind im Designer bearbeitbar. Das Programm zeigt die vom Kameratreiber unterstützten Regler an.
 
 ## Standardwerte ändern
 

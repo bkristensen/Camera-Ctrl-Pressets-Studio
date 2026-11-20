@@ -4,13 +4,13 @@ Camera Control & Pressets Studio is a small Windows desktop tool for people who 
 
 ## Core behaviour
 
-A two-ring controller provides normal and fast pan and tilt. The two zoom buttons use normal steps or fast steps with Shift. The vertical slider sets the zoom directly. The central button selects a camera without opening a video preview.
+A two-ring controller provides normal and fast pan and tilt. The two zoom buttons use the configured zoom steps. The vertical slider sets the zoom directly. The central button selects a camera without opening a video preview.
 
 Permanent positions contain a name, a stable symbol ID and supported camera coordinates. Combined symbols depict a left-to-right arrangement of subjects. Permanent positions are bold and listed first. Temporary positions are separate in-memory items and have no icon. Double-click and the play button recall either type.
 
 A smooth interpolation requests intermediate coordinates. A row is yellow during the transition. It is green only when readback matches the target. A manual action, cancellation or failed transition clears that state. The driver determines actual motion granularity and latency.
 
-Profiles contain camera selection, permanent positions, image values, normal/fast step sizes, transition time, direction reversal, camera confirmation and window layout. The last selected profile and language are application preferences. Optional camera confirmation blocks enumeration and connection until the user confirms streaming has started.
+Profiles contain camera selection, permanent positions, image values, normal/fast step sizes, transition time, direction reversal, camera confirmation, window layout and language. Changing profiles restarts the app with the selected profile’s language. Optional camera confirmation blocks enumeration and connection until the user confirms streaming has started.
 
 ## Architecture
 

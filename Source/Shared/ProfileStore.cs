@@ -22,6 +22,8 @@ namespace CameraControlStudio {
     public sealed class ProfileStore {
         public const string Standard = "Standard";
         public readonly string FilePath;
+        internal static string LastProfileFile => Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CamPressets", "last-profile.txt");
         readonly string mutexName;
         public ProfileStore() : this(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CamPressets", "profiles.json")) { }
         public ProfileStore(string path) {
@@ -44,6 +46,37 @@ namespace CameraControlStudio {
         }
         public ProfileCatalog Read() {
             return Locked(() => Load());
+        }
+        internal static string ReadSelectedProfile(ProfileCatalog catalog)
+        {
+            try
+            {
+                if (File.Exists(LastProfileFile))
+                {
+                    var name = File.ReadAllText(LastProfileFile).Trim();
+                    if (catalog.Profiles.ContainsKey(name))
+                        return name;
+                }
+            }
+            catch (IOException ex) { DiagnosticLog.Current.Write("WARNING", "Read last profile preference", ex); }
+            catch (UnauthorizedAccessException ex) { DiagnosticLog.Current.Write("WARNING", "Read last profile preference", ex); }
+            return Standard;
+        }
+
+        internal static void SelectProfile(string name)
+        {
+            var path = LastProfileFile;
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            var temp = path + "." + Guid.NewGuid().ToString("N") + ".tmp";
+            try
+            {
+                File.WriteAllText(temp, name);
+                if (File.Exists(path))
+                    File.Replace(temp, path, null);
+                else
+                    File.Move(temp, path);
+            }
+            finally { if (File.Exists(temp)) File.Delete(temp); }
         }
         ProfileCatalog Load() {
             if (!File.Exists(FilePath)) {
@@ -75,7 +108,7 @@ namespace CameraControlStudio {
                 throw Invalid();
             if (data.FastPanSteps < 1 || data.FastPanSteps > 100)
                 throw Invalid();
-            if (data.PanSteps < 1 || data.PanSteps > 100 || data.ZoomSteps < 1 || data.ZoomSteps > 100 || data.FastZoomSteps < 1 || data.FastZoomSteps > 100)
+            if (data.PanSteps < 1 || data.PanSteps > 100 || data.ZoomSteps < 1 || data.ZoomSteps > 100)
                 throw Invalid();
             if (data.Layout == null)
                 data.Layout = new ProfileLayout();

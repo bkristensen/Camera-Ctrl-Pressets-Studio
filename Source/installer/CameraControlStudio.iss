@@ -1,7 +1,7 @@
 ; Build from Windows with scripts/build-installer.ps1.
 ; This installer is unsigned until a publisher signing process is configured.
 #ifndef AppVersion
-  #define AppVersion "0.7.0-beta.2"
+  #define AppVersion "0.7.0-beta.3"
 #endif
 #define RepoRoot AddBackslash(SourcePath) + ".."
 
@@ -52,6 +52,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "{#RepoRoot}\CameraControlStudio\bin\Release\net48\Camera Control Studio.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#RepoRoot}\CameraControlStudio\bin\Release\net48\Camera Control Studio.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#RepoRoot}\CameraControlStudio\bin\Release\net48\*.dll"; Excludes: "WebView2Loader.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#RepoRoot}\CameraControlStudio\bin\Release\net48\runtimes\*"; DestDir: "{app}\runtimes"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#RepoRoot}\*.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#RepoRoot}\docs\*"; DestDir: "{app}\docs"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#RepoRoot}\LICENSE"; DestDir: "{app}"; Flags: ignoreversion

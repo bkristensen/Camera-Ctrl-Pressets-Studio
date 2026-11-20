@@ -18,7 +18,7 @@ Choose one command. The installer build includes the portable build.
 | Portable ZIP | `./scripts/build.ps1` | `artifacts/Camera-Control-Studio-portable.zip` |
 | Portable ZIP and Inno installer | `./scripts/build-installer.ps1` | Portable ZIP plus `artifacts/installers/CamCtrlStudio-Setup-<version>.exe` |
 
-`build.ps1` runs `check-translations.ps1`, builds Release with locked dependencies, runs the automated tests, and creates the ZIP. The raw Windows executable is at `CameraControlStudio/bin/Release/net48/Camera Control Studio.exe`. The portable staging folder is `artifacts/portable/Camera-Control-Studio/`. Publish the complete ZIP so the executable, configuration, licence and guides travel together.
+`build.ps1` runs `check-translations.ps1`, builds Release with locked dependencies, runs the automated tests, and creates the ZIP. The raw Windows executable is at `CameraControlStudio/bin/Release/net48/Camera Control Studio.exe`. The portable staging folder is `artifacts/portable/Camera-Control-Studio/`. Publish the complete ZIP so the executable, configuration, runtime libraries, licences and guides travel together.
 
 To use an individual or organization code-signing certificate available in the current user's Windows certificate store, pass its thumbprint and the path to SignTool when building. The installer command signs the application before packing it and signs the completed installer with a timestamp.
 
@@ -32,7 +32,7 @@ For the ZIP alone, give the same parameters to `build.ps1`. For sponsored signin
 
 ## 3. Check the packages on Windows
 
-1. Extract the ZIP to a new directory. Start the app from there and open `docs/USER-GUIDES.md`. Verify the app version, launch behaviour, presets, camera controls, and language selection.
+1. Extract the ZIP to a new directory. Start the app from there and open **?** with Settings closed and open. With [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) installed, verify guide navigation and print to PDF to check the title, version, date and page numbers. Verify the app version, launch behaviour, presets, camera controls, and language selection when switching profiles.
 2. If you plan to publish the installer, install it on a clean Windows test account. Verify the Start menu app and user-guide shortcuts. Check that all 12 guides are present, that an upgrade retains existing profiles, and that uninstall completes.
 3. Work through the [release checklist](../RELEASE-CHECKLIST.md). For signed builds, run SignTool verification on the app executable and installer. Generate hashes only after any signing and repackaging is finished.
 
@@ -41,7 +41,7 @@ For the ZIP alone, give the same parameters to `build.ps1`. For sponsored signin
 Replace the version in this example for subsequent releases. Omit the installer lines for a ZIP-only release.
 
 ```powershell
-$version = '0.7.0-beta.2'
+$version = '0.7.0-beta.3'
 $release = "artifacts/releases/$version"
 New-Item -ItemType Directory -Path $release -Force | Out-Null
 
@@ -59,7 +59,7 @@ The versioned folder holds the final ZIP, installer and SHA-256 manifest. The `b
 
 ## 5. Publish on GitHub
 
-1. Commit the release version, changelog, guides and source changes. In [GitHub Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases), create a draft and use a tag such as `v0.7.0-beta.2` on the tested commit.
+1. Commit the release version, changelog, guides and source changes. In [GitHub Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases), create a draft and use a tag such as `v0.7.0-beta.3` on the tested commit.
 2. Copy the matching changelog entry into the release notes, state whether the downloads are signed, and mark the release as a prerelease.
 3. Attach the versioned ZIP, installer if built, and `SHA256SUMS.txt` from `artifacts/releases/<version>/`. Review the filenames, download and verify the finished files, then publish.
 

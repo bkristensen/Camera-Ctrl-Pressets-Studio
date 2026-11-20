@@ -14,7 +14,7 @@ namespace CameraControlStudio {
     [DataContract]
     public sealed class ProfileLayout {
         [DataMember] public bool HasBounds, Maximized, SettingsOpen;
-        [DataMember] public int X, Y, Width = 900, Height = 500, SettingsTab;
+        [DataMember] public int X, Y, Width = 900, Height = 500, SettingsTab = 2;
         [DataMember] public double ControllerRatio = LayoutPolicy.DefaultControllerRatio;
         [DataMember(EmitDefaultValue = false)] bool CompactMainView = true;
 
@@ -37,9 +37,10 @@ namespace CameraControlStudio {
     public class SavedData {
         [DataMember] public Dictionary<string, List<Preset>> Cameras;
         [DataMember] public decimal Seconds;
-        [DataMember] public int PanSteps, FastPanSteps, ZoomSteps, FastZoomSteps;
+        [DataMember] public int PanSteps, FastPanSteps, ZoomSteps;
         [DataMember] public bool ReverseHorizontal, ReverseVertical, AlwaysOnTop;
         [DataMember] public string CameraId;
+        [DataMember(EmitDefaultValue = false)] public string Language;
         // Retain the serialized key so existing user choices survive the upgrade.
         [DataMember(Name = "WaitForStartup")] public bool RequireStreamingConfirmation;
         [DataMember] public bool KeepLayoutOnSwitch;
@@ -52,11 +53,10 @@ namespace CameraControlStudio {
         void Defaults(StreamingContext context) {
             ImageValues = new Dictionary<string, Dictionary<string, ImageValue>>();
             Cameras = new Dictionary<string, List<Preset>>();
-            Seconds = 2;
-            PanSteps = 5;
-            FastPanSteps = 32;
-            ZoomSteps = 5;
-            FastZoomSteps = 32;
+            Seconds = 1.0m;
+            PanSteps = 1;
+            FastPanSteps = 4;
+            ZoomSteps = 1;
             Layout = new ProfileLayout();
         }
     }
