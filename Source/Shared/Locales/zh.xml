@@ -135,7 +135,7 @@
   <text key="Delete permanent preset: {0}?">删除永久预设“{0}”吗？</text>
   <text key="Recall preset">调用预设</text>
   <text key="Delete temporary preset">删除临时预设</text>
-  <text key="Drag and release to set zoom.">拖动滑块并松开以设置缩放。</text>
+  <text key="Drag to adjust zoom.">拖动滑块可调整缩放。</text>
   <text key="User guides">用户指南</text>
   <text key="Daily use">日常使用</text>
   <text key="Setup guide">设置指南</text>

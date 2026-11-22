@@ -6,7 +6,7 @@
 
 A small Windows camera controller with named positions, precise movement and smooth preset transitions. Developed as open source by **Brian Kristensen, Vejle Uhrhøj, DK**.
 
-**Source version 0.7.0-beta.3.** The beta builds are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
+**Source version 0.7.0-beta.4.** The beta builds are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
 
 | Language | Set up | Daily use |
 | --- | --- | --- |

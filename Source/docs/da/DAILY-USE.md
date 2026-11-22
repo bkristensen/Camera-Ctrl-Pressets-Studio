@@ -32,7 +32,7 @@ Brug de inderste pile på hjulet til normal bevægelse og de yderste til større
 
 ### Zoom
 Brug lupknapperne til at zoome. Hold en lupknap nede for at gentage.
-Træk og slip skyderen for at indstille zoom direkte.
+Træk i skyderen for at justere zoom løbende.
 
 ### Afbryd panorering
 Du kan afbryde en startet panorering ved at trykke på ESC.

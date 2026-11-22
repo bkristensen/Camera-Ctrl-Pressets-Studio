@@ -35,7 +35,7 @@ Verwenden Sie die inneren Pfeile am Steuerrad für normale Bewegungen und die ä
 ### Zoomen
 
 Verwenden Sie die Lupentasten zum Zoomen. Halten Sie eine Lupentaste gedrückt, um den Vorgang zu wiederholen.
-Ziehen Sie den Schieberegler und lassen Sie ihn los, um den Zoom direkt einzustellen.
+Der Zoom ändert sich, während Sie den Schieberegler ziehen.
 
 ### Schwenken abbrechen
 

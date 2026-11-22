@@ -101,23 +101,24 @@ namespace CameraControlStudio {
             if (e.Button != MouseButtons.Left)
                 return;
             Focus();
+            preview = position;
             dragging = Capture = true;
-            UpdatePreview(e.Y);
+            RequestPointerPosition(e.Y);
         }
 
         protected override void OnMouseMove(MouseEventArgs e) {
             base.OnMouseMove(e);
             if (dragging)
-                UpdatePreview(e.Y);
+                RequestPointerPosition(e.Y);
         }
 
         protected override void OnMouseUp(MouseEventArgs e) {
             base.OnMouseUp(e);
             if (!dragging || e.Button != MouseButtons.Left)
                 return;
-            UpdatePreview(e.Y);
+            RequestPointerPosition(e.Y);
             dragging = Capture = false;
-            PositionRequested?.Invoke(preview);
+            Invalidate();
         }
 
         protected override void OnMouseCaptureChanged(EventArgs e) {
@@ -128,9 +129,13 @@ namespace CameraControlStudio {
             }
         }
 
-        void UpdatePreview(int y) {
-            preview = Math.Max(0, Math.Min(1, 1 - (y - ThumbHeight / 2.0 - 2) / TrackLength));
+        void RequestPointerPosition(int y) {
+            double fraction = Math.Max(0, Math.Min(1, 1 - (y - ThumbHeight / 2.0 - 2) / TrackLength));
+            if (fraction == preview)
+                return;
+            preview = fraction;
             Invalidate();
+            PositionRequested?.Invoke(fraction);
         }
 
         protected override bool IsInputKey(Keys key) {

@@ -35,7 +35,7 @@ Use the inner arrows on the wheel for normal movement and the outer arrows for l
 ### Zoom
 
 Use the magnifier buttons to zoom. Hold a button down to repeat the action.
-Drag and release the slider to set the zoom directly.
+Drag the slider to adjust the zoom as you move it.
 
 ### Stop panning
 

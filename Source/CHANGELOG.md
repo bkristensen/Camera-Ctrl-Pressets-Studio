@@ -1,3 +1,7 @@
+# 0.7.0-beta.4
+
+- The camera zooms as you drag the zoom slider.
+
 # 0.7.0-beta.3
 
 - Added an in-app Markdown guide viewer for the active profile’s language. The **?** button opens daily use or setup according to whether Settings is open. Printing adds the guide title, app version, date, and current and total page numbers.

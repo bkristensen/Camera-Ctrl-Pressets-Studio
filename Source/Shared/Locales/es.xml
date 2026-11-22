@@ -135,7 +135,7 @@
   <text key="Delete permanent preset: {0}?">¿Eliminar el preajuste permanente «{0}»?</text>
   <text key="Recall preset">Ir a la posición del preajuste</text>
   <text key="Delete temporary preset">Eliminar preajuste temporal</text>
-  <text key="Drag and release to set zoom.">Arrastra y suelta para ajustar el zoom.</text>
+  <text key="Drag to adjust zoom.">Arrastra para ajustar el zoom.</text>
   <text key="User guides">Guías de usuario</text>
   <text key="Daily use">Uso diario</text>
   <text key="Setup guide">Guía de configuración</text>

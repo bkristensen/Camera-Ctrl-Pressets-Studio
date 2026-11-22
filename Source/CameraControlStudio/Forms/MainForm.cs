@@ -290,7 +290,7 @@ namespace CameraControlStudio
             SetMainToolTip(profileButton, UiText.T("Choose profile", "Vælg profil"));
             SetMainToolTip(wheel, wheel.AccessibleName);
             SetMainToolTip(zoomSlider, UiText.T("Zoom", "Zoom"),
-                UiText.T("Drag and release to set zoom.", "Træk og slip for at indstille zoom."));
+                UiText.T("Drag to adjust zoom.", "Træk for at justere zoom."));
         }
         void SetMainToolTip(Control control, string label, string detail = null)
         {

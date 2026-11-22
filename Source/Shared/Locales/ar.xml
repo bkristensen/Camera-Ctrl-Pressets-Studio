@@ -135,7 +135,7 @@
   <text key="Delete permanent preset: {0}?">هل تريد حذف الإعداد المسبق الدائم «{0}»؟</text>
   <text key="Recall preset">الانتقال إلى موضع الإعداد المسبق</text>
   <text key="Delete temporary preset">حذف الإعداد المسبق المؤقت</text>
-  <text key="Drag and release to set zoom.">اسحب شريط التمرير وأفلته لضبط التقريب.</text>
+  <text key="Drag to adjust zoom.">اسحب شريط التمرير لضبط التقريب.</text>
   <text key="User guides">أدلة المستخدم</text>
   <text key="Daily use">الاستخدام اليومي</text>
   <text key="Setup guide">دليل الإعداد</text>

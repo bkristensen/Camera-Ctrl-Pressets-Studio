@@ -134,7 +134,7 @@
   <text key="Delete permanent preset: {0}?">Slet den permanente position »{0}«?</text>
   <text key="Recall preset">Kør til position</text>
   <text key="Delete temporary preset">Slet midlertidig position</text>
-  <text key="Drag and release to set zoom.">Træk og slip for at indstille zoom.</text>
+  <text key="Drag to adjust zoom.">Træk for at justere zoom.</text>
   <text key="User guides">Brugervejledninger</text>
   <text key="Daily use">Daglig brug</text>
   <text key="Setup guide">Opsætningsvejledning</text>

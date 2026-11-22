@@ -135,7 +135,7 @@
   <text key="Delete permanent preset: {0}?">Supprimer le préréglage permanent « {0} » ?</text>
   <text key="Recall preset">Aller à la position préréglée</text>
   <text key="Delete temporary preset">Supprimer le préréglage temporaire</text>
-  <text key="Drag and release to set zoom.">Faites glisser le curseur et relâchez-le pour régler le zoom.</text>
+  <text key="Drag to adjust zoom.">Faites glisser le curseur pour régler le zoom.</text>
   <text key="User guides">Guides utilisateur</text>
   <text key="Daily use">Utilisation quotidienne</text>
   <text key="Setup guide">Guide de configuration</text>
