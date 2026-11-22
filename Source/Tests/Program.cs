@@ -8,7 +8,40 @@ using System.Xml.Linq;
 using CameraControlStudio;
 class Program {
  static void Check(bool value,string message){if(!value)throw new Exception(message);}
+ static void CheckMovementSpeeds() {
+  Check(ManualMotion.PanRepeat(.25, true, out int fine) == 600 && fine == 1, "quarter speed repeats one driver step");
+  Check(ManualMotion.PanRepeat(.5, true, out fine) == 300 && fine == 1, "half speed repeats one driver step");
+  Check(ManualMotion.PanRepeat(1, false, out int normal) == 150 && normal == 1, "normal hold uses the default rate");
+  int fastInterval = ManualMotion.PanRepeat(4, false, out int fast);
+  Check(fast == 1 && fastInterval >= 33 && fastInterval < 150, "fast hold spreads steps across shorter intervals");
+  Check(ManualMotion.PanRepeat(100, true, out fine) == 33 && fine == 1, "fine hold stays on single steps at the repeat limit");
+
+  var setting = new Setting { Min = -5, Max = 8, Step = 3 };
+  Check(PresetSpeedCurve.AxisDistance(setting, 7, 1) == .5, "preset distance uses the reachable range");
+  var shortMove = new PresetSpeedCurve(.04, .5);
+  var longMove = new PresetSpeedCurve(.8, .5);
+  Check(shortMove.Duration < longMove.Duration, "short preset moves finish sooner");
+  Check(new PresetSpeedCurve(.8, .25).Duration > longMove.Duration, "slower speed lengthens a move");
+  Check(new PresetSpeedCurve(0, .5).Duration == 0, "a preset at the current position completes immediately");
+  Check(longMove.Progress(0) == 0 && longMove.Progress(longMove.Duration) == 1, "preset curve reaches both endpoints");
+  double CruiseRate(PresetSpeedCurve curve) => (curve.Progress(1) - curve.Progress(.5)) * .8 / .5;
+  Check(Math.Abs(CruiseRate(longMove) - .5) < 1e-9, "long preset move cruises at the selected rate");
+  Check(longMove.Progress(.1) < longMove.Progress(.5) * .2, "preset movement accelerates");
+  Check(Math.Abs(shortMove.Progress(shortMove.Duration / 2) - .5) < 1e-9 &&
+   Math.Abs(longMove.Progress(longMove.Duration - .1) + longMove.Progress(.1) - 1) < 1e-9, "short and long moves brake symmetrically");
+
+  var serializer = new DataContractJsonSerializer(typeof(SavedData));
+  using (var oldProfile = new MemoryStream(Encoding.UTF8.GetBytes("{\"Seconds\":2.5}"))) {
+   var old = (SavedData)serializer.ReadObject(oldProfile);
+   Check(!old.UseTransitionSpeed && old.Seconds == 2.5m && old.TransitionSpeedPercent == 30 && old.FinePanPercent == 50,
+    "old profiles keep fixed duration and receive speed defaults");
+  }
+  var copy = ProfileStore.Copy(new SavedData { UseTransitionSpeed = true, TransitionSpeedPercent = 45, FinePanPercent = 25 });
+  Check(copy.UseTransitionSpeed && copy.TransitionSpeedPercent == 45 && copy.FinePanPercent == 25,
+   "movement speed settings survive profile copy");
+ }
  static void Main(){
+  CheckMovementSpeeds();
   var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,1,false)&&ManualMotion.CanMove(setting,200,-1,false),"maximum blocks outward movement only");

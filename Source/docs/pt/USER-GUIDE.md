@@ -24,7 +24,7 @@ Clique em **?** na parte inferior para consultar a ajuda de uso e configuração
 
    **Movimento horizontal**
 
-   Use as setas internas do seletor para movimentos normais e as externas para passos maiores.
+   Use o anel interno para movimentos finos, o central para movimentos normais e o externo para movimentos rápidos. Mantenha uma seta pressionada para continuar o movimento e solte-a para parar.
 
    **Zoom**
 

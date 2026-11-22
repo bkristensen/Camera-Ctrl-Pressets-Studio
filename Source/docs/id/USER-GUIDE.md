@@ -24,7 +24,7 @@ Klik **?** di bagian bawah untuk melihat bantuan penggunaan dan pengaturan. Arah
 
    **Gerakan horizontal**
 
-   Gunakan panah dalam pada roda arah untuk gerakan biasa dan panah luar untuk langkah yang lebih besar.
+   Gunakan cincin dalam untuk gerakan halus, cincin tengah untuk gerakan normal, dan cincin luar untuk gerakan cepat. Tahan panah untuk terus bergerak, lalu lepaskan untuk berhenti.
 
    **Zoom**
 

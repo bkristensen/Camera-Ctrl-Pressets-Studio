@@ -13,7 +13,10 @@
   <text key="Brightness">چمک</text>
   <text key="Buy me a coffee">مجھے ایک کپ کافی پلائیں</text>
   <text key="Camera">کیمرہ</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">کیمرے کی سمت کا پہیہ۔ اندرونی حلقہ معمول کی رفتار کے لیے ہے اور بیرونی حلقہ تیز رفتار کے لیے۔</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">کیمرے کی سمت کا پہیہ۔ اندرونی حلقہ باریک، درمیانی معمول اور بیرونی تیز۔</text>
+  <text key="Fine speed (% of Normal)">باریک رفتار (معمول کا %)</text>
+  <text key="Use speed for preset transitions">محفوظ پوزیشن بدلنے کے لیے رفتار استعمال کریں</text>
+  <text key="Transition speed (%/s)">منتقلی کی رفتار (% فی سیکنڈ)</text>
   <text key="Camera: not connected">کیمرہ: منسلک نہیں</text>
   <text key="Cancel">منسوخ کریں</text>
   <text key="Choose camera source">کیمرے کا ذریعہ منتخب کریں</text>

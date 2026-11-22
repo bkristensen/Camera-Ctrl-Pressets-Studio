@@ -13,7 +13,10 @@
   <text key="Brightness">উজ্জ্বলতা</text>
   <text key="Buy me a coffee">আমাকে এক কাপ কফি কিনে দিন</text>
   <text key="Camera">ক্যামেরা</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">ক্যামেরার দিক নিয়ন্ত্রণের চাকা। ভেতরের বলয় স্বাভাবিক গতির জন্য, বাইরের বলয় দ্রুত গতির জন্য।</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">ক্যামেরার দিকচক্র। ভেতরে সূক্ষ্ম, মাঝে স্বাভাবিক, বাইরে দ্রুত।</text>
+  <text key="Fine speed (% of Normal)">সূক্ষ্ম গতি (স্বাভাবিকের %)</text>
+  <text key="Use speed for preset transitions">প্রিসেট বদলাতে গতি ব্যবহার করুন</text>
+  <text key="Transition speed (%/s)">বদলের গতি (%/সেকেন্ড)</text>
   <text key="Camera: not connected">ক্যামেরা: সংযুক্ত নয়</text>
   <text key="Cancel">বাতিল</text>
   <text key="Choose camera source">ক্যামেরার উৎস বেছে নিন</text>

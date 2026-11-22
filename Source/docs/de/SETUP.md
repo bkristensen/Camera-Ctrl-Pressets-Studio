@@ -32,10 +32,15 @@ Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten
 
 | Einstellung | Wirkung | Standard |
 | --- | --- | --- |
-| Normale Schwenkschritte | Innerer Pfeilring | 1 |
+| Feintempo (% von Normal) | Tempo beim Gedrückthalten eines Pfeils im inneren Ring | 50 % |
+| Normale Schwenkschritte | Mittlerer Pfeilring | 1 |
 | Schnelle Schwenkschritte | Äußerer Pfeilring | 4 |
 | Zoomschritte | − und + | 1 |
-| Übergang in Sekunden | Gewünschte Dauer eines Positionswechsels | 1,0 |
+| Übergang in Sekunden | Zeit für einen Positionswechsel bei fester Dauer | 1,0 |
+| Tempo für Positionswechsel verwenden | Die Entfernung bestimmt die Dauer | Aus |
+| Übergangstempo (%/s) | Tempo in Prozent des Bereichs der maßgeblichen Achse pro Sekunde | 30 % |
+
+Bei tempobasierten Übergängen dauern kurze Bewegungen weniger lang als lange. Die App beschleunigt und bremst und steuert die Achsen gemeinsam, damit sie das Ziel gleichzeitig erreichen können.
 
 Ein Schritt entspricht einem Schritt des Kameratreibers. Er ist keine feste Strecke oder Prozentzahl. Der Treiber begrenzt die Bewegung und ihre Gleichmäßigkeit.
 

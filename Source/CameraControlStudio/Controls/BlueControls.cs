@@ -151,13 +151,15 @@ namespace CameraControlStudio {
             }
         }
     }
+    public enum PanSpeed { Fine, Normal, Fast }
+
     public sealed class PanWheel : Control {
-        public event Action<string, int, bool> MovementRequested; public event Action Released; public event Action SourceRequested;
+        static readonly float[] RingEdges = { .175f, .285f, .395f, .5f };
+        public event Action<string, int, PanSpeed> MovementRequested; public event Action Released; public event Action SourceRequested;
         readonly bool[] available = { true, true, true, true };
         int active = -1; public PanWheel() {
             DoubleBuffered = true;
             SetStyle(ControlStyles.ResizeRedraw, true);
-            AccessibleName = UiText.T("Camera direction wheel. Inner ring normal, outer ring fast.", "Kamerahjul. Inderste ring normal, yderste ring hurtig.");
             TabStop = true;
         }
         internal void SetDirectionAvailability(string axis, bool negative, bool positive) {
@@ -174,15 +176,18 @@ namespace CameraControlStudio {
         }
         int Hit(Point p) {
             float size = Math.Min(Width, Height) - 24, cx = Width / 2f, cy = Height / 2f, dx = p.X - cx, dy = p.Y - cy, r = (float)Math.Sqrt(dx * dx + dy * dy);
-            if (r < size * .18 || r > size * .5)
+            if (size <= 0 || r < size * RingEdges[0] || r > size * RingEdges[3])
                 return -1;
             int direction = ((int)Math.Floor((Math.Atan2(dy, dx) * 180 / Math.PI + 405) / 90)) % 4;
-            return direction + (r > size * .315 ? 4 : 0);
+            int ring = r < size * RingEdges[1] ? 0 : r < size * RingEdges[2] ? 1 : 2;
+            return direction + ring * 4;
         }
         void Trigger(int n) {
             if (n < 0 || !available[n % 4])
                 return;
-            MovementRequested?.Invoke(n % 4 == 0 || n % 4 == 2 ? "Pan" : "Tilt", n % 4 == 0 || n % 4 == 3 ? 1 : -1, n >= 4);
+            int direction = n % 4;
+            MovementRequested?.Invoke(direction == 0 || direction == 2 ? "Pan" : "Tilt",
+                direction == 0 || direction == 3 ? 1 : -1, (PanSpeed)(n / 4));
         }
         protected override void OnMouseDown(MouseEventArgs e) {
             base.OnMouseDown(e);
@@ -204,7 +209,8 @@ namespace CameraControlStudio {
         }
         protected override void OnMouseUp(MouseEventArgs e) {
             base.OnMouseUp(e);
-            Release();
+            if (e.Button == MouseButtons.Left)
+                Release();
         }
         protected override void OnMouseCaptureChanged(EventArgs e) {
             base.OnMouseCaptureChanged(e);
@@ -212,6 +218,8 @@ namespace CameraControlStudio {
                 Release();
         }
         void Release() {
+            if (active < 0)
+                return;
             active = -1;
             Capture = false;
             Released?.Invoke();
@@ -229,14 +237,17 @@ namespace CameraControlStudio {
                 return;
             }
             int n = e.KeyCode == Keys.Right ? 0 : e.KeyCode == Keys.Down ? 1 : e.KeyCode == Keys.Left ? 2 : e.KeyCode == Keys.Up ? 3 : -1;
-            if (n >= 0) {
-                Trigger(n + (e.Shift ? 4 : 0));
+            if (n >= 0 && active < 0) {
+                var speed = e.Shift ? PanSpeed.Fast : e.Control ? PanSpeed.Fine : PanSpeed.Normal;
+                Trigger(n + (int)speed * 4);
                 e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
-        protected override void OnKeyUp(KeyEventArgs e) {
-            base.OnKeyUp(e);
-            Released?.Invoke();
+        protected override void OnEnabledChanged(EventArgs e) {
+            base.OnEnabledChanged(e);
+            if (!Enabled)
+                Release();
         }
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
@@ -245,10 +256,11 @@ namespace CameraControlStudio {
             float size = Math.Min(Width, Height) - 24, cx = Width / 2f, cy = Height / 2f;
             if (size < 60)
                 return;
-            for (int ring = 0; ring < 2; ring++)
+            for (int ring = 0; ring < 3; ring++)
             for (int dir = 0; dir < 4; dir++) {
                 bool enabled = Enabled && available[dir];
-                float outer = size * (ring == 0 ? .305f : .5f), inner = size * (ring == 0 ? .18f : .325f);
+                float outer = size * RingEdges[ring + 1] - 1;
+                float inner = size * RingEdges[ring] + 1;
                 float angle = dir * 90 - 43;
                 using (var p = new GraphicsPath()) {
                     p.AddArc(cx - outer, cy - outer, outer * 2, outer * 2, angle, 86);
@@ -257,24 +269,25 @@ namespace CameraControlStudio {
                     var r = p.GetBounds();
                     bool selected = active == dir + ring * 4;
                     var top = !enabled ? Color.FromArgb(31, 58, 86) : selected ? Color.FromArgb(65, 210, 255)
-                        : ring == 1 ? Color.FromArgb(0, 142, 238) : Color.FromArgb(38, 100, 160);
+                        : ring == 2 ? Color.FromArgb(0, 142, 238)
+                        : ring == 1 ? Color.FromArgb(38, 100, 160) : Color.FromArgb(20, 74, 126);
                     using (var b = new LinearGradientBrush(r, top, Color.FromArgb(3, 44, 85), 90))
                         g.FillPath(b, p);
-                    if (enabled && ring == 1)
-                    using (var glow = new Pen(Color.FromArgb(40, 0, 200, 255), 8))
+                    if (enabled && ring == 2)
+                    using (var glow = new Pen(Color.FromArgb(40, 0, 200, 255), Math.Max(2, size * .025f)))
                         g.DrawPath(glow, p);
-                    using (var pen = new Pen(!enabled ? Color.FromArgb(52, 75, 101) : ring == 1 ? Color.FromArgb(92, 222, 255) : BlueTheme.Line, 2))
+                    using (var pen = new Pen(!enabled ? Color.FromArgb(52, 75, 101) : ring == 2 ? Color.FromArgb(92, 222, 255) : BlueTheme.Line, 2))
                         g.DrawPath(pen, p);
                 }
                 float radius = (outer + inner) / 2;
                 var state = g.Save();
                 g.TranslateTransform(cx + (float)Math.Cos(dir * Math.PI / 2) * radius, cy + (float)Math.Sin(dir * Math.PI / 2) * radius);
                 g.RotateTransform(dir * 90);
-                using (var pen = new Pen(enabled ? Color.White : Color.SlateGray, Math.Max(3, size / 75))) {
+                using (var pen = new Pen(enabled ? Color.White : Color.SlateGray, Math.Max(1.5f, size / 100))) {
                     pen.StartCap = pen.EndCap = LineCap.Round;
-                    float a = size * .025f;
-                    for (int n = 0; n < (ring == 1 ? 2 : 1); n++) {
-                        float x = (n - (ring == 1 ? .5f : 0)) * a * 1.5f;
+                    float a = size * .016f;
+                    for (int n = 0; n <= ring; n++) {
+                        float x = (n - ring / 2f) * a * 1.5f;
                         g.DrawLines(pen, new[] { new PointF(x - a, -a * 1.5f), new PointF(x + a, 0), new PointF(x - a, a * 1.5f) });
                     }
                 }

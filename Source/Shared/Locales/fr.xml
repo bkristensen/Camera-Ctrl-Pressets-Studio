@@ -13,7 +13,10 @@
   <text key="Brightness">Luminosité</text>
   <text key="Buy me a coffee">Offrez-moi un café</text>
   <text key="Camera">Caméra</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">Molette d’orientation de la caméra. Anneau intérieur à vitesse normale, anneau extérieur à vitesse rapide.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Molette de la caméra. Anneau intérieur fin, central normal et extérieur rapide.</text>
+  <text key="Fine speed (% of Normal)">Vitesse fine (% de la normale)</text>
+  <text key="Use speed for preset transitions">Utiliser la vitesse pour les transitions</text>
+  <text key="Transition speed (%/s)">Vitesse de transition (%/s)</text>
   <text key="Camera: not connected">Caméra : non connectée</text>
   <text key="Cancel">Annuler</text>
   <text key="Choose camera source">Choisir la source vidéo</text>

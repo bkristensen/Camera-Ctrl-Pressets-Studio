@@ -32,10 +32,15 @@ Ret værdierne under **Indstillinger → Bevægelse**. Start med små trin. Se r
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
-| Normale panoreringstrin | Den inderste ring med pile | 1 |
+| Fin hastighed (% af normal) | Hastighed når en pil i den inderste ring holdes nede | 50 % |
+| Normale panoreringstrin | Den midterste ring med pile | 1 |
 | Hurtige panoreringstrin | Den yderste ring med pile | 4 |
 | Zoomtrin | − og + | 1 |
-| Skiftetid i sekunder | Ønsket tid til en gemt position | 1,0 |
+| Skiftetid i sekunder | Tid til skift ved fast varighed | 1,0 |
+| Brug hastighed ved skift af position | Afstanden bestemmer varigheden | Fra |
+| Overgangshastighed (%/s) | Hastighed i procent af den styrende akses område pr. sekund | 30 % |
+
+Ved hastighedsbaserede skift tager en kort bevægelse mindre tid end en lang. Appen accelererer og bremser og styrer alle akser sammen, så de kan nå målet samtidigt.
 
 Et trin er ét trin, som kameradriveren understøtter. Det er ikke en fast afstand eller procent. Kameraets driver sætter grænsen for bevægelse og bløde skift.
 

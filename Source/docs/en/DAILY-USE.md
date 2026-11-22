@@ -30,7 +30,7 @@ If the driver does not report that the camera has reached the preset in time, th
 
 ### Pan
 
-Use the inner arrows on the wheel for normal movement and the outer arrows for larger steps.
+Use the inner ring for Fine movement, the middle ring for Normal and the outer ring for Fast. A Fine click moves one driver step. Hold an arrow to keep moving and release it to stop. The keyboard arrow keys use Normal. Hold Ctrl for Fine or Shift for Fast.
 
 ### Zoom
 

@@ -10,7 +10,7 @@ Permanent positions contain a name, a stable symbol ID and supported camera coor
 
 A smooth interpolation requests intermediate coordinates. A row is yellow during the transition. It is green only when readback matches the target. A manual action, cancellation or failed transition clears that state. The driver determines actual motion granularity and latency.
 
-Profiles contain camera selection, permanent positions, image values, normal/fast step sizes, transition time, direction reversal, camera confirmation, window layout and language. Changing profiles restarts the app with the selected profile’s language. Optional camera confirmation blocks enumeration and connection until the user confirms streaming has started.
+Profiles contain camera selection, permanent positions, image values, manual movement rates, preset transition duration or speed, direction reversal, camera confirmation, window layout and language. Changing profiles restarts the app with the selected profile’s language. Optional camera confirmation blocks enumeration and connection until the user confirms streaming has started.
 
 ## Architecture
 

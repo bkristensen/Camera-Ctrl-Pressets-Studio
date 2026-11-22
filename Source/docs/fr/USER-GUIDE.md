@@ -24,7 +24,7 @@ Cliquez sur **?** en bas de la fenêtre pour consulter l’aide sur l’utilisat
 
    **Panoramique**
 
-   Utilisez les flèches intérieures de la molette pour les déplacements normaux et les flèches extérieures pour les pas plus grands.
+   Utilisez l’anneau intérieur pour les mouvements fins, celui du milieu pour les mouvements normaux et l’anneau extérieur pour les mouvements rapides. Maintenez une flèche enfoncée pour déplacer la caméra, puis relâchez-la pour l’arrêter.
 
    **Zoom**
 

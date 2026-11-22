@@ -13,7 +13,10 @@
   <text key="Brightness">चमक</text>
   <text key="Buy me a coffee">मेरे लिए एक कॉफ़ी खरीदें</text>
   <text key="Camera">कैमरा</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">कैमरे की दिशा का नियंत्रण चक्र। भीतरी घेरा सामान्य गति के लिए है, बाहरी घेरा तेज़ गति के लिए।</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">कैमरा दिशा चक्र। अंदर सूक्ष्म, बीच में सामान्य और बाहर तेज़।</text>
+  <text key="Fine speed (% of Normal)">सूक्ष्म गति (सामान्य का %)</text>
+  <text key="Use speed for preset transitions">प्रीसेट बदलने के लिए गति का उपयोग करें</text>
+  <text key="Transition speed (%/s)">बदलाव की गति (%/सेकंड)</text>
   <text key="Camera: not connected">कैमरा: कनेक्ट नहीं है</text>
   <text key="Cancel">रद्द करें</text>
   <text key="Choose camera source">कैमरा स्रोत चुनें</text>

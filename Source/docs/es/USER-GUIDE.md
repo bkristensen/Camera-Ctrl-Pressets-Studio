@@ -24,7 +24,7 @@ Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración
 
    **Giro**
 
-   Usa las flechas interiores de la rueda para el movimiento normal y las exteriores para pasos más grandes.
+   Usa el anillo interior para movimientos finos, el central para los normales y el exterior para los rápidos. Mantén pulsada una flecha para seguir moviendo la cámara y suéltala para detenerla.
 
    **Zoom**
 

@@ -32,10 +32,15 @@ Change the values under **Settings → Movement**. Start with small steps. Test 
 
 | Setting | What it changes | Default |
 | --- | --- | --- |
-| Normal pan steps | Inner arrow ring | 1 |
+| Fine speed (% of Normal) | Rate while holding an inner-ring arrow | 50% |
+| Normal pan steps | Middle arrow ring | 1 |
 | Fast pan steps | Outer arrow ring | 4 |
 | Zoom steps | − and + | 1 |
-| Transition seconds | Time requested for a preset change | 1.0 |
+| Transition (sec.) | Time for each preset change in fixed-duration mode | 1.0 |
+| Use speed for preset transitions | Let travel distance determine the duration | Off |
+| Transition speed (%/s) | Cruise rate as a percentage of the controlling axis’s range per second | 30% |
+
+With speed-based transitions, a short move takes less time than a long one. The app accelerates and brakes, and all moving axes share the same progress so they can reach the target together.
 
 One step means one step supported by the camera driver. It is not a fixed distance or percentage. The driver limits movement and smoothness.
 

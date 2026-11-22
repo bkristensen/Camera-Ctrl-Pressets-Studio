@@ -20,9 +20,10 @@ namespace CameraControlStudio
         readonly Dictionary<string, Bitmap> iconImages = new Dictionary<string, Bitmap>();
         ProfileEntry entry; SavedData config; string profile = ProfileStore.Standard;
         Camera camera; List<Device> devices = new List<Device>();
-        bool loaded, applying, dirty, wasMaximized; string heldAxis; int heldDirection; bool heldFast;
+        bool loaded, applying, dirty, wasMaximized; string heldAxis; int heldDirection, heldSteps;
         bool refreshingPresets;
         Dictionary<string, int> start, target, last; double duration;
+        PresetSpeedCurve speedCurve;
         static readonly string[] axes = { "Zoom", "Pan", "Tilt" };
         readonly Size preferredMinimumSize;
         readonly int settingsPanelWidth, temporaryDeleteWidth;
@@ -129,17 +130,17 @@ namespace CameraControlStudio
                 SetSettings(!settingsTabs.Visible, true); MarkDirty();
             });
             profileButton.Click += (o, e) => Run(ChooseProfile);
-            wheel.MovementRequested += (axis, direction, fast) => Run(() => StartHeld(axis, direction, fast));
+            wheel.MovementRequested += (axis, direction, speed) => Run(() => StartHeld(axis, direction, speed));
             wheel.Released += () => held.Stop();
             wheel.SourceRequested += () => Run(ChooseCamera);
             WireZoom(normalIn, 1);
             WireZoom(normalOut, -1);
             zoomSlider.PositionRequested += fraction => Run(() => SetZoomPosition(fraction));
-            zoomSlider.StepRequested += direction => Run(() => Nudge("Zoom", direction, false));
+            zoomSlider.StepRequested += direction => Run(() => Nudge("Zoom", direction, (int)zoomSteps.Value));
             movement.Tick += (o, e) => Run(TickMotion);
             held.Tick += (o, e) => Run(() =>
             {
-                if (!Nudge(heldAxis, heldDirection, heldFast))
+                if (!Nudge(heldAxis, heldDirection, heldSteps))
                     held.Stop();
             });
             motionLimits.Tick += (o, e) => Run(() =>
@@ -206,8 +207,13 @@ namespace CameraControlStudio
             renameProfile.Click += (o, e) => Run(RenameProfile);
             profilesList.SelectedIndexChanged += (o, e) => RefreshActionButtons();
             profilesList.DoubleClick += (o, e) => Run(() => { if (profilesList.SelectedItem != null) ChooseProfile((string)profilesList.SelectedItem); });
-            foreach (var control in new[] { panSteps, fastPanSteps, zoomSteps, seconds })
+            foreach (var control in new[] { finePanPercent, panSteps, fastPanSteps, zoomSteps, seconds, transitionSpeedPercent })
                 control.ValueChanged += (o, e) => MarkDirty();
+            useTransitionSpeed.CheckedChanged += (o, e) =>
+            {
+                UpdateTransitionMode();
+                MarkDirty();
+            };
             foreach (var control in new[] { reverseX, reverseY, alwaysTop })
                 control.CheckedChanged += (o, e) => { if (!applying) { TopMost = alwaysTop.Checked; MarkDirty(); } };
             reverseX.CheckedChanged += (o, e) => Run(() => RefreshMotionAxis("Pan"));
@@ -307,7 +313,7 @@ namespace CameraControlStudio
             button.MouseDown += (o, e) =>
             {
                 if (e.Button == MouseButtons.Left)
-                    Run(() => StartHeld("Zoom", direction, false));
+                    Run(() => StartHeld("Zoom", direction, PanSpeed.Normal));
             };
             button.MouseUp += (o, e) => held.Stop();
             button.MouseCaptureChanged += (o, e) => { if (!button.Capture) held.Stop(); };
@@ -316,7 +322,7 @@ namespace CameraControlStudio
                 if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Enter)
                 {
                     e.SuppressKeyPress = true;
-                    Run(() => Nudge("Zoom", direction, false));
+                    Run(() => Nudge("Zoom", direction, (int)zoomSteps.Value));
                 }
             };
         }
@@ -345,10 +351,13 @@ namespace CameraControlStudio
         }
         void ReadSettings()
         {
+            config.FinePanPercent = (int)finePanPercent.Value;
             config.PanSteps = (int)panSteps.Value;
             config.FastPanSteps = (int)fastPanSteps.Value;
             config.ZoomSteps = (int)zoomSteps.Value;
             config.Seconds = seconds.Value;
+            config.UseTransitionSpeed = useTransitionSpeed.Checked;
+            config.TransitionSpeedPercent = (int)transitionSpeedPercent.Value;
             config.ReverseHorizontal = reverseX.Checked;
             config.ReverseVertical = reverseY.Checked;
             config.RequireStreamingConfirmation = streamingCheck.Checked;
@@ -377,10 +386,7 @@ namespace CameraControlStudio
                 Disconnect();
                 DiagnosticLog.Current.CameraName = null;
                 permission.Reset();
-                panSteps.Value = config.PanSteps;
-                fastPanSteps.Value = config.FastPanSteps;
-                zoomSteps.Value = config.ZoomSteps;
-                seconds.Value = config.Seconds;
+                LoadMovementSettings();
                 reverseX.Checked = config.ReverseHorizontal;
                 reverseY.Checked = config.ReverseVertical;
                 streamingCheck.Checked = config.RequireStreamingConfirmation;
@@ -397,6 +403,22 @@ namespace CameraControlStudio
                 RefreshPresets();
             }
             finally { applying = false; }
+        }
+        void LoadMovementSettings()
+        {
+            finePanPercent.Value = config.FinePanPercent;
+            panSteps.Value = config.PanSteps;
+            fastPanSteps.Value = config.FastPanSteps;
+            zoomSteps.Value = config.ZoomSteps;
+            seconds.Value = config.Seconds;
+            transitionSpeedPercent.Value = config.TransitionSpeedPercent;
+            useTransitionSpeed.Checked = config.UseTransitionSpeed;
+            UpdateTransitionMode();
+        }
+        void UpdateTransitionMode()
+        {
+            seconds.Enabled = !useTransitionSpeed.Checked;
+            transitionSpeedPercent.Enabled = useTransitionSpeed.Checked;
         }
         void ApplySplitter()
         {
@@ -874,16 +896,23 @@ namespace CameraControlStudio
             activity.Clear();
             presetGrid.Invalidate();
         }
-        void StartHeld(string axis, int direction, bool fast)
+        void StartHeld(string axis, int direction, PanSpeed speed)
         {
             held.Stop();
-            if (!Nudge(axis, direction, fast))
+            bool zoom = axis == "Zoom";
+            bool fine = speed == PanSpeed.Fine;
+            int clickSteps = zoom ? (int)zoomSteps.Value : fine ? 1 :
+                (int)(speed == PanSpeed.Fast ? fastPanSteps.Value : panSteps.Value);
+            if (!Nudge(axis, direction, clickSteps))
+                return;
+            if ((Control.MouseButtons & MouseButtons.Left) == 0 || (!zoom && !wheel.Capture))
                 return;
             heldAxis = axis;
             heldDirection = direction;
-            heldFast = fast;
-            if ((Control.MouseButtons & MouseButtons.Left) != 0)
-                held.Start();
+            heldSteps = clickSteps;
+            held.Interval = zoom ? ManualMotion.DefaultRepeatInterval : ManualMotion.PanRepeat(
+                fine ? (double)(panSteps.Value * finePanPercent.Value / 100) : clickSteps, fine, out heldSteps);
+            held.Start();
         }
         bool HasManualAxis(string axis, out Setting setting)
         {
@@ -945,7 +974,7 @@ namespace CameraControlStudio
                 wheel.SetDirectionAvailability(axis, negative, positive);
             }
         }
-        bool Nudge(string axis, int direction, bool fast)
+        bool Nudge(string axis, int direction, int steps)
         {
             NeedCamera();
             if (!HasManualAxis(axis, out var setting))
@@ -957,7 +986,6 @@ namespace CameraControlStudio
                 UpdateMotionAxis(axis, setting, position);
                 return false;
             }
-            int steps = (int)(axis == "Zoom" ? zoomSteps.Value : (fast ? fastPanSteps.Value : panSteps.Value));
             SetManualPosition(axis, ManualMotion.Target(setting, position, direction, steps, reverse));
             position = camera.Get(axis);
             UpdateMotionAxis(axis, setting, position);
@@ -1010,27 +1038,32 @@ namespace CameraControlStudio
             activity.Begin(row.Preset.Name);
             status.Text = UiText.T("Moving to position…", "Flytter til position…");
             presetGrid.Invalidate();
-            duration = (double)seconds.Value;
+            speedCurve = useTransitionSpeed.Checked ? new PresetSpeedCurve(
+                target.Max(p => PresetSpeedCurve.AxisDistance(camera.Settings[p.Key], start[p.Key], p.Value)),
+                (double)transitionSpeedPercent.Value / 100) : null;
+            duration = speedCurve?.Duration ?? (double)seconds.Value;
             clock.Restart();
             movement.Start();
             TickMotion();
         }
         void TickMotion()
         {
-            double t = duration <= 0 ? 1 : Math.Min(1, clock.Elapsed.TotalSeconds / duration), f = Motion.Ease(t);
+            double elapsed = clock.Elapsed.TotalSeconds;
+            bool finished = elapsed >= duration;
+            double f = finished ? 1 : speedCurve?.Progress(elapsed) ?? Motion.Ease(elapsed / duration);
             foreach (var p in target)
             {
                 int value = camera.Settings[p.Key].Snap(start[p.Key] + (p.Value - (double)start[p.Key]) * f);
-                if (value != last[p.Key] || t >= 1)
+                if (value != last[p.Key] || finished)
                 {
                     camera.Set(p.Key, value);
                     last[p.Key] = value;
                 }
             }
-            if (t >= 1)
+            if (finished)
             {
                 bool reached = target.All(p => camera.Get(p.Key) == p.Value);
-                if (!reached && clock.Elapsed.TotalSeconds < duration + 2)
+                if (!reached && elapsed < duration + 2)
                     return;
                 movement.Stop();
                 clock.Stop();

@@ -16,7 +16,7 @@ namespace CameraControlStudio {
    foreach (var example in examples)
     config.Cameras[config.CameraId].Add(new Preset { Name = PresetIcons.GetTitle(example), IconId = example });
    Temporary.Add(new Preset{Name=UiText.T("Temporary preset name","Midlertidig position")});
-   panSteps.Value=config.PanSteps;fastPanSteps.Value=config.FastPanSteps;zoomSteps.Value=config.ZoomSteps;seconds.Value=config.Seconds;
+   LoadMovementSettings();
    profilesList.Items.Add("Standard");profileButton.Text="Standard ▾";
    cameraStatus.Text="Documentation · Demo camera";
    status.Text=UiText.T("Position reached.","Positionen er nået.");

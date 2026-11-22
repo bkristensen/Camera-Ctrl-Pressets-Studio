@@ -30,7 +30,7 @@ Meldet der Treiber das Erreichen der Position nicht rechtzeitig, wird die Zeile 
 
 ### Schwenken
 
-Verwenden Sie die inneren Pfeile am Steuerrad für normale Bewegungen und die äußeren für größere Schritte.
+Der innere Ring dient der Feinbewegung, der mittlere der normalen und der äußere der schnellen Bewegung. Ein Klick im inneren Ring bewegt die Kamera um einen Treiberschritt. Halten Sie einen Pfeil gedrückt und lassen Sie ihn los, um anzuhalten. Die Pfeiltasten bewegen die Kamera normal. Halten Sie Strg für Feinbewegung oder Umschalt für schnelle Bewegung.
 
 ### Zoomen
 

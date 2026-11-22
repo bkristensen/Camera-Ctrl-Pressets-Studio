@@ -37,6 +37,8 @@ namespace CameraControlStudio {
     public class SavedData {
         [DataMember] public Dictionary<string, List<Preset>> Cameras;
         [DataMember] public decimal Seconds;
+        [DataMember] public bool UseTransitionSpeed;
+        [DataMember] public int TransitionSpeedPercent, FinePanPercent;
         [DataMember] public int PanSteps, FastPanSteps, ZoomSteps;
         [DataMember] public bool ReverseHorizontal, ReverseVertical, AlwaysOnTop;
         [DataMember] public string CameraId;
@@ -54,6 +56,8 @@ namespace CameraControlStudio {
             ImageValues = new Dictionary<string, Dictionary<string, ImageValue>>();
             Cameras = new Dictionary<string, List<Preset>>();
             Seconds = 1.0m;
+            TransitionSpeedPercent = 30;
+            FinePanPercent = 50;
             PanSteps = 1;
             FastPanSteps = 4;
             ZoomSteps = 1;
