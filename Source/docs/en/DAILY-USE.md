@@ -4,13 +4,11 @@
 
 Start your streaming meeting in an app such as Zoom. Then open **Camera Control Studio**.
 
-![Main window with the settings pane closed](../images/screenshots/main.png)
+![Direction wheel and zoom slider beside the preset list](../images/screenshots/main.png)
 
 ## General
 
-Click **?** at the bottom for help with using and setting up the app.
-Hover over the small buttons to see what they do.
-When the camera reaches its limit, the control for that direction is disabled.
+Click **?** for help. Hover over a button to see its name and action. A direction locks at the last limit the camera can reach. [How automatic FOV works](SETUP.md#set-the-field-of-view)
 
 ## 1. Activate a preset
 
@@ -23,8 +21,7 @@ You can also select the row and press Enter.
 | Green | The camera driver reports that the saved coordinates have been reached. |
 | Blue | The preset is not marked as active. |
 
-Green confirms the coordinates reported by the driver. Check the picture in your stream.
-If the driver does not report that the camera has reached the preset in time, the row turns blue and a message appears in the status area. The icons stay visible throughout.
+Green means the driver reports the saved position and FOV, if saved. Check the picture in your stream. If the driver cannot confirm the shot in time, the row turns blue. Read the status message to see what happened.
 
 ## 2. Fine-tune the framing
 

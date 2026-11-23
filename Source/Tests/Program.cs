@@ -83,20 +83,48 @@ class Program {
   using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(legacy))) {
    var profile = (SavedData)serializer.ReadObject(stream);
    var preset = profile.Cameras["camera"][0];
-   Check(profile.StartupFieldOfView == 0 && !profile.AllowFieldOfViewChange, "legacy profiles get default FOV preferences");
+   Check(profile.StartupFieldOfView == 0 && !profile.AllowFieldOfViewChange && profile.AdjustFieldOfViewAtLimits,
+    "legacy profiles use the widest startup FOV and enable automatic changes");
    Check(!preset.FieldOfView.HasValue && preset.Position["Zoom"] == 100, "legacy presets keep their zoom without inventing an FOV");
    profile.StartupFieldOfView = -1;
    profile.AllowFieldOfViewChange = true;
+   profile.AdjustFieldOfViewAtLimits = false;
    preset.FieldOfView = 78;
    var copy = ProfileStore.Copy(profile);
-   Check(copy.StartupFieldOfView == -1 && copy.AllowFieldOfViewChange, "explicit FOV preferences survive profile copy");
+   Check(copy.StartupFieldOfView == -1 && copy.AllowFieldOfViewChange && !copy.AdjustFieldOfViewAtLimits,
+    "explicit FOV preferences survive profile copy");
    Check(copy.Cameras["camera"][0].FieldOfView == 78, "preset FOV survives profile copy");
   }
+ }
+ static void CheckFieldOfViewSteps() {
+  var fov = BrioFieldOfView.Degrees;
+  Check(ManualMotion.NextFieldOfView(fov, 65, -1) == 78 && ManualMotion.NextFieldOfView(fov, 78, -1) == 90 &&
+   ManualMotion.NextFieldOfView(fov, 90, -1) == null, "zoom out uses each wider FOV and stops at the widest");
+  Check(ManualMotion.NextFieldOfView(fov, 90, 1) == 78 && ManualMotion.NextFieldOfView(fov, 78, 1) == 65 &&
+   ManualMotion.NextFieldOfView(fov, 65, 1) == null, "zoom in uses each narrower FOV and stops at the narrowest");
+  Check(ManualMotion.NextFieldOfView(fov, 85, 1) == null, "unrecognized FOV does not trigger a device write");
+
+  var zoom = new Setting { Min = 100, Max = 500, Step = 5 };
+  double? wider = ManualMotion.EquivalentZoom(zoom, 100, 65, zoom, 78);
+  double? narrower = ManualMotion.EquivalentZoom(zoom, 500, 90, zoom, 78);
+  int zoomOut = ManualMotion.ZoomAfterFieldOfViewStep(zoom, 100, wider, -1);
+  int zoomIn = ManualMotion.ZoomAfterFieldOfViewStep(zoom, 500, narrower, 1);
+  Check(zoomOut == 125 && ManualMotion.CanMove(zoom, zoomOut, -1, false), "wider FOV leaves room to zoom out again");
+  Check(zoomIn == 405 && ManualMotion.CanMove(zoom, zoomIn, 1, false), "narrower FOV leaves room to zoom in again");
+  Check(ManualMotion.PanFieldOfViewOptions(fov, 78, zoom, 200).SequenceEqual(new[] { 90, 65 }),
+   "panning tries a wider FOV first and considers a narrower FOV if it can keep the crop");
+  Check(!ManualMotion.PanFieldOfViewOptions(fov, 90, zoom, 100).Any(),
+   "panning skips a narrower FOV that needs zoom below the device minimum");
+  var zeroBased = new Setting { Min = 0, Max = 10, Step = 2 };
+  Check(!ManualMotion.EquivalentZoom(zeroBased, 0, 65, zeroBased, 78).HasValue &&
+   ManualMotion.ZoomAfterFieldOfViewStep(zeroBased, 0, null, -1) == 2,
+   "drivers without a usable zoom ratio still leave a normal step after switching");
  }
  static void Main(){
   TestReleaseNotice();
   CheckMovementSpeeds();
   CheckFieldOfViewPersistence();
+  CheckFieldOfViewSteps();
   var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,1,false)&&ManualMotion.CanMove(setting,200,-1,false),"maximum blocks outward movement only");

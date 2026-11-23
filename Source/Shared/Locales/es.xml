@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations language="es">
   <text key=": this mode is not supported.">: este modo no es compatible.</text>
-  <text key="A profile with that name already exists.">Ya existe un perfil con ese nombre.</text>
+  <text key="A profile with that name already exists.">Ya hay un perfil con ese nombre.</text>
   <text key="About">Acerca de</text>
   <text key="Add permanent preset">Añadir preajuste permanente</text>
   <text key="Add temporary preset">Añadir preajuste temporal</text>
@@ -13,7 +13,7 @@
   <text key="Brightness">Brillo</text>
   <text key="Buy me a coffee">Invítame a un café</text>
   <text key="Camera">Cámara</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Rueda de cámara. Anillo interior fino, central normal y exterior rápido.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Rueda de la cámara. Anillo interior para movimientos finos. Central para normales. Exterior para rápidos.</text>
   <text key="Fine speed (% of Normal)">Velocidad fina (% de normal)</text>
   <text key="Use speed for preset transitions">Usar velocidad al cambiar de posición</text>
   <text key="Transition speed (%/s)">Velocidad de transición (%/s)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">Software de código abierto desarrollado por Brian Kristensen, Vejle Uhrhøj, Dinamarca.</text>
   <text key="Edit name and symbol">Cambiar nombre e icono</text>
   <text key="Edit preset">Editar preajuste</text>
-  <text key="Edit the active profile in Settings.">Edita el perfil activo en Configuración.</text>
+  <text key="Edit the active profile in Settings.">Abre Configuración para editar este perfil.</text>
   <text key="Exposure">Exposición</text>
   <text key="Fast pan steps">Pasos de giro rápido</text>
   <text key="Focus">Enfoque</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">El nombre ya existe.</text>
   <text key="New profile">Nuevo perfil</text>
   <text key="No camera found.">No se encontró ninguna cámara.</text>
-  <text key="No image controls available through the driver.">El controlador no ofrece ajustes de imagen.</text>
+  <text key="No image controls available through the driver.">El controlador de la cámara no ofrece ajustes de imagen.</text>
   <text key="Normal pan steps">Pasos de giro normal</text>
   <text key="Zoom steps">Pasos de zoom</text>
   <text key="Outer buttons: fast">Botones exteriores: rápidos</text>
@@ -61,9 +61,9 @@
   <text key="Ready">Listo</text>
   <text key="Rename profile">Cambiar nombre del perfil</text>
   <text key="Replace with current position">Reemplazar por la posición actual</text>
-  <text key="Report bugs or missing features">Informar de errores o funciones que faltan</text>
+  <text key="Report bugs or missing features">Informa de un fallo o sugiere una función</text>
   <text key="Reset image to driver defaults">Restablecer los ajustes de imagen del controlador</text>
-  <text key="Restart the application to change language.">Reinicia la aplicación para cambiar el idioma.</text>
+  <text key="Restart the application to change language.">Reinicia para cambiar de idioma.</text>
   <text key="Camera pan reverse left / right">Invertir giro de cámara izquierda/derecha</text>
   <text key="Camera pan reverse up / down">Invertir giro de cámara arriba/abajo</text>
   <text key="Saturation">Saturación</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">Tamaño máximo por archivo (MiB)</text>
   <text key="Maximum log files (including current)">Máximo de registros (incluido el actual)</text>
   <text key="An unexpected error occurred. The application will close.">Se produjo un error inesperado. La aplicación se cerrará.</text>
-  <text key="An unexpected error prevented this action.">Un error inesperado impidió esta acción.</text>
+  <text key="An unexpected error prevented this action.">La acción falló. Abre el registro para ver los detalles.</text>
   <text key="No diagnostic log is available.">No hay ningún registro de diagnóstico disponible.</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">Revisa el registro antes de adjuntarlo a una incidencia pública.</text>
   <text key="Report on GitHub">Informar en GitHub</text>
@@ -173,8 +173,8 @@
   <text key="Issues">Incidencias</text>
   <text key="Diagnostic logs">Registros de diagnóstico</text>
   <text key="Report a problem">Informar de un problema</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">Revisa los registros exportados y adjúntalos a tu incidencia en GitHub.</text>
-  <text key="Open guide viewer">Abrir el visor de guías</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">Revisa los registros y elimina los datos privados. Adjunta los archivos a la incidencia en GitHub.</text>
+  <text key="Open guide viewer">Abrir guías</text>
   <text key="Focus and exposure">Enfoque y exposición</text>
   <text key="Colour">Color</text>
   <text key="Light and detail">Luz y detalle</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">Restaurar el encuadre completo</text>
   <text key="Full frame">Encuadre completo</text>
   <text key="New release available">Nueva versión disponible</text>
+  <text key="Adjust field of view at zoom and pan limits">Cambiar el campo de visión al llegar al límite de zoom o giro</text>
+  <text key="Use the widest view and minimum zoom.">Usa el campo de visión más amplio y el zoom mínimo.</text>
+  <text key="Keep moving when the lens view offers more room.">Al llegar al límite, cambia de vista si puedes seguir moviendo la cámara.</text>
+  <text key="Widest available">Más amplio disponible</text>
+  <text key="Do nothing">No cambiar</text>
+  <text key="FOV unavailable">Campo de visión no disponible</text>
+  <text key="The camera did not apply the selected FOV.">La cámara no aplicó el campo de visión. Prueba otro.</text>
+  <text key="Could not apply the startup FOV.">No se pudo aplicar el campo de visión de inicio. Comprueba la vista actual.</text>
+  <text key="The preset FOV is unavailable on this camera.">La cámara no admite el campo de visión del preajuste. Elige otro.</text>
+  <text key="The camera did not reach the preset FOV.">La cámara no alcanzó el campo de visión guardado. Comprueba la imagen en directo.</text>
+  <text key="The camera could not restore its previous framing.">No se pudo recuperar el encuadre anterior. Comprueba la imagen en directo.</text>
+  <text key="Full frame restored.">Encuadre completo recuperado.</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">Zoom al mínimo. Comprueba en directo si ves el encuadre más amplio.</text>
+  <text key="Minimum zoom could not be verified.">No se pudo confirmar el zoom mínimo. Comprueba la imagen en directo.</text>
+  <text key="Camera position changed.">La cámara se movió de la posición guardada.</text>
+  <text key="Name">Nombre</text>
+  <text key="Pan">Giro</text>
+  <text key="Tilt">Inclinación</text>
 </translations>

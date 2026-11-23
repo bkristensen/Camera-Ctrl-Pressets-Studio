@@ -65,6 +65,8 @@ namespace CameraControlStudio
                 loadVideoControls, resetVideoControls })
                 SetMainToolTip(action, action.Text);
             SetMainToolTip(helpButton, UiText.T("User guides", "Brugervejledninger"));
+            SetMainToolTip(adjustFovAtLimits, adjustFovAtLimits.Text,
+                UiText.T("Keep moving when the lens view offers more room.", "Fortsæt bevægelsen, når et andet synsfelt giver mere plads."));
         }
 
         void WireVideoControls()

@@ -58,11 +58,17 @@ Hängt die Kamera kopfüber, testen Sie **Kameraschwenk oben / unten umkehren** 
 
 ### Sichtfeld einstellen
 
-Wählen Sie unter **Einstellungen → Bewegung** das **Sichtfeld beim Start**. Standard ist das **weiteste verfügbare Sichtfeld**. Wählen Sie **Nichts ändern**, um die Einstellung der Kamera zu behalten, oder für eine unterstützte Brio 90°, 78° oder 65°. Der Wert gilt bei der ersten Verbindung nach dem Start.
+Öffnen Sie **Einstellungen → Bewegung**. Wählen Sie unter **Sichtfeld beim Start** das weiteste Sichtfeld, einen Winkel oder **Nichts ändern**. Die App nutzt den Wert beim ersten Verbinden. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Auswahl zu zeigen. Das aktuelle Sichtfeld steht unter dem Kamerarad.
 
-Die Steuerung zeigt das vom Treiber gemeldete Sichtfeld. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Auswahl bei unterstützten Kameras anzuzeigen. **Vollbild** fordert das weiteste Sichtfeld und den kleinsten Zoom an. Neue Positionen speichern das Sichtfeld, soweit der Treiber es meldet. Frühere Positionen bleiben verwendbar.
+**Sichtfeld an Zoom- und Schwenkgrenzen wechseln** ist standardmäßig aktiv. Es funktioniert auch bei ausgeblendeter Auswahl, wenn der Treiber das Sichtfeld steuern kann.
 
-Bei inaktiver Steuerung liest die App Schwenken, Neigen, Zoom und Sichtfeld erneut. Prüfen Sie Änderungen in Logitech Brio Control anhand der Werte und des Ausschnitts in Zoom. Logitech Brio Control entscheidet selbst, wann seine Anzeige aktualisiert wird.
+- **Herauszoomen:** Bei minimalem Zoom und 65° wechselt der nächste Tastendruck bei einer Brio auf 78°. Die App passt den Zoom an, um den Ausschnitt möglichst zu halten. Drücken Sie erneut, um normal weiter herauszuzoomen. Ebenso geht es von 78° auf 90°. Die Taste stoppt bei 90° und kleinstem Zoom.
+- **Hineinzoomen:** Bei maximalem Zoom wechselt der nächste Druck zu einem engeren Sichtfeld. Bei einer Brio gilt 90° → 78° → 65°. Die Taste stoppt bei 65° und größtem Zoom.
+- **Nach links oder rechts schwenken:** An der Grenze versucht die App zuerst ein weiteres Sichtfeld. Sie passt den Zoom an, um den Ausschnitt möglichst zu halten. Lässt es der Zoom zu, testet sie auch ein engeres Sichtfeld. Kann sie in keinem Sichtfeld weiter schwenken, stellt sie den vorherigen Ausschnitt wieder her. Der Treiber bestimmt, wie genau der Ausschnitt erhalten bleibt.
+
+Die quadratische Taste mit Rahmensymbol stellt das weiteste Sichtfeld und den kleinsten Zoom ein. Der Schieberegler zoomt im aktuellen Sichtfeld. Deaktivieren Sie den automatischen Wechsel, um dieses Sichtfeld beim Zoomen und Schwenken beizubehalten.
+
+Positionen speichern Schwenk- und Neigewinkel, Zoom und das vom Treiber gemeldete Sichtfeld. Ältere Positionen behalten das aktuelle Sichtfeld. Prüfen Sie das Livebild, wenn Zoom, Logitech Brio Control oder eine andere App den Ausschnitt steuert. [Testschritte für Brio und Zoom auf Englisch](../VALIDATION.md#brio-field-of-view-and-zoom)
 
 ## 4. Bild anpassen und feste Positionen speichern
 
@@ -90,7 +96,7 @@ Wählen Sie die Sprache unter **Einstellungen → Anwendung → Profilsprache**.
 
 ## 6. Version und Projektinformationen
 
-Unter **Info** finden Sie die installierte Version, den Entwickler und Links zum Projekt und zum Support.
+Unter **Info** finden Sie die Version und Projektlinks. Zeigen Sie auf die Version, um die vollständige Build-ID zu sehen. Geben Sie sie an, wenn ein Fehler nur in einem bestimmten Build auftritt.
 
 ![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/about.png)
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations language="id">
   <text key=": this mode is not supported.">: mode ini tidak didukung.</text>
-  <text key="A profile with that name already exists.">Profil dengan nama tersebut sudah ada.</text>
+  <text key="A profile with that name already exists.">Nama ini sudah dipakai profil lain.</text>
   <text key="About">Tentang</text>
   <text key="Add permanent preset">Tambah preset permanen</text>
   <text key="Add temporary preset">Tambah preset sementara</text>
@@ -13,7 +13,7 @@
   <text key="Brightness">Kecerahan</text>
   <text key="Buy me a coffee">Traktir saya kopi</text>
   <text key="Camera">Kamera</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda arah kamera. Cincin dalam halus, tengah normal, luar cepat.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda arah kamera. Cincin dalam untuk gerakan halus, tengah untuk normal, dan luar untuk cepat.</text>
   <text key="Fine speed (% of Normal)">Kecepatan halus (% dari normal)</text>
   <text key="Use speed for preset transitions">Gunakan kecepatan untuk transisi</text>
   <text key="Transition speed (%/s)">Kecepatan transisi (%/d)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">Dikembangkan sebagai perangkat lunak sumber terbuka oleh Brian Kristensen, Vejle Uhrhøj, Denmark.</text>
   <text key="Edit name and symbol">Ubah nama dan ikon</text>
   <text key="Edit preset">Edit preset</text>
-  <text key="Edit the active profile in Settings.">Edit profil aktif di Pengaturan.</text>
+  <text key="Edit the active profile in Settings.">Buka Pengaturan untuk mengedit profil ini.</text>
   <text key="Exposure">Pencahayaan</text>
   <text key="Fast pan steps">Langkah putar cepat</text>
   <text key="Focus">Fokus</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">Nama sudah ada.</text>
   <text key="New profile">Profil baru</text>
   <text key="No camera found.">Kamera tidak ditemukan.</text>
-  <text key="No image controls available through the driver.">Driver tidak menyediakan kontrol gambar.</text>
+  <text key="No image controls available through the driver.">Driver kamera tidak menyediakan kontrol gambar.</text>
   <text key="Normal pan steps">Langkah putar normal</text>
   <text key="Zoom steps">Langkah zoom</text>
   <text key="Outer buttons: fast">Tombol luar: cepat</text>
@@ -61,9 +61,9 @@
   <text key="Ready">Siap</text>
   <text key="Rename profile">Ganti nama profil</text>
   <text key="Replace with current position">Ganti dengan posisi saat ini</text>
-  <text key="Report bugs or missing features">Laporkan bug atau fitur yang belum tersedia</text>
+  <text key="Report bugs or missing features">Laporkan bug atau usulkan fitur</text>
   <text key="Reset image to driver defaults">Pulihkan pengaturan gambar bawaan driver</text>
-  <text key="Restart the application to change language.">Mulai ulang aplikasi untuk mengganti bahasa.</text>
+  <text key="Restart the application to change language.">Mulai ulang untuk mengganti bahasa.</text>
   <text key="Camera pan reverse left / right">Balik gerakan kamera kiri/kanan</text>
   <text key="Camera pan reverse up / down">Balik gerakan kamera atas/bawah</text>
   <text key="Saturation">Saturasi</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">Ukuran maksimum per file (MiB)</text>
   <text key="Maximum log files (including current)">Jumlah log maksimum (termasuk log aktif)</text>
   <text key="An unexpected error occurred. The application will close.">Terjadi kesalahan tak terduga. Aplikasi akan ditutup.</text>
-  <text key="An unexpected error prevented this action.">Kesalahan tak terduga menghalangi tindakan ini.</text>
+  <text key="An unexpected error prevented this action.">Tindakan gagal. Buka log untuk melihat rinciannya.</text>
   <text key="No diagnostic log is available.">Tidak ada log diagnostik.</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">Tinjau log sebelum melampirkannya pada laporan publik.</text>
   <text key="Report on GitHub">Laporkan di GitHub</text>
@@ -173,8 +173,8 @@
   <text key="Issues">Laporan</text>
   <text key="Diagnostic logs">Log diagnostik</text>
   <text key="Report a problem">Laporkan masalah</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">Tinjau log yang diekspor dan lampirkan ke laporan GitHub Anda.</text>
-  <text key="Open guide viewer">Buka penampil panduan</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">Periksa log ekspor untuk data pribadi. Lampirkan file ke isu GitHub.</text>
+  <text key="Open guide viewer">Buka panduan</text>
   <text key="Focus and exposure">Fokus dan pencahayaan</text>
   <text key="Colour">Warna</text>
   <text key="Light and detail">Cahaya dan detail</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">Pulihkan bingkai penuh</text>
   <text key="Full frame">Bingkai penuh</text>
   <text key="New release available">Versi baru tersedia</text>
+  <text key="Adjust field of view at zoom and pan limits">Ubah bidang pandang pada batas zoom dan geser</text>
+  <text key="Use the widest view and minimum zoom.">Gunakan bidang pandang terlebar dan zoom minimum.</text>
+  <text key="Keep moving when the lens view offers more room.">Saat mencapai batas, ganti bidang pandang jika kamera bisa terus bergerak.</text>
+  <text key="Widest available">Terlebar yang tersedia</text>
+  <text key="Do nothing">Jangan ubah</text>
+  <text key="FOV unavailable">Bidang pandang tidak tersedia</text>
+  <text key="The camera did not apply the selected FOV.">Kamera tidak menerapkan bidang pandang pilihan. Coba yang lain.</text>
+  <text key="Could not apply the startup FOV.">Bidang pandang awal gagal diterapkan. Periksa tampilan saat ini.</text>
+  <text key="The preset FOV is unavailable on this camera.">Kamera tidak mendukung bidang pandang prasetel ini. Pilih prasetel lain.</text>
+  <text key="The camera did not reach the preset FOV.">Kamera tidak mencapai bidang pandang tersimpan. Periksa gambar langsung.</text>
+  <text key="The camera could not restore its previous framing.">Bingkai sebelumnya tidak dapat dipulihkan. Periksa gambar langsung.</text>
+  <text key="Full frame restored.">Bingkai penuh dipulihkan.</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">Zoom minimum tercapai. Periksa apakah gambar langsung menampilkan bidang terlebar.</text>
+  <text key="Minimum zoom could not be verified.">Zoom minimum tidak dapat dipastikan. Periksa gambar langsung.</text>
+  <text key="Camera position changed.">Kamera bergeser dari posisi tersimpan.</text>
+  <text key="Name">Nama</text>
+  <text key="Pan">Geser</text>
+  <text key="Tilt">Miring</text>
 </translations>

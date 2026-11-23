@@ -1,12 +1,12 @@
 # Project description
 
-Camera Control & Pressets Studio is a small Windows desktop tool for people who need repeatable camera framing. It can be used in presentations, classrooms, studios, demonstrations and other capture workflows. It is not tied to a particular event or streaming service.
+Camera Control Studio saves and recalls camera shots on Windows. Use it in a studio, a classroom or a live meeting. Your capture app handles the video.
 
 ## Core behaviour
 
-A two-ring controller provides normal and fast pan and tilt. The two zoom buttons use the configured zoom steps. The vertical slider sets the zoom directly. The central button selects a camera without opening a video preview.
+Use the three rings for fine, normal and fast moves. The zoom buttons move by the set step. The slider sets zoom within the current FOV. Use the centre button to choose a camera. The app opens no video preview. [Set movement and FOV](en/SETUP.md#set-the-field-of-view)
 
-Permanent positions contain a name, a stable symbol ID and supported camera coordinates. Combined symbols depict a left-to-right arrangement of subjects. Permanent positions are bold and listed first. Temporary positions are separate in-memory items and have no icon. Double-click and the play button recall either type.
+Permanent positions store a name, a stable symbol ID, and the pan, tilt, zoom and FOV the driver reports. Combined symbols show subjects from left to right. Permanent positions appear first in bold. Temporary positions have no icon and last until you close the app. Use Play or double-click to recall either type.
 
 A smooth interpolation requests intermediate coordinates. A row is yellow during the transition. It is green only when readback matches the target. A manual action, cancellation or failed transition clears that state. The driver determines actual motion granularity and latency.
 

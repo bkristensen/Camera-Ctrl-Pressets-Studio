@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations language="ar">
   <text key=": this mode is not supported.">: هذا الوضع غير مدعوم.</text>
-  <text key="A profile with that name already exists.">يوجد ملف تعريف بهذا الاسم بالفعل.</text>
+  <text key="A profile with that name already exists.">يوجد ملف تعريف بهذا الاسم.</text>
   <text key="About">حول التطبيق</text>
   <text key="Add permanent preset">إضافة إعداد مسبق دائم</text>
   <text key="Add temporary preset">إضافة إعداد مسبق مؤقت</text>
@@ -13,7 +13,7 @@
   <text key="Brightness">السطوع</text>
   <text key="Buy me a coffee">ادعمني بفنجان قهوة</text>
   <text key="Camera">الكاميرا</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">عجلة اتجاه الكاميرا. الحلقة الداخلية دقيقة والوسطى عادية والخارجية سريعة.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">عجلة اتجاه الكاميرا. الحلقة الداخلية للحركة الدقيقة، والوسطى للعادية، والخارجية للسريعة.</text>
   <text key="Fine speed (% of Normal)">السرعة الدقيقة (% من العادية)</text>
   <text key="Use speed for preset transitions">استخدام السرعة عند تبديل المواضع</text>
   <text key="Transition speed (%/s)">سرعة الانتقال (%/ث)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">برمجية مفتوحة المصدر طورها Brian Kristensen في Vejle Uhrhøj، الدنمارك.</text>
   <text key="Edit name and symbol">تعديل الاسم والأيقونة</text>
   <text key="Edit preset">تعديل الإعداد المسبق</text>
-  <text key="Edit the active profile in Settings.">عدّل ملف التعريف النشط في الإعدادات.</text>
+  <text key="Edit the active profile in Settings.">افتح الإعدادات لتعديل ملف التعريف هذا.</text>
   <text key="Exposure">التعريض الضوئي</text>
   <text key="Fast pan steps">خطوات التدوير السريع</text>
   <text key="Focus">التركيز البؤري</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">الاسم موجود بالفعل.</text>
   <text key="New profile">ملف تعريف جديد</text>
   <text key="No camera found.">لم يتم العثور على كاميرا.</text>
-  <text key="No image controls available through the driver.">برنامج التشغيل لا يوفّر إعدادات للصورة.</text>
+  <text key="No image controls available through the driver.">لا يوفر برنامج تشغيل الكاميرا أدوات ضبط الصورة.</text>
   <text key="Normal pan steps">خطوات التدوير العادي</text>
   <text key="Zoom steps">خطوات التقريب</text>
   <text key="Outer buttons: fast">الأزرار الخارجية: سريعة</text>
@@ -61,7 +61,7 @@
   <text key="Ready">جاهز</text>
   <text key="Rename profile">إعادة تسمية ملف التعريف</text>
   <text key="Replace with current position">الاستبدال بالموضع الحالي</text>
-  <text key="Report bugs or missing features">الإبلاغ عن خطأ أو ميزة ناقصة</text>
+  <text key="Report bugs or missing features">أبلغ عن خطأ أو اقترح ميزة</text>
   <text key="Reset image to driver defaults">استعادة إعدادات الصورة الافتراضية لبرنامج التشغيل</text>
   <text key="Restart the application to change language.">أعد تشغيل التطبيق لتغيير اللغة.</text>
   <text key="Camera pan reverse left / right">عكس حركة الكاميرا يسارًا ويمينًا</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">الحجم الأقصى لكل ملف (MiB)</text>
   <text key="Maximum log files (including current)">أقصى عدد للسجلات (بما فيها السجل الحالي)</text>
   <text key="An unexpected error occurred. The application will close.">حدث خطأ غير متوقع. سيغلق التطبيق.</text>
-  <text key="An unexpected error prevented this action.">حال خطأ غير متوقع دون تنفيذ هذا الإجراء.</text>
+  <text key="An unexpected error prevented this action.">تعذّر تنفيذ الإجراء. راجع السجل.</text>
   <text key="No diagnostic log is available.">لا يتوفر سجل تشخيصي.</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">راجع سجل التشخيص قبل إرفاقه ببلاغ عام.</text>
   <text key="Report on GitHub">الإبلاغ على GitHub</text>
@@ -173,8 +173,8 @@
   <text key="Issues">البلاغات</text>
   <text key="Diagnostic logs">سجلات التشخيص</text>
   <text key="Report a problem">الإبلاغ عن مشكلة</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">راجع السجلات المصدّرة وأرفقها ببلاغك على GitHub.</text>
-  <text key="Open guide viewer">فتح عارض الأدلة</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">راجع السجلات المصدّرة بحثًا عن بيانات خاصة. أرفق الملفات بالبلاغ على GitHub.</text>
+  <text key="Open guide viewer">افتح الأدلة</text>
   <text key="Focus and exposure">التركيز والتعريض</text>
   <text key="Colour">اللون</text>
   <text key="Light and detail">الإضاءة والتفاصيل</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">استعادة الإطار الكامل</text>
   <text key="Full frame">الإطار الكامل</text>
   <text key="New release available">يتوفر إصدار جديد</text>
+  <text key="Adjust field of view at zoom and pan limits">تغيير مجال الرؤية عند حدود التكبير والتحريك</text>
+  <text key="Use the widest view and minimum zoom.">استخدم أوسع مجال للرؤية وأقل تكبير.</text>
+  <text key="Keep moving when the lens view offers more room.">عند بلوغ الحد، غيّر مجال الرؤية إذا أمكن متابعة الحركة.</text>
+  <text key="Widest available">أوسع مجال متاح</text>
+  <text key="Do nothing">أبقِ الإعداد الحالي</text>
+  <text key="FOV unavailable">مجال الرؤية غير متاح</text>
+  <text key="The camera did not apply the selected FOV.">لم تطبّق الكاميرا مجال الرؤية المحدد. جرّب مجالًا آخر.</text>
+  <text key="Could not apply the startup FOV.">تعذّر ضبط مجال الرؤية عند التشغيل. تحقّق من العرض الحالي.</text>
+  <text key="The preset FOV is unavailable on this camera.">لا تدعم الكاميرا مجال الرؤية لهذا الإعداد. اختر إعدادًا آخر.</text>
+  <text key="The camera did not reach the preset FOV.">لم تصل الكاميرا إلى مجال الرؤية المحفوظ. تحقّق من الصورة المباشرة.</text>
+  <text key="The camera could not restore its previous framing.">تعذّرت استعادة الإطار السابق. تحقّق من الصورة المباشرة.</text>
+  <text key="Full frame restored.">تمت استعادة الإطار الكامل.</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">بلغ التكبير أدنى قيمة. تحقّق من أوسع مجال في الصورة المباشرة.</text>
+  <text key="Minimum zoom could not be verified.">تعذّر تأكيد أدنى تكبير. تحقّق من الصورة المباشرة.</text>
+  <text key="Camera position changed.">غادرت الكاميرا الموضع المحفوظ.</text>
+  <text key="Name">الاسم</text>
+  <text key="Pan">تحريك أفقي</text>
+  <text key="Tilt">إمالة</text>
 </translations>

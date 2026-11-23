@@ -12,7 +12,7 @@ Install the Visual Studio .NET desktop workload from `.vsconfig`. The applicatio
 
 Use the Properties panel to change `Dock`, `Margin`, `Padding`, row sizes and column sizes. Use the Document Outline to select nested panels. The main layout uses tables and a `SplitContainer`; avoid hard-coded screen coordinates.
 
-Each window has a public, parameterless constructor and inherits from `AppForm`. Layout is in its `.Designer.cs` file. Event handling is in the corresponding `.cs` file. The designer structure has compiled, but opening and saving each Form in Visual Studio still needs verification on Windows.
+Each window inherits from `AppForm` and has a public constructor without parameters. Put the layout in `.Designer.cs` and events in the matching `.cs` file. Set the form’s `Icon` property in the Designer. Check the layout in Visual Studio and in the running app.
 
 The camera wheel and blue buttons are drawn in `Controls/BlueControls.cs`. The vertical divider and zoom controls are in `Controls/MainViewControls.cs`. The designer can move and size these controls. Preset icon images and their neutral titles are in `Assets/PressetIcons.resx`, and `Controls/PresetIcons.cs` loads them. The Video tab contains designer-authored sliders. The running app shows the sliders supported by the camera driver.
 

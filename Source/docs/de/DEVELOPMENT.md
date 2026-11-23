@@ -12,7 +12,7 @@ Installieren Sie die .NET-Desktop-Workload von Visual Studio über `.vsconfig`. 
 
 Ändern Sie `Dock`, `Margin`, `Padding`, Zeilenhöhen und Spaltenbreiten im Eigenschaftenfenster. Die Dokumentgliederung hilft bei verschachtelten Panels. Das Hauptfenster nutzt Tabellen und einen `SplitContainer`. Vermeiden Sie feste Bildschirmkoordinaten.
 
-Jedes Fenster besitzt einen öffentlichen Konstruktor ohne Parameter und erbt von `AppForm`. Das Layout liegt in `.Designer.cs`, die Ereignisbehandlung in der zugehörigen `.cs`-Datei. Die Struktur wurde kompiliert. Das Öffnen und Speichern jeder Form im Visual-Studio-Designer muss noch unter Windows geprüft werden.
+Jedes Fenster erbt von `AppForm` und hat einen öffentlichen Konstruktor ohne Parameter. Legen Sie das Layout in `.Designer.cs` und Ereignisse in die zugehörige `.cs`-Datei. Setzen Sie `Icon` im Designer. Prüfen Sie das Layout in Visual Studio und in der laufenden App.
 
 Steuerrad und blaue Tasten werden in `Controls/BlueControls.cs` gezeichnet. Die vertikale Trennlinie und die Zoomsteuerung stehen in `Controls/MainViewControls.cs`. Der Designer kann diese Elemente verschieben und skalieren. Positionssymbole und ihre neutralen Titel stehen in `Assets/PressetIcons.resx` und werden von `Controls/PresetIcons.cs` geladen. Die Regler im Reiter Video sind im Designer bearbeitbar. Das Programm zeigt die vom Kameratreiber unterstützten Regler an.
 

@@ -13,7 +13,7 @@
   <text key="Brightness">Brilho</text>
   <text key="Buy me a coffee">Pague-me um café</text>
   <text key="Camera">Câmera</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda da câmera. Anel interno fino, central normal e externo rápido.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda da câmera. Anel interno para movimentos finos, central para normais e externo para rápidos.</text>
   <text key="Fine speed (% of Normal)">Velocidade fina (% da normal)</text>
   <text key="Use speed for preset transitions">Usar velocidade nas transições</text>
   <text key="Transition speed (%/s)">Velocidade de transição (%/s)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">Software de código aberto desenvolvido por Brian Kristensen, Vejle Uhrhøj, Dinamarca.</text>
   <text key="Edit name and symbol">Editar nome e ícone</text>
   <text key="Edit preset">Editar predefinição</text>
-  <text key="Edit the active profile in Settings.">Edite o perfil ativo nas configurações.</text>
+  <text key="Edit the active profile in Settings.">Abra Configurações para editar este perfil.</text>
   <text key="Exposure">Exposição</text>
   <text key="Fast pan steps">Passos de giro rápido</text>
   <text key="Focus">Foco</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">Esse nome já existe.</text>
   <text key="New profile">Novo perfil</text>
   <text key="No camera found.">Nenhuma câmera encontrada.</text>
-  <text key="No image controls available through the driver.">O driver não oferece controles de imagem.</text>
+  <text key="No image controls available through the driver.">O driver da câmera não oferece controles de imagem.</text>
   <text key="Normal pan steps">Passos de giro normal</text>
   <text key="Zoom steps">Passos de zoom</text>
   <text key="Outer buttons: fast">Botões externos: rápidos</text>
@@ -61,9 +61,9 @@
   <text key="Ready">Pronto</text>
   <text key="Rename profile">Renomear perfil</text>
   <text key="Replace with current position">Substituir pela posição atual</text>
-  <text key="Report bugs or missing features">Relatar erros ou funcionalidades ausentes</text>
+  <text key="Report bugs or missing features">Relatar um problema ou sugerir um recurso</text>
   <text key="Reset image to driver defaults">Restaurar padrões de imagem do driver</text>
-  <text key="Restart the application to change language.">Reinicie o aplicativo para mudar o idioma.</text>
+  <text key="Restart the application to change language.">Reinicie para trocar o idioma.</text>
   <text key="Camera pan reverse left / right">Inverter movimento da câmera esquerda/direita</text>
   <text key="Camera pan reverse up / down">Inverter movimento da câmera para cima/baixo</text>
   <text key="Saturation">Saturação</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">Tamanho máximo por arquivo (MiB)</text>
   <text key="Maximum log files (including current)">Máximo de logs (incluindo o atual)</text>
   <text key="An unexpected error occurred. The application will close.">Ocorreu um erro inesperado. O aplicativo será fechado.</text>
-  <text key="An unexpected error prevented this action.">Um erro inesperado impediu esta ação.</text>
+  <text key="An unexpected error prevented this action.">A ação falhou. Abra o log para ver os detalhes.</text>
   <text key="No diagnostic log is available.">Nenhum log de diagnóstico disponível.</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">Revise o log antes de anexá-lo a um relato público.</text>
   <text key="Report on GitHub">Relatar no GitHub</text>
@@ -173,8 +173,8 @@
   <text key="Issues">Relatos</text>
   <text key="Diagnostic logs">Logs de diagnóstico</text>
   <text key="Report a problem">Relatar um problema</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">Revise os logs exportados e anexe-os ao seu relato no GitHub.</text>
-  <text key="Open guide viewer">Abrir visualizador de guias</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">Verifique se os logs exportados contêm dados privados. Anexe os arquivos à issue no GitHub.</text>
+  <text key="Open guide viewer">Abrir guias</text>
   <text key="Focus and exposure">Foco e exposição</text>
   <text key="Colour">Cor</text>
   <text key="Light and detail">Luz e detalhes</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">Restaurar enquadramento completo</text>
   <text key="Full frame">Quadro completo</text>
   <text key="New release available">Nova versão disponível</text>
+  <text key="Adjust field of view at zoom and pan limits">Mudar o campo de visão nos limites de zoom e giro</text>
+  <text key="Use the widest view and minimum zoom.">Use o campo mais amplo e o zoom mínimo.</text>
+  <text key="Keep moving when the lens view offers more room.">No limite, mude o campo de visão se a câmera puder continuar o movimento.</text>
+  <text key="Widest available">Mais amplo disponível</text>
+  <text key="Do nothing">Manter como está</text>
+  <text key="FOV unavailable">Campo de visão indisponível</text>
+  <text key="The camera did not apply the selected FOV.">A câmera não aplicou o campo de visão. Tente outro.</text>
+  <text key="Could not apply the startup FOV.">Não foi possível definir o campo de visão inicial. Confira a vista atual.</text>
+  <text key="The preset FOV is unavailable on this camera.">A câmera não aceita o campo de visão desta predefinição. Escolha outra.</text>
+  <text key="The camera did not reach the preset FOV.">A câmera não atingiu o campo de visão salvo. Confira a imagem ao vivo.</text>
+  <text key="The camera could not restore its previous framing.">Não foi possível recuperar o enquadramento anterior. Confira a imagem ao vivo.</text>
+  <text key="Full frame restored.">Enquadramento completo restaurado.</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">Zoom mínimo atingido. Confira na imagem ao vivo se o enquadramento está no máximo.</text>
+  <text key="Minimum zoom could not be verified.">Não foi possível confirmar o zoom mínimo. Confira a imagem ao vivo.</text>
+  <text key="Camera position changed.">A câmera saiu da posição salva.</text>
+  <text key="Name">Nome</text>
+  <text key="Pan">Giro</text>
+  <text key="Tilt">Inclinação</text>
 </translations>

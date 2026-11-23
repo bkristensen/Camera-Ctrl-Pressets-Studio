@@ -4,9 +4,9 @@
 
 Lancez d’abord votre réunion en streaming, par exemple dans Zoom. Ouvrez ensuite **Camera Control Studio**.
 
-![Fenêtre principale avec le volet des paramètres fermé](../images/screenshots/main.png)
+![Fenêtre principale avec la molette de direction, le zoom et la liste des préréglages](../images/screenshots/main.png)
 
-Cliquez sur **?** en bas de la fenêtre pour consulter l’aide sur l’utilisation et la configuration de l’application. Survolez les petits boutons pour connaître leur fonction. Lorsque la caméra atteint une limite, la commande dans cette direction est désactivée.
+Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître son rôle. Chaque direction s’arrête à la dernière limite de la caméra.
 
 1. **Activer un préréglage**
 
@@ -28,7 +28,7 @@ Cliquez sur **?** en bas de la fenêtre pour consulter l’aide sur l’utilisat
 
    **Zoom**
 
-   Utilisez les boutons en forme de loupe. Maintenez l’un d’eux enfoncé pour répéter l’action. Faites glisser le curseur puis relâchez-le pour régler directement le zoom.
+   Utilisez les loupes pour zoomer ou dézoomer. Maintenez une touche pour répéter. Le zoom change quand vous déplacez le curseur.
 
    **Interrompre le panoramique**
 
@@ -72,4 +72,12 @@ Cliquez sur **?** en bas de la fenêtre pour consulter l’aide sur l’utilisat
 
 6. Faites glisser le séparateur vertical pour ajuster la largeur des deux zones. Le volet des paramètres est fermé au démarrage. Choisissez la langue dans **Paramètres → Application → Langue du profil**, puis redémarrez l’application. Survolez un petit bouton pour afficher son infobulle.
 
-[Installation · SmartScreen · FOV](../en/SETUP.md)
+## Champ de vision pendant le mouvement
+
+**Changer de champ de vision aux limites du zoom et du panoramique**
+
+L’option est activée par défaut. Sur une Brio, une pression de plus à la limite du zoom change le champ de vision. En dézoomant, vous passez de 65° à 78°, puis à 90°. En zoomant, l’ordre s’inverse. Entre deux champs, le zoom avance par crans. Si le panoramique atteint un bord, l’app essaie un champ plus large et ajuste le zoom pour conserver le cadrage. Désactivez l’option pour garder le champ actuel.
+
+Le bouton carré avec un cadre règle le champ le plus large et le zoom minimal. Les préréglages mémorisent le champ si le pilote sait le lire.
+
+[Installation et SmartScreen (anglais)](../en/SETUP.md)

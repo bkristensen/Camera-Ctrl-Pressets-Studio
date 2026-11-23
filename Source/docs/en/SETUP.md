@@ -58,11 +58,17 @@ For an upside-down camera, enable **Camera pan reverse up / down** and test Up. 
 
 ### Set the field of view
 
-Under **Settings → Movement**, choose **Field of view at startup**. **Widest available** is the default. Select **Do nothing** to keep the camera’s existing FOV, or choose 90°, 78°, or 65° for a supported Brio. The setting applies when the app first connects after launch.
+Open **Settings → Movement**. Set **Field of view at startup** to the widest view, a specific angle, or **Do nothing**. The app uses this choice the first time it connects. Turn on **Allow manual FOV changes** to show the FOV picker. The current view appears below the direction wheel.
 
-The main controls display the FOV the driver reports. Enable **Allow manual FOV changes** to show the picker when supported. **Full frame** requests the widest supported FOV and minimum zoom. Presets capture the FOV when the driver reports it. Existing presets without FOV continue to recall pan, tilt and zoom.
+**Adjust field of view at zoom and pan limits** is on by default. You can use it with the manual picker hidden. It works when the driver supports FOV.
 
-When the controls are idle, the app rereads pan, tilt, zoom and FOV. If you change them in Logitech Brio Control, check both the reported values and the framing in Zoom. Logitech Brio Control determines when its own interface refreshes.
+- **Zoom out:** At minimum zoom on a Brio set to 65°, press zoom out again to switch to 78°. That press changes the FOV and adjusts zoom to keep the shot close. The next press zooms out normally. The same steps take you from 78° to 90°. The button stops at 90° and minimum zoom.
+- **Zoom in:** At maximum zoom, press again to move toward a narrower FOV. On a Brio the order is 90° → 78° → 65°. The button stops at 65° and maximum zoom.
+- **Pan left or right:** At the edge, the app tries a wider view first. It adjusts zoom to keep the crop close. It can also try a narrower view if the zoom allows it. If no view lets it pan farther, it restores the previous shot. The driver controls how close the match is.
+
+Use the square button with the frame symbol to go straight to the widest FOV and minimum zoom. The slider still sets zoom within the current FOV. Turn off automatic FOV to keep zoom and pan within the current view.
+
+Presets save pan, tilt, zoom and the FOV reported by the driver. Older presets keep the current FOV. Check the live image if Zoom, Logitech Brio Control, or another app controls the crop. [Brio and Zoom test steps](../VALIDATION.md#brio-field-of-view-and-zoom)
 
 ## 4. Adjust the image and save permanent positions
 
@@ -90,7 +96,7 @@ Choose a language under **Settings → Application → Profile language**, then 
 
 ## 6. Version and project information
 
-Open **About** to find the installed version, developer credit and links to the project and support.
+Open **About** to see the installed version and project links. Hover over the version to see the full build ID. Include it when you report a problem with a specific build.
 
 ![About tab with the version, developer credit and project links](../images/screenshots/about.png)
 

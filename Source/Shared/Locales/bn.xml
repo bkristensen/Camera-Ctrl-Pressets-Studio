@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations language="bn">
   <text key=": this mode is not supported.">: এই মোডটি সমর্থিত নয়।</text>
-  <text key="A profile with that name already exists.">এই নামে একটি প্রোফাইল ইতিমধ্যে রয়েছে।</text>
+  <text key="A profile with that name already exists.">এই নামে একটি প্রোফাইল আছে।</text>
   <text key="About">পরিচিতি</text>
   <text key="Add permanent preset">স্থায়ী প্রিসেট যোগ করুন</text>
   <text key="Add temporary preset">অস্থায়ী প্রিসেট যোগ করুন</text>
@@ -13,7 +13,7 @@
   <text key="Brightness">উজ্জ্বলতা</text>
   <text key="Buy me a coffee">আমাকে এক কাপ কফি কিনে দিন</text>
   <text key="Camera">ক্যামেরা</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">ক্যামেরার দিকচক্র। ভেতরে সূক্ষ্ম, মাঝে স্বাভাবিক, বাইরে দ্রুত।</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">ক্যামেরার দিক নিয়ন্ত্রণের চাকা। ভেতরের বলয়ে সূক্ষ্ম, মাঝের বলয়ে স্বাভাবিক, বাইরের বলয়ে দ্রুত গতি।</text>
   <text key="Fine speed (% of Normal)">সূক্ষ্ম গতি (স্বাভাবিকের %)</text>
   <text key="Use speed for preset transitions">প্রিসেট বদলাতে গতি ব্যবহার করুন</text>
   <text key="Transition speed (%/s)">বদলের গতি (%/সেকেন্ড)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">ডেনমার্কের Vejle Uhrhøj-এ Brian Kristensen এটি মুক্ত উৎস সফটওয়্যার হিসেবে তৈরি করেছেন।</text>
   <text key="Edit name and symbol">নাম ও আইকন বদলান</text>
   <text key="Edit preset">প্রিসেট সম্পাদনা করুন</text>
-  <text key="Edit the active profile in Settings.">সেটিংসে সক্রিয় প্রোফাইল সম্পাদনা করুন।</text>
+  <text key="Edit the active profile in Settings.">এই প্রোফাইল বদলাতে সেটিংস খুলুন।</text>
   <text key="Exposure">এক্সপোজার</text>
   <text key="Fast pan steps">দ্রুত প্যানের ধাপ</text>
   <text key="Focus">ফোকাস</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">এই নামটি ইতিমধ্যে রয়েছে।</text>
   <text key="New profile">নতুন প্রোফাইল</text>
   <text key="No camera found.">কোনো ক্যামেরা পাওয়া যায়নি।</text>
-  <text key="No image controls available through the driver.">ড্রাইভার ছবির কোনো নিয়ন্ত্রণ দেয় না।</text>
+  <text key="No image controls available through the driver.">ক্যামেরার ড্রাইভারে ছবি নিয়ন্ত্রণের সুবিধা নেই।</text>
   <text key="Normal pan steps">স্বাভাবিক প্যানের ধাপ</text>
   <text key="Zoom steps">জুমের ধাপ</text>
   <text key="Outer buttons: fast">বাইরের বোতাম: দ্রুত</text>
@@ -61,7 +61,7 @@
   <text key="Ready">প্রস্তুত</text>
   <text key="Rename profile">প্রোফাইলের নাম বদলান</text>
   <text key="Replace with current position">বর্তমান অবস্থান দিয়ে প্রতিস্থাপন করুন</text>
-  <text key="Report bugs or missing features">ত্রুটি বা অনুপস্থিত সুবিধার কথা জানান</text>
+  <text key="Report bugs or missing features">ত্রুটি জানান বা নতুন সুবিধা প্রস্তাব করুন</text>
   <text key="Reset image to driver defaults">ড্রাইভারের ডিফল্ট ছবি সেটিংস ফিরিয়ে আনুন</text>
   <text key="Restart the application to change language.">ভাষা বদলাতে অ্যাপটি আবার চালু করুন।</text>
   <text key="Camera pan reverse left / right">ক্যামেরার বাম ও ডান চলাচল উল্টান</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">প্রতি ফাইলের সর্বোচ্চ আকার (MiB)</text>
   <text key="Maximum log files (including current)">সর্বোচ্চ লগ ফাইল (সক্রিয়টিসহ)</text>
   <text key="An unexpected error occurred. The application will close.">একটি অপ্রত্যাশিত ত্রুটি হয়েছে। অ্যাপটি বন্ধ হবে।</text>
-  <text key="An unexpected error prevented this action.">একটি অপ্রত্যাশিত ত্রুটির কারণে কাজটি করা যায়নি।</text>
+  <text key="An unexpected error prevented this action.">কাজটি হয়নি। বিস্তারিত জানতে লগ খুলুন।</text>
   <text key="No diagnostic log is available.">কোনো ডায়াগনস্টিক লগ নেই।</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">প্রকাশ্য রিপোর্টে যুক্ত করার আগে লগটি পর্যালোচনা করুন।</text>
   <text key="Report on GitHub">GitHub-এ রিপোর্ট করুন</text>
@@ -173,8 +173,8 @@
   <text key="Issues">সমস্যা রিপোর্ট</text>
   <text key="Diagnostic logs">ডায়াগনস্টিক লগ</text>
   <text key="Report a problem">সমস্যা রিপোর্ট করুন</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">এক্সপোর্ট করা লগগুলো পর্যালোচনা করে GitHub রিপোর্টে সংযুক্ত করুন।</text>
-  <text key="Open guide viewer">নির্দেশিকা ভিউয়ার খুলুন</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">লগে ব্যক্তিগত তথ্য আছে কি না দেখুন। ফাইলগুলো GitHub ইস্যুতে জুড়ুন।</text>
+  <text key="Open guide viewer">নির্দেশিকা খুলুন</text>
   <text key="Focus and exposure">ফোকাস ও এক্সপোজার</text>
   <text key="Colour">রং</text>
   <text key="Light and detail">আলো ও সূক্ষ্মতা</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">সম্পূর্ণ ফ্রেম ফিরিয়ে আনুন</text>
   <text key="Full frame">সম্পূর্ণ ফ্রেম</text>
   <text key="New release available">নতুন সংস্করণ উপলব্ধ</text>
+  <text key="Adjust field of view at zoom and pan limits">জুম ও প্যানের সীমায় দৃশ্যক্ষেত্র বদলান</text>
+  <text key="Use the widest view and minimum zoom.">সবচেয়ে প্রশস্ত দৃশ্যক্ষেত্র ও সর্বনিম্ন জুম ব্যবহার করুন।</text>
+  <text key="Keep moving when the lens view offers more room.">সীমায় পৌঁছালে, ক্যামেরা আরও নড়তে পারলে দৃশ্যক্ষেত্র বদলান।</text>
+  <text key="Widest available">সবচেয়ে প্রশস্ত</text>
+  <text key="Do nothing">যেমন আছে রাখুন</text>
+  <text key="FOV unavailable">দৃশ্যক্ষেত্র জানা যায়নি</text>
+  <text key="The camera did not apply the selected FOV.">ক্যামেরা বেছে নেওয়া দৃশ্যক্ষেত্র প্রয়োগ করেনি। অন্যটি চেষ্টা করুন।</text>
+  <text key="Could not apply the startup FOV.">চালুর সময় দৃশ্যক্ষেত্র সেট করা যায়নি। বর্তমান দৃশ্য দেখুন।</text>
+  <text key="The preset FOV is unavailable on this camera.">ক্যামেরা এই প্রিসেটের দৃশ্যক্ষেত্র ব্যবহার করতে পারে না। অন্য প্রিসেট বাছুন।</text>
+  <text key="The camera did not reach the preset FOV.">ক্যামেরা সংরক্ষিত দৃশ্যক্ষেত্রে পৌঁছায়নি। লাইভ ছবি দেখুন।</text>
+  <text key="The camera could not restore its previous framing.">আগের ফ্রেম ফেরানো যায়নি। লাইভ ছবি দেখুন।</text>
+  <text key="Full frame restored.">পুরো ফ্রেম ফেরানো হয়েছে।</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">সর্বনিম্ন জুমে পৌঁছেছে। লাইভ ছবিতে সবচেয়ে প্রশস্ত দৃশ্য মিলিয়ে নিন।</text>
+  <text key="Minimum zoom could not be verified.">সর্বনিম্ন জুম নিশ্চিত করা যায়নি। লাইভ ছবি দেখুন।</text>
+  <text key="Camera position changed.">ক্যামেরা সংরক্ষিত অবস্থান থেকে সরে গেছে।</text>
+  <text key="Name">নাম</text>
+  <text key="Pan">প্যান</text>
+  <text key="Tilt">টিল্ট</text>
 </translations>

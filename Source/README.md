@@ -1,10 +1,10 @@
-![Camera Control Studio main window with settings closed](docs/images/screenshots/main.png)
+![Main window with the direction wheel, zoom slider and preset list](docs/images/screenshots/main.png)
 
 # Camera Control Studio
 
 **[Windows downloads on GitHub Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)**
 
-A small Windows camera controller with named positions, precise movement and smooth preset transitions. Developed as open source by **Brian Kristensen, Vejle Uhrhøj, DK**.
+Control a Windows camera and save your shots as named positions. Recall a position when you need it. **Brian Kristensen, Vejle Uhrhøj, Denmark**, develops the app as open source.
 
 **Source version 0.7.0-beta.4.** The beta builds are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
 
@@ -32,7 +32,7 @@ Open **`Camera-Control-Pressets-Studio.sln`** in Visual Studio. Import `.vsconfi
 
 If WinGet is unavailable, install the SDK from [Microsoft](https://dotnet.microsoft.com/download/dotnet/8.0), reopen the terminal, then run the command above. The application targets .NET Framework 4.8; the tests target .NET 8. This is WinForms, not WPF.
 
-[Build and release guide](docs/en/BUILD-AND-RELEASE.md) · [Visual editing](docs/en/DEVELOPMENT.md) · [Project details](docs/PROJECT.md) · [FAQ](FAQ.md) · [Release checklist](docs/RELEASE-CHECKLIST.md)
+[Build and release guide](docs/en/BUILD-AND-RELEASE.md) · [Visual editing](docs/en/DEVELOPMENT.md) · [Project details](docs/PROJECT.md) · [FAQ](faq.md) · [Release checklist](docs/RELEASE-CHECKLIST.md)
 
 ## Contribute
 

@@ -4,9 +4,9 @@
 
 Inicie primeiro a reunião que você vai transmitir, por exemplo, no Zoom. Em seguida, abra o **Camera Control Studio**.
 
-![Janela principal com o painel de configurações fechado](../images/screenshots/main.png)
+![Janela principal com roda de direção, zoom e lista de predefinições](../images/screenshots/main.png)
 
-Clique em **?** na parte inferior para consultar a ajuda de uso e configuração. Passe o mouse sobre os botões pequenos para ver o que fazem. Quando a câmera atinge o limite, o controle naquela direção é desativado.
+Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua função. Cada direção para quando a câmera chega ao limite final.
 
 1. **Ativar uma predefinição**
 
@@ -28,7 +28,7 @@ Clique em **?** na parte inferior para consultar a ajuda de uso e configuração
 
    **Zoom**
 
-   Use os botões com lupa. Mantenha um deles pressionado para repetir a ação. Arraste e solte o controle deslizante para ajustar o zoom diretamente.
+   Use as lupas para aproximar ou afastar. Segure o botão para repetir. O zoom muda enquanto você arrasta o controle deslizante.
 
    **Interromper o movimento horizontal**
 
@@ -72,4 +72,12 @@ Clique em **?** na parte inferior para consultar a ajuda de uso e configuração
 
 6. Arraste a divisória vertical para ajustar a largura das duas áreas. O painel de configurações inicia fechado. Escolha o idioma em **Configurações → Aplicativo → Idioma do perfil** e reinicie o aplicativo. Passe o mouse sobre um botão pequeno para ver sua dica.
 
-[Installation · SmartScreen · FOV](../en/SETUP.md)
+## Campo de visão durante o movimento
+
+**Mudar o campo de visão nos limites de zoom e giro**
+
+A opção vem ativada. Em uma Brio, aperte o botão mais uma vez no limite do zoom para mudar o campo de visão. Ao afastar, ele passa de 65° para 78° e depois para 90°. Ao aproximar, a ordem se inverte. Entre mudanças, o zoom volta a avançar por etapas. No limite do giro, o aplicativo tenta um campo mais amplo e ajusta o zoom para manter o enquadramento. Desative a opção para manter o campo atual.
+
+O botão quadrado com moldura escolhe o campo mais amplo e o zoom mínimo. As predefinições guardam o campo quando o driver consegue lê-lo.
+
+[Instalação e SmartScreen (inglês)](../en/SETUP.md)

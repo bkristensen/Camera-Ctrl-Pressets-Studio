@@ -1,6 +1,6 @@
 # MSIX and Store distribution
 
-The repository includes an MSIX manifest template and `scripts/build-msix.ps1`. This is packaging preparation, not Store certification. The portable executable is currently unsigned.
+Use `scripts/build-msix.ps1` and the manifest template to build an MSIX package. Microsoft reviews the package before it can appear in the Store. The portable executable is unsigned.
 
 ## Choose a route
 

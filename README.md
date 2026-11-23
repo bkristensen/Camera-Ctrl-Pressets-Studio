@@ -1,8 +1,8 @@
-![Camera Control Studio main window with the direction wheel, zoom slider and presets. The settings pane is closed.](Source/docs/images/screenshots/main.png)
+![Main window with the direction wheel, zoom slider and preset list](Source/docs/images/screenshots/main.png)
 
 # Camera Control Studio
 
-**[Download Camera Control Studio](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/FAQ.md)
+**[Download Camera Control Studio](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/faq.md)
 
 Camera Control Studio is a Windows app for controlling a supported camera during video meetings, recordings and live streams. Move and zoom the camera manually, then save useful framings as named presets so you can switch between them during a session. For example, save a wide shot of a stage, a close-up of the speaker and a shot of the demonstration table.
 
@@ -18,7 +18,7 @@ Download the installer or portable ZIP under **Assets** on the [GitHub Releases 
 | Portable ZIP (`Camera-Control-Studio-*-portable.zip`) | Extract the entire archive and run `Camera Control Studio.exe`. The guides are in the extracted `docs` folder. |
 | `SHA256SUMS.txt` | When provided, compare the published SHA-256 hash with your downloaded file. |
 
-You need Windows with .NET Framework 4.8 and a camera whose Windows driver exposes the controls you want to use. The current beta packages are unsigned, so Windows may show a publisher warning. See the [FAQ](Source/FAQ.md) for details.
+Use Windows with .NET Framework 4.8 and a driver that supports the camera controls you need. Windows may warn about the unsigned beta. [Check the download](Source/docs/en/SETUP.md#install-and-verify-the-download)
 
 ## Get started
 
@@ -34,7 +34,7 @@ Store permanent presets by camera and profile. Give each preset a name and optio
 
 In **Settings → Movement**, choose a fixed duration or a movement speed for preset transitions. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
 
-![Presets tab with the permanent preset list and buttons to add, edit, replace or delete a preset](Source/docs/images/screenshots/presets.png)
+![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/presets.png)
 
 ## Settings, image controls and profiles
 

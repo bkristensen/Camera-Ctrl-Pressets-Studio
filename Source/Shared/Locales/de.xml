@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <translations language="de">
   <text key=": this mode is not supported.">: Dieser Modus wird nicht unterstützt.</text>
-  <text key="A profile with that name already exists.">Ein Profil mit diesem Namen existiert bereits.</text>
+  <text key="A profile with that name already exists.">Ein Profil verwendet diesen Namen bereits.</text>
   <text key="About">Über</text>
   <text key="Add permanent preset">Dauerhaftes Preset hinzufügen</text>
   <text key="Add temporary preset">Temporäres Preset hinzufügen</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">Als Open Source entwickelt von Brian Kristensen, Vejle Uhrhøj, DK.</text>
   <text key="Edit name and symbol">Name und Symbol bearbeiten</text>
   <text key="Edit preset">Preset bearbeiten</text>
-  <text key="Edit the active profile in Settings.">Das aktive Profil in den Einstellungen bearbeiten.</text>
+  <text key="Edit the active profile in Settings.">Öffnen Sie die Einstellungen, um dieses Profil zu bearbeiten.</text>
   <text key="Exposure">Belichtung</text>
   <text key="Fast pan steps">Schnelle Schwenkschritte</text>
   <text key="Focus">Fokus</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">Der Name existiert bereits.</text>
   <text key="New profile">Neues Profil</text>
   <text key="No camera found.">Keine Kamera gefunden.</text>
-  <text key="No image controls available through the driver.">Der Treiber bietet keine Bildeinstellungen an.</text>
+  <text key="No image controls available through the driver.">Der Kameratreiber bietet keine Bildregler.</text>
   <text key="Normal pan steps">Normale Schwenkschritte</text>
   <text key="Zoom steps">Zoomschritte</text>
   <text key="Outer buttons: fast">Äußere Tasten: schnell</text>
@@ -61,9 +61,9 @@
   <text key="Ready">Bereit</text>
   <text key="Rename profile">Profil umbenennen</text>
   <text key="Replace with current position">Durch aktuelle Position ersetzen</text>
-  <text key="Report bugs or missing features">Fehler oder fehlende Funktionen melden</text>
+  <text key="Report bugs or missing features">Fehler melden oder Funktion vorschlagen</text>
   <text key="Reset image to driver defaults">Bild auf Treiberstandard zurücksetzen</text>
-  <text key="Restart the application to change language.">Die Anwendung zum Sprachwechsel neu starten.</text>
+  <text key="Restart the application to change language.">Starten Sie neu, um die Sprache zu wechseln.</text>
   <text key="Camera pan reverse left / right">Kameraschwenk links / rechts umkehren</text>
   <text key="Camera pan reverse up / down">Kameraschwenk oben / unten umkehren</text>
   <text key="Saturation">Sättigung</text>
@@ -86,7 +86,8 @@
   <text key="Use a profile name of 1–60 characters without line breaks.">Einen Profilnamen mit 1–60 Zeichen ohne Zeilenumbrüche verwenden.</text>
   <text key="White balance">Weißabgleich</text>
   <text key="Zoom">Zoom</text>
-<text key="Moving to position…">Position wird angefahren…</text>  <text key="Preset icon: Armchairs">Sessel</text>
+<text key="Moving to position…">Position wird angefahren…</text>
+  <text key="Preset icon: Armchairs">Sessel</text>
   <text key="Preset icon: Cafe Table">Stehtisch</text>
   <text key="Preset icon: Cafe Table + Lectern">Stehtisch + Rednerpult</text>
   <text key="Preset icon: Cafe Table + Lectern + Cafe Table">Stehtisch + Rednerpult + Stehtisch</text>
@@ -156,7 +157,7 @@
   <text key="Maximum size per file (MiB)">Maximale Dateigröße (MiB)</text>
   <text key="Maximum log files (including current)">Maximale Anzahl an Protokollen (inklusive aktivem)</text>
   <text key="An unexpected error occurred. The application will close.">Ein unerwarteter Fehler ist aufgetreten. Die Anwendung wird geschlossen.</text>
-  <text key="An unexpected error prevented this action.">Ein unerwarteter Fehler hat diese Aktion verhindert.</text>
+  <text key="An unexpected error prevented this action.">Die Aktion ist fehlgeschlagen. Details stehen im Protokoll.</text>
   <text key="No diagnostic log is available.">Kein Diagnoseprotokoll verfügbar.</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">Prüfen Sie das Diagnoseprotokoll, bevor Sie es einem öffentlichen Issue beifügen.</text>
   <text key="Report on GitHub">Auf GitHub melden</text>
@@ -172,8 +173,8 @@
   <text key="Issues">Fehler melden</text>
   <text key="Diagnostic logs">Diagnoseprotokolle</text>
   <text key="Report a problem">Problem melden</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">Prüfen Sie die exportierten Protokolle und fügen Sie sie Ihrem GitHub-Issue bei.</text>
-  <text key="Open guide viewer">Handbücher öffnen</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">Prüfen Sie die exportierten Protokolle auf private Daten. Hängen Sie sie an Ihr GitHub-Issue an.</text>
+  <text key="Open guide viewer">Anleitungen öffnen</text>
   <text key="Focus and exposure">Fokus und Belichtung</text>
   <text key="Colour">Farbe</text>
   <text key="Light and detail">Licht und Details</text>
@@ -195,4 +196,22 @@
   <text key="Restore full frame">Vollbild wiederherstellen</text>
   <text key="Full frame">Vollbild</text>
   <text key="New release available">Neue Version verfügbar</text>
+  <text key="Adjust field of view at zoom and pan limits">Sichtfeld an Zoom- und Schwenkgrenzen wechseln</text>
+  <text key="Use the widest view and minimum zoom.">Weitestes Sichtfeld und kleinsten Zoom wählen.</text>
+  <text key="Keep moving when the lens view offers more room.">An der Grenze das Sichtfeld wechseln, wenn die Kamera weiterfahren kann.</text>
+  <text key="Widest available">Weitest verfügbar</text>
+  <text key="Do nothing">Nichts ändern</text>
+  <text key="FOV unavailable">Sichtfeld nicht verfügbar</text>
+  <text key="The camera did not apply the selected FOV.">Die Kamera hat das Sichtfeld nicht übernommen. Wählen Sie ein anderes.</text>
+  <text key="Could not apply the startup FOV.">Das Sichtfeld ließ sich beim Start nicht einstellen. Prüfen Sie die aktuelle Ansicht.</text>
+  <text key="The preset FOV is unavailable on this camera.">Die Kamera unterstützt das Sichtfeld dieser Position nicht. Wählen Sie eine andere Position.</text>
+  <text key="The camera did not reach the preset FOV.">Die Kamera hat das gespeicherte Sichtfeld nicht erreicht. Prüfen Sie das Livebild.</text>
+  <text key="The camera could not restore its previous framing.">Der vorige Ausschnitt ließ sich nicht wiederherstellen. Prüfen Sie das Livebild.</text>
+  <text key="Full frame restored.">Voller Bildausschnitt wiederhergestellt.</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">Kleinster Zoom erreicht. Prüfen Sie den weitesten Ausschnitt im Livebild.</text>
+  <text key="Minimum zoom could not be verified.">Der kleinste Zoom ist nicht bestätigt. Prüfen Sie das Livebild.</text>
+  <text key="Camera position changed.">Die Kamera hat die gespeicherte Position verlassen.</text>
+  <text key="Name">Name</text>
+  <text key="Pan">Schwenken</text>
+  <text key="Tilt">Neigen</text>
 </translations>

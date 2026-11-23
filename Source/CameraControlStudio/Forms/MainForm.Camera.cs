@@ -122,8 +122,12 @@ namespace CameraControlStudio
         void RefreshMotionControls()
         {
             int? fieldOfView = ReadFieldOfView();
-            if (fieldOfView != currentFieldOfView && fieldOfView.HasValue)
-                camera.RefreshMotionRanges();
+            if (fieldOfView != currentFieldOfView)
+            {
+                blockedFieldOfViewSteps.Clear();
+                if (fieldOfView.HasValue)
+                    camera.RefreshMotionRanges();
+            }
             currentFieldOfView = fieldOfView;
             UpdateFieldOfViewControls();
             foreach (var axis in axes)
@@ -166,16 +170,30 @@ namespace CameraControlStudio
         }
         void UpdateMotionAxis(string axis, Setting setting, int position)
         {
+            if (currentAxes.TryGetValue(axis, out int before) && before != position)
+            {
+                blockedFieldOfViewSteps.Clear();
+                if (axis == "Zoom")
+                {
+                    camera.RefreshMotionRanges();
+                    HasManualAxis(axis, out setting);
+                }
+            }
             currentAxes[axis] = position;
-            bool reverse = AxisReversed(axis);
-            bool negative = ManualMotion.CanMove(setting, position, -1, reverse);
-            bool positive = ManualMotion.CanMove(setting, position, 1, reverse);
+            bool negative = CanNudge(axis, setting, position, -1);
+            bool positive = CanNudge(axis, setting, position, 1);
             if (axis == "Zoom")
             {
                 zoomSlider.Position = ManualMotion.ZoomFraction(setting, position);
-                zoomSlider.Enabled = negative || positive;
+                zoomSlider.Enabled = setting.Snap(setting.Max) > setting.Min;
             }
             SetMotionAvailability(axis, negative, positive);
+        }
+        bool CanNudge(string axis, Setting setting, int position, int direction)
+        {
+            return !blockedFieldOfViewSteps.Contains((axis, direction)) &&
+                (ManualMotion.CanMove(setting, position, direction, AxisReversed(axis)) ||
+                AdjacentFieldOfView(axis, direction, currentFieldOfView).HasValue);
         }
         void SetMotionAvailability(string axis, bool negative, bool positive)
         {
@@ -196,15 +214,31 @@ namespace CameraControlStudio
                 throw new InvalidOperationException(UiText.T("This camera control is not supported.", "Denne kamerafunktion understøttes ikke."));
             int position = camera.Get(axis);
             bool reverse = AxisReversed(axis);
-            if (!ManualMotion.CanMove(setting, position, direction, reverse))
+            bool panStalled = false;
+            if (ManualMotion.CanMove(setting, position, direction, reverse) &&
+                !blockedFieldOfViewSteps.Contains((axis, direction)))
             {
-                UpdateMotionAxis(axis, setting, position);
-                return false;
+                SetManualPosition(axis, ManualMotion.Target(setting, position, direction, steps, reverse));
+                int updated = camera.Get(axis);
+                if (updated != position || axis != "Pan")
+                {
+                    UpdateMotionAxis(axis, setting, updated);
+                    if (axis == "Zoom" && updated != position)
+                    {
+                        RefreshMotionAxis("Pan");
+                        RefreshMotionAxis("Tilt");
+                    }
+                    RefreshPositionText();
+                    return CanNudge(axis, camera.Settings[axis], updated, direction);
+                }
+                panStalled = true;
             }
-            SetManualPosition(axis, ManualMotion.Target(setting, position, direction, steps, reverse));
-            position = camera.Get(axis);
-            UpdateMotionAxis(axis, setting, position);
-            return ManualMotion.CanMove(setting, position, direction, reverse);
+            bool crossed = CrossFieldOfViewLimit(axis, direction, steps, reverse);
+            if (!crossed && panStalled)
+                blockedFieldOfViewSteps.Add((axis, direction));
+            RefreshMotionControls();
+            return crossed && currentAxes.TryGetValue(axis, out int next) &&
+                HasManualAxis(axis, out setting) && CanNudge(axis, setting, next, direction);
         }
         void SetZoomPosition(double fraction)
         {
@@ -218,16 +252,24 @@ namespace CameraControlStudio
                 held.Stop();
                 SetManualPosition("Zoom", desired);
                 position = camera.Get("Zoom");
+                UpdateMotionAxis("Zoom", setting, position);
+                RefreshMotionAxis("Pan");
+                RefreshMotionAxis("Tilt");
+                RefreshPositionText();
             }
-            UpdateMotionAxis("Zoom", setting, position);
         }
         void SetManualPosition(string axis, int position)
+        {
+            BeginManualMovement();
+            camera.Set(axis, position);
+        }
+
+        void BeginManualMovement()
         {
             movement.Stop();
             clock.Stop();
             activity.Clear();
             presetGrid.Invalidate();
-            camera.Set(axis, position);
             status.Text = UiText.T("Manual movement", "Manuel bevægelse");
         }
 

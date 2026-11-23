@@ -1,6 +1,6 @@
 # Camera Control Studio on GitHub
 
-Open the [project on GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio). You can read the code, guides, releases and public reports without editing the project. Sign in to post or propose a change.
+Open the [project on GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio) to read code, guides, releases and public reports. Sign in to post or propose a change.
 
 | Area | Use it for |
 | --- | --- |

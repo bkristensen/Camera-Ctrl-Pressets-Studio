@@ -2,14 +2,12 @@
 
 # Daglig brug
 
-Start først dit stream møde i foreksempel Zoom. Åbn herefter **Camera Control Studio**.
+Start mødet i f.eks. Zoom. Åbn derefter **Camera Control Studio**.
 
-![Hovedvinduet med indstillingerne lukket](../images/screenshots/main.png)
+![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/main.png)
 
 ## Generelt
-Brug **?** nederst for at se mere info om brugen og opsætningen af programmet.
-Hold musen over de små knapper for at se deres funktion.
-Når kameraet når grænsen, deaktiveres styringen i den retning.
+Klik på **?** for at få hjælp. Hold musen over en knap for at se, hvad den gør. En retning stopper ved den sidste grænse, kameraet kan nå. [Sådan virker automatisk synsfelt](SETUP.md#indstil-synsfeltet)
 
 ## 1. Aktivér en position
 
@@ -22,8 +20,7 @@ Du kan også markere rækken og trykke Enter.
 | Grøn | Kameradriveren melder, at de gemte koordinater er nået. |
 | Blå | Positionen er ikke markeret som aktiv. |
 
-Grøn bekræfter de meldte koordinater. Kontrollér selve billedet i dit stream.
-Melder driveren ikke positionen nået i tide, bliver rækken blå, og statusområdet viser en besked. Ikonerne bliver stående hele tiden.
+Grøn betyder, at driveren melder de gemte koordinater og et eventuelt gemt synsfelt tilbage. Tjek billedet i din udsendelse. Rækken bliver blå, hvis driveren ikke kan bekræfte udsnittet i tide. Læs statusbeskeden for at se hvorfor.
 
 ## 2. Finjustér billedudsnittet
 

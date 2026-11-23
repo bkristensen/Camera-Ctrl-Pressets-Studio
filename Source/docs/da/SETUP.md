@@ -58,11 +58,17 @@ Hænger kameraet på hovedet, så prøv **Vend kamerapanorering op / ned**. Test
 
 ### Indstil synsfeltet
 
-Vælg **Synsfelt ved opstart** under **Indstillinger → Bevægelse**. Standardvalget er **Bredest muligt**. Vælg **Gør ingenting** for at beholde kameraets synsfelt, eller vælg 90°, 78° eller 65° på en understøttet Brio. Valget bruges, første gang programmet forbinder efter opstart.
+Åbn **Indstillinger → Bevægelse**. Vælg det bredeste synsfelt, en bestemt vinkel eller **Gør ingenting** under **Synsfelt ved opstart**. Valget gælder, første gang programmet forbinder. Slå **Tillad manuel ændring af synsfelt** til for at vise valglisten. Det aktuelle synsfelt står under kamerahjulet.
 
-Kamerastyringen viser det synsfelt, driveren melder tilbage. Slå **Tillad manuel ændring af synsfelt** til for at vise valglisten, når kameraet understøtter det. Knappen **Fuldt billede** forsøger at vælge bredeste synsfelt og mindste zoom. Positioner gemmer synsfeltet, når driveren kan aflæse det. Ældre positioner uden synsfelt kan stadig bruges.
+**Skift synsfelt ved grænsen for zoom og panorering** er slået til som standard. Det virker også, når valglisten er skjult, hvis driveren understøtter FOV.
 
-Når styringen står stille, aflæser programmet pan, tilt, zoom og synsfelt igen. Hvis du ændrer visningen i Logitech Brio Control, så tjek både værdierne og udsnittet i Zoom. Logitech Brio Control bestemmer selv, hvornår dens visning opdateres.
+- **Zoom ud:** Ved mindste zoom på en Brio med 65° skifter næste tryk til 78°. Trykket skifter synsfelt og justerer zoom, så udsnittet ændrer sig mindst muligt. Tryk igen for at zoome videre. Det samme sker fra 78° til 90°. Knappen stopper først ved 90° og mindste zoom.
+- **Zoom ind:** Ved højeste zoom skifter næste tryk til et smallere synsfelt. På en Brio er rækkefølgen 90° → 78° → 65°. Knappen stopper ved 65° og højeste zoom.
+- **Drej til venstre eller højre:** Ved kanten prøver programmet først et bredere synsfelt. Det justerer zoom, så udsnittet ændrer sig mindst muligt. Det kan også prøve et smallere synsfelt, hvis zoom tillader det. Hvis ingen af delene giver mere plads, gendanner programmet det forrige udsnit. Driveren afgør, hvor præcist udsnittet kan bevares.
+
+Brug den firkantede knap med rammesymbolet for at gå direkte til bredeste synsfelt og mindste zoom. Skyderen ændrer zoom inden for det aktuelle synsfelt. Slå automatisk skift fra, hvis zoom og panorering skal holde sig inden for det valgte synsfelt.
+
+Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Ældre positioner beholder kameraets aktuelle synsfelt. Tjek livebilledet, hvis Zoom, Logitech Brio Control eller et andet program også styrer udsnittet. [Testtrin for Brio og Zoom på engelsk](../VALIDATION.md#brio-field-of-view-and-zoom)
 
 ## 4. Tilpas billedet og gem faste positioner
 
@@ -90,7 +96,7 @@ Vælg sprog under **Indstillinger → Program → Profilsprog**, og genstart for
 
 ## 6. Version og projektoplysninger
 
-Åbn **Om** for at se den installerede version, udvikleren og links til projektet og support.
+Åbn **Om** for at se versionen og projektets links. Hold musen over versionen for at se det fulde build-id. Skriv det i en fejlrapport, hvis fejlen gælder en bestemt build.
 
 ![Fanen Om med version, udvikler og projektlinks](../images/screenshots/about.png)
 

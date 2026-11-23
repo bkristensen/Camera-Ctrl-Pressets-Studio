@@ -12,7 +12,7 @@ Installér Visual Studios .NET desktop-pakke fra `.vsconfig`. Programmet bruger 
 
 Brug Properties til at ændre `Dock`, `Margin`, `Padding`, rækkehøjder og kolonnebredder. Brug Document Outline til at vælge paneler inde i andre paneler. Hovedvinduet bruger tabeller og en `SplitContainer`. Undgå faste skærmkoordinater.
 
-Hvert vindue har en offentlig konstruktør uden parametre og arver fra `AppForm`. Layout ligger i `.Designer.cs`. Hændelser ligger i den tilhørende `.cs`-fil. Strukturen er kompileret, men åbning og lagring af hver Form i Visual Studio skal stadig testes på Windows.
+Hvert vindue arver fra `AppForm` og har en offentlig konstruktør uden parametre. Sæt layoutet i `.Designer.cs` og hændelserne i den tilhørende `.cs`-fil. Sæt vinduets `Icon` i designeren. Tjek layoutet i Visual Studio og i det kørende program.
 
 Kamerahjulet og de blå knapper tegnes i `Controls/BlueControls.cs`. Den lodrette skillelinje og zoomstyringen ligger i `Controls/MainViewControls.cs`. Designeren kan flytte og ændre størrelsen på dem. Positionsikoner og neutrale titler ligger i `Assets/PressetIcons.resx` og indlæses af `Controls/PresetIcons.cs`. Skyderne på fanen Video ligger i designeren. Programmet viser de skydere, som kameradriveren understøtter.
 

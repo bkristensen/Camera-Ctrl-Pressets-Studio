@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations language="hi">
   <text key=": this mode is not supported.">: यह मोड समर्थित नहीं है।</text>
-  <text key="A profile with that name already exists.">इस नाम की प्रोफ़ाइल पहले से मौजूद है।</text>
+  <text key="A profile with that name already exists.">इस नाम का प्रोफ़ाइल पहले से है।</text>
   <text key="About">परिचय</text>
   <text key="Add permanent preset">स्थायी प्रीसेट जोड़ें</text>
   <text key="Add temporary preset">अस्थायी प्रीसेट जोड़ें</text>
@@ -13,7 +13,7 @@
   <text key="Brightness">चमक</text>
   <text key="Buy me a coffee">मेरे लिए एक कॉफ़ी खरीदें</text>
   <text key="Camera">कैमरा</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">कैमरा दिशा चक्र। अंदर सूक्ष्म, बीच में सामान्य और बाहर तेज़।</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">कैमरे का दिशा चक्र। भीतरी घेरा बारीक चाल के लिए, बीच का सामान्य चाल के लिए और बाहरी तेज़ चाल के लिए।</text>
   <text key="Fine speed (% of Normal)">सूक्ष्म गति (सामान्य का %)</text>
   <text key="Use speed for preset transitions">प्रीसेट बदलने के लिए गति का उपयोग करें</text>
   <text key="Transition speed (%/s)">बदलाव की गति (%/सेकंड)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">इसे Brian Kristensen ने Vejle Uhrhøj, डेनमार्क में मुक्त स्रोत सॉफ़्टवेयर के रूप में विकसित किया है।</text>
   <text key="Edit name and symbol">नाम और आइकन बदलें</text>
   <text key="Edit preset">प्रीसेट बदलें</text>
-  <text key="Edit the active profile in Settings.">सेटिंग्स में सक्रिय प्रोफ़ाइल बदलें।</text>
+  <text key="Edit the active profile in Settings.">इस प्रोफ़ाइल को बदलने के लिए सेटिंग्स खोलें।</text>
   <text key="Exposure">एक्सपोज़र</text>
   <text key="Fast pan steps">तेज़ पैन के चरण</text>
   <text key="Focus">फ़ोकस</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">यह नाम पहले से मौजूद है।</text>
   <text key="New profile">नई प्रोफ़ाइल</text>
   <text key="No camera found.">कोई कैमरा नहीं मिला।</text>
-  <text key="No image controls available through the driver.">ड्राइवर में कोई छवि नियंत्रण उपलब्ध नहीं है।</text>
+  <text key="No image controls available through the driver.">कैमरे का ड्राइवर चित्र के नियंत्रण नहीं देता।</text>
   <text key="Normal pan steps">सामान्य पैन के चरण</text>
   <text key="Zoom steps">ज़ूम के चरण</text>
   <text key="Outer buttons: fast">बाहरी बटन: तेज़</text>
@@ -61,9 +61,9 @@
   <text key="Ready">तैयार</text>
   <text key="Rename profile">प्रोफ़ाइल का नाम बदलें</text>
   <text key="Replace with current position">मौजूदा स्थिति से बदलें</text>
-  <text key="Report bugs or missing features">बग या अनुपलब्ध सुविधाओं की सूचना दें</text>
+  <text key="Report bugs or missing features">ख़राबी बताएँ या सुविधा सुझाएँ</text>
   <text key="Reset image to driver defaults">छवि के डिफ़ॉल्ट ड्राइवर मान बहाल करें</text>
-  <text key="Restart the application to change language.">भाषा बदलने के लिए ऐप फिर से शुरू करें।</text>
+  <text key="Restart the application to change language.">भाषा बदलने के लिए ऐप फिर शुरू करें।</text>
   <text key="Camera pan reverse left / right">कैमरे की बाएँ/दाएँ गति उलटें</text>
   <text key="Camera pan reverse up / down">कैमरे की ऊपर/नीचे गति उलटें</text>
   <text key="Saturation">संतृप्ति</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">अधिकतम फ़ाइल आकार (MiB)</text>
   <text key="Maximum log files (including current)">अधिकतम लॉग फ़ाइलें (मौजूदा सहित)</text>
   <text key="An unexpected error occurred. The application will close.">एक अनपेक्षित त्रुटि हुई। ऐप बंद हो जाएगा।</text>
-  <text key="An unexpected error prevented this action.">एक अनपेक्षित त्रुटि के कारण यह काम पूरा नहीं हुआ।</text>
+  <text key="An unexpected error prevented this action.">काम पूरा नहीं हुआ। विवरण के लिए लॉग खोलें।</text>
   <text key="No diagnostic log is available.">कोई निदान लॉग उपलब्ध नहीं है।</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">सार्वजनिक रिपोर्ट में जोड़ने से पहले लॉग की समीक्षा करें।</text>
   <text key="Report on GitHub">GitHub पर रिपोर्ट करें</text>
@@ -173,8 +173,8 @@
   <text key="Issues">समस्याएँ</text>
   <text key="Diagnostic logs">निदान लॉग</text>
   <text key="Report a problem">समस्या की रिपोर्ट करें</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">निर्यात किए गए लॉग जाँचें और उन्हें GitHub रिपोर्ट में जोड़ें।</text>
-  <text key="Open guide viewer">मार्गदर्शिका दर्शक खोलें</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">निर्यात किए गए लॉग में निजी जानकारी जाँचें। फ़ाइलें GitHub इश्यू में जोड़ें।</text>
+  <text key="Open guide viewer">मार्गदर्शिकाएँ खोलें</text>
   <text key="Focus and exposure">फ़ोकस और एक्सपोज़र</text>
   <text key="Colour">रंग</text>
   <text key="Light and detail">रोशनी और विवरण</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">पूरा फ़्रेम वापस लाएँ</text>
   <text key="Full frame">पूरा फ़्रेम</text>
   <text key="New release available">नया संस्करण उपलब्ध है</text>
+  <text key="Adjust field of view at zoom and pan limits">ज़ूम और पैन की सीमा पर दृश्य क्षेत्र बदलें</text>
+  <text key="Use the widest view and minimum zoom.">सबसे चौड़ा दृश्य क्षेत्र और न्यूनतम ज़ूम चुनें।</text>
+  <text key="Keep moving when the lens view offers more room.">सीमा पर, अगर कैमरा आगे बढ़ सकता है तो दृश्य क्षेत्र बदलें।</text>
+  <text key="Widest available">सबसे चौड़ा उपलब्ध</text>
+  <text key="Do nothing">जैसा है वैसा रखें</text>
+  <text key="FOV unavailable">दृश्य क्षेत्र उपलब्ध नहीं है</text>
+  <text key="The camera did not apply the selected FOV.">कैमरे ने चुना हुआ दृश्य क्षेत्र लागू नहीं किया। दूसरा विकल्प आज़माएँ।</text>
+  <text key="Could not apply the startup FOV.">शुरुआती दृश्य क्षेत्र सेट नहीं हुआ। मौजूदा दृश्य जाँचें।</text>
+  <text key="The preset FOV is unavailable on this camera.">कैमरा इस प्रीसेट का दृश्य क्षेत्र इस्तेमाल नहीं कर सकता। दूसरा प्रीसेट चुनें।</text>
+  <text key="The camera did not reach the preset FOV.">कैमरा सहेजे गए दृश्य क्षेत्र तक नहीं पहुँचा। लाइव चित्र देखें।</text>
+  <text key="The camera could not restore its previous framing.">पिछला फ़्रेम वापस नहीं आया। लाइव चित्र देखें।</text>
+  <text key="Full frame restored.">पूरा फ़्रेम वापस आ गया।</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">ज़ूम न्यूनतम है। सबसे चौड़े दृश्य के लिए लाइव चित्र जाँचें।</text>
+  <text key="Minimum zoom could not be verified.">न्यूनतम ज़ूम की पुष्टि नहीं हुई। लाइव चित्र जाँचें।</text>
+  <text key="Camera position changed.">कैमरा सहेजी गई स्थिति से हट गया।</text>
+  <text key="Name">नाम</text>
+  <text key="Pan">पैन</text>
+  <text key="Tilt">टिल्ट</text>
 </translations>

@@ -14,6 +14,6 @@ Hvis vejledningen også skal rettes, findes den i den tilsvarende sprogmappe und
 
 ## Afprøv og send til gennemgang
 
-Kør `powershell -File scripts/check-translations.ps1` fra `Source`, og byg løsningen. Start programmet med `--lang=<kode>`. Tjek dialogbokse, minimumsvinduesstørrelse, lange tekster, tastaturnavigation, tekstretning og udfyldte pladsholdere.
+Kør `powershell -File scripts/check-translations.ps1` fra `Source`, og byg løsningen. Start programmet med `--lang=<kode>`. Prøv dialogbokse i det mindste vindue. Brug tastaturet. Tjek lange etiketter, tekstretning og beskeder med udfyldte pladsholdere.
 
 Følg [GitHub-vejledningen](GITHUB.md) for at oprette en pull request. Angiv sprog, kode, ændringer og hvad du har afprøvet. Vedhæft gerne et billede, hvis det hjælper med at vurdere layoutet. Send eventuelle rettelser til samme branch under gennemgangen.

@@ -18,7 +18,7 @@ Choose one command. The installer build includes the portable build.
 | Portable ZIP | `./scripts/build.ps1` | `artifacts/Camera-Control-Studio-portable.zip` |
 | Portable ZIP and Inno installer | `./scripts/build-installer.ps1` | Portable ZIP plus `artifacts/installers/CamCtrlStudio-Setup-<version>.exe` |
 
-`build.ps1` runs `check-translations.ps1`, builds Release with locked dependencies, runs the automated tests, and creates the ZIP. The raw Windows executable is at `CameraControlStudio/bin/Release/net48/Camera Control Studio.exe`. The portable staging folder is `artifacts/portable/Camera-Control-Studio/`. Publish the complete ZIP so the executable, configuration, runtime libraries, licences and guides travel together.
+`build.ps1` checks translations, builds Release with locked dependencies, runs tests and creates the ZIP. Find the executable in `CameraControlStudio/bin/Release/net48` and the staged files in `artifacts/portable/Camera-Control-Studio`. Publish the whole ZIP. The app needs its configuration, libraries and guides.
 
 To use an individual or organization code-signing certificate available in the current user's Windows certificate store, pass its thumbprint and the path to SignTool when building. The installer command signs the application before packing it and signs the completed installer with a timestamp.
 

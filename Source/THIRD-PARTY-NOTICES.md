@@ -1,6 +1,6 @@
 # Third-party notices
 
-The application uses the Windows and .NET Framework platform APIs. The guide viewer uses the Microsoft Edge WebView2 Runtime installed on the user's computer.
+The app uses Windows and .NET Framework APIs. Guide Viewer runs on the Microsoft Edge WebView2 Runtime installed on your PC.
 
 - [Markdig](docs/licenses/Markdig.txt) renders Markdown and is distributed under the BSD 2-Clause licence.
 - [Microsoft WebView2 SDK](docs/licenses/WebView2.txt) provides the WinForms viewer and print APIs. See its [notices](docs/licenses/WebView2-NOTICE.txt) and the SDK licence for redistribution terms.

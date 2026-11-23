@@ -189,7 +189,11 @@ namespace CameraControlStudio
             };
             foreach (var control in new[] { reverseX, reverseY, alwaysTop })
                 control.CheckedChanged += (o, e) => { if (!applying) { TopMost = alwaysTop.Checked; MarkDirty(); } };
-            reverseX.CheckedChanged += (o, e) => Run(() => RefreshMotionAxis("Pan"));
+            reverseX.CheckedChanged += (o, e) => Run(() =>
+            {
+                blockedFieldOfViewSteps.Clear();
+                RefreshMotionAxis("Pan");
+            });
             reverseY.CheckedChanged += (o, e) => Run(() => RefreshMotionAxis("Tilt"));
             streamingCheck.CheckedChanged += (o, e) => { if (applying) return; permission.Reset(); Disconnect(); MarkDirty(); };
             language.DrawItem += DrawComboItem;
@@ -232,7 +236,9 @@ namespace CameraControlStudio
             Link(issuesLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues");
             Link(discussionLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions");
             Link(coffeeLink, "https://buymeacoffee.com/brislingveo");
-            versionLabel.Text = "MIT · " + Application.ProductVersion;
+            versionLabel.Text = "MIT · " + DiagnosticLog.DisplayAppVersion;
+            versionLabel.AccessibleDescription = DiagnosticLog.AppVersion;
+            mainToolTips.SetToolTip(versionLabel, DiagnosticLog.AppVersion);
             FormClosing += (o, e) =>
             {
                 StopMotion();
@@ -268,6 +274,8 @@ namespace CameraControlStudio
             SetMainToolTip(settingsButton, UiText.T("Settings", "Indstillinger"));
             SetMainToolTip(profileButton, UiText.T("Choose profile", "Vælg profil"));
             SetMainToolTip(wheel, wheel.AccessibleName);
+            SetMainToolTip(fullFrame, UiText.T("Restore full frame", "Gendan fuldt billede"),
+                UiText.T("Use the widest view and minimum zoom.", "Brug det bredeste synsfelt og mindste zoom."));
             SetMainToolTip(zoomSlider, UiText.T("Zoom", "Zoom"),
                 UiText.T("Drag to adjust zoom.", "Træk for at justere zoom."));
         }

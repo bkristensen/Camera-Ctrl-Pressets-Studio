@@ -4,9 +4,9 @@
 
 Inicia primero la reunión que vas a transmitir, por ejemplo, en Zoom. Luego abre **Camera Control Studio**.
 
-![Ventana principal con el panel de configuración cerrado](../images/screenshots/main.png)
+![Ventana principal con la rueda de dirección, el zoom y la lista de preajustes](../images/screenshots/main.png)
 
-Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración. Pasa el cursor sobre los botones pequeños para ver su función. Cuando la cámara llega a un límite, se desactiva el control de esa dirección.
+Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué hace. Cada dirección se detiene al alcanzar el último límite de la cámara.
 
 1. **Activa un preajuste**
 
@@ -28,7 +28,7 @@ Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración
 
    **Zoom**
 
-   Usa los botones de lupa. Mantén pulsado uno de ellos para repetir la acción. Arrastra y suelta el deslizador para ajustar el zoom directamente.
+   Usa los botones de lupa para acercar o alejar. Mantén pulsado para repetir. El zoom cambia mientras arrastras el deslizador.
 
    **Interrumpir el giro**
 
@@ -72,4 +72,12 @@ Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración
 
 6. Arrastra el separador vertical para cambiar el ancho de ambas zonas. La configuración está cerrada al arrancar. Cambia el idioma en **Configuración → Aplicación → Idioma del perfil** y reinicia la aplicación. Sitúa el cursor sobre los botones pequeños para ver su función.
 
-[Installation · SmartScreen · FOV](../en/SETUP.md)
+## Campo de visión al mover la cámara
+
+**Cambiar el campo de visión al llegar al límite de zoom o giro**
+
+La opción está activada de forma predeterminada. Con una Brio, un paso adicional cambia de campo al llegar al límite del zoom. Al alejarte pasa de 65° a 78° y luego a 90°. Al acercarte va al revés. Entre cambios, el zoom vuelve a avanzar por pasos. Si el giro se detiene en el borde, la app prueba un campo más amplio y ajusta el zoom para conservar el encuadre. Desactiva la opción para mantener el campo actual.
+
+El botón cuadrado con un marco abre el campo más amplio y pone el zoom al mínimo. Los preajustes guardan el campo de visión cuando el controlador lo permite.
+
+[Instalación y SmartScreen (inglés)](../en/SETUP.md)

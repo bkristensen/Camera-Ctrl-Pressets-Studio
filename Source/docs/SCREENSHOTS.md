@@ -1,6 +1,6 @@
 # Application screenshots
 
-The user guides share these screenshots of the English interface. They show the Standard profile with a demo camera and sample presets. The Video examples illustrate controls that a camera driver may expose.
+These images show the English interface with the Standard profile, a demo camera and sample presets. Your camera driver decides which controls appear in Video.
 
 | View | What it shows |
 | --- | --- |

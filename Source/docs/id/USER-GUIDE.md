@@ -4,9 +4,9 @@
 
 Mulai dulu rapat yang akan disiarkan, misalnya di Zoom. Setelah itu, buka **Camera Control Studio**.
 
-![Jendela utama dengan panel pengaturan tertutup](../images/screenshots/main.png)
+![Jendela utama dengan roda arah, zoom, dan daftar prasetel](../images/screenshots/main.png)
 
-Klik **?** di bagian bawah untuk melihat bantuan penggunaan dan pengaturan. Arahkan kursor ke tombol kecil untuk melihat fungsinya. Saat kamera mencapai batas gerak, kontrol untuk arah tersebut dinonaktifkan.
+Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsinya. Setiap arah berhenti di batas terakhir kamera.
 
 1. **Mengaktifkan preset**
 
@@ -28,7 +28,7 @@ Klik **?** di bagian bawah untuk melihat bantuan penggunaan dan pengaturan. Arah
 
    **Zoom**
 
-   Gunakan tombol kaca pembesar. Tahan tombol untuk mengulangi tindakan. Seret lalu lepas penggeser untuk mengatur zoom langsung.
+   Gunakan tombol kaca pembesar untuk memperbesar atau memperkecil. Tahan tombol untuk mengulang. Zoom berubah saat penggeser diseret.
 
    **Menghentikan gerakan horizontal**
 
@@ -72,4 +72,12 @@ Klik **?** di bagian bawah untuk melihat bantuan penggunaan dan pengaturan. Arah
 
 6. Seret pemisah vertikal untuk mengatur lebar kedua area. Panel pengaturan selalu tertutup saat aplikasi dimulai. Pilih bahasa di **Pengaturan → Aplikasi → Bahasa profil**, lalu mulai ulang aplikasi. Arahkan kursor ke tombol kecil untuk melihat keterangannya.
 
-[Installation · SmartScreen · FOV](../en/SETUP.md)
+## Bidang pandang saat kamera bergerak
+
+**Ubah bidang pandang pada batas zoom dan geser**
+
+Pilihan ini aktif secara bawaan. Pada Brio, tekan sekali lagi setelah zoom mencapai batas. Saat memperkecil, bidang pandang berubah dari 65° ke 78°, lalu ke 90°. Saat memperbesar, urutannya terbalik. Di antara perubahan, zoom kembali bergerak per langkah. Di batas geser, aplikasi mencoba bidang yang lebih lebar dan menyesuaikan zoom agar bingkai tetap serupa. Matikan pilihan untuk mempertahankan bidang saat ini.
+
+Tombol persegi dengan lambang bingkai memilih bidang terlebar dan zoom minimum. Prasetel menyimpan bidang pandang jika driver dapat membacanya.
+
+[Penginstalan dan SmartScreen (bahasa Inggris)](../en/SETUP.md)

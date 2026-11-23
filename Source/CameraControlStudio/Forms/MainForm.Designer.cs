@@ -111,6 +111,7 @@ namespace CameraControlStudio {
             this.startupFovLabel = new System.Windows.Forms.Label();
             this.startupFov = new System.Windows.Forms.ListBox();
             this.allowFov = new System.Windows.Forms.CheckBox();
+            this.adjustFovAtLimits = new System.Windows.Forms.CheckBox();
             this.fovDisplay = new System.Windows.Forms.Panel();
             this.fieldOfViewLabel = new System.Windows.Forms.Label();
             this.fieldOfViewPicker = new System.Windows.Forms.ComboBox();
@@ -308,7 +309,7 @@ namespace CameraControlStudio {
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.motionPosition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.motionPosition.Name = "motionPosition";
             this.motionPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,10 +331,11 @@ namespace CameraControlStudio {
             this.fieldOfViewPicker.TabIndex = 2;
             this.fieldOfViewPicker.Visible = false;
             this.fullFrame.AccessibleName = "Restore full frame";
-            this.fullFrame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fullFrame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fullFrame.Image = ((System.Drawing.Image)(resources.GetObject("fullFrame.Image")));
+            this.fullFrame.Size = new System.Drawing.Size(42, 42);
             this.fullFrame.Name = "fullFrame";
             this.fullFrame.TabIndex = 3;
-            this.fullFrame.Text = "Full frame";
             this.motionPanel.Size = new System.Drawing.Size(430, 411);
             this.motionPanel.TabIndex = 0;
             // 
@@ -666,12 +668,14 @@ namespace CameraControlStudio {
             this.generalFields.Controls.Add(this.startupFov, 1, 9);
             this.generalFields.Controls.Add(this.allowFov, 0, 10);
             this.generalFields.SetColumnSpan(this.allowFov, 2);
+            this.generalFields.Controls.Add(this.adjustFovAtLimits, 0, 11);
+            this.generalFields.SetColumnSpan(this.adjustFovAtLimits, 2);
             this.generalFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generalFields.Location = new System.Drawing.Point(10, 10);
             this.generalFields.Margin = new System.Windows.Forms.Padding(0);
             this.generalFields.Name = "generalFields";
             this.generalFields.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
-            this.generalFields.RowCount = 12;
+            this.generalFields.RowCount = 13;
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
@@ -683,6 +687,7 @@ namespace CameraControlStudio {
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.startupFovLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startupFovLabel.Name = "startupFovLabel";
@@ -697,6 +702,12 @@ namespace CameraControlStudio {
             this.allowFov.Name = "allowFov";
             this.allowFov.TabIndex = 10;
             this.allowFov.Text = "Allow manual FOV changes";
+            this.adjustFovAtLimits.Checked = true;
+            this.adjustFovAtLimits.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.adjustFovAtLimits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adjustFovAtLimits.Name = "adjustFovAtLimits";
+            this.adjustFovAtLimits.TabIndex = 11;
+            this.adjustFovAtLimits.Text = "Adjust field of view at zoom and pan limits";
             this.generalFields.Size = new System.Drawing.Size(0, 258);
             this.generalFields.TabIndex = 0;
             // 
@@ -2185,6 +2196,7 @@ namespace CameraControlStudio {
         private Label startupFovLabel;
         private ListBox startupFov;
         private CheckBox allowFov;
+        private CheckBox adjustFovAtLimits;
         private Panel fovDisplay;
         private Label fieldOfViewLabel;
         private ComboBox fieldOfViewPicker;

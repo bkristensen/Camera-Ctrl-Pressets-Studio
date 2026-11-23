@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations language="zh">
   <text key=": this mode is not supported.">：此模式不受支持。</text>
-  <text key="A profile with that name already exists.">已存在同名配置。</text>
+  <text key="A profile with that name already exists.">已有同名配置。</text>
   <text key="About">关于</text>
   <text key="Add permanent preset">添加永久预设</text>
   <text key="Add temporary preset">添加临时预设</text>
@@ -13,7 +13,7 @@
   <text key="Brightness">亮度</text>
   <text key="Buy me a coffee">请我喝杯咖啡</text>
   <text key="Camera">摄像头</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">摄像机方向轮。内环微调，中环常速，外环快速。</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">摄像头方向轮。内圈微调，中圈正常移动，外圈快速移动。</text>
   <text key="Fine speed (% of Normal)">微调速度（常速的百分比）</text>
   <text key="Use speed for preset transitions">按速度切换预设位置</text>
   <text key="Transition speed (%/s)">切换速度（%/秒）</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">由丹麦 Vejle Uhrhøj 的 Brian Kristensen 开源开发。</text>
   <text key="Edit name and symbol">编辑名称和图标</text>
   <text key="Edit preset">编辑预设</text>
-  <text key="Edit the active profile in Settings.">在设置中编辑当前配置。</text>
+  <text key="Edit the active profile in Settings.">打开设置以编辑此配置。</text>
   <text key="Exposure">曝光</text>
   <text key="Fast pan steps">快速转动步数</text>
   <text key="Focus">对焦</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">名称已存在。</text>
   <text key="New profile">新建配置</text>
   <text key="No camera found.">未找到摄像头。</text>
-  <text key="No image controls available through the driver.">驱动程序未提供图像设置。</text>
+  <text key="No image controls available through the driver.">摄像头驱动程序没有提供图像调节功能。</text>
   <text key="Normal pan steps">正常转动步数</text>
   <text key="Zoom steps">缩放步数</text>
   <text key="Outer buttons: fast">外侧按钮：快速</text>
@@ -61,9 +61,9 @@
   <text key="Ready">就绪</text>
   <text key="Rename profile">重命名配置</text>
   <text key="Replace with current position">替换为当前位置</text>
-  <text key="Report bugs or missing features">报告错误或缺少的功能</text>
+  <text key="Report bugs or missing features">报告故障或建议功能</text>
   <text key="Reset image to driver defaults">将图像设置恢复为驱动程序默认值</text>
-  <text key="Restart the application to change language.">请重启应用以切换语言。</text>
+  <text key="Restart the application to change language.">重启应用以切换语言。</text>
   <text key="Camera pan reverse left / right">反转摄像头左右转动</text>
   <text key="Camera pan reverse up / down">反转摄像头上下转动</text>
   <text key="Saturation">饱和度</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">每个文件的最大大小 (MiB)</text>
   <text key="Maximum log files (including current)">日志文件上限（含当前日志）</text>
   <text key="An unexpected error occurred. The application will close.">发生意外错误。应用程序将关闭。</text>
-  <text key="An unexpected error prevented this action.">发生意外错误，无法完成此操作。</text>
+  <text key="An unexpected error prevented this action.">操作失败。请查看日志。</text>
   <text key="No diagnostic log is available.">没有可用的诊断日志。</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">请在将日志附加到公开问题之前检查其内容。</text>
   <text key="Report on GitHub">在 GitHub 上报告</text>
@@ -173,8 +173,8 @@
   <text key="Issues">问题报告</text>
   <text key="Diagnostic logs">诊断日志</text>
   <text key="Report a problem">报告问题</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">请检查导出的日志，然后将其附加到 GitHub 问题。</text>
-  <text key="Open guide viewer">打开指南查看器</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">检查导出的日志，去除私人信息。将日志附到 GitHub 议题。</text>
+  <text key="Open guide viewer">打开指南</text>
   <text key="Focus and exposure">对焦与曝光</text>
   <text key="Colour">颜色</text>
   <text key="Light and detail">光线与细节</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">恢复完整画面</text>
   <text key="Full frame">完整画面</text>
   <text key="New release available">有新版本可用</text>
+  <text key="Adjust field of view at zoom and pan limits">在缩放和平移到达极限时切换视野</text>
+  <text key="Use the widest view and minimum zoom.">使用最宽视野和最小缩放倍率。</text>
+  <text key="Keep moving when the lens view offers more room.">到达极限时，如果切换视野后还能继续移动，就切换视野。</text>
+  <text key="Widest available">最宽可用视野</text>
+  <text key="Do nothing">保持不变</text>
+  <text key="FOV unavailable">无法读取视野</text>
+  <text key="The camera did not apply the selected FOV.">摄像头未应用所选视野。请试试其他视野。</text>
+  <text key="Could not apply the startup FOV.">无法应用启动视野。请检查当前画面。</text>
+  <text key="The preset FOV is unavailable on this camera.">摄像头不支持此预设的视野。请选择其他预设。</text>
+  <text key="The camera did not reach the preset FOV.">摄像头未达到预设的视野。请查看实时画面。</text>
+  <text key="The camera could not restore its previous framing.">未能恢复先前的构图。请查看实时画面。</text>
+  <text key="Full frame restored.">已恢复完整画面。</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">已达到最小缩放倍率。请在实时画面中确认视野是否最宽。</text>
+  <text key="Minimum zoom could not be verified.">无法确认是否已达到最小缩放倍率。请查看实时画面。</text>
+  <text key="Camera position changed.">摄像头已离开预设位置。</text>
+  <text key="Name">名称</text>
+  <text key="Pan">平移</text>
+  <text key="Tilt">俯仰</text>
 </translations>

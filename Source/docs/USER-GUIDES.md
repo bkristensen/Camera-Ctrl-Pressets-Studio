@@ -1,8 +1,8 @@
 # Camera Control Studio user guides
 
-The guides are included with both the Windows installer and the portable ZIP. Click **?** in Camera Control Studio to read the guides in the active profile’s language. With Settings open, help starts with setup. The viewer can print the current guide with a title, app version, date and page numbers.
+The installer and portable ZIP include the guides. Click **?** to read them in your profile’s language. Open Settings first to go straight to setup. Click **Print** to print the current guide with its title, app version, date and page numbers.
 
-The viewer uses [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). You can also open **Camera Control Studio User Guides** from the Start menu after installing, or browse the `docs` folder in the extracted ZIP.
+The viewer needs [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). You can also open **Camera Control Studio User Guides** from the Start menu after installing. For the portable version, open the `docs` folder in the extracted ZIP.
 
 | Language | Guide |
 | --- | --- |

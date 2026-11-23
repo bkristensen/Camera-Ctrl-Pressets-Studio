@@ -11,6 +11,7 @@ namespace CameraControlStudio
         bool startupFramingPending = true;
         bool loggedFieldOfViewReadFailure;
         readonly Dictionary<string, int> currentAxes = new Dictionary<string, int>();
+        readonly HashSet<(string Axis, int Direction)> blockedFieldOfViewSteps = new HashSet<(string, int)>();
 
         void WireFraming()
         {
@@ -37,6 +38,15 @@ namespace CameraControlStudio
                 UpdateFieldOfViewControls();
                 MarkDirty();
             };
+            adjustFovAtLimits.CheckedChanged += (sender, args) =>
+            {
+                if (applying || config == null)
+                    return;
+                config.AdjustFieldOfViewAtLimits = adjustFovAtLimits.Checked;
+                blockedFieldOfViewSteps.Clear();
+                Run(RefreshMotionControls);
+                MarkDirty();
+            };
             fieldOfViewPicker.SelectionChangeCommitted += (sender, args) => Run(() =>
             {
                 if (fieldOfViewPicker.SelectedIndex < 0 || camera?.FieldOfView == null)
@@ -60,7 +70,115 @@ namespace CameraControlStudio
             int index = Array.IndexOf(BrioFieldOfView.Degrees, config.StartupFieldOfView);
             startupFov.SelectedIndex = index >= 0 ? index + 2 : config.StartupFieldOfView == -1 ? 1 : 0;
             allowFov.Checked = config.AllowFieldOfViewChange;
+            adjustFovAtLimits.Checked = config.AdjustFieldOfViewAtLimits;
             UpdateFieldOfViewControls();
+        }
+
+        int? AdjacentFieldOfView(string axis, int direction, int? current)
+        {
+            if (config?.AdjustFieldOfViewAtLimits != true || camera?.FieldOfView == null ||
+                !current.HasValue || blockedFieldOfViewSteps.Contains((axis, direction)))
+                return null;
+            if (axis == "Zoom")
+                return ManualMotion.NextFieldOfView(BrioFieldOfView.Degrees, current.Value, direction);
+            if (axis == "Pan" && HasManualAxis("Zoom", out var zoom) && currentAxes.TryGetValue("Zoom", out int position))
+                return ManualMotion.PanFieldOfViewOptions(BrioFieldOfView.Degrees, current.Value, zoom, position)
+                    .Select(value => (int?)value).FirstOrDefault();
+            return null;
+        }
+
+        bool CrossFieldOfViewLimit(string axis, int direction, int steps, bool reverse)
+        {
+            if (config?.AdjustFieldOfViewAtLimits != true || (axis != "Zoom" && axis != "Pan"))
+                return false;
+            int? originalFov = ReadFieldOfView();
+            int? next = AdjacentFieldOfView(axis, direction, originalFov);
+            if (!next.HasValue || !HasManualAxis("Zoom", out var originalZoom))
+                return false;
+
+            var pose = ReadPose();
+            BeginManualMovement();
+            try
+            {
+                if (axis == "Zoom")
+                {
+                    if (SetFieldOfViewForMovement(next.Value, out var zoom))
+                    {
+                        double? equivalent = ManualMotion.EquivalentZoom(originalZoom, pose["Zoom"],
+                            originalFov.Value, zoom, next.Value);
+                        SetAxisIfDifferent("Zoom", ManualMotion.ZoomAfterFieldOfViewStep(zoom,
+                            camera.Get("Zoom"), equivalent, direction));
+                        camera.RefreshMotionRanges();
+                        RestorePanAndTilt(pose);
+                        return true;
+                    }
+                }
+                else
+                {
+                    foreach (int candidate in ManualMotion.PanFieldOfViewOptions(BrioFieldOfView.Degrees,
+                        originalFov.Value, originalZoom, pose["Zoom"]))
+                    {
+                        if (!SetFieldOfViewForMovement(candidate, out var zoom))
+                            continue;
+                        double? equivalent = ManualMotion.EquivalentZoom(originalZoom, pose["Zoom"],
+                            originalFov.Value, zoom, candidate);
+                        if (!equivalent.HasValue || Math.Abs(equivalent.Value - zoom.Snap(equivalent.Value)) > zoom.Step)
+                            continue;
+                        SetAxisIfDifferent("Zoom", zoom.Snap(equivalent.Value));
+                        camera.RefreshMotionRanges();
+                        if (!HasManualAxis("Pan", out var pan) ||
+                            !ManualMotion.CanMove(pan, pose["Pan"], direction, reverse))
+                            continue;
+                        RestorePanAndTilt(pose);
+                        int previous = camera.Get("Pan");
+                        if (previous != pan.Snap(pose["Pan"]))
+                            continue;
+                        SetAxisIfDifferent("Pan", ManualMotion.Target(pan, previous, direction, steps, reverse));
+                        int actual = camera.Get("Pan");
+                        if ((actual - (long)pose["Pan"]) * (reverse ? -direction : direction) > 0)
+                            return true;
+                    }
+                }
+            }
+            catch (COMException ex) when (!(ex is CameraUnavailableException))
+            {
+                DiagnosticLog.Current.Write("WARNING", "Change field of view at a movement limit", ex);
+            }
+
+            camera.FieldOfView.Write(originalFov.Value);
+            camera.RefreshMotionRanges();
+            if (HasManualAxis("Zoom", out var restoredZoom))
+            {
+                SetAxisIfDifferent("Zoom", restoredZoom.Snap(pose["Zoom"]));
+                camera.RefreshMotionRanges();
+            }
+            RestorePanAndTilt(pose);
+            if (camera.FieldOfView.Read() != originalFov.Value ||
+                pose.Any(value => !HasManualAxis(value.Key, out _) || camera.Get(value.Key) != value.Value))
+                throw new InvalidOperationException(UiText.T("The camera could not restore its previous framing.",
+                    "Kameraet kunne ikke gendanne det forrige udsnit."));
+            blockedFieldOfViewSteps.Add((axis, direction));
+            return false;
+        }
+
+        bool SetFieldOfViewForMovement(int degrees, out Setting zoom)
+        {
+            camera.FieldOfView.Write(degrees);
+            camera.RefreshMotionRanges();
+            return HasManualAxis("Zoom", out zoom) && camera.FieldOfView.Read() == degrees;
+        }
+
+        void RestorePanAndTilt(Dictionary<string, int> pose)
+        {
+            foreach (string axis in new[] { "Pan", "Tilt" })
+                if (pose.TryGetValue(axis, out int value) && HasManualAxis(axis, out var setting))
+                    SetAxisIfDifferent(axis, setting.Snap(value));
+        }
+
+        void SetAxisIfDifferent(string axis, int value)
+        {
+            if (camera.Get(axis) != value)
+                camera.Set(axis, value);
         }
 
         string ApplyStartupFieldOfView()

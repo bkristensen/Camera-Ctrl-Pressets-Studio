@@ -1,6 +1,8 @@
 # FAQ
 
-**Why is the row yellow?** The app is moving towards the stored position. It becomes green when the camera driver reports the stored coordinates. Manual movement clears the colour. Green does not verify the actual video picture.
+**Why is the row yellow?** The camera is moving. The row turns green when the driver reports the saved coordinates and FOV, if saved. Check the shot in the live video. Manual movement clears the colour.
+
+**Why can I still press Zoom out at minimum zoom?** Automatic FOV can switch to a wider view. Zoom continues on the next press. The reverse works at maximum zoom. [Set the field of view](docs/en/SETUP.md#set-the-field-of-view)
 
 **Why does movement still look stepped?** The camera driver accepts a limited set of positions. Longer transition time cannot create finer hardware steps.
 
@@ -18,7 +20,7 @@
 
 **Will this work with another camera?** It may work if its Windows driver exposes the standard controls used by the app. Please report the model, driver version and controls that work. Do not assume that every USB camera supports pan or zoom.
 
-**Why does Windows warn about the download?** The supplied build is unsigned. Read the source, download from the project's release page and compare published hashes. A checksum checks file integrity; it does not establish publisher identity. Do not turn off Windows protection to install it.
+**Why does Windows warn about the download?** The beta is unsigned. Get it from the project’s release page and compare the published hash if there is one. Keep Windows protection on. [Check the download and read the SmartScreen warning](docs/en/SETUP.md#install-and-verify-the-download)
 
 **Where can I request a feature?** Open an issue and describe the problem, expected behaviour and one example. Use Discussions when you want to explore an idea first.
 

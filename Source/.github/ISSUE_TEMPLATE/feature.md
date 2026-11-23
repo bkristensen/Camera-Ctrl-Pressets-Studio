@@ -7,7 +7,7 @@ labels: enhancement
 What is difficult today?
 
 ## Proposed behaviour
-Describe one concrete use case.
+Describe one task and how you would use the new feature.
 
 ## Simpler alternatives
 Could settings or an existing feature solve it?

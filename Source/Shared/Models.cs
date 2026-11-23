@@ -45,6 +45,7 @@ namespace CameraControlStudio {
         // Zero selects the widest supported FOV. Minus one leaves the device unchanged.
         [DataMember(EmitDefaultValue = false)] public int StartupFieldOfView;
         [DataMember(EmitDefaultValue = false)] public bool AllowFieldOfViewChange;
+        [DataMember] public bool AdjustFieldOfViewAtLimits;
         [DataMember] public string CameraId;
         [DataMember(EmitDefaultValue = false)] public string Language;
         // Retain the serialized key so existing user choices survive the upgrade.
@@ -65,6 +66,7 @@ namespace CameraControlStudio {
             PanSteps = 1;
             FastPanSteps = 4;
             ZoomSteps = 1;
+            AdjustFieldOfViewAtLimits = true;
             Layout = new ProfileLayout();
         }
     }

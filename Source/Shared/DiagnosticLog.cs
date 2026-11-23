@@ -18,6 +18,7 @@ namespace CameraControlStudio
         readonly string programDirectory, userDirectory;
         internal static string AppVersion { get; } = typeof(DiagnosticLog).Assembly
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown";
+        internal static string DisplayAppVersion => AppVersion.Split('+')[0];
 
         readonly string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         internal static DiagnosticLog Current { get; } = new DiagnosticLog(AppDomain.CurrentDomain.BaseDirectory,

@@ -94,9 +94,7 @@ namespace CameraControlStudio {
                 device.Moniker.BindToObject(null, null, ref iid, out filter);
                 control = filter as IAMCameraControl;
                 video = filter as IAMVideoProcAmp;
-                Add("Pan", 0, false);
-                Add("Tilt", 1, false);
-                Add("Zoom", 3, false);
+                RefreshMotionRanges();
                 Add("Focus", 6, false);
                 Add("Exposure", 4, false);
                 Add("Hue", 2, true);
@@ -114,7 +112,7 @@ namespace CameraControlStudio {
                 throw new CameraUnavailableException("Connect", ex.HResult);
             } catch { Dispose(); throw; }
         }
-        void Add(string name, int property, bool isVideo) {
+        void Add(string name, int property, bool isVideo, bool allowFixedRange = false) {
             int lo, hi, step, def, caps, hr;
             if (isVideo) {
                 if (video == null)
@@ -127,13 +125,13 @@ namespace CameraControlStudio {
             }
             if (CameraUnavailableException.Matches(hr))
                 throw new CameraUnavailableException("GetRange " + name, hr);
-            if (hr >= 0 && hi > lo)
+            if (hr >= 0 && (hi > lo || (allowFixedRange && hi == lo)))
                 Settings[name] = new Setting { Name = name, Property = property, Video = isVideo, Min = lo, Max = hi, Step = Math.Max(1, step), Default = def, Caps = caps };
         }
         internal void RefreshMotionRanges() {
-            Add("Pan", 0, false);
-            Add("Tilt", 1, false);
-            Add("Zoom", 3, false);
+            Add("Pan", 0, false, allowFixedRange: true);
+            Add("Tilt", 1, false, allowFixedRange: true);
+            Add("Zoom", 3, false, allowFixedRange: true);
         }
         public int Get(string name, out int flags) {
             var s = Settings[name];

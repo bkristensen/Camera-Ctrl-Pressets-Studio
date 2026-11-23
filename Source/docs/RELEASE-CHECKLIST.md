@@ -1,6 +1,6 @@
 # Release checklist
 
-See the [step-by-step build and release guide](en/BUILD-AND-RELEASE.md) for commands and output paths.
+Use the [build and release guide](en/BUILD-AND-RELEASE.md) for commands and output paths.
 
 ## Automated checks
 
@@ -14,6 +14,7 @@ See the [step-by-step build and release guide](en/BUILD-AND-RELEASE.md) for comm
 - [ ] Open settings on the right. Drag the divider. Close and reopen. Test a saved layout after disconnecting a monitor.
 - [ ] Recall a position: yellow during movement, green only after matching readback. Pan/tilt/zoom clears the active colour. Disconnect during a transition: no false green. Icons never disappear after confirmation.
 - [ ] Test each combined icon, including every reversed order. Test zoom buttons, the zoom slider and both direction reversals.
+- [ ] On a supported Brio, test automatic FOV in both zoom directions and at the left and right pan edges. Follow the [Brio test steps](VALIDATION.md#brio-field-of-view-and-zoom).
 - [ ] Enable camera confirmation. Restart. Verify no camera enumeration or connection before Yes. Test No, then retry from a pan/zoom button. Test profile change and source selection.
 
 ## Data and editing

@@ -14,6 +14,6 @@
 
 ## Verify and submit
 
-From `Source`, run `powershell -File scripts/check-translations.ps1` and build the solution. Launch the app with `--lang=<code>`. Check dialogs, the minimum window size, long strings, keyboard navigation and text direction. Verify that substitutions and placeholders read naturally.
+From `Source`, run `powershell -File scripts/check-translations.ps1` and build. Start the app with `--lang=<code>`. Check dialogs at the smallest window size and navigate with the keyboard. Test long labels, text direction and messages that fill in placeholders.
 
 Follow the [GitHub project guide](GITHUB.md) to open a pull request. Name the language and code, summarize the changes, and state what you tested. Include a screenshot if it helps reviewers evaluate the layout. Add follow-up edits to the same branch during review.

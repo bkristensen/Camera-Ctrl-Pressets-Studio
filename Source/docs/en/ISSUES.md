@@ -6,7 +6,7 @@
 2. Check open and closed results. Remove the default open-state filter to search both. Read similar reports for matching symptoms and workarounds.
 3. On a matching issue, select **Subscribe** in the sidebar to receive updates, or react with 👍 to show that it affects you. Add a comment if you can contribute details such as a different camera, a test result or a reliable reproduction.
 
-![GitHub Issues search, open and closed filters, and New issue](../images/reporting/github-issues.png)
+![Issue search above the Open and Closed tabs. New issue is at upper right.](../images/reporting/github-issues.png)
 
 ## Open a report
 
@@ -26,6 +26,6 @@ If **Type** is available, use **Bug** for unexpected behaviour, **Feature** for 
 
 ## Attach evidence
 
-In Camera Control Studio, open **Settings → Issues → Report on GitHub** to prepare a draft and open the folder with diagnostic files. Review the log and system report before sharing, and remove personal details, file paths, meeting data and identifiers you want to keep private. Use the file upload row in the issue editor to attach the reviewed files and screenshots. Use **Preview** to check the report, then choose **Create**.
+Open **Settings → Issues → Report on GitHub**. The app opens an issue draft and the folder with its logs. Read the logs before sharing. Remove private details such as file paths, meeting data and IDs. Attach the files and screenshots below the description. Check the issue in **Preview**, then choose **Create**.
 
 [GitHub issue search reference](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)

@@ -6,7 +6,7 @@
 2. Se både åbne og lukkede sager. Fjern det forvalgte filter for åbne sager for at søge i begge. Læs lignende sager for at finde samme symptom og mulige løsninger.
 3. Vælg **Subscribe** i en relevant sag for at følge den, eller reagér med 👍 for at vise, at den også berører dig. Skriv en kommentar, hvis du kan tilføje fx kameramodel, testresultat eller trin, der genskaber fejlen.
 
-![Søgning, åbne og lukkede sager samt New issue på GitHub](../images/reporting/github-issues.png)
+![Søgefelt over Open og Closed. New issue står øverst til højre.](../images/reporting/github-issues.png)
 
 ## Opret en sag
 
@@ -26,6 +26,6 @@ Hvis **Type** kan vælges, så brug **Bug** ved fejl, **Feature** ved et ønske 
 
 ## Vedhæft dokumentation
 
-Åbn **Indstillinger → Issues → Rapportér på GitHub** i Camera Control Studio for at oprette et udkast og finde de eksporterede filer. Gennemgå log og systemrapport, og fjern private oplysninger, stier, mødedata og id'er, du ikke ønsker at offentliggøre. Brug filvælgeren nederst i beskrivelsesfeltet til at vedhæfte gennemgåede filer og billeder. Tjek sagen under **Preview**, og vælg **Create**.
+Åbn **Indstillinger → Fejlrapport → Rapportér på GitHub**. Programmet åbner et udkast og mappen med logfiler. Læs filerne, før du deler dem. Fjern private oplysninger som stier, mødedata og id’er. Vedhæft filer og billeder under beskrivelsen. Tjek sagen i **Preview**, og vælg **Create**.
 
 [GitHubs søgevejledning](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)

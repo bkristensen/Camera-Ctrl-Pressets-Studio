@@ -1,3 +1,8 @@
+# Unreleased
+- Switch FOV at zoom and pan limits on supported cameras. Turn it off under **Settings → Movement**.
+- Use the square frame button to jump to the widest FOV and minimum zoom.
+- Add window icons and clarify app text and guides.
+
 # 0.7.0-beta.4
 
 - The camera zooms as you drag the zoom slider.

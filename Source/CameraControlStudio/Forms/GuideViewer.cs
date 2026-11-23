@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Markdig;
+using Markdig.Extensions.AutoIdentifiers;
 using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using Microsoft.Web.WebView2.Core;
@@ -19,7 +20,8 @@ namespace CameraControlStudio
     {
         internal const string ReleasesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases";
         internal const string OnlineGuidesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/USER-GUIDES.md";
-        static readonly MarkdownPipeline Pipeline = new MarkdownPipelineBuilder().DisableHtml().UsePipeTables().Build();
+        static readonly MarkdownPipeline Pipeline = new MarkdownPipelineBuilder().DisableHtml().UsePipeTables()
+            .UseAutoIdentifiers(AutoIdentifierOptions.GitHub).Build();
         readonly string root = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "docs");
         const string AssetHost = "guide-assets.invalid";
         const string DocumentUrl = "https://guide-document.invalid/current.html";
@@ -29,6 +31,7 @@ namespace CameraControlStudio
         string documentTitle;
         byte[] documentHtml;
         bool scrollToSettings;
+        string documentAnchor;
 
         public GuideViewer()
         {
@@ -103,7 +106,14 @@ namespace CameraControlStudio
                             return;
                         try
                         {
-                            if (scrollToSettings)
+                            if (!string.IsNullOrEmpty(documentAnchor))
+                            {
+                                string anchor = Uri.EscapeDataString(Uri.UnescapeDataString(documentAnchor.TrimStart('#')))
+                                    .Replace("'", "%27");
+                                await web.ExecuteScriptAsync("document.getElementById(decodeURIComponent('" + anchor
+                                    + "'))?.scrollIntoView();");
+                            }
+                            else if (scrollToSettings)
                                 await web.ExecuteScriptAsync("document.querySelector('ol > li:nth-child(5)')?.scrollIntoView();");
                             if (!IsDisposed)
                                 print.Enabled = true;
@@ -142,12 +152,13 @@ namespace CameraControlStudio
             link.LinkClicked += (sender, args) => TryGuideAction(action);
         }
 
-        void LoadGuide(string path, bool openSettingsSection = false)
+        void LoadGuide(string path, bool openSettingsSection = false, string anchor = null)
         {
             TryGuideAction(() =>
             {
                 print.Enabled = false;
                 scrollToSettings = openSettingsSection;
+                documentAnchor = anchor;
                 links.Clear();
                 var document = Markdown.Parse(File.ReadAllText(path), Pipeline);
                 var heading = document.OfType<HeadingBlock>().FirstOrDefault();
@@ -159,8 +170,11 @@ namespace CameraControlStudio
                     link.GetDynamicUrl = null;
                     link.Url = ResolveLink(path, url, link.IsImage);
                 }
-                string direction = UiText.IsRightToLeft ? "rtl" : "ltr";
-                documentHtml = Encoding.UTF8.GetBytes("<!doctype html><html dir='" + direction + "'><head>"
+                string language = Path.GetFileName(Path.GetDirectoryName(path));
+                if (!UiText.LanguageCodes.Contains(language))
+                    language = "en";
+                string direction = language == "ar" || language == "ur" ? "rtl" : "ltr";
+                documentHtml = Encoding.UTF8.GetBytes("<!doctype html><html lang='" + language + "' dir='" + direction + "'><head>"
                     + "<meta charset='utf-8'><meta http-equiv='Content-Security-Policy' content=\"default-src 'none'; img-src https://"
                     + AssetHost + "; style-src 'unsafe-inline'\">"
                     + "<style>body{font:16px/1.55 Segoe UI,sans-serif;color:#18242f;background:#fff;margin:24px}"
@@ -187,7 +201,7 @@ namespace CameraControlStudio
 
         async Task ApplyPrintFooter()
         {
-            string version = DiagnosticLog.AppVersion.Split('+')[0];
+            string version = DiagnosticLog.DisplayAppVersion;
             string date = DateTime.Today.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
             string footer = "@page{@bottom-left{content:" + CssString("Camera Control Studio " + version + " · " + date)
                 + ";font:9pt Segoe UI,sans-serif;}}";
@@ -242,7 +256,9 @@ namespace CameraControlStudio
 
         string ResolveLink(string source, string url, bool image)
         {
-            if (!Uri.TryCreate(new Uri(source), url, out Uri destination))
+            // Resolve from an explicit file URI so Windows paths preserve a link's fragment.
+            var sourceUri = new Uri(new Uri(source).AbsoluteUri);
+            if (!Uri.TryCreate(sourceUri, url, out Uri destination))
                 return null;
             if (!image && url.StartsWith("#", StringComparison.Ordinal))
                 return url;
@@ -275,7 +291,7 @@ namespace CameraControlStudio
                 BeginInvoke(new Action(() =>
                 {
                     if (destination.IsFile)
-                        LoadGuide(destination.LocalPath);
+                        LoadGuide(destination.LocalPath, anchor: destination.Fragment);
                     else
                         TryGuideAction(() => OpenBrowser(destination.AbsoluteUri));
                 }));

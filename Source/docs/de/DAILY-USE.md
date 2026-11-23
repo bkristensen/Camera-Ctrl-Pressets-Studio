@@ -4,13 +4,11 @@
 
 Starten Sie zuerst Ihr Streaming-Meeting, zum Beispiel in Zoom. Öffnen Sie anschließend **Camera Control Studio**.
 
-![Hauptfenster mit geschlossenem Einstellungsbereich](../images/screenshots/main.png)
+![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/main.png)
 
 ## Allgemeines
 
-Klicken Sie unten auf **?**, um Hilfe zur Nutzung und Einrichtung der Anwendung zu erhalten.
-Halten Sie den Mauszeiger über die kleinen Schaltflächen, um ihre Funktion zu sehen.
-Wenn die Kamera das Ende ihres Bewegungsbereichs erreicht, wird die Steuerung in dieser Richtung deaktiviert.
+Klicken Sie auf **?**, um die Hilfe zu öffnen. Zeigen Sie auf eine Taste, um ihre Funktion zu sehen. Eine Richtung stoppt an der äußersten Grenze der Kamera. [So funktioniert der automatische Sichtfeldwechsel](SETUP.md#sichtfeld-einstellen)
 
 ## 1. Position aktivieren
 
@@ -23,8 +21,7 @@ Sie können die Zeile auch auswählen und die Eingabetaste drücken.
 | Grün | Der Kameratreiber meldet, dass die gespeicherten Koordinaten erreicht wurden. |
 | Blau | Die Position ist nicht als aktiv markiert. |
 
-Grün bestätigt die vom Treiber gemeldeten Koordinaten. Prüfen Sie das Bild in Ihrem Stream.
-Meldet der Treiber das Erreichen der Position nicht rechtzeitig, wird die Zeile blau und im Statusbereich erscheint eine Meldung. Die Symbole bleiben durchgehend sichtbar.
+Grün bedeutet, dass der Treiber die gespeicherte Position und gegebenenfalls das Sichtfeld meldet. Prüfen Sie das Bild im Stream. Kann der Treiber den Ausschnitt nicht rechtzeitig bestätigen, wird die Zeile blau. Lesen Sie die Statusmeldung.
 
 ## 2. Bildausschnitt feinjustieren
 

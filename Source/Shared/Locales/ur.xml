@@ -13,7 +13,7 @@
   <text key="Brightness">چمک</text>
   <text key="Buy me a coffee">مجھے ایک کپ کافی پلائیں</text>
   <text key="Camera">کیمرہ</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">کیمرے کی سمت کا پہیہ۔ اندرونی حلقہ باریک، درمیانی معمول اور بیرونی تیز۔</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">کیمرے کی سمت کا پہیہ۔ اندرونی حلقہ باریک، درمیانی معمول کی اور بیرونی تیز حرکت کے لیے ہے۔</text>
   <text key="Fine speed (% of Normal)">باریک رفتار (معمول کا %)</text>
   <text key="Use speed for preset transitions">محفوظ پوزیشن بدلنے کے لیے رفتار استعمال کریں</text>
   <text key="Transition speed (%/s)">منتقلی کی رفتار (% فی سیکنڈ)</text>
@@ -29,7 +29,7 @@
   <text key="Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.">اس اوپن سورس سافٹ ویئر کو Brian Kristensen نے Vejle Uhrhøj، ڈنمارک میں تیار کیا۔</text>
   <text key="Edit name and symbol">نام اور آئیکن بدلیں</text>
   <text key="Edit preset">پری سیٹ میں ترمیم کریں</text>
-  <text key="Edit the active profile in Settings.">ترتیبات میں فعال پروفائل میں ترمیم کریں۔</text>
+  <text key="Edit the active profile in Settings.">اس پروفائل میں ترمیم کے لیے ترتیبات کھولیں۔</text>
   <text key="Exposure">ایکسپوژر</text>
   <text key="Fast pan steps">تیز پین کے مراحل</text>
   <text key="Focus">فوکس</text>
@@ -49,7 +49,7 @@
   <text key="Name already exists.">یہ نام پہلے سے موجود ہے۔</text>
   <text key="New profile">نیا پروفائل</text>
   <text key="No camera found.">کوئی کیمرہ نہیں ملا۔</text>
-  <text key="No image controls available through the driver.">ڈرائیور تصویر کے کنٹرول فراہم نہیں کرتا۔</text>
+  <text key="No image controls available through the driver.">کیمرے کا ڈرائیور تصویر کے کنٹرول فراہم نہیں کرتا۔</text>
   <text key="Normal pan steps">معمول کے پین کے مراحل</text>
   <text key="Zoom steps">زوم کے مراحل</text>
   <text key="Outer buttons: fast">بیرونی بٹن: تیز</text>
@@ -61,9 +61,9 @@
   <text key="Ready">تیار</text>
   <text key="Rename profile">پروفائل کا نام بدلیں</text>
   <text key="Replace with current position">موجودہ پوزیشن سے بدلیں</text>
-  <text key="Report bugs or missing features">خرابی یا کسی غائب فیچر کی اطلاع دیں</text>
+  <text key="Report bugs or missing features">خرابی رپورٹ کریں یا سہولت تجویز کریں</text>
   <text key="Reset image to driver defaults">تصویر کے لیے ڈرائیور کی طے شدہ ترتیبات بحال کریں</text>
-  <text key="Restart the application to change language.">زبان بدلنے کے لیے ایپ دوبارہ شروع کریں۔</text>
+  <text key="Restart the application to change language.">زبان بدلنے کے لیے ایپ دوبارہ چلائیں۔</text>
   <text key="Camera pan reverse left / right">کیمرا کی بائیں/دائیں حرکت الٹ دیں</text>
   <text key="Camera pan reverse up / down">کیمرا کی اوپر/نیچے حرکت الٹ دیں</text>
   <text key="Saturation">رنگ کی گہرائی</text>
@@ -157,7 +157,7 @@
   <text key="Maximum size per file (MiB)">فی فائل زیادہ سے زیادہ سائز (MiB)</text>
   <text key="Maximum log files (including current)">لاگ فائلوں کی حد (موجودہ سمیت)</text>
   <text key="An unexpected error occurred. The application will close.">ایک غیر متوقع خرابی پیش آئی۔ ایپ بند ہو جائے گی۔</text>
-  <text key="An unexpected error prevented this action.">ایک غیر متوقع خرابی نے یہ عمل روک دیا۔</text>
+  <text key="An unexpected error prevented this action.">یہ عمل ناکام ہو گیا۔ تفصیل کے لیے لاگ کھولیں۔</text>
   <text key="No diagnostic log is available.">کوئی تشخیصی لاگ دستیاب نہیں۔</text>
   <text key="Review the diagnostic log before attaching it to a public issue.">عوامی رپورٹ میں منسلک کرنے سے پہلے لاگ کا جائزہ لیں۔</text>
   <text key="Report on GitHub">GitHub پر رپورٹ کریں</text>
@@ -173,8 +173,8 @@
   <text key="Issues">مسائل</text>
   <text key="Diagnostic logs">تشخیصی لاگز</text>
   <text key="Report a problem">مسئلے کی رپورٹ کریں</text>
-  <text key="Review the exported logs and attach them to your GitHub issue.">برآمد شدہ لاگز کا جائزہ لیں اور انہیں GitHub رپورٹ میں منسلک کریں۔</text>
-  <text key="Open guide viewer">رہنما ویوئر کھولیں</text>
+  <text key="Review the exported logs and attach them to your GitHub issue.">برآمد شدہ لاگز میں نجی معلومات دیکھ لیں۔ فائلیں GitHub مسئلے کے ساتھ منسلک کریں۔</text>
+  <text key="Open guide viewer">رہنما کھولیں</text>
   <text key="Focus and exposure">فوکس اور ایکسپوژر</text>
   <text key="Colour">رنگ</text>
   <text key="Light and detail">روشنی اور تفصیل</text>
@@ -196,4 +196,22 @@
   <text key="Restore full frame">مکمل فریم بحال کریں</text>
   <text key="Full frame">مکمل فریم</text>
   <text key="New release available">نیا ورژن دستیاب ہے</text>
+  <text key="Adjust field of view at zoom and pan limits">زوم اور پین کی حد پر میدانِ نظر بدلیں</text>
+  <text key="Use the widest view and minimum zoom.">سب سے چوڑا میدانِ نظر اور کم سے کم زوم استعمال کریں۔</text>
+  <text key="Keep moving when the lens view offers more room.">حد پر، اگر کیمرا مزید حرکت کر سکے تو میدانِ نظر بدلیں۔</text>
+  <text key="Widest available">سب سے چوڑا دستیاب</text>
+  <text key="Do nothing">موجودہ ترتیب برقرار رکھیں</text>
+  <text key="FOV unavailable">میدانِ نظر دستیاب نہیں</text>
+  <text key="The camera did not apply the selected FOV.">کیمرے نے منتخب میدانِ نظر نہیں اپنایا۔ دوسرا آزمائیں۔</text>
+  <text key="Could not apply the startup FOV.">آغاز پر میدانِ نظر سیٹ نہیں ہوا۔ موجودہ منظر دیکھیں۔</text>
+  <text key="The preset FOV is unavailable on this camera.">کیمرا اس پری سیٹ کا میدانِ نظر استعمال نہیں کر سکتا۔ دوسرا پری سیٹ چنیں۔</text>
+  <text key="The camera did not reach the preset FOV.">کیمرا محفوظ میدانِ نظر تک نہیں پہنچا۔ براہ راست تصویر دیکھیں۔</text>
+  <text key="The camera could not restore its previous framing.">پچھلا فریم بحال نہیں ہو سکا۔ براہ راست تصویر دیکھیں۔</text>
+  <text key="Full frame restored.">مکمل فریم بحال ہو گیا۔</text>
+  <text key="Minimum zoom reached. Widest FOV could not be verified.">زوم کم سے کم ہے۔ براہ راست تصویر میں سب سے چوڑا منظر دیکھیں۔</text>
+  <text key="Minimum zoom could not be verified.">کم سے کم زوم کی تصدیق نہیں ہو سکی۔ براہ راست تصویر دیکھیں۔</text>
+  <text key="Camera position changed.">کیمرا محفوظ پوزیشن سے ہٹ گیا۔</text>
+  <text key="Name">نام</text>
+  <text key="Pan">پین</text>
+  <text key="Tilt">جھکاؤ</text>
 </translations>
