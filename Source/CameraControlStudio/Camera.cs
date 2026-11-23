@@ -39,8 +39,11 @@ namespace CameraControlStudio {
     public sealed class Setting {
         public string Name; public int Property, Min, Max, Step, Default, Caps; public bool Video;
         public int Snap(double value) {
-            double v = Min + Math.Round((value - Min) / Math.Max(1, Step)) * Math.Max(1, Step);
-            return (int)Math.Max(Min, Math.Min(Min + Math.Floor(((double)Max - Min) / Math.Max(1, Step)) * Math.Max(1, Step), v));
+            int driverStep = Math.Max(1, Step);
+            double snapped = Min + Math.Round((value - Min) / driverStep) * driverStep;
+            // A driver's advertised maximum can fall between two valid step positions.
+            double reachableMaximum = Min + Math.Floor(((double)Max - Min) / driverStep) * driverStep;
+            return (int)Math.Max(Min, Math.Min(reachableMaximum, snapped));
         }
     }
     internal sealed class CameraUnavailableException : COMException {

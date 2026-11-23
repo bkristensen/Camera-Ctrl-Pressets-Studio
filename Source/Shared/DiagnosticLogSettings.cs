@@ -29,7 +29,7 @@ namespace CameraControlStudio
                 return Default;
             var xml = XElement.Load(path);
             return new DiagnosticLogSettings((string)xml.Element("Directory"),
-                (int?)xml.Element("SizeMiB") ?? Default.SizeMiB, (int?)xml.Element("FileCount") ?? Default.FileCount);
+                (int? )xml.Element("SizeMiB") ?? Default.SizeMiB, (int? )xml.Element("FileCount") ?? Default.FileCount);
         }
 
         internal void Save(string path = null)
@@ -46,7 +46,11 @@ namespace CameraControlStudio
                 else
                     File.Move(temp, path);
             }
-            finally { if (File.Exists(temp)) File.Delete(temp); }
+            finally
+            {
+                if (File.Exists(temp))
+                    File.Delete(temp);
+            }
         }
     }
 }

@@ -9,7 +9,6 @@ namespace CameraControlStudio
     internal static class SystemReport
     {
         const int MaxAttachmentBytes = 4 * 1024 * 1024;
-
         internal static string Export(string logPath)
         {
             string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
@@ -25,8 +24,11 @@ namespace CameraControlStudio
                     if (source.Length > MaxAttachmentBytes)
                     {
                         source.Position = source.Length - MaxAttachmentBytes;
-                        for (int next; (next = source.ReadByte()) != -1 && next != '\n';) { }
+                        for (int next; (next = source.ReadByte()) != -1 && next != '\n';)
+                        {
+                        }
                     }
+
                     source.CopyTo(output);
                 }
             }

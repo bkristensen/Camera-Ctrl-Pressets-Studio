@@ -126,14 +126,13 @@ namespace CameraControlStudio {
         }
         public ProfileEntry Save(string name, SavedData data, long expectedRevision) {
             return Locked(() => {
-                var c = Load();
-                ProfileEntry old;
-                if (!c.Profiles.TryGetValue(name, out old) || old.Revision != expectedRevision)
+                var catalog = Load();
+                if (!catalog.Profiles.TryGetValue(name, out var previous) || previous.Revision != expectedRevision)
                     throw new IOException(UiText.T("This profile was changed elsewhere. Restart the application before saving again.", "Profilen er ændret et andet sted. Genstart programmet før du gemmer igen."));
                 Validate(data);
-                var updated = new ProfileEntry { Revision = checked(old.Revision + 1), Config = Copy(data) };
-                c.Profiles[name] = updated;
-                Write(c);
+                var updated = new ProfileEntry { Revision = checked(previous.Revision + 1), Config = Copy(data) };
+                catalog.Profiles[name] = updated;
+                Write(catalog);
                 return updated;
             });
         }

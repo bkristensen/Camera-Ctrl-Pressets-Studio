@@ -8,11 +8,19 @@ param(
     [string]$MakeAppxPath = 'MakeAppx.exe'
 )
 $ErrorActionPreference = 'Stop'
-if ($IdentityName -match 'REPLACE' -or $Publisher -match 'REPLACE' -or $PublisherDisplayName -match 'REPLACE') { throw 'Supply the real Partner Center product identity.' }
-if ($Publisher -notmatch '^CN=' -or [string]::IsNullOrWhiteSpace($PublisherDisplayName)) { throw 'Publisher must be the exact Partner Center CN; display name is required.' }
-if ($PackageVersion -notmatch '^\d+\.\d+\.\d+\.0$') { throw 'Use a four-part Store version with final component 0.' }
+if ($IdentityName -match 'REPLACE' -or $Publisher -match 'REPLACE' -or $PublisherDisplayName -match 'REPLACE') {
+    throw 'Supply the real Partner Center product identity.'
+}
+if ($Publisher -notmatch '^CN=' -or [string]::IsNullOrWhiteSpace($PublisherDisplayName)) {
+    throw 'Publisher must be the exact Partner Center CN; display name is required.'
+}
+if ($PackageVersion -notmatch '^\d+\.\d+\.\d+\.0$') {
+    throw 'Use a four-part Store version with final component 0.'
+}
 $parts = $PackageVersion.Split('.') | ForEach-Object { [int]$_ }
-if (($parts | Where-Object { $_ -gt 65535 }).Count -gt 0 -or ($parts | Measure-Object -Sum).Sum -eq 0) { throw 'Invalid MSIX version.' }
+if (($parts | Where-Object { $_ -gt 65535 }).Count -gt 0 -or ($parts | Measure-Object -Sum).Sum -eq 0) {
+    throw 'Invalid MSIX version.'
+}
 $root = Split-Path $PSScriptRoot -Parent
 Push-Location $root
 try {
@@ -52,12 +60,20 @@ try {
                 $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
                 $graphics.DrawImage($source,0,0,$size,$size)
                 $bitmap.Save((Join-Path $stage "Assets/$($item[0]).png"),[System.Drawing.Imaging.ImageFormat]::Png)
-            } finally { $graphics.Dispose(); $bitmap.Dispose() }
+            } finally {
+                $graphics.Dispose()
+                $bitmap.Dispose()
+            }
         }
-    } finally { $source.Dispose(); $icon.Dispose() }
+    } finally {
+        $source.Dispose()
+        $icon.Dispose()
+    }
     $output = Join-Path $root "artifacts/Camera-Control-Studio-$PackageVersion-x64.msix"
     & $MakeAppxPath pack /d $stage /p $output /o
     if ($LASTEXITCODE -ne 0) { throw 'MakeAppx packaging or manifest validation failed.' }
     Write-Host "Unsigned Store submission candidate: $output"
     Write-Host 'This is not a signed sideload installer. Follow docs/MSIX-AND-STORE.md before distribution.'
-} finally { Pop-Location }
+} finally {
+    Pop-Location
+}

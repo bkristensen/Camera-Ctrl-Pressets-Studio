@@ -166,6 +166,7 @@ namespace CameraControlStudio {
             this.footer = new System.Windows.Forms.TableLayoutPanel();
             this.footerLabels = new System.Windows.Forms.TableLayoutPanel();
             this.cameraStatus = new System.Windows.Forms.Label();
+            this.releaseNotice = new System.Windows.Forms.LinkLabel();
             this.status = new System.Windows.Forms.Label();
             this.profileButton = new CameraControlStudio.BlueButton();
             this.helpButton = new CameraControlStudio.BlueButton();
@@ -1966,10 +1967,13 @@ namespace CameraControlStudio {
             // 
             // footerLabels
             // 
-            this.footerLabels.ColumnCount = 1;
+            this.footerLabels.ColumnCount = 2;
             this.footerLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.footerLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
             this.footerLabels.Controls.Add(this.cameraStatus, 0, 0);
+            this.footerLabels.Controls.Add(this.releaseNotice, 1, 0);
             this.footerLabels.Controls.Add(this.status, 0, 1);
+            this.footerLabels.SetColumnSpan(this.status, 2);
             this.footerLabels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.footerLabels.Location = new System.Drawing.Point(0, 3);
             this.footerLabels.Margin = new System.Windows.Forms.Padding(0, 3, 7, 0);
@@ -1994,6 +1998,19 @@ namespace CameraControlStudio {
             this.cameraStatus.Text = "Camera: not connected";
             this.cameraStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // releaseNotice
+            //
+            this.releaseNotice.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.releaseNotice.AutoSize = true;
+            this.releaseNotice.LinkColor = System.Drawing.Color.LightSkyBlue;
+            this.releaseNotice.ActiveLinkColor = System.Drawing.Color.White;
+            this.releaseNotice.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.releaseNotice.Margin = new System.Windows.Forms.Padding(6, 0, 4, 0);
+            this.releaseNotice.Name = "releaseNotice";
+            this.releaseNotice.TabIndex = 2;
+            this.releaseNotice.TabStop = true;
+            this.releaseNotice.Text = "New release available";
+            //
             // status
             // 
             this.status.AutoEllipsis = true;
@@ -2293,6 +2310,7 @@ namespace CameraControlStudio {
         private DataGridViewTextBoxColumn positionColumn;
         private DataGridViewButtonColumn recallColumn;
         private Label cameraStatus;
+        private LinkLabel releaseNotice;
         private Label status;
         private BlueButton settingsButton;
         private BlueButton helpButton;
