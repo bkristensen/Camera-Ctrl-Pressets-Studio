@@ -184,4 +184,15 @@
   <text key="Move selected preset down">向下移动所选预设</text>
   <text key="Copy active profile">复制当前配置</text>
   <text key="Rename selected profile">重命名所选配置</text>
+  <text key="Guides">指南</text>
+  <text key="Development guides">开发指南</text>
+  <text key="Links">链接</text>
+  <text key="Translate the app">翻译应用</text>
+  <text key="GitHub project guide">GitHub 项目指南</text>
+  <text key="Report or follow an issue">报告或关注问题</text>
+  <text key="Field of view at startup">启动时的视野</text>
+  <text key="Allow manual FOV changes">允许手动更改视野</text>
+  <text key="Field of view">视野</text>
+  <text key="Restore full frame">恢复完整画面</text>
+  <text key="Full frame">完整画面</text>
 </translations>

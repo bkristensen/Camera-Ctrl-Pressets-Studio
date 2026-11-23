@@ -71,3 +71,5 @@
    ![应用程序选项卡中的直播确认和配置文件语言设置](../images/screenshots/application.png)
 
 6. 拖动竖直分隔线可以调整两个区域的宽度。设置面板在每次启动时都会关闭。在**设置 → 应用程序 → 配置文件语言**中选择语言，然后重启应用。将鼠标移到小按钮上即可查看提示。
+
+[Installation · SmartScreen · FOV](../en/SETUP.md)

@@ -184,4 +184,15 @@
   <text key="Move selected preset down">نقل الإعداد المسبق المحدد لأسفل</text>
   <text key="Copy active profile">نسخ ملف التعريف النشط</text>
   <text key="Rename selected profile">إعادة تسمية ملف التعريف المحدد</text>
+  <text key="Guides">أدلة</text>
+  <text key="Development guides">أدلة التطوير</text>
+  <text key="Links">روابط</text>
+  <text key="Translate the app">ترجمة التطبيق</text>
+  <text key="GitHub project guide">دليل مشروع GitHub</text>
+  <text key="Report or follow an issue">الإبلاغ عن مشكلة أو متابعتها</text>
+  <text key="Field of view at startup">مجال الرؤية عند التشغيل</text>
+  <text key="Allow manual FOV changes">السماح بتغيير مجال الرؤية يدويًا</text>
+  <text key="Field of view">مجال الرؤية</text>
+  <text key="Restore full frame">استعادة الإطار الكامل</text>
+  <text key="Full frame">الإطار الكامل</text>
 </translations>

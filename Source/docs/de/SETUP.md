@@ -6,6 +6,16 @@ Klicken Sie unten auf das Zahnrad. Die Einstellungen öffnen sich rechts. Die Po
 
 ![Hauptfenster mit geöffnetem Einstellungsbereich rechts](../images/screenshots/main-settings.png)
 
+## Installation und Download prüfen
+
+Laden Sie das Installationsprogramm oder die portable ZIP-Datei aus den [GitHub-Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) herunter. Starten Sie das Installationsprogramm oder entpacken Sie die gesamte ZIP-Datei. Wenn eine SHA-256-Prüfsumme veröffentlicht wurde, vergleichen Sie sie mit der Ausgabe von `Get-FileHash -Algorithm SHA256`.
+
+Microsoft Defender SmartScreen kann eine blaue Warnung anzeigen, wenn die Datei oder ihr Herausgeber über wenig etablierte Reputation verfügt. Nehmen Sie die Warnung ernst. Wenn Sie die erwartete Datei aus dem offiziellen Release bezogen haben und der Quelle vertrauen, wählen Sie **Weitere Informationen** und prüfen Sie Dateinamen und Herausgeber. Wählen Sie **Trotzdem ausführen** nur, wenn Sie der Datei vertrauen und Windows die Option anbietet. Schließen Sie andernfalls die Warnung. Beachten Sie die Richtlinien Ihrer Organisation. [Microsoft-Hinweise zu SmartScreen](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
+
+![SmartScreen-Warnung mit Weitere Informationen, auf Dänisch](../images/reporting/smartscreen-details.png)
+
+![Erweiterte SmartScreen-Warnung mit Trotzdem ausführen, auf Dänisch](../images/reporting/smartscreen-run.png)
+
 ## 1. Profil und Kamera wählen
 
 Wählen Sie das Profil über die Profilauswahl unten. Öffnen Sie **Einstellungen → Profile**, um ein Profil anzulegen. **Neu** verwendet die Standardwerte. **Kopieren** kopiert das aktive Profil. Benennen Sie es nach einer Person oder einem Aufbau. Das neue Profil wird aktiv. Wählen Sie unter **Profile** einen Eintrag und klicken Sie zum Umbenennen auf **✎**. Das Standardprofil hat einen festen Namen.
@@ -45,6 +55,14 @@ Bei tempobasierten Übergängen dauern kurze Bewegungen weniger lang als lange. 
 Ein Schritt entspricht einem Schritt des Kameratreibers. Er ist keine feste Strecke oder Prozentzahl. Der Treiber begrenzt die Bewegung und ihre Gleichmäßigkeit.
 
 Hängt die Kamera kopfüber, testen Sie **Kameraschwenk oben / unten umkehren** mit dem Pfeil nach oben. Aktivieren Sie **Kameraschwenk links / rechts umkehren** nur, wenn Links in die falsche Richtung führt. Diese Optionen ändern die Steuerung. Sie drehen das Videobild nicht.
+
+### Sichtfeld einstellen
+
+Wählen Sie unter **Einstellungen → Bewegung** das **Sichtfeld beim Start**. Standard ist das **weiteste verfügbare Sichtfeld**. Wählen Sie **Nichts ändern**, um die Einstellung der Kamera zu behalten, oder für eine unterstützte Brio 90°, 78° oder 65°. Der Wert gilt bei der ersten Verbindung nach dem Start.
+
+Die Steuerung zeigt das vom Treiber gemeldete Sichtfeld. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Auswahl bei unterstützten Kameras anzuzeigen. **Vollbild** fordert das weiteste Sichtfeld und den kleinsten Zoom an. Neue Positionen speichern das Sichtfeld, soweit der Treiber es meldet. Frühere Positionen bleiben verwendbar.
+
+Bei inaktiver Steuerung liest die App Schwenken, Neigen, Zoom und Sichtfeld erneut. Prüfen Sie Änderungen in Logitech Brio Control anhand der Werte und des Ausschnitts in Zoom. Logitech Brio Control entscheidet selbst, wann seine Anzeige aktualisiert wird.
 
 ## 4. Bild anpassen und feste Positionen speichern
 

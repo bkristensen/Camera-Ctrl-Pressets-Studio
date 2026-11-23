@@ -56,6 +56,7 @@ namespace CameraControlStudio {
 
     public sealed class Camera : IDisposable {
         object filter; IAMCameraControl control; IAMVideoProcAmp video;
+        internal BrioFieldOfView FieldOfView { get; private set; }
         public Dictionary<string, Setting> Settings = new Dictionary<string, Setting>();
         public static List<Device> Enumerate() {
             var result = new List<Device>();
@@ -104,6 +105,7 @@ namespace CameraControlStudio {
                 Add("Contrast", 1, true);
                 Add("Saturation", 3, true);
                 Add("White balance", 7, true);
+                FieldOfView = BrioFieldOfView.Open(filter, device.Id);
             } catch (Exception ex) when (CameraUnavailableException.Matches(ex.HResult)) {
                 Dispose();
                 throw new CameraUnavailableException("Connect", ex.HResult);
@@ -124,6 +126,11 @@ namespace CameraControlStudio {
                 throw new CameraUnavailableException("GetRange " + name, hr);
             if (hr >= 0 && hi > lo)
                 Settings[name] = new Setting { Name = name, Property = property, Video = isVideo, Min = lo, Max = hi, Step = Math.Max(1, step), Default = def, Caps = caps };
+        }
+        internal void RefreshMotionRanges() {
+            Add("Pan", 0, false);
+            Add("Tilt", 1, false);
+            Add("Zoom", 3, false);
         }
         public int Get(string name, out int flags) {
             var s = Settings[name];
@@ -151,6 +158,8 @@ namespace CameraControlStudio {
                 throw new COMException(operation + " " + name + ": " + Marshal.GetExceptionForHR(error, new IntPtr(-1)).Message, error);
         }
         public void Dispose() {
+            FieldOfView?.Dispose();
+            FieldOfView = null;
             control = null;
             video = null;
             if (filter != null)

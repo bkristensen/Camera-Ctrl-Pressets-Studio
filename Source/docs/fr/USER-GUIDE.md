@@ -71,3 +71,5 @@ Cliquez sur **?** en bas de la fenêtre pour consulter l’aide sur l’utilisat
    ![Onglet Application avec la confirmation de diffusion et la langue du profil](../images/screenshots/application.png)
 
 6. Faites glisser le séparateur vertical pour ajuster la largeur des deux zones. Le volet des paramètres est fermé au démarrage. Choisissez la langue dans **Paramètres → Application → Langue du profil**, puis redémarrez l’application. Survolez un petit bouton pour afficher son infobulle.
+
+[Installation · SmartScreen · FOV](../en/SETUP.md)

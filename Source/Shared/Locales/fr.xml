@@ -184,4 +184,15 @@
   <text key="Move selected preset down">Descendre le préréglage sélectionné</text>
   <text key="Copy active profile">Copier le profil actif</text>
   <text key="Rename selected profile">Renommer le profil sélectionné</text>
+  <text key="Guides">Guides</text>
+  <text key="Development guides">Guides de développement</text>
+  <text key="Links">Liens</text>
+  <text key="Translate the app">Traduire l’application</text>
+  <text key="GitHub project guide">Guide du projet GitHub</text>
+  <text key="Report or follow an issue">Signaler ou suivre un problème</text>
+  <text key="Field of view at startup">Champ de vision au démarrage</text>
+  <text key="Allow manual FOV changes">Autoriser le réglage manuel du champ de vision</text>
+  <text key="Field of view">Champ de vision</text>
+  <text key="Restore full frame">Rétablir le cadrage complet</text>
+  <text key="Full frame">Cadre complet</text>
 </translations>

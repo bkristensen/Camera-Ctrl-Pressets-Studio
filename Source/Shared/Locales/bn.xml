@@ -184,4 +184,15 @@
   <text key="Move selected preset down">নির্বাচিত প্রিসেট নিচে সরান</text>
   <text key="Copy active profile">সক্রিয় প্রোফাইল কপি করুন</text>
   <text key="Rename selected profile">নির্বাচিত প্রোফাইলের নাম বদলান</text>
+  <text key="Guides">নির্দেশিকা</text>
+  <text key="Development guides">উন্নয়ন নির্দেশিকা</text>
+  <text key="Links">লিংক</text>
+  <text key="Translate the app">অ্যাপ অনুবাদ করুন</text>
+  <text key="GitHub project guide">GitHub প্রকল্প নির্দেশিকা</text>
+  <text key="Report or follow an issue">সমস্যা জানান বা অনুসরণ করুন</text>
+  <text key="Field of view at startup">চালুর সময় দৃশ্যক্ষেত্র</text>
+  <text key="Allow manual FOV changes">দৃশ্যক্ষেত্র নিজে বদলাতে দিন</text>
+  <text key="Field of view">দৃশ্যক্ষেত্র</text>
+  <text key="Restore full frame">সম্পূর্ণ ফ্রেম ফিরিয়ে আনুন</text>
+  <text key="Full frame">সম্পূর্ণ ফ্রেম</text>
 </translations>

@@ -183,4 +183,15 @@
   <text key="Move selected preset down">Ausgewählte Position nach unten verschieben</text>
   <text key="Copy active profile">Aktives Profil kopieren</text>
   <text key="Rename selected profile">Ausgewähltes Profil umbenennen</text>
+  <text key="Guides">Anleitungen</text>
+  <text key="Development guides">Entwickleranleitungen</text>
+  <text key="Links">Links</text>
+  <text key="Translate the app">App übersetzen</text>
+  <text key="GitHub project guide">GitHub-Projektleitfaden</text>
+  <text key="Report or follow an issue">Problem melden oder verfolgen</text>
+  <text key="Field of view at startup">Sichtfeld beim Start</text>
+  <text key="Allow manual FOV changes">Manuelle Sichtfeldänderung erlauben</text>
+  <text key="Field of view">Sichtfeld</text>
+  <text key="Restore full frame">Vollbild wiederherstellen</text>
+  <text key="Full frame">Vollbild</text>
 </translations>

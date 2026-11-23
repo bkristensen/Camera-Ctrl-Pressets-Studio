@@ -71,3 +71,5 @@ Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración
    ![Pestaña Aplicación con la confirmación de transmisión y el idioma del perfil](../images/screenshots/application.png)
 
 6. Arrastra el separador vertical para cambiar el ancho de ambas zonas. La configuración está cerrada al arrancar. Cambia el idioma en **Configuración → Aplicación → Idioma del perfil** y reinicia la aplicación. Sitúa el cursor sobre los botones pequeños para ver su función.
+
+[Installation · SmartScreen · FOV](../en/SETUP.md)

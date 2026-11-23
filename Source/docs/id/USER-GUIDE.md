@@ -71,3 +71,5 @@ Klik **?** di bagian bawah untuk melihat bantuan penggunaan dan pengaturan. Arah
    ![Tab Aplikasi dengan konfirmasi siaran dan bahasa profil](../images/screenshots/application.png)
 
 6. Seret pemisah vertikal untuk mengatur lebar kedua area. Panel pengaturan selalu tertutup saat aplikasi dimulai. Pilih bahasa di **Pengaturan → Aplikasi → Bahasa profil**, lalu mulai ulang aplikasi. Arahkan kursor ke tombol kecil untuk melihat keterangannya.
+
+[Installation · SmartScreen · FOV](../en/SETUP.md)

@@ -71,3 +71,5 @@ Clique em **?** na parte inferior para consultar a ajuda de uso e configuração
    ![Aba Aplicativo com a confirmação de transmissão e o idioma do perfil](../images/screenshots/application.png)
 
 6. Arraste a divisória vertical para ajustar a largura das duas áreas. O painel de configurações inicia fechado. Escolha o idioma em **Configurações → Aplicativo → Idioma do perfil** e reinicie o aplicativo. Passe o mouse sobre um botão pequeno para ver sua dica.
+
+[Installation · SmartScreen · FOV](../en/SETUP.md)

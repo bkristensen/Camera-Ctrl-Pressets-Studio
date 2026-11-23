@@ -40,8 +40,25 @@ class Program {
   Check(copy.UseTransitionSpeed && copy.TransitionSpeedPercent == 45 && copy.FinePanPercent == 25,
    "movement speed settings survive profile copy");
  }
+ static void CheckFieldOfViewPersistence() {
+  var serializer = new DataContractJsonSerializer(typeof(SavedData));
+  const string legacy = "{\"Cameras\":[{\"Key\":\"camera\",\"Value\":[{\"Name\":\"Wide\",\"Position\":[{\"Key\":\"Zoom\",\"Value\":100}]}]}]}";
+  using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(legacy))) {
+   var profile = (SavedData)serializer.ReadObject(stream);
+   var preset = profile.Cameras["camera"][0];
+   Check(profile.StartupFieldOfView == 0 && !profile.AllowFieldOfViewChange, "legacy profiles get default FOV preferences");
+   Check(!preset.FieldOfView.HasValue && preset.Position["Zoom"] == 100, "legacy presets keep their zoom without inventing an FOV");
+   profile.StartupFieldOfView = -1;
+   profile.AllowFieldOfViewChange = true;
+   preset.FieldOfView = 78;
+   var copy = ProfileStore.Copy(profile);
+   Check(copy.StartupFieldOfView == -1 && copy.AllowFieldOfViewChange, "explicit FOV preferences survive profile copy");
+   Check(copy.Cameras["camera"][0].FieldOfView == 78, "preset FOV survives profile copy");
+  }
+ }
  static void Main(){
   CheckMovementSpeeds();
+  CheckFieldOfViewPersistence();
   var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,1,false)&&ManualMotion.CanMove(setting,200,-1,false),"maximum blocks outward movement only");

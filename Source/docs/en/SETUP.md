@@ -6,6 +6,16 @@ Open the gear in the footer. Settings open on the right. Your position list stay
 
 ![Main window with the settings pane open on the right](../images/screenshots/main-settings.png)
 
+## Install and verify the download
+
+Download the installer or portable ZIP from the project’s [GitHub releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Run the installer or extract the entire ZIP before launching the app. If a SHA-256 checksum is published, compare it with `Get-FileHash -Algorithm SHA256` for your download.
+
+Microsoft Defender SmartScreen can show a blue warning when a downloaded app or its publisher has little established reputation. Take it seriously. If you obtained the expected file from the official release and trust the source, select **More info** and review the filename and publisher. Select **Run anyway** only if you choose to trust that file and Windows offers the option. Otherwise close the warning. Follow your organisation’s device policy. [Microsoft SmartScreen guidance](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
+
+![SmartScreen warning with More info, shown in Danish](../images/reporting/smartscreen-details.png)
+
+![Expanded SmartScreen warning with Run anyway, shown in Danish](../images/reporting/smartscreen-run.png)
+
 ## 1. Choose a profile and camera
 
 Use the profile picker in the footer to select a profile. To create one, open **Settings → Profiles**. Choose **New** for default settings or **Copy** for a copy of the active profile. Name it after a person or setup. New profiles become active. In **Profiles**, select a profile and click **✎** to rename it. The Standard profile has a fixed name.
@@ -45,6 +55,14 @@ With speed-based transitions, a short move takes less time than a long one. The 
 One step means one step supported by the camera driver. It is not a fixed distance or percentage. The driver limits movement and smoothness.
 
 For an upside-down camera, enable **Camera pan reverse up / down** and test Up. Enable **Camera pan reverse left / right** only if Left moves the wrong way. These settings change the controls. They do not rotate the video.
+
+### Set the field of view
+
+Under **Settings → Movement**, choose **Field of view at startup**. **Widest available** is the default. Select **Do nothing** to keep the camera’s existing FOV, or choose 90°, 78°, or 65° for a supported Brio. The setting applies when the app first connects after launch.
+
+The main controls display the FOV the driver reports. Enable **Allow manual FOV changes** to show the picker when supported. **Full frame** requests the widest supported FOV and minimum zoom. Presets capture the FOV when the driver reports it. Existing presets without FOV continue to recall pan, tilt and zoom.
+
+When the controls are idle, the app rereads pan, tilt, zoom and FOV. If you change them in Logitech Brio Control, check both the reported values and the framing in Zoom. Logitech Brio Control determines when its own interface refreshes.
 
 ## 4. Adjust the image and save permanent positions
 

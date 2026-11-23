@@ -76,6 +76,7 @@ namespace CameraControlStudio
             ConfigureMainToolTips();
             ConfigureSettingsToolTips();
             WireEvents();
+            WireFraming();
             RefreshActionButtons();
             RefreshMotionControls();
         }
@@ -145,6 +146,8 @@ namespace CameraControlStudio
             });
             motionLimits.Tick += (o, e) => Run(() =>
             {
+                if (movement.Enabled || held.Enabled || zoomSlider.Capture)
+                    return;
                 try { RefreshMotionControls(); }
                 catch (Exception ex) when (!(ex is CameraUnavailableException)) { Disconnect(); throw; }
             });
@@ -387,6 +390,7 @@ namespace CameraControlStudio
                 DiagnosticLog.Current.CameraName = null;
                 permission.Reset();
                 LoadMovementSettings();
+                LoadFramingSettings();
                 reverseX.Checked = config.ReverseHorizontal;
                 reverseY.Checked = config.ReverseVertical;
                 streamingCheck.Checked = config.RequireStreamingConfirmation;
@@ -601,13 +605,14 @@ namespace CameraControlStudio
             if (CameraId != device.Id)
                 ClearPresetSelection();
             config.CameraId = device.Id;
+            string framingWarning = ApplyStartupFieldOfView();
             RefreshMotionControls();
             cameraStatus.Text = UiText.T("Camera", "Kamera") + ": " + device.Name;
             ApplyImageValues();
             BuildImageControls();
             RefreshPresets();
             MarkDirty();
-            status.Text = UiText.T("Ready", "Klar");
+            status.Text = framingWarning ?? UiText.T("Ready", "Klar");
             motionLimits.Start();
         }
         void ChooseCamera()
@@ -778,7 +783,7 @@ namespace CameraControlStudio
                     return;
                 if (NameExists(dialog.Value))
                     throw new InvalidOperationException(UiText.T("Name already exists.", "Navnet findes allerede."));
-                Temporary.Add(new Preset { Name = dialog.Value, Position = ReadPose() });
+                Temporary.Add(new Preset { Name = dialog.Value, Position = ReadPose(), FieldOfView = ReadFieldOfView() });
                 RefreshPresets();
             }
         }
@@ -799,7 +804,7 @@ namespace CameraControlStudio
             {
                 if (dialog.ShowDialog(this) != DialogResult.OK)
                     return;
-                var p = new Preset { Name = dialog.PresetName, IconId = dialog.IconId, Position = ReadPose() };
+                var p = new Preset { Name = dialog.PresetName, IconId = dialog.IconId, Position = ReadPose(), FieldOfView = ReadFieldOfView() };
                 Permanent.Add(p);
                 try
                 {
@@ -839,12 +844,16 @@ namespace CameraControlStudio
             if (ShowMessage(UiText.T("Replace with current position?", "Erstat med aktuel position?"), Text, MessageBoxButtons.YesNo) != DialogResult.Yes)
                 return;
             var old = p.Position;
-            p.Position = ReadPose();
+            var oldFov = p.FieldOfView;
+            var nextPosition = ReadPose();
+            var nextFov = ReadFieldOfView();
+            p.Position = nextPosition;
+            p.FieldOfView = nextFov;
             try
             {
                 SaveCurrent();
             }
-            catch { p.Position = old; throw; }
+            catch { p.Position = old; p.FieldOfView = oldFov; throw; }
             StopMotion();
         }
         void DeletePermanent()
@@ -922,8 +931,22 @@ namespace CameraControlStudio
         bool AxisReversed(string axis) => axis == "Pan" ? reverseX.Checked : axis == "Tilt" && reverseY.Checked;
         void RefreshMotionControls()
         {
+            int? fieldOfView = ReadFieldOfView();
+            if (fieldOfView != currentFieldOfView && fieldOfView.HasValue)
+                camera.RefreshMotionRanges();
+            currentFieldOfView = fieldOfView;
+            UpdateFieldOfViewControls();
             foreach (var axis in axes)
                 RefreshMotionAxis(axis);
+            RefreshPositionText();
+            if (activity.Phase == PresetPhase.Reached &&
+                (target.Any(p => !currentAxes.TryGetValue(p.Key, out int value) || value != p.Value) ||
+                (recallFieldOfView.HasValue && currentFieldOfView != recallFieldOfView)))
+            {
+                activity.Clear();
+                status.Text = UiText.T("Camera position changed.", "Kameraets position er ændret.");
+                presetGrid.Invalidate();
+            }
         }
         void RefreshMotionAxis(string axis)
         {
@@ -942,6 +965,7 @@ namespace CameraControlStudio
                 }
             }
             bool canConnect = loaded && camera == null;
+            currentAxes.Remove(axis);
             if (axis == "Zoom")
             {
                 zoomSlider.Enabled = false;
@@ -952,6 +976,7 @@ namespace CameraControlStudio
         }
         void UpdateMotionAxis(string axis, Setting setting, int position)
         {
+            currentAxes[axis] = position;
             bool reverse = AxisReversed(axis);
             bool negative = ManualMotion.CanMove(setting, position, -1, reverse);
             bool positive = ManualMotion.CanMove(setting, position, 1, reverse);
@@ -1015,6 +1040,8 @@ namespace CameraControlStudio
             camera.Set(axis, position);
             status.Text = UiText.T("Manual movement", "Manuel bevægelse");
         }
+        int? recallFieldOfView;
+
         void Recall(RowItem row)
         {
             if (row == null)
@@ -1024,6 +1051,15 @@ namespace CameraControlStudio
             NeedCamera();
             if (row.DeviceId != CameraId)
                 throw new InvalidOperationException(UiText.T("Select a preset for this camera.", "Vælg en position til dette kamera."));
+            if (row.Preset.FieldOfView is int degrees)
+            {
+                if (camera.FieldOfView == null || !BrioFieldOfView.Degrees.Contains(degrees))
+                    throw new InvalidOperationException(UiText.T("The preset FOV is unavailable on this camera.", "Positionens synsfelt er ikke tilgængeligt på dette kamera."));
+                camera.FieldOfView.Write(degrees);
+                if (camera.FieldOfView.Read() != degrees)
+                    throw new InvalidOperationException(UiText.T("The camera did not reach the preset FOV.", "Kameraet nåede ikke positionens synsfelt."));
+                RefreshMotionControls();
+            }
             start = ReadPose();
             target = new Dictionary<string, int>();
             last = new Dictionary<string, int>(start);
@@ -1035,6 +1071,7 @@ namespace CameraControlStudio
             }
             if (target.Count == 0)
                 throw new InvalidOperationException(UiText.T("Empty preset.", "Positionen er tom."));
+            recallFieldOfView = row.Preset.FieldOfView;
             activity.Begin(row.Preset.Name);
             status.Text = UiText.T("Moving to position…", "Flytter til position…");
             presetGrid.Invalidate();
@@ -1062,7 +1099,8 @@ namespace CameraControlStudio
             }
             if (finished)
             {
-                bool reached = target.All(p => camera.Get(p.Key) == p.Value);
+                bool reached = target.All(p => camera.Get(p.Key) == p.Value)
+                    && (!recallFieldOfView.HasValue || ReadFieldOfView() == recallFieldOfView);
                 if (!reached && elapsed < duration + 2)
                     return;
                 movement.Stop();
