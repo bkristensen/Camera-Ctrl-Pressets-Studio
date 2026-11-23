@@ -2464,6 +2464,7 @@ namespace CameraControlStudio {
             this.releaseNotice.Location = new System.Drawing.Point(702, 2);
             this.releaseNotice.Margin = new System.Windows.Forms.Padding(6, 0, 4, 0);
             this.releaseNotice.Name = "releaseNotice";
+            this.releaseNotice.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.releaseNotice.Size = new System.Drawing.Size(154, 20);
             this.releaseNotice.TabIndex = 2;
             this.releaseNotice.TabStop = false;

@@ -1,4 +1,4 @@
-![Main window with the direction wheel, zoom slider and preset list](docs/images/screenshots/main.png)
+![Main window with the direction wheel, zoom slider and preset list](docs/images/screenshots/0.7.0-beta.6/en/main.png)
 
 # Camera Control Studio
 
@@ -6,7 +6,7 @@
 
 Control a Windows camera and save your shots as named positions. Recall a position when you need it. **Brian Kristensen, Vejle Uhrhøj, Denmark**, develops the app as open source.
 
-**Source version 0.7.0-beta.5.** The beta builds are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
+**Source version 0.7.0-beta.6.** The beta builds are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
 
 | Language | Set up | Daily use |
 | --- | --- | --- |

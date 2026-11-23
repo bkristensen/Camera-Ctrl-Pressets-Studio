@@ -67,7 +67,7 @@ The versioned folder holds the final ZIP, installer and SHA-256 manifest. The `b
 
 | Purpose | Script | Output |
 | --- | --- | --- |
-| Documentation screenshots with sample data | `./scripts/capture-docs.ps1` | Nine PNGs in `docs/images/` for the English, Danish and German screens |
+| Documentation screenshots with sample data | `./scripts/capture-docs.ps1` | PNGs in `docs/images/screenshots/<version>/<language>/` for all 12 user guides |
 | Docker build and logic tests | `./scripts/build-docker.ps1` | Portable ZIP in `artifacts/docker/` |
 | Microsoft Store submission candidate | `./scripts/build-msix.ps1` with your Partner Center identity, publisher and package version | `artifacts/Camera-Control-Studio-<package-version>-x64.msix` |
 

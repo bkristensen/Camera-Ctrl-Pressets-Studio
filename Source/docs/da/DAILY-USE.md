@@ -4,7 +4,7 @@
 
 Start mødet i f.eks. Zoom. Åbn derefter **Camera Control Studio**.
 
-![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/main.png)
+![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/0.7.0-beta.6/da/main.png)
 
 ## Generelt
 Klik på **?** for at få hjælp. Hold musen over en knap for at se, hvad den gør. En retning stopper ved den sidste grænse, kameraet kan nå. [Sådan virker automatisk synsfelt](SETUP.md#indstil-synsfeltet)

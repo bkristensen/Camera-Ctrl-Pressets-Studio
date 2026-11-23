@@ -4,7 +4,7 @@
 
 先在 Zoom 等应用中开始要直播的会议，然后打开 **Camera Control Studio**。
 
-![主窗口，含方向轮、缩放控件和预设列表](../images/screenshots/main.png)
+![主窗口，含方向轮、缩放控件和预设列表](../images/screenshots/0.7.0-beta.6/zh/main.png)
 
 点击 **?** 打开帮助。将鼠标停在按钮上可查看其用途。摄像头在某个方向到达最终极限后，该方向的控件会停用。
 
@@ -64,13 +64,13 @@
 
    要长期保存某个位置，请点击底部的齿轮，再选择 **预设 → 添加永久预设**，设置名称和图标后保存。
 
-   ![永久预设及其管理按钮](../images/screenshots/presets.png)
+   ![永久预设及其管理按钮](../images/screenshots/0.7.0-beta.6/zh/presets.png)
 
    在设置面板中，可调整正常和快速步长、过渡时间以及摄像头方向。**视频**选项卡显示驱动程序支持的控件。**配置**选项卡可创建和复制配置。如果采集软件必须先连接，请开启使用摄像头前询问是否已开始直播的选项。
 
-   ![移动选项卡中的步长和过渡时间设置](../images/screenshots/settings.png)
+   ![移动选项卡中的步长和过渡时间设置](../images/screenshots/0.7.0-beta.6/zh/settings.png)
 
-   ![应用程序选项卡中的直播确认和配置文件语言设置](../images/screenshots/application.png)
+   ![应用程序选项卡中的直播确认和配置文件语言设置](../images/screenshots/0.7.0-beta.6/zh/application.png)
 
 6. 拖动竖直分隔线可以调整两个区域的宽度。设置面板在每次启动时都会关闭。在**设置 → 应用程序 → 配置文件语言**中选择语言，然后重启应用。将鼠标移到小按钮上即可查看提示。
 

@@ -1,3 +1,10 @@
+# 0.7.0-beta.6
+
+- The footer shows the installed version without its build identifier. If an update is available, hover over the link to see the new version and its publication date, when GitHub provides one.
+- Updated the program screenshots in all 12 user guide languages and in the Danish handouts. New screenshots use versioned paths so links from older releases still work.
+
+The Windows installer and portable ZIP are unsigned.
+
 # 0.7.0-beta.5
 
 - The pan wheel has two speed rings with diagonal movement. Click the camera button to change source or drag it to pan.

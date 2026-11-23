@@ -3,45 +3,158 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
-namespace CameraControlStudio {
- public partial class MainForm {
-  // Documentation mode never sets loaded, opens a camera, or reads/writes profiles.
-  bool documentationMode;string documentationDirectory;int documentationStage;
-  internal MainForm(string outputDirectory):this(){documentationMode=true;documentationDirectory=Path.GetFullPath(outputDirectory);}
-  void InitializeDocumentation(){
-   config=new SavedData {CameraId="documentation-only"};
-   var examples = new[] { "stage", "lectern", "combo:lectern+cafe-table", "combo:table+lectern+cafe-table" };
-   config.Cameras[config.CameraId]=new List<Preset>();
-   foreach (var example in examples)
-    config.Cameras[config.CameraId].Add(new Preset { Name = PresetIcons.GetTitle(example), IconId = example });
-   Temporary.Add(new Preset{Name=UiText.T("Temporary preset name","Midlertidig position")});
-   LoadMovementSettings();
-   profilesList.Items.Add("Standard");profileButton.Text="Standard ▾";
-   cameraStatus.Text="Documentation · Demo camera";
-   status.Text=UiText.T("Position reached.","Positionen er nået.");
-   RefreshPresets();activity.Begin(Permanent[1].Name);activity.Complete(true);
-   StartPosition=FormStartPosition.Manual;Location=Screen.PrimaryScreen.WorkingArea.Location+new Size(12,12);Size=new Size(900,500);TopMost=true;
-   Directory.CreateDirectory(documentationDirectory);
-   documentationTimer.Tick+=(o,e)=>{
-    try {
-     if(documentationStage==0){CaptureDocumentation("main",new Control[]{profileButton,settingsButton,wheel,zoomPanel,mainSplit,presetGrid,temporaryButton,footer},new[]{"A","B","C","D","E","F","G","H"});settingsTabs.SelectedTab=generalTab;SetSettings(true,true);}
-     else if(documentationStage==1){CaptureDocumentation("settings",new Control[]{settingsTabs,generalFields},new[]{"I","J"});settingsTabs.SelectedTab=presetsTab;}
-     else {CaptureDocumentation("presets",new Control[]{permanentList,addPermanent,editPermanent,updatePermanent,deletePermanent},new[]{"K","L","M","N","O"});documentationTimer.Stop();Close();}
-     documentationStage++;
-    }catch(Exception ex){documentationTimer.Stop();MessageBox.Show(ex.Message);Close();}
-   };documentationTimer.Start();
-  }
-  void CaptureDocumentation(string name,Control[] controls,string[] labels){
-   using(var bitmap=new Bitmap(ClientSize.Width,ClientSize.Height))using(var g=Graphics.FromImage(bitmap))using(var font=new Font("Segoe UI",10,FontStyle.Bold)){
-    g.CopyFromScreen(PointToScreen(Point.Empty),Point.Empty,ClientSize);
-    for(int i=0;i<controls.Length;i++){
-     var c=controls[i];var p=PointToClient(c.PointToScreen(new Point(Math.Max(0,c.Width-25),2)));
-     if(labels[i]=="E")p=PointToClient(mainSplit.PointToScreen(new Point(mainSplit.SplitterDistance-10,mainSplit.Height/2)));
-     g.FillEllipse(Brushes.Gold,p.X,p.Y,23,23);TextRenderer.DrawText(g,labels[i],font,new Rectangle(p.X,p.Y,23,23),Color.Black,TextFormatFlags.HorizontalCenter|TextFormatFlags.VerticalCenter|TextFormatFlags.NoPadding);
+
+namespace CameraControlStudio
+{
+    public partial class MainForm
+    {
+        // Documentation mode uses sample values without opening a camera or changing saved profiles.
+        bool documentationMode;
+        string documentationDirectory;
+
+        internal MainForm(string outputDirectory) : this()
+        {
+            documentationMode = true;
+            documentationDirectory = Path.GetFullPath(outputDirectory);
+        }
+
+        void InitializeDocumentation()
+        {
+            config = new SavedData { CameraId = "documentation-only", UseTransitionSpeed = true };
+            var examples = new[] { "stage", "lectern", "table", "cafe-table", "combo:table+lectern", "combo:lectern+cafe-table" };
+            config.Cameras[config.CameraId] = examples.Select(icon =>
+                new Preset { Name = PresetIcons.GetTitle(icon), IconId = icon }).ToList();
+            LoadMovementSettings();
+            LoadFramingSettings();
+            UpdateFieldOfViewOptions(new[] { 90, 78, 65 });
+            startupFov.Enabled = allowFov.Enabled = adjustFovAtLimits.Enabled = true;
+            UpdateMotionAxis("Zoom", new Setting { Min = 100, Max = 300, Step = 1 }, 160);
+            currentAxes["Pan"] = currentAxes["Tilt"] = 0;
+            SetMotionAvailability("Pan", true, true);
+            SetMotionAvailability("Tilt", true, true);
+            RefreshPositionText();
+            fieldOfViewLabel.Text = UiText.T("Field of view", "Synsfelt") + " 78°";
+            fullFrame.Enabled = true;
+
+            profilesList.Items.Add(ProfileStore.Standard);
+            profilesList.SelectedIndex = 0;
+            profileButton.Text = ProfileStore.Standard + " ▾";
+            language.SelectedIndex = Array.IndexOf(UiText.LanguageCodes, UiText.Language);
+            foreach (var editor in videoTabs.SelectMany(VideoEditors))
+            {
+                editor.Slider.Maximum = 100;
+                editor.Slider.Value = 45;
+            }
+            cameraStatus.Text = UiText.T("Camera", "Kamera") + ": Logitech BRIO";
+            status.Text = UiText.T("Ready", "Klar");
+            versionLabel.Text = "MIT · " + DiagnosticLog.DisplayAppVersion;
+            RefreshPresets();
+            mainToolTips.Active = false;
+
+            var area = Screen.FromControl(this).WorkingArea;
+            StartPosition = FormStartPosition.Manual;
+            SetBounds(area.Left + 12, area.Top + 12,
+                Math.Min(1040, area.Width - settingsPanelWidth - 24), Math.Min(660, area.Height - 24));
+            config.Layout.ControllerRatio = LayoutPolicy.DefaultControllerRatio;
+            ApplySplitter();
+            Directory.CreateDirectory(documentationDirectory);
+            RunDocumentationStages();
+        }
+
+        void RunDocumentationStages()
+        {
+            var stages = new List<(string Name, Action Show)>
+            {
+                ("main", () => { }),
+                ("presets", () =>
+                {
+                    Height = Math.Min(750, Screen.FromControl(this).WorkingArea.Height - 24);
+                    SetSettings(true, true);
+                    settingsTabs.SelectedTab = presetsTab;
+                    permanentList.SelectedIndex = 0;
+                }),
+                ("settings", () => { settingsTabs.SelectedTab = generalTab; settingsCategories.SelectedTab = motionTab; }),
+                ("application", () => settingsCategories.SelectedTab = applicationTab)
+            };
+            if (UiText.Language == "da")
+                stages.Insert(1, ("quick-guide", () => { }));
+            if (UiText.Language == "en" || UiText.Language == "da" || UiText.Language == "de")
+            {
+                stages.AddRange(new (string, Action)[]
+                {
+                    ("main-settings", () => { settingsTabs.SelectedTab = presetsTab; permanentList.ClearSelected(); }),
+                    ("video", () => settingsTabs.SelectedTab = imageTab),
+                    ("image", () => { ShowVideoControls(true); imageCategories.SelectedTab = focusTab; }),
+                    ("video-colour", () => imageCategories.SelectedTab = colourTab),
+                    ("video-light-detail", () => imageCategories.SelectedTab = lightTab),
+                    ("profiles", () => settingsTabs.SelectedTab = profilesTab),
+                    ("issues", () => settingsTabs.SelectedTab = issuesTab),
+                    ("about", () => settingsTabs.SelectedTab = aboutTab)
+                });
+            }
+
+            int stage = 0;
+            stages[stage].Show();
+            documentationTimer.Tick += (sender, args) =>
+            {
+                try
+                {
+                    CaptureDocumentation(stages[stage].Name);
+                    stage++;
+                    if (stage < stages.Count)
+                    {
+                        stages[stage].Show();
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    DiagnosticLog.Current.Write("ERROR", "Capture documentation", ex);
+                    Environment.ExitCode = 1;
+                }
+                documentationTimer.Stop();
+                Close();
+            };
+            documentationTimer.Start();
+        }
+
+        void CaptureDocumentation(string name)
+        {
+            using (var bitmap = new Bitmap(Width, Height))
+            using (var graphics = Graphics.FromImage(bitmap))
+            {
+                DrawToBitmap(bitmap, new Rectangle(Point.Empty, Size));
+                if (name == "application")
+                    DrawDocumentationLanguage(graphics);
+
+                if (name == "quick-guide")
+                {
+                    using (var pen = new Pen(Color.Gold, 3))
+                    {
+                        foreach (Control control in new Control[] { wheel, normalIn, normalOut, presetGrid, helpButton })
+                        {
+                            var position = control.PointToScreen(Point.Empty) - new Size(Left, Top);
+                            graphics.DrawRectangle(pen, new Rectangle(position, control.ClientSize));
+                        }
+                    }
+                }
+                bitmap.Save(Path.Combine(documentationDirectory, name + ".png"), ImageFormat.Png);
+            }
+        }
+
+        void DrawDocumentationLanguage(Graphics graphics)
+        {
+            // WinForms omits the owner-drawn combo selection when it renders off screen.
+            var bounds = new Rectangle(language.PointToScreen(Point.Empty) - new Size(Left, Top), language.ClientSize);
+            bounds.Inflate(-2, -2);
+            int arrowWidth = SystemInformation.VerticalScrollBarWidth;
+            if (language.RightToLeft == RightToLeft.Yes)
+                bounds.X += arrowWidth;
+            bounds.Width -= arrowWidth;
+            DrawComboItem(language, new DrawItemEventArgs(graphics, language.Font, bounds, language.SelectedIndex,
+                DrawItemState.ComboBoxEdit, language.ForeColor, language.BackColor));
+        }
     }
-    bitmap.Save(Path.Combine(documentationDirectory,UiText.Language+"-"+name+".png"),ImageFormat.Png);
-   }
-  }
- }
 }

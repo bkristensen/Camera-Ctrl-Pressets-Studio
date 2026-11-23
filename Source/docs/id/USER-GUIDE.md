@@ -4,7 +4,7 @@
 
 Mulai dulu rapat yang akan disiarkan, misalnya di Zoom. Setelah itu, buka **Camera Control Studio**.
 
-![Jendela utama dengan roda arah, zoom, dan daftar prasetel](../images/screenshots/main.png)
+![Jendela utama dengan roda arah, zoom, dan daftar prasetel](../images/screenshots/0.7.0-beta.6/id/main.png)
 
 Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsinya. Setiap arah berhenti di batas terakhir kamera.
 
@@ -64,13 +64,13 @@ Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsin
 
    Untuk menyimpan posisi secara permanen, buka ikon roda gigi di bagian bawah, pilih **Preset → Tambah preset permanen**, tentukan nama dan ikon, lalu simpan.
 
-   ![Preset permanen dan tombol pengelolaannya](../images/screenshots/presets.png)
+   ![Preset permanen dan tombol pengelolaannya](../images/screenshots/0.7.0-beta.6/id/presets.png)
 
    Di Pengaturan, atur langkah, waktu transisi, dan pembalikan arah. Tab **Video** memuat kontrol yang tersedia pada driver. Gunakan tab **Profil** untuk membuat atau menyalin profil. Aktifkan konfirmasi siaran jika perangkat lunak perekaman perlu terhubung terlebih dahulu.
 
-   ![Tab Gerakan dengan pengaturan langkah dan waktu transisi](../images/screenshots/settings.png)
+   ![Tab Gerakan dengan pengaturan langkah dan waktu transisi](../images/screenshots/0.7.0-beta.6/id/settings.png)
 
-   ![Tab Aplikasi dengan konfirmasi siaran dan bahasa profil](../images/screenshots/application.png)
+   ![Tab Aplikasi dengan konfirmasi siaran dan bahasa profil](../images/screenshots/0.7.0-beta.6/id/application.png)
 
 6. Seret pemisah vertikal untuk mengatur lebar kedua area. Panel pengaturan selalu tertutup saat aplikasi dimulai. Pilih bahasa di **Pengaturan → Aplikasi → Bahasa profil**, lalu mulai ulang aplikasi. Arahkan kursor ke tombol kecil untuk melihat keterangannya.
 
