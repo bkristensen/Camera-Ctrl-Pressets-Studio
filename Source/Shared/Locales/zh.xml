@@ -13,7 +13,9 @@
   <text key="Brightness">亮度</text>
   <text key="Buy me a coffee">请我喝杯咖啡</text>
   <text key="Camera">摄像头</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">摄像头方向轮。内圈微调，中圈正常移动，外圈快速移动。</text>
+  <text key="Camera direction wheel">摄像头方向轮</text>
+  <text key="Inner ring for normal moves. Outer ring for fast moves.">内圈用于正常移动。外圈用于快速移动。</text>
+  <text key="Click to choose a camera. Drag to pan in that direction.">点击选择摄像头。向要移动的方向拖动。</text>
   <text key="Fine speed (% of Normal)">微调速度（常速的百分比）</text>
   <text key="Use speed for preset transitions">按速度切换预设位置</text>
   <text key="Transition speed (%/s)">切换速度（%/秒）</text>

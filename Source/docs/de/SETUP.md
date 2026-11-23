@@ -42,7 +42,7 @@ Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten
 
 | Einstellung | Wirkung | Standard |
 | --- | --- | --- |
-| Feintempo (% von Normal) | Tempo beim Gedrückthalten eines Pfeils im inneren Ring | 50 % |
+| Feintempo (% von Normal) | Tempo beim Gedrückthalten von Strg und einer Pfeiltaste | 50 % |
 | Normale Schwenkschritte | Mittlerer Pfeilring | 1 |
 | Schnelle Schwenkschritte | Äußerer Pfeilring | 4 |
 | Zoomschritte | − und + | 1 |

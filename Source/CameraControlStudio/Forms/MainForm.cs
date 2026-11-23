@@ -20,7 +20,7 @@ namespace CameraControlStudio
         readonly Dictionary<string, Bitmap> iconImages = new Dictionary<string, Bitmap>();
         ProfileEntry entry; SavedData config; string profile = ProfileStore.Standard;
         Camera camera; List<Device> devices = new List<Device>();
-        bool loaded, applying, dirty, wasMaximized; string heldAxis; int heldDirection, heldSteps;
+        bool loaded, applying, dirty, wasMaximized;
         bool refreshingPresets;
         Dictionary<string, int> start, target, last; double duration;
         PresetSpeedCurve speedCurve;
@@ -108,8 +108,9 @@ namespace CameraControlStudio
                 SetSettings(!settingsTabs.Visible, true); MarkDirty();
             });
             profileButton.Click += (o, e) => Run(ChooseProfile);
-            wheel.MovementRequested += (axis, direction, speed) => Run(() => StartHeld(axis, direction, speed));
-            wheel.Released += () => held.Stop();
+            wheel.MovementRequested += (pan, tilt, speed) => Run(() => StartPanHeld(pan, tilt, speed));
+            wheel.DragRequested += (pan, tilt) => Run(() => UpdatePanDrag(pan, tilt));
+            wheel.Released += StopHeld;
             wheel.SourceRequested += () => Run(ChooseCamera);
             WireZoom(normalIn, 1);
             WireZoom(normalOut, -1);
@@ -118,8 +119,8 @@ namespace CameraControlStudio
             movement.Tick += (o, e) => Run(TickMotion);
             held.Tick += (o, e) => Run(() =>
             {
-                if (!Nudge(heldAxis, heldDirection, heldSteps))
-                    held.Stop();
+                if (repeatHeld?.Invoke() != true)
+                    StopHeld();
             });
             motionLimits.Tick += (o, e) => Run(() =>
             {
@@ -230,8 +231,14 @@ namespace CameraControlStudio
                 MarkDirty();
             };
             KeyPreview = true;
-            KeyDown += (o, e) => { if (e.KeyCode == Keys.Escape) StopMotion(); };
-            Deactivate += (o, e) => { held.Stop(); };
+            KeyDown += (o, e) =>
+            {
+                if (e.KeyCode != Keys.Escape)
+                    return;
+                wheel.CancelMovement();
+                StopMotion();
+            };
+            Deactivate += (o, e) => { wheel.CancelMovement(); StopHeld(); };
             Link(repoLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio");
             Link(issuesLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues");
             Link(discussionLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions");
@@ -273,7 +280,11 @@ namespace CameraControlStudio
             SetMainToolTip(deleteTemporaryButton, UiText.T("Delete temporary preset", "Slet midlertidig position"));
             SetMainToolTip(settingsButton, UiText.T("Settings", "Indstillinger"));
             SetMainToolTip(profileButton, UiText.T("Choose profile", "Vælg profil"));
-            SetMainToolTip(wheel, wheel.AccessibleName);
+            var wheelDescription = UiText.T("Inner ring for normal moves. Outer ring for fast moves.", "Inderste ring flytter normalt. Yderste ring flytter hurtigt.");
+            var sourceDescription = UiText.T("Click to choose a camera. Drag to pan in that direction.", "Klik for at vælge kamera. Træk for at panorere i den retning.");
+            SetMainToolTip(wheel, wheel.AccessibleName, wheelDescription + " " + sourceDescription);
+            wheel.SourceHoverChanged += overSource => mainToolTips.SetToolTip(wheel, overSource
+                ? sourceDescription : wheelDescription);
             SetMainToolTip(fullFrame, UiText.T("Restore full frame", "Gendan fuldt billede"),
                 UiText.T("Use the widest view and minimum zoom.", "Brug det bredeste synsfelt og mindste zoom."));
             SetMainToolTip(zoomSlider, UiText.T("Zoom", "Zoom"),
@@ -294,10 +305,10 @@ namespace CameraControlStudio
             button.MouseDown += (o, e) =>
             {
                 if (e.Button == MouseButtons.Left)
-                    Run(() => StartHeld("Zoom", direction, PanSpeed.Normal));
+                    Run(() => StartZoomHeld(direction));
             };
-            button.MouseUp += (o, e) => held.Stop();
-            button.MouseCaptureChanged += (o, e) => { if (!button.Capture) held.Stop(); };
+            button.MouseUp += (o, e) => StopHeld();
+            button.MouseCaptureChanged += (o, e) => { if (!button.Capture) StopHeld(); };
             button.KeyDown += (o, e) =>
             {
                 if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Enter)

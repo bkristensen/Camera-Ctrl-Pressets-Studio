@@ -13,7 +13,9 @@
   <text key="Brightness">Brillo</text>
   <text key="Buy me a coffee">Invítame a un café</text>
   <text key="Camera">Cámara</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Rueda de la cámara. Anillo interior para movimientos finos. Central para normales. Exterior para rápidos.</text>
+  <text key="Camera direction wheel">Rueda de dirección de la cámara</text>
+  <text key="Inner ring for normal moves. Outer ring for fast moves.">Anillo interior para movimientos normales. Exterior para movimientos rápidos.</text>
+  <text key="Click to choose a camera. Drag to pan in that direction.">Haz clic para elegir la cámara. Arrastra en la dirección en la que quieras moverla.</text>
   <text key="Fine speed (% of Normal)">Velocidad fina (% de normal)</text>
   <text key="Use speed for preset transitions">Usar velocidad al cambiar de posición</text>
   <text key="Transition speed (%/s)">Velocidad de transición (%/s)</text>

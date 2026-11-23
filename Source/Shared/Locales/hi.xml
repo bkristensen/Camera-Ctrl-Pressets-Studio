@@ -13,7 +13,9 @@
   <text key="Brightness">चमक</text>
   <text key="Buy me a coffee">मेरे लिए एक कॉफ़ी खरीदें</text>
   <text key="Camera">कैमरा</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">कैमरे का दिशा चक्र। भीतरी घेरा बारीक चाल के लिए, बीच का सामान्य चाल के लिए और बाहरी तेज़ चाल के लिए।</text>
+  <text key="Camera direction wheel">कैमरे का दिशा चक्र</text>
+  <text key="Inner ring for normal moves. Outer ring for fast moves.">सामान्य चाल के लिए भीतरी घेरा। तेज़ चाल के लिए बाहरी घेरा।</text>
+  <text key="Click to choose a camera. Drag to pan in that direction.">कैमरा चुनने के लिए क्लिक करें। जिस दिशा में घुमाना है, उस ओर खींचें।</text>
   <text key="Fine speed (% of Normal)">सूक्ष्म गति (सामान्य का %)</text>
   <text key="Use speed for preset transitions">प्रीसेट बदलने के लिए गति का उपयोग करें</text>
   <text key="Transition speed (%/s)">बदलाव की गति (%/सेकंड)</text>

@@ -24,7 +24,9 @@ Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître so
 
    **Panoramique**
 
-   Utilisez l’anneau intérieur pour les mouvements fins, celui du milieu pour les mouvements normaux et l’anneau extérieur pour les mouvements rapides. Maintenez une flèche enfoncée pour déplacer la caméra, puis relâchez-la pour l’arrêter.
+   Utilisez l’anneau intérieur pour les mouvements normaux et l’anneau extérieur pour les mouvements rapides. Une flèche diagonale déplace les deux axes à 45°, à 45 % de la vitesse de l’anneau par axe. Maintenez la flèche pour continuer. Relâchez-la pour arrêter.
+
+   Cliquez sur le bouton de la caméra pour choisir la source. Pour diriger la caméra, maintenez le bouton et faites glisser dans la direction voulue. Plus vous l’éloignez, plus le mouvement est rapide, jusqu’au double de la vitesse rapide. Relâchez pour arrêter.
 
    **Zoom**
 

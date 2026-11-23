@@ -24,7 +24,9 @@ Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsin
 
    **Gerakan horizontal**
 
-   Gunakan cincin dalam untuk gerakan halus, cincin tengah untuk gerakan normal, dan cincin luar untuk gerakan cepat. Tahan panah untuk terus bergerak, lalu lepaskan untuk berhenti.
+   Gunakan cincin dalam untuk gerakan normal dan cincin luar untuk gerakan cepat. Panah diagonal menggerakkan dua sumbu pada arah 45°, dengan 45% kecepatan cincin pada tiap sumbu. Tahan panah untuk terus bergerak. Lepaskan untuk berhenti.
+
+   Klik tombol kamera untuk memilih sumber. Tahan tombol dan seret ke arah yang diinginkan untuk menggeser kamera. Makin jauh tarikan, makin cepat gerakannya, hingga dua kali kecepatan cepat. Lepaskan tombol untuk berhenti.
 
    **Zoom**
 

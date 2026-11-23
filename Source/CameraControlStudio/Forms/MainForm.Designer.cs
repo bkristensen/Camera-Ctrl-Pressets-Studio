@@ -358,7 +358,8 @@ namespace CameraControlStudio {
             // 
             // wheel
             // 
-            this.wheel.AccessibleName = "Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.";
+            this.wheel.AccessibleName = "Camera direction wheel";
+            this.mainToolTips.SetToolTip(this.wheel, "Click the camera button to choose a source. Drag it to pan.");
             this.wheel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wheel.Location = new System.Drawing.Point(0, 52);
             this.wheel.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);

@@ -46,12 +46,17 @@ class Program {
 
  static void Check(bool value,string message){if(!value)throw new Exception(message);}
  static void CheckMovementSpeeds() {
-  Check(ManualMotion.PanRepeat(.25, true, out int fine) == 600 && fine == 1, "quarter speed repeats one driver step");
-  Check(ManualMotion.PanRepeat(.5, true, out fine) == 300 && fine == 1, "half speed repeats one driver step");
-  Check(ManualMotion.PanRepeat(1, false, out int normal) == 150 && normal == 1, "normal hold uses the default rate");
-  int fastInterval = ManualMotion.PanRepeat(4, false, out int fast);
-  Check(fast == 1 && fastInterval >= 33 && fastInterval < 150, "fast hold spreads steps across shorter intervals");
-  Check(ManualMotion.PanRepeat(100, true, out fine) == 33 && fine == 1, "fine hold stays on single steps at the repeat limit");
+  Check(PanMotion.Direction(PanMotion.Sector(-1, -1)) == (-1, -1) &&
+   PanMotion.Direction(PanMotion.Sector(1, -1)) == (1, -1) &&
+   PanMotion.Direction(PanMotion.Sector(1, 1)) == (1, 1) &&
+   PanMotion.Direction(PanMotion.Sector(-1, 1)) == (-1, 1), "diagonal sectors move both axes");
+  Check(PanMotion.DragVelocity(30, 0, 60) == (.5, 0), "drag speed scales with distance");
+  var clamped = PanMotion.DragVelocity(300, 400, 60);
+  Check(clamped == (.6, .8), "drag caps the vector without changing its direction");
+  double pending = 0;
+  Check(PanMotion.TakeSteps(ref pending, PanMotion.DiagonalShare) == 0 &&
+   PanMotion.TakeSteps(ref pending, PanMotion.DiagonalShare) == 0 &&
+   PanMotion.TakeSteps(ref pending, PanMotion.DiagonalShare) == 1, "diagonal hold carries fractional driver steps");
 
   var setting = new Setting { Min = -5, Max = 8, Step = 3 };
   Check(PresetSpeedCurve.AxisDistance(setting, 7, 1) == .5, "preset distance uses the reachable range");

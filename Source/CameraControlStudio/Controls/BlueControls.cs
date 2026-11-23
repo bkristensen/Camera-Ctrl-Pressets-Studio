@@ -154,100 +154,178 @@ namespace CameraControlStudio {
     public enum PanSpeed { Fine, Normal, Fast }
 
     public sealed class PanWheel : Control {
-        static readonly float[] RingEdges = { .175f, .285f, .395f, .5f };
-        public event Action<string, int, PanSpeed> MovementRequested; public event Action Released; public event Action SourceRequested;
+        static readonly float[] RingEdges = { .175f, .3375f, .5f };
         readonly bool[] available = { true, true, true, true };
-        int active = -1; public PanWheel() {
+        int active = -1;
+        Keys activeKey;
+        Point sourceOrigin;
+        bool sourcePressed, sourceDragged, sourceHovered;
+
+        public event Action<int, int, PanSpeed> MovementRequested;
+        public event Action<double, double> DragRequested;
+        public event Action<bool> SourceHoverChanged;
+        public event Action Released;
+        public event Action SourceRequested;
+
+        public PanWheel() {
             DoubleBuffered = true;
             SetStyle(ControlStyles.ResizeRedraw, true);
             TabStop = true;
         }
+
+        internal bool IsHoldingDirection => active >= 0 || activeKey != Keys.None;
+        float WheelSize => Math.Min(Width, Height) - 24;
+
         internal void SetDirectionAvailability(string axis, bool negative, bool positive) {
-            int minus = axis == "Pan" ? 2 : 1;
-            int plus = axis == "Pan" ? 0 : 3;
-            if (available[minus] == negative && available[plus] == positive)
+            int index = axis == "Pan" ? 0 : 2;
+            if (available[index] == negative && available[index + 1] == positive)
                 return;
-            available[minus] = negative;
-            available[plus] = positive;
-            if (active >= 0 && !available[active % 4])
-                Release();
-            else
-                Invalidate();
+            available[index] = negative;
+            available[index + 1] = positive;
+            Invalidate();
         }
-        int Hit(Point p) {
-            float size = Math.Min(Width, Height) - 24, cx = Width / 2f, cy = Height / 2f, dx = p.X - cx, dy = p.Y - cy, r = (float)Math.Sqrt(dx * dx + dy * dy);
-            if (size <= 0 || r < size * RingEdges[0] || r > size * RingEdges[3])
+
+        bool CanMove(int sector) {
+            var (pan, tilt) = PanMotion.Direction(sector);
+            return CanMoveAxis("Pan", pan) || CanMoveAxis("Tilt", tilt);
+        }
+
+        internal bool CanMoveAxis(string axis, int direction) =>
+            direction != 0 && available[(axis == "Pan" ? 0 : 2) + (direction < 0 ? 0 : 1)];
+
+        bool IsOverSource(Point location) {
+            float radius = WheelSize * .16f;
+            float x = location.X - Width / 2f, y = location.Y - Height / 2f;
+            return radius > 0 && x * x + y * y <= radius * radius;
+        }
+
+        int Hit(Point location) {
+            float size = WheelSize;
+            float x = location.X - Width / 2f, y = location.Y - Height / 2f;
+            double distance = Math.Sqrt(x * x + y * y);
+            if (size <= 0 || distance < size * RingEdges[0] || distance > size * RingEdges[2])
                 return -1;
-            int direction = ((int)Math.Floor((Math.Atan2(dy, dx) * 180 / Math.PI + 405) / 90)) % 4;
-            int ring = r < size * RingEdges[1] ? 0 : r < size * RingEdges[2] ? 1 : 2;
-            return direction + ring * 4;
+            int sector = PanMotion.Sector(x, y);
+            return distance < size * RingEdges[1] ? sector : sector + 8;
         }
-        void Trigger(int n) {
-            if (n < 0 || !available[n % 4])
-                return;
-            int direction = n % 4;
-            MovementRequested?.Invoke(direction == 0 || direction == 2 ? "Pan" : "Tilt",
-                direction == 0 || direction == 3 ? 1 : -1, (PanSpeed)(n / 4));
+
+        void Trigger(int sector, PanSpeed speed) {
+            var (pan, tilt) = PanMotion.Direction(sector);
+            MovementRequested?.Invoke(pan, tilt, speed);
         }
+
         protected override void OnMouseDown(MouseEventArgs e) {
             base.OnMouseDown(e);
             if (e.Button != MouseButtons.Left || !Enabled)
                 return;
             Focus();
-            float dx = e.X - Width / 2f, dy = e.Y - Height / 2f;
-            if (Math.Sqrt(dx * dx + dy * dy) < (Math.Min(Width, Height) - 24) * .16) {
-                SourceRequested?.Invoke();
+            if (IsOverSource(e.Location)) {
+                sourceOrigin = e.Location;
+                sourcePressed = Capture = true;
                 return;
             }
             int hit = Hit(e.Location);
-            if (hit >= 0 && available[hit % 4]) {
+            if (hit >= 0 && CanMove(hit % 8)) {
                 active = hit;
                 Capture = true;
-                Trigger(active);
+                Trigger(hit % 8, hit < 8 ? PanSpeed.Normal : PanSpeed.Fast);
             }
             Invalidate();
         }
+
+        protected override void OnMouseMove(MouseEventArgs e) {
+            base.OnMouseMove(e);
+            SetSourceHover(IsOverSource(e.Location));
+            if (!sourcePressed)
+                return;
+            int x = e.X - sourceOrigin.X, y = e.Y - sourceOrigin.Y;
+            var threshold = SystemInformation.DragSize;
+            if (!sourceDragged && Math.Abs(x) < threshold.Width / 2 && Math.Abs(y) < threshold.Height / 2)
+                return;
+            sourceDragged = true;
+            var (pan, tilt) = PanMotion.DragVelocity(x, y, WheelSize / 2);
+            DragRequested?.Invoke(pan, tilt);
+        }
+
+        protected override void OnMouseLeave(EventArgs e) {
+            base.OnMouseLeave(e);
+            SetSourceHover(false);
+        }
+
+        void SetSourceHover(bool overSource) {
+            if (sourceHovered == overSource)
+                return;
+            sourceHovered = overSource;
+            SourceHoverChanged?.Invoke(overSource);
+        }
+
         protected override void OnMouseUp(MouseEventArgs e) {
             base.OnMouseUp(e);
-            if (e.Button == MouseButtons.Left)
-                Release();
+            if (e.Button != MouseButtons.Left)
+                return;
+            var threshold = SystemInformation.DragSize;
+            bool chooseSource = sourcePressed && !sourceDragged && IsOverSource(e.Location) &&
+                Math.Abs(e.X - sourceOrigin.X) < threshold.Width / 2 &&
+                Math.Abs(e.Y - sourceOrigin.Y) < threshold.Height / 2;
+            CancelMovement();
+            if (chooseSource)
+                SourceRequested?.Invoke();
         }
+
         protected override void OnMouseCaptureChanged(EventArgs e) {
             base.OnMouseCaptureChanged(e);
-            if (!Capture)
-                Release();
+            if (!Capture && (sourcePressed || active >= 0))
+                CancelMovement();
         }
-        void Release() {
-            if (active < 0)
+
+        internal void CancelMovement() {
+            if (!sourcePressed && active < 0 && activeKey == Keys.None)
                 return;
+            sourcePressed = sourceDragged = false;
             active = -1;
+            activeKey = Keys.None;
             Capture = false;
             Released?.Invoke();
             Invalidate();
         }
+
         protected override bool IsInputKey(Keys key) {
             var code = key & Keys.KeyCode;
             return code == Keys.Up || code == Keys.Down || code == Keys.Left || code == Keys.Right || base.IsInputKey(key);
         }
+
         protected override void OnKeyDown(KeyEventArgs e) {
             base.OnKeyDown(e);
             if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Enter) {
                 SourceRequested?.Invoke();
-                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
-            int n = e.KeyCode == Keys.Right ? 0 : e.KeyCode == Keys.Down ? 1 : e.KeyCode == Keys.Left ? 2 : e.KeyCode == Keys.Up ? 3 : -1;
-            if (n >= 0 && active < 0) {
-                var speed = e.Shift ? PanSpeed.Fast : e.Control ? PanSpeed.Fine : PanSpeed.Normal;
-                Trigger(n + (int)speed * 4);
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
+            int sector = e.KeyCode == Keys.Right ? 0 : e.KeyCode == Keys.Down ? 2 : e.KeyCode == Keys.Left ? 4 : e.KeyCode == Keys.Up ? 6 : -1;
+            if (sector < 0)
+                return;
+            e.Handled = true;
+            if (sourcePressed || active >= 0 || activeKey == e.KeyCode || !CanMove(sector))
+                return;
+            activeKey = e.KeyCode;
+            Trigger(sector, e.Shift ? PanSpeed.Fast : e.Control ? PanSpeed.Fine : PanSpeed.Normal);
         }
+
+        protected override void OnKeyUp(KeyEventArgs e) {
+            base.OnKeyUp(e);
+            if (e.KeyCode == activeKey)
+                CancelMovement();
+        }
+
+        protected override void OnLostFocus(EventArgs e) {
+            base.OnLostFocus(e);
+            CancelMovement();
+        }
+
         protected override void OnEnabledChanged(EventArgs e) {
             base.OnEnabledChanged(e);
             if (!Enabled)
-                Release();
+                CancelMovement();
         }
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
@@ -256,33 +334,32 @@ namespace CameraControlStudio {
             float size = Math.Min(Width, Height) - 24, cx = Width / 2f, cy = Height / 2f;
             if (size < 60)
                 return;
-            for (int ring = 0; ring < 3; ring++)
-            for (int dir = 0; dir < 4; dir++) {
-                bool enabled = Enabled && available[dir];
+            for (int ring = 0; ring < 2; ring++)
+            for (int dir = 0; dir < 8; dir++) {
+                bool enabled = Enabled && CanMove(dir);
                 float outer = size * RingEdges[ring + 1] - 1;
                 float inner = size * RingEdges[ring] + 1;
-                float angle = dir * 90 - 43;
+                float angle = dir * 45 - 21.5f;
                 using (var p = new GraphicsPath()) {
-                    p.AddArc(cx - outer, cy - outer, outer * 2, outer * 2, angle, 86);
-                    p.AddArc(cx - inner, cy - inner, inner * 2, inner * 2, angle + 86, -86);
+                    p.AddArc(cx - outer, cy - outer, outer * 2, outer * 2, angle, 43);
+                    p.AddArc(cx - inner, cy - inner, inner * 2, inner * 2, angle + 43, -43);
                     p.CloseFigure();
                     var r = p.GetBounds();
-                    bool selected = active == dir + ring * 4;
+                    bool selected = active == dir + ring * 8;
                     var top = !enabled ? Color.FromArgb(31, 58, 86) : selected ? Color.FromArgb(65, 210, 255)
-                        : ring == 2 ? Color.FromArgb(0, 142, 238)
-                        : ring == 1 ? Color.FromArgb(38, 100, 160) : Color.FromArgb(20, 74, 126);
+                        : ring == 1 ? Color.FromArgb(0, 142, 238) : Color.FromArgb(38, 100, 160);
                     using (var b = new LinearGradientBrush(r, top, Color.FromArgb(3, 44, 85), 90))
                         g.FillPath(b, p);
-                    if (enabled && ring == 2)
+                    if (enabled && ring == 1)
                     using (var glow = new Pen(Color.FromArgb(40, 0, 200, 255), Math.Max(2, size * .025f)))
                         g.DrawPath(glow, p);
-                    using (var pen = new Pen(!enabled ? Color.FromArgb(52, 75, 101) : ring == 2 ? Color.FromArgb(92, 222, 255) : BlueTheme.Line, 2))
+                    using (var pen = new Pen(!enabled ? Color.FromArgb(52, 75, 101) : ring == 1 ? Color.FromArgb(92, 222, 255) : BlueTheme.Line, 2))
                         g.DrawPath(pen, p);
                 }
                 float radius = (outer + inner) / 2;
                 var state = g.Save();
-                g.TranslateTransform(cx + (float)Math.Cos(dir * Math.PI / 2) * radius, cy + (float)Math.Sin(dir * Math.PI / 2) * radius);
-                g.RotateTransform(dir * 90);
+                g.TranslateTransform(cx + (float)Math.Cos(dir * Math.PI / 4) * radius, cy + (float)Math.Sin(dir * Math.PI / 4) * radius);
+                g.RotateTransform(dir * 45);
                 using (var pen = new Pen(enabled ? Color.White : Color.SlateGray, Math.Max(1.5f, size / 100))) {
                     pen.StartCap = pen.EndCap = LineCap.Round;
                     float a = size * .016f;

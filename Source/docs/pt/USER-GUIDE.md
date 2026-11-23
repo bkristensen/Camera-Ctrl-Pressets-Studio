@@ -24,7 +24,9 @@ Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua f
 
    **Movimento horizontal**
 
-   Use o anel interno para movimentos finos, o central para movimentos normais e o externo para movimentos rápidos. Mantenha uma seta pressionada para continuar o movimento e solte-a para parar.
+   Use o anel interno para movimentos normais e o externo para movimentos rápidos. As setas diagonais movem os dois eixos a 45°, com 45% da velocidade do anel em cada eixo. Segure a seta para continuar. Solte para parar.
+
+   Clique no botão da câmera para escolher a fonte. Para mover a câmera, segure o botão e arraste na direção desejada. Quanto mais longe você arrastar, mais rápido o movimento, até o dobro da velocidade rápida. Solte para parar.
 
    **Zoom**
 

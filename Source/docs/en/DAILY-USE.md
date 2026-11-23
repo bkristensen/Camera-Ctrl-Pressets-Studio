@@ -27,7 +27,9 @@ Green means the driver reports the saved position and FOV, if saved. Check the p
 
 ### Pan
 
-Use the inner ring for Fine movement, the middle ring for Normal and the outer ring for Fast. A Fine click moves one driver step. Hold an arrow to keep moving and release it to stop. The keyboard arrow keys use Normal. Hold Ctrl for Fine or Shift for Fast.
+Use the inner ring for normal moves and the outer ring for fast moves. Each ring has eight arrows. The diagonals move pan and tilt together at 45°, with 45% of the ring’s speed on each axis. A click moves at least one driver step per available axis. Hold an arrow to keep moving. Release it to stop.
+
+Click the camera button to choose a source. To steer, hold the button and drag in the direction you want to move. Drag farther to move faster, up to twice the fast step rate. Return to the starting point or release the button to stop.
 
 ### Zoom
 
@@ -42,8 +44,7 @@ Press Esc to stop a pan in progress.
 
 ### Arrow keys
 
-You can use the arrow keys when the wheel has focus.
-Hold Shift for fast steps.
+Use the arrow keys when the wheel has focus. Hold Ctrl for fine moves or Shift for fast moves.
 
 ## 3. Save a temporary preset
 

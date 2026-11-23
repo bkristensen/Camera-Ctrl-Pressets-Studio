@@ -13,7 +13,9 @@
   <text key="Brightness">Brightness</text>
   <text key="Buy me a coffee">Buy me a coffee</text>
   <text key="Camera">Camera</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Camera direction wheel. Inner ring for fine moves. Middle for normal. Outer for fast.</text>
+  <text key="Camera direction wheel">Camera direction wheel</text>
+  <text key="Inner ring for normal moves. Outer ring for fast moves.">Inner ring for normal moves. Outer ring for fast moves.</text>
+  <text key="Click to choose a camera. Drag to pan in that direction.">Click to choose a camera. Drag to pan in that direction.</text>
   <text key="Fine speed (% of Normal)">Fine speed (% of Normal)</text>
   <text key="Use speed for preset transitions">Use speed for preset transitions</text>
   <text key="Transition speed (%/s)">Transition speed (%/s)</text>

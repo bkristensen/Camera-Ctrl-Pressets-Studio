@@ -24,7 +24,9 @@ Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué ha
 
    **Giro**
 
-   Usa el anillo interior para movimientos finos, el central para los normales y el exterior para los rápidos. Mantén pulsada una flecha para seguir moviendo la cámara y suéltala para detenerla.
+   Usa el anillo interior para el movimiento normal y el exterior para el rápido. Las flechas diagonales mueven ambos ejes a 45°, al 45 % de la velocidad del anillo por eje. Mantén pulsada una flecha para seguir. Suéltala para parar.
+
+   Haz clic en el botón de la cámara para elegir la fuente. Para moverla, mantén pulsado el botón y arrastra en la dirección deseada. Cuanto más lejos arrastres, mayor será la velocidad, hasta el doble de la rápida. Suelta el botón para parar.
 
    **Zoom**
 

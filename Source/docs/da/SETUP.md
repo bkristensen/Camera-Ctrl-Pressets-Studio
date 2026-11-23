@@ -42,7 +42,7 @@ Ret værdierne under **Indstillinger → Bevægelse**. Start med små trin. Se r
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
-| Fin hastighed (% af normal) | Hastighed når en pil i den inderste ring holdes nede | 50 % |
+| Fin hastighed (% af normal) | Hastighed, når Ctrl og en piletast holdes nede | 50 % |
 | Normale panoreringstrin | Den midterste ring med pile | 1 |
 | Hurtige panoreringstrin | Den yderste ring med pile | 4 |
 | Zoomtrin | − og + | 1 |

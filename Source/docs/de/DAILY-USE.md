@@ -27,7 +27,9 @@ Grün bedeutet, dass der Treiber die gespeicherte Position und gegebenenfalls da
 
 ### Schwenken
 
-Der innere Ring dient der Feinbewegung, der mittlere der normalen und der äußere der schnellen Bewegung. Ein Klick im inneren Ring bewegt die Kamera um einen Treiberschritt. Halten Sie einen Pfeil gedrückt und lassen Sie ihn los, um anzuhalten. Die Pfeiltasten bewegen die Kamera normal. Halten Sie Strg für Feinbewegung oder Umschalt für schnelle Bewegung.
+Der innere Ring bewegt die Kamera normal, der äußere schnell. Jeder Ring hat acht Pfeile. Die diagonalen Pfeile bewegen beide Achsen in 45°-Richtung mit je 45 % des Ringtempos. Ein Klick bewegt jede verfügbare Achse um mindestens einen Treiberschritt. Halten Sie einen Pfeil, um weiterzufahren. Lassen Sie ihn zum Anhalten los.
+
+Klicken Sie auf die Kamerataste, um eine Quelle zu wählen. Halten Sie die Taste und ziehen Sie in die gewünschte Richtung. Je weiter Sie ziehen, desto schneller fährt die Kamera, bis zum Doppelten des schnellen Tempos. Ziehen Sie zum Ausgangspunkt zurück oder lassen Sie die Taste zum Anhalten los.
 
 ### Zoomen
 
@@ -42,8 +44,7 @@ Drücken Sie Esc, um einen laufenden Schwenk abzubrechen.
 
 ### Pfeiltasten
 
-Wenn das Steuerrad den Fokus hat, können Sie die Pfeiltasten verwenden.
-Halten Sie die Umschalttaste gedrückt, um schnelle Schritte auszuführen.
+Nutzen Sie die Pfeiltasten, wenn das Kamerarad den Fokus hat. Halten Sie Strg für feine oder Umschalt für schnelle Bewegungen.
 
 ## 3. Temporäre Position speichern
 

@@ -13,7 +13,9 @@
   <text key="Brightness">Kecerahan</text>
   <text key="Buy me a coffee">Traktir saya kopi</text>
   <text key="Camera">Kamera</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda arah kamera. Cincin dalam untuk gerakan halus, tengah untuk normal, dan luar untuk cepat.</text>
+  <text key="Camera direction wheel">Roda arah kamera</text>
+  <text key="Inner ring for normal moves. Outer ring for fast moves.">Cincin dalam untuk gerakan normal. Cincin luar untuk gerakan cepat.</text>
+  <text key="Click to choose a camera. Drag to pan in that direction.">Klik untuk memilih kamera. Seret ke arah gerakan yang diinginkan.</text>
   <text key="Fine speed (% of Normal)">Kecepatan halus (% dari normal)</text>
   <text key="Use speed for preset transitions">Gunakan kecepatan untuk transisi</text>
   <text key="Transition speed (%/s)">Kecepatan transisi (%/d)</text>

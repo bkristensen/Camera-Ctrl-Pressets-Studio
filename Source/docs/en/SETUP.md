@@ -42,7 +42,7 @@ Change the values under **Settings → Movement**. Start with small steps. Test 
 
 | Setting | What it changes | Default |
 | --- | --- | --- |
-| Fine speed (% of Normal) | Rate while holding an inner-ring arrow | 50% |
+| Fine speed (% of Normal) | Rate while holding Ctrl and an arrow key | 50% |
 | Normal pan steps | Middle arrow ring | 1 |
 | Fast pan steps | Outer arrow ring | 4 |
 | Zoom steps | − and + | 1 |

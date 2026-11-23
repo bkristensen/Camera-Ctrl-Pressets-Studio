@@ -90,29 +90,94 @@ namespace CameraControlStudio
         void StopMotion()
         {
             movement.Stop();
-            held.Stop();
+            StopHeld();
             clock.Stop();
             activity.Clear();
             presetGrid.Invalidate();
         }
-        void StartHeld(string axis, int direction, PanSpeed speed)
+        Func<bool> repeatHeld;
+        double dragPan, dragTilt;
+        double pendingPan, pendingTilt;
+
+        void StopHeld()
         {
             held.Stop();
-            bool zoom = axis == "Zoom";
-            bool fine = speed == PanSpeed.Fine;
-            int clickSteps = zoom ? (int)zoomSteps.Value : fine ? 1 :
-                (int)(speed == PanSpeed.Fast ? fastPanSteps.Value : panSteps.Value);
-            if (!Nudge(axis, direction, clickSteps))
+            repeatHeld = null;
+            pendingPan = pendingTilt = 0;
+            dragPan = dragTilt = 0;
+        }
+
+        void StartZoomHeld(int direction)
+        {
+            StopHeld();
+            int steps = (int)zoomSteps.Value;
+            if (!Nudge("Zoom", direction, steps) || (Control.MouseButtons & MouseButtons.Left) == 0)
                 return;
-            if ((Control.MouseButtons & MouseButtons.Left) == 0 || (!zoom && !wheel.Capture))
-                return;
-            heldAxis = axis;
-            heldDirection = direction;
-            heldSteps = clickSteps;
-            held.Interval = zoom ? ManualMotion.DefaultRepeatInterval : ManualMotion.PanRepeat(
-                fine ? (double)(panSteps.Value * finePanPercent.Value / 100) : clickSteps, fine, out heldSteps);
+            repeatHeld = () => Nudge("Zoom", direction, steps);
+            held.Interval = ManualMotion.DefaultRepeatInterval;
             held.Start();
         }
+
+        void StartPanHeld(int pan, int tilt, PanSpeed speed)
+        {
+            StopHeld();
+            NeedCamera();
+            int steps = (int)(speed == PanSpeed.Fast ? fastPanSteps.Value : panSteps.Value);
+            double share = pan != 0 && tilt != 0 ? PanMotion.DiagonalShare : 1;
+            int clickSteps = speed == PanSpeed.Fine ? 1 : Math.Max(1,
+                (int)Math.Round(steps * share, MidpointRounding.AwayFromZero));
+            if (!MovePan(pan, tilt, clickSteps, clickSteps) || !wheel.IsHoldingDirection)
+                return;
+            double rate = speed == PanSpeed.Fine ? (double)(panSteps.Value * finePanPercent.Value / 100) : steps * share;
+            repeatHeld = () => RepeatPan(pan * rate, tilt * rate);
+            held.Interval = PanMotion.Interval;
+            held.Start();
+        }
+
+        void UpdatePanDrag(double pan, double tilt)
+        {
+            if (pan == 0 && tilt == 0)
+            {
+                StopHeld();
+                return;
+            }
+            if (!held.Enabled)
+            {
+                NeedCamera();
+                if (!wheel.Capture)
+                    return;
+                repeatHeld = () => RepeatPan(dragPan * (double)fastPanSteps.Value * 2,
+                    dragTilt * (double)fastPanSteps.Value * 2);
+                held.Interval = PanMotion.Interval;
+                held.Start();
+            }
+            if (Math.Sign(pan) != Math.Sign(dragPan))
+                pendingPan = 0;
+            if (Math.Sign(tilt) != Math.Sign(dragTilt))
+                pendingTilt = 0;
+            dragPan = pan;
+            dragTilt = tilt;
+        }
+
+        bool RepeatPan(double panRate, double tiltRate)
+        {
+            const double intervalShare = PanMotion.Interval / (double)ManualMotion.DefaultRepeatInterval;
+            int pan = PanMotion.TakeSteps(ref pendingPan, panRate * intervalShare);
+            int tilt = PanMotion.TakeSteps(ref pendingTilt, tiltRate * intervalShare);
+            return MovePan(Math.Sign(panRate), Math.Sign(tiltRate), Math.Abs(pan), Math.Abs(tilt));
+        }
+
+        bool MovePan(int pan, int tilt, int panSteps, int tiltSteps)
+        {
+            bool canPan = MovePanAxis("Pan", pan, panSteps);
+            bool canTilt = MovePanAxis("Tilt", tilt, tiltSteps);
+            return canPan || canTilt;
+        }
+
+        bool MovePanAxis(string axis, int direction, int steps) =>
+            wheel.CanMoveAxis(axis, direction) && HasManualAxis(axis, out _) &&
+            (steps == 0 || Nudge(axis, direction, steps));
+
         bool HasManualAxis(string axis, out Setting setting)
         {
             setting = null;
@@ -249,7 +314,7 @@ namespace CameraControlStudio
             int desired = ManualMotion.ZoomAtFraction(setting, fraction);
             if (position != desired)
             {
-                held.Stop();
+                StopHeld();
                 SetManualPosition("Zoom", desired);
                 position = camera.Get("Zoom");
                 UpdateMotionAxis("Zoom", setting, position);

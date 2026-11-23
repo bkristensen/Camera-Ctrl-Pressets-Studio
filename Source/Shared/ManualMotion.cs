@@ -5,14 +5,6 @@ using System.Linq;
 namespace CameraControlStudio {
     public static class ManualMotion {
         internal const int DefaultRepeatInterval = 150;
-        const int MinimumRepeatInterval = 33;
-
-        internal static int PanRepeat(double stepsPerDefaultInterval, bool fine, out int steps) {
-            // Spread small moves over more frequent updates when the driver can accept them.
-            // Fine mode always sends a single step, even if that limits the requested rate.
-            steps = fine ? 1 : (int)Math.Ceiling(stepsPerDefaultInterval * MinimumRepeatInterval / DefaultRepeatInterval);
-            return Math.Max(MinimumRepeatInterval, (int)Math.Round(DefaultRepeatInterval * steps / stepsPerDefaultInterval));
-        }
 
         public static bool CanMove(Setting setting, int current, int direction, bool reverse) {
             int maximum = setting.Snap(setting.Max);

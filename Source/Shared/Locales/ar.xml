@@ -13,7 +13,9 @@
   <text key="Brightness">السطوع</text>
   <text key="Buy me a coffee">ادعمني بفنجان قهوة</text>
   <text key="Camera">الكاميرا</text>
-  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">عجلة اتجاه الكاميرا. الحلقة الداخلية للحركة الدقيقة، والوسطى للعادية، والخارجية للسريعة.</text>
+  <text key="Camera direction wheel">عجلة اتجاه الكاميرا</text>
+  <text key="Inner ring for normal moves. Outer ring for fast moves.">الحلقة الداخلية للحركة العادية. الخارجية للحركة السريعة.</text>
+  <text key="Click to choose a camera. Drag to pan in that direction.">انقر لاختيار الكاميرا. اسحب في الاتجاه الذي تريد تحريكها نحوه.</text>
   <text key="Fine speed (% of Normal)">السرعة الدقيقة (% من العادية)</text>
   <text key="Use speed for preset transitions">استخدام السرعة عند تبديل المواضع</text>
   <text key="Transition speed (%/s)">سرعة الانتقال (%/ث)</text>

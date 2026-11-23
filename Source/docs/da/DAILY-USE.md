@@ -25,7 +25,9 @@ Grøn betyder, at driveren melder de gemte koordinater og et eventuelt gemt syns
 ## 2. Finjustér billedudsnittet
 
 ### Panorering
-Brug den inderste ring til fin bevægelse, den midterste til normal og den yderste til hurtig. Et klik på den inderste ring flytter kameraet ét drivertrin. Hold en pil nede for at fortsætte, og slip for at stoppe. Piletasterne bruger normal hastighed. Hold Ctrl nede for fin bevægelse eller Shift for hurtig.
+Brug den inderste ring til normale bevægelser og den yderste til hurtige. Hver ring har otte pile. De skrå pile flytter i 45° retninger med 45 % af ringens hastighed på hver akse. Ét klik flytter mindst ét drivertrin på hver akse, der kan flyttes. Hold en pil nede for at fortsætte. Slip for at stoppe.
+
+Klik på kameraknappen for at vælge kilde. Hold knappen nede og træk i den retning, kameraet skal bevæge sig. Træk længere for at øge farten, op til det dobbelte af de hurtige trin. Træk tilbage til startpunktet, eller slip for at stoppe.
 
 ### Zoom
 Brug lupknapperne til at zoome. Hold en lupknap nede for at gentage.
@@ -37,8 +39,7 @@ Du kan afbryde en startet panorering ved at trykke på ESC.
 > Manuel panorering, lodret bevægelse eller zoom afbryder positionsskiftet og fjerner den aktive farve.
 
 ### Piletaster
-Når hjulet har fokus, kan du bruge piletasterne.
-Hold Shift nede for hurtige trin.
+Brug piletasterne, når hjulet har fokus. Hold Ctrl nede for fine bevægelser eller Shift for hurtige.
 
 ## 3. Gem en midlertidig position
 
