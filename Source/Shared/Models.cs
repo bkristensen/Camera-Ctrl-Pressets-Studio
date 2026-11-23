@@ -15,7 +15,7 @@ namespace CameraControlStudio {
     [DataContract]
     public sealed class ProfileLayout {
         [DataMember] public bool HasBounds, Maximized, SettingsOpen;
-        [DataMember] public int X, Y, Width = 900, Height = 500, SettingsTab = 2;
+        [DataMember] public int X, Y, Width = 900, Height = 500;
         [DataMember] public double ControllerRatio = LayoutPolicy.DefaultControllerRatio;
         [DataMember(EmitDefaultValue = false)] bool CompactMainView = true;
 

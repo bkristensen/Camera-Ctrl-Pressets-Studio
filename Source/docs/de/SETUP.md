@@ -88,7 +88,7 @@ Eine feste Position, die in der Hauptliste ausgewählt ist, wird auch in den Ein
 
 ## 5. Layout und Sprache einstellen
 
-Ziehen Sie die vertikale Trennlinie zwischen Steuerung und Positionsliste. Verschieben Sie das Fenster oder ändern Sie seine Größe. Fensterlage, Größe, Trennlinie und gewählte Registerkarte werden im aktiven Profil gespeichert. Die Anfangsgröße beträgt 900 × 500 und die Mindestgröße 670 × 450. Der Einstellungsbereich ist bei jedem Programmstart geschlossen. Die Fensterbreite wird für den geschlossenen Einstellungsbereich gespeichert.
+Ziehen Sie die Trennlinie zwischen Kamerasteuerung und Positionsliste. Das Profil speichert die Trennlinie sowie Lage und Größe des Fensters. Die Anfangsgröße beträgt 900 × 500, die Mindestgröße 670 × 450. Die Einstellungen starten geschlossen. Beim ersten Öffnen nach dem Start erscheint die erste Registerkarte. Scrollen Sie unter **Bewegung** oder **Anwendung** nach unten, wenn Felder außerhalb des Fensters liegen. Die App speichert die Fensterbreite bei geschlossenen Einstellungen.
 
 Lassen Sie beim Profilwechsel über die Profilauswahl unten die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
 

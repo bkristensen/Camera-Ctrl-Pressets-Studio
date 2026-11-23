@@ -88,7 +88,7 @@ En fast position, du markerer i hovedlisten, markeres også i indstillingerne. N
 
 ## 5. Tilpas udseende og sprog
 
-Træk den lodrette skillelinje mellem styringen og positionslisten. Flyt vinduet, og ret størrelsen. Programmet gemmer placering, størrelse, skillelinje og valgt indstillingsfane i den aktive profil. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne er altid lukket ved programstart. Vinduets gemte bredde svarer til bredden med indstillingerne lukket.
+Træk skillelinjen mellem kamerastyringen og positionslisten. Profilen gemmer skillelinjen og vinduets placering og størrelse. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne starter lukket. Første gang du åbner dem efter start, vises den første fane. Rul ned på **Bevægelse** eller **Program**, hvis nogle felter ligger uden for vinduet. Appen gemmer vinduets bredde med indstillingerne lukket.
 
 Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 

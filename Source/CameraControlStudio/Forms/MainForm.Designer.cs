@@ -24,6 +24,7 @@ namespace CameraControlStudio {
             this.motionTab = new System.Windows.Forms.TabPage();
             this.applicationTab = new System.Windows.Forms.TabPage();
             this.motionGroup = new System.Windows.Forms.GroupBox();
+            this.applicationScroll = new System.Windows.Forms.Panel();
             this.applicationFields = new System.Windows.Forms.TableLayoutPanel();
             this.windowGroup = new System.Windows.Forms.GroupBox();
             this.languageGroup = new System.Windows.Forms.GroupBox();
@@ -117,6 +118,7 @@ namespace CameraControlStudio {
             this.fieldOfViewPicker = new System.Windows.Forms.ComboBox();
             this.fullFrame = new CameraControlStudio.BlueButton();
             this.motionPosition = new System.Windows.Forms.Label();
+            this.movementScroll = new System.Windows.Forms.Panel();
             this.generalFields = new System.Windows.Forms.TableLayoutPanel();
             this.panStepsLabel = new System.Windows.Forms.Label();
             this.panSteps = new System.Windows.Forms.NumericUpDown();
@@ -606,18 +608,29 @@ namespace CameraControlStudio {
             this.motionGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.motionGroup.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.motionTab.Controls.Add(this.motionGroup);
-            this.motionGroup.Controls.Add(this.generalFields);
+            this.motionGroup.Controls.Add(this.movementScroll);
+            this.movementScroll.AutoScroll = true;
+            this.movementScroll.Controls.Add(this.generalFields);
+            this.movementScroll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.movementScroll.Name = "movementScroll";
+            this.movementScroll.TabIndex = 0;
             this.applicationFields.Name = "applicationFields";
             this.applicationFields.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
-            this.applicationFields.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicationFields.AutoSize = true;
+            this.applicationFields.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.applicationFields.Dock = System.Windows.Forms.DockStyle.Top;
             this.applicationFields.ColumnCount = 1;
             this.applicationFields.RowCount = 2;
             this.applicationFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.applicationFields.AutoScroll = true;
             this.applicationFields.Padding = new System.Windows.Forms.Padding(4);
             this.applicationFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.applicationFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.applicationTab.Controls.Add(this.applicationFields);
+            this.applicationTab.Controls.Add(this.applicationScroll);
+            this.applicationScroll.AutoScroll = true;
+            this.applicationScroll.Controls.Add(this.applicationFields);
+            this.applicationScroll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicationScroll.Name = "applicationScroll";
+            this.applicationScroll.TabIndex = 0;
             this.windowGroup.Name = "windowGroup";
             this.windowGroup.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.windowGroup.Text = "Window and streaming";
@@ -646,8 +659,6 @@ namespace CameraControlStudio {
             this.languageGroup.Controls.Add(this.language);
             // generalFields
             // 
-            this.generalFields.AutoScroll = true;
-            this.generalFields.AutoScrollMinSize = new System.Drawing.Size(215, 0);
             this.generalFields.ColumnCount = 2;
             this.generalFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.generalFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -672,12 +683,14 @@ namespace CameraControlStudio {
             this.generalFields.SetColumnSpan(this.allowFov, 2);
             this.generalFields.Controls.Add(this.adjustFovAtLimits, 0, 11);
             this.generalFields.SetColumnSpan(this.adjustFovAtLimits, 2);
-            this.generalFields.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generalFields.AutoSize = true;
+            this.generalFields.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.generalFields.Dock = System.Windows.Forms.DockStyle.Top;
             this.generalFields.Location = new System.Drawing.Point(10, 10);
             this.generalFields.Margin = new System.Windows.Forms.Padding(0);
             this.generalFields.Name = "generalFields";
             this.generalFields.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
-            this.generalFields.RowCount = 13;
+            this.generalFields.RowCount = 12;
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
@@ -690,7 +703,6 @@ namespace CameraControlStudio {
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.startupFovLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startupFovLabel.Name = "startupFovLabel";
             this.startupFovLabel.Text = "Field of view at startup";
@@ -2194,6 +2206,7 @@ namespace CameraControlStudio {
         private TabPage presetsTab;
         private TabPage profilesTab;
         private TabPage aboutTab;
+        private Panel movementScroll;
         private TableLayoutPanel generalFields;
         private Label startupFovLabel;
         private ListBox startupFov;
@@ -2259,6 +2272,7 @@ namespace CameraControlStudio {
         private TabPage motionTab;
         private TabPage applicationTab;
         private GroupBox motionGroup;
+        private Panel applicationScroll;
         private TableLayoutPanel applicationFields;
         private GroupBox windowGroup;
         private GroupBox languageGroup;

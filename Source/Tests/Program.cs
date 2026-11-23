@@ -143,9 +143,13 @@ class Program {
   var gate=new CameraAccessGate();int asks=0;Check(gate.Allow(false,()=>{asks++;return false;})&&asks==0,"default no confirmation");Check(!gate.Allow(true,()=>false),"No blocks camera");Check(gate.Allow(true,()=>true),"Yes allows camera");Check(gate.Allow(true,()=>throw new Exception("repeat prompt")),"confirmation remembered");gate.Reset();Check(!gate.Allow(true,()=>false),"profile reset blocks camera again");
   var from=new ProfileLayout{X=20,Width=1000,ControllerRatio=.4,SettingsOpen=true};var to=new ProfileLayout{X=800,Width=900,ControllerRatio=.6};var carried=LayoutPolicy.OnSwitch(from,to,true);Check(carried.X==20&&carried.ControllerRatio==.4&&carried.SettingsOpen,"keep layout applies current geometry");Check(!ReferenceEquals(carried,from),"layout copy isolated");Check(LayoutPolicy.OnSwitch(from,to,false).X==800,"default switch restores target geometry");Check(LayoutPolicy.Ratio(double.NaN)==LayoutPolicy.DefaultControllerRatio,"bad ratio corrected");
   var layoutSerializer=new DataContractJsonSerializer(typeof(ProfileLayout));
-  using(var oldLayout=new MemoryStream(Encoding.UTF8.GetBytes("{\"ControllerRatio\":0.36}"))) {
+  using(var oldLayout=new MemoryStream(Encoding.UTF8.GetBytes("{\"ControllerRatio\":0.36,\"SettingsTab\":3}"))) {
    var migrated=(ProfileLayout)layoutSerializer.ReadObject(oldLayout);
    Check(migrated.ControllerRatio==LayoutPolicy.DefaultControllerRatio,"old default gets the compact layout split");
+   using (var saved = new MemoryStream()) {
+    layoutSerializer.WriteObject(saved, migrated);
+    Check(!Encoding.UTF8.GetString(saved.ToArray()).Contains("SettingsTab"), "legacy tab selection is no longer saved");
+   }
   }
   Check(ProfileStore.Copy(new SavedData{Layout=new ProfileLayout{ControllerRatio=.36}}).Layout.ControllerRatio==.36,"newly chosen split is preserved");
   string dir=Path.Combine(Path.GetTempPath(),"camera-tests-"+Guid.NewGuid());Directory.CreateDirectory(dir);

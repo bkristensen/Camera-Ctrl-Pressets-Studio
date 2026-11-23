@@ -7,15 +7,11 @@ namespace CameraControlStudio
 {
     public partial class MainForm
     {
-        TabPage[] savedTabOrder;
         TabPage[] videoTabs;
         bool refreshingVideo;
 
         void WireSettings()
         {
-            // Profile files use the original tab order as their stable numeric IDs.
-            savedTabOrder = new[] { generalTab, imageTab, presetsTab, profilesTab, aboutTab, issuesTab };
-
             logSettingsLink.LinkClicked += (sender, args) => Run(() => LoggingDialog.ShowSettings(this));
             showLogLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()));
             reportLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.Report(this, DiagnosticLog.Current.FindLatest()));

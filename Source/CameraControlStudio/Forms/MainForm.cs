@@ -228,7 +228,6 @@ namespace CameraControlStudio
             {
                 if (settingsTabs.SelectedTab == presetsTab)
                     SelectPresetInSettings(SelectedPresetRow);
-                MarkDirty();
             };
             KeyPreview = true;
             KeyDown += (o, e) =>

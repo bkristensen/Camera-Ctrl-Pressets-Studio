@@ -16,7 +16,7 @@ namespace CameraControlStudio
             }
             config = entry.Config;
             loaded = true;
-            ApplyProfile(settingsOpen: false);
+            ApplyProfile();
             RefreshProfiles();
             if (!config.RequireStreamingConfirmation)
                 NeedCamera();
@@ -44,7 +44,6 @@ namespace CameraControlStudio
             config.AlwaysOnTop = alwaysTop.Checked;
             config.Language = UiText.LanguageCodes[language.SelectedIndex];
             config.Layout.SettingsOpen = false;
-            config.Layout.SettingsTab = Array.IndexOf(savedTabOrder, settingsTabs.SelectedTab);
             ProfileWindow.Capture(this, config.Layout, wasMaximized, settingsWidthAdded);
         }
         void SaveCurrent()
@@ -58,7 +57,7 @@ namespace CameraControlStudio
             dirty = false;
             RefreshPresets();
         }
-        void ApplyProfile(bool settingsOpen)
+        void ApplyProfile()
         {
             applying = true;
             try
@@ -76,8 +75,9 @@ namespace CameraControlStudio
                 if (config.Layout.SettingsOpen && config.Layout.HasBounds)
                     config.Layout.Width = ProfileWindow.WidthWithoutSettings(config.Layout.Width, settingsPanelWidth, MinimumSize.Width);
                 config.Layout.SettingsOpen = false;
-                SetSettings(settingsOpen, false);
-                settingsTabs.SelectedTab = savedTabOrder[Math.Max(0, Math.Min(savedTabOrder.Length - 1, config.Layout.SettingsTab))];
+                SetSettings(false, false);
+                settingsTabs.SelectedIndex = 0;
+                settingsCategories.SelectedIndex = 0;
                 ProfileWindow.Apply(this, config.Layout, preferredMinimumSize);
                 ApplySplitter();
                 profileButton.Text = profile + " ▾";

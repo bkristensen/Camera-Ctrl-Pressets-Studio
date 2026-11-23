@@ -88,7 +88,7 @@ Selecting a permanent row in the main list also selects that preset in Settings.
 
 ## 5. Set layout and language
 
-Drag the vertical divider between the controller and position list. Resize or move the window. The app saves the window bounds, divider and selected settings tab in the active profile. The initial size is 900 × 500, and the minimum is 670 × 450. The settings pane starts closed on every launch. The saved window width is measured with the settings pane closed.
+Drag the divider between the camera controls and the preset list. Your profile saves the divider and the window's size and position. The initial size is 900 × 500, and the minimum is 670 × 450. Settings start closed. When you first open them after launch, the first tab is selected. Scroll down in **Movement** or **Application** if some fields are below the window. The app saves the window width with Settings closed.
 
 When selecting a profile in the footer, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
 
