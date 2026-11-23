@@ -101,8 +101,34 @@ class Program {
    Check(copy.Cameras["camera"][0].FieldOfView == 78, "preset FOV survives profile copy");
   }
  }
+ static void CheckDriverFieldOfViewOptions() {
+  var support = new byte[64];
+  void Set(int offset, int value) => BitConverter.GetBytes(value).CopyTo(support, offset);
+  Set(0, 3); // GET and SET
+  Set(4, 58);
+  Set(32, 1);
+  Set(40, 1); // range
+  Set(44, 2);
+  Set(48, 1);
+  support[56] = 1;
+  support[57] = 2;
+  var angles = BrioFieldOfView.ReadSupportedAngles(support, 58);
+  Check(angles.SequenceEqual(new[] { 78, 65 }), "only angles in the driver range are offered");
+  Check(ManualMotion.NextFieldOfView(angles, 78, -1) == null, "automatic zoom stops at the driver's widest angle");
+  Check(BrioFieldOfView.ReadSupportedAngles(support, 4).Length == 0 &&
+    BrioFieldOfView.ReadSupportedAngles(support, 57).Length == 0, "missing or truncated ranges provide no options");
+  Set(0, 1);
+  Check(BrioFieldOfView.ReadSupportedAngles(support, 58).Length == 0, "read-only field of view provides no options");
+  Set(0, 3);
+  Set(4, 64);
+  Set(44, 8);
+  Set(56, 0);
+  Set(60, 8);
+  Check(BrioFieldOfView.ReadSupportedAngles(support, 64).SequenceEqual(new[] { 90, 78, 65 }),
+    "32-bit bounds are supported and unknown device codes are skipped");
+ }
  static void CheckFieldOfViewSteps() {
-  var fov = BrioFieldOfView.Degrees;
+  var fov = new[] { 90, 78, 65 };
   Check(ManualMotion.NextFieldOfView(fov, 65, -1) == 78 && ManualMotion.NextFieldOfView(fov, 78, -1) == 90 &&
    ManualMotion.NextFieldOfView(fov, 90, -1) == null, "zoom out uses each wider FOV and stops at the widest");
   Check(ManualMotion.NextFieldOfView(fov, 90, 1) == 78 && ManualMotion.NextFieldOfView(fov, 78, 1) == 65 &&
@@ -129,6 +155,7 @@ class Program {
   TestReleaseNotice();
   CheckMovementSpeeds();
   CheckFieldOfViewPersistence();
+  CheckDriverFieldOfViewOptions();
   CheckFieldOfViewSteps();
   var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");

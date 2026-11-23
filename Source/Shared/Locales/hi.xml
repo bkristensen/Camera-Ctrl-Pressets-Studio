@@ -193,6 +193,7 @@
   <text key="GitHub project guide">GitHub प्रोजेक्ट मार्गदर्शिका</text>
   <text key="Report or follow an issue">समस्या दर्ज करें या उसका अनुसरण करें</text>
   <text key="Field of view at startup">शुरू होने पर दृश्य क्षेत्र</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">कैमरे का ड्राइवर तय करता है कि आप दृश्य क्षेत्र के कौन से कोण चुन सकते हैं।</text>
   <text key="Allow manual FOV changes">दृश्य क्षेत्र मैन्युअल रूप से बदलने दें</text>
   <text key="Field of view">दृश्य क्षेत्र</text>
   <text key="Restore full frame">पूरा फ़्रेम वापस लाएँ</text>

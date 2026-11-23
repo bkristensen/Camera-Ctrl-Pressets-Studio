@@ -58,12 +58,12 @@ For an upside-down camera, enable **Camera pan reverse up / down** and test Up. 
 
 ### Set the field of view
 
-Open **Settings → Movement**. Set **Field of view at startup** to the widest view, a specific angle, or **Do nothing**. The app uses this choice the first time it connects. Turn on **Allow manual FOV changes** to show the FOV picker. The current view appears below the direction wheel.
+Open **Settings → Movement**. Under **Field of view at startup**, choose **Widest available**, an angle reported by the camera driver, or **Do nothing** to keep the current view. The app uses this choice the first time it connects. Turn on **Allow manual FOV changes** to choose among the reported angles below the direction wheel. If the driver reports no selectable angles, the FOV controls are disabled. You can still use zoom if the camera supports it.
 
 **Adjust field of view at zoom and pan limits** is on by default. You can use it with the manual picker hidden. It works when the driver supports FOV.
 
 - **Zoom out:** At minimum zoom on a Brio set to 65°, press zoom out again to switch to 78°. That press changes the FOV and adjusts zoom to keep the shot close. The next press zooms out normally. The same steps take you from 78° to 90°. The button stops at 90° and minimum zoom.
-- **Zoom in:** At maximum zoom, press again to move toward a narrower FOV. On a Brio the order is 90° → 78° → 65°. The button stops at 65° and maximum zoom.
+- **Zoom in:** At maximum zoom, press again to move toward a narrower FOV. If the driver reports 90°, 78° and 65°, the app uses them in that order. The button stops at the narrowest available angle and maximum zoom.
 - **Pan left or right:** At the edge, the app tries a wider view first. It adjusts zoom to keep the crop close. It can also try a narrower view if the zoom allows it. If no view lets it pan farther, it restores the previous shot. The driver controls how close the match is.
 
 Use the square button with the frame symbol to go straight to the widest FOV and minimum zoom. The slider still sets zoom within the current FOV. Turn off automatic FOV to keep zoom and pan within the current view.

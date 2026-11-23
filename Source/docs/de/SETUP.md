@@ -58,12 +58,12 @@ Hängt die Kamera kopfüber, testen Sie **Kameraschwenk oben / unten umkehren** 
 
 ### Sichtfeld einstellen
 
-Öffnen Sie **Einstellungen → Bewegung**. Wählen Sie unter **Sichtfeld beim Start** das weiteste Sichtfeld, einen Winkel oder **Nichts ändern**. Die App nutzt den Wert beim ersten Verbinden. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Auswahl zu zeigen. Das aktuelle Sichtfeld steht unter dem Kamerarad.
+Öffnen Sie **Einstellungen → Bewegung**. Wählen Sie unter **Sichtfeld beim Start** das weiteste verfügbare Sichtfeld, einen vom Kameratreiber gemeldeten Winkel oder **Nichts ändern**, um das aktuelle Sichtfeld beizubehalten. Die App nutzt den Wert beim ersten Verbinden. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Winkel unter dem Kamerarad auszuwählen. Meldet der Treiber keine wählbaren Winkel, sind die Sichtfeldeinstellungen deaktiviert. Der Zoom bleibt verfügbar, wenn die Kamera ihn unterstützt.
 
 **Sichtfeld an Zoom- und Schwenkgrenzen wechseln** ist standardmäßig aktiv. Es funktioniert auch bei ausgeblendeter Auswahl, wenn der Treiber das Sichtfeld steuern kann.
 
 - **Herauszoomen:** Bei minimalem Zoom und 65° wechselt der nächste Tastendruck bei einer Brio auf 78°. Die App passt den Zoom an, um den Ausschnitt möglichst zu halten. Drücken Sie erneut, um normal weiter herauszuzoomen. Ebenso geht es von 78° auf 90°. Die Taste stoppt bei 90° und kleinstem Zoom.
-- **Hineinzoomen:** Bei maximalem Zoom wechselt der nächste Druck zu einem engeren Sichtfeld. Bei einer Brio gilt 90° → 78° → 65°. Die Taste stoppt bei 65° und größtem Zoom.
+- **Hineinzoomen:** Bei maximalem Zoom wechselt der nächste Druck zu einem engeren Sichtfeld. Meldet der Treiber 90°, 78° und 65°, nutzt die App sie in dieser Reihenfolge. Die Taste stoppt beim engsten verfügbaren Sichtfeld und größtem Zoom.
 - **Nach links oder rechts schwenken:** An der Grenze versucht die App zuerst ein weiteres Sichtfeld. Sie passt den Zoom an, um den Ausschnitt möglichst zu halten. Lässt es der Zoom zu, testet sie auch ein engeres Sichtfeld. Kann sie in keinem Sichtfeld weiter schwenken, stellt sie den vorherigen Ausschnitt wieder her. Der Treiber bestimmt, wie genau der Ausschnitt erhalten bleibt.
 
 Die quadratische Taste mit Rahmensymbol stellt das weiteste Sichtfeld und den kleinsten Zoom ein. Der Schieberegler zoomt im aktuellen Sichtfeld. Deaktivieren Sie den automatischen Wechsel, um dieses Sichtfeld beim Zoomen und Schwenken beizubehalten.

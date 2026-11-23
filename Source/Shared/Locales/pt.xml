@@ -193,6 +193,7 @@
   <text key="GitHub project guide">Guia do projeto no GitHub</text>
   <text key="Report or follow an issue">Relatar ou acompanhar um problema</text>
   <text key="Field of view at startup">Campo de visão ao iniciar</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">O controlador da câmara determina os ângulos do campo de visão que pode escolher.</text>
   <text key="Allow manual FOV changes">Permitir ajuste manual do campo de visão</text>
   <text key="Field of view">Campo de visão</text>
   <text key="Restore full frame">Restaurar enquadramento completo</text>

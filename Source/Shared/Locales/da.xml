@@ -193,6 +193,7 @@
   <text key="GitHub project guide">GitHub-vejledning</text>
   <text key="Report or follow an issue">Indberet eller følg en sag</text>
   <text key="Field of view at startup">Synsfelt ved opstart</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">Kameradriveren afgør, hvilke vinkler du kan vælge.</text>
   <text key="Allow manual FOV changes">Tillad manuel ændring af synsfelt</text>
   <text key="Field of view">Synsfelt</text>
   <text key="Restore full frame">Gendan fuldt billede</text>

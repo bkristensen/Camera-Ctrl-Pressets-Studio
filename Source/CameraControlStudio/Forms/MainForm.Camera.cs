@@ -349,7 +349,8 @@ namespace CameraControlStudio
                 throw new InvalidOperationException(UiText.T("Select a preset for this camera.", "Vælg en position til dette kamera."));
             if (row.Preset.FieldOfView is int degrees)
             {
-                if (camera.FieldOfView == null || !BrioFieldOfView.Degrees.Contains(degrees))
+                if (camera.FieldOfView == null ||
+                    (!FieldOfViewAngles.Contains(degrees) && ReadFieldOfView() != degrees))
                     throw new InvalidOperationException(UiText.T("The preset FOV is unavailable on this camera.", "Positionens synsfelt er ikke tilgængeligt på dette kamera."));
                 camera.FieldOfView.Write(degrees);
                 if (camera.FieldOfView.Read() != degrees)

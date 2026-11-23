@@ -193,6 +193,7 @@
   <text key="GitHub project guide">GitHub 项目指南</text>
   <text key="Report or follow an issue">报告或关注问题</text>
   <text key="Field of view at startup">启动时的视野</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">相机驱动程序决定可选的视野角度。</text>
   <text key="Allow manual FOV changes">允许手动更改视野</text>
   <text key="Field of view">视野</text>
   <text key="Restore full frame">恢复完整画面</text>

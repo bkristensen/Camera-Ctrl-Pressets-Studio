@@ -10,24 +10,24 @@ namespace CameraControlStudio
         int? currentFieldOfView;
         bool startupFramingPending = true;
         bool loggedFieldOfViewReadFailure;
+        int[] displayedFieldOfViewAngles;
+        int[] FieldOfViewAngles => camera?.FieldOfView?.AvailableAngles ?? Array.Empty<int>();
         readonly Dictionary<string, int> currentAxes = new Dictionary<string, int>();
         readonly HashSet<(string Axis, int Direction)> blockedFieldOfViewSteps = new HashSet<(string, int)>();
 
         void WireFraming()
         {
-            startupFov.Items.Add(UiText.T("Widest available", "Bredest muligt"));
-            startupFov.Items.Add(UiText.T("Do nothing", "Gør ingenting"));
-            foreach (int degrees in BrioFieldOfView.Degrees)
-            {
-                startupFov.Items.Add(degrees + "°");
-                fieldOfViewPicker.Items.Add(degrees + "°");
-            }
+            string driverTooltip = UiText.T("The camera driver determines which field-of-view angles you can select.",
+                "Kameradriveren afgør, hvilke vinkler du kan vælge.");
+            startupFovLabel.AccessibleDescription = fieldOfViewLabel.AccessibleDescription = driverTooltip;
+            mainToolTips.SetToolTip(startupFovLabel, driverTooltip);
+            mainToolTips.SetToolTip(fieldOfViewLabel, driverTooltip);
             startupFov.SelectedIndexChanged += (sender, args) =>
             {
                 if (applying || config == null || startupFov.SelectedIndex < 0)
                     return;
                 int selection = startupFov.SelectedIndex;
-                config.StartupFieldOfView = selection < 2 ? -selection : BrioFieldOfView.Degrees[selection - 2];
+                config.StartupFieldOfView = selection < 2 ? -selection : displayedFieldOfViewAngles[selection - 2];
                 MarkDirty();
             };
             allowFov.CheckedChanged += (sender, args) =>
@@ -54,7 +54,7 @@ namespace CameraControlStudio
                 StopMotion();
                 try
                 {
-                    int degrees = BrioFieldOfView.Degrees[fieldOfViewPicker.SelectedIndex];
+                    int degrees = displayedFieldOfViewAngles[fieldOfViewPicker.SelectedIndex];
                     camera.FieldOfView.Write(degrees);
                     if (camera.FieldOfView.Read() != degrees)
                         throw new InvalidOperationException(UiText.T("The camera did not apply the selected FOV.",
@@ -67,22 +67,53 @@ namespace CameraControlStudio
 
         void LoadFramingSettings()
         {
-            int index = Array.IndexOf(BrioFieldOfView.Degrees, config.StartupFieldOfView);
-            startupFov.SelectedIndex = index >= 0 ? index + 2 : config.StartupFieldOfView == -1 ? 1 : 0;
             allowFov.Checked = config.AllowFieldOfViewChange;
             adjustFovAtLimits.Checked = config.AdjustFieldOfViewAtLimits;
             UpdateFieldOfViewControls();
+            SelectStartupFieldOfView();
+        }
+
+        void SelectStartupFieldOfView()
+        {
+            int selection = config?.StartupFieldOfView ?? 0;
+            int index = Array.IndexOf(displayedFieldOfViewAngles, selection);
+            startupFov.SelectedIndex = index >= 0 ? index + 2 : selection == 0 ? 0 : selection == -1 ? 1 : -1;
+        }
+
+        void UpdateFieldOfViewOptions(int[] angles)
+        {
+            if (displayedFieldOfViewAngles == angles)
+                return;
+            displayedFieldOfViewAngles = angles;
+            bool wasApplying = applying;
+            applying = true;
+            try
+            {
+                startupFov.Items.Clear();
+                startupFov.Items.Add(UiText.T("Widest available", "Bredest muligt"));
+                startupFov.Items.Add(UiText.T("Do nothing", "Gør ingenting"));
+                fieldOfViewPicker.Items.Clear();
+                foreach (int angle in angles)
+                {
+                    string text = angle + "°";
+                    startupFov.Items.Add(text);
+                    fieldOfViewPicker.Items.Add(text);
+                }
+                SelectStartupFieldOfView();
+            }
+            finally { applying = wasApplying; }
         }
 
         int? AdjacentFieldOfView(string axis, int direction, int? current)
         {
-            if (config?.AdjustFieldOfViewAtLimits != true || camera?.FieldOfView == null ||
-                !current.HasValue || blockedFieldOfViewSteps.Contains((axis, direction)))
+            var angles = FieldOfViewAngles;
+            if (config?.AdjustFieldOfViewAtLimits != true || !current.HasValue ||
+                !angles.Contains(current.Value) || blockedFieldOfViewSteps.Contains((axis, direction)))
                 return null;
             if (axis == "Zoom")
-                return ManualMotion.NextFieldOfView(BrioFieldOfView.Degrees, current.Value, direction);
+                return ManualMotion.NextFieldOfView(angles, current.Value, direction);
             if (axis == "Pan" && HasManualAxis("Zoom", out var zoom) && currentAxes.TryGetValue("Zoom", out int position))
-                return ManualMotion.PanFieldOfViewOptions(BrioFieldOfView.Degrees, current.Value, zoom, position)
+                return ManualMotion.PanFieldOfViewOptions(angles, current.Value, zoom, position)
                     .Select(value => (int?)value).FirstOrDefault();
             return null;
         }
@@ -115,7 +146,7 @@ namespace CameraControlStudio
                 }
                 else
                 {
-                    foreach (int candidate in ManualMotion.PanFieldOfViewOptions(BrioFieldOfView.Degrees,
+                    foreach (int candidate in ManualMotion.PanFieldOfViewOptions(FieldOfViewAngles,
                         originalFov.Value, originalZoom, pose["Zoom"]))
                     {
                         if (!SetFieldOfViewForMovement(candidate, out var zoom))
@@ -186,11 +217,12 @@ namespace CameraControlStudio
             if (!startupFramingPending)
                 return null;
             startupFramingPending = false;
-            if (config.StartupFieldOfView == -1 || camera.FieldOfView == null)
+            var angles = FieldOfViewAngles;
+            if (config.StartupFieldOfView == -1 || angles.Length == 0)
                 return null;
-            int selection = config.StartupFieldOfView;
-            if (!BrioFieldOfView.Degrees.Contains(selection))
-                selection = BrioFieldOfView.Degrees[0];
+            int selection = config.StartupFieldOfView == 0 ? angles[0] : config.StartupFieldOfView;
+            if (!angles.Contains(selection))
+                return UiText.T("Could not apply the startup FOV.", "Kunne ikke anvende synsfeltet ved opstart.");
             try
             {
                 camera.FieldOfView.Write(selection);
@@ -223,13 +255,17 @@ namespace CameraControlStudio
 
         void UpdateFieldOfViewControls()
         {
-            bool editing = config?.AllowFieldOfViewChange == true && camera?.FieldOfView != null;
+            var angles = FieldOfViewAngles;
+            UpdateFieldOfViewOptions(angles);
+            startupFov.Enabled = angles.Length > 0;
+            allowFov.Enabled = adjustFovAtLimits.Enabled = angles.Length > 1;
+            bool editing = config?.AllowFieldOfViewChange == true && angles.Length > 1;
             fieldOfViewPicker.Visible = editing;
             fieldOfViewLabel.Visible = !editing;
             fieldOfViewLabel.Text = currentFieldOfView.HasValue ? "FOV: " + currentFieldOfView + "°" :
                 UiText.T("FOV unavailable", "Synsfelt utilgængeligt");
             if (!fieldOfViewPicker.DroppedDown)
-                fieldOfViewPicker.SelectedIndex = Array.IndexOf(BrioFieldOfView.Degrees, currentFieldOfView ?? 0);
+                fieldOfViewPicker.SelectedIndex = Array.IndexOf(angles, currentFieldOfView ?? 0);
         }
 
         void RefreshPositionText()
@@ -242,13 +278,14 @@ namespace CameraControlStudio
         {
             StopMotion();
             NeedCamera();
-            var widest = BrioFieldOfView.Degrees[0];
+            var angles = FieldOfViewAngles;
             bool fovReached = false;
             bool zoomReached = false;
             try
             {
-                if (camera.FieldOfView != null)
+                if (angles.Length > 0)
                 {
+                    int widest = angles[0];
                     camera.FieldOfView.Write(widest);
                     fovReached = camera.FieldOfView.Read() == widest;
                 }

@@ -193,6 +193,7 @@
   <text key="GitHub project guide">دليل مشروع GitHub</text>
   <text key="Report or follow an issue">الإبلاغ عن مشكلة أو متابعتها</text>
   <text key="Field of view at startup">مجال الرؤية عند التشغيل</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">يحدد برنامج تشغيل الكاميرا زوايا مجال الرؤية التي يمكنك اختيارها.</text>
   <text key="Allow manual FOV changes">السماح بتغيير مجال الرؤية يدويًا</text>
   <text key="Field of view">مجال الرؤية</text>
   <text key="Restore full frame">استعادة الإطار الكامل</text>

@@ -193,6 +193,7 @@
   <text key="GitHub project guide">GitHub-Projektleitfaden</text>
   <text key="Report or follow an issue">Problem melden oder verfolgen</text>
   <text key="Field of view at startup">Sichtfeld beim Start</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">Der Kameratreiber bestimmt, welche Sichtfeldwinkel Sie auswählen können.</text>
   <text key="Allow manual FOV changes">Manuelle Sichtfeldänderung erlauben</text>
   <text key="Field of view">Sichtfeld</text>
   <text key="Restore full frame">Vollbild wiederherstellen</text>

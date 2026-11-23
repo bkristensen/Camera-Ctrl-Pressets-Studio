@@ -58,12 +58,12 @@ Hænger kameraet på hovedet, så prøv **Vend kamerapanorering op / ned**. Test
 
 ### Indstil synsfeltet
 
-Åbn **Indstillinger → Bevægelse**. Vælg det bredeste synsfelt, en bestemt vinkel eller **Gør ingenting** under **Synsfelt ved opstart**. Valget gælder, første gang programmet forbinder. Slå **Tillad manuel ændring af synsfelt** til for at vise valglisten. Det aktuelle synsfelt står under kamerahjulet.
+Åbn **Indstillinger → Bevægelse**. Under **Synsfelt ved opstart** kan du vælge **Bredest muligt**, en vinkel som kameradriveren melder, eller **Gør ingenting** for at beholde det aktuelle synsfelt. Valget gælder, første gang programmet forbinder. Slå **Tillad manuel ændring af synsfelt** til for at vælge mellem vinklerne under kamerahjulet. Hvis driveren ikke melder nogen valgbare vinkler, er synsfeltets indstillinger slået fra. Du kan stadig zoome, hvis kameraet understøtter det.
 
 **Skift synsfelt ved grænsen for zoom og panorering** er slået til som standard. Det virker også, når valglisten er skjult, hvis driveren understøtter FOV.
 
 - **Zoom ud:** Ved mindste zoom på en Brio med 65° skifter næste tryk til 78°. Trykket skifter synsfelt og justerer zoom, så udsnittet ændrer sig mindst muligt. Tryk igen for at zoome videre. Det samme sker fra 78° til 90°. Knappen stopper først ved 90° og mindste zoom.
-- **Zoom ind:** Ved højeste zoom skifter næste tryk til et smallere synsfelt. På en Brio er rækkefølgen 90° → 78° → 65°. Knappen stopper ved 65° og højeste zoom.
+- **Zoom ind:** Ved højeste zoom skifter næste tryk til et smallere synsfelt. Hvis driveren melder 90°, 78° og 65°, bruger programmet dem i den rækkefølge. Knappen stopper ved det smalleste tilgængelige synsfelt og højeste zoom.
 - **Drej til venstre eller højre:** Ved kanten prøver programmet først et bredere synsfelt. Det justerer zoom, så udsnittet ændrer sig mindst muligt. Det kan også prøve et smallere synsfelt, hvis zoom tillader det. Hvis ingen af delene giver mere plads, gendanner programmet det forrige udsnit. Driveren afgør, hvor præcist udsnittet kan bevares.
 
 Brug den firkantede knap med rammesymbolet for at gå direkte til bredeste synsfelt og mindste zoom. Skyderen ændrer zoom inden for det aktuelle synsfelt. Slå automatisk skift fra, hvis zoom og panorering skal holde sig inden for det valgte synsfelt.

@@ -193,6 +193,7 @@
   <text key="GitHub project guide">Panduan proyek GitHub</text>
   <text key="Report or follow an issue">Laporkan atau ikuti masalah</text>
   <text key="Field of view at startup">Bidang pandang saat mulai</text>
+  <text key="The camera driver determines which field-of-view angles you can select.">Driver kamera menentukan sudut bidang pandang yang dapat Anda pilih.</text>
   <text key="Allow manual FOV changes">Izinkan perubahan bidang pandang manual</text>
   <text key="Field of view">Bidang pandang</text>
   <text key="Restore full frame">Pulihkan bingkai penuh</text>
