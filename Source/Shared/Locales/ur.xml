@@ -13,7 +13,10 @@
   <text key="Brightness">چمک</text>
   <text key="Buy me a coffee">مجھے ایک کپ کافی پلائیں</text>
   <text key="Camera">کیمرہ</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">کیمرے کی سمت کا پہیہ۔ اندرونی حلقہ معمول کی رفتار کے لیے ہے اور بیرونی حلقہ تیز رفتار کے لیے۔</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">کیمرے کی سمت کا پہیہ۔ اندرونی حلقہ باریک، درمیانی معمول اور بیرونی تیز۔</text>
+  <text key="Fine speed (% of Normal)">باریک رفتار (معمول کا %)</text>
+  <text key="Use speed for preset transitions">محفوظ پوزیشن بدلنے کے لیے رفتار استعمال کریں</text>
+  <text key="Transition speed (%/s)">منتقلی کی رفتار (% فی سیکنڈ)</text>
   <text key="Camera: not connected">کیمرہ: منسلک نہیں</text>
   <text key="Cancel">منسوخ کریں</text>
   <text key="Choose camera source">کیمرے کا ذریعہ منتخب کریں</text>
@@ -181,4 +184,16 @@
   <text key="Move selected preset down">منتخب پیش سیٹ نیچے لے جائیں</text>
   <text key="Copy active profile">فعال پروفائل کی نقل بنائیں</text>
   <text key="Rename selected profile">منتخب پروفائل کا نام بدلیں</text>
+  <text key="Guides">رہنما</text>
+  <text key="Development guides">ترقیاتی رہنما</text>
+  <text key="Links">روابط</text>
+  <text key="Translate the app">ایپ کا ترجمہ کریں</text>
+  <text key="GitHub project guide">GitHub منصوبے کا رہنما</text>
+  <text key="Report or follow an issue">مسئلہ رپورٹ کریں یا اس کی پیروی کریں</text>
+  <text key="Field of view at startup">آغاز پر میدانِ نظر</text>
+  <text key="Allow manual FOV changes">میدانِ نظر دستی طور پر بدلنے دیں</text>
+  <text key="Field of view">میدانِ نظر</text>
+  <text key="Restore full frame">مکمل فریم بحال کریں</text>
+  <text key="Full frame">مکمل فریم</text>
+  <text key="New release available">نیا ورژن دستیاب ہے</text>
 </translations>

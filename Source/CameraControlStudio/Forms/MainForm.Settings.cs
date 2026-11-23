@@ -23,6 +23,23 @@ namespace CameraControlStudio
             Link(guideIndexLink, GuideViewer.OnlineGuidesUrl);
             openGuideButton.Click += (sender, args) => Run(OpenGuide);
             helpButton.Click += (sender, args) => Run(OpenGuide);
+
+            string updateText = releaseNotice.Text;
+            releaseNotice.Text = string.Empty;
+            releaseNotice.Visible = false;
+            Shown += async (sender, args) =>
+            {
+                if (documentationMode)
+                    return;
+
+                var releaseUrl = await GitHubReleases.CheckAsync(DiagnosticLog.AppVersion);
+                if (releaseUrl == null || IsDisposed || Disposing)
+                    return;
+
+                releaseNotice.Text = updateText;
+                Link(releaseNotice, releaseUrl.AbsoluteUri);
+                releaseNotice.Visible = true;
+            };
         }
 
         void OpenGuide()

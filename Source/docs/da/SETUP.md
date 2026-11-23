@@ -6,6 +6,16 @@ Tryk på tandhjulet i bunden. Indstillinger åbner til højre. Positionslisten b
 
 ![Hovedvinduet med indstillingerne åbne til højre](../images/screenshots/main-settings.png)
 
+## Installér og kontrollér downloadet
+
+Hent installationsfilen eller den portable ZIP fra projektets [GitHub-udgivelser](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Kør installationsfilen, eller pak hele ZIP-filen ud før start. Hvis der er udgivet en SHA-256-kontrolsum, kan du sammenligne den med resultatet fra `Get-FileHash -Algorithm SHA256`.
+
+Microsoft Defender SmartScreen kan vise en blå advarsel, når en fil eller udgiver har et begrænset omdømme. Tag advarslen alvorligt. Hvis du har hentet den forventede fil fra den officielle udgivelse og stoler på kilden, kan du vælge **Flere oplysninger** og kontrollere programnavn og udgiver. Vælg kun **Kør alligevel**, hvis du vil stole på netop den fil, og Windows tilbyder valget. Luk ellers advarslen. Følg eventuelle regler for din pc. [Microsofts SmartScreen-vejledning](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
+
+![SmartScreen med linket Flere oplysninger](../images/reporting/smartscreen-details.png)
+
+![Udvidet SmartScreen-advarsel med knappen Kør alligevel](../images/reporting/smartscreen-run.png)
+
 ## 1. Vælg profil og kamera
 
 Brug profilvælgeren i bunden til at vælge profil. Opret en profil under **Indstillinger → Profiler**. Vælg **Ny** for standardindstillinger eller **Kopiér** for at kopiere den aktive profil. Brug et navn for personen eller opstillingen. Den nye profil bliver aktiv. Markér en profil under **Profiler**, og klik på **✎** for at omdøbe den. Standardprofilen har et fast navn.
@@ -32,14 +42,27 @@ Ret værdierne under **Indstillinger → Bevægelse**. Start med små trin. Se r
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
-| Normale panoreringstrin | Den inderste ring med pile | 1 |
+| Fin hastighed (% af normal) | Hastighed når en pil i den inderste ring holdes nede | 50 % |
+| Normale panoreringstrin | Den midterste ring med pile | 1 |
 | Hurtige panoreringstrin | Den yderste ring med pile | 4 |
 | Zoomtrin | − og + | 1 |
-| Skiftetid i sekunder | Ønsket tid til en gemt position | 1,0 |
+| Skiftetid i sekunder | Tid til skift ved fast varighed | 1,0 |
+| Brug hastighed ved skift af position | Afstanden bestemmer varigheden | Fra |
+| Overgangshastighed (%/s) | Hastighed i procent af den styrende akses område pr. sekund | 30 % |
+
+Ved hastighedsbaserede skift tager en kort bevægelse mindre tid end en lang. Appen accelererer og bremser og styrer alle akser sammen, så de kan nå målet samtidigt.
 
 Et trin er ét trin, som kameradriveren understøtter. Det er ikke en fast afstand eller procent. Kameraets driver sætter grænsen for bevægelse og bløde skift.
 
 Hænger kameraet på hovedet, så prøv **Vend kamerapanorering op / ned**. Test pil op. Slå kun **Vend kamerapanorering venstre / højre** til, hvis venstre bevæger sig forkert. Disse valg vender styringen. De drejer ikke videobilledet.
+
+### Indstil synsfeltet
+
+Vælg **Synsfelt ved opstart** under **Indstillinger → Bevægelse**. Standardvalget er **Bredest muligt**. Vælg **Gør ingenting** for at beholde kameraets synsfelt, eller vælg 90°, 78° eller 65° på en understøttet Brio. Valget bruges, første gang programmet forbinder efter opstart.
+
+Kamerastyringen viser det synsfelt, driveren melder tilbage. Slå **Tillad manuel ændring af synsfelt** til for at vise valglisten, når kameraet understøtter det. Knappen **Fuldt billede** forsøger at vælge bredeste synsfelt og mindste zoom. Positioner gemmer synsfeltet, når driveren kan aflæse det. Ældre positioner uden synsfelt kan stadig bruges.
+
+Når styringen står stille, aflæser programmet pan, tilt, zoom og synsfelt igen. Hvis du ændrer visningen i Logitech Brio Control, så tjek både værdierne og udsnittet i Zoom. Logitech Brio Control bestemmer selv, hvornår dens visning opdateres.
 
 ## 4. Tilpas billedet og gem faste positioner
 

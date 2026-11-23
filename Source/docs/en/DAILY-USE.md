@@ -30,7 +30,7 @@ If the driver does not report that the camera has reached the preset in time, th
 
 ### Pan
 
-Use the inner arrows on the wheel for normal movement and the outer arrows for larger steps.
+Use the inner ring for Fine movement, the middle ring for Normal and the outer ring for Fast. A Fine click moves one driver step. Hold an arrow to keep moving and release it to stop. The keyboard arrow keys use Normal. Hold Ctrl for Fine or Shift for Fast.
 
 ### Zoom
 
@@ -63,6 +63,8 @@ If a control fails, read the message in the status area at the bottom. The camer
 Close the app normally. The app remembers the active profile and window layout.
 
 ## 5. Report issues
+
+If **New release available** appears in the footer, select it to open the release on GitHub and see the downloads.
 
 Report problems or missing features under **Settings → Issues**.
 

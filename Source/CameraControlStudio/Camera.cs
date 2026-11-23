@@ -39,8 +39,11 @@ namespace CameraControlStudio {
     public sealed class Setting {
         public string Name; public int Property, Min, Max, Step, Default, Caps; public bool Video;
         public int Snap(double value) {
-            double v = Min + Math.Round((value - Min) / Math.Max(1, Step)) * Math.Max(1, Step);
-            return (int)Math.Max(Min, Math.Min(Min + Math.Floor(((double)Max - Min) / Math.Max(1, Step)) * Math.Max(1, Step), v));
+            int driverStep = Math.Max(1, Step);
+            double snapped = Min + Math.Round((value - Min) / driverStep) * driverStep;
+            // A driver's advertised maximum can fall between two valid step positions.
+            double reachableMaximum = Min + Math.Floor(((double)Max - Min) / driverStep) * driverStep;
+            return (int)Math.Max(Min, Math.Min(reachableMaximum, snapped));
         }
     }
     internal sealed class CameraUnavailableException : COMException {
@@ -56,6 +59,7 @@ namespace CameraControlStudio {
 
     public sealed class Camera : IDisposable {
         object filter; IAMCameraControl control; IAMVideoProcAmp video;
+        internal BrioFieldOfView FieldOfView { get; private set; }
         public Dictionary<string, Setting> Settings = new Dictionary<string, Setting>();
         public static List<Device> Enumerate() {
             var result = new List<Device>();
@@ -104,6 +108,7 @@ namespace CameraControlStudio {
                 Add("Contrast", 1, true);
                 Add("Saturation", 3, true);
                 Add("White balance", 7, true);
+                FieldOfView = BrioFieldOfView.Open(filter, device.Id);
             } catch (Exception ex) when (CameraUnavailableException.Matches(ex.HResult)) {
                 Dispose();
                 throw new CameraUnavailableException("Connect", ex.HResult);
@@ -124,6 +129,11 @@ namespace CameraControlStudio {
                 throw new CameraUnavailableException("GetRange " + name, hr);
             if (hr >= 0 && hi > lo)
                 Settings[name] = new Setting { Name = name, Property = property, Video = isVideo, Min = lo, Max = hi, Step = Math.Max(1, step), Default = def, Caps = caps };
+        }
+        internal void RefreshMotionRanges() {
+            Add("Pan", 0, false);
+            Add("Tilt", 1, false);
+            Add("Zoom", 3, false);
         }
         public int Get(string name, out int flags) {
             var s = Settings[name];
@@ -151,6 +161,8 @@ namespace CameraControlStudio {
                 throw new COMException(operation + " " + name + ": " + Marshal.GetExceptionForHR(error, new IntPtr(-1)).Message, error);
         }
         public void Dispose() {
+            FieldOfView?.Dispose();
+            FieldOfView = null;
             control = null;
             video = null;
             if (filter != null)

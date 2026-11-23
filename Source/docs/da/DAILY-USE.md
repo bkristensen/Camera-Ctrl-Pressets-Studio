@@ -28,7 +28,7 @@ Melder driveren ikke positionen nået i tide, bliver rækken blå, og statusomr�
 ## 2. Finjustér billedudsnittet
 
 ### Panorering
-Brug de inderste pile på hjulet til normal bevægelse og de yderste til større trin.
+Brug den inderste ring til fin bevægelse, den midterste til normal og den yderste til hurtig. Et klik på den inderste ring flytter kameraet ét drivertrin. Hold en pil nede for at fortsætte, og slip for at stoppe. Piletasterne bruger normal hastighed. Hold Ctrl nede for fin bevægelse eller Shift for hurtig.
 
 ### Zoom
 Brug lupknapperne til at zoome. Hold en lupknap nede for at gentage.
@@ -52,6 +52,8 @@ Markér en midlertidig række, og tryk på **×** over positionslisten for at fj
 Skal en position bruges senere, skal du oprette den under **Indstillinger → Positioner**. Faste positioner kan ikke rettes eller slettes i hovedlisten.
 
 ## 4. Afslut
+
+Hvis **Ny version tilgængelig** vises i bunden, kan du klikke på linket for at åbne udgivelsen og dens downloads på GitHub.
 
 Læs beskeden i statusområdet i bunden, hvis en funktion fejler. Kameraet kan mangle funktionen eller være utilgængeligt.
 

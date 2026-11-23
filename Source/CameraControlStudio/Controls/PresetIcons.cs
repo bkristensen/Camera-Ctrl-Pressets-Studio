@@ -61,7 +61,9 @@ namespace CameraControlStudio {
         };
 
         static readonly Dictionary<string, IconEntry> catalog = LoadCatalog();
-        public static IReadOnlyList<string> Ids { get; } =
+        public static IReadOnlyList<string> Ids {
+            get;
+        } =
             Array.AsReadOnly(catalog.Keys.OrderBy(id => id, StringComparer.Ordinal).ToArray());
 
         public static string ResolveId(string id) {
@@ -143,8 +145,12 @@ namespace CameraControlStudio {
         }
 
         sealed class IconEntry {
-            public Image Image { get; }
-            public string Title { get; }
+            public Image Image {
+                get;
+            }
+            public string Title {
+                get;
+            }
 
             public IconEntry(Image image, string title) {
                 Image = image;

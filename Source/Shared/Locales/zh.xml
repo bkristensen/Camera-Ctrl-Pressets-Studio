@@ -13,7 +13,10 @@
   <text key="Brightness">亮度</text>
   <text key="Buy me a coffee">请我喝杯咖啡</text>
   <text key="Camera">摄像头</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">摄像头方向控制轮。内圈为正常速度，外圈为快速。</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">摄像机方向轮。内环微调，中环常速，外环快速。</text>
+  <text key="Fine speed (% of Normal)">微调速度（常速的百分比）</text>
+  <text key="Use speed for preset transitions">按速度切换预设位置</text>
+  <text key="Transition speed (%/s)">切换速度（%/秒）</text>
   <text key="Camera: not connected">摄像头：未连接</text>
   <text key="Cancel">取消</text>
   <text key="Choose camera source">选择摄像头来源</text>
@@ -181,4 +184,16 @@
   <text key="Move selected preset down">向下移动所选预设</text>
   <text key="Copy active profile">复制当前配置</text>
   <text key="Rename selected profile">重命名所选配置</text>
+  <text key="Guides">指南</text>
+  <text key="Development guides">开发指南</text>
+  <text key="Links">链接</text>
+  <text key="Translate the app">翻译应用</text>
+  <text key="GitHub project guide">GitHub 项目指南</text>
+  <text key="Report or follow an issue">报告或关注问题</text>
+  <text key="Field of view at startup">启动时的视野</text>
+  <text key="Allow manual FOV changes">允许手动更改视野</text>
+  <text key="Field of view">视野</text>
+  <text key="Restore full frame">恢复完整画面</text>
+  <text key="Full frame">完整画面</text>
+  <text key="New release available">有新版本可用</text>
 </translations>

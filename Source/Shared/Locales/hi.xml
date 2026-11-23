@@ -13,7 +13,10 @@
   <text key="Brightness">चमक</text>
   <text key="Buy me a coffee">मेरे लिए एक कॉफ़ी खरीदें</text>
   <text key="Camera">कैमरा</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">कैमरे की दिशा का नियंत्रण चक्र। भीतरी घेरा सामान्य गति के लिए है, बाहरी घेरा तेज़ गति के लिए।</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">कैमरा दिशा चक्र। अंदर सूक्ष्म, बीच में सामान्य और बाहर तेज़।</text>
+  <text key="Fine speed (% of Normal)">सूक्ष्म गति (सामान्य का %)</text>
+  <text key="Use speed for preset transitions">प्रीसेट बदलने के लिए गति का उपयोग करें</text>
+  <text key="Transition speed (%/s)">बदलाव की गति (%/सेकंड)</text>
   <text key="Camera: not connected">कैमरा: कनेक्ट नहीं है</text>
   <text key="Cancel">रद्द करें</text>
   <text key="Choose camera source">कैमरा स्रोत चुनें</text>
@@ -181,4 +184,16 @@
   <text key="Move selected preset down">चुने हुए प्रीसेट को नीचे ले जाएँ</text>
   <text key="Copy active profile">सक्रिय प्रोफ़ाइल की प्रतिलिपि बनाएँ</text>
   <text key="Rename selected profile">चुनी हुई प्रोफ़ाइल का नाम बदलें</text>
+  <text key="Guides">मार्गदर्शिकाएँ</text>
+  <text key="Development guides">विकास मार्गदर्शिकाएँ</text>
+  <text key="Links">लिंक</text>
+  <text key="Translate the app">ऐप का अनुवाद करें</text>
+  <text key="GitHub project guide">GitHub प्रोजेक्ट मार्गदर्शिका</text>
+  <text key="Report or follow an issue">समस्या दर्ज करें या उसका अनुसरण करें</text>
+  <text key="Field of view at startup">शुरू होने पर दृश्य क्षेत्र</text>
+  <text key="Allow manual FOV changes">दृश्य क्षेत्र मैन्युअल रूप से बदलने दें</text>
+  <text key="Field of view">दृश्य क्षेत्र</text>
+  <text key="Restore full frame">पूरा फ़्रेम वापस लाएँ</text>
+  <text key="Full frame">पूरा फ़्रेम</text>
+  <text key="New release available">नया संस्करण उपलब्ध है</text>
 </translations>

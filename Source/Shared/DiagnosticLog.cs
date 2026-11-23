@@ -18,9 +18,11 @@ namespace CameraControlStudio
         readonly string programDirectory, userDirectory;
         internal static string AppVersion { get; } = typeof(DiagnosticLog).Assembly
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown";
+
         readonly string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         internal static DiagnosticLog Current { get; } = new DiagnosticLog(AppDomain.CurrentDomain.BaseDirectory,
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CamPressets", "Logs"));
+
         internal volatile string CameraName;
         internal DiagnosticLogSettings Settings { get; private set; } = DiagnosticLogSettings.Default;
 
@@ -58,6 +60,7 @@ namespace CameraControlStudio
                         entry.AppendLine();
                     }
                 }
+
                 var content = entry.AppendLine().ToString();
                 if (!string.IsNullOrEmpty(userProfile))
                     content = Regex.Replace(content, Regex.Escape(userProfile), "%USERPROFILE%", RegexOptions.IgnoreCase);
@@ -75,7 +78,10 @@ namespace CameraControlStudio
         {
             lock (sync)
             {
-                try { return FindLatestCore(); }
+                try
+                {
+                    return FindLatestCore();
+                }
                 catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is SecurityException)
                 {
                     return null;
@@ -93,7 +99,6 @@ namespace CameraControlStudio
         }
 
         static string ArchivePath(string directory, int index) => Path.Combine(directory, $"{LogStem}.{index}.log");
-
         static string Append(string directory, string content, DiagnosticLogSettings settings)
         {
             try
@@ -110,6 +115,7 @@ namespace CameraControlStudio
                     if (int.TryParse(suffix, out int index) && index >= settings.FileCount)
                         File.Delete(archive);
                 }
+
                 if (file.Exists && file.Length + LogEncoding.GetByteCount(content) > maxBytes)
                 {
                     if (settings.FileCount == 1)
@@ -117,15 +123,18 @@ namespace CameraControlStudio
                     else
                     {
                         File.Delete(ArchivePath(directory, settings.FileCount - 1));
+                        // Move old archives first so each file can take the next free suffix.
                         for (int index = settings.FileCount - 2; index > 0; index--)
                         {
                             var archive = ArchivePath(directory, index);
                             if (File.Exists(archive))
                                 File.Move(archive, ArchivePath(directory, index + 1));
                         }
+
                         File.Move(path, ArchivePath(directory, 1));
                     }
                 }
+
                 File.AppendAllText(path, content, LogEncoding);
                 return path;
             }

@@ -13,7 +13,10 @@
   <text key="Brightness">السطوع</text>
   <text key="Buy me a coffee">ادعمني بفنجان قهوة</text>
   <text key="Camera">الكاميرا</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">عجلة توجيه الكاميرا. الحلقة الداخلية للسرعة العادية، والخارجية للسرعة العالية.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">عجلة اتجاه الكاميرا. الحلقة الداخلية دقيقة والوسطى عادية والخارجية سريعة.</text>
+  <text key="Fine speed (% of Normal)">السرعة الدقيقة (% من العادية)</text>
+  <text key="Use speed for preset transitions">استخدام السرعة عند تبديل المواضع</text>
+  <text key="Transition speed (%/s)">سرعة الانتقال (%/ث)</text>
   <text key="Camera: not connected">الكاميرا: غير متصلة</text>
   <text key="Cancel">إلغاء</text>
   <text key="Choose camera source">اختيار مصدر الكاميرا</text>
@@ -181,4 +184,16 @@
   <text key="Move selected preset down">نقل الإعداد المسبق المحدد لأسفل</text>
   <text key="Copy active profile">نسخ ملف التعريف النشط</text>
   <text key="Rename selected profile">إعادة تسمية ملف التعريف المحدد</text>
+  <text key="Guides">أدلة</text>
+  <text key="Development guides">أدلة التطوير</text>
+  <text key="Links">روابط</text>
+  <text key="Translate the app">ترجمة التطبيق</text>
+  <text key="GitHub project guide">دليل مشروع GitHub</text>
+  <text key="Report or follow an issue">الإبلاغ عن مشكلة أو متابعتها</text>
+  <text key="Field of view at startup">مجال الرؤية عند التشغيل</text>
+  <text key="Allow manual FOV changes">السماح بتغيير مجال الرؤية يدويًا</text>
+  <text key="Field of view">مجال الرؤية</text>
+  <text key="Restore full frame">استعادة الإطار الكامل</text>
+  <text key="Full frame">الإطار الكامل</text>
+  <text key="New release available">يتوفر إصدار جديد</text>
 </translations>

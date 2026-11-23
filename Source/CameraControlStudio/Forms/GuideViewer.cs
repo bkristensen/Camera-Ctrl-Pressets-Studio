@@ -36,6 +36,8 @@ namespace CameraControlStudio
             if (InDesigner)
                 return;
             FormText.Translate(this);
+            print.AccessibleName = UiText.T("Print", "Udskriv");
+            print.Text = "\U0001F5A8  " + print.AccessibleName;
             string languageFolder = Path.Combine(root, UiText.Language);
             string combined = Path.Combine(languageFolder, "USER-GUIDE.md");
             bool hasCombined = File.Exists(combined);
@@ -49,6 +51,9 @@ namespace CameraControlStudio
             BindLink(setupLink, () => LoadGuide(settings, hasCombined));
             BindGuideLink(developmentLink, Path.Combine(languageFolder, "DEVELOPMENT.md"));
             BindGuideLink(buildReleaseLink, Path.Combine(languageFolder, "BUILD-AND-RELEASE.md"));
+            BindGuideLink(translationsLink, Path.Combine(languageFolder, "TRANSLATIONS.md"), useEnglish: true);
+            BindGuideLink(githubLink, Path.Combine(languageFolder, "GITHUB.md"), useEnglish: true);
+            BindGuideLink(issuesLink, Path.Combine(languageFolder, "ISSUES.md"), useEnglish: true);
             BindLink(releasesLink, () => OpenBrowser(ReleasesUrl));
             BindLink(onlineGuidesLink, () => OpenBrowser(OnlineGuidesUrl));
             print.Enabled = false;
@@ -123,8 +128,10 @@ namespace CameraControlStudio
             openSetup = setup;
         }
 
-        void BindGuideLink(LinkLabel link, string path)
+        void BindGuideLink(LinkLabel link, string path, bool useEnglish = false)
         {
+            if (useEnglish && !File.Exists(path))
+                path = Path.Combine(root, "en", Path.GetFileName(path));
             link.Visible = File.Exists(path);
             BindLink(link, () => LoadGuide(path));
         }

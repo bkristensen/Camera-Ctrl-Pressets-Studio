@@ -24,7 +24,7 @@ Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración
 
    **Giro**
 
-   Usa las flechas interiores de la rueda para el movimiento normal y las exteriores para pasos más grandes.
+   Usa el anillo interior para movimientos finos, el central para los normales y el exterior para los rápidos. Mantén pulsada una flecha para seguir moviendo la cámara y suéltala para detenerla.
 
    **Zoom**
 
@@ -71,3 +71,5 @@ Pulsa **?** en la parte inferior para consultar la ayuda de uso y configuración
    ![Pestaña Aplicación con la confirmación de transmisión y el idioma del perfil](../images/screenshots/application.png)
 
 6. Arrastra el separador vertical para cambiar el ancho de ambas zonas. La configuración está cerrada al arrancar. Cambia el idioma en **Configuración → Aplicación → Idioma del perfil** y reinicia la aplicación. Sitúa el cursor sobre los botones pequeños para ver su función.
+
+[Installation · SmartScreen · FOV](../en/SETUP.md)

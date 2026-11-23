@@ -6,6 +6,7 @@ namespace CameraControlStudio {
     public class Preset {
         [DataMember] public string Name;
         [DataMember(EmitDefaultValue = false)] public string IconId;
+        [DataMember(EmitDefaultValue = false)] public int? FieldOfView;
         [DataMember] public Dictionary<string, int> Position = new Dictionary<string, int>();
         public override string ToString() {
             return Name;
@@ -37,8 +38,13 @@ namespace CameraControlStudio {
     public class SavedData {
         [DataMember] public Dictionary<string, List<Preset>> Cameras;
         [DataMember] public decimal Seconds;
+        [DataMember] public bool UseTransitionSpeed;
+        [DataMember] public int TransitionSpeedPercent, FinePanPercent;
         [DataMember] public int PanSteps, FastPanSteps, ZoomSteps;
         [DataMember] public bool ReverseHorizontal, ReverseVertical, AlwaysOnTop;
+        // Zero selects the widest supported FOV. Minus one leaves the device unchanged.
+        [DataMember(EmitDefaultValue = false)] public int StartupFieldOfView;
+        [DataMember(EmitDefaultValue = false)] public bool AllowFieldOfViewChange;
         [DataMember] public string CameraId;
         [DataMember(EmitDefaultValue = false)] public string Language;
         // Retain the serialized key so existing user choices survive the upgrade.
@@ -54,6 +60,8 @@ namespace CameraControlStudio {
             ImageValues = new Dictionary<string, Dictionary<string, ImageValue>>();
             Cameras = new Dictionary<string, List<Preset>>();
             Seconds = 1.0m;
+            TransitionSpeedPercent = 30;
+            FinePanPercent = 50;
             PanSteps = 1;
             FastPanSteps = 4;
             ZoomSteps = 1;

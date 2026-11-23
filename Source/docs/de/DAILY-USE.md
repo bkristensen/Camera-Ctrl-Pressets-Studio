@@ -30,7 +30,7 @@ Meldet der Treiber das Erreichen der Position nicht rechtzeitig, wird die Zeile 
 
 ### Schwenken
 
-Verwenden Sie die inneren Pfeile am Steuerrad für normale Bewegungen und die äußeren für größere Schritte.
+Der innere Ring dient der Feinbewegung, der mittlere der normalen und der äußere der schnellen Bewegung. Ein Klick im inneren Ring bewegt die Kamera um einen Treiberschritt. Halten Sie einen Pfeil gedrückt und lassen Sie ihn los, um anzuhalten. Die Pfeiltasten bewegen die Kamera normal. Halten Sie Strg für Feinbewegung oder Umschalt für schnelle Bewegung.
 
 ### Zoomen
 
@@ -57,6 +57,8 @@ Wählen Sie eine temporäre Zeile aus und klicken Sie über der Positionsliste a
 Wenn Sie eine Position später wiederverwenden möchten, legen Sie sie unter **Einstellungen → Positionen** an. Feste Positionen lassen sich in der Hauptliste weder bearbeiten noch löschen.
 
 ## 4. Beenden
+
+Wenn unten **Neue Version verfügbar** erscheint, öffnet ein Klick auf den Link die Veröffentlichung mit den Downloads auf GitHub.
 
 Lesen Sie bei einer Störung die Meldung im Statusbereich unten. Möglicherweise unterstützt die Kamera die Funktion nicht oder ist nicht verfügbar.
 

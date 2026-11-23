@@ -13,7 +13,10 @@
   <text key="Brightness">Brilho</text>
   <text key="Buy me a coffee">Pague-me um café</text>
   <text key="Camera">Câmera</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">Seletor de direção da câmera. Anel interno em velocidade normal e anel externo em velocidade rápida.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda da câmera. Anel interno fino, central normal e externo rápido.</text>
+  <text key="Fine speed (% of Normal)">Velocidade fina (% da normal)</text>
+  <text key="Use speed for preset transitions">Usar velocidade nas transições</text>
+  <text key="Transition speed (%/s)">Velocidade de transição (%/s)</text>
   <text key="Camera: not connected">Câmera: desconectada</text>
   <text key="Cancel">Cancelar</text>
   <text key="Choose camera source">Escolher fonte da câmera</text>
@@ -181,4 +184,16 @@
   <text key="Move selected preset down">Mover a predefinição selecionada para baixo</text>
   <text key="Copy active profile">Copiar o perfil ativo</text>
   <text key="Rename selected profile">Renomear o perfil selecionado</text>
+  <text key="Guides">Guias</text>
+  <text key="Development guides">Guias de desenvolvimento</text>
+  <text key="Links">Links</text>
+  <text key="Translate the app">Traduzir o aplicativo</text>
+  <text key="GitHub project guide">Guia do projeto no GitHub</text>
+  <text key="Report or follow an issue">Relatar ou acompanhar um problema</text>
+  <text key="Field of view at startup">Campo de visão ao iniciar</text>
+  <text key="Allow manual FOV changes">Permitir ajuste manual do campo de visão</text>
+  <text key="Field of view">Campo de visão</text>
+  <text key="Restore full frame">Restaurar enquadramento completo</text>
+  <text key="Full frame">Quadro completo</text>
+  <text key="New release available">Nova versão disponível</text>
 </translations>

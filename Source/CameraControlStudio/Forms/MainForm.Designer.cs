@@ -107,6 +107,14 @@ namespace CameraControlStudio {
             this.presetGrid = new System.Windows.Forms.DataGridView();
             this.settingsTabs = new System.Windows.Forms.TabControl();
             this.generalTab = new System.Windows.Forms.TabPage();
+            this.startupFovLabel = new System.Windows.Forms.Label();
+            this.startupFov = new System.Windows.Forms.ListBox();
+            this.allowFov = new System.Windows.Forms.CheckBox();
+            this.fovDisplay = new System.Windows.Forms.Panel();
+            this.fieldOfViewLabel = new System.Windows.Forms.Label();
+            this.fieldOfViewPicker = new System.Windows.Forms.ComboBox();
+            this.fullFrame = new CameraControlStudio.BlueButton();
+            this.motionPosition = new System.Windows.Forms.Label();
             this.generalFields = new System.Windows.Forms.TableLayoutPanel();
             this.panStepsLabel = new System.Windows.Forms.Label();
             this.panSteps = new System.Windows.Forms.NumericUpDown();
@@ -116,6 +124,11 @@ namespace CameraControlStudio {
             this.zoomSteps = new System.Windows.Forms.NumericUpDown();
             this.secondsLabel = new System.Windows.Forms.Label();
             this.seconds = new System.Windows.Forms.NumericUpDown();
+            this.finePanLabel = new System.Windows.Forms.Label();
+            this.finePanPercent = new System.Windows.Forms.NumericUpDown();
+            this.useTransitionSpeed = new System.Windows.Forms.CheckBox();
+            this.transitionSpeedLabel = new System.Windows.Forms.Label();
+            this.transitionSpeedPercent = new System.Windows.Forms.NumericUpDown();
             this.reverseX = new System.Windows.Forms.CheckBox();
             this.reverseY = new System.Windows.Forms.CheckBox();
             this.streamingCheck = new System.Windows.Forms.CheckBox();
@@ -153,6 +166,7 @@ namespace CameraControlStudio {
             this.footer = new System.Windows.Forms.TableLayoutPanel();
             this.footerLabels = new System.Windows.Forms.TableLayoutPanel();
             this.cameraStatus = new System.Windows.Forms.Label();
+            this.releaseNotice = new System.Windows.Forms.LinkLabel();
             this.status = new System.Windows.Forms.Label();
             this.profileButton = new CameraControlStudio.BlueButton();
             this.helpButton = new CameraControlStudio.BlueButton();
@@ -175,6 +189,8 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.fastPanSteps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomSteps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finePanPercent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transitionSpeedPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.focusSlider)).BeginInit();
             this.focusControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exposureSlider)).BeginInit();
@@ -277,15 +293,46 @@ namespace CameraControlStudio {
             this.motionPanel.Controls.Add(this.title, 0, 0);
             this.motionPanel.Controls.Add(this.wheel, 0, 1);
             this.motionPanel.Controls.Add(this.zoomPanel, 1, 1);
+            this.motionPanel.Controls.Add(this.motionPosition, 0, 2);
+            this.motionPanel.SetColumnSpan(this.motionPosition, 2);
+            this.motionPanel.Controls.Add(this.fovDisplay, 0, 3);
+            this.motionPanel.Controls.Add(this.fullFrame, 1, 3);
             this.motionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.motionPanel.Location = new System.Drawing.Point(0, 0);
             this.motionPanel.Margin = new System.Windows.Forms.Padding(0);
             this.motionPanel.Name = "motionPanel";
             this.motionPanel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.motionPanel.Padding = new System.Windows.Forms.Padding(0, 0, 19, 12);
-            this.motionPanel.RowCount = 2;
+            this.motionPanel.RowCount = 4;
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.motionPosition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.motionPosition.Name = "motionPosition";
+            this.motionPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.motionPosition.AutoEllipsis = true;
+            this.fovDisplay.Controls.Add(this.fieldOfViewLabel);
+            this.fovDisplay.Controls.Add(this.fieldOfViewPicker);
+            this.fovDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fovDisplay.Name = "fovDisplay";
+            this.fovDisplay.TabIndex = 2;
+            this.fieldOfViewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldOfViewLabel.Name = "fieldOfViewLabel";
+            this.fieldOfViewLabel.Text = "FOV unavailable";
+            this.fieldOfViewLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fieldOfViewLabel.AutoEllipsis = true;
+            this.fieldOfViewPicker.AccessibleName = "Field of view";
+            this.fieldOfViewPicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fieldOfViewPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.fieldOfViewPicker.Name = "fieldOfViewPicker";
+            this.fieldOfViewPicker.TabIndex = 2;
+            this.fieldOfViewPicker.Visible = false;
+            this.fullFrame.AccessibleName = "Restore full frame";
+            this.fullFrame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fullFrame.Name = "fullFrame";
+            this.fullFrame.TabIndex = 3;
+            this.fullFrame.Text = "Full frame";
             this.motionPanel.Size = new System.Drawing.Size(430, 411);
             this.motionPanel.TabIndex = 0;
             // 
@@ -307,7 +354,7 @@ namespace CameraControlStudio {
             // 
             // wheel
             // 
-            this.wheel.AccessibleName = "Camera direction wheel. Inner ring normal, outer ring fast.";
+            this.wheel.AccessibleName = "Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.";
             this.wheel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wheel.Location = new System.Drawing.Point(0, 52);
             this.wheel.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
@@ -595,51 +642,79 @@ namespace CameraControlStudio {
             // generalFields
             // 
             this.generalFields.AutoScroll = true;
+            this.generalFields.AutoScrollMinSize = new System.Drawing.Size(215, 0);
             this.generalFields.ColumnCount = 2;
             this.generalFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.generalFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.generalFields.Controls.Add(this.panStepsLabel, 0, 0);
-            this.generalFields.Controls.Add(this.panSteps, 1, 0);
-            this.generalFields.Controls.Add(this.fastPanStepsLabel, 0, 1);
-            this.generalFields.Controls.Add(this.fastPanSteps, 1, 1);
-            this.generalFields.Controls.Add(this.zoomStepsLabel, 0, 2);
-            this.generalFields.Controls.Add(this.zoomSteps, 1, 2);
-            this.generalFields.Controls.Add(this.secondsLabel, 0, 3);
-            this.generalFields.Controls.Add(this.seconds, 1, 3);
-            this.generalFields.Controls.Add(this.reverseX, 0, 4);
-            this.generalFields.Controls.Add(this.reverseY, 0, 5);
+            this.generalFields.Controls.Add(this.finePanLabel, 0, 0);
+            this.generalFields.Controls.Add(this.finePanPercent, 1, 0);
+            this.generalFields.Controls.Add(this.panStepsLabel, 0, 1);
+            this.generalFields.Controls.Add(this.panSteps, 1, 1);
+            this.generalFields.Controls.Add(this.fastPanStepsLabel, 0, 2);
+            this.generalFields.Controls.Add(this.fastPanSteps, 1, 2);
+            this.generalFields.Controls.Add(this.zoomStepsLabel, 0, 3);
+            this.generalFields.Controls.Add(this.zoomSteps, 1, 3);
+            this.generalFields.Controls.Add(this.useTransitionSpeed, 0, 4);
+            this.generalFields.Controls.Add(this.transitionSpeedLabel, 0, 5);
+            this.generalFields.Controls.Add(this.transitionSpeedPercent, 1, 5);
+            this.generalFields.Controls.Add(this.secondsLabel, 0, 6);
+            this.generalFields.Controls.Add(this.seconds, 1, 6);
+            this.generalFields.Controls.Add(this.reverseX, 0, 7);
+            this.generalFields.Controls.Add(this.reverseY, 0, 8);
+            this.generalFields.Controls.Add(this.startupFovLabel, 0, 9);
+            this.generalFields.Controls.Add(this.startupFov, 1, 9);
+            this.generalFields.Controls.Add(this.allowFov, 0, 10);
+            this.generalFields.SetColumnSpan(this.allowFov, 2);
             this.generalFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generalFields.Location = new System.Drawing.Point(10, 10);
             this.generalFields.Margin = new System.Windows.Forms.Padding(0);
             this.generalFields.Name = "generalFields";
             this.generalFields.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
-            this.generalFields.RowCount = 7;
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.generalFields.RowCount = 12;
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.startupFovLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startupFovLabel.Name = "startupFovLabel";
+            this.startupFovLabel.Text = "Field of view at startup";
+            this.startupFovLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.startupFov.AccessibleName = "Field of view at startup";
+            this.startupFov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startupFov.IntegralHeight = false;
+            this.startupFov.Name = "startupFov";
+            this.startupFov.TabIndex = 9;
+            this.allowFov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allowFov.Name = "allowFov";
+            this.allowFov.TabIndex = 10;
+            this.allowFov.Text = "Allow manual FOV changes";
             this.generalFields.Size = new System.Drawing.Size(0, 258);
             this.generalFields.TabIndex = 0;
             // 
             // panStepsLabel
             // 
             this.panStepsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panStepsLabel.Location = new System.Drawing.Point(4, 0);
+            this.panStepsLabel.Location = new System.Drawing.Point(4, 46);
             this.panStepsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panStepsLabel.Name = "panStepsLabel";
             this.panStepsLabel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.panStepsLabel.Size = new System.Drawing.Size(1, 42);
-            this.panStepsLabel.TabIndex = 0;
+            this.panStepsLabel.TabIndex = 2;
             this.panStepsLabel.Text = "Normal pan steps";
             this.panStepsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panSteps
             // 
             this.panSteps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panSteps.Location = new System.Drawing.Point(-95, 4);
+            this.panSteps.Location = new System.Drawing.Point(-95, 50);
             this.panSteps.Margin = new System.Windows.Forms.Padding(4);
             this.panSteps.Minimum = new decimal(new int[] {
             1,
@@ -652,7 +727,7 @@ namespace CameraControlStudio {
             this.panSteps.AutoSize = false;
             this.panSteps.MinimumSize = new System.Drawing.Size(65, 28);
             this.panSteps.Size = new System.Drawing.Size(92, 27);
-            this.panSteps.TabIndex = 1;
+            this.panSteps.TabIndex = 3;
             this.panSteps.Value = new decimal(new int[] {
             1,
             0,
@@ -662,19 +737,19 @@ namespace CameraControlStudio {
             // fastPanStepsLabel
             // 
             this.fastPanStepsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fastPanStepsLabel.Location = new System.Drawing.Point(4, 42);
+            this.fastPanStepsLabel.Location = new System.Drawing.Point(4, 82);
             this.fastPanStepsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fastPanStepsLabel.Name = "fastPanStepsLabel";
             this.fastPanStepsLabel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.fastPanStepsLabel.Size = new System.Drawing.Size(1, 42);
-            this.fastPanStepsLabel.TabIndex = 2;
+            this.fastPanStepsLabel.TabIndex = 4;
             this.fastPanStepsLabel.Text = "Fast pan steps";
             this.fastPanStepsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // fastPanSteps
             // 
             this.fastPanSteps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fastPanSteps.Location = new System.Drawing.Point(-95, 46);
+            this.fastPanSteps.Location = new System.Drawing.Point(-95, 86);
             this.fastPanSteps.Margin = new System.Windows.Forms.Padding(4);
             this.fastPanSteps.Minimum = new decimal(new int[] {
             1,
@@ -687,7 +762,7 @@ namespace CameraControlStudio {
             this.fastPanSteps.AutoSize = false;
             this.fastPanSteps.MinimumSize = new System.Drawing.Size(65, 28);
             this.fastPanSteps.Size = new System.Drawing.Size(92, 27);
-            this.fastPanSteps.TabIndex = 3;
+            this.fastPanSteps.TabIndex = 5;
             this.fastPanSteps.Value = new decimal(new int[] {
             4,
             0,
@@ -697,19 +772,19 @@ namespace CameraControlStudio {
             // zoomStepsLabel
             // 
             this.zoomStepsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zoomStepsLabel.Location = new System.Drawing.Point(4, 84);
+            this.zoomStepsLabel.Location = new System.Drawing.Point(4, 118);
             this.zoomStepsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.zoomStepsLabel.Name = "zoomStepsLabel";
             this.zoomStepsLabel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.zoomStepsLabel.Size = new System.Drawing.Size(1, 42);
-            this.zoomStepsLabel.TabIndex = 4;
+            this.zoomStepsLabel.TabIndex = 6;
             this.zoomStepsLabel.Text = "Zoom steps";
             this.zoomStepsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // zoomSteps
             // 
             this.zoomSteps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zoomSteps.Location = new System.Drawing.Point(-95, 88);
+            this.zoomSteps.Location = new System.Drawing.Point(-95, 122);
             this.zoomSteps.Margin = new System.Windows.Forms.Padding(4);
             this.zoomSteps.Minimum = new decimal(new int[] {
             1,
@@ -722,7 +797,7 @@ namespace CameraControlStudio {
             this.zoomSteps.AutoSize = false;
             this.zoomSteps.MinimumSize = new System.Drawing.Size(65, 28);
             this.zoomSteps.Size = new System.Drawing.Size(92, 27);
-            this.zoomSteps.TabIndex = 5;
+            this.zoomSteps.TabIndex = 7;
             this.zoomSteps.Value = new decimal(new int[] {
             1,
             0,
@@ -732,12 +807,12 @@ namespace CameraControlStudio {
             // secondsLabel
             // 
             this.secondsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondsLabel.Location = new System.Drawing.Point(4, 126);
+            this.secondsLabel.Location = new System.Drawing.Point(4, 240);
             this.secondsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.secondsLabel.Name = "secondsLabel";
             this.secondsLabel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.secondsLabel.Size = new System.Drawing.Size(1, 42);
-            this.secondsLabel.TabIndex = 6;
+            this.secondsLabel.TabIndex = 11;
             this.secondsLabel.Text = "Transition (sec.)";
             this.secondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -750,7 +825,7 @@ namespace CameraControlStudio {
             0,
             0,
             65536});
-            this.seconds.Location = new System.Drawing.Point(-95, 130);
+            this.seconds.Location = new System.Drawing.Point(-95, 244);
             this.seconds.Margin = new System.Windows.Forms.Padding(4);
             this.seconds.Maximum = new decimal(new int[] {
             15,
@@ -763,35 +838,86 @@ namespace CameraControlStudio {
             this.seconds.AutoSize = false;
             this.seconds.MinimumSize = new System.Drawing.Size(65, 28);
             this.seconds.Size = new System.Drawing.Size(92, 27);
-            this.seconds.TabIndex = 7;
+            this.seconds.TabIndex = 12;
             this.seconds.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.finePanLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.finePanLabel.Location = new System.Drawing.Point(4, 0);
+            this.finePanLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.finePanLabel.Name = "finePanLabel";
+            this.finePanLabel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.finePanLabel.TabIndex = 0;
+            this.finePanLabel.Text = "Fine speed (% of Normal)";
+            this.finePanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.finePanPercent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.finePanPercent.Location = new System.Drawing.Point(-95, 4);
+            this.finePanPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.finePanPercent.Name = "finePanPercent";
+            this.finePanPercent.BackColor = System.Drawing.Color.FromArgb(5, 40, 79);
+            this.finePanPercent.ForeColor = System.Drawing.Color.White;
+            this.finePanPercent.AutoSize = false;
+            this.finePanPercent.MinimumSize = new System.Drawing.Size(65, 28);
+            this.finePanPercent.Size = new System.Drawing.Size(92, 28);
+            this.finePanPercent.TabIndex = 1;
+            this.finePanPercent.Minimum = new decimal(new int[] { 25, 0, 0, 0 });
+            this.finePanPercent.Increment = new decimal(new int[] { 5, 0, 0, 0 });
+            this.finePanPercent.Value = new decimal(new int[] { 50, 0, 0, 0 });
+            this.generalFields.SetColumnSpan(this.useTransitionSpeed, 2);
+            this.useTransitionSpeed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.useTransitionSpeed.Location = new System.Drawing.Point(4, 158);
+            this.useTransitionSpeed.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.useTransitionSpeed.Name = "useTransitionSpeed";
+            this.useTransitionSpeed.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.useTransitionSpeed.TabIndex = 8;
+            this.useTransitionSpeed.Text = "Use speed for preset transitions";
+            this.transitionSpeedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.transitionSpeedLabel.Location = new System.Drawing.Point(4, 194);
+            this.transitionSpeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.transitionSpeedLabel.Name = "transitionSpeedLabel";
+            this.transitionSpeedLabel.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.transitionSpeedLabel.TabIndex = 9;
+            this.transitionSpeedLabel.Text = "Transition speed (%/s)";
+            this.transitionSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.transitionSpeedPercent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.transitionSpeedPercent.Location = new System.Drawing.Point(-95, 198);
+            this.transitionSpeedPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.transitionSpeedPercent.Name = "transitionSpeedPercent";
+            this.transitionSpeedPercent.BackColor = System.Drawing.Color.FromArgb(5, 40, 79);
+            this.transitionSpeedPercent.ForeColor = System.Drawing.Color.White;
+            this.transitionSpeedPercent.AutoSize = false;
+            this.transitionSpeedPercent.MinimumSize = new System.Drawing.Size(65, 28);
+            this.transitionSpeedPercent.Size = new System.Drawing.Size(92, 28);
+            this.transitionSpeedPercent.TabIndex = 10;
+            this.transitionSpeedPercent.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            this.transitionSpeedPercent.Increment = new decimal(new int[] { 5, 0, 0, 0 });
+            this.transitionSpeedPercent.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            this.transitionSpeedPercent.Enabled = false;
             // 
             // reverseX
             // 
             this.generalFields.SetColumnSpan(this.reverseX, 2);
             this.reverseX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reverseX.Location = new System.Drawing.Point(4, 172);
+            this.reverseX.Location = new System.Drawing.Point(4, 280);
             this.reverseX.Margin = new System.Windows.Forms.Padding(4);
             this.reverseX.Name = "reverseX";
             this.reverseX.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.reverseX.Size = new System.Drawing.Size(1, 34);
-            this.reverseX.TabIndex = 8;
+            this.reverseX.TabIndex = 13;
             this.reverseX.Text = "Camera pan reverse left / right";
             // 
             // reverseY
             // 
             this.generalFields.SetColumnSpan(this.reverseY, 2);
             this.reverseY.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reverseY.Location = new System.Drawing.Point(4, 214);
+            this.reverseY.Location = new System.Drawing.Point(4, 322);
             this.reverseY.Margin = new System.Windows.Forms.Padding(4);
             this.reverseY.Name = "reverseY";
             this.reverseY.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
             this.reverseY.Size = new System.Drawing.Size(1, 34);
-            this.reverseY.TabIndex = 9;
+            this.reverseY.TabIndex = 14;
             this.reverseY.Text = "Camera pan reverse up / down";
             // 
             // streamingCheck
@@ -1841,10 +1967,13 @@ namespace CameraControlStudio {
             // 
             // footerLabels
             // 
-            this.footerLabels.ColumnCount = 1;
+            this.footerLabels.ColumnCount = 2;
             this.footerLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.footerLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
             this.footerLabels.Controls.Add(this.cameraStatus, 0, 0);
+            this.footerLabels.Controls.Add(this.releaseNotice, 1, 0);
             this.footerLabels.Controls.Add(this.status, 0, 1);
+            this.footerLabels.SetColumnSpan(this.status, 2);
             this.footerLabels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.footerLabels.Location = new System.Drawing.Point(0, 3);
             this.footerLabels.Margin = new System.Windows.Forms.Padding(0, 3, 7, 0);
@@ -1869,6 +1998,19 @@ namespace CameraControlStudio {
             this.cameraStatus.Text = "Camera: not connected";
             this.cameraStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // releaseNotice
+            //
+            this.releaseNotice.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.releaseNotice.AutoSize = true;
+            this.releaseNotice.LinkColor = System.Drawing.Color.LightSkyBlue;
+            this.releaseNotice.ActiveLinkColor = System.Drawing.Color.White;
+            this.releaseNotice.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.releaseNotice.Margin = new System.Windows.Forms.Padding(6, 0, 4, 0);
+            this.releaseNotice.Name = "releaseNotice";
+            this.releaseNotice.TabIndex = 2;
+            this.releaseNotice.TabStop = true;
+            this.releaseNotice.Text = "New release available";
+            //
             // status
             // 
             this.status.AutoEllipsis = true;
@@ -1965,6 +2107,8 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.fastPanSteps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomSteps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finePanPercent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transitionSpeedPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.focusSlider)).EndInit();
             this.focusControl.ResumeLayout(false);
             this.focusControl.PerformLayout();
@@ -2036,6 +2180,14 @@ namespace CameraControlStudio {
         private TabPage profilesTab;
         private TabPage aboutTab;
         private TableLayoutPanel generalFields;
+        private Label startupFovLabel;
+        private ListBox startupFov;
+        private CheckBox allowFov;
+        private Panel fovDisplay;
+        private Label fieldOfViewLabel;
+        private ComboBox fieldOfViewPicker;
+        private BlueButton fullFrame;
+        private Label motionPosition;
         private Label panStepsLabel;
         private NumericUpDown panSteps;
         private Label fastPanStepsLabel;
@@ -2044,6 +2196,11 @@ namespace CameraControlStudio {
         private NumericUpDown zoomSteps;
         private Label secondsLabel;
         private NumericUpDown seconds;
+        private Label finePanLabel;
+        private NumericUpDown finePanPercent;
+        private CheckBox useTransitionSpeed;
+        private Label transitionSpeedLabel;
+        private NumericUpDown transitionSpeedPercent;
         private CheckBox reverseX;
         private CheckBox reverseY;
         private CheckBox streamingCheck;
@@ -2153,6 +2310,7 @@ namespace CameraControlStudio {
         private DataGridViewTextBoxColumn positionColumn;
         private DataGridViewButtonColumn recallColumn;
         private Label cameraStatus;
+        private LinkLabel releaseNotice;
         private Label status;
         private BlueButton settingsButton;
         private BlueButton helpButton;

@@ -24,7 +24,7 @@ You need Windows with .NET Framework 4.8 and a camera whose Windows driver expos
 
 1. Open your meeting or streaming app and choose the camera you want to use. Start capture first if your camera setup requires it.
 2. Open Camera Control Studio. Use the profile picker in the footer and click the camera icon in the centre of the direction wheel to choose the same camera.
-3. Use the inner arrows for small pan or tilt moves and the outer arrows for larger moves. Use the magnifier buttons to zoom in and out, or drag the vertical slider to adjust the zoom as you move it.
+3. Use the inner, middle or outer arrows for Fine, Normal or Fast pan and tilt. Use the magnifier buttons to zoom in and out, or drag the vertical slider to adjust the zoom as you move it.
 4. Frame the shot in your meeting or streaming app. Click **+** to save it temporarily, or open the gear and choose **Presets → Add permanent preset** to save it for future sessions.
 5. Click **▶** on a preset row to recall the shot. Yellow shows a move in progress. Green means the driver has reported the saved coordinates. Check the framing in your meeting or streaming app.
 
@@ -32,7 +32,7 @@ You need Windows with .NET Framework 4.8 and a camera whose Windows driver expos
 
 Store permanent presets by camera and profile. Give each preset a name and optional symbol that makes it easy to recognise at a glance. In the **Presets** tab you can edit the name and symbol, replace the coordinates with the current position, or delete the preset. Temporary presets last for the current session and appear below permanent presets.
 
-Preset transitions use the duration set in **Settings**. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
+In **Settings → Movement**, choose a fixed duration or a movement speed for preset transitions. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
 
 ![Presets tab with the permanent preset list and buttons to add, edit, replace or delete a preset](Source/docs/images/screenshots/presets.png)
 
@@ -40,7 +40,7 @@ Preset transitions use the duration set in **Settings**. The camera driver deter
 
 | Tab | What you can do |
 | --- | --- |
-| [Settings → Movement](Source/docs/images/screenshots/settings.png) | Set normal and fast movement steps, transition time and direction reversal. |
+| [Settings → Movement](Source/docs/images/screenshots/settings.png) | Set Fine, Normal and Fast movement, preset duration or speed, and direction reversal. |
 | [Settings → Application](Source/docs/images/screenshots/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
 | [Video](Source/docs/images/screenshots/image.png) | Adjust the controls exposed by the camera driver, such as focus, exposure, sharpness and backlight compensation. Image settings are saved per camera and profile. |
 | [Profiles](Source/docs/images/screenshots/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |

@@ -13,7 +13,10 @@
   <text key="Brightness">Kecerahan</text>
   <text key="Buy me a coffee">Traktir saya kopi</text>
   <text key="Camera">Kamera</text>
-  <text key="Camera direction wheel. Inner ring normal, outer ring fast.">Roda arah kamera. Cincin dalam berkecepatan normal, cincin luar berkecepatan tinggi.</text>
+  <text key="Camera direction wheel. Inner ring fine, middle ring normal, outer ring fast.">Roda arah kamera. Cincin dalam halus, tengah normal, luar cepat.</text>
+  <text key="Fine speed (% of Normal)">Kecepatan halus (% dari normal)</text>
+  <text key="Use speed for preset transitions">Gunakan kecepatan untuk transisi</text>
+  <text key="Transition speed (%/s)">Kecepatan transisi (%/d)</text>
   <text key="Camera: not connected">Kamera: tidak terhubung</text>
   <text key="Cancel">Batal</text>
   <text key="Choose camera source">Pilih sumber kamera</text>
@@ -181,4 +184,16 @@
   <text key="Move selected preset down">Pindahkan preset terpilih ke bawah</text>
   <text key="Copy active profile">Salin profil aktif</text>
   <text key="Rename selected profile">Ubah nama profil terpilih</text>
+  <text key="Guides">Panduan</text>
+  <text key="Development guides">Panduan pengembangan</text>
+  <text key="Links">Tautan</text>
+  <text key="Translate the app">Terjemahkan aplikasi</text>
+  <text key="GitHub project guide">Panduan proyek GitHub</text>
+  <text key="Report or follow an issue">Laporkan atau ikuti masalah</text>
+  <text key="Field of view at startup">Bidang pandang saat mulai</text>
+  <text key="Allow manual FOV changes">Izinkan perubahan bidang pandang manual</text>
+  <text key="Field of view">Bidang pandang</text>
+  <text key="Restore full frame">Pulihkan bingkai penuh</text>
+  <text key="Full frame">Bingkai penuh</text>
+  <text key="New release available">Versi baru tersedia</text>
 </translations>

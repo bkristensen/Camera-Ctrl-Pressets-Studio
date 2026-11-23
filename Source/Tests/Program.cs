@@ -7,8 +7,96 @@ using System.Runtime.Serialization.Json;
 using System.Xml.Linq;
 using CameraControlStudio;
 class Program {
+
+    static void TestReleaseNotice()
+    {
+        const string tagUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases/tag/";
+        const string releases = """
+            [
+              {"tag_name":"v0.7.0-beta.10","html_url":"URLv0.7.0-beta.10","prerelease":true},
+              {"tag_name":"Beta","name":"Camera Control Studio 0.7.0-beta.2","html_url":"URLBeta"},
+              {"tag_name":"v0.7.0-beta.3","html_url":"URLv0.7.0-beta.3"},
+              {"tag_name":"v8.0.0","html_url":"URLv8.0.0","draft":true},
+              {"tag_name":"v9.0.0","html_url":"https://example.com/releases/tag/v9.0.0"}
+            ]
+            """;
+        Uri CheckReleases(string installedVersion, string json)
+        {
+            using (var payload = new MemoryStream(Encoding.UTF8.GetBytes(json.Replace("URL", tagUrl))))
+                return GitHubReleases.FindNewer(installedVersion, payload);
+        }
+
+        Check(CheckReleases("0.7.0-beta.3+91abc", releases)?.AbsoluteUri == tagUrl + "v0.7.0-beta.10",
+            "release check orders numeric prereleases and skips drafts and foreign URLs");
+        Check(CheckReleases("0.7.0-beta.10+91abc", releases) == null, "build metadata does not change release precedence");
+        Check(CheckReleases("0.7.0", releases) == null, "a prerelease of the installed stable version is older");
+
+        const string legacy = """
+            [{"tag_name":"Beta","name":"Camera Control Studio 0.7.0-beta.2","html_url":"URLBeta"}]
+            """;
+        Check(CheckReleases("0.7.0-beta.1", legacy)?.AbsoluteUri == tagUrl + "Beta", "legacy Beta tag reads its release title");
+        Check(CheckReleases("0.7.0-beta.3", legacy) == null, "legacy Beta cannot downgrade the installed app");
+
+        const string stable = """
+            [{"tag_name":"v0.7.0","html_url":"URLv0.7.0"}]
+            """;
+        Check(CheckReleases("0.7.0-rc.1", stable)?.AbsoluteUri == tagUrl + "v0.7.0",
+            "stable release wins over its release candidate");
+    }
+
  static void Check(bool value,string message){if(!value)throw new Exception(message);}
+ static void CheckMovementSpeeds() {
+  Check(ManualMotion.PanRepeat(.25, true, out int fine) == 600 && fine == 1, "quarter speed repeats one driver step");
+  Check(ManualMotion.PanRepeat(.5, true, out fine) == 300 && fine == 1, "half speed repeats one driver step");
+  Check(ManualMotion.PanRepeat(1, false, out int normal) == 150 && normal == 1, "normal hold uses the default rate");
+  int fastInterval = ManualMotion.PanRepeat(4, false, out int fast);
+  Check(fast == 1 && fastInterval >= 33 && fastInterval < 150, "fast hold spreads steps across shorter intervals");
+  Check(ManualMotion.PanRepeat(100, true, out fine) == 33 && fine == 1, "fine hold stays on single steps at the repeat limit");
+
+  var setting = new Setting { Min = -5, Max = 8, Step = 3 };
+  Check(PresetSpeedCurve.AxisDistance(setting, 7, 1) == .5, "preset distance uses the reachable range");
+  var shortMove = new PresetSpeedCurve(.04, .5);
+  var longMove = new PresetSpeedCurve(.8, .5);
+  Check(shortMove.Duration < longMove.Duration, "short preset moves finish sooner");
+  Check(new PresetSpeedCurve(.8, .25).Duration > longMove.Duration, "slower speed lengthens a move");
+  Check(new PresetSpeedCurve(0, .5).Duration == 0, "a preset at the current position completes immediately");
+  Check(longMove.Progress(0) == 0 && longMove.Progress(longMove.Duration) == 1, "preset curve reaches both endpoints");
+  double CruiseRate(PresetSpeedCurve curve) => (curve.Progress(1) - curve.Progress(.5)) * .8 / .5;
+  Check(Math.Abs(CruiseRate(longMove) - .5) < 1e-9, "long preset move cruises at the selected rate");
+  Check(longMove.Progress(.1) < longMove.Progress(.5) * .2, "preset movement accelerates");
+  Check(Math.Abs(shortMove.Progress(shortMove.Duration / 2) - .5) < 1e-9 &&
+   Math.Abs(longMove.Progress(longMove.Duration - .1) + longMove.Progress(.1) - 1) < 1e-9, "short and long moves brake symmetrically");
+
+  var serializer = new DataContractJsonSerializer(typeof(SavedData));
+  using (var oldProfile = new MemoryStream(Encoding.UTF8.GetBytes("{\"Seconds\":2.5}"))) {
+   var old = (SavedData)serializer.ReadObject(oldProfile);
+   Check(!old.UseTransitionSpeed && old.Seconds == 2.5m && old.TransitionSpeedPercent == 30 && old.FinePanPercent == 50,
+    "old profiles keep fixed duration and receive speed defaults");
+  }
+  var copy = ProfileStore.Copy(new SavedData { UseTransitionSpeed = true, TransitionSpeedPercent = 45, FinePanPercent = 25 });
+  Check(copy.UseTransitionSpeed && copy.TransitionSpeedPercent == 45 && copy.FinePanPercent == 25,
+   "movement speed settings survive profile copy");
+ }
+ static void CheckFieldOfViewPersistence() {
+  var serializer = new DataContractJsonSerializer(typeof(SavedData));
+  const string legacy = "{\"Cameras\":[{\"Key\":\"camera\",\"Value\":[{\"Name\":\"Wide\",\"Position\":[{\"Key\":\"Zoom\",\"Value\":100}]}]}]}";
+  using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(legacy))) {
+   var profile = (SavedData)serializer.ReadObject(stream);
+   var preset = profile.Cameras["camera"][0];
+   Check(profile.StartupFieldOfView == 0 && !profile.AllowFieldOfViewChange, "legacy profiles get default FOV preferences");
+   Check(!preset.FieldOfView.HasValue && preset.Position["Zoom"] == 100, "legacy presets keep their zoom without inventing an FOV");
+   profile.StartupFieldOfView = -1;
+   profile.AllowFieldOfViewChange = true;
+   preset.FieldOfView = 78;
+   var copy = ProfileStore.Copy(profile);
+   Check(copy.StartupFieldOfView == -1 && copy.AllowFieldOfViewChange, "explicit FOV preferences survive profile copy");
+   Check(copy.Cameras["camera"][0].FieldOfView == 78, "preset FOV survives profile copy");
+  }
+ }
  static void Main(){
+  TestReleaseNotice();
+  CheckMovementSpeeds();
+  CheckFieldOfViewPersistence();
   var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,1,false)&&ManualMotion.CanMove(setting,200,-1,false),"maximum blocks outward movement only");
@@ -90,6 +178,6 @@ class Program {
     }
    }
   }finally{Directory.Delete(dir,true);}
-  Console.WriteLine("PASS: motion, activity colours, camera consent, profile/layout migration, image persistence, movement defaults, session presets and concurrency.");
+  Console.WriteLine("PASS: motion, activity colours, camera consent, profile/layout migration, image persistence, movement defaults, session presets, FOV settings, release notices and concurrency.");
  }
 }
