@@ -336,6 +336,7 @@ namespace CameraControlStudio {
             this.fullFrame.Size = new System.Drawing.Size(42, 42);
             this.fullFrame.Name = "fullFrame";
             this.fullFrame.TabIndex = 3;
+            this.mainToolTips.SetToolTip(this.fullFrame, "Restore full frame\nUse the widest view and minimum zoom.");
             this.motionPanel.Size = new System.Drawing.Size(430, 411);
             this.motionPanel.TabIndex = 0;
             // 
