@@ -1,7 +1,13 @@
-# Unreleased
-- Switch FOV at zoom and pan limits on supported cameras. Turn it off under **Settings → Movement**.
-- Use the square frame button to jump to the widest FOV and minimum zoom.
-- Add window icons and clarify app text and guides.
+# 0.7.0-beta.5
+
+- The pan wheel has two speed rings with diagonal movement. Click the camera button to change source or drag it to pan.
+- The app offers the field-of-view (FOV) angles reported by a compatible camera driver. On supported cameras, it can switch FOV at the limits of zoom and horizontal pan. Turn this off under **Settings → Movement**.
+- Presets save the camera’s reported FOV along with pan, tilt and zoom. Use the square **Full Frame** button to restore the widest available view and minimum zoom.
+- Settings start closed and open on the first tab after launch. **Movement** and **Application** scroll when their controls do not fit.
+- Look under **About** for the short version. Hover over it to see the full build identifier. The app also checks GitHub for newer releases.
+- Added window icons and updated the setup and daily-use guides.
+
+The Windows installer and portable ZIP are unsigned.
 
 # 0.7.0-beta.4
 
