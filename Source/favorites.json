@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "name": "da",
+      "children": [
+        {
+          "name": "DAILY-USE.md",
+          "path": "docs\\da\\DAILY-USE.md"
+        },
+        {
+          "name": "DEVELOPMENT.md",
+          "path": "docs\\da\\DEVELOPMENT.md"
+        },
+        {
+          "name": "SETUP.md",
+          "path": "docs\\da\\SETUP.md"
+        }
+      ]
+    },
+    {
+      "name": "docs",
+      "children": [
+        {
+          "name": "MSIX-AND-STORE.md",
+          "path": "docs\\MSIX-AND-STORE.md"
+        },
+        {
+          "name": "PROJECT.md",
+          "path": "docs\\PROJECT.md"
+        },
+        {
+          "name": "RELEASE-CHECKLIST.md",
+          "path": "docs\\RELEASE-CHECKLIST.md"
+        },
+        {
+          "name": "SCREENSHOTS.md",
+          "path": "docs\\SCREENSHOTS.md"
+        },
+        {
+          "name": "SIGNPATH.md",
+          "path": "docs\\SIGNPATH.md"
+        },
+        {
+          "name": "USER-GUIDES.md",
+          "path": "docs\\USER-GUIDES.md"
+        },
+        {
+          "name": "VALIDATION.md",
+          "path": "docs\\VALIDATION.md"
+        }
+      ]
+    },
+    {
+      "name": "MainForm.cs",
+      "path": "CameraControlStudio\\Forms\\MainForm.cs"
+    }
+  ]
+}
