@@ -13,7 +13,7 @@ class Program {
         const string tagUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases/tag/";
         const string releases = """
             [
-              {"tag_name":"v0.7.0-beta.10+abcdef","html_url":"URLv0.7.0-beta.10","prerelease":true},
+              {"tag_name":"v0.7.0-beta.10+abcdef","html_url":"URLv0.7.0-beta.10","prerelease":true,"published_at":"2026-11-23T10:35:00Z"},
               {"tag_name":"Beta","name":"Camera Control Studio 0.7.0-beta.2","html_url":"URLBeta"},
               {"tag_name":"v0.7.0-beta.3","html_url":"URLv0.7.0-beta.3"},
               {"tag_name":"v8.0.0","html_url":"URLv8.0.0","draft":true},
@@ -30,6 +30,8 @@ class Program {
         Check(newer?.Url.AbsoluteUri == tagUrl + "v0.7.0-beta.10",
             "release check orders numeric prereleases and skips drafts and foreign URLs");
         Check(newer.Version == "0.7.0-beta.10", "the displayed release version omits build metadata");
+        Check(newer.PublishedAt == new DateTimeOffset(2026, 11, 23, 10, 35, 0, TimeSpan.Zero),
+            "the selected release includes its GitHub publication date");
         Check(CheckReleases("0.7.0-beta.10+91abc", releases) == null, "build metadata does not change release precedence");
         Check(CheckReleases("0.7.0", releases) == null, "a prerelease of the installed stable version is older");
 
@@ -39,6 +41,7 @@ class Program {
         var legacyBeta = CheckReleases("0.7.0-beta.1", legacy);
         Check(legacyBeta?.Url.AbsoluteUri == tagUrl + "Beta" && legacyBeta.Version == "0.7.0-beta.2",
             "legacy Beta tag reads the displayed version from its release title");
+        Check(legacyBeta.PublishedAt == null, "releases without a date still provide the version");
         Check(CheckReleases("0.7.0-beta.3", legacy) == null, "legacy Beta cannot downgrade the installed app");
 
         const string stable = """

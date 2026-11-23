@@ -237,8 +237,8 @@ namespace CameraControlStudio {
                 permanentFont?.Dispose();
             };
         }
-        void Link(LinkLabel label, string url) {
-            SetMainToolTip(label, label.Text);
+        void Link(LinkLabel label, string url, string tooltipLabel = null, string tooltipDetail = null) {
+            SetMainToolTip(label, tooltipLabel ?? label.Text, tooltipDetail);
             label.LinkClicked += (o, e) => Run(() => Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }));
         }
         void ConfigureMainToolTips() {

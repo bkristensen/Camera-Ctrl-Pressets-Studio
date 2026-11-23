@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -34,11 +35,14 @@ namespace CameraControlStudio {
         void ShowReleaseUpdate(GitHubReleases.AvailableRelease release) {
             string installed = DiagnosticLog.DisplayAppVersion;
             string update = UiText.T("New release available", "Ny version tilgængelig");
-            string suffix = $"[{update} · {release.Version}]";
+            string suffix = $"[{update}]";
             releaseNotice.Text = installed + " " + suffix;
             releaseNotice.LinkArea = new LinkArea(installed.Length + 1, suffix.Length);
             releaseNotice.TabStop = true;
-            Link(releaseNotice, release.Url.AbsoluteUri);
+            string detail = release.Version;
+            if (release.PublishedAt is DateTimeOffset publishedAt)
+                detail += " · " + publishedAt.ToLocalTime().ToString("d", CultureInfo.GetCultureInfo(UiText.Language));
+            Link(releaseNotice, release.Url.AbsoluteUri, update, detail);
         }
 
         void OpenGuide() {

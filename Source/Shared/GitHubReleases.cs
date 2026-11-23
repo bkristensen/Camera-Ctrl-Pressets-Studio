@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -21,14 +22,16 @@ namespace CameraControlStudio
 
         internal sealed class AvailableRelease
         {
-            internal AvailableRelease(string version, Uri url)
+            internal AvailableRelease(string version, Uri url, DateTimeOffset? publishedAt)
             {
                 Version = version;
                 Url = url;
+                PublishedAt = publishedAt;
             }
 
             internal string Version { get; }
             internal Uri Url { get; }
+            internal DateTimeOffset? PublishedAt { get; }
         }
 
         [DataContract]
@@ -45,6 +48,9 @@ namespace CameraControlStudio
 
             [DataMember(Name = "draft")]
             public bool Draft { get; set; }
+
+            [DataMember(Name = "published_at")]
+            public string PublishedAt { get; set; }
         }
 
         static HttpClient CreateClient()
@@ -108,7 +114,9 @@ namespace CameraControlStudio
                 latest = version;
                 latestPrerelease = prerelease;
                 string displayVersion = prerelease.Length == 0 ? version.ToString() : version + "-" + prerelease;
-                latestRelease = new AvailableRelease(displayVersion, url);
+                DateTimeOffset? publishedAt = DateTimeOffset.TryParse(release.PublishedAt, CultureInfo.InvariantCulture,
+                    DateTimeStyles.AssumeUniversal, out var date) ? date : (DateTimeOffset?)null;
+                latestRelease = new AvailableRelease(displayVersion, url, publishedAt);
             }
             return latestRelease;
         }
