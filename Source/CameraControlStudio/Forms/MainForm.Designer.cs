@@ -12,8 +12,8 @@ namespace CameraControlStudio {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainToolTips = new System.Windows.Forms.ToolTip(this.components);
             this.fullFrame = new CameraControlStudio.BlueButton();
             this.wheel = new CameraControlStudio.PanWheel();
@@ -256,9 +256,9 @@ namespace CameraControlStudio {
             this.footer.SuspendLayout();
             this.footerLabels.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // fullFrame
-            //
+            // 
             this.fullFrame.AccessibleName = "Restore full frame";
             this.fullFrame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fullFrame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -272,10 +272,11 @@ namespace CameraControlStudio {
             this.fullFrame.Size = new System.Drawing.Size(42, 42);
             this.fullFrame.TabIndex = 3;
             this.mainToolTips.SetToolTip(this.fullFrame, "Restore full frame\nUse the widest view and minimum zoom.");
+            this.mainToolTips.SetToolTip(this.fullFrame, "Restore full frame\nUse the widest view and minimum zoom.");
             this.fullFrame.UseVisualStyleBackColor = false;
-            //
+            // 
             // wheel
-            //
+            // 
             this.wheel.AccessibleName = "Camera direction wheel";
             this.wheel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wheel.Location = new System.Drawing.Point(0, 52);
@@ -285,29 +286,30 @@ namespace CameraControlStudio {
             this.wheel.Size = new System.Drawing.Size(327, 278);
             this.wheel.TabIndex = 0;
             this.mainToolTips.SetToolTip(this.wheel, "Click the camera button to choose a source. Drag it to pan.");
-            //
+            this.mainToolTips.SetToolTip(this.wheel, "Click the camera button to choose a source. Drag it to pan.");
+            // 
             // movement
-            //
+            // 
             this.movement.Interval = 33;
-            //
+            // 
             // held
-            //
+            // 
             this.held.Interval = 150;
-            //
+            // 
             // saveTimer
-            //
+            // 
             this.saveTimer.Interval = 600;
-            //
+            // 
             // motionLimits
-            //
+            // 
             this.motionLimits.Interval = 250;
-            //
+            // 
             // documentationTimer
-            //
+            // 
             this.documentationTimer.Interval = 900;
-            //
+            // 
             // settingsCategories
-            //
+            // 
             this.settingsCategories.Controls.Add(this.motionTab);
             this.settingsCategories.Controls.Add(this.applicationTab);
             this.settingsCategories.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -316,9 +318,9 @@ namespace CameraControlStudio {
             this.settingsCategories.SelectedIndex = 0;
             this.settingsCategories.Size = new System.Drawing.Size(302, 333);
             this.settingsCategories.TabIndex = 0;
-            //
+            // 
             // motionTab
-            //
+            // 
             this.motionTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.motionTab.Controls.Add(this.motionGroup);
             this.motionTab.Location = new System.Drawing.Point(4, 29);
@@ -326,9 +328,9 @@ namespace CameraControlStudio {
             this.motionTab.Size = new System.Drawing.Size(294, 300);
             this.motionTab.TabIndex = 0;
             this.motionTab.Text = "Movement";
-            //
+            // 
             // motionGroup
-            //
+            // 
             this.motionGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.motionGroup.Controls.Add(this.movementScroll);
             this.motionGroup.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -340,9 +342,9 @@ namespace CameraControlStudio {
             this.motionGroup.TabIndex = 0;
             this.motionGroup.TabStop = false;
             this.motionGroup.Text = "Pan, tilt and zoom";
-            //
+            // 
             // movementScroll
-            //
+            // 
             this.movementScroll.AutoScroll = true;
             this.movementScroll.Controls.Add(this.generalFields);
             this.movementScroll.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -350,9 +352,9 @@ namespace CameraControlStudio {
             this.movementScroll.Name = "movementScroll";
             this.movementScroll.Size = new System.Drawing.Size(284, 272);
             this.movementScroll.TabIndex = 0;
-            //
+            // 
             // generalFields
-            //
+            // 
             this.generalFields.AutoSize = true;
             this.generalFields.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.generalFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -397,9 +399,9 @@ namespace CameraControlStudio {
             this.generalFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.generalFields.Size = new System.Drawing.Size(263, 547);
             this.generalFields.TabIndex = 0;
-            //
+            // 
             // finePanLabel
-            //
+            // 
             this.finePanLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.finePanLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.finePanLabel.Location = new System.Drawing.Point(4, 0);
@@ -409,9 +411,9 @@ namespace CameraControlStudio {
             this.finePanLabel.TabIndex = 0;
             this.finePanLabel.Text = "Fine speed (% of Normal)";
             this.finePanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // finePanPercent
-            //
+            // 
             this.finePanPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.finePanPercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.finePanPercent.ForeColor = System.Drawing.Color.White;
@@ -436,9 +438,9 @@ namespace CameraControlStudio {
             0,
             0,
             0});
-            //
+            // 
             // panStepsLabel
-            //
+            // 
             this.panStepsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.panStepsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panStepsLabel.Location = new System.Drawing.Point(4, 46);
@@ -448,9 +450,9 @@ namespace CameraControlStudio {
             this.panStepsLabel.TabIndex = 2;
             this.panStepsLabel.Text = "Normal pan steps";
             this.panStepsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // panSteps
-            //
+            // 
             this.panSteps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.panSteps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panSteps.ForeColor = System.Drawing.Color.White;
@@ -470,9 +472,9 @@ namespace CameraControlStudio {
             0,
             0,
             0});
-            //
+            // 
             // fastPanStepsLabel
-            //
+            // 
             this.fastPanStepsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.fastPanStepsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fastPanStepsLabel.Location = new System.Drawing.Point(4, 82);
@@ -482,9 +484,9 @@ namespace CameraControlStudio {
             this.fastPanStepsLabel.TabIndex = 4;
             this.fastPanStepsLabel.Text = "Fast pan steps";
             this.fastPanStepsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // fastPanSteps
-            //
+            // 
             this.fastPanSteps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.fastPanSteps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fastPanSteps.ForeColor = System.Drawing.Color.White;
@@ -504,9 +506,9 @@ namespace CameraControlStudio {
             0,
             0,
             0});
-            //
+            // 
             // zoomStepsLabel
-            //
+            // 
             this.zoomStepsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.zoomStepsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.zoomStepsLabel.Location = new System.Drawing.Point(4, 118);
@@ -516,9 +518,9 @@ namespace CameraControlStudio {
             this.zoomStepsLabel.TabIndex = 6;
             this.zoomStepsLabel.Text = "Zoom steps";
             this.zoomStepsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // zoomSteps
-            //
+            // 
             this.zoomSteps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.zoomSteps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.zoomSteps.ForeColor = System.Drawing.Color.White;
@@ -538,9 +540,9 @@ namespace CameraControlStudio {
             0,
             0,
             0});
-            //
+            // 
             // useTransitionSpeed
-            //
+            // 
             this.useTransitionSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.generalFields.SetColumnSpan(this.useTransitionSpeed, 2);
             this.useTransitionSpeed.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -551,9 +553,9 @@ namespace CameraControlStudio {
             this.useTransitionSpeed.TabIndex = 8;
             this.useTransitionSpeed.Text = "Use speed for preset transitions";
             this.useTransitionSpeed.UseVisualStyleBackColor = false;
-            //
+            // 
             // transitionSpeedLabel
-            //
+            // 
             this.transitionSpeedLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.transitionSpeedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.transitionSpeedLabel.Location = new System.Drawing.Point(4, 194);
@@ -563,9 +565,9 @@ namespace CameraControlStudio {
             this.transitionSpeedLabel.TabIndex = 9;
             this.transitionSpeedLabel.Text = "Transition speed (%/s)";
             this.transitionSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // transitionSpeedPercent
-            //
+            // 
             this.transitionSpeedPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.transitionSpeedPercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.transitionSpeedPercent.Enabled = false;
@@ -591,9 +593,9 @@ namespace CameraControlStudio {
             0,
             0,
             0});
-            //
+            // 
             // secondsLabel
-            //
+            // 
             this.secondsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.secondsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.secondsLabel.Location = new System.Drawing.Point(4, 240);
@@ -603,9 +605,9 @@ namespace CameraControlStudio {
             this.secondsLabel.TabIndex = 11;
             this.secondsLabel.Text = "Transition (sec.)";
             this.secondsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // seconds
-            //
+            // 
             this.seconds.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.seconds.DecimalPlaces = 1;
             this.seconds.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -631,9 +633,9 @@ namespace CameraControlStudio {
             0,
             0,
             0});
-            //
+            // 
             // reverseX
-            //
+            // 
             this.reverseX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.generalFields.SetColumnSpan(this.reverseX, 2);
             this.reverseX.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -644,9 +646,9 @@ namespace CameraControlStudio {
             this.reverseX.TabIndex = 13;
             this.reverseX.Text = "Camera pan reverse left / right";
             this.reverseX.UseVisualStyleBackColor = false;
-            //
+            // 
             // reverseY
-            //
+            // 
             this.reverseY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.generalFields.SetColumnSpan(this.reverseY, 2);
             this.reverseY.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -657,9 +659,9 @@ namespace CameraControlStudio {
             this.reverseY.TabIndex = 14;
             this.reverseY.Text = "Camera pan reverse up / down";
             this.reverseY.UseVisualStyleBackColor = false;
-            //
+            // 
             // startupFovLabel
-            //
+            // 
             this.startupFovLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startupFovLabel.Location = new System.Drawing.Point(3, 360);
             this.startupFovLabel.Name = "startupFovLabel";
@@ -667,9 +669,9 @@ namespace CameraControlStudio {
             this.startupFovLabel.TabIndex = 15;
             this.startupFovLabel.Text = "Field of view at startup";
             this.startupFovLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // startupFov
-            //
+            // 
             this.startupFov.AccessibleName = "Field of view at startup";
             this.startupFov.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startupFov.IntegralHeight = false;
@@ -678,9 +680,9 @@ namespace CameraControlStudio {
             this.startupFov.Name = "startupFov";
             this.startupFov.Size = new System.Drawing.Size(94, 89);
             this.startupFov.TabIndex = 9;
-            //
+            // 
             // allowFov
-            //
+            // 
             this.generalFields.SetColumnSpan(this.allowFov, 2);
             this.allowFov.Dock = System.Windows.Forms.DockStyle.Fill;
             this.allowFov.Location = new System.Drawing.Point(3, 458);
@@ -688,9 +690,9 @@ namespace CameraControlStudio {
             this.allowFov.Size = new System.Drawing.Size(257, 36);
             this.allowFov.TabIndex = 10;
             this.allowFov.Text = "Allow manual FOV changes";
-            //
+            // 
             // adjustFovAtLimits
-            //
+            // 
             this.adjustFovAtLimits.Checked = true;
             this.adjustFovAtLimits.CheckState = System.Windows.Forms.CheckState.Checked;
             this.generalFields.SetColumnSpan(this.adjustFovAtLimits, 2);
@@ -700,9 +702,9 @@ namespace CameraControlStudio {
             this.adjustFovAtLimits.Size = new System.Drawing.Size(257, 44);
             this.adjustFovAtLimits.TabIndex = 11;
             this.adjustFovAtLimits.Text = "Adjust field of view at zoom and pan limits";
-            //
+            // 
             // applicationTab
-            //
+            // 
             this.applicationTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.applicationTab.Controls.Add(this.applicationScroll);
             this.applicationTab.Location = new System.Drawing.Point(4, 29);
@@ -710,9 +712,9 @@ namespace CameraControlStudio {
             this.applicationTab.Size = new System.Drawing.Size(294, 300);
             this.applicationTab.TabIndex = 1;
             this.applicationTab.Text = "Application";
-            //
+            // 
             // applicationScroll
-            //
+            // 
             this.applicationScroll.AutoScroll = true;
             this.applicationScroll.Controls.Add(this.applicationFields);
             this.applicationScroll.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -720,9 +722,9 @@ namespace CameraControlStudio {
             this.applicationScroll.Name = "applicationScroll";
             this.applicationScroll.Size = new System.Drawing.Size(294, 300);
             this.applicationScroll.TabIndex = 0;
-            //
+            // 
             // applicationFields
-            //
+            // 
             this.applicationFields.AutoSize = true;
             this.applicationFields.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.applicationFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -739,9 +741,9 @@ namespace CameraControlStudio {
             this.applicationFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.applicationFields.Size = new System.Drawing.Size(294, 183);
             this.applicationFields.TabIndex = 0;
-            //
+            // 
             // windowGroup
-            //
+            // 
             this.windowGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.windowGroup.Controls.Add(this.windowFields);
             this.windowGroup.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -753,9 +755,9 @@ namespace CameraControlStudio {
             this.windowGroup.TabIndex = 0;
             this.windowGroup.TabStop = false;
             this.windowGroup.Text = "Window and streaming";
-            //
+            // 
             // windowFields
-            //
+            // 
             this.windowFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.windowFields.ColumnCount = 1;
             this.windowFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -769,9 +771,9 @@ namespace CameraControlStudio {
             this.windowFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.windowFields.Size = new System.Drawing.Size(270, 80);
             this.windowFields.TabIndex = 0;
-            //
+            // 
             // streamingCheck
-            //
+            // 
             this.streamingCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.streamingCheck.Dock = System.Windows.Forms.DockStyle.Fill;
             this.streamingCheck.Location = new System.Drawing.Point(4, 4);
@@ -781,9 +783,9 @@ namespace CameraControlStudio {
             this.streamingCheck.TabIndex = 10;
             this.streamingCheck.Text = "Ask whether streaming has started before using the camera";
             this.streamingCheck.UseVisualStyleBackColor = false;
-            //
+            // 
             // alwaysTop
-            //
+            // 
             this.alwaysTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.alwaysTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.alwaysTop.Location = new System.Drawing.Point(4, 56);
@@ -793,9 +795,9 @@ namespace CameraControlStudio {
             this.alwaysTop.TabIndex = 11;
             this.alwaysTop.Text = "Always on top";
             this.alwaysTop.UseVisualStyleBackColor = false;
-            //
+            // 
             // languageGroup
-            //
+            // 
             this.languageGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.languageGroup.Controls.Add(this.language);
             this.languageGroup.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -807,9 +809,9 @@ namespace CameraControlStudio {
             this.languageGroup.TabIndex = 1;
             this.languageGroup.TabStop = false;
             this.languageGroup.Text = "Profile language";
-            //
+            // 
             // language
-            //
+            // 
             this.language.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.language.Dock = System.Windows.Forms.DockStyle.Top;
             this.language.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -821,9 +823,9 @@ namespace CameraControlStudio {
             this.language.Name = "language";
             this.language.Size = new System.Drawing.Size(270, 28);
             this.language.TabIndex = 13;
-            //
+            // 
             // videoLayout
-            //
+            // 
             this.videoLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.videoLayout.ColumnCount = 1;
             this.videoLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -837,9 +839,9 @@ namespace CameraControlStudio {
             this.videoLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.videoLayout.Size = new System.Drawing.Size(302, 333);
             this.videoLayout.TabIndex = 0;
-            //
+            // 
             // videoStatus
-            //
+            // 
             this.videoStatus.AutoSize = true;
             this.videoStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.videoStatus.Controls.Add(this.loadVideoControls);
@@ -851,9 +853,9 @@ namespace CameraControlStudio {
             this.videoStatus.Size = new System.Drawing.Size(296, 78);
             this.videoStatus.TabIndex = 0;
             this.videoStatus.WrapContents = false;
-            //
+            // 
             // loadVideoControls
-            //
+            // 
             this.loadVideoControls.AutoSize = true;
             this.loadVideoControls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.loadVideoControls.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -866,9 +868,9 @@ namespace CameraControlStudio {
             this.loadVideoControls.TabIndex = 0;
             this.loadVideoControls.Text = "Load image controls";
             this.loadVideoControls.UseVisualStyleBackColor = false;
-            //
+            // 
             // noVideoControls
-            //
+            // 
             this.noVideoControls.AutoSize = true;
             this.noVideoControls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.noVideoControls.Location = new System.Drawing.Point(3, 38);
@@ -877,9 +879,9 @@ namespace CameraControlStudio {
             this.noVideoControls.Size = new System.Drawing.Size(200, 40);
             this.noVideoControls.TabIndex = 1;
             this.noVideoControls.Text = "No image controls available through the driver.";
-            //
+            // 
             // imagePages
-            //
+            // 
             this.imagePages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.imagePages.ColumnCount = 1;
             this.imagePages.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -893,9 +895,9 @@ namespace CameraControlStudio {
             this.imagePages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.imagePages.Size = new System.Drawing.Size(296, 243);
             this.imagePages.TabIndex = 1;
-            //
+            // 
             // imageCategories
-            //
+            // 
             this.imageCategories.Controls.Add(this.focusTab);
             this.imageCategories.Controls.Add(this.colourTab);
             this.imageCategories.Controls.Add(this.lightTab);
@@ -905,9 +907,9 @@ namespace CameraControlStudio {
             this.imageCategories.SelectedIndex = 0;
             this.imageCategories.Size = new System.Drawing.Size(290, 205);
             this.imageCategories.TabIndex = 0;
-            //
+            // 
             // focusTab
-            //
+            // 
             this.focusTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.focusTab.Controls.Add(this.focusPanel);
             this.focusTab.Location = new System.Drawing.Point(4, 29);
@@ -915,9 +917,9 @@ namespace CameraControlStudio {
             this.focusTab.Size = new System.Drawing.Size(282, 172);
             this.focusTab.TabIndex = 0;
             this.focusTab.Text = "Focus and exposure";
-            //
+            // 
             // focusPanel
-            //
+            // 
             this.focusPanel.AutoScroll = true;
             this.focusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.focusPanel.Controls.Add(this.gainControl);
@@ -928,9 +930,9 @@ namespace CameraControlStudio {
             this.focusPanel.Name = "focusPanel";
             this.focusPanel.Size = new System.Drawing.Size(282, 172);
             this.focusPanel.TabIndex = 0;
-            //
+            // 
             // gainControl
-            //
+            // 
             this.gainControl.AutoSize = true;
             this.gainControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gainControl.Controls.Add(this.gainAutomatic);
@@ -944,9 +946,9 @@ namespace CameraControlStudio {
             this.gainControl.TabStop = false;
             this.gainControl.Tag = "Gain";
             this.gainControl.Text = "Gain";
-            //
+            // 
             // gainAutomatic
-            //
+            // 
             this.gainAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.gainAutomatic.Location = new System.Drawing.Point(3, 49);
             this.gainAutomatic.Name = "gainAutomatic";
@@ -955,9 +957,9 @@ namespace CameraControlStudio {
             this.gainAutomatic.TabIndex = 1;
             this.gainAutomatic.Text = "Automatic";
             this.gainAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // gainSlider
-            //
+            // 
             this.gainSlider.AutoSize = false;
             this.gainSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.gainSlider.Location = new System.Drawing.Point(3, 23);
@@ -966,9 +968,9 @@ namespace CameraControlStudio {
             this.gainSlider.Size = new System.Drawing.Size(255, 26);
             this.gainSlider.TabIndex = 0;
             this.gainSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // exposureControl
-            //
+            // 
             this.exposureControl.AutoSize = true;
             this.exposureControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.exposureControl.Controls.Add(this.exposureAutomatic);
@@ -982,9 +984,9 @@ namespace CameraControlStudio {
             this.exposureControl.TabStop = false;
             this.exposureControl.Tag = "Exposure";
             this.exposureControl.Text = "Exposure";
-            //
+            // 
             // exposureAutomatic
-            //
+            // 
             this.exposureAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.exposureAutomatic.Location = new System.Drawing.Point(3, 49);
             this.exposureAutomatic.Name = "exposureAutomatic";
@@ -993,9 +995,9 @@ namespace CameraControlStudio {
             this.exposureAutomatic.TabIndex = 1;
             this.exposureAutomatic.Text = "Automatic";
             this.exposureAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // exposureSlider
-            //
+            // 
             this.exposureSlider.AutoSize = false;
             this.exposureSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.exposureSlider.Location = new System.Drawing.Point(3, 23);
@@ -1004,9 +1006,9 @@ namespace CameraControlStudio {
             this.exposureSlider.Size = new System.Drawing.Size(255, 26);
             this.exposureSlider.TabIndex = 0;
             this.exposureSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // focusControl
-            //
+            // 
             this.focusControl.AutoSize = true;
             this.focusControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.focusControl.Controls.Add(this.focusAutomatic);
@@ -1020,9 +1022,9 @@ namespace CameraControlStudio {
             this.focusControl.TabStop = false;
             this.focusControl.Tag = "Focus";
             this.focusControl.Text = "Focus";
-            //
+            // 
             // focusAutomatic
-            //
+            // 
             this.focusAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.focusAutomatic.Location = new System.Drawing.Point(3, 49);
             this.focusAutomatic.Name = "focusAutomatic";
@@ -1031,9 +1033,9 @@ namespace CameraControlStudio {
             this.focusAutomatic.TabIndex = 1;
             this.focusAutomatic.Text = "Automatic";
             this.focusAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // focusSlider
-            //
+            // 
             this.focusSlider.AutoSize = false;
             this.focusSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.focusSlider.Location = new System.Drawing.Point(3, 23);
@@ -1042,9 +1044,9 @@ namespace CameraControlStudio {
             this.focusSlider.Size = new System.Drawing.Size(255, 26);
             this.focusSlider.TabIndex = 0;
             this.focusSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // colourTab
-            //
+            // 
             this.colourTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.colourTab.Controls.Add(this.colourPanel);
             this.colourTab.Location = new System.Drawing.Point(4, 29);
@@ -1052,9 +1054,9 @@ namespace CameraControlStudio {
             this.colourTab.Size = new System.Drawing.Size(282, 180);
             this.colourTab.TabIndex = 1;
             this.colourTab.Text = "Colour";
-            //
+            // 
             // colourPanel
-            //
+            // 
             this.colourPanel.AutoScroll = true;
             this.colourPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.colourPanel.Controls.Add(this.whiteBalanceControl);
@@ -1066,9 +1068,9 @@ namespace CameraControlStudio {
             this.colourPanel.Name = "colourPanel";
             this.colourPanel.Size = new System.Drawing.Size(282, 180);
             this.colourPanel.TabIndex = 0;
-            //
+            // 
             // whiteBalanceControl
-            //
+            // 
             this.whiteBalanceControl.AutoSize = true;
             this.whiteBalanceControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.whiteBalanceControl.Controls.Add(this.whiteBalanceAutomatic);
@@ -1082,9 +1084,9 @@ namespace CameraControlStudio {
             this.whiteBalanceControl.TabStop = false;
             this.whiteBalanceControl.Tag = "White balance";
             this.whiteBalanceControl.Text = "White balance";
-            //
+            // 
             // whiteBalanceAutomatic
-            //
+            // 
             this.whiteBalanceAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.whiteBalanceAutomatic.Location = new System.Drawing.Point(3, 49);
             this.whiteBalanceAutomatic.Name = "whiteBalanceAutomatic";
@@ -1093,9 +1095,9 @@ namespace CameraControlStudio {
             this.whiteBalanceAutomatic.TabIndex = 1;
             this.whiteBalanceAutomatic.Text = "Automatic";
             this.whiteBalanceAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // whiteBalanceSlider
-            //
+            // 
             this.whiteBalanceSlider.AutoSize = false;
             this.whiteBalanceSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.whiteBalanceSlider.Location = new System.Drawing.Point(3, 23);
@@ -1104,9 +1106,9 @@ namespace CameraControlStudio {
             this.whiteBalanceSlider.Size = new System.Drawing.Size(255, 26);
             this.whiteBalanceSlider.TabIndex = 0;
             this.whiteBalanceSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // saturationControl
-            //
+            // 
             this.saturationControl.AutoSize = true;
             this.saturationControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.saturationControl.Controls.Add(this.saturationAutomatic);
@@ -1120,9 +1122,9 @@ namespace CameraControlStudio {
             this.saturationControl.TabStop = false;
             this.saturationControl.Tag = "Saturation";
             this.saturationControl.Text = "Saturation";
-            //
+            // 
             // saturationAutomatic
-            //
+            // 
             this.saturationAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.saturationAutomatic.Location = new System.Drawing.Point(3, 49);
             this.saturationAutomatic.Name = "saturationAutomatic";
@@ -1131,9 +1133,9 @@ namespace CameraControlStudio {
             this.saturationAutomatic.TabIndex = 1;
             this.saturationAutomatic.Text = "Automatic";
             this.saturationAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // saturationSlider
-            //
+            // 
             this.saturationSlider.AutoSize = false;
             this.saturationSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.saturationSlider.Location = new System.Drawing.Point(3, 23);
@@ -1142,9 +1144,9 @@ namespace CameraControlStudio {
             this.saturationSlider.Size = new System.Drawing.Size(255, 26);
             this.saturationSlider.TabIndex = 0;
             this.saturationSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // gammaControl
-            //
+            // 
             this.gammaControl.AutoSize = true;
             this.gammaControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gammaControl.Controls.Add(this.gammaAutomatic);
@@ -1158,9 +1160,9 @@ namespace CameraControlStudio {
             this.gammaControl.TabStop = false;
             this.gammaControl.Tag = "Gamma";
             this.gammaControl.Text = "Gamma";
-            //
+            // 
             // gammaAutomatic
-            //
+            // 
             this.gammaAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.gammaAutomatic.Location = new System.Drawing.Point(3, 49);
             this.gammaAutomatic.Name = "gammaAutomatic";
@@ -1169,9 +1171,9 @@ namespace CameraControlStudio {
             this.gammaAutomatic.TabIndex = 1;
             this.gammaAutomatic.Text = "Automatic";
             this.gammaAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // gammaSlider
-            //
+            // 
             this.gammaSlider.AutoSize = false;
             this.gammaSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.gammaSlider.Location = new System.Drawing.Point(3, 23);
@@ -1180,9 +1182,9 @@ namespace CameraControlStudio {
             this.gammaSlider.Size = new System.Drawing.Size(255, 26);
             this.gammaSlider.TabIndex = 0;
             this.gammaSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // hueControl
-            //
+            // 
             this.hueControl.AutoSize = true;
             this.hueControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hueControl.Controls.Add(this.hueAutomatic);
@@ -1196,9 +1198,9 @@ namespace CameraControlStudio {
             this.hueControl.TabStop = false;
             this.hueControl.Tag = "Hue";
             this.hueControl.Text = "Hue";
-            //
+            // 
             // hueAutomatic
-            //
+            // 
             this.hueAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.hueAutomatic.Location = new System.Drawing.Point(3, 49);
             this.hueAutomatic.Name = "hueAutomatic";
@@ -1207,9 +1209,9 @@ namespace CameraControlStudio {
             this.hueAutomatic.TabIndex = 1;
             this.hueAutomatic.Text = "Automatic";
             this.hueAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // hueSlider
-            //
+            // 
             this.hueSlider.AutoSize = false;
             this.hueSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.hueSlider.Location = new System.Drawing.Point(3, 23);
@@ -1218,9 +1220,9 @@ namespace CameraControlStudio {
             this.hueSlider.Size = new System.Drawing.Size(255, 26);
             this.hueSlider.TabIndex = 0;
             this.hueSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // lightTab
-            //
+            // 
             this.lightTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.lightTab.Controls.Add(this.lightPanel);
             this.lightTab.Location = new System.Drawing.Point(4, 29);
@@ -1228,9 +1230,9 @@ namespace CameraControlStudio {
             this.lightTab.Size = new System.Drawing.Size(282, 180);
             this.lightTab.TabIndex = 2;
             this.lightTab.Text = "Light and detail";
-            //
+            // 
             // lightPanel
-            //
+            // 
             this.lightPanel.AutoScroll = true;
             this.lightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.lightPanel.Controls.Add(this.contrastControl);
@@ -1242,9 +1244,9 @@ namespace CameraControlStudio {
             this.lightPanel.Name = "lightPanel";
             this.lightPanel.Size = new System.Drawing.Size(282, 180);
             this.lightPanel.TabIndex = 0;
-            //
+            // 
             // contrastControl
-            //
+            // 
             this.contrastControl.AutoSize = true;
             this.contrastControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.contrastControl.Controls.Add(this.contrastAutomatic);
@@ -1258,9 +1260,9 @@ namespace CameraControlStudio {
             this.contrastControl.TabStop = false;
             this.contrastControl.Tag = "Contrast";
             this.contrastControl.Text = "Contrast";
-            //
+            // 
             // contrastAutomatic
-            //
+            // 
             this.contrastAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.contrastAutomatic.Location = new System.Drawing.Point(3, 49);
             this.contrastAutomatic.Name = "contrastAutomatic";
@@ -1269,9 +1271,9 @@ namespace CameraControlStudio {
             this.contrastAutomatic.TabIndex = 1;
             this.contrastAutomatic.Text = "Automatic";
             this.contrastAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // contrastSlider
-            //
+            // 
             this.contrastSlider.AutoSize = false;
             this.contrastSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.contrastSlider.Location = new System.Drawing.Point(3, 23);
@@ -1280,9 +1282,9 @@ namespace CameraControlStudio {
             this.contrastSlider.Size = new System.Drawing.Size(255, 26);
             this.contrastSlider.TabIndex = 0;
             this.contrastSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // brightnessControl
-            //
+            // 
             this.brightnessControl.AutoSize = true;
             this.brightnessControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.brightnessControl.Controls.Add(this.brightnessAutomatic);
@@ -1296,9 +1298,9 @@ namespace CameraControlStudio {
             this.brightnessControl.TabStop = false;
             this.brightnessControl.Tag = "Brightness";
             this.brightnessControl.Text = "Brightness";
-            //
+            // 
             // brightnessAutomatic
-            //
+            // 
             this.brightnessAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.brightnessAutomatic.Location = new System.Drawing.Point(3, 49);
             this.brightnessAutomatic.Name = "brightnessAutomatic";
@@ -1307,9 +1309,9 @@ namespace CameraControlStudio {
             this.brightnessAutomatic.TabIndex = 1;
             this.brightnessAutomatic.Text = "Automatic";
             this.brightnessAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // brightnessSlider
-            //
+            // 
             this.brightnessSlider.AutoSize = false;
             this.brightnessSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.brightnessSlider.Location = new System.Drawing.Point(3, 23);
@@ -1318,9 +1320,9 @@ namespace CameraControlStudio {
             this.brightnessSlider.Size = new System.Drawing.Size(255, 26);
             this.brightnessSlider.TabIndex = 0;
             this.brightnessSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // backlightControl
-            //
+            // 
             this.backlightControl.AutoSize = true;
             this.backlightControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.backlightControl.Controls.Add(this.backlightAutomatic);
@@ -1334,9 +1336,9 @@ namespace CameraControlStudio {
             this.backlightControl.TabStop = false;
             this.backlightControl.Tag = "Backlight compensation";
             this.backlightControl.Text = "Backlight compensation";
-            //
+            // 
             // backlightAutomatic
-            //
+            // 
             this.backlightAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.backlightAutomatic.Location = new System.Drawing.Point(3, 49);
             this.backlightAutomatic.Name = "backlightAutomatic";
@@ -1345,9 +1347,9 @@ namespace CameraControlStudio {
             this.backlightAutomatic.TabIndex = 1;
             this.backlightAutomatic.Text = "Automatic";
             this.backlightAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // backlightSlider
-            //
+            // 
             this.backlightSlider.AutoSize = false;
             this.backlightSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.backlightSlider.Location = new System.Drawing.Point(3, 23);
@@ -1356,9 +1358,9 @@ namespace CameraControlStudio {
             this.backlightSlider.Size = new System.Drawing.Size(255, 26);
             this.backlightSlider.TabIndex = 0;
             this.backlightSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // sharpnessControl
-            //
+            // 
             this.sharpnessControl.AutoSize = true;
             this.sharpnessControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.sharpnessControl.Controls.Add(this.sharpnessAutomatic);
@@ -1372,9 +1374,9 @@ namespace CameraControlStudio {
             this.sharpnessControl.TabStop = false;
             this.sharpnessControl.Tag = "Sharpness";
             this.sharpnessControl.Text = "Sharpness";
-            //
+            // 
             // sharpnessAutomatic
-            //
+            // 
             this.sharpnessAutomatic.Dock = System.Windows.Forms.DockStyle.Top;
             this.sharpnessAutomatic.Location = new System.Drawing.Point(3, 49);
             this.sharpnessAutomatic.Name = "sharpnessAutomatic";
@@ -1383,9 +1385,9 @@ namespace CameraControlStudio {
             this.sharpnessAutomatic.TabIndex = 1;
             this.sharpnessAutomatic.Text = "Automatic";
             this.sharpnessAutomatic.UseVisualStyleBackColor = true;
-            //
+            // 
             // sharpnessSlider
-            //
+            // 
             this.sharpnessSlider.AutoSize = false;
             this.sharpnessSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.sharpnessSlider.Location = new System.Drawing.Point(3, 23);
@@ -1394,9 +1396,9 @@ namespace CameraControlStudio {
             this.sharpnessSlider.Size = new System.Drawing.Size(255, 26);
             this.sharpnessSlider.TabIndex = 0;
             this.sharpnessSlider.TickStyle = System.Windows.Forms.TickStyle.None;
-            //
+            // 
             // resetVideoControls
-            //
+            // 
             this.resetVideoControls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.resetVideoControls.Cursor = System.Windows.Forms.Cursors.Hand;
             this.resetVideoControls.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1409,9 +1411,9 @@ namespace CameraControlStudio {
             this.resetVideoControls.TabIndex = 1;
             this.resetVideoControls.Text = "Reset image to driver defaults";
             this.resetVideoControls.UseVisualStyleBackColor = false;
-            //
+            // 
             // issuesTab
-            //
+            // 
             this.issuesTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.issuesTab.Controls.Add(this.issueGroups);
             this.issuesTab.Location = new System.Drawing.Point(4, 54);
@@ -1419,9 +1421,9 @@ namespace CameraControlStudio {
             this.issuesTab.Size = new System.Drawing.Size(322, 353);
             this.issuesTab.TabIndex = 4;
             this.issuesTab.Text = "Issues";
-            //
+            // 
             // issueGroups
-            //
+            // 
             this.issueGroups.AutoScroll = true;
             this.issueGroups.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.issueGroups.Controls.Add(this.logGroup);
@@ -1433,9 +1435,9 @@ namespace CameraControlStudio {
             this.issueGroups.Size = new System.Drawing.Size(322, 353);
             this.issueGroups.TabIndex = 0;
             this.issueGroups.WrapContents = false;
-            //
+            // 
             // logGroup
-            //
+            // 
             this.logGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.logGroup.Controls.Add(this.logActions);
             this.logGroup.ForeColor = System.Drawing.Color.White;
@@ -1446,9 +1448,9 @@ namespace CameraControlStudio {
             this.logGroup.TabIndex = 0;
             this.logGroup.TabStop = false;
             this.logGroup.Text = "Diagnostic logs";
-            //
+            // 
             // logActions
-            //
+            // 
             this.logActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.logActions.Controls.Add(this.logSettingsLink);
             this.logActions.Controls.Add(this.showLogLink);
@@ -1459,9 +1461,9 @@ namespace CameraControlStudio {
             this.logActions.Size = new System.Drawing.Size(260, 67);
             this.logActions.TabIndex = 0;
             this.logActions.WrapContents = false;
-            //
+            // 
             // logSettingsLink
-            //
+            // 
             this.logSettingsLink.ActiveLinkColor = System.Drawing.Color.White;
             this.logSettingsLink.AutoSize = true;
             this.logSettingsLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -1475,9 +1477,9 @@ namespace CameraControlStudio {
             this.logSettingsLink.TabStop = true;
             this.logSettingsLink.Text = "Log settings";
             this.logSettingsLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // showLogLink
-            //
+            // 
             this.showLogLink.ActiveLinkColor = System.Drawing.Color.White;
             this.showLogLink.AutoSize = true;
             this.showLogLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -1491,9 +1493,9 @@ namespace CameraControlStudio {
             this.showLogLink.TabStop = true;
             this.showLogLink.Text = "Show log file";
             this.showLogLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // reportGroup
-            //
+            // 
             this.reportGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.reportGroup.Controls.Add(this.reportActions);
             this.reportGroup.ForeColor = System.Drawing.Color.White;
@@ -1504,9 +1506,9 @@ namespace CameraControlStudio {
             this.reportGroup.TabIndex = 1;
             this.reportGroup.TabStop = false;
             this.reportGroup.Text = "Report a problem";
-            //
+            // 
             // reportActions
-            //
+            // 
             this.reportActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.reportActions.Controls.Add(this.reportNote);
             this.reportActions.Controls.Add(this.reportLink);
@@ -1517,9 +1519,9 @@ namespace CameraControlStudio {
             this.reportActions.Size = new System.Drawing.Size(260, 96);
             this.reportActions.TabIndex = 0;
             this.reportActions.WrapContents = false;
-            //
+            // 
             // reportNote
-            //
+            // 
             this.reportNote.AutoSize = true;
             this.reportNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.reportNote.Location = new System.Drawing.Point(3, 0);
@@ -1528,9 +1530,9 @@ namespace CameraControlStudio {
             this.reportNote.Size = new System.Drawing.Size(229, 40);
             this.reportNote.TabIndex = 0;
             this.reportNote.Text = "Review the exported logs and attach them to your GitHub issue.";
-            //
+            // 
             // reportLink
-            //
+            // 
             this.reportLink.ActiveLinkColor = System.Drawing.Color.White;
             this.reportLink.AutoSize = true;
             this.reportLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -1544,9 +1546,9 @@ namespace CameraControlStudio {
             this.reportLink.TabStop = true;
             this.reportLink.Text = "Report on GitHub";
             this.reportLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // releasesLink
-            //
+            // 
             this.releasesLink.ActiveLinkColor = System.Drawing.Color.White;
             this.releasesLink.AutoSize = true;
             this.releasesLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -1560,9 +1562,9 @@ namespace CameraControlStudio {
             this.releasesLink.TabStop = true;
             this.releasesLink.Text = "GitHub releases";
             this.releasesLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // guideIndexLink
-            //
+            // 
             this.guideIndexLink.ActiveLinkColor = System.Drawing.Color.White;
             this.guideIndexLink.AutoSize = true;
             this.guideIndexLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -1576,9 +1578,9 @@ namespace CameraControlStudio {
             this.guideIndexLink.TabStop = true;
             this.guideIndexLink.Text = "User guides on GitHub";
             this.guideIndexLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // openGuideButton
-            //
+            // 
             this.openGuideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.openGuideButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openGuideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1590,26 +1592,26 @@ namespace CameraControlStudio {
             this.openGuideButton.TabIndex = 8;
             this.openGuideButton.Text = "Open guide viewer";
             this.openGuideButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // iconColumn
-            //
+            // 
             this.iconColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.NullValue = null;
-            this.iconColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.NullValue = null;
+            this.iconColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.iconColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.iconColumn.MinimumWidth = 6;
             this.iconColumn.Name = "iconColumn";
             this.iconColumn.ReadOnly = true;
             this.iconColumn.Width = 64;
-            //
+            // 
             // positionColumn
-            //
+            // 
             this.positionColumn.MinimumWidth = 6;
             this.positionColumn.Name = "positionColumn";
             this.positionColumn.ReadOnly = true;
-            //
+            // 
             // recallColumn
-            //
+            // 
             this.recallColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.recallColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.recallColumn.MinimumWidth = 6;
@@ -1618,9 +1620,9 @@ namespace CameraControlStudio {
             this.recallColumn.Text = "▶";
             this.recallColumn.UseColumnTextForButtonValue = true;
             this.recallColumn.Width = 42;
-            //
+            // 
             // root
-            //
+            // 
             this.root.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.root.ColumnCount = 1;
             this.root.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1638,9 +1640,9 @@ namespace CameraControlStudio {
             this.root.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.root.Size = new System.Drawing.Size(1160, 510);
             this.root.TabIndex = 0;
-            //
+            // 
             // body
-            //
+            // 
             this.body.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.body.ColumnCount = 2;
             this.body.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1655,31 +1657,31 @@ namespace CameraControlStudio {
             this.body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.body.Size = new System.Drawing.Size(1124, 411);
             this.body.TabIndex = 1;
-            //
+            // 
             // mainSplit
-            //
+            // 
             this.mainSplit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.mainSplit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainSplit.Location = new System.Drawing.Point(0, 0);
             this.mainSplit.Margin = new System.Windows.Forms.Padding(0);
             this.mainSplit.Name = "mainSplit";
-            //
+            // 
             // mainSplit.Panel1
-            //
+            // 
             this.mainSplit.Panel1.Controls.Add(this.motionPanel);
             this.mainSplit.Panel1MinSize = 185;
-            //
+            // 
             // mainSplit.Panel2
-            //
+            // 
             this.mainSplit.Panel2.Controls.Add(this.presetPanel);
             this.mainSplit.Panel2MinSize = 150;
             this.mainSplit.Size = new System.Drawing.Size(784, 411);
             this.mainSplit.SplitterDistance = 430;
             this.mainSplit.SplitterWidth = 15;
             this.mainSplit.TabIndex = 0;
-            //
+            // 
             // motionPanel
-            //
+            // 
             this.motionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.motionPanel.ColumnCount = 2;
             this.motionPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1702,9 +1704,9 @@ namespace CameraControlStudio {
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.motionPanel.Size = new System.Drawing.Size(430, 411);
             this.motionPanel.TabIndex = 0;
-            //
+            // 
             // title
-            //
+            // 
             this.title.AutoEllipsis = true;
             this.title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.motionPanel.SetColumnSpan(this.title, 2);
@@ -1718,9 +1720,9 @@ namespace CameraControlStudio {
             this.title.Text = "Camera Control Studio";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.UseMnemonic = false;
-            //
+            // 
             // zoomPanel
-            //
+            // 
             this.zoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.zoomPanel.ColumnCount = 1;
             this.zoomPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1738,9 +1740,9 @@ namespace CameraControlStudio {
             this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.zoomPanel.Size = new System.Drawing.Size(73, 235);
             this.zoomPanel.TabIndex = 1;
-            //
+            // 
             // normalIn
-            //
+            // 
             this.normalIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.normalIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.normalIn.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1753,9 +1755,9 @@ namespace CameraControlStudio {
             this.normalIn.Size = new System.Drawing.Size(73, 46);
             this.normalIn.TabIndex = 0;
             this.normalIn.UseVisualStyleBackColor = false;
-            //
+            // 
             // zoomSlider
-            //
+            // 
             this.zoomSlider.AccessibleRole = System.Windows.Forms.AccessibleRole.Slider;
             this.zoomSlider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.zoomSlider.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1764,9 +1766,9 @@ namespace CameraControlStudio {
             this.zoomSlider.Name = "zoomSlider";
             this.zoomSlider.Size = new System.Drawing.Size(63, 139);
             this.zoomSlider.TabIndex = 1;
-            //
+            // 
             // normalOut
-            //
+            // 
             this.normalOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.normalOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.normalOut.Direction = CameraControlStudio.ZoomDirection.Out;
@@ -1780,9 +1782,9 @@ namespace CameraControlStudio {
             this.normalOut.Size = new System.Drawing.Size(73, 46);
             this.normalOut.TabIndex = 2;
             this.normalOut.UseVisualStyleBackColor = false;
-            //
+            // 
             // motionPosition
-            //
+            // 
             this.motionPosition.AutoEllipsis = true;
             this.motionPanel.SetColumnSpan(this.motionPosition, 2);
             this.motionPosition.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1791,9 +1793,9 @@ namespace CameraControlStudio {
             this.motionPosition.Size = new System.Drawing.Size(405, 21);
             this.motionPosition.TabIndex = 2;
             this.motionPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //
+            // 
             // fovDisplay
-            //
+            // 
             this.fovDisplay.Controls.Add(this.fieldOfViewLabel);
             this.fovDisplay.Controls.Add(this.fieldOfViewPicker);
             this.fovDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1801,9 +1803,9 @@ namespace CameraControlStudio {
             this.fovDisplay.Name = "fovDisplay";
             this.fovDisplay.Size = new System.Drawing.Size(321, 42);
             this.fovDisplay.TabIndex = 2;
-            //
+            // 
             // fieldOfViewLabel
-            //
+            // 
             this.fieldOfViewLabel.AutoEllipsis = true;
             this.fieldOfViewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldOfViewLabel.Location = new System.Drawing.Point(0, 0);
@@ -1812,9 +1814,9 @@ namespace CameraControlStudio {
             this.fieldOfViewLabel.TabIndex = 0;
             this.fieldOfViewLabel.Text = "FOV unavailable";
             this.fieldOfViewLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //
+            // 
             // fieldOfViewPicker
-            //
+            // 
             this.fieldOfViewPicker.AccessibleName = "Field of view";
             this.fieldOfViewPicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldOfViewPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1823,9 +1825,9 @@ namespace CameraControlStudio {
             this.fieldOfViewPicker.Size = new System.Drawing.Size(321, 28);
             this.fieldOfViewPicker.TabIndex = 2;
             this.fieldOfViewPicker.Visible = false;
-            //
+            // 
             // presetPanel
-            //
+            // 
             this.presetPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.presetPanel.ColumnCount = 1;
             this.presetPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1841,9 +1843,9 @@ namespace CameraControlStudio {
             this.presetPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.presetPanel.Size = new System.Drawing.Size(339, 411);
             this.presetPanel.TabIndex = 0;
-            //
+            // 
             // presetHeader
-            //
+            // 
             this.presetHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.presetHeader.ColumnCount = 3;
             this.presetHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1860,9 +1862,9 @@ namespace CameraControlStudio {
             this.presetHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.presetHeader.Size = new System.Drawing.Size(315, 49);
             this.presetHeader.TabIndex = 0;
-            //
+            // 
             // presetTitle
-            //
+            // 
             this.presetTitle.AutoEllipsis = true;
             this.presetTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.presetTitle.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1875,9 +1877,9 @@ namespace CameraControlStudio {
             this.presetTitle.Text = "Presets";
             this.presetTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.presetTitle.UseMnemonic = false;
-            //
+            // 
             // deleteTemporaryButton
-            //
+            // 
             this.deleteTemporaryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.deleteTemporaryButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteTemporaryButton.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1891,9 +1893,9 @@ namespace CameraControlStudio {
             this.deleteTemporaryButton.TabIndex = 1;
             this.deleteTemporaryButton.Text = "×";
             this.deleteTemporaryButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // temporaryButton
-            //
+            // 
             this.temporaryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.temporaryButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.temporaryButton.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1907,9 +1909,9 @@ namespace CameraControlStudio {
             this.temporaryButton.TabIndex = 2;
             this.temporaryButton.Text = "+";
             this.temporaryButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // presetGrid
-            //
+            // 
             this.presetGrid.AllowUserToAddRows = false;
             this.presetGrid.AllowUserToDeleteRows = false;
             this.presetGrid.AllowUserToResizeRows = false;
@@ -1922,15 +1924,15 @@ namespace CameraControlStudio {
             this.iconColumn,
             this.positionColumn,
             this.recallColumn});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(4);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.presetGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.presetGrid.DefaultCellStyle = dataGridViewCellStyle12;
             this.presetGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.presetGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(214)))));
             this.presetGrid.Location = new System.Drawing.Point(24, 49);
@@ -1944,9 +1946,9 @@ namespace CameraControlStudio {
             this.presetGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.presetGrid.Size = new System.Drawing.Size(315, 345);
             this.presetGrid.TabIndex = 1;
-            //
+            // 
             // settingsTabs
-            //
+            // 
             this.settingsTabs.Controls.Add(this.presetsTab);
             this.settingsTabs.Controls.Add(this.generalTab);
             this.settingsTabs.Controls.Add(this.imageTab);
@@ -1961,9 +1963,9 @@ namespace CameraControlStudio {
             this.settingsTabs.SelectedIndex = 0;
             this.settingsTabs.Size = new System.Drawing.Size(330, 411);
             this.settingsTabs.TabIndex = 1;
-            //
+            // 
             // presetsTab
-            //
+            // 
             this.presetsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.presetsTab.Controls.Add(this.permanentPanel);
             this.presetsTab.Location = new System.Drawing.Point(4, 54);
@@ -1973,9 +1975,9 @@ namespace CameraControlStudio {
             this.presetsTab.Size = new System.Drawing.Size(322, 353);
             this.presetsTab.TabIndex = 2;
             this.presetsTab.Text = "Presets";
-            //
+            // 
             // permanentPanel
-            //
+            // 
             this.permanentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.permanentPanel.ColumnCount = 1;
             this.permanentPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1992,9 +1994,9 @@ namespace CameraControlStudio {
             this.permanentPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.permanentPanel.Size = new System.Drawing.Size(302, 333);
             this.permanentPanel.TabIndex = 0;
-            //
+            // 
             // permanentTitle
-            //
+            // 
             this.permanentTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.permanentTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.permanentTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -2005,9 +2007,9 @@ namespace CameraControlStudio {
             this.permanentTitle.TabIndex = 0;
             this.permanentTitle.Text = "Permanent presets";
             this.permanentTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // permanentList
-            //
+            // 
             this.permanentList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.permanentList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.permanentList.ForeColor = System.Drawing.Color.White;
@@ -2018,9 +2020,9 @@ namespace CameraControlStudio {
             this.permanentList.Name = "permanentList";
             this.permanentList.Size = new System.Drawing.Size(294, 262);
             this.permanentList.TabIndex = 1;
-            //
+            // 
             // permanentActions
-            //
+            // 
             this.permanentActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.permanentActions.Controls.Add(this.addPermanent);
             this.permanentActions.Controls.Add(this.editPermanent);
@@ -2035,9 +2037,9 @@ namespace CameraControlStudio {
             this.permanentActions.Size = new System.Drawing.Size(294, 38);
             this.permanentActions.TabIndex = 2;
             this.permanentActions.WrapContents = false;
-            //
+            // 
             // addPermanent
-            //
+            // 
             this.addPermanent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.addPermanent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addPermanent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2051,9 +2053,9 @@ namespace CameraControlStudio {
             this.addPermanent.TabIndex = 0;
             this.addPermanent.Text = "+";
             this.addPermanent.UseVisualStyleBackColor = false;
-            //
+            // 
             // editPermanent
-            //
+            // 
             this.editPermanent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.editPermanent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editPermanent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2067,9 +2069,9 @@ namespace CameraControlStudio {
             this.editPermanent.TabIndex = 1;
             this.editPermanent.Text = "✎";
             this.editPermanent.UseVisualStyleBackColor = false;
-            //
+            // 
             // updatePermanent
-            //
+            // 
             this.updatePermanent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.updatePermanent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updatePermanent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2083,9 +2085,9 @@ namespace CameraControlStudio {
             this.updatePermanent.TabIndex = 2;
             this.updatePermanent.Text = "↻";
             this.updatePermanent.UseVisualStyleBackColor = false;
-            //
+            // 
             // deletePermanent
-            //
+            // 
             this.deletePermanent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.deletePermanent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deletePermanent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2099,9 +2101,9 @@ namespace CameraControlStudio {
             this.deletePermanent.TabIndex = 3;
             this.deletePermanent.Text = "−";
             this.deletePermanent.UseVisualStyleBackColor = false;
-            //
+            // 
             // movePermanentUp
-            //
+            // 
             this.movePermanentUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.movePermanentUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.movePermanentUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2115,9 +2117,9 @@ namespace CameraControlStudio {
             this.movePermanentUp.TabIndex = 4;
             this.movePermanentUp.Text = "↑";
             this.movePermanentUp.UseVisualStyleBackColor = false;
-            //
+            // 
             // movePermanentDown
-            //
+            // 
             this.movePermanentDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.movePermanentDown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.movePermanentDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2131,9 +2133,9 @@ namespace CameraControlStudio {
             this.movePermanentDown.TabIndex = 5;
             this.movePermanentDown.Text = "↓";
             this.movePermanentDown.UseVisualStyleBackColor = false;
-            //
+            // 
             // generalTab
-            //
+            // 
             this.generalTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.generalTab.Controls.Add(this.settingsCategories);
             this.generalTab.Location = new System.Drawing.Point(4, 54);
@@ -2143,9 +2145,9 @@ namespace CameraControlStudio {
             this.generalTab.Size = new System.Drawing.Size(322, 353);
             this.generalTab.TabIndex = 0;
             this.generalTab.Text = "Settings";
-            //
+            // 
             // imageTab
-            //
+            // 
             this.imageTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.imageTab.Controls.Add(this.videoLayout);
             this.imageTab.Location = new System.Drawing.Point(4, 54);
@@ -2155,9 +2157,9 @@ namespace CameraControlStudio {
             this.imageTab.Size = new System.Drawing.Size(322, 353);
             this.imageTab.TabIndex = 1;
             this.imageTab.Text = "Video";
-            //
+            // 
             // profilesTab
-            //
+            // 
             this.profilesTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.profilesTab.Controls.Add(this.profilesPanel);
             this.profilesTab.Location = new System.Drawing.Point(4, 54);
@@ -2167,9 +2169,9 @@ namespace CameraControlStudio {
             this.profilesTab.Size = new System.Drawing.Size(322, 353);
             this.profilesTab.TabIndex = 3;
             this.profilesTab.Text = "Profiles";
-            //
+            // 
             // profilesPanel
-            //
+            // 
             this.profilesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.profilesPanel.ColumnCount = 1;
             this.profilesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2186,9 +2188,9 @@ namespace CameraControlStudio {
             this.profilesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.profilesPanel.Size = new System.Drawing.Size(302, 333);
             this.profilesPanel.TabIndex = 0;
-            //
+            // 
             // profilesList
-            //
+            // 
             this.profilesList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.profilesList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilesList.ForeColor = System.Drawing.Color.White;
@@ -2199,9 +2201,9 @@ namespace CameraControlStudio {
             this.profilesList.Name = "profilesList";
             this.profilesList.Size = new System.Drawing.Size(294, 237);
             this.profilesList.TabIndex = 0;
-            //
+            // 
             // profileActions
-            //
+            // 
             this.profileActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.profileActions.Controls.Add(this.newProfile);
             this.profileActions.Controls.Add(this.copyProfile);
@@ -2213,9 +2215,9 @@ namespace CameraControlStudio {
             this.profileActions.Size = new System.Drawing.Size(294, 38);
             this.profileActions.TabIndex = 1;
             this.profileActions.WrapContents = false;
-            //
+            // 
             // newProfile
-            //
+            // 
             this.newProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.newProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2229,9 +2231,9 @@ namespace CameraControlStudio {
             this.newProfile.TabIndex = 0;
             this.newProfile.Text = "+";
             this.newProfile.UseVisualStyleBackColor = false;
-            //
+            // 
             // copyProfile
-            //
+            // 
             this.copyProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.copyProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.copyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2245,9 +2247,9 @@ namespace CameraControlStudio {
             this.copyProfile.TabIndex = 1;
             this.copyProfile.Text = "⧉";
             this.copyProfile.UseVisualStyleBackColor = false;
-            //
+            // 
             // renameProfile
-            //
+            // 
             this.renameProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.renameProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.renameProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2261,9 +2263,9 @@ namespace CameraControlStudio {
             this.renameProfile.TabIndex = 2;
             this.renameProfile.Text = "✎";
             this.renameProfile.UseVisualStyleBackColor = false;
-            //
+            // 
             // profileNote
-            //
+            // 
             this.profileNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.profileNote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileNote.Location = new System.Drawing.Point(4, 283);
@@ -2272,9 +2274,9 @@ namespace CameraControlStudio {
             this.profileNote.Size = new System.Drawing.Size(294, 50);
             this.profileNote.TabIndex = 2;
             this.profileNote.Text = "Edit the active profile in Settings.";
-            //
+            // 
             // aboutTab
-            //
+            // 
             this.aboutTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.aboutTab.Controls.Add(this.aboutPanel);
             this.aboutTab.Location = new System.Drawing.Point(4, 54);
@@ -2284,9 +2286,9 @@ namespace CameraControlStudio {
             this.aboutTab.Size = new System.Drawing.Size(322, 353);
             this.aboutTab.TabIndex = 4;
             this.aboutTab.Text = "About";
-            //
+            // 
             // aboutPanel
-            //
+            // 
             this.aboutPanel.AutoScroll = true;
             this.aboutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.aboutPanel.Controls.Add(this.credit);
@@ -2306,9 +2308,9 @@ namespace CameraControlStudio {
             this.aboutPanel.Size = new System.Drawing.Size(302, 333);
             this.aboutPanel.TabIndex = 0;
             this.aboutPanel.WrapContents = false;
-            //
+            // 
             // credit
-            //
+            // 
             this.credit.AutoSize = true;
             this.credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.credit.Location = new System.Drawing.Point(5, 3);
@@ -2318,9 +2320,9 @@ namespace CameraControlStudio {
             this.credit.Size = new System.Drawing.Size(247, 40);
             this.credit.TabIndex = 0;
             this.credit.Text = "Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.";
-            //
+            // 
             // repoLink
-            //
+            // 
             this.repoLink.ActiveLinkColor = System.Drawing.Color.White;
             this.repoLink.AutoSize = true;
             this.repoLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -2333,9 +2335,9 @@ namespace CameraControlStudio {
             this.repoLink.TabStop = true;
             this.repoLink.Text = "GitHub";
             this.repoLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // issuesLink
-            //
+            // 
             this.issuesLink.ActiveLinkColor = System.Drawing.Color.White;
             this.issuesLink.AutoSize = true;
             this.issuesLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -2348,9 +2350,9 @@ namespace CameraControlStudio {
             this.issuesLink.TabStop = true;
             this.issuesLink.Text = "Report bugs or missing features";
             this.issuesLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // discussionLink
-            //
+            // 
             this.discussionLink.ActiveLinkColor = System.Drawing.Color.White;
             this.discussionLink.AutoSize = true;
             this.discussionLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -2363,9 +2365,9 @@ namespace CameraControlStudio {
             this.discussionLink.TabStop = true;
             this.discussionLink.Text = "Join the project discussion";
             this.discussionLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // coffeeLink
-            //
+            // 
             this.coffeeLink.ActiveLinkColor = System.Drawing.Color.White;
             this.coffeeLink.AutoSize = true;
             this.coffeeLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -2378,9 +2380,9 @@ namespace CameraControlStudio {
             this.coffeeLink.TabStop = true;
             this.coffeeLink.Text = "Buy me a coffee";
             this.coffeeLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            // 
             // versionLabel
-            //
+            // 
             this.versionLabel.AutoSize = true;
             this.versionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.versionLabel.Location = new System.Drawing.Point(5, 153);
@@ -2389,9 +2391,9 @@ namespace CameraControlStudio {
             this.versionLabel.Size = new System.Drawing.Size(34, 20);
             this.versionLabel.TabIndex = 5;
             this.versionLabel.Text = "MIT";
-            //
+            // 
             // footerSeparator
-            //
+            // 
             this.footerSeparator.Dock = System.Windows.Forms.DockStyle.Fill;
             this.footerSeparator.Location = new System.Drawing.Point(18, 425);
             this.footerSeparator.Margin = new System.Windows.Forms.Padding(0);
@@ -2399,9 +2401,9 @@ namespace CameraControlStudio {
             this.footerSeparator.Size = new System.Drawing.Size(1124, 13);
             this.footerSeparator.TabIndex = 2;
             this.footerSeparator.TabStop = false;
-            //
+            // 
             // footer
-            //
+            // 
             this.footer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.footer.ColumnCount = 4;
             this.footer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2420,9 +2422,9 @@ namespace CameraControlStudio {
             this.footer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.footer.Size = new System.Drawing.Size(1124, 62);
             this.footer.TabIndex = 1;
-            //
+            // 
             // footerLabels
-            //
+            // 
             this.footerLabels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.footerLabels.ColumnCount = 2;
             this.footerLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2439,9 +2441,9 @@ namespace CameraControlStudio {
             this.footerLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.footerLabels.Size = new System.Drawing.Size(860, 59);
             this.footerLabels.TabIndex = 0;
-            //
+            // 
             // cameraStatus
-            //
+            // 
             this.cameraStatus.AutoEllipsis = true;
             this.cameraStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.cameraStatus.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2452,9 +2454,9 @@ namespace CameraControlStudio {
             this.cameraStatus.TabIndex = 0;
             this.cameraStatus.Text = "Camera: not connected";
             this.cameraStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // releaseNotice
-            //
+            // 
             this.releaseNotice.ActiveLinkColor = System.Drawing.Color.White;
             this.releaseNotice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.releaseNotice.AutoSize = true;
@@ -2466,10 +2468,12 @@ namespace CameraControlStudio {
             this.releaseNotice.TabIndex = 2;
             this.releaseNotice.TabStop = true;
             this.releaseNotice.Text = "New release available";
+            this.releaseNotice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.releaseNotice.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            //
+            this.releaseNotice.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.releaseNotice_LinkClicked);
+            // 
             // status
-            //
+            // 
             this.status.AutoEllipsis = true;
             this.status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.footerLabels.SetColumnSpan(this.status, 2);
@@ -2481,9 +2485,9 @@ namespace CameraControlStudio {
             this.status.TabIndex = 1;
             this.status.Text = "Ready";
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // profileButton
-            //
+            // 
             this.profileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.profileButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2497,9 +2501,9 @@ namespace CameraControlStudio {
             this.profileButton.TabIndex = 1;
             this.profileButton.Text = "Profiles";
             this.profileButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // helpButton
-            //
+            // 
             this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.helpButton.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2514,9 +2518,9 @@ namespace CameraControlStudio {
             this.helpButton.TabIndex = 2;
             this.helpButton.Text = "?";
             this.helpButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // settingsButton
-            //
+            // 
             this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2531,9 +2535,9 @@ namespace CameraControlStudio {
             this.settingsButton.TabIndex = 3;
             this.settingsButton.Text = "⚙";
             this.settingsButton.UseVisualStyleBackColor = false;
-            //
+            // 
             // MainForm
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1160, 510);

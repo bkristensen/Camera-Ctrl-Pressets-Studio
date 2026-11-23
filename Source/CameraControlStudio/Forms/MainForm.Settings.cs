@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace CameraControlStudio
-{
-    public partial class MainForm
-    {
+namespace CameraControlStudio {
+    public partial class MainForm {
         TabPage[] videoTabs;
         bool refreshingVideo;
 
-        void WireSettings()
-        {
+        void WireSettings() {
             logSettingsLink.LinkClicked += (sender, args) => Run(() => LoggingDialog.ShowSettings(this));
             showLogLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()));
             reportLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.Report(this, DiagnosticLog.Current.FindLatest()));
@@ -23,8 +20,7 @@ namespace CameraControlStudio
             string updateText = releaseNotice.Text;
             releaseNotice.Text = string.Empty;
             releaseNotice.Visible = false;
-            Shown += async (sender, args) =>
-            {
+            Shown += async (sender, args) => {
                 if (documentationMode)
                     return;
 
@@ -38,14 +34,12 @@ namespace CameraControlStudio
             };
         }
 
-        void OpenGuide()
-        {
+        void OpenGuide() {
             using (var viewer = new GuideViewer(settingsTabs.Visible))
                 viewer.ShowDialog(this);
         }
 
-        void ConfigureSettingsToolTips()
-        {
+        void ConfigureSettingsToolTips() {
             SetMainToolTip(addPermanent, UiText.T("Add permanent preset", "Tilføj fast position"));
             SetMainToolTip(editPermanent, UiText.T("Edit name and symbol", "Ret navn og symbol"));
             SetMainToolTip(updatePermanent, UiText.T("Replace with current position", "Erstat med aktuel position"));
@@ -65,28 +59,22 @@ namespace CameraControlStudio
                 UiText.T("Keep moving when the lens view offers more room.", "Fortsæt bevægelsen, når et andet synsfelt giver mere plads."));
         }
 
-        void WireVideoControls()
-        {
+        void WireVideoControls() {
             videoTabs = imageCategories.TabPages.Cast<TabPage>().ToArray();
-            foreach (var editor in videoTabs.SelectMany(VideoEditors))
-            {
+            foreach (var editor in videoTabs.SelectMany(VideoEditors)) {
                 SetMainToolTip(editor.Automatic, string.Format(UiText.T("Automatic {0}", "Automatisk {0}"), editor.Group.Text));
-                editor.Slider.Scroll += (sender, args) => Run(() =>
-                {
-                    if (TryGetVideoSetting(editor.Group, out var setting))
-                    {
+                editor.Slider.Scroll += (sender, args) => Run(() => {
+                    if (TryGetVideoSetting(editor.Group, out var setting)) {
                         var slider = editor.Slider;
                         double fraction = (slider.Value - (double)slider.Minimum) / (slider.Maximum - (double)slider.Minimum);
                         camera.Set(setting.Name, setting.Min + fraction * (setting.Max - (double)setting.Min));
                         SaveImageValue(setting.Name);
                     }
                 });
-                editor.Automatic.CheckedChanged += (sender, args) =>
-                {
+                editor.Automatic.CheckedChanged += (sender, args) => {
                     if (refreshingVideo)
                         return;
-                    Run(() =>
-                    {
+                    Run(() => {
                         if (!TryGetVideoSetting(editor.Group, out var setting))
                             return;
                         camera.Set(setting.Name, camera.Get(setting.Name), editor.Automatic.Checked);
@@ -100,10 +88,8 @@ namespace CameraControlStudio
             ShowVideoControls(false);
         }
 
-        static IEnumerable<(GroupBox Group, TrackBar Slider, CheckBox Automatic)> VideoEditors(Control container)
-        {
-            foreach (Control child in container.Controls)
-            {
+        static IEnumerable<(GroupBox Group, TrackBar Slider, CheckBox Automatic)> VideoEditors(Control container) {
+            foreach (Control child in container.Controls) {
                 if (child is GroupBox group && group.Tag is string)
                     yield return (group, group.Controls.OfType<TrackBar>().Single(), group.Controls.OfType<CheckBox>().Single());
                 else
@@ -112,25 +98,20 @@ namespace CameraControlStudio
             }
         }
 
-        bool TryGetVideoSetting(GroupBox editor, out Setting setting)
-        {
+        bool TryGetVideoSetting(GroupBox editor, out Setting setting) {
             setting = null;
             return camera != null && editor.Tag is string name
                 && camera.Settings.TryGetValue(name, out setting) && (setting.Caps & 3) != 0;
         }
 
-        void BuildImageControls()
-        {
+        void BuildImageControls() {
             var selected = imageCategories.SelectedTab;
             var supportedTabs = new List<TabPage>();
             refreshingVideo = true;
-            try
-            {
-                foreach (var tab in videoTabs)
-                {
+            try {
+                foreach (var tab in videoTabs) {
                     bool available = false;
-                    foreach (var editor in VideoEditors(tab))
-                    {
+                    foreach (var editor in VideoEditors(tab)) {
                         bool supported = TryGetVideoSetting(editor.Group, out var setting);
                         editor.Group.Visible = supported;
                         if (!supported)
@@ -147,41 +128,34 @@ namespace CameraControlStudio
                     if (available)
                         supportedTabs.Add(tab);
                 }
-                if (!imageCategories.TabPages.Cast<TabPage>().SequenceEqual(supportedTabs))
-                {
+                if (!imageCategories.TabPages.Cast<TabPage>().SequenceEqual(supportedTabs)) {
                     imageCategories.TabPages.Clear();
                     imageCategories.TabPages.AddRange(supportedTabs.ToArray());
                     if (supportedTabs.Contains(selected))
                         imageCategories.SelectedTab = selected;
                 }
                 ShowVideoControls(supportedTabs.Count != 0);
-            }
-            finally
-            {
+            } finally {
                 refreshingVideo = false;
             }
         }
 
-        static void UpdateVideoState(TrackBar slider, CheckBox automatic, Setting setting)
-        {
+        static void UpdateVideoState(TrackBar slider, CheckBox automatic, Setting setting) {
             bool allowsManual = (setting.Caps & 2) != 0;
             slider.Enabled = allowsManual && !automatic.Checked;
             automatic.Enabled = allowsManual || !automatic.Checked;
         }
 
-        void ShowVideoControls(bool available)
-        {
+        void ShowVideoControls(bool available) {
             imagePages.Visible = available;
             videoStatus.Visible = !available;
             loadVideoControls.Visible = camera == null;
             noVideoControls.Visible = camera != null && !available;
         }
 
-        void ResetVideoControls()
-        {
+        void ResetVideoControls() {
             NeedCamera();
-            foreach (var editor in videoTabs.SelectMany(VideoEditors))
-            {
+            foreach (var editor in videoTabs.SelectMany(VideoEditors)) {
                 if (!TryGetVideoSetting(editor.Group, out var setting))
                     continue;
                 camera.Set(setting.Name, setting.Default, (setting.Caps & 2) == 0);
