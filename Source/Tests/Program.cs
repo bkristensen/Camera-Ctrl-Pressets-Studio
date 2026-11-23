@@ -13,34 +13,38 @@ class Program {
         const string tagUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases/tag/";
         const string releases = """
             [
-              {"tag_name":"v0.7.0-beta.10","html_url":"URLv0.7.0-beta.10","prerelease":true},
+              {"tag_name":"v0.7.0-beta.10+abcdef","html_url":"URLv0.7.0-beta.10","prerelease":true},
               {"tag_name":"Beta","name":"Camera Control Studio 0.7.0-beta.2","html_url":"URLBeta"},
               {"tag_name":"v0.7.0-beta.3","html_url":"URLv0.7.0-beta.3"},
               {"tag_name":"v8.0.0","html_url":"URLv8.0.0","draft":true},
               {"tag_name":"v9.0.0","html_url":"https://example.com/releases/tag/v9.0.0"}
             ]
             """;
-        Uri CheckReleases(string installedVersion, string json)
+        GitHubReleases.AvailableRelease CheckReleases(string installedVersion, string json)
         {
             using (var payload = new MemoryStream(Encoding.UTF8.GetBytes(json.Replace("URL", tagUrl))))
                 return GitHubReleases.FindNewer(installedVersion, payload);
         }
 
-        Check(CheckReleases("0.7.0-beta.3+91abc", releases)?.AbsoluteUri == tagUrl + "v0.7.0-beta.10",
+        var newer = CheckReleases("0.7.0-beta.3+91abc", releases);
+        Check(newer?.Url.AbsoluteUri == tagUrl + "v0.7.0-beta.10",
             "release check orders numeric prereleases and skips drafts and foreign URLs");
+        Check(newer.Version == "0.7.0-beta.10", "the displayed release version omits build metadata");
         Check(CheckReleases("0.7.0-beta.10+91abc", releases) == null, "build metadata does not change release precedence");
         Check(CheckReleases("0.7.0", releases) == null, "a prerelease of the installed stable version is older");
 
         const string legacy = """
             [{"tag_name":"Beta","name":"Camera Control Studio 0.7.0-beta.2","html_url":"URLBeta"}]
             """;
-        Check(CheckReleases("0.7.0-beta.1", legacy)?.AbsoluteUri == tagUrl + "Beta", "legacy Beta tag reads its release title");
+        var legacyBeta = CheckReleases("0.7.0-beta.1", legacy);
+        Check(legacyBeta?.Url.AbsoluteUri == tagUrl + "Beta" && legacyBeta.Version == "0.7.0-beta.2",
+            "legacy Beta tag reads the displayed version from its release title");
         Check(CheckReleases("0.7.0-beta.3", legacy) == null, "legacy Beta cannot downgrade the installed app");
 
         const string stable = """
             [{"tag_name":"v0.7.0","html_url":"URLv0.7.0"}]
             """;
-        Check(CheckReleases("0.7.0-rc.1", stable)?.AbsoluteUri == tagUrl + "v0.7.0",
+        Check(CheckReleases("0.7.0-rc.1", stable)?.Url.AbsoluteUri == tagUrl + "v0.7.0",
             "stable release wins over its release candidate");
     }
 

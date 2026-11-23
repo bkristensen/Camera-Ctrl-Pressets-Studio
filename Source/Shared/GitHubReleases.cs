@@ -19,6 +19,18 @@ namespace CameraControlStudio
         static readonly Regex VersionInTitle = new Regex(@"(?<![0-9A-Za-z.])v?" + VersionPattern + @"(?![0-9A-Za-z.+-])", RegexOptions.IgnoreCase);
         static readonly HttpClient Client = CreateClient();
 
+        internal sealed class AvailableRelease
+        {
+            internal AvailableRelease(string version, Uri url)
+            {
+                Version = version;
+                Url = url;
+            }
+
+            internal string Version { get; }
+            internal Uri Url { get; }
+        }
+
         [DataContract]
         sealed class Release
         {
@@ -46,7 +58,7 @@ namespace CameraControlStudio
             return client;
         }
 
-        internal static async Task<Uri> CheckAsync(string installedVersion)
+        internal static async Task<AvailableRelease> CheckAsync(string installedVersion)
         {
             try
             {
@@ -61,18 +73,18 @@ namespace CameraControlStudio
             catch (Exception ex) when (ex is HttpRequestException || ex is OperationCanceledException
                 || ex is IOException || ex is SerializationException)
             {
-                // Connection or API failures leave the optional footer notice empty.
+                // Connection or API failures leave the footer showing the installed version.
                 return null;
             }
         }
 
-        internal static Uri FindNewer(string installedVersion, Stream payload)
+        internal static AvailableRelease FindNewer(string installedVersion, Stream payload)
         {
             if (!TryReadVersion(VersionTag.Match(installedVersion ?? ""), out var latest, out var latestPrerelease))
                 return null;
 
             var releases = (Release[])new DataContractJsonSerializer(typeof(Release[])).ReadObject(payload);
-            Uri latestUrl = null;
+            AvailableRelease latestRelease = null;
             foreach (var release in releases ?? Array.Empty<Release>())
             {
                 if (release == null || release.Draft || !Uri.TryCreate(release.Url, UriKind.Absolute, out var url)
@@ -95,9 +107,10 @@ namespace CameraControlStudio
 
                 latest = version;
                 latestPrerelease = prerelease;
-                latestUrl = url;
+                string displayVersion = prerelease.Length == 0 ? version.ToString() : version + "-" + prerelease;
+                latestRelease = new AvailableRelease(displayVersion, url);
             }
-            return latestUrl;
+            return latestRelease;
         }
 
         static bool TryReadVersion(Match match, out Version version, out string prerelease)

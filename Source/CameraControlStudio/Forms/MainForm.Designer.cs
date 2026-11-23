@@ -2466,11 +2466,10 @@ namespace CameraControlStudio {
             this.releaseNotice.Name = "releaseNotice";
             this.releaseNotice.Size = new System.Drawing.Size(154, 20);
             this.releaseNotice.TabIndex = 2;
-            this.releaseNotice.TabStop = true;
-            this.releaseNotice.Text = "New release available";
+            this.releaseNotice.TabStop = false;
+            this.releaseNotice.Text = "0.0.0";
             this.releaseNotice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.releaseNotice.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            this.releaseNotice.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.releaseNotice_LinkClicked);
             // 
             // status
             // 

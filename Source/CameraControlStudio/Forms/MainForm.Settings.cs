@@ -17,21 +17,28 @@ namespace CameraControlStudio {
             openGuideButton.Click += (sender, args) => Run(OpenGuide);
             helpButton.Click += (sender, args) => Run(OpenGuide);
 
-            string updateText = releaseNotice.Text;
-            releaseNotice.Text = string.Empty;
-            releaseNotice.Visible = false;
+            releaseNotice.Text = DiagnosticLog.DisplayAppVersion;
+            releaseNotice.LinkArea = new LinkArea(0, 0);
             Shown += async (sender, args) => {
                 if (documentationMode)
                     return;
 
-                var releaseUrl = await GitHubReleases.CheckAsync(DiagnosticLog.AppVersion);
-                if (releaseUrl == null || IsDisposed || Disposing)
+                var release = await GitHubReleases.CheckAsync(DiagnosticLog.AppVersion);
+                if (release == null || IsDisposed || Disposing)
                     return;
 
-                releaseNotice.Text = updateText;
-                Link(releaseNotice, releaseUrl.AbsoluteUri);
-                releaseNotice.Visible = true;
+                ShowReleaseUpdate(release);
             };
+        }
+
+        void ShowReleaseUpdate(GitHubReleases.AvailableRelease release) {
+            string installed = DiagnosticLog.DisplayAppVersion;
+            string update = UiText.T("New release available", "Ny version tilgængelig");
+            string suffix = $"[{update} · {release.Version}]";
+            releaseNotice.Text = installed + " " + suffix;
+            releaseNotice.LinkArea = new LinkArea(installed.Length + 1, suffix.Length);
+            releaseNotice.TabStop = true;
+            Link(releaseNotice, release.Url.AbsoluteUri);
         }
 
         void OpenGuide() {
