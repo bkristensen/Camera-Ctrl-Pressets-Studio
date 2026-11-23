@@ -47,7 +47,6 @@ namespace CameraControlStudio
             temporaryDeleteWidth = (int)presetHeader.ColumnStyles[1].Width;
             SetSettings(false, false);
             FormText.Translate(this);
-            Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             ConfigureGrid();
             WireSettings();
             WireVideoControls();

@@ -10,6 +10,7 @@ namespace CameraControlStudio {
             base.Dispose(disposing);
         }
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle iconCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle presetCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
             this.components = new System.ComponentModel.Container();
@@ -2083,6 +2084,7 @@ namespace CameraControlStudio {
             this.saveTimer.Interval = 600;
             this.motionLimits.Interval = 250;
             this.documentationTimer.Interval = 900;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ClientSize = new System.Drawing.Size(1160, 510);
             this.MinimumSize = new System.Drawing.Size(670, 450);
             this.Controls.Add(this.root);

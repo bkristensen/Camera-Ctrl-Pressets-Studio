@@ -10,6 +10,7 @@ namespace CameraControlStudio {
             base.Dispose(disposing);
         }
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CameraSourceForm));
             this.components = new System.ComponentModel.Container();
             this.SuspendLayout();
             this.layout = new TableLayoutPanel();
@@ -72,6 +73,7 @@ namespace CameraControlStudio {
             this.buttons.Controls.Add(this.cancel, 2, 0);
             this.AcceptButton = this.ok;
             this.CancelButton = this.cancel;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ClientSize = new Size(440, 300);
             this.MinimumSize = new Size(360, 260);
             this.AutoScaleDimensions = new SizeF(96F, 96F);

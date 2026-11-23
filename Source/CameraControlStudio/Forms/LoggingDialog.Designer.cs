@@ -35,6 +35,7 @@ namespace CameraControlStudio
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoggingDialog));
             this.components = new Container();
             this.layout = new TableLayoutPanel();
             this.folderLabel = new Label();
@@ -158,6 +159,7 @@ namespace CameraControlStudio
             this.CancelButton = this.cancel;
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ClientSize = new Size(625, 180);
             this.Controls.Add(this.layout);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;

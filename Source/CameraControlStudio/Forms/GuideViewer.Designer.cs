@@ -34,6 +34,7 @@ namespace CameraControlStudio
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuideViewer));
             this.layout = new TableLayoutPanel();
             this.sidebarHost = new Panel();
             this.sidebar = new FlowLayoutPanel();
@@ -207,6 +208,7 @@ namespace CameraControlStudio
             this.page.Name = "page";
             this.page.TabIndex = 1;
             this.printDialog.UseEXDialog = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ClientSize = new Size(940, 650);
             this.Controls.Add(this.layout);
             this.MinimumSize = new Size(590, 360);
