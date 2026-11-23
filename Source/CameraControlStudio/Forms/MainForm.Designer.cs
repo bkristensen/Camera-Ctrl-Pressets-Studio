@@ -512,14 +512,14 @@ namespace CameraControlStudio {
             this.temporaryButton.Text = "+";
             this.temporaryButton.UseVisualStyleBackColor = false;
             // 
-            this.iconColumn.Name = "Icon";
+            this.iconColumn.Name = "iconColumn";
             this.iconColumn.Width = 64;
             this.iconColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iconColumn.DefaultCellStyle = iconCellStyle;
             this.iconColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.positionColumn.Name = "Position";
+            this.positionColumn.Name = "positionColumn";
             this.positionColumn.FillWeight = 100F;
-            this.recallColumn.Name = "Recall";
+            this.recallColumn.Name = "recallColumn";
             this.recallColumn.Text = "▶";
             this.recallColumn.UseColumnTextForButtonValue = true;
             this.recallColumn.Width = 42;
