@@ -12,8 +12,8 @@ namespace CameraControlStudio {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainToolTips = new System.Windows.Forms.ToolTip(this.components);
             this.fullFrame = new CameraControlStudio.BlueButton();
             this.wheel = new CameraControlStudio.PanWheel();
@@ -122,14 +122,14 @@ namespace CameraControlStudio {
             this.mainSplit = new CameraControlStudio.MainViewSplitter();
             this.motionPanel = new System.Windows.Forms.TableLayoutPanel();
             this.title = new System.Windows.Forms.Label();
+            this.fovDisplay = new System.Windows.Forms.Panel();
+            this.fieldOfViewLabel = new System.Windows.Forms.Label();
+            this.fieldOfViewPicker = new System.Windows.Forms.ComboBox();
             this.zoomPanel = new System.Windows.Forms.TableLayoutPanel();
             this.normalIn = new CameraControlStudio.ZoomButton();
             this.zoomSlider = new CameraControlStudio.ZoomSlider();
             this.normalOut = new CameraControlStudio.ZoomButton();
             this.motionPosition = new System.Windows.Forms.Label();
-            this.fovDisplay = new System.Windows.Forms.Panel();
-            this.fieldOfViewLabel = new System.Windows.Forms.Label();
-            this.fieldOfViewPicker = new System.Windows.Forms.ComboBox();
             this.presetPanel = new System.Windows.Forms.TableLayoutPanel();
             this.presetHeader = new System.Windows.Forms.TableLayoutPanel();
             this.presetTitle = new System.Windows.Forms.Label();
@@ -237,8 +237,8 @@ namespace CameraControlStudio {
             this.mainSplit.Panel2.SuspendLayout();
             this.mainSplit.SuspendLayout();
             this.motionPanel.SuspendLayout();
-            this.zoomPanel.SuspendLayout();
             this.fovDisplay.SuspendLayout();
+            this.zoomPanel.SuspendLayout();
             this.presetPanel.SuspendLayout();
             this.presetHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.presetGrid)).BeginInit();
@@ -260,16 +260,17 @@ namespace CameraControlStudio {
             // fullFrame
             // 
             this.fullFrame.AccessibleName = "Restore full frame";
-            this.fullFrame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fullFrame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.fullFrame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fullFrame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fullFrame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fullFrame.ForeColor = System.Drawing.Color.White;
             this.fullFrame.Image = ((System.Drawing.Image)(resources.GetObject("fullFrame.Image")));
-            this.fullFrame.Location = new System.Drawing.Point(348, 354);
+            this.fullFrame.Location = new System.Drawing.Point(0, 1);
+            this.fullFrame.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.fullFrame.Name = "fullFrame";
             this.fullFrame.Primary = false;
-            this.fullFrame.Size = new System.Drawing.Size(42, 42);
+            this.fullFrame.Size = new System.Drawing.Size(84, 46);
             this.fullFrame.TabIndex = 3;
             this.mainToolTips.SetToolTip(this.fullFrame, "Restore full frame\nUse the widest view and minimum zoom.");
             this.mainToolTips.SetToolTip(this.fullFrame, "Restore full frame\nUse the widest view and minimum zoom.");
@@ -279,11 +280,11 @@ namespace CameraControlStudio {
             // 
             this.wheel.AccessibleName = "Camera direction wheel";
             this.wheel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wheel.Location = new System.Drawing.Point(0, 52);
+            this.wheel.Location = new System.Drawing.Point(0, 100);
             this.wheel.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.wheel.Name = "wheel";
             this.wheel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.wheel.Size = new System.Drawing.Size(327, 278);
+            this.wheel.Size = new System.Drawing.Size(291, 251);
             this.wheel.TabIndex = 0;
             this.mainToolTips.SetToolTip(this.wheel, "Click the camera button to choose a source. Drag it to pan.");
             this.mainToolTips.SetToolTip(this.wheel, "Click the camera button to choose a source. Drag it to pan.");
@@ -1596,8 +1597,8 @@ namespace CameraControlStudio {
             // iconColumn
             // 
             this.iconColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.NullValue = null;
-            this.iconColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.NullValue = null;
+            this.iconColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.iconColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.iconColumn.MinimumWidth = 6;
             this.iconColumn.Name = "iconColumn";
@@ -1676,7 +1677,7 @@ namespace CameraControlStudio {
             this.mainSplit.Panel2.Controls.Add(this.presetPanel);
             this.mainSplit.Panel2MinSize = 150;
             this.mainSplit.Size = new System.Drawing.Size(784, 411);
-            this.mainSplit.SplitterDistance = 430;
+            this.mainSplit.SplitterDistance = 394;
             this.mainSplit.SplitterWidth = 15;
             this.mainSplit.TabIndex = 0;
             // 
@@ -1687,11 +1688,10 @@ namespace CameraControlStudio {
             this.motionPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.motionPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.motionPanel.Controls.Add(this.title, 0, 0);
-            this.motionPanel.Controls.Add(this.wheel, 0, 1);
+            this.motionPanel.Controls.Add(this.fovDisplay, 0, 1);
             this.motionPanel.Controls.Add(this.zoomPanel, 1, 1);
-            this.motionPanel.Controls.Add(this.motionPosition, 0, 2);
-            this.motionPanel.Controls.Add(this.fovDisplay, 0, 3);
-            this.motionPanel.Controls.Add(this.fullFrame, 1, 3);
+            this.motionPanel.Controls.Add(this.wheel, 0, 2);
+            this.motionPanel.Controls.Add(this.motionPosition, 0, 3);
             this.motionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.motionPanel.Location = new System.Drawing.Point(0, 0);
             this.motionPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -1699,10 +1699,11 @@ namespace CameraControlStudio {
             this.motionPanel.Padding = new System.Windows.Forms.Padding(0, 0, 19, 12);
             this.motionPanel.RowCount = 4;
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.motionPanel.Size = new System.Drawing.Size(430, 411);
+            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.motionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.motionPanel.Size = new System.Drawing.Size(394, 411);
             this.motionPanel.TabIndex = 0;
             // 
             // title
@@ -1715,93 +1716,20 @@ namespace CameraControlStudio {
             this.title.Location = new System.Drawing.Point(3, 0);
             this.title.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(408, 49);
+            this.title.Size = new System.Drawing.Size(372, 49);
             this.title.TabIndex = 0;
             this.title.Text = "Camera Control Studio";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.UseMnemonic = false;
-            // 
-            // zoomPanel
-            // 
-            this.zoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.zoomPanel.ColumnCount = 1;
-            this.zoomPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.zoomPanel.Controls.Add(this.normalIn, 0, 0);
-            this.zoomPanel.Controls.Add(this.zoomSlider, 0, 1);
-            this.zoomPanel.Controls.Add(this.normalOut, 0, 2);
-            this.zoomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zoomPanel.Location = new System.Drawing.Point(337, 72);
-            this.zoomPanel.Margin = new System.Windows.Forms.Padding(10, 23, 1, 23);
-            this.zoomPanel.Name = "zoomPanel";
-            this.zoomPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.zoomPanel.RowCount = 3;
-            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.zoomPanel.Size = new System.Drawing.Size(73, 235);
-            this.zoomPanel.TabIndex = 1;
-            // 
-            // normalIn
-            // 
-            this.normalIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.normalIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.normalIn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.normalIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.normalIn.ForeColor = System.Drawing.Color.White;
-            this.normalIn.Location = new System.Drawing.Point(0, 1);
-            this.normalIn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.normalIn.Name = "normalIn";
-            this.normalIn.Primary = false;
-            this.normalIn.Size = new System.Drawing.Size(73, 46);
-            this.normalIn.TabIndex = 0;
-            this.normalIn.UseVisualStyleBackColor = false;
-            // 
-            // zoomSlider
-            // 
-            this.zoomSlider.AccessibleRole = System.Windows.Forms.AccessibleRole.Slider;
-            this.zoomSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.zoomSlider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zoomSlider.Location = new System.Drawing.Point(5, 48);
-            this.zoomSlider.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.zoomSlider.Name = "zoomSlider";
-            this.zoomSlider.Size = new System.Drawing.Size(63, 139);
-            this.zoomSlider.TabIndex = 1;
-            // 
-            // normalOut
-            // 
-            this.normalOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.normalOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.normalOut.Direction = CameraControlStudio.ZoomDirection.Out;
-            this.normalOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.normalOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.normalOut.ForeColor = System.Drawing.Color.White;
-            this.normalOut.Location = new System.Drawing.Point(0, 188);
-            this.normalOut.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.normalOut.Name = "normalOut";
-            this.normalOut.Primary = false;
-            this.normalOut.Size = new System.Drawing.Size(73, 46);
-            this.normalOut.TabIndex = 2;
-            this.normalOut.UseVisualStyleBackColor = false;
-            // 
-            // motionPosition
-            // 
-            this.motionPosition.AutoEllipsis = true;
-            this.motionPanel.SetColumnSpan(this.motionPosition, 2);
-            this.motionPosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.motionPosition.Location = new System.Drawing.Point(3, 330);
-            this.motionPosition.Name = "motionPosition";
-            this.motionPosition.Size = new System.Drawing.Size(405, 21);
-            this.motionPosition.TabIndex = 2;
-            this.motionPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fovDisplay
             // 
             this.fovDisplay.Controls.Add(this.fieldOfViewLabel);
             this.fovDisplay.Controls.Add(this.fieldOfViewPicker);
             this.fovDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fovDisplay.Location = new System.Drawing.Point(3, 354);
+            this.fovDisplay.Location = new System.Drawing.Point(3, 52);
             this.fovDisplay.Name = "fovDisplay";
-            this.fovDisplay.Size = new System.Drawing.Size(321, 42);
+            this.fovDisplay.Size = new System.Drawing.Size(285, 42);
             this.fovDisplay.TabIndex = 2;
             // 
             // fieldOfViewLabel
@@ -1810,7 +1738,7 @@ namespace CameraControlStudio {
             this.fieldOfViewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldOfViewLabel.Location = new System.Drawing.Point(0, 0);
             this.fieldOfViewLabel.Name = "fieldOfViewLabel";
-            this.fieldOfViewLabel.Size = new System.Drawing.Size(321, 42);
+            this.fieldOfViewLabel.Size = new System.Drawing.Size(285, 42);
             this.fieldOfViewLabel.TabIndex = 0;
             this.fieldOfViewLabel.Text = "FOV unavailable";
             this.fieldOfViewLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1822,9 +1750,85 @@ namespace CameraControlStudio {
             this.fieldOfViewPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fieldOfViewPicker.Location = new System.Drawing.Point(0, 0);
             this.fieldOfViewPicker.Name = "fieldOfViewPicker";
-            this.fieldOfViewPicker.Size = new System.Drawing.Size(321, 28);
+            this.fieldOfViewPicker.Size = new System.Drawing.Size(285, 28);
             this.fieldOfViewPicker.TabIndex = 2;
             this.fieldOfViewPicker.Visible = false;
+            // 
+            // zoomPanel
+            // 
+            this.zoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.zoomPanel.ColumnCount = 1;
+            this.zoomPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.zoomPanel.Controls.Add(this.fullFrame, 0, 0);
+            this.zoomPanel.Controls.Add(this.normalIn, 0, 1);
+            this.zoomPanel.Controls.Add(this.zoomSlider, 0, 2);
+            this.zoomPanel.Controls.Add(this.normalOut, 0, 3);
+            this.zoomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zoomPanel.Location = new System.Drawing.Point(291, 49);
+            this.zoomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.zoomPanel.Name = "zoomPanel";
+            this.zoomPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.zoomPanel.RowCount = 4;
+            this.motionPanel.SetRowSpan(this.zoomPanel, 3);
+            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.zoomPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.zoomPanel.Size = new System.Drawing.Size(84, 350);
+            this.zoomPanel.TabIndex = 1;
+            // 
+            // normalIn
+            // 
+            this.normalIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.normalIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.normalIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.normalIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.normalIn.ForeColor = System.Drawing.Color.White;
+            this.normalIn.Location = new System.Drawing.Point(0, 49);
+            this.normalIn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.normalIn.Name = "normalIn";
+            this.normalIn.Primary = false;
+            this.normalIn.Size = new System.Drawing.Size(84, 46);
+            this.normalIn.TabIndex = 0;
+            this.normalIn.UseVisualStyleBackColor = false;
+            // 
+            // zoomSlider
+            // 
+            this.zoomSlider.AccessibleRole = System.Windows.Forms.AccessibleRole.Slider;
+            this.zoomSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.zoomSlider.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zoomSlider.Location = new System.Drawing.Point(5, 96);
+            this.zoomSlider.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.zoomSlider.Name = "zoomSlider";
+            this.zoomSlider.Size = new System.Drawing.Size(74, 206);
+            this.zoomSlider.TabIndex = 1;
+            // 
+            // normalOut
+            // 
+            this.normalOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.normalOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.normalOut.Direction = CameraControlStudio.ZoomDirection.Out;
+            this.normalOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.normalOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.normalOut.ForeColor = System.Drawing.Color.White;
+            this.normalOut.Location = new System.Drawing.Point(0, 303);
+            this.normalOut.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.normalOut.Name = "normalOut";
+            this.normalOut.Primary = false;
+            this.normalOut.Size = new System.Drawing.Size(84, 46);
+            this.normalOut.TabIndex = 2;
+            this.normalOut.UseVisualStyleBackColor = false;
+            // 
+            // motionPosition
+            // 
+            this.motionPosition.AutoEllipsis = true;
+            this.motionPosition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.motionPosition.Location = new System.Drawing.Point(3, 351);
+            this.motionPosition.Name = "motionPosition";
+            this.motionPosition.Size = new System.Drawing.Size(285, 48);
+            this.motionPosition.TabIndex = 2;
+            this.motionPosition.Text = "Zoom 50, Pan 0, Tilt 0";
+            this.motionPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // presetPanel
             // 
@@ -1841,7 +1845,7 @@ namespace CameraControlStudio {
             this.presetPanel.RowCount = 2;
             this.presetPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.presetPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.presetPanel.Size = new System.Drawing.Size(339, 411);
+            this.presetPanel.Size = new System.Drawing.Size(375, 411);
             this.presetPanel.TabIndex = 0;
             // 
             // presetHeader
@@ -1860,7 +1864,7 @@ namespace CameraControlStudio {
             this.presetHeader.Name = "presetHeader";
             this.presetHeader.RowCount = 1;
             this.presetHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.presetHeader.Size = new System.Drawing.Size(315, 49);
+            this.presetHeader.Size = new System.Drawing.Size(351, 49);
             this.presetHeader.TabIndex = 0;
             // 
             // presetTitle
@@ -1872,7 +1876,7 @@ namespace CameraControlStudio {
             this.presetTitle.Location = new System.Drawing.Point(0, 0);
             this.presetTitle.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.presetTitle.Name = "presetTitle";
-            this.presetTitle.Size = new System.Drawing.Size(227, 49);
+            this.presetTitle.Size = new System.Drawing.Size(263, 49);
             this.presetTitle.TabIndex = 0;
             this.presetTitle.Text = "Presets";
             this.presetTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1885,7 +1889,7 @@ namespace CameraControlStudio {
             this.deleteTemporaryButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.deleteTemporaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteTemporaryButton.ForeColor = System.Drawing.Color.White;
-            this.deleteTemporaryButton.Location = new System.Drawing.Point(231, 4);
+            this.deleteTemporaryButton.Location = new System.Drawing.Point(267, 4);
             this.deleteTemporaryButton.Margin = new System.Windows.Forms.Padding(0, 4, 4, 6);
             this.deleteTemporaryButton.Name = "deleteTemporaryButton";
             this.deleteTemporaryButton.Primary = false;
@@ -1901,7 +1905,7 @@ namespace CameraControlStudio {
             this.temporaryButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.temporaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.temporaryButton.ForeColor = System.Drawing.Color.White;
-            this.temporaryButton.Location = new System.Drawing.Point(271, 4);
+            this.temporaryButton.Location = new System.Drawing.Point(307, 4);
             this.temporaryButton.Margin = new System.Windows.Forms.Padding(0, 4, 0, 6);
             this.temporaryButton.Name = "temporaryButton";
             this.temporaryButton.Primary = false;
@@ -1924,15 +1928,15 @@ namespace CameraControlStudio {
             this.iconColumn,
             this.positionColumn,
             this.recallColumn});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(4);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.presetGrid.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.presetGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.presetGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.presetGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(214)))));
             this.presetGrid.Location = new System.Drawing.Point(24, 49);
@@ -1944,7 +1948,7 @@ namespace CameraControlStudio {
             this.presetGrid.RowHeadersWidth = 51;
             this.presetGrid.RowTemplate.Height = 44;
             this.presetGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.presetGrid.Size = new System.Drawing.Size(315, 345);
+            this.presetGrid.Size = new System.Drawing.Size(351, 345);
             this.presetGrid.TabIndex = 1;
             // 
             // settingsTabs
@@ -2450,7 +2454,7 @@ namespace CameraControlStudio {
             this.cameraStatus.Location = new System.Drawing.Point(4, 0);
             this.cameraStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cameraStatus.Name = "cameraStatus";
-            this.cameraStatus.Size = new System.Drawing.Size(688, 25);
+            this.cameraStatus.Size = new System.Drawing.Size(803, 25);
             this.cameraStatus.TabIndex = 0;
             this.cameraStatus.Text = "Camera: not connected";
             this.cameraStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2461,13 +2465,13 @@ namespace CameraControlStudio {
             this.releaseNotice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.releaseNotice.AutoSize = true;
             this.releaseNotice.LinkColor = System.Drawing.Color.LightSkyBlue;
-            this.releaseNotice.Location = new System.Drawing.Point(702, 2);
+            this.releaseNotice.Location = new System.Drawing.Point(817, 2);
             this.releaseNotice.Margin = new System.Windows.Forms.Padding(6, 0, 4, 0);
             this.releaseNotice.Name = "releaseNotice";
             this.releaseNotice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.releaseNotice.Size = new System.Drawing.Size(154, 20);
+            this.releaseNotice.Size = new System.Drawing.Size(39, 20);
             this.releaseNotice.TabIndex = 2;
-            this.releaseNotice.TabStop = false;
+            this.releaseNotice.TabStop = true;
             this.releaseNotice.Text = "0.0.0";
             this.releaseNotice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.releaseNotice.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
@@ -2618,8 +2622,8 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.mainSplit)).EndInit();
             this.mainSplit.ResumeLayout(false);
             this.motionPanel.ResumeLayout(false);
-            this.zoomPanel.ResumeLayout(false);
             this.fovDisplay.ResumeLayout(false);
+            this.zoomPanel.ResumeLayout(false);
             this.presetPanel.ResumeLayout(false);
             this.presetHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.presetGrid)).EndInit();
