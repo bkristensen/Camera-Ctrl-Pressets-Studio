@@ -1,3 +1,11 @@
+# 0.7.0-beta.8
+
+- Double-click the centre camera button to open the camera list. Choose single-click under **Settings → Movement** if you prefer it.
+- Drag the centre camera button to pan or tilt. You can turn dragging off under **Settings → Movement**. Both choices are saved in the active profile.
+- The guides explain the camera wheel and the full-frame button in all 12 languages. Key GitHub links include readable URLs and QR codes for printed guides.
+
+The Windows installer and portable ZIP are unsigned. See the [Code signing policy](docs/SIGNPATH.md). Use `SHA256SUMS.txt` to verify the downloads.
+
 # 0.7.0-beta.7
 
 - Settings opens on the side with room. The tabs stay on one row and scroll when space is tight.

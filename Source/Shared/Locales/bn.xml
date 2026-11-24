@@ -15,7 +15,11 @@
   <text key="Camera">ক্যামেরা</text>
   <text key="Camera direction wheel">ক্যামেরার দিক নিয়ন্ত্রণের চাকা</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">ভেতরের বলয়ে স্বাভাবিক গতি। বাইরের বলয়ে দ্রুত গতি।</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">ক্যামেরা বাছতে ক্লিক করুন। যে দিকে নড়াতে চান সে দিকে টানুন।</text>
+  <text key="Double-click to choose a camera.">ক্যামেরা বেছে নিতে ডাবল ক্লিক করুন।</text>
+  <text key="Click to choose a camera.">ক্যামেরা বেছে নিতে ক্লিক করুন।</text>
+  <text key="Drag to pan and tilt.">ক্যামেরা ডানে-বাঁয়ে বা ওপরে-নিচে ঘোরাতে টানুন।</text>
+  <text key="Drag the camera button to pan and tilt">ক্যামেরা ঘোরাতে ক্যামেরা বোতাম টানুন</text>
+  <text key="Double-click the camera button to choose a source">উৎস বেছে নিতে ক্যামেরা বোতামে ডাবল ক্লিক করুন</text>
   <text key="Fine speed (% of Normal)">সূক্ষ্ম গতি (স্বাভাবিকের %)</text>
   <text key="Use speed for preset transitions">প্রিসেট বদলাতে গতি ব্যবহার করুন</text>
   <text key="Transition speed (%/s)">বদলের গতি (%/সেকেন্ড)</text>

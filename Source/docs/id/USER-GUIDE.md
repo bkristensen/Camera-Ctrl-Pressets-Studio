@@ -30,8 +30,10 @@ Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsin
 
    **Tombol kamera di tengah roda**
 
-   - **Klik lalu lepaskan tanpa menyeret.** Daftar pilihan kamera akan terbuka.
+   - **Klik dua kali untuk memilih kamera.** Daftar kamera terbuka.
    - **Tahan dan seret.** Mulai dari ikon kamera. Seret ke samping untuk menggeser kamera atau ke atas dan ke bawah untuk memiringkannya. Seret sedikit untuk gerakan lambat. Seret lebih jauh untuk mempercepat, hingga dua kali kecepatan tinggi. Lepaskan tombol atau kembalikan penunjuk ke asal untuk berhenti.
+
+   Di **Pengaturan → Gerakan**, Anda dapat menonaktifkan gerakan seret atau memilih kamera dengan satu klik. Kedua pilihan disimpan di profil aktif.
 
    **Zoom**
 
@@ -69,7 +71,7 @@ Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsin
 
 5. **Pengaturan**
 
-   Pilih profil di bagian bawah jendela. Untuk mengganti kamera, klik ikon kamera di tengah roda arah.
+   Pilih profil di bagian bawah jendela. Untuk mengganti kamera, klik dua kali ikon kamera di tengah roda arah.
 
    Untuk menyimpan posisi secara permanen, buka ikon roda gigi di bagian bawah, pilih **Preset → Tambah preset permanen**, tentukan nama dan ikon, lalu simpan.
 

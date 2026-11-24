@@ -15,7 +15,11 @@
   <text key="Camera">कैमरा</text>
   <text key="Camera direction wheel">कैमरे का दिशा चक्र</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">सामान्य चाल के लिए भीतरी घेरा। तेज़ चाल के लिए बाहरी घेरा।</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">कैमरा चुनने के लिए क्लिक करें। जिस दिशा में घुमाना है, उस ओर खींचें।</text>
+  <text key="Double-click to choose a camera.">कैमरा चुनने के लिए डबल-क्लिक करें।</text>
+  <text key="Click to choose a camera.">कैमरा चुनने के लिए क्लिक करें।</text>
+  <text key="Drag to pan and tilt.">कैमरा दाएँ-बाएँ या ऊपर-नीचे घुमाने के लिए खींचें।</text>
+  <text key="Drag the camera button to pan and tilt">कैमरा घुमाने के लिए कैमरा बटन खींचें</text>
+  <text key="Double-click the camera button to choose a source">स्रोत चुनने के लिए कैमरा बटन पर डबल-क्लिक करें</text>
   <text key="Fine speed (% of Normal)">सूक्ष्म गति (सामान्य का %)</text>
   <text key="Use speed for preset transitions">प्रीसेट बदलने के लिए गति का उपयोग करें</text>
   <text key="Transition speed (%/s)">बदलाव की गति (%/सेकंड)</text>

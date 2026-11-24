@@ -33,8 +33,10 @@ Der innere Ring bewegt die Kamera normal, der äußere schnell. Jeder Ring hat a
 
 ### Kamerataste in der Mitte des Kamerarads
 
-- **Klicken und loslassen, ohne zu ziehen.** Es öffnet sich die Liste zur Kameraauswahl.
+- **Doppelklicken Sie, um eine Kamera zu wählen.** Die Kameraliste öffnet sich.
 - **Gedrückt halten und ziehen.** Beginnen Sie auf dem Kamerasymbol. Ziehen Sie seitwärts zum Schwenken oder nach oben oder unten zum Neigen. Kurzes Ziehen bewegt die Kamera langsam. Weiteres Ziehen erhöht das Tempo bis auf das Doppelte der schnellen Stufe. Lassen Sie die Taste los oder führen Sie den Zeiger zum Ausgangspunkt zurück, um anzuhalten.
+
+Unter **Einstellungen → Bewegung** können Sie das Ziehen ausschalten oder die Kamera mit einem Klick wählen. Beide Optionen werden im aktiven Profil gespeichert.
 
 ### Zoomen
 

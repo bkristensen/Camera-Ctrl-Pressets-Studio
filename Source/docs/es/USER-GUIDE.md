@@ -30,8 +30,10 @@ Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué ha
 
    **Botón de cámara en el centro de la rueda**
 
-   - **Haz clic y suelta sin arrastrar.** Se abre la lista para elegir una cámara.
+   - **Haz doble clic para elegir una cámara.** Se abre la lista de cámaras.
    - **Mantén pulsado y arrastra.** Empieza sobre el icono de la cámara. Arrastra hacia un lado para girarla o hacia arriba o abajo para inclinarla. Arrastra un poco para moverte despacio o más lejos para ir más rápido, hasta el doble de la velocidad rápida. Para detenerla, suelta el botón o lleva el puntero al punto de partida.
+
+   En **Configuración → Movimiento** puedes desactivar el arrastre o elegir la cámara con un solo clic. Ambas opciones se guardan en el perfil activo.
 
    **Zoom**
 
@@ -69,7 +71,7 @@ Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué ha
 
 5. **Configuración**
 
-   Selecciona el perfil en la parte inferior y pulsa el icono de cámara en el centro de la rueda para elegir la cámara.
+   Selecciona el perfil en la parte inferior y haz doble clic en el icono de cámara en el centro de la rueda para elegir la cámara.
 
    Para guardar una posición de forma permanente, abre el engranaje inferior, selecciona **Preajustes → Añadir preajuste permanente**, elige un nombre y un icono y guarda.
 

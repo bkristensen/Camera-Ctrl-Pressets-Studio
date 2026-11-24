@@ -80,8 +80,18 @@ class Program {
    Math.Abs(longMove.Progress(longMove.Duration - .1) + longMove.Progress(.1) - 1) < 1e-9, "short and long moves brake symmetrically");
 
   var serializer = new DataContractJsonSerializer(typeof(SavedData));
+  var cameraButtonDefaults = new SavedData();
+  Check(cameraButtonDefaults.PanWithCameraButton && cameraButtonDefaults.DoubleClickForCameraSource,
+   "new profiles enable dragging and require a double-click to choose a camera");
+  cameraButtonDefaults.PanWithCameraButton = false;
+  cameraButtonDefaults.DoubleClickForCameraSource = false;
+  var cameraButtonCopy = ProfileStore.Copy(cameraButtonDefaults);
+  Check(!cameraButtonCopy.PanWithCameraButton && !cameraButtonCopy.DoubleClickForCameraSource,
+   "explicit camera button choices survive profile serialization");
   using (var oldProfile = new MemoryStream(Encoding.UTF8.GetBytes("{\"Seconds\":2.5}"))) {
    var old = (SavedData)serializer.ReadObject(oldProfile);
+   Check(old.PanWithCameraButton && old.DoubleClickForCameraSource,
+    "older profiles receive the camera button defaults");
    Check(!old.UseTransitionSpeed && old.Seconds == 2.5m && old.TransitionSpeedPercent == 30 && old.FinePanPercent == 50,
     "old profiles keep fixed duration and receive speed defaults");
   }

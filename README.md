@@ -27,7 +27,7 @@ To uninstall the Setup version, find Camera Control Studio under **Apps** in Win
 ## Get started
 
 1. Open your meeting or streaming app and choose the camera you want to use. Start capture first if your camera setup requires it.
-2. Open Camera Control Studio. Use the profile picker in the footer and click the camera icon in the centre of the direction wheel to choose the same camera.
+2. Open Camera Control Studio. Use the profile picker in the footer and double-click the camera icon in the centre of the direction wheel to choose the same camera.
 3. Use the inner, middle or outer arrows for Fine, Normal or Fast pan and tilt. Use the magnifier buttons to zoom in and out, or drag the vertical slider to adjust the zoom as you move it.
 4. Frame the shot in your meeting or streaming app. Click **+** to save it temporarily, or open the gear and choose **Presets → Add permanent preset** to save it for future sessions.
 5. Click **▶** on a preset row to recall the shot. Yellow shows a move in progress. Green means the driver has reported the saved coordinates. Check the framing in your meeting or streaming app.

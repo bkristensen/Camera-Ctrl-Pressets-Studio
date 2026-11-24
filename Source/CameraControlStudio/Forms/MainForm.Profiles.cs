@@ -41,6 +41,8 @@ namespace CameraControlStudio
             config.TransitionSpeedPercent = (int)transitionSpeedPercent.Value;
             config.ReverseHorizontal = reverseX.Checked;
             config.ReverseVertical = reverseY.Checked;
+            config.PanWithCameraButton = panWithCameraButton.Checked;
+            config.DoubleClickForCameraSource = doubleClickForCameraSource.Checked;
             config.RequireStreamingConfirmation = streamingCheck.Checked;
             config.AlwaysOnTop = alwaysTop.Checked;
             config.Language = UiText.LanguageCodes[language.SelectedIndex];
@@ -70,6 +72,8 @@ namespace CameraControlStudio
                 LoadFramingSettings();
                 reverseX.Checked = config.ReverseHorizontal;
                 reverseY.Checked = config.ReverseVertical;
+                panWithCameraButton.Checked = config.PanWithCameraButton;
+                doubleClickForCameraSource.Checked = config.DoubleClickForCameraSource;
                 streamingCheck.Checked = config.RequireStreamingConfirmation;
                 alwaysTop.Checked = config.AlwaysOnTop;
                 TopMost = config.AlwaysOnTop;

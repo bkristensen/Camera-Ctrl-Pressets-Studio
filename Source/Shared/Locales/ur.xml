@@ -15,7 +15,11 @@
   <text key="Camera">کیمرہ</text>
   <text key="Camera direction wheel">کیمرے کی سمت کا پہیہ</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">اندرونی حلقہ معمول کی حرکت کے لیے ہے۔ بیرونی حلقہ تیز حرکت کے لیے ہے۔</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">کیمرہ چننے کے لیے کلک کریں۔ جس سمت کیمرہ گھمانا ہو، اس طرف کھینچیں۔</text>
+  <text key="Double-click to choose a camera.">کیمرہ چننے کے لیے ڈبل کلک کریں۔</text>
+  <text key="Click to choose a camera.">کیمرہ چننے کے لیے کلک کریں۔</text>
+  <text key="Drag to pan and tilt.">کیمرہ دائیں، بائیں، اوپر یا نیچے گھمانے کے لیے کھینچیں۔</text>
+  <text key="Drag the camera button to pan and tilt">کیمرہ گھمانے کے لیے کیمرے کا بٹن کھینچیں</text>
+  <text key="Double-click the camera button to choose a source">ذریعہ چننے کے لیے کیمرے کے بٹن پر ڈبل کلک کریں</text>
   <text key="Fine speed (% of Normal)">باریک رفتار (معمول کا %)</text>
   <text key="Use speed for preset transitions">محفوظ پوزیشن بدلنے کے لیے رفتار استعمال کریں</text>
   <text key="Transition speed (%/s)">منتقلی کی رفتار (% فی سیکنڈ)</text>

@@ -31,8 +31,10 @@ Brug den inderste ring til normale bevægelser og den yderste til hurtige. Hver 
 
 ### Kameraknappen midt i hjulet
 
-- **Klik og slip uden at trække.** Så åbner listen, hvor du vælger kamera.
+- **Dobbeltklik for at vælge kamera.** Så åbner listen med kameraer.
 - **Hold nede og træk.** Start på kameraikonet. Træk til siden for at panorere eller op og ned for at vippe kameraet. Et kort træk giver langsom bevægelse, og et længere træk øger farten op til det dobbelte af den hurtige hastighed. Slip knappen, eller før markøren tilbage til startpunktet for at stoppe.
+
+Under **Indstillinger → Bevægelse** kan du slå træk fra eller vælge kamera med ét klik. Begge valg gemmes i den aktive profil.
 
 ### Zoom
 Brug lupknapperne til at zoome. Hold en lupknap nede for at gentage.

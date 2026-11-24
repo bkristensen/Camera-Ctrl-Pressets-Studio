@@ -827,6 +827,66 @@ Use the widest view and minimum zoom.</value>
   <data name="&gt;&gt;adjustFovAtLimits.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="panWithCameraButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panWithCameraButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 551</value>
+  </data>
+  <data name="panWithCameraButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panWithCameraButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 34</value>
+  </data>
+  <data name="panWithCameraButton.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="panWithCameraButton.Text" xml:space="preserve">
+    <value>Drag the camera button to pan and tilt</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.Name" xml:space="preserve">
+    <value>panWithCameraButton</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="doubleClickForCameraSource.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="doubleClickForCameraSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 593</value>
+  </data>
+  <data name="doubleClickForCameraSource.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="doubleClickForCameraSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 34</value>
+  </data>
+  <data name="doubleClickForCameraSource.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="doubleClickForCameraSource.Text" xml:space="preserve">
+    <value>Double-click the camera button to choose a source</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.Name" xml:space="preserve">
+    <value>doubleClickForCameraSource</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <data name="generalFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -837,10 +897,10 @@ Use the widest view and minimum zoom.</value>
     <value>0, 0, 0, 0</value>
   </data>
   <data name="generalFields.RowCount" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="generalFields.Size" type="System.Drawing.Size, System.Drawing">
-    <value>473, 547</value>
+    <value>473, 631</value>
   </data>
   <data name="generalFields.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -858,7 +918,7 @@ Use the widest view and minimum zoom.</value>
     <value>0</value>
   </data>
   <data name="generalFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="finePanLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="finePanPercent" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panStepsLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panSteps" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="fastPanStepsLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fastPanSteps" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="zoomStepsLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="zoomSteps" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="useTransitionSpeed" Row="4" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="transitionSpeedLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="transitionSpeedPercent" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="secondsLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="seconds" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="reverseX" Row="7" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="reverseY" Row="8" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="startupFovLabel" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="startupFov" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="allowFov" Row="10" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="adjustFovAtLimits" Row="11" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,100" /&gt;&lt;Rows Styles="Absolute,46,Absolute,36,Absolute,36,Absolute,36,Absolute,40,Absolute,46,Absolute,36,Absolute,42,Absolute,42,Absolute,95,Absolute,42,Absolute,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="finePanLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="finePanPercent" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panStepsLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panSteps" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="fastPanStepsLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fastPanSteps" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="zoomStepsLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="zoomSteps" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="useTransitionSpeed" Row="4" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="transitionSpeedLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="transitionSpeedPercent" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="secondsLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="seconds" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="reverseX" Row="7" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="reverseY" Row="8" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="startupFovLabel" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="startupFov" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="allowFov" Row="10" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="adjustFovAtLimits" Row="11" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="panWithCameraButton" Row="12" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="doubleClickForCameraSource" Row="13" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,100" /&gt;&lt;Rows Styles="Absolute,46,Absolute,36,Absolute,36,Absolute,36,Absolute,40,Absolute,46,Absolute,36,Absolute,42,Absolute,42,Absolute,95,Absolute,42,Absolute,50,Absolute,42,Absolute,42" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="movementScroll.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

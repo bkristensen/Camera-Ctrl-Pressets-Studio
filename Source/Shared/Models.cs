@@ -42,6 +42,7 @@ namespace CameraControlStudio {
         [DataMember] public int TransitionSpeedPercent, FinePanPercent;
         [DataMember] public int PanSteps, FastPanSteps, ZoomSteps;
         [DataMember] public bool ReverseHorizontal, ReverseVertical, AlwaysOnTop;
+        [DataMember] public bool PanWithCameraButton, DoubleClickForCameraSource;
         // Zero selects the widest supported FOV. Minus one leaves the device unchanged.
         [DataMember(EmitDefaultValue = false)] public int StartupFieldOfView;
         [DataMember(EmitDefaultValue = false)] public bool AllowFieldOfViewChange;
@@ -66,6 +67,8 @@ namespace CameraControlStudio {
             PanSteps = 1;
             FastPanSteps = 4;
             ZoomSteps = 1;
+            PanWithCameraButton = true;
+            DoubleClickForCameraSource = true;
             AdjustFieldOfViewAtLimits = true;
             Layout = new ProfileLayout();
         }

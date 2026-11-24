@@ -30,8 +30,10 @@ Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître so
 
    **Bouton de caméra au centre de la molette**
 
-   - **Cliquez puis relâchez sans faire glisser.** La liste de sélection de la caméra s’ouvre.
+   - **Double-cliquez pour choisir une caméra.** La liste des caméras s’ouvre.
    - **Maintenez le bouton enfoncé et faites glisser.** Partez de l’icône de caméra. Glissez sur le côté pour orienter la caméra à gauche ou à droite, ou vers le haut ou le bas pour l’incliner. Glissez un peu pour un mouvement lent, ou plus loin pour accélérer jusqu’au double de la vitesse rapide. Pour arrêter, relâchez le bouton ou ramenez le pointeur au point de départ.
+
+   Dans **Paramètres → Mouvement**, vous pouvez désactiver le déplacement par glissement ou choisir la caméra d’un simple clic. Les deux options sont enregistrées dans le profil actif.
 
    **Zoom**
 
@@ -69,7 +71,7 @@ Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître so
 
 5. **Paramètres**
 
-   Sélectionnez votre profil en bas de la fenêtre. Cliquez sur l’icône de caméra au centre de la molette pour choisir la caméra.
+   Sélectionnez votre profil en bas de la fenêtre. Double-cliquez sur l’icône de caméra au centre de la molette pour choisir la caméra.
 
    Pour conserver une position, ouvrez la roue dentée en bas et choisissez **Préréglages → Ajouter un préréglage permanent**. Choisissez le nom et l’icône, puis enregistrez.
 

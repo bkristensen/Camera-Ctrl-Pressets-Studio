@@ -15,7 +15,11 @@
   <text key="Camera">Kamera</text>
   <text key="Camera direction wheel">Kamerarad</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">Innen normal schwenken. Außen schnell schwenken.</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">Klicken Sie, um die Kamera zu wählen. Ziehen Sie in die gewünschte Richtung.</text>
+  <text key="Double-click to choose a camera.">Doppelklicken Sie, um eine Kamera zu wählen.</text>
+  <text key="Click to choose a camera.">Klicken Sie, um eine Kamera zu wählen.</text>
+  <text key="Drag to pan and tilt.">Ziehen Sie zum Schwenken und Neigen.</text>
+  <text key="Drag the camera button to pan and tilt">Kamerataste zum Schwenken und Neigen ziehen</text>
+  <text key="Double-click the camera button to choose a source">Kamerataste zur Quellenauswahl doppelklicken</text>
   <text key="Fine speed (% of Normal)">Feintempo (% von Normal)</text>
   <text key="Use speed for preset transitions">Tempo für Positionswechsel verwenden</text>
   <text key="Transition speed (%/s)">Übergangstempo (%/s)</text>

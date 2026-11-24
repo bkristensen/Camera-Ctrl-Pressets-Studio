@@ -15,7 +15,11 @@
   <text key="Camera">摄像头</text>
   <text key="Camera direction wheel">摄像头方向轮</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">内圈用于正常移动。外圈用于快速移动。</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">点击选择摄像头。向要移动的方向拖动。</text>
+  <text key="Double-click to choose a camera.">双击选择摄像头。</text>
+  <text key="Click to choose a camera.">单击选择摄像头。</text>
+  <text key="Drag to pan and tilt.">拖动可左右转动或上下倾斜。</text>
+  <text key="Drag the camera button to pan and tilt">拖动摄像头按钮可转动和倾斜</text>
+  <text key="Double-click the camera button to choose a source">双击摄像头按钮选择视频源</text>
   <text key="Fine speed (% of Normal)">微调速度（常速的百分比）</text>
   <text key="Use speed for preset transitions">按速度切换预设位置</text>
   <text key="Transition speed (%/s)">切换速度（%/秒）</text>

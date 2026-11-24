@@ -30,8 +30,10 @@ Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua f
 
    **Botão da câmera no centro do seletor**
 
-   - **Clique e solte sem arrastar.** A lista para escolher a câmera será aberta.
+   - **Clique duas vezes para escolher uma câmera.** A lista de câmeras será aberta.
    - **Segure e arraste.** Comece no ícone da câmera. Arraste para os lados para girá-la ou para cima e para baixo para incliná-la. Arraste um pouco para mover devagar, ou mais longe para acelerar até o dobro da velocidade rápida. Solte o botão ou volte com o ponteiro ao ponto de partida para parar.
+
+   Em **Configurações → Movimento**, você pode desativar o arraste ou usar um só clique para escolher a câmera. As duas opções são salvas no perfil ativo.
 
    **Zoom**
 
@@ -69,7 +71,7 @@ Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua f
 
 5. **Configurações**
 
-   Selecione o perfil na parte inferior. Clique no ícone de câmera no centro do seletor de direção para escolher a câmera.
+   Selecione o perfil na parte inferior. Clique duas vezes no ícone de câmera no centro do seletor de direção para escolher a câmera.
 
    Para salvar uma posição de forma permanente, abra a engrenagem na parte inferior e escolha **Predefinições → Adicionar predefinição permanente**. Escolha o nome e o ícone e salve.
 

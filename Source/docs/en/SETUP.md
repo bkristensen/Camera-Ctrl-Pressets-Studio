@@ -29,7 +29,7 @@ If the guide viewer needs WebView2, download the runtime from Microsoft.\
 
 Use the profile picker in the footer to select a profile. To create one, open **Settings → Profiles**. Choose **New** for default settings or **Copy** for a copy of the active profile. Name it after a person or setup. New profiles become active. In **Profiles**, select a profile and click **✎** to rename it. The Standard profile has a fixed name.
 
-Click the camera symbol in the centre of the direction wheel to select a camera. The program remembers it. If that camera is missing, choose another source. Positions belong to a camera within a profile.
+Double-click the camera symbol in the centre of the direction wheel to select a camera. The program remembers it. If that camera is missing, choose another source. Positions belong to a camera within a profile.
 
 ![Profiles tab with the profile list and actions](../images/screenshots/0.7.0-beta.7/en/profiles.png)
 

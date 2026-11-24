@@ -15,7 +15,11 @@
   <text key="Camera">Cámara</text>
   <text key="Camera direction wheel">Rueda de dirección de la cámara</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">Anillo interior para movimientos normales. Exterior para movimientos rápidos.</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">Haz clic para elegir la cámara. Arrastra en la dirección en la que quieras moverla.</text>
+  <text key="Double-click to choose a camera.">Haz doble clic para elegir una cámara.</text>
+  <text key="Click to choose a camera.">Haz clic para elegir una cámara.</text>
+  <text key="Drag to pan and tilt.">Arrastra para girar e inclinar.</text>
+  <text key="Drag the camera button to pan and tilt">Arrastrar el botón de cámara para girar e inclinar</text>
+  <text key="Double-click the camera button to choose a source">Hacer doble clic en el botón de cámara para elegir la fuente</text>
   <text key="Fine speed (% of Normal)">Velocidad fina (% de normal)</text>
   <text key="Use speed for preset transitions">Usar velocidad al cambiar de posición</text>
   <text key="Transition speed (%/s)">Velocidad de transición (%/s)</text>

@@ -246,15 +246,24 @@ namespace CameraControlStudio {
             SetMainToolTip(deleteTemporaryButton, UiText.T("Delete temporary preset", "Slet midlertidig position"));
             SetMainToolTip(settingsButton, UiText.T("Settings", "Indstillinger"));
             SetMainToolTip(profileButton, UiText.T("Choose profile", "Vælg profil"));
-            var wheelDescription = UiText.T("Inner ring for normal moves. Outer ring for fast moves.", "Inderste ring flytter normalt. Yderste ring flytter hurtigt.");
-            var sourceDescription = UiText.T("Click to choose a camera. Drag to pan in that direction.", "Klik for at vælge kamera. Træk for at panorere i den retning.");
-            SetMainToolTip(wheel, wheel.AccessibleName, wheelDescription + " " + sourceDescription);
-            wheel.SourceHoverChanged += overSource => mainToolTips.SetToolTip(wheel, overSource
-                ? sourceDescription : wheelDescription);
+            UpdateWheelToolTip();
+            wheel.SourceHoverChanged += overSource => UpdateWheelToolTip(overSource);
             SetMainToolTip(fullFrame, UiText.T("Restore full frame", "Gendan fuldt billede"),
                 UiText.T("Use the widest view and minimum zoom.", "Brug det bredeste synsfelt og mindste zoom."));
             SetMainToolTip(zoomSlider, UiText.T("Zoom", "Zoom"),
                 UiText.T("Drag to adjust zoom.", "Træk for at justere zoom."));
+        }
+        void UpdateWheelToolTip(bool? overSource = null) {
+            var wheelDescription = UiText.T("Inner ring for normal moves. Outer ring for fast moves.", "Inderste ring flytter normalt. Yderste ring flytter hurtigt.");
+            var sourceDescription = wheel.DoubleClickForCameraSource
+                ? UiText.T("Double-click to choose a camera.", "Dobbeltklik for at vælge kamera.")
+                : UiText.T("Click to choose a camera.", "Klik for at vælge kamera.");
+            if (wheel.PanWithCameraButton)
+                sourceDescription += " " + UiText.T("Drag to pan and tilt.", "Træk for at panorere og vippe.");
+            if (overSource.HasValue)
+                mainToolTips.SetToolTip(wheel, overSource.Value ? sourceDescription : wheelDescription);
+            else
+                SetMainToolTip(wheel, wheel.AccessibleName, wheelDescription + " " + sourceDescription);
         }
         void SetMainToolTip(Control control, string label, string detail = null) {
             control.AccessibleName = label;

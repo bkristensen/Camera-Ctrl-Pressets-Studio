@@ -15,7 +15,11 @@
   <text key="Camera">Camera</text>
   <text key="Camera direction wheel">Camera direction wheel</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">Inner ring for normal moves. Outer ring for fast moves.</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">Click to choose a camera. Drag to pan in that direction.</text>
+  <text key="Double-click to choose a camera.">Double-click to choose a camera.</text>
+  <text key="Click to choose a camera.">Click to choose a camera.</text>
+  <text key="Drag to pan and tilt.">Drag to pan and tilt.</text>
+  <text key="Drag the camera button to pan and tilt">Drag the camera button to pan and tilt</text>
+  <text key="Double-click the camera button to choose a source">Double-click the camera button to choose a source</text>
   <text key="Fine speed (% of Normal)">Fine speed (% of Normal)</text>
   <text key="Use speed for preset transitions">Use speed for preset transitions</text>
   <text key="Transition speed (%/s)">Transition speed (%/s)</text>

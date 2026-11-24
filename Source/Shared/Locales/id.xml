@@ -15,7 +15,11 @@
   <text key="Camera">Kamera</text>
   <text key="Camera direction wheel">Roda arah kamera</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">Cincin dalam untuk gerakan normal. Cincin luar untuk gerakan cepat.</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">Klik untuk memilih kamera. Seret ke arah gerakan yang diinginkan.</text>
+  <text key="Double-click to choose a camera.">Klik dua kali untuk memilih kamera.</text>
+  <text key="Click to choose a camera.">Klik untuk memilih kamera.</text>
+  <text key="Drag to pan and tilt.">Seret untuk menggerakkan kamera ke samping atau atas dan bawah.</text>
+  <text key="Drag the camera button to pan and tilt">Seret tombol kamera untuk mengubah arah kamera</text>
+  <text key="Double-click the camera button to choose a source">Klik dua kali tombol kamera untuk memilih sumber</text>
   <text key="Fine speed (% of Normal)">Kecepatan halus (% dari normal)</text>
   <text key="Use speed for preset transitions">Gunakan kecepatan untuk transisi</text>
   <text key="Transition speed (%/s)">Kecepatan transisi (%/d)</text>

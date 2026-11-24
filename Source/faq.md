@@ -8,7 +8,7 @@
 
 **Where are my positions?** Permanent positions belong to the selected camera and profile. Temporary positions last until the app closes. Permanent positions are managed under Settings → Presets.
 
-**Why did the camera not connect?** It may be disconnected, busy, unsupported, or waiting for your streaming confirmation. Click the central camera button to select a source. This app cannot detect whether your stream has begun.
+**Why did the camera not connect?** It may be disconnected, busy, unsupported, or waiting for your streaming confirmation. Double-click the central camera button to select a source. This app cannot detect whether your stream has begun.
 
 **What is Camera Control Studio designed for?** Use it alongside video meeting and streaming apps such as Zoom Meetings to adjust your camera and recall saved positions. Your meeting or streaming app displays and shares the video.
 

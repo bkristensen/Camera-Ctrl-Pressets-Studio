@@ -210,6 +210,10 @@ namespace CameraControlStudio {
         Keys activeKey;
         Point sourceOrigin;
         bool sourcePressed, sourceDragged, sourceHovered;
+        bool previousSourceClick, sourceDoubleClick;
+
+        internal bool PanWithCameraButton { get; set; } = true;
+        internal bool DoubleClickForCameraSource { get; set; } = true;
 
         public event Action<int, int, PanSpeed> MovementRequested;
         public event Action<double, double> DragRequested;
@@ -269,7 +273,10 @@ namespace CameraControlStudio {
             if (e.Button != MouseButtons.Left || !Enabled)
                 return;
             Focus();
-            if (IsOverSource(e.Location)) {
+            bool overSource = IsOverSource(e.Location);
+            sourceDoubleClick = overSource && e.Clicks == 2 && previousSourceClick;
+            previousSourceClick = false;
+            if (overSource) {
                 sourceOrigin = e.Location;
                 sourcePressed = Capture = true;
                 return;
@@ -293,6 +300,8 @@ namespace CameraControlStudio {
             if (!sourceDragged && Math.Abs(x) < threshold.Width / 2 && Math.Abs(y) < threshold.Height / 2)
                 return;
             sourceDragged = true;
+            if (!PanWithCameraButton)
+                return;
             var (pan, tilt) = PanMotion.DragVelocity(x, y, WheelSize / 2);
             DragRequested?.Invoke(pan, tilt);
         }
@@ -314,10 +323,12 @@ namespace CameraControlStudio {
             if (e.Button != MouseButtons.Left)
                 return;
             var threshold = SystemInformation.DragSize;
-            bool chooseSource = sourcePressed && !sourceDragged && IsOverSource(e.Location) &&
+            bool sourceClick = sourcePressed && !sourceDragged && IsOverSource(e.Location) &&
                 Math.Abs(e.X - sourceOrigin.X) < threshold.Width / 2 &&
                 Math.Abs(e.Y - sourceOrigin.Y) < threshold.Height / 2;
+            bool chooseSource = sourceClick && (!DoubleClickForCameraSource || sourceDoubleClick);
             CancelMovement();
+            previousSourceClick = sourceClick && !chooseSource;
             if (chooseSource)
                 SourceRequested?.Invoke();
         }
@@ -329,6 +340,7 @@ namespace CameraControlStudio {
         }
 
         internal void CancelMovement() {
+            previousSourceClick = sourceDoubleClick = false;
             if (!sourcePressed && active < 0 && activeKey == Keys.None)
                 return;
             sourcePressed = sourceDragged = false;
@@ -347,6 +359,7 @@ namespace CameraControlStudio {
         protected override void OnKeyDown(KeyEventArgs e) {
             base.OnKeyDown(e);
             if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Enter) {
+                CancelMovement();
                 SourceRequested?.Invoke();
                 e.SuppressKeyPress = true;
                 return;

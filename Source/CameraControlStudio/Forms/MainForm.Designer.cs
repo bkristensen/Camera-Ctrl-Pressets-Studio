@@ -44,6 +44,8 @@ namespace CameraControlStudio {
             this.reverseY = new CameraControlStudio.BlueCheckBox();
             this.startupFovLabel = new System.Windows.Forms.Label();
             this.startupFov = new System.Windows.Forms.ListBox();
+            this.panWithCameraButton = new CameraControlStudio.BlueCheckBox();
+            this.doubleClickForCameraSource = new CameraControlStudio.BlueCheckBox();
             this.allowFov = new CameraControlStudio.BlueCheckBox();
             this.adjustFovAtLimits = new CameraControlStudio.BlueCheckBox();
             this.applicationTab = new System.Windows.Forms.TabPage();
@@ -347,6 +349,8 @@ namespace CameraControlStudio {
             this.generalFields.Controls.Add(this.startupFov, 1, 9);
             this.generalFields.Controls.Add(this.allowFov, 0, 10);
             this.generalFields.Controls.Add(this.adjustFovAtLimits, 0, 11);
+            this.generalFields.Controls.Add(this.panWithCameraButton, 0, 12);
+            this.generalFields.Controls.Add(this.doubleClickForCameraSource, 0, 13);
             this.generalFields.Name = "generalFields";
             // 
             // finePanLabel
@@ -527,6 +531,28 @@ namespace CameraControlStudio {
             this.reverseY.Name = "reverseY";
             this.reverseY.UseVisualStyleBackColor = false;
             // 
+            // panWithCameraButton
+            //
+            this.panWithCameraButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.panWithCameraButton.Checked = true;
+            this.panWithCameraButton.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.generalFields.SetColumnSpan(this.panWithCameraButton, 2);
+            resources.ApplyResources(this.panWithCameraButton, "panWithCameraButton");
+            this.panWithCameraButton.ForeColor = System.Drawing.Color.White;
+            this.panWithCameraButton.Name = "panWithCameraButton";
+            this.panWithCameraButton.UseVisualStyleBackColor = false;
+            //
+            // doubleClickForCameraSource
+            //
+            this.doubleClickForCameraSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.doubleClickForCameraSource.Checked = true;
+            this.doubleClickForCameraSource.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.generalFields.SetColumnSpan(this.doubleClickForCameraSource, 2);
+            resources.ApplyResources(this.doubleClickForCameraSource, "doubleClickForCameraSource");
+            this.doubleClickForCameraSource.ForeColor = System.Drawing.Color.White;
+            this.doubleClickForCameraSource.Name = "doubleClickForCameraSource";
+            this.doubleClickForCameraSource.UseVisualStyleBackColor = false;
+            //
             // startupFovLabel
             // 
             resources.ApplyResources(this.startupFovLabel, "startupFovLabel");
@@ -1811,6 +1837,8 @@ namespace CameraControlStudio {
         private Label transitionSpeedLabel;
         private BlueNumericUpDown transitionSpeedPercent;
         private BlueCheckBox reverseX;
+        private BlueCheckBox panWithCameraButton;
+        private BlueCheckBox doubleClickForCameraSource;
         private BlueCheckBox reverseY;
         private BlueCheckBox streamingCheck;
         private BlueCheckBox alwaysTop;

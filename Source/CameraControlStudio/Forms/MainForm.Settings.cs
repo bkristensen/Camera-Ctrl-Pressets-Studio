@@ -10,6 +10,8 @@ namespace CameraControlStudio {
         bool refreshingVideo;
 
         void WireSettings() {
+            panWithCameraButton.CheckedChanged += (sender, args) => ApplyCameraButtonSettings();
+            doubleClickForCameraSource.CheckedChanged += (sender, args) => ApplyCameraButtonSettings();
             logSettingsLink.LinkClicked += (sender, args) => Run(() => LoggingDialog.ShowSettings(this));
             showLogLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()));
             reportLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.Report(this, DiagnosticLog.Current.FindLatest()));
@@ -30,6 +32,14 @@ namespace CameraControlStudio {
 
                 ShowReleaseUpdate(release);
             };
+        }
+
+        void ApplyCameraButtonSettings() {
+            wheel.CancelMovement();
+            wheel.PanWithCameraButton = panWithCameraButton.Checked;
+            wheel.DoubleClickForCameraSource = doubleClickForCameraSource.Checked;
+            UpdateWheelToolTip();
+            MarkDirty();
         }
 
         void ShowReleaseUpdate(GitHubReleases.AvailableRelease release) {

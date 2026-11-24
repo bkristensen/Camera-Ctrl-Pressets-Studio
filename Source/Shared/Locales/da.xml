@@ -15,7 +15,11 @@
   <text key="Camera">Kamera</text>
   <text key="Camera direction wheel">Kamerahjul</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">Inderste ring flytter normalt. Yderste ring flytter hurtigt.</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">Klik for at vælge kamera. Træk for at panorere i den retning.</text>
+  <text key="Double-click to choose a camera.">Dobbeltklik for at vælge kamera.</text>
+  <text key="Click to choose a camera.">Klik for at vælge kamera.</text>
+  <text key="Drag to pan and tilt.">Træk for at panorere og vippe.</text>
+  <text key="Drag the camera button to pan and tilt">Træk i kameraknappen for at panorere og vippe</text>
+  <text key="Double-click the camera button to choose a source">Dobbeltklik på kameraknappen for at vælge kilde</text>
   <text key="Fine speed (% of Normal)">Fin hastighed (% af normal)</text>
   <text key="Use speed for preset transitions">Brug hastighed ved skift af position</text>
   <text key="Transition speed (%/s)">Overgangshastighed (%/s)</text>

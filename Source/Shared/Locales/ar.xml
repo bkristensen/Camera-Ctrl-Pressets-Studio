@@ -15,7 +15,11 @@
   <text key="Camera">الكاميرا</text>
   <text key="Camera direction wheel">عجلة اتجاه الكاميرا</text>
   <text key="Inner ring for normal moves. Outer ring for fast moves.">الحلقة الداخلية للحركة العادية. الخارجية للحركة السريعة.</text>
-  <text key="Click to choose a camera. Drag to pan in that direction.">انقر لاختيار الكاميرا. اسحب في الاتجاه الذي تريد تحريكها نحوه.</text>
+  <text key="Double-click to choose a camera.">انقر نقرتين لاختيار كاميرا.</text>
+  <text key="Click to choose a camera.">انقر لاختيار كاميرا.</text>
+  <text key="Drag to pan and tilt.">اسحب لتحريك الكاميرا أفقياً أو عمودياً.</text>
+  <text key="Drag the camera button to pan and tilt">اسحب زر الكاميرا لتحريكها أفقياً أو عمودياً</text>
+  <text key="Double-click the camera button to choose a source">انقر زر الكاميرا نقرتين لاختيار المصدر</text>
   <text key="Fine speed (% of Normal)">السرعة الدقيقة (% من العادية)</text>
   <text key="Use speed for preset transitions">استخدام السرعة عند تبديل المواضع</text>
   <text key="Transition speed (%/s)">سرعة الانتقال (%/ث)</text>
