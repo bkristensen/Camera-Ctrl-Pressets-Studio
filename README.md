@@ -12,6 +12,8 @@ Use it alongside Zoom Meetings or your preferred capture or streaming app. That 
 
 Download the installer or portable ZIP under **Assets** on the [GitHub Releases page](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases).
 
+[Code signing policy](Source/docs/SIGNPATH.md) · [Privacy policy](Source/PRIVACY.md)
+
 | Download | How to use it |
 | --- | --- |
 | Windows installer (`CamCtrlStudio-Setup-*.exe`) | Run Setup to install the app and add Start menu shortcuts for the app and its guides. |
@@ -19,6 +21,8 @@ Download the installer or portable ZIP under **Assets** on the [GitHub Releases 
 | `SHA256SUMS.txt` | When provided, compare the published SHA-256 hash with your downloaded file. |
 
 Use Windows with .NET Framework 4.8 and a driver that supports the camera controls you need. Windows may warn about the unsigned beta. [Check the download](Source/docs/en/SETUP.md#install-and-verify-the-download)
+
+To uninstall the Setup version, find Camera Control Studio under **Apps** in Windows Settings and select **Uninstall**. To remove the portable version, close the app and delete its extracted folder. If you used `Install.ps1`, remove the app folder under `%LOCALAPPDATA%\Programs\Camera Control Studio` and its Start menu shortcut. Profiles and settings stay in your Windows account.
 
 ## Get started
 

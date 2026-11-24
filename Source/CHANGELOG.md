@@ -6,7 +6,7 @@
 - Updated the guide screenshots in all 12 languages with seven translated sample positions.
 - Updated the zoom panel layout.
 
-The Windows installer and portable ZIP are unsigned. Use SHA256SUMS.txt to verify the downloads.
+The Windows installer and portable ZIP are unsigned. The SignPath Foundation application is pending. See the [Code signing policy](docs/SIGNPATH.md). Use SHA256SUMS.txt to verify the downloads.
 
 # 0.7.0-beta.6
 

@@ -1,5 +1,5 @@
 name: Build and test
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
@@ -7,13 +7,17 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
       - name: Build and test
         shell: pwsh
+        working-directory: Source
         run: ./scripts/build.ps1
       - uses: actions/upload-artifact@v4
         with:
           name: unsigned-windows-portable
-          path: artifacts/Camera-Control-Studio-portable.zip
+          path: Source/artifacts/Camera-Control-Studio-portable.zip
+          if-no-files-found: error
