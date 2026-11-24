@@ -28,31 +28,31 @@ namespace CameraControlStudio {
             this.movementScroll = new System.Windows.Forms.Panel();
             this.generalFields = new System.Windows.Forms.TableLayoutPanel();
             this.finePanLabel = new System.Windows.Forms.Label();
-            this.finePanPercent = new System.Windows.Forms.NumericUpDown();
+            this.finePanPercent = new CameraControlStudio.BlueNumericUpDown();
             this.panStepsLabel = new System.Windows.Forms.Label();
-            this.panSteps = new System.Windows.Forms.NumericUpDown();
+            this.panSteps = new CameraControlStudio.BlueNumericUpDown();
             this.fastPanStepsLabel = new System.Windows.Forms.Label();
-            this.fastPanSteps = new System.Windows.Forms.NumericUpDown();
+            this.fastPanSteps = new CameraControlStudio.BlueNumericUpDown();
             this.zoomStepsLabel = new System.Windows.Forms.Label();
-            this.zoomSteps = new System.Windows.Forms.NumericUpDown();
-            this.useTransitionSpeed = new System.Windows.Forms.CheckBox();
+            this.zoomSteps = new CameraControlStudio.BlueNumericUpDown();
+            this.useTransitionSpeed = new CameraControlStudio.BlueCheckBox();
             this.transitionSpeedLabel = new System.Windows.Forms.Label();
-            this.transitionSpeedPercent = new System.Windows.Forms.NumericUpDown();
+            this.transitionSpeedPercent = new CameraControlStudio.BlueNumericUpDown();
             this.secondsLabel = new System.Windows.Forms.Label();
-            this.seconds = new System.Windows.Forms.NumericUpDown();
-            this.reverseX = new System.Windows.Forms.CheckBox();
-            this.reverseY = new System.Windows.Forms.CheckBox();
+            this.seconds = new CameraControlStudio.BlueNumericUpDown();
+            this.reverseX = new CameraControlStudio.BlueCheckBox();
+            this.reverseY = new CameraControlStudio.BlueCheckBox();
             this.startupFovLabel = new System.Windows.Forms.Label();
             this.startupFov = new System.Windows.Forms.ListBox();
-            this.allowFov = new System.Windows.Forms.CheckBox();
-            this.adjustFovAtLimits = new System.Windows.Forms.CheckBox();
+            this.allowFov = new CameraControlStudio.BlueCheckBox();
+            this.adjustFovAtLimits = new CameraControlStudio.BlueCheckBox();
             this.applicationTab = new System.Windows.Forms.TabPage();
             this.applicationScroll = new System.Windows.Forms.Panel();
             this.applicationFields = new System.Windows.Forms.TableLayoutPanel();
             this.windowGroup = new System.Windows.Forms.GroupBox();
             this.windowFields = new System.Windows.Forms.TableLayoutPanel();
-            this.streamingCheck = new System.Windows.Forms.CheckBox();
-            this.alwaysTop = new System.Windows.Forms.CheckBox();
+            this.streamingCheck = new CameraControlStudio.BlueCheckBox();
+            this.alwaysTop = new CameraControlStudio.BlueCheckBox();
             this.languageGroup = new System.Windows.Forms.GroupBox();
             this.language = new System.Windows.Forms.ComboBox();
             this.videoLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -64,41 +64,41 @@ namespace CameraControlStudio {
             this.focusTab = new System.Windows.Forms.TabPage();
             this.focusPanel = new System.Windows.Forms.Panel();
             this.gainControl = new System.Windows.Forms.GroupBox();
-            this.gainAutomatic = new System.Windows.Forms.CheckBox();
+            this.gainAutomatic = new CameraControlStudio.BlueCheckBox();
             this.gainSlider = new System.Windows.Forms.TrackBar();
             this.exposureControl = new System.Windows.Forms.GroupBox();
-            this.exposureAutomatic = new System.Windows.Forms.CheckBox();
+            this.exposureAutomatic = new CameraControlStudio.BlueCheckBox();
             this.exposureSlider = new System.Windows.Forms.TrackBar();
             this.focusControl = new System.Windows.Forms.GroupBox();
-            this.focusAutomatic = new System.Windows.Forms.CheckBox();
+            this.focusAutomatic = new CameraControlStudio.BlueCheckBox();
             this.focusSlider = new System.Windows.Forms.TrackBar();
             this.colourTab = new System.Windows.Forms.TabPage();
             this.colourPanel = new System.Windows.Forms.Panel();
             this.whiteBalanceControl = new System.Windows.Forms.GroupBox();
-            this.whiteBalanceAutomatic = new System.Windows.Forms.CheckBox();
+            this.whiteBalanceAutomatic = new CameraControlStudio.BlueCheckBox();
             this.whiteBalanceSlider = new System.Windows.Forms.TrackBar();
             this.saturationControl = new System.Windows.Forms.GroupBox();
-            this.saturationAutomatic = new System.Windows.Forms.CheckBox();
+            this.saturationAutomatic = new CameraControlStudio.BlueCheckBox();
             this.saturationSlider = new System.Windows.Forms.TrackBar();
             this.gammaControl = new System.Windows.Forms.GroupBox();
-            this.gammaAutomatic = new System.Windows.Forms.CheckBox();
+            this.gammaAutomatic = new CameraControlStudio.BlueCheckBox();
             this.gammaSlider = new System.Windows.Forms.TrackBar();
             this.hueControl = new System.Windows.Forms.GroupBox();
-            this.hueAutomatic = new System.Windows.Forms.CheckBox();
+            this.hueAutomatic = new CameraControlStudio.BlueCheckBox();
             this.hueSlider = new System.Windows.Forms.TrackBar();
             this.lightTab = new System.Windows.Forms.TabPage();
             this.lightPanel = new System.Windows.Forms.Panel();
             this.contrastControl = new System.Windows.Forms.GroupBox();
-            this.contrastAutomatic = new System.Windows.Forms.CheckBox();
+            this.contrastAutomatic = new CameraControlStudio.BlueCheckBox();
             this.contrastSlider = new System.Windows.Forms.TrackBar();
             this.brightnessControl = new System.Windows.Forms.GroupBox();
-            this.brightnessAutomatic = new System.Windows.Forms.CheckBox();
+            this.brightnessAutomatic = new CameraControlStudio.BlueCheckBox();
             this.brightnessSlider = new System.Windows.Forms.TrackBar();
             this.backlightControl = new System.Windows.Forms.GroupBox();
-            this.backlightAutomatic = new System.Windows.Forms.CheckBox();
+            this.backlightAutomatic = new CameraControlStudio.BlueCheckBox();
             this.backlightSlider = new System.Windows.Forms.TrackBar();
             this.sharpnessControl = new System.Windows.Forms.GroupBox();
-            this.sharpnessAutomatic = new System.Windows.Forms.CheckBox();
+            this.sharpnessAutomatic = new CameraControlStudio.BlueCheckBox();
             this.sharpnessSlider = new System.Windows.Forms.TrackBar();
             this.resetVideoControls = new CameraControlStudio.BlueButton();
             this.issuesTab = new System.Windows.Forms.TabPage();
@@ -415,9 +415,7 @@ namespace CameraControlStudio {
             // 
             // finePanPercent
             // 
-            this.finePanPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.finePanPercent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.finePanPercent.ForeColor = System.Drawing.Color.White;
             this.finePanPercent.Increment = new decimal(new int[] {
             5,
             0,
@@ -454,9 +452,7 @@ namespace CameraControlStudio {
             // 
             // panSteps
             // 
-            this.panSteps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.panSteps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panSteps.ForeColor = System.Drawing.Color.White;
             this.panSteps.Location = new System.Drawing.Point(167, 50);
             this.panSteps.Margin = new System.Windows.Forms.Padding(4);
             this.panSteps.Minimum = new decimal(new int[] {
@@ -488,9 +484,7 @@ namespace CameraControlStudio {
             // 
             // fastPanSteps
             // 
-            this.fastPanSteps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.fastPanSteps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fastPanSteps.ForeColor = System.Drawing.Color.White;
             this.fastPanSteps.Location = new System.Drawing.Point(167, 86);
             this.fastPanSteps.Margin = new System.Windows.Forms.Padding(4);
             this.fastPanSteps.Minimum = new decimal(new int[] {
@@ -522,9 +516,7 @@ namespace CameraControlStudio {
             // 
             // zoomSteps
             // 
-            this.zoomSteps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.zoomSteps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zoomSteps.ForeColor = System.Drawing.Color.White;
             this.zoomSteps.Location = new System.Drawing.Point(167, 122);
             this.zoomSteps.Margin = new System.Windows.Forms.Padding(4);
             this.zoomSteps.Minimum = new decimal(new int[] {
@@ -569,10 +561,8 @@ namespace CameraControlStudio {
             // 
             // transitionSpeedPercent
             // 
-            this.transitionSpeedPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.transitionSpeedPercent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.transitionSpeedPercent.Enabled = false;
-            this.transitionSpeedPercent.ForeColor = System.Drawing.Color.White;
             this.transitionSpeedPercent.Increment = new decimal(new int[] {
             5,
             0,
@@ -609,10 +599,8 @@ namespace CameraControlStudio {
             // 
             // seconds
             // 
-            this.seconds.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(40)))), ((int)(((byte)(79)))));
             this.seconds.DecimalPlaces = 1;
             this.seconds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.seconds.ForeColor = System.Drawing.Color.White;
             this.seconds.Increment = new decimal(new int[] {
             5,
             0,
@@ -1963,6 +1951,7 @@ namespace CameraControlStudio {
             this.settingsTabs.Location = new System.Drawing.Point(794, 0);
             this.settingsTabs.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.settingsTabs.Multiline = true;
+            this.settingsTabs.ForeColor = System.Drawing.Color.White;
             this.settingsTabs.Name = "settingsTabs";
             this.settingsTabs.SelectedIndex = 0;
             this.settingsTabs.Size = new System.Drawing.Size(330, 411);
@@ -2671,30 +2660,30 @@ namespace CameraControlStudio {
         private TableLayoutPanel generalFields;
         private Label startupFovLabel;
         private ListBox startupFov;
-        private CheckBox allowFov;
-        private CheckBox adjustFovAtLimits;
+        private BlueCheckBox allowFov;
+        private BlueCheckBox adjustFovAtLimits;
         private Panel fovDisplay;
         private Label fieldOfViewLabel;
         private ComboBox fieldOfViewPicker;
         private BlueButton fullFrame;
         private Label motionPosition;
         private Label panStepsLabel;
-        private NumericUpDown panSteps;
+        private BlueNumericUpDown panSteps;
         private Label fastPanStepsLabel;
-        private NumericUpDown fastPanSteps;
+        private BlueNumericUpDown fastPanSteps;
         private Label zoomStepsLabel;
-        private NumericUpDown zoomSteps;
+        private BlueNumericUpDown zoomSteps;
         private Label secondsLabel;
-        private NumericUpDown seconds;
+        private BlueNumericUpDown seconds;
         private Label finePanLabel;
-        private NumericUpDown finePanPercent;
-        private CheckBox useTransitionSpeed;
+        private BlueNumericUpDown finePanPercent;
+        private BlueCheckBox useTransitionSpeed;
         private Label transitionSpeedLabel;
-        private NumericUpDown transitionSpeedPercent;
-        private CheckBox reverseX;
-        private CheckBox reverseY;
-        private CheckBox streamingCheck;
-        private CheckBox alwaysTop;
+        private BlueNumericUpDown transitionSpeedPercent;
+        private BlueCheckBox reverseX;
+        private BlueCheckBox reverseY;
+        private BlueCheckBox streamingCheck;
+        private BlueCheckBox alwaysTop;
         private ComboBox language;
         private TableLayoutPanel permanentPanel;
         private Label permanentTitle;
@@ -2749,41 +2738,41 @@ namespace CameraControlStudio {
         private Panel focusPanel;
         private GroupBox focusControl;
         private TrackBar focusSlider;
-        private CheckBox focusAutomatic;
+        private BlueCheckBox focusAutomatic;
         private GroupBox exposureControl;
         private TrackBar exposureSlider;
-        private CheckBox exposureAutomatic;
+        private BlueCheckBox exposureAutomatic;
         private GroupBox gainControl;
         private TrackBar gainSlider;
-        private CheckBox gainAutomatic;
+        private BlueCheckBox gainAutomatic;
         private TabPage colourTab;
         private Panel colourPanel;
         private GroupBox hueControl;
         private TrackBar hueSlider;
-        private CheckBox hueAutomatic;
+        private BlueCheckBox hueAutomatic;
         private GroupBox gammaControl;
         private TrackBar gammaSlider;
-        private CheckBox gammaAutomatic;
+        private BlueCheckBox gammaAutomatic;
         private GroupBox saturationControl;
         private TrackBar saturationSlider;
-        private CheckBox saturationAutomatic;
+        private BlueCheckBox saturationAutomatic;
         private GroupBox whiteBalanceControl;
         private TrackBar whiteBalanceSlider;
-        private CheckBox whiteBalanceAutomatic;
+        private BlueCheckBox whiteBalanceAutomatic;
         private TabPage lightTab;
         private Panel lightPanel;
         private GroupBox sharpnessControl;
         private TrackBar sharpnessSlider;
-        private CheckBox sharpnessAutomatic;
+        private BlueCheckBox sharpnessAutomatic;
         private GroupBox backlightControl;
         private TrackBar backlightSlider;
-        private CheckBox backlightAutomatic;
+        private BlueCheckBox backlightAutomatic;
         private GroupBox brightnessControl;
         private TrackBar brightnessSlider;
-        private CheckBox brightnessAutomatic;
+        private BlueCheckBox brightnessAutomatic;
         private GroupBox contrastControl;
         private TrackBar contrastSlider;
-        private CheckBox contrastAutomatic;
+        private BlueCheckBox contrastAutomatic;
         private TabPage issuesTab;
         private FlowLayoutPanel issueGroups;
         private GroupBox logGroup;

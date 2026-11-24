@@ -3,9 +3,11 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 namespace CameraControlStudio {
     public static class BlueTheme {
         public static readonly Color Background = Color.FromArgb(5, 40, 79), Panel = Color.FromArgb(9, 52, 94), Line = Color.FromArgb(73, 144, 214);
+        public static readonly Color DisabledText = Color.FromArgb(176, 193, 211);
         public static GraphicsPath Round(RectangleF r, float radius) {
             var p = new GraphicsPath();
             float d = radius * 2;
@@ -43,6 +45,52 @@ namespace CameraControlStudio {
             using (var path = BlueTheme.Round(new RectangleF(1, 1, Width - 3, Height - 3), 14))
             using (var pen = new Pen(BlueTheme.Line, 1.5f))
                 e.Graphics.DrawPath(pen, path);
+        }
+    }
+    public class BlueCheckBox : CheckBox {
+        protected override void OnPaint(PaintEventArgs e) {
+            if (Enabled) {
+                base.OnPaint(e);
+                return;
+            }
+
+            // WinForms derives its disabled caption color from the background.
+            var state = CheckState == CheckState.Indeterminate ? CheckBoxState.MixedDisabled
+                : Checked ? CheckBoxState.CheckedDisabled : CheckBoxState.UncheckedDisabled;
+            var glyph = CheckBoxRenderer.GetGlyphSize(e.Graphics, state);
+            bool rightToLeft = RightToLeft == RightToLeft.Yes;
+            var textBounds = new Rectangle(Padding.Left, Padding.Top,
+                ClientSize.Width - Padding.Horizontal, ClientSize.Height - Padding.Vertical);
+            int glyphX = rightToLeft ? textBounds.Right - glyph.Width : textBounds.Left;
+            int glyphY = textBounds.Top + (textBounds.Height - glyph.Height) / 2;
+            CheckBoxRenderer.DrawCheckBox(e.Graphics, new Point(glyphX, glyphY), state);
+
+            int space = glyph.Width + glyph.Width / 3;
+            textBounds.Width -= space;
+            if (textBounds.Width <= 0)
+                return;
+            var flags = TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
+            if (rightToLeft)
+                flags |= TextFormatFlags.RightToLeft | TextFormatFlags.Right;
+            else
+                textBounds.X += space;
+            if (!UseMnemonic)
+                flags |= TextFormatFlags.NoPrefix;
+            else if (!ShowKeyboardCues)
+                flags |= TextFormatFlags.HidePrefix;
+            TextRenderer.DrawText(e.Graphics, Text, Font, textBounds, BlueTheme.DisabledText, flags);
+        }
+    }
+    public class BlueNumericUpDown : NumericUpDown {
+        public BlueNumericUpDown() {
+            BackColor = BlueTheme.Background;
+            ForeColor = Color.White;
+        }
+
+        protected override void OnEnabledChanged(EventArgs e) {
+            base.OnEnabledChanged(e);
+            // The native edit control uses the system's gray text when disabled.
+            BackColor = Enabled ? BlueTheme.Background : SystemColors.Window;
         }
     }
     public class BlueButton : Button {
@@ -100,7 +148,7 @@ namespace CameraControlStudio {
                 g.FillPath(brush, p);
                 g.DrawPath(pen, p);
             }
-            var textColor = Enabled ? ForeColor : Color.FromArgb(176, 193, 211);
+            var textColor = Enabled ? ForeColor : BlueTheme.DisabledText;
             var image = DisplayImage;
             if (image != null)
                 DrawButtonImage(g, image, Rectangle.Round(r));
