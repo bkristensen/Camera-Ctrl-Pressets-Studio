@@ -58,6 +58,8 @@ Wenn Sie eine Position später wiederverwenden möchten, legen Sie sie unter **E
 
 Wenn unten **Neue Version verfügbar** erscheint, öffnet ein Klick auf den Link die Veröffentlichung mit den Downloads auf GitHub.
 
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>
+
 Lesen Sie bei einer Störung die Meldung im Statusbereich unten. Möglicherweise unterstützt die Kamera die Funktion nicht oder ist nicht verfügbar.
 
 Schließen Sie die Anwendung wie gewohnt. Das aktive Profil und das Fensterlayout werden gespeichert.

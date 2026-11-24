@@ -64,6 +64,8 @@ Close the app normally. The app remembers the active profile and window layout.
 
 If **New release available** appears in the footer, select it to open the release on GitHub and see the downloads.
 
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>
+
 Report problems or missing features under **Settings → Issues**.
 
 See [Setup](SETUP.md) for camera direction, permanent presets, image settings, profiles and movement steps.

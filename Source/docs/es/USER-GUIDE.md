@@ -83,3 +83,15 @@ La opción está activada de forma predeterminada. Con una Brio, un paso adicion
 El botón cuadrado con un marco abre el campo más amplio y pone el zoom al mínimo. Los preajustes guardan el campo de visión cuando el controlador lo permite.
 
 [Instalación y SmartScreen (inglés)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## Descarga y asistencia
+
+**Descarga oficial**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Código QR para descargar Camera Control Studio](../images/qr/downloads.png)
+
+**Informa de un problema o sugiere una función**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![Código QR del registro de incidencias del proyecto en GitHub](../images/qr/issues.png)

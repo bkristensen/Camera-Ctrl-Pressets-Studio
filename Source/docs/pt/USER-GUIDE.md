@@ -83,3 +83,15 @@ A opção vem ativada. Em uma Brio, aperte o botão mais uma vez no limite do zo
 O botão quadrado com moldura escolhe o campo mais amplo e o zoom mínimo. As predefinições guardam o campo quando o driver consegue lê-lo.
 
 [Instalação e SmartScreen (inglês)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## Download e suporte
+
+**Download oficial**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Código QR para baixar o Camera Control Studio](../images/qr/downloads.png)
+
+**Relatar um problema ou sugerir um recurso**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![Código QR da lista de issues do projeto no GitHub](../images/qr/issues.png)

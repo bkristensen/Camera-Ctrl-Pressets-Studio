@@ -83,3 +83,15 @@ Pilihan ini aktif secara bawaan. Pada Brio, tekan sekali lagi setelah zoom menca
 Tombol persegi dengan lambang bingkai memilih bidang terlebar dan zoom minimum. Prasetel menyimpan bidang pandang jika driver dapat membacanya.
 
 [Penginstalan dan SmartScreen (bahasa Inggris)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## Unduhan dan bantuan
+
+**Unduhan resmi**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Kode QR untuk mengunduh Camera Control Studio](../images/qr/downloads.png)
+
+**Laporkan masalah atau usulkan fitur**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![Kode QR untuk daftar isu proyek di GitHub](../images/qr/issues.png)

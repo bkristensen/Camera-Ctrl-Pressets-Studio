@@ -83,3 +83,15 @@
 يضبط الزر المربع الذي يحمل رمز إطار أوسع مجال وأقل تكبير. تحفظ الإعدادات المسبقة مجال الرؤية عندما يتيح برنامج التشغيل قراءته.
 
 [التثبيت وSmartScreen (بالإنجليزية)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## التنزيل والدعم
+
+**التنزيل الرسمي**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![رمز الاستجابة السريعة لتنزيل Camera Control Studio](../images/qr/downloads.png)
+
+**الإبلاغ عن مشكلة أو اقتراح ميزة**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![رمز الاستجابة السريعة لصفحة بلاغات المشروع على GitHub](../images/qr/issues.png)

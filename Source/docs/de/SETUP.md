@@ -10,7 +10,16 @@ Klicken Sie unten auf das Zahnrad. Die Einstellungen öffnen sich rechts. Die Po
 
 Laden Sie das Installationsprogramm oder die portable ZIP-Datei aus den [GitHub-Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) herunter. Starten Sie das Installationsprogramm oder entpacken Sie die gesamte ZIP-Datei. Wenn eine SHA-256-Prüfsumme veröffentlicht wurde, vergleichen Sie sie mit der Ausgabe von `Get-FileHash -Algorithm SHA256`.
 
+**Offizieller Download**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![QR-Code zum Download von Camera Control Studio](../images/qr/downloads.png)
+
 Microsoft Defender SmartScreen kann eine blaue Warnung anzeigen, wenn die Datei oder ihr Herausgeber über wenig etablierte Reputation verfügt. Nehmen Sie die Warnung ernst. Wenn Sie die erwartete Datei aus dem offiziellen Release bezogen haben und der Quelle vertrauen, wählen Sie **Weitere Informationen** und prüfen Sie Dateinamen und Herausgeber. Wählen Sie **Trotzdem ausführen** nur, wenn Sie der Datei vertrauen und Windows die Option anbietet. Schließen Sie andernfalls die Warnung. Beachten Sie die Richtlinien Ihrer Organisation. [Microsoft-Hinweise zu SmartScreen](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
+
+<https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation>
+
+Falls der Leitfaden-Viewer WebView2 benötigt, laden Sie die Runtime bei Microsoft herunter.\
+<https://developer.microsoft.com/microsoft-edge/webview2/>
 
 ![SmartScreen-Warnung mit Weitere Informationen, auf Dänisch](../images/reporting/smartscreen-details.png)
 
@@ -107,5 +116,9 @@ Unter **Info** finden Sie die Version und Projektlinks. Zeigen Sie auf die Versi
 Unter **Fehler melden** können Sie den Protokollordner, die maximale Dateigröße und die Anzahl der aufzubewahrenden Dateien einschließlich des aktiven Protokolls einstellen. Standardmäßig nutzt die Anwendung den Programmordner oder ersatzweise `%LOCALAPPDATA%\CamPressets\Logs`.
 
 **Auf GitHub melden** öffnet einen Entwurf und den lokalen Ordner mit den Berichtsdateien. Prüfen Sie die Dateien und hängen Sie sie im GitHub-Editor an.
+
+**Fehler melden oder Funktion vorschlagen**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![QR-Code zu den GitHub-Issues des Projekts](../images/qr/issues.png)
 
 Weiter: [Tägliche Nutzung](DAILY-USE.md). Für eine Sicherung schließen Sie die Anwendung und kopieren `%LOCALAPPDATA%\CamPressets`. Temporäre Positionen sind nicht enthalten.

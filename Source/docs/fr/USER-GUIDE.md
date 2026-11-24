@@ -83,3 +83,15 @@ L’option est activée par défaut. Sur une Brio, une pression de plus à la li
 Le bouton carré avec un cadre règle le champ le plus large et le zoom minimal. Les préréglages mémorisent le champ si le pilote sait le lire.
 
 [Installation et SmartScreen (anglais)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## Téléchargement et assistance
+
+**Téléchargement officiel**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Code QR pour télécharger Camera Control Studio](../images/qr/downloads.png)
+
+**Signaler un problème ou proposer une fonctionnalité**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![Code QR de la liste des tickets du projet sur GitHub](../images/qr/issues.png)

@@ -83,3 +83,15 @@
 ফ্রেম চিহ্নের বর্গাকার বোতাম সবচেয়ে প্রশস্ত দৃশ্যক্ষেত্র ও সর্বনিম্ন জুমে নিয়ে যায়। ড্রাইভার দৃশ্যক্ষেত্র পড়তে পারলে প্রিসেট তা সংরক্ষণ করে।
 
 [ইনস্টল ও SmartScreen (ইংরেজি)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## ডাউনলোড ও সহায়তা
+
+**অফিশিয়াল ডাউনলোড**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Camera Control Studio ডাউনলোডের কিউআর কোড](../images/qr/downloads.png)
+
+**সমস্যা জানান বা নতুন বৈশিষ্ট্যের প্রস্তাব দিন**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![GitHub-এ প্রকল্পের ইস্যু তালিকার কিউআর কোড](../images/qr/issues.png)

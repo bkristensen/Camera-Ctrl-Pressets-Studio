@@ -83,3 +83,15 @@
 فریم کے نشان والا مربع بٹن سب سے چوڑا منظر اور کم سے کم زوم منتخب کرتا ہے۔ ڈرائیور منظر پڑھ سکے تو پری سیٹ اسے محفوظ کرتا ہے۔
 
 [تنصیب اور SmartScreen (انگریزی)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## ڈاؤن لوڈ اور مدد
+
+**سرکاری ڈاؤن لوڈ**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Camera Control Studio ڈاؤن لوڈ کرنے کا کیو آر کوڈ](../images/qr/downloads.png)
+
+**مسئلہ بتائیں یا نئی خصوصیت تجویز کریں**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![GitHub پر منصوبے کے مسائل کی فہرست کا کیو آر کوڈ](../images/qr/issues.png)

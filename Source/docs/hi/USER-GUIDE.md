@@ -83,3 +83,15 @@
 फ़्रेम चिह्न वाला चौकोर बटन सबसे चौड़ा दृश्य और न्यूनतम ज़ूम चुनता है। ड्राइवर दृश्य क्षेत्र पढ़ सके तो प्रीसेट उसे सहेजते हैं।
 
 [इंस्टॉल करना और SmartScreen (अंग्रेज़ी)](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## डाउनलोड और सहायता
+
+**आधिकारिक डाउनलोड**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Camera Control Studio डाउनलोड करने का क्यूआर कोड](../images/qr/downloads.png)
+
+**समस्या बताएँ या नई सुविधा सुझाएँ**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![GitHub पर प्रोजेक्ट की समस्याओं की सूची का क्यूआर कोड](../images/qr/issues.png)

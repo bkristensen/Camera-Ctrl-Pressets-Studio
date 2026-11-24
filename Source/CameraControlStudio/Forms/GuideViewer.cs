@@ -191,7 +191,7 @@ namespace CameraControlStudio
                     + "<style>body{font:16px/1.55 Segoe UI,sans-serif;color:#18242f;background:#fff;margin:24px}"
                     + "img{max-width:100%;height:auto} table{border-collapse:collapse;width:100%}"
                     + "th,td{padding:5px 9px;border:1px solid #b9c5d0}th{background:#e9eff4}"
-                    + "pre{white-space:pre-wrap}a{color:#075692}@media print{body{margin:0}img{max-height:6in;break-inside:avoid}"
+                    + "pre{white-space:pre-wrap}a{color:#075692;overflow-wrap:anywhere}@media print{body{margin:0}img{max-height:6in;break-inside:avoid}p:has(img[src*='/images/qr/']){break-inside:avoid}"
                     + "h1,h2,h3{break-after:avoid}tr{break-inside:avoid}}"
                     + "@page{margin:0.65in;@top-center{content:" + CssString(documentTitle)
                     + ";font:10pt Segoe UI,sans-serif;}@bottom-right{content:"

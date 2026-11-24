@@ -4,6 +4,8 @@ The installer and portable ZIP include the guides. Click **?** to read them in y
 
 The viewer needs [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). You can also open **Camera Control Studio User Guides** from the Start menu after installing. For the portable version, open the `docs` folder in the extracted ZIP.
 
+<https://developer.microsoft.com/microsoft-edge/webview2/>
+
 | Language | Guide |
 | --- | --- |
 | English | [Setup and settings](en/SETUP.md) · [Daily use](en/DAILY-USE.md) |

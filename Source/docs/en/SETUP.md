@@ -10,7 +10,16 @@ Open the gear in the footer. Settings open on the right. Your position list stay
 
 Download the installer or portable ZIP from the project’s [GitHub releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Run the installer or extract the entire ZIP before launching the app. If a SHA-256 checksum is published, compare it with `Get-FileHash -Algorithm SHA256` for your download.
 
+**Official download**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![QR code for Camera Control Studio downloads](../images/qr/downloads.png)
+
 Microsoft Defender SmartScreen can show a blue warning when a downloaded app or its publisher has little established reputation. Take it seriously. If you obtained the expected file from the official release and trust the source, select **More info** and review the filename and publisher. Select **Run anyway** only if you choose to trust that file and Windows offers the option. Otherwise close the warning. Follow your organisation’s device policy. [Microsoft SmartScreen guidance](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
+
+<https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation>
+
+If the guide viewer needs WebView2, download the runtime from Microsoft.\
+<https://developer.microsoft.com/microsoft-edge/webview2/>
 
 ![SmartScreen warning with More info, shown in Danish](../images/reporting/smartscreen-details.png)
 
@@ -107,5 +116,9 @@ Open **About** to see the installed version and project links. Hover over the ve
 Open **Issues** in the settings pane to choose a log folder, a maximum file size, and the number of log files to keep, including the current file. By default, logs go in the application folder or to `%LOCALAPPDATA%\CamPressets\Logs` if the first location is unavailable.
 
 **Report on GitHub** opens an issue draft and the local folder with the diagnostic report files. Review the files and attach them in the issue editor.
+
+**Report a bug or suggest a feature**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![QR code for the project’s GitHub issues](../images/qr/issues.png)
 
 Next: [Daily use](DAILY-USE.md). For a backup, close the app and copy `%LOCALAPPDATA%\CamPressets`. Temporary positions are not part of the backup.

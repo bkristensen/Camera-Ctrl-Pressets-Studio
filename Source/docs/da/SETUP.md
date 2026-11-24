@@ -10,7 +10,16 @@ Tryk på tandhjulet i bunden. Indstillinger åbner til højre. Positionslisten b
 
 Hent installationsfilen eller den portable ZIP fra projektets [GitHub-udgivelser](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Kør installationsfilen, eller pak hele ZIP-filen ud før start. Hvis der er udgivet en SHA-256-kontrolsum, kan du sammenligne den med resultatet fra `Get-FileHash -Algorithm SHA256`.
 
+**Officiel download**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![QR-kode til download af Camera Control Studio](../images/qr/downloads.png)
+
 Microsoft Defender SmartScreen kan vise en blå advarsel, når en fil eller udgiver har et begrænset omdømme. Tag advarslen alvorligt. Hvis du har hentet den forventede fil fra den officielle udgivelse og stoler på kilden, kan du vælge **Flere oplysninger** og kontrollere programnavn og udgiver. Vælg kun **Kør alligevel**, hvis du vil stole på netop den fil, og Windows tilbyder valget. Luk ellers advarslen. Følg eventuelle regler for din pc. [Microsofts SmartScreen-vejledning](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
+
+<https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation>
+
+Hent WebView2 Runtime fra Microsoft, hvis guideviseren mangler den.\
+<https://developer.microsoft.com/microsoft-edge/webview2/>
 
 ![SmartScreen med linket Flere oplysninger](../images/reporting/smartscreen-details.png)
 
@@ -107,5 +116,9 @@ Vælg sprog under **Indstillinger → Program → Profilsprog**, og genstart for
 Åbn fanen **Fejlrapport** for at vælge logmappe, maksimal filstørrelse og antal logfiler inklusive den aktive. Som standard skrives loggen i programmappen eller i `%LOCALAPPDATA%\CamPressets\Logs`, hvis programmappen ikke kan bruges.
 
 **Rapportér på GitHub** åbner en kladde og den lokale mappe med rapportfilerne. Gennemgå filerne, og vedhæft dem i GitHub-editoren.
+
+**Meld en fejl eller foreslå en funktion**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![QR-kode til projektets sager på GitHub](../images/qr/issues.png)
 
 Fortsæt med [Daglig brug](DAILY-USE.md). Tag backup ved at lukke programmet og kopiere `%LOCALAPPDATA%\CamPressets`. Midlertidige positioner er ikke med i backup.

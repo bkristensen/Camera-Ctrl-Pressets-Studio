@@ -2,6 +2,10 @@
 
 ## Search before reporting
 
+**Report a bug or suggest a feature**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![QR code for the project’s GitHub issues](../images/qr/issues.png)
+
 1. Open the project's [Issues tab](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue). Search for key terms from the symptom or request, such as `is:issue Brio zoom` or `is:issue label:enhancement preset`.
 2. Check open and closed results. Read similar reports for matching symptoms and workarounds.
 3. On a matching issue, select **Subscribe** in the sidebar to receive updates, or react with 👍 to show that it affects you. Add a comment if you can contribute details such as a different camera, a test result or a reliable reproduction.

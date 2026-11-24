@@ -83,3 +83,15 @@
 带取景框图标的方形按钮会切到最宽视野和最小缩放倍率。如果驱动程序能读取视野，预设就会保存该值。
 
 [安装和 SmartScreen（英文）](../en/SETUP.md)
+
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/en/SETUP.md>
+
+## 下载与支持
+
+**官方下载**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
+![Camera Control Studio 下载二维码](../images/qr/downloads.png)
+
+**报告问题或建议新功能**\
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
+![项目 GitHub 问题列表二维码](../images/qr/issues.png)

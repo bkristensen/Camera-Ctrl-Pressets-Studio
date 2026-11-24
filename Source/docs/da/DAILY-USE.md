@@ -53,6 +53,8 @@ Skal en position bruges senere, skal du oprette den under **Indstillinger → Po
 
 Hvis **Ny version tilgængelig** vises i bunden, kan du klikke på linket for at åbne udgivelsen og dens downloads på GitHub.
 
+<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>
+
 Læs beskeden i statusområdet i bunden, hvis en funktion fejler. Kameraet kan mangle funktionen eller være utilgængeligt.
 
 Luk programmet normalt. Den aktive profil og vinduets udseende huskes.
