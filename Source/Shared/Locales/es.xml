@@ -217,4 +217,11 @@
   <text key="Name">Nombre</text>
   <text key="Pan">Giro</text>
   <text key="Tilt">Inclinación</text>
+  <text key="Preset example: Whole stage">Escenario completo</text>
+  <text key="Preset example: Lectern">Atril</text>
+  <text key="Preset example: Speaker close-up">Primer plano del orador</text>
+  <text key="Preset example: Left table">Mesa izquierda</text>
+  <text key="Preset example: Right café table">Mesa de café derecha</text>
+  <text key="Preset example: Lectern + café table">Atril + mesa de café</text>
+  <text key="Preset example: Table + lectern">Mesa + atril</text>
 </translations>

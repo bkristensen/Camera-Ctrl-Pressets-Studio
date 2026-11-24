@@ -217,4 +217,11 @@
   <text key="Name">Nom</text>
   <text key="Pan">Panoramique</text>
   <text key="Tilt">Inclinaison</text>
+  <text key="Preset example: Whole stage">Scène entière</text>
+  <text key="Preset example: Lectern">Pupitre</text>
+  <text key="Preset example: Speaker close-up">Gros plan de l’orateur</text>
+  <text key="Preset example: Left table">Table de gauche</text>
+  <text key="Preset example: Right café table">Table de café à droite</text>
+  <text key="Preset example: Lectern + café table">Pupitre + table de café</text>
+  <text key="Preset example: Table + lectern">Table + pupitre</text>
 </translations>

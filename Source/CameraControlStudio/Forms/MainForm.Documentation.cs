@@ -23,9 +23,21 @@ namespace CameraControlStudio
         void InitializeDocumentation()
         {
             config = new SavedData { CameraId = "documentation-only", UseTransitionSpeed = true };
-            var examples = new[] { "stage", "lectern", "table", "cafe-table", "combo:table+lectern", "combo:lectern+cafe-table" };
-            config.Cameras[config.CameraId] = examples.Select(icon =>
-                new Preset { Name = PresetIcons.GetTitle(icon), IconId = icon }).ToList();
+            var examples = new (string Icon, string Name)[]
+            {
+                ("combo:table+lectern+cafe-table", "Whole stage"),
+                ("lectern", "Lectern"),
+                ("person", "Speaker close-up"),
+                ("table", "Left table"),
+                ("cafe-table", "Right café table"),
+                ("combo:lectern+cafe-table", "Lectern + café table"),
+                ("combo:table+lectern", "Table + lectern")
+            };
+            config.Cameras[config.CameraId] = examples.Select(example => new Preset
+            {
+                IconId = example.Icon,
+                Name = UiText.Translate("Preset example: " + example.Name, example.Name)
+            }).ToList();
             LoadMovementSettings();
             LoadFramingSettings();
             UpdateFieldOfViewOptions(new[] { 90, 78, 65 });

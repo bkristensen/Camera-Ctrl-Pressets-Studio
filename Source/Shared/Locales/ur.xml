@@ -217,4 +217,11 @@
   <text key="Name">نام</text>
   <text key="Pan">پین</text>
   <text key="Tilt">جھکاؤ</text>
+  <text key="Preset example: Whole stage">پورا اسٹیج</text>
+  <text key="Preset example: Lectern">خطابت کا اسٹینڈ</text>
+  <text key="Preset example: Speaker close-up">مقرر کا قریبی منظر</text>
+  <text key="Preset example: Left table">بائیں طرف کی میز</text>
+  <text key="Preset example: Right café table">دائیں طرف کی کیفے میز</text>
+  <text key="Preset example: Lectern + café table">خطابت کا اسٹینڈ + کیفے میز</text>
+  <text key="Preset example: Table + lectern">میز + خطابت کا اسٹینڈ</text>
 </translations>

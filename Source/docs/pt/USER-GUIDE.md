@@ -4,7 +4,7 @@
 
 Inicie primeiro a reunião que você vai transmitir, por exemplo, no Zoom. Em seguida, abra o **Camera Control Studio**.
 
-![Janela principal com roda de direção, zoom e lista de predefinições](../images/screenshots/0.7.0-beta.6/pt/main.png)
+![Janela principal com roda de direção, zoom e lista de predefinições](../images/screenshots/0.7.0-beta.7/pt/main.png)
 
 Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua função. Cada direção para quando a câmera chega ao limite final.
 
@@ -64,13 +64,13 @@ Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua f
 
    Para salvar uma posição de forma permanente, abra a engrenagem na parte inferior e escolha **Predefinições → Adicionar predefinição permanente**. Escolha o nome e o ícone e salve.
 
-   ![Predefinições permanentes e botões de gerenciamento](../images/screenshots/0.7.0-beta.6/pt/presets.png)
+   ![Predefinições permanentes e botões de gerenciamento](../images/screenshots/0.7.0-beta.7/pt/presets.png)
 
    Nas configurações, ajuste os passos, o tempo de transição e a inversão das direções. **Vídeo** mostra os controles disponíveis do driver. Em **Perfis**, você pode criar ou copiar um perfil. Ative a confirmação de transmissão se o software de captura precisar se conectar primeiro.
 
-   ![Aba Movimento com os passos e o tempo de transição](../images/screenshots/0.7.0-beta.6/pt/settings.png)
+   ![Aba Movimento com os passos e o tempo de transição](../images/screenshots/0.7.0-beta.7/pt/settings.png)
 
-   ![Aba Aplicativo com a confirmação de transmissão e o idioma do perfil](../images/screenshots/0.7.0-beta.6/pt/application.png)
+   ![Aba Aplicativo com a confirmação de transmissão e o idioma do perfil](../images/screenshots/0.7.0-beta.7/pt/application.png)
 
 6. Arraste a divisória vertical para ajustar a largura das duas áreas. O painel de configurações inicia fechado. Escolha o idioma em **Configurações → Aplicativo → Idioma do perfil** e reinicie o aplicativo. Passe o mouse sobre um botão pequeno para ver sua dica.
 

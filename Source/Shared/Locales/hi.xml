@@ -217,4 +217,11 @@
   <text key="Name">नाम</text>
   <text key="Pan">पैन</text>
   <text key="Tilt">टिल्ट</text>
+  <text key="Preset example: Whole stage">पूरा मंच</text>
+  <text key="Preset example: Lectern">व्याख्यान पीठ</text>
+  <text key="Preset example: Speaker close-up">वक्ता का क्लोज़-अप</text>
+  <text key="Preset example: Left table">बाईं मेज़</text>
+  <text key="Preset example: Right café table">दाईं कैफ़े मेज़</text>
+  <text key="Preset example: Lectern + café table">व्याख्यान पीठ + कैफ़े मेज़</text>
+  <text key="Preset example: Table + lectern">मेज़ + व्याख्यान पीठ</text>
 </translations>

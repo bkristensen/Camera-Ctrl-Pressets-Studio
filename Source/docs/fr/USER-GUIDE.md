@@ -4,7 +4,7 @@
 
 Lancez d’abord votre réunion en streaming, par exemple dans Zoom. Ouvrez ensuite **Camera Control Studio**.
 
-![Fenêtre principale avec la molette de direction, le zoom et la liste des préréglages](../images/screenshots/0.7.0-beta.6/fr/main.png)
+![Fenêtre principale avec la molette de direction, le zoom et la liste des préréglages](../images/screenshots/0.7.0-beta.7/fr/main.png)
 
 Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître son rôle. Chaque direction s’arrête à la dernière limite de la caméra.
 
@@ -64,13 +64,13 @@ Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître so
 
    Pour conserver une position, ouvrez la roue dentée en bas et choisissez **Préréglages → Ajouter un préréglage permanent**. Choisissez le nom et l’icône, puis enregistrez.
 
-   ![Préréglages permanents et boutons de gestion](../images/screenshots/0.7.0-beta.6/fr/presets.png)
+   ![Préréglages permanents et boutons de gestion](../images/screenshots/0.7.0-beta.7/fr/presets.png)
 
    Dans les paramètres, réglez les pas, la durée de transition et l’inversion des directions. L’onglet **Vidéo** présente les commandes disponibles via le pilote. L’onglet **Profils** permet de créer ou de copier un profil. Activez la confirmation de diffusion si le logiciel de capture doit se connecter d’abord.
 
-   ![Onglet Mouvement avec les pas et la durée de transition](../images/screenshots/0.7.0-beta.6/fr/settings.png)
+   ![Onglet Mouvement avec les pas et la durée de transition](../images/screenshots/0.7.0-beta.7/fr/settings.png)
 
-   ![Onglet Application avec la confirmation de diffusion et la langue du profil](../images/screenshots/0.7.0-beta.6/fr/application.png)
+   ![Onglet Application avec la confirmation de diffusion et la langue du profil](../images/screenshots/0.7.0-beta.7/fr/application.png)
 
 6. Faites glisser le séparateur vertical pour ajuster la largeur des deux zones. Le volet des paramètres est fermé au démarrage. Choisissez la langue dans **Paramètres → Application → Langue du profil**, puis redémarrez l’application. Survolez un petit bouton pour afficher son infobulle.
 

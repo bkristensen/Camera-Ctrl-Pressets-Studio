@@ -217,4 +217,11 @@
   <text key="Name">Navn</text>
   <text key="Pan">Pan</text>
   <text key="Tilt">Tilt</text>
+  <text key="Preset example: Whole stage">Hele scenen</text>
+  <text key="Preset example: Lectern">Talerstol</text>
+  <text key="Preset example: Speaker close-up">Taler tæt på</text>
+  <text key="Preset example: Left table">Venstre Bord</text>
+  <text key="Preset example: Right café table">Højre Cafébord</text>
+  <text key="Preset example: Lectern + café table">Talerstol + Cafébord</text>
+  <text key="Preset example: Table + lectern">Bord + Talerstol</text>
 </translations>

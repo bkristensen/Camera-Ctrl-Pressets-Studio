@@ -217,4 +217,11 @@
   <text key="Name">名称</text>
   <text key="Pan">平移</text>
   <text key="Tilt">俯仰</text>
+  <text key="Preset example: Whole stage">全景舞台</text>
+  <text key="Preset example: Lectern">讲台</text>
+  <text key="Preset example: Speaker close-up">演讲者特写</text>
+  <text key="Preset example: Left table">左侧桌子</text>
+  <text key="Preset example: Right café table">右侧咖啡桌</text>
+  <text key="Preset example: Lectern + café table">讲台 + 咖啡桌</text>
+  <text key="Preset example: Table + lectern">桌子 + 讲台</text>
 </translations>

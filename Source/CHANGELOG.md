@@ -1,3 +1,13 @@
+# 0.7.0-beta.7
+
+- Settings opens on the side with room. The tabs stay on one row and scroll when space is tight.
+- Disabled settings stay legible and repaint cleanly.
+- GuideViewer can open the issues guide and GitHub together. Issue-list links show open and closed reports.
+- Updated the guide screenshots in all 12 languages with seven translated sample positions.
+- Updated the zoom panel layout.
+
+The Windows installer and portable ZIP are unsigned. Use SHA256SUMS.txt to verify the downloads.
+
 # 0.7.0-beta.6
 
 - The footer shows the installed version without its build identifier. If an update is available, hover over the link to see the new version and its publication date, when GitHub provides one.

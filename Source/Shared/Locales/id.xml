@@ -217,4 +217,11 @@
   <text key="Name">Nama</text>
   <text key="Pan">Geser</text>
   <text key="Tilt">Miring</text>
+  <text key="Preset example: Whole stage">Seluruh panggung</text>
+  <text key="Preset example: Lectern">Mimbar</text>
+  <text key="Preset example: Speaker close-up">Sorotan pembicara</text>
+  <text key="Preset example: Left table">Meja kiri</text>
+  <text key="Preset example: Right café table">Meja kafe kanan</text>
+  <text key="Preset example: Lectern + café table">Mimbar + meja kafe</text>
+  <text key="Preset example: Table + lectern">Meja + mimbar</text>
 </translations>

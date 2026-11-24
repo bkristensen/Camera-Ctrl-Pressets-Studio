@@ -217,4 +217,11 @@
   <text key="Name">Name</text>
   <text key="Pan">Pan</text>
   <text key="Tilt">Tilt</text>
+  <text key="Preset example: Whole stage">Whole stage</text>
+  <text key="Preset example: Lectern">Lectern</text>
+  <text key="Preset example: Speaker close-up">Speaker close-up</text>
+  <text key="Preset example: Left table">Left table</text>
+  <text key="Preset example: Right café table">Right café table</text>
+  <text key="Preset example: Lectern + café table">Lectern + café table</text>
+  <text key="Preset example: Table + lectern">Table + lectern</text>
 </translations>

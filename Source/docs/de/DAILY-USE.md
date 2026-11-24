@@ -4,7 +4,7 @@
 
 Starten Sie zuerst Ihr Streaming-Meeting, zum Beispiel in Zoom. Öffnen Sie anschließend **Camera Control Studio**.
 
-![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/0.7.0-beta.6/de/main.png)
+![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/0.7.0-beta.7/de/main.png)
 
 ## Allgemeines
 

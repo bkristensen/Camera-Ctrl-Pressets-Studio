@@ -217,4 +217,11 @@
   <text key="Name">Name</text>
   <text key="Pan">Schwenken</text>
   <text key="Tilt">Neigen</text>
+  <text key="Preset example: Whole stage">Ganze Bühne</text>
+  <text key="Preset example: Lectern">Rednerpult</text>
+  <text key="Preset example: Speaker close-up">Redner in Nahaufnahme</text>
+  <text key="Preset example: Left table">Linker Tisch</text>
+  <text key="Preset example: Right café table">Rechter Cafétisch</text>
+  <text key="Preset example: Lectern + café table">Rednerpult + Cafétisch</text>
+  <text key="Preset example: Table + lectern">Tisch + Rednerpult</text>
 </translations>

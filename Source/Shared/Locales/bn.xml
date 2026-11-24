@@ -217,4 +217,11 @@
   <text key="Name">নাম</text>
   <text key="Pan">প্যান</text>
   <text key="Tilt">টিল্ট</text>
+  <text key="Preset example: Whole stage">পুরো মঞ্চ</text>
+  <text key="Preset example: Lectern">বক্তার মঞ্চপীঠ</text>
+  <text key="Preset example: Speaker close-up">বক্তার কাছের দৃশ্য</text>
+  <text key="Preset example: Left table">বাঁ দিকের টেবিল</text>
+  <text key="Preset example: Right café table">ডান দিকের ক্যাফে টেবিল</text>
+  <text key="Preset example: Lectern + café table">মঞ্চপীঠ + ক্যাফে টেবিল</text>
+  <text key="Preset example: Table + lectern">টেবিল + মঞ্চপীঠ</text>
 </translations>

@@ -217,4 +217,11 @@
   <text key="Name">الاسم</text>
   <text key="Pan">تحريك أفقي</text>
   <text key="Tilt">إمالة</text>
+  <text key="Preset example: Whole stage">المنصة كاملة</text>
+  <text key="Preset example: Lectern">منبر المتحدث</text>
+  <text key="Preset example: Speaker close-up">لقطة مقرّبة للمتحدث</text>
+  <text key="Preset example: Left table">الطاولة اليسرى</text>
+  <text key="Preset example: Right café table">طاولة المقهى اليمنى</text>
+  <text key="Preset example: Lectern + café table">المنبر + طاولة المقهى</text>
+  <text key="Preset example: Table + lectern">الطاولة + المنبر</text>
 </translations>
