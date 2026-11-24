@@ -21,9 +21,9 @@ namespace CameraControlStudio {
         public static int WidthWithoutSettings(int width, int widthAdded, int minimumWidth) {
             return widthAdded > 0 ? Math.Max(minimumWidth, width - widthAdded) : width;
         }
-        public static void Capture(Form form, ProfileLayout layout, bool maximized, int settingsWidthAdded) {
+        public static void Capture(Form form, ProfileLayout layout, bool maximized, int settingsWidthAdded, int settingsLeftOffset) {
             var bounds = form.WindowState == FormWindowState.Normal ? form.Bounds : form.RestoreBounds;
-            layout.X = bounds.X;
+            layout.X = bounds.X + settingsLeftOffset;
             layout.Y = bounds.Y;
             layout.Width = WidthWithoutSettings(bounds.Width, settingsWidthAdded, form.MinimumSize.Width);
             layout.Height = bounds.Height;

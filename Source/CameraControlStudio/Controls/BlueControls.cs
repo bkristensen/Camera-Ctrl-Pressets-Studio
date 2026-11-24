@@ -54,7 +54,9 @@ namespace CameraControlStudio {
                 return;
             }
 
-            // WinForms derives its disabled caption color from the background.
+            // The standard button is opaque. This paint path must also erase its background.
+            using (var background = new SolidBrush(BackColor))
+                e.Graphics.FillRectangle(background, e.ClipRectangle);
             var state = CheckState == CheckState.Indeterminate ? CheckBoxState.MixedDisabled
                 : Checked ? CheckBoxState.CheckedDisabled : CheckBoxState.UncheckedDisabled;
             var glyph = CheckBoxRenderer.GetGlyphSize(e.Graphics, state);
@@ -69,7 +71,7 @@ namespace CameraControlStudio {
             textBounds.Width -= space;
             if (textBounds.Width <= 0)
                 return;
-            var flags = TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
+            var flags = TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak | TextFormatFlags.PreserveGraphicsClipping;
             if (rightToLeft)
                 flags |= TextFormatFlags.RightToLeft | TextFormatFlags.Right;
             else

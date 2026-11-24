@@ -23,7 +23,7 @@ namespace CameraControlStudio {
         static readonly string[] axes = { "Zoom", "Pan", "Tilt" };
         readonly Size preferredMinimumSize;
         readonly int settingsPanelWidth, temporaryDeleteWidth;
-        int settingsWidthAdded;
+        int settingsWidthAdded, settingsLeftOffset;
         int iconColumnWidth, recallColumnWidth;
         internal bool RestartRequested {
             get; private set;
@@ -208,7 +208,7 @@ namespace CameraControlStudio {
             };
             Deactivate += (o, e) => { wheel.CancelMovement(); StopHeld(); };
             Link(repoLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio");
-            Link(issuesLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues");
+            Link(issuesLink, GuideViewer.IssuesUrl);
             Link(discussionLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions");
             Link(coffeeLink, "https://buymeacoffee.com/brislingveo");
             versionLabel.Text = "MIT · " + DiagnosticLog.DisplayAppVersion;

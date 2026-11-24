@@ -36,7 +36,7 @@ If WinGet is unavailable, install the SDK from [Microsoft](https://dotnet.micros
 
 ## Contribute
 
-[Report a bug or request a feature](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues) · [Discuss an idea](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions) · [Buy me a coffee](https://buymeacoffee.com/brislingveo)
+[Report a bug or request a feature](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue) · [Discuss an idea](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions) · [Buy me a coffee](https://buymeacoffee.com/brislingveo)
 
 Forks and pull requests are welcome. Keep the main workflow small: choose a profile, adjust the camera, recall a position. Put administrative features in Settings. See [Contributing](CONTRIBUTING.md). These are contribution preferences, not restrictions on your MIT licence rights.
 

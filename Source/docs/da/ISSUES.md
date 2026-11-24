@@ -2,8 +2,8 @@
 
 ## Søg først
 
-1. Åbn projektets [Issues](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues). Søg efter nøgleord fra problemet, fx `is:issue Brio zoom`, eller efter et forslag, fx `is:issue label:enhancement preset`.
-2. Se både åbne og lukkede sager. Fjern det forvalgte filter for åbne sager for at søge i begge. Læs lignende sager for at finde samme symptom og mulige løsninger.
+1. Åbn projektets [Issues](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue). Søg efter nøgleord fra problemet, fx `is:issue Brio zoom`, eller efter et forslag, fx `is:issue label:enhancement preset`.
+2. Se både åbne og lukkede sager. Læs lignende sager for at finde samme symptom og mulige løsninger.
 3. Vælg **Subscribe** i en relevant sag for at følge den, eller reagér med 👍 for at vise, at den også berører dig. Skriv en kommentar, hvis du kan tilføje fx kameramodel, testresultat eller trin, der genskaber fejlen.
 
 ![Søgefelt over Open og Closed. New issue står øverst til højre.](../images/reporting/github-issues.png)

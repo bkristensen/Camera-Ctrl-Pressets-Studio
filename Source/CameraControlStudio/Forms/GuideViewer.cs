@@ -19,6 +19,7 @@ namespace CameraControlStudio
     public partial class GuideViewer : AppForm
     {
         internal const string ReleasesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases";
+        internal const string IssuesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue";
         internal const string OnlineGuidesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/blob/main/Source/docs/USER-GUIDES.md";
         static readonly MarkdownPipeline Pipeline = new MarkdownPipelineBuilder().DisableHtml().UsePipeTables()
             .UseAutoIdentifiers(AutoIdentifierOptions.GitHub).Build();
@@ -56,8 +57,14 @@ namespace CameraControlStudio
             BindGuideLink(buildReleaseLink, Path.Combine(languageFolder, "BUILD-AND-RELEASE.md"));
             BindGuideLink(translationsLink, Path.Combine(languageFolder, "TRANSLATIONS.md"), useEnglish: true);
             BindGuideLink(githubLink, Path.Combine(languageFolder, "GITHUB.md"), useEnglish: true);
-            BindGuideLink(issuesLink, Path.Combine(languageFolder, "ISSUES.md"), useEnglish: true);
+            string issuesGuide = BindGuideLink(issuesLink, Path.Combine(languageFolder, "ISSUES.md"), useEnglish: true);
             BindLink(releasesLink, () => OpenBrowser(ReleasesUrl));
+            BindLink(reportIssueLink, () =>
+            {
+                if (issuesGuide != null)
+                    LoadGuide(issuesGuide);
+                OpenBrowser(IssuesUrl);
+            });
             BindLink(onlineGuidesLink, () => OpenBrowser(OnlineGuidesUrl));
             print.Enabled = false;
             print.Click += async (sender, args) =>
@@ -138,12 +145,16 @@ namespace CameraControlStudio
             openSetup = setup;
         }
 
-        void BindGuideLink(LinkLabel link, string path, bool useEnglish = false)
+        string BindGuideLink(LinkLabel link, string path, bool useEnglish = false)
         {
             if (useEnglish && !File.Exists(path))
                 path = Path.Combine(root, "en", Path.GetFileName(path));
-            link.Visible = File.Exists(path);
+            bool exists = File.Exists(path);
+            link.Visible = exists;
+            if (!exists)
+                return null;
             BindLink(link, () => LoadGuide(path));
+            return path;
         }
 
         void BindLink(LinkLabel link, Action action)

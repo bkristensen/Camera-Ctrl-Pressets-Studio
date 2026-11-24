@@ -11,7 +11,7 @@ AppName=Camera Control Studio
 AppVersion={#AppVersion}
 AppPublisher=Brian Kristensen
 AppPublisherURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio
-AppSupportURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues
+AppSupportURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue
 AppUpdatesURL=https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases
 VersionInfoCompany=Brian Kristensen
 VersionInfoCopyright=Copyright (c) 2026 Cam Pressets contributors

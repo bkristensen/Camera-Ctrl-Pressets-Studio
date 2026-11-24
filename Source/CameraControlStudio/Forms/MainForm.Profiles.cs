@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -44,7 +45,7 @@ namespace CameraControlStudio
             config.AlwaysOnTop = alwaysTop.Checked;
             config.Language = UiText.LanguageCodes[language.SelectedIndex];
             config.Layout.SettingsOpen = false;
-            ProfileWindow.Capture(this, config.Layout, wasMaximized, settingsWidthAdded);
+            ProfileWindow.Capture(this, config.Layout, wasMaximized, settingsWidthAdded, settingsLeftOffset);
         }
         void SaveCurrent()
         {
@@ -72,8 +73,9 @@ namespace CameraControlStudio
                 streamingCheck.Checked = config.RequireStreamingConfirmation;
                 alwaysTop.Checked = config.AlwaysOnTop;
                 TopMost = config.AlwaysOnTop;
+                // Older profiles saved the window with the original 272-DIP settings column.
                 if (config.Layout.SettingsOpen && config.Layout.HasBounds)
-                    config.Layout.Width = ProfileWindow.WidthWithoutSettings(config.Layout.Width, settingsPanelWidth, MinimumSize.Width);
+                    config.Layout.Width = ProfileWindow.WidthWithoutSettings(config.Layout.Width, LogicalToDeviceUnits(272), MinimumSize.Width);
                 config.Layout.SettingsOpen = false;
                 SetSettings(false, false);
                 settingsTabs.SelectedIndex = 0;
@@ -110,19 +112,17 @@ namespace CameraControlStudio
                 settingsTabs.Visible = visible;
                 if (visible && !was && settingsTabs.SelectedTab == presetsTab)
                     SelectPresetInSettings(SelectedPresetRow);
-                if (resize && was != visible && WindowState == FormWindowState.Normal)
+                if (visible && !was)
                 {
-                    if (visible)
-                    {
-                        var area = Screen.FromControl(this).WorkingArea;
-                        int expandedWidth = Math.Min(area.Width, Width + settingsPanelWidth);
-                        settingsWidthAdded = Math.Max(0, expandedWidth - Width);
-                        if (settingsWidthAdded > 0)
-                            SetBounds(Math.Min(Left, area.Right - expandedWidth), Top, expandedWidth, Height);
-                    }
-                    else
-                        RemoveSettingsWidth();
+                    var area = Screen.FromControl(this).WorkingArea;
+                    int panelWidth = PreferredSettingsWidth();
+                    bool openLeft = area.Right - Right < panelWidth && Left - area.Left > area.Right - Right;
+                    PlaceSettingsColumn(openLeft);
+                    if (resize && WindowState == FormWindowState.Normal)
+                        ExpandSettingsWindow(area, panelWidth, openLeft);
                 }
+                else if (!visible && WindowState == FormWindowState.Normal)
+                    RemoveSettingsWidth();
                 SizeSettingsColumn(visible);
             }
             finally
@@ -133,20 +133,54 @@ namespace CameraControlStudio
                 config.Layout.ControllerRatio = ratio;
             ApplySplitter();
         }
+        void PlaceSettingsColumn(bool onLeft)
+        {
+            // A right-to-left table lays out its first column on the right.
+            int column = onLeft != (body.RightToLeft == RightToLeft.Yes) ? 0 : 1;
+            if (body.GetColumn(settingsTabs) == column)
+                return;
+            body.SetColumn(settingsTabs, column);
+            body.SetColumn(mainSplit, 1 - column);
+            body.ColumnStyles[column].SizeType = SizeType.Absolute;
+            body.ColumnStyles[column].Width = 0;
+            body.ColumnStyles[1 - column].SizeType = SizeType.Percent;
+            body.ColumnStyles[1 - column].Width = 100;
+        }
+        void ExpandSettingsWindow(Rectangle area, int panelWidth, bool onLeft)
+        {
+            int originalLeft = Left;
+            int expandedWidth = Math.Min(area.Width, Width + panelWidth);
+            settingsWidthAdded = Math.Max(0, expandedWidth - Width);
+            int left = onLeft ? Left - settingsWidthAdded : Left;
+            left = Math.Max(area.Left, Math.Min(left, area.Right - expandedWidth));
+            settingsLeftOffset = originalLeft - left;
+            SetBounds(left, Top, expandedWidth, Height);
+        }
+        int PreferredSettingsWidth()
+        {
+            int tabsWidth = 0;
+            for (int index = 0; index < settingsTabs.TabCount; index++)
+                tabsWidth += settingsTabs.GetTabRect(index).Width;
+            // Leave room for the native tab borders and the table cell margins.
+            return Math.Max(settingsPanelWidth, tabsWidth + settingsTabs.Margin.Horizontal + LogicalToDeviceUnits(8));
+        }
         void RemoveSettingsWidth()
         {
-            if (settingsWidthAdded == 0)
+            if (settingsWidthAdded == 0 && settingsLeftOffset == 0)
                 return;
             int closedWidth = ProfileWindow.WidthWithoutSettings(Width, settingsWidthAdded, MinimumSize.Width);
-            settingsWidthAdded = 0;
-            Width = closedWidth;
+            var area = Screen.FromControl(this).WorkingArea;
+            int left = Math.Max(area.Left, Math.Min(Left + settingsLeftOffset, area.Right - closedWidth));
+            settingsWidthAdded = settingsLeftOffset = 0;
+            SetBounds(left, Top, closedWidth, Height);
         }
         void SizeSettingsColumn(bool visible)
         {
             int mainMinimum = mainSplit.Panel1MinSize + mainSplit.Panel2MinSize + mainSplit.SplitterWidth;
-            int width = visible ? Math.Min(settingsPanelWidth, Math.Max(0, body.ClientSize.Width - mainMinimum)) : 0;
-            if (body.ColumnStyles[1].Width != width)
-                body.ColumnStyles[1].Width = width;
+            int width = visible ? Math.Min(PreferredSettingsWidth(), Math.Max(0, body.ClientSize.Width - mainMinimum)) : 0;
+            var column = body.ColumnStyles[body.GetColumn(settingsTabs)];
+            if (column.Width != width)
+                column.Width = width;
         }
         void RefreshProfiles(string selection = null)
         {

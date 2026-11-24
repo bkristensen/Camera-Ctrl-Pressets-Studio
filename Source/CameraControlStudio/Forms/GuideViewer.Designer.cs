@@ -20,6 +20,7 @@ namespace CameraControlStudio
         private LinkLabel developmentLink;
         private LinkLabel buildReleaseLink;
         private LinkLabel releasesLink;
+        private LinkLabel reportIssueLink;
         private LinkLabel onlineGuidesLink;
         private Button print;
         private WebView2 page;
@@ -49,6 +50,7 @@ namespace CameraControlStudio
             this.developmentLink = new LinkLabel();
             this.buildReleaseLink = new LinkLabel();
             this.releasesLink = new LinkLabel();
+            this.reportIssueLink = new LinkLabel();
             this.onlineGuidesLink = new LinkLabel();
             this.print = new Button();
             this.page = new WebView2();
@@ -90,6 +92,7 @@ namespace CameraControlStudio
             this.sidebar.Controls.Add(this.issuesLink);
             this.sidebar.Controls.Add(this.linksHeading);
             this.sidebar.Controls.Add(this.releasesLink);
+            this.sidebar.Controls.Add(this.reportIssueLink);
             this.sidebar.Controls.Add(this.onlineGuidesLink);
             this.sidebar.FlowDirection = FlowDirection.TopDown;
             this.sidebar.Name = "sidebar";
@@ -185,13 +188,22 @@ namespace CameraControlStudio
             this.releasesLink.TabIndex = 7;
             this.releasesLink.TabStop = true;
             this.releasesLink.Text = "GitHub releases";
+            this.reportIssueLink.AutoSize = true;
+            this.reportIssueLink.LinkColor = Color.LightSkyBlue;
+            this.reportIssueLink.ActiveLinkColor = Color.White;
+            this.reportIssueLink.VisitedLinkColor = Color.LightSkyBlue;
+            this.reportIssueLink.MaximumSize = new Size(170, 0);
+            this.reportIssueLink.Name = "reportIssueLink";
+            this.reportIssueLink.TabIndex = 8;
+            this.reportIssueLink.TabStop = true;
+            this.reportIssueLink.Text = "Report bugs or missing features";
             this.onlineGuidesLink.AutoSize = true;
             this.onlineGuidesLink.LinkColor = Color.LightSkyBlue;
             this.onlineGuidesLink.ActiveLinkColor = Color.White;
             this.onlineGuidesLink.VisitedLinkColor = Color.LightSkyBlue;
             this.onlineGuidesLink.MaximumSize = new Size(170, 0);
             this.onlineGuidesLink.Name = "onlineGuidesLink";
-            this.onlineGuidesLink.TabIndex = 8;
+            this.onlineGuidesLink.TabIndex = 9;
             this.onlineGuidesLink.TabStop = true;
             this.onlineGuidesLink.Text = "User guides on GitHub";
             this.print.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
