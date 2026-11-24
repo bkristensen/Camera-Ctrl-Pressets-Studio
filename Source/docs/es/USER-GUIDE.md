@@ -26,11 +26,20 @@ Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué ha
 
    Usa el anillo interior para el movimiento normal y el exterior para el rápido. Las flechas diagonales mueven ambos ejes a 45°, al 45 % de la velocidad del anillo por eje. Mantén pulsada una flecha para seguir. Suéltala para parar.
 
-   Haz clic en el botón de la cámara para elegir la fuente. Para moverla, mantén pulsado el botón y arrastra en la dirección deseada. Cuanto más lejos arrastres, mayor será la velocidad, hasta el doble de la rápida. Suelta el botón para parar.
+   ![Rueda de dirección con dos anillos de flechas y el botón de cámara en el centro](../images/screenshots/control%20wheel%20only.png)
+
+   **Botón de cámara en el centro de la rueda**
+
+   - **Haz clic y suelta sin arrastrar.** Se abre la lista para elegir una cámara.
+   - **Mantén pulsado y arrastra.** Empieza sobre el icono de la cámara. Arrastra hacia un lado para girarla o hacia arriba o abajo para inclinarla. Arrastra un poco para moverte despacio o más lejos para ir más rápido, hasta el doble de la velocidad rápida. Para detenerla, suelta el botón o lleva el puntero al punto de partida.
 
    **Zoom**
 
    Usa los botones de lupa para acercar o alejar. Mantén pulsado para repetir. El zoom cambia mientras arrastras el deslizador.
+
+   **Restaurar el encuadre completo**
+
+   Haz clic en el botón cuadrado con el icono de marco encima de las lupas. La cámara se aleja todo lo que puede y selecciona el campo de visión más amplio si admite ese ajuste. Cambia el encuadre de la cámara. La ventana conserva su tamaño.
 
    **Interrumpir el giro**
 
@@ -80,7 +89,7 @@ Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué ha
 
 La opción está activada de forma predeterminada. Con una Brio, un paso adicional cambia de campo al llegar al límite del zoom. Al alejarte pasa de 65° a 78° y luego a 90°. Al acercarte va al revés. Entre cambios, el zoom vuelve a avanzar por pasos. Si el giro se detiene en el borde, la app prueba un campo más amplio y ajusta el zoom para conservar el encuadre. Desactiva la opción para mantener el campo actual.
 
-El botón cuadrado con un marco abre el campo más amplio y pone el zoom al mínimo. Los preajustes guardan el campo de visión cuando el controlador lo permite.
+Los preajustes guardan el campo de visión cuando el controlador lo permite.
 
 [Instalación y SmartScreen (inglés)](../en/SETUP.md)
 

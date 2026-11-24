@@ -26,11 +26,20 @@ Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua f
 
    Use o anel interno para movimentos normais e o externo para movimentos rápidos. As setas diagonais movem os dois eixos a 45°, com 45% da velocidade do anel em cada eixo. Segure a seta para continuar. Solte para parar.
 
-   Clique no botão da câmera para escolher a fonte. Para mover a câmera, segure o botão e arraste na direção desejada. Quanto mais longe você arrastar, mais rápido o movimento, até o dobro da velocidade rápida. Solte para parar.
+   ![Seletor de direção com dois anéis de setas e o botão da câmera no centro](../images/screenshots/control%20wheel%20only.png)
+
+   **Botão da câmera no centro do seletor**
+
+   - **Clique e solte sem arrastar.** A lista para escolher a câmera será aberta.
+   - **Segure e arraste.** Comece no ícone da câmera. Arraste para os lados para girá-la ou para cima e para baixo para incliná-la. Arraste um pouco para mover devagar, ou mais longe para acelerar até o dobro da velocidade rápida. Solte o botão ou volte com o ponteiro ao ponto de partida para parar.
 
    **Zoom**
 
    Use as lupas para aproximar ou afastar. Segure o botão para repetir. O zoom muda enquanto você arrasta o controle deslizante.
+
+   **Restaurar enquadramento completo**
+
+   Clique no botão quadrado com o ícone de moldura acima das lupas. A câmera afasta o zoom até o limite e seleciona o campo de visão mais amplo se tiver esse ajuste. O enquadramento muda. A janela mantém o tamanho.
 
    **Interromper o movimento horizontal**
 
@@ -80,7 +89,7 @@ Clique em **?** para abrir a ajuda. Passe o mouse sobre um botão para ver sua f
 
 A opção vem ativada. Em uma Brio, aperte o botão mais uma vez no limite do zoom para mudar o campo de visão. Ao afastar, ele passa de 65° para 78° e depois para 90°. Ao aproximar, a ordem se inverte. Entre mudanças, o zoom volta a avançar por etapas. No limite do giro, o aplicativo tenta um campo mais amplo e ajusta o zoom para manter o enquadramento. Desative a opção para manter o campo atual.
 
-O botão quadrado com moldura escolhe o campo mais amplo e o zoom mínimo. As predefinições guardam o campo quando o driver consegue lê-lo.
+As predefinições guardam o campo quando o driver consegue lê-lo.
 
 [Instalação e SmartScreen (inglês)](../en/SETUP.md)
 

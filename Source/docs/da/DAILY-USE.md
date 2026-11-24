@@ -27,11 +27,20 @@ Grøn betyder, at driveren melder de gemte koordinater og et eventuelt gemt syns
 ### Panorering
 Brug den inderste ring til normale bevægelser og den yderste til hurtige. Hver ring har otte pile. De skrå pile flytter i 45° retninger med 45 % af ringens hastighed på hver akse. Ét klik flytter mindst ét drivertrin på hver akse, der kan flyttes. Hold en pil nede for at fortsætte. Slip for at stoppe.
 
-Klik på kameraknappen for at vælge kilde. Hold knappen nede og træk i den retning, kameraet skal bevæge sig. Træk længere for at øge farten, op til det dobbelte af de hurtige trin. Træk tilbage til startpunktet, eller slip for at stoppe.
+![Kamerahjulet med retningspile i to ringe og kameraknappen i midten](../images/screenshots/control%20wheel%20only.png)
+
+### Kameraknappen midt i hjulet
+
+- **Klik og slip uden at trække.** Så åbner listen, hvor du vælger kamera.
+- **Hold nede og træk.** Start på kameraikonet. Træk til siden for at panorere eller op og ned for at vippe kameraet. Et kort træk giver langsom bevægelse, og et længere træk øger farten op til det dobbelte af den hurtige hastighed. Slip knappen, eller før markøren tilbage til startpunktet for at stoppe.
 
 ### Zoom
 Brug lupknapperne til at zoome. Hold en lupknap nede for at gentage.
 Træk i skyderen for at justere zoom løbende.
+
+### Gendan fuldt billede
+
+Klik på den firkantede knap med rammeikonet over lupknapperne. Kameraet zoomer så langt ud som muligt og vælger det bredeste synsfelt, hvis kameraet understøtter det. Knappen ændrer kamerabilledet. Vinduet beholder sin størrelse.
 
 ### Afbryd panorering
 Du kan afbryde en startet panorering ved at trykke på ESC.

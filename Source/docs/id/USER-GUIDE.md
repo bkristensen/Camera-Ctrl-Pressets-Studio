@@ -26,11 +26,20 @@ Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsin
 
    Gunakan cincin dalam untuk gerakan normal dan cincin luar untuk gerakan cepat. Panah diagonal menggerakkan dua sumbu pada arah 45°, dengan 45% kecepatan cincin pada tiap sumbu. Tahan panah untuk terus bergerak. Lepaskan untuk berhenti.
 
-   Klik tombol kamera untuk memilih sumber. Tahan tombol dan seret ke arah yang diinginkan untuk menggeser kamera. Makin jauh tarikan, makin cepat gerakannya, hingga dua kali kecepatan cepat. Lepaskan tombol untuk berhenti.
+   ![Roda arah dengan dua cincin panah dan tombol kamera di tengah](../images/screenshots/control%20wheel%20only.png)
+
+   **Tombol kamera di tengah roda**
+
+   - **Klik lalu lepaskan tanpa menyeret.** Daftar pilihan kamera akan terbuka.
+   - **Tahan dan seret.** Mulai dari ikon kamera. Seret ke samping untuk menggeser kamera atau ke atas dan ke bawah untuk memiringkannya. Seret sedikit untuk gerakan lambat. Seret lebih jauh untuk mempercepat, hingga dua kali kecepatan tinggi. Lepaskan tombol atau kembalikan penunjuk ke asal untuk berhenti.
 
    **Zoom**
 
    Gunakan tombol kaca pembesar untuk memperbesar atau memperkecil. Tahan tombol untuk mengulang. Zoom berubah saat penggeser diseret.
+
+   **Pulihkan bingkai penuh**
+
+   Klik tombol persegi berikon bingkai di atas tombol kaca pembesar. Kamera memperkecil zoom sejauh mungkin dan memilih bidang pandang terlebar jika mendukung pengaturan itu. Bingkai kamera berubah. Ukuran jendela aplikasi tetap sama.
 
    **Menghentikan gerakan horizontal**
 
@@ -80,7 +89,7 @@ Klik **?** untuk membuka bantuan. Arahkan kursor ke tombol untuk melihat fungsin
 
 Pilihan ini aktif secara bawaan. Pada Brio, tekan sekali lagi setelah zoom mencapai batas. Saat memperkecil, bidang pandang berubah dari 65° ke 78°, lalu ke 90°. Saat memperbesar, urutannya terbalik. Di antara perubahan, zoom kembali bergerak per langkah. Di batas geser, aplikasi mencoba bidang yang lebih lebar dan menyesuaikan zoom agar bingkai tetap serupa. Matikan pilihan untuk mempertahankan bidang saat ini.
 
-Tombol persegi dengan lambang bingkai memilih bidang terlebar dan zoom minimum. Prasetel menyimpan bidang pandang jika driver dapat membacanya.
+Prasetel menyimpan bidang pandang jika driver dapat membacanya.
 
 [Penginstalan dan SmartScreen (bahasa Inggris)](../en/SETUP.md)
 

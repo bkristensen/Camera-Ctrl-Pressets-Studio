@@ -26,11 +26,20 @@ Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître so
 
    Utilisez l’anneau intérieur pour les mouvements normaux et l’anneau extérieur pour les mouvements rapides. Une flèche diagonale déplace les deux axes à 45°, à 45 % de la vitesse de l’anneau par axe. Maintenez la flèche pour continuer. Relâchez-la pour arrêter.
 
-   Cliquez sur le bouton de la caméra pour choisir la source. Pour diriger la caméra, maintenez le bouton et faites glisser dans la direction voulue. Plus vous l’éloignez, plus le mouvement est rapide, jusqu’au double de la vitesse rapide. Relâchez pour arrêter.
+   ![Molette de direction avec deux anneaux de flèches et le bouton de caméra au centre](../images/screenshots/control%20wheel%20only.png)
+
+   **Bouton de caméra au centre de la molette**
+
+   - **Cliquez puis relâchez sans faire glisser.** La liste de sélection de la caméra s’ouvre.
+   - **Maintenez le bouton enfoncé et faites glisser.** Partez de l’icône de caméra. Glissez sur le côté pour orienter la caméra à gauche ou à droite, ou vers le haut ou le bas pour l’incliner. Glissez un peu pour un mouvement lent, ou plus loin pour accélérer jusqu’au double de la vitesse rapide. Pour arrêter, relâchez le bouton ou ramenez le pointeur au point de départ.
 
    **Zoom**
 
    Utilisez les loupes pour zoomer ou dézoomer. Maintenez une touche pour répéter. Le zoom change quand vous déplacez le curseur.
+
+   **Rétablir le cadrage complet**
+
+   Cliquez sur le bouton carré avec l’icône de cadre au-dessus des loupes. La caméra dézoome au maximum et sélectionne son champ de vision le plus large si elle le permet. Le cadrage de la caméra change. La fenêtre garde sa taille.
 
    **Interrompre le panoramique**
 
@@ -80,7 +89,7 @@ Cliquez sur **?** pour ouvrir l’aide. Survolez une commande pour connaître so
 
 L’option est activée par défaut. Sur une Brio, une pression de plus à la limite du zoom change le champ de vision. En dézoomant, vous passez de 65° à 78°, puis à 90°. En zoomant, l’ordre s’inverse. Entre deux champs, le zoom avance par crans. Si le panoramique atteint un bord, l’app essaie un champ plus large et ajuste le zoom pour conserver le cadrage. Désactivez l’option pour garder le champ actuel.
 
-Le bouton carré avec un cadre règle le champ le plus large et le zoom minimal. Les préréglages mémorisent le champ si le pilote sait le lire.
+Les préréglages mémorisent le champ si le pilote sait le lire.
 
 [Installation et SmartScreen (anglais)](../en/SETUP.md)
 

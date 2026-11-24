@@ -29,12 +29,21 @@ Grün bedeutet, dass der Treiber die gespeicherte Position und gegebenenfalls da
 
 Der innere Ring bewegt die Kamera normal, der äußere schnell. Jeder Ring hat acht Pfeile. Die diagonalen Pfeile bewegen beide Achsen in 45°-Richtung mit je 45 % des Ringtempos. Ein Klick bewegt jede verfügbare Achse um mindestens einen Treiberschritt. Halten Sie einen Pfeil, um weiterzufahren. Lassen Sie ihn zum Anhalten los.
 
-Klicken Sie auf die Kamerataste, um eine Quelle zu wählen. Halten Sie die Taste und ziehen Sie in die gewünschte Richtung. Je weiter Sie ziehen, desto schneller fährt die Kamera, bis zum Doppelten des schnellen Tempos. Ziehen Sie zum Ausgangspunkt zurück oder lassen Sie die Taste zum Anhalten los.
+![Kamerarad mit zwei Pfeilringen und der Kamerataste in der Mitte](../images/screenshots/control%20wheel%20only.png)
+
+### Kamerataste in der Mitte des Kamerarads
+
+- **Klicken und loslassen, ohne zu ziehen.** Es öffnet sich die Liste zur Kameraauswahl.
+- **Gedrückt halten und ziehen.** Beginnen Sie auf dem Kamerasymbol. Ziehen Sie seitwärts zum Schwenken oder nach oben oder unten zum Neigen. Kurzes Ziehen bewegt die Kamera langsam. Weiteres Ziehen erhöht das Tempo bis auf das Doppelte der schnellen Stufe. Lassen Sie die Taste los oder führen Sie den Zeiger zum Ausgangspunkt zurück, um anzuhalten.
 
 ### Zoomen
 
 Verwenden Sie die Lupentasten zum Zoomen. Halten Sie eine Lupentaste gedrückt, um den Vorgang zu wiederholen.
 Der Zoom ändert sich, während Sie den Schieberegler ziehen.
+
+### Vollbild wiederherstellen
+
+Klicken Sie auf die quadratische Taste mit dem Rahmensymbol über den Lupentasten. Die Kamera zoomt so weit wie möglich heraus und wählt ihr weitestes Sichtfeld, sofern sie diese Einstellung unterstützt. So ändert sich der Bildausschnitt. Die Fenstergröße bleibt gleich.
 
 ### Schwenken abbrechen
 

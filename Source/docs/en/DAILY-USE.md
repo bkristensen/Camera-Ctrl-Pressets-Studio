@@ -29,12 +29,21 @@ Green means the driver reports the saved position and FOV, if saved. Check the p
 
 Use the inner ring for normal moves and the outer ring for fast moves. Each ring has eight arrows. The diagonals move pan and tilt together at 45°, with 45% of the ring’s speed on each axis. A click moves at least one driver step per available axis. Hold an arrow to keep moving. Release it to stop.
 
-Click the camera button to choose a source. To steer, hold the button and drag in the direction you want to move. Drag farther to move faster, up to twice the fast step rate. Return to the starting point or release the button to stop.
+![Direction wheel with two rings of arrows and the camera button in the centre](../images/screenshots/control%20wheel%20only.png)
+
+### Camera button in the centre of the wheel
+
+- **Click and release without dragging.** This opens the list where you choose a camera.
+- **Hold and drag.** Start on the camera icon. Drag sideways to pan or up and down to tilt. Drag a little for slow movement or farther for faster movement, up to twice the fast speed. Release the button or move the pointer back to where you started to stop.
 
 ### Zoom
 
 Use the magnifier buttons to zoom. Hold a button down to repeat the action.
 Drag the slider to adjust the zoom as you move it.
+
+### Restore full frame
+
+Click the square button with the frame icon above the magnifier buttons. The camera zooms out as far as it can and selects its widest field of view if it supports that setting. This changes the camera picture. The app window keeps its size.
 
 ### Stop panning
 
