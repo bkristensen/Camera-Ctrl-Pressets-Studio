@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">Meja kafe kanan</text>
   <text key="Preset example: Lectern + café table">Mimbar + meja kafe</text>
   <text key="Preset example: Table + lectern">Meja + mimbar</text>
+  <text key="Troubleshooting">Pemecahan masalah</text>
+  <text key="Guide language">Bahasa panduan</text>
+  <text key="Use online guides">Gunakan panduan daring</text>
+  <text key="This guide is unavailable.">Panduan ini tidak tersedia.</text>
+  <text key="This online guide is for the latest release.">Panduan daring ini berlaku untuk rilis terbaru.</text>
+  <text key="The online guide is unavailable. Showing the local guide.">Panduan daring tidak tersedia. Panduan lokal ditampilkan.</text>
+  <text key="You are viewing a local guide. A newer release is available.">Anda membaca panduan lokal. Tersedia rilis yang lebih baru.</text>
+  <text key="This guide is shown in English.">Panduan ini ditampilkan dalam bahasa Inggris.</text>
+  <text key="Installed: {0} · Online: {1}">Terpasang: {0} · Daring: {1}</text>
+  <text key="View latest release">Lihat rilis terbaru</text>
+  <text key="Printed: {0}">Dicetak: {0}</text>
+  <text key="Project: {0}">Proyek: {0}</text>
 </translations>

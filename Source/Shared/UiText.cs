@@ -41,7 +41,7 @@ namespace CameraControlStudio
             "Bahasa Indonesia",
             "اردو"
         };
-        static readonly Dictionary<string, string> translations = new Dictionary<string, string>();
+        static IReadOnlyDictionary<string, string> translations = new Dictionary<string, string>();
         public static string Language { get; private set; } = "en";
         public static string Preference { get; private set; } = "auto";
         public static bool IsRightToLeft => Language == "ar" || Language == "ur";
@@ -105,17 +105,22 @@ namespace CameraControlStudio
                 }
 
             Language = ResolveLanguage(selected, CultureInfo.CurrentUICulture.Name);
-            translations.Clear();
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("CamPressets.Locales." + Language + ".xml"))
+            translations = ReadTranslations(Language);
+        }
+
+        internal static IReadOnlyDictionary<string, string> ReadTranslations(string language)
+        {
+            var values = new Dictionary<string, string>();
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("CamPressets.Locales." + language + ".xml"))
             {
                 if (stream == null)
-                    return;
-                var xml = new XmlDocument();
-                xml.XmlResolver = null;
+                    return values;
+                var xml = new XmlDocument { XmlResolver = null };
                 xml.Load(stream);
                 foreach (XmlElement node in xml.DocumentElement.SelectNodes("text"))
-                    translations.Add(node.GetAttribute("key"), node.InnerText);
+                    values.Add(node.GetAttribute("key"), node.InnerText);
             }
+            return values;
         }
 
         // Persist a preference without changing live strings: a restart avoids mixed

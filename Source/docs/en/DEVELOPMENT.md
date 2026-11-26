@@ -2,6 +2,8 @@
 
 # Edit the interface and translations
 
+*Written for Camera Control Studio 1.0.0.*
+
 ## Open the right file
 
 Open `Camera-Control-Pressets-Studio.sln`. In Solution Explorer, build the solution, then open `CameraControlStudio → Forms → MainForm.cs`. Press **Shift+F7** for the Windows Forms Designer. Do not select `MainForm.Designer.cs` as the design surface. Use F7 to return to code.

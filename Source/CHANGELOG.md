@@ -1,3 +1,14 @@
+# 1.0.0
+
+Camera Control Studio 1.0.0 is the first stable release.
+
+- **Troubleshooting.** A dedicated guide in all 12 languages explains camera connection, movement, field of view and presets. It includes the reported Zoom Workplace Efficiency Mode case and checks for possible conflicts with Logitech camera tools.
+- **GuideViewer.** Choose the guide language independently of your profile. Read the bundled guides or switch to the latest GitHub release. The viewer shows the installed and online versions when applicable.
+- **Print and PDF.** GuideViewer remembers the last selected printer. PDFs get a suggested name from the guide title and app version. Cancelling the save dialog returns to the guide. The print layout adds a 23 mm left margin for binding. PDF headers, footers and guide links open their destinations.
+- **Documentation.** Guides show the version they were written for. The repository includes Python tools to update guide version labels and review PDF output.
+
+The Windows installer and portable ZIP are unsigned. See the [Code signing policy](docs/SIGNPATH.md). Use `SHA256SUMS.txt` to verify the downloads.
+
 # 0.7.0-beta.8
 
 - Double-click the centre camera button to open the camera list. Choose single-click under **Settings → Movement** if you prefer it.

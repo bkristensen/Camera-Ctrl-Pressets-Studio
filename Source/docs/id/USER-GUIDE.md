@@ -1,5 +1,9 @@
 # Penggunaan dan pengaturan
 
+*Ditulis untuk Camera Control Studio 1.0.0.*
+
+[Pemecahan masalah](TROUBLESHOOTING.md)
+
 [Bahasa Indonesia · Camera Control Studio](../USER-GUIDES.md)
 
 Mulai dulu rapat yang akan disiarkan, misalnya di Zoom. Setelah itu, buka **Camera Control Studio**.

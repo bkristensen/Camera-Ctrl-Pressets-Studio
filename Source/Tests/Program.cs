@@ -26,6 +26,15 @@ class Program {
                 return GitHubReleases.FindNewer(installedVersion, payload);
         }
 
+        using (var payload = new MemoryStream(Encoding.UTF8.GetBytes(releases.Replace("URL", tagUrl))))
+        {
+            var latest = GitHubReleases.FindLatest(payload);
+            Check(latest.Tag == "v0.7.0-beta.10+abcdef" && latest.Version == "0.7.0-beta.10",
+                "the guide viewer can use the exact release tag even when the installed version is equal");
+            Check(!latest.IsNewerThan("0.7.0-beta.10+local") && latest.IsNewerThan("0.7.0-beta.9"),
+                "local guide banners are shown only for a newer release");
+        }
+
         var newer = CheckReleases("0.7.0-beta.3+91abc", releases);
         Check(newer?.Url.AbsoluteUri == tagUrl + "v0.7.0-beta.10",
             "release check orders numeric prereleases and skips drafts and foreign URLs");

@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">دائیں طرف کی کیفے میز</text>
   <text key="Preset example: Lectern + café table">خطابت کا اسٹینڈ + کیفے میز</text>
   <text key="Preset example: Table + lectern">میز + خطابت کا اسٹینڈ</text>
+  <text key="Troubleshooting">مسائل کا حل</text>
+  <text key="Guide language">رہنما کی زبان</text>
+  <text key="Use online guides">آن لائن رہنما استعمال کریں</text>
+  <text key="This guide is unavailable.">یہ رہنما دستیاب نہیں ہے۔</text>
+  <text key="This online guide is for the latest release.">یہ آن لائن رہنما تازہ ترین ریلیز کے لیے ہے۔</text>
+  <text key="The online guide is unavailable. Showing the local guide.">آن لائن رہنما دستیاب نہیں۔ مقامی رہنما دکھایا جا رہا ہے۔</text>
+  <text key="You are viewing a local guide. A newer release is available.">آپ مقامی رہنما دیکھ رہے ہیں۔ نئی ریلیز دستیاب ہے۔</text>
+  <text key="This guide is shown in English.">یہ رہنما انگریزی میں دکھایا جا رہا ہے۔</text>
+  <text key="Installed: {0} · Online: {1}">انسٹال شدہ: {0} · آن لائن: {1}</text>
+  <text key="View latest release">تازہ ترین ریلیز دیکھیں</text>
+  <text key="Printed: {0}">طباعت: {0}</text>
+  <text key="Project: {0}">منصوبہ: {0}</text>
 </translations>

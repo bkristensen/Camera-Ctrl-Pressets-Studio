@@ -1,5 +1,7 @@
 # Oversæt Camera Control Studio
 
+*Skrevet til Camera Control Studio 1.0.0.*
+
 ## Ret en oversættelse
 
 Åbn sprogets fil i `Source/Shared/Locales/<kode>.xml`. Brug `en.xml` som reference. Ret teksten mellem `<text>`-mærkerne, og behold nøgler, pladsholdere som `{0}` og gemte id'er. Gem filen som UTF-8. Skriv `&amp;` for et ampersand i XML.

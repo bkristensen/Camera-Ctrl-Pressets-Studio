@@ -2,7 +2,7 @@
 
 # Camera Control Studio
 
-**[Download Camera Control Studio](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/faq.md)
+**[Download Camera Control Studio](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)** · [User guides in 12 languages](Source/docs/USER-GUIDES.md) · [FAQ](Source/faq.md) · [Troubleshooting](Source/docs/en/TROUBLESHOOTING.md)
 
 Camera Control Studio is a Windows app for controlling a supported camera during video meetings, recordings and live streams. Move and zoom the camera manually, then save useful framings as named presets so you can switch between them during a session. For example, save a wide shot of a stage, a close-up of the speaker and a shot of the demonstration table.
 
@@ -20,7 +20,7 @@ Download the installer or portable ZIP under **Assets** on the [GitHub Releases 
 | Portable ZIP (`Camera-Control-Studio-*-portable.zip`) | Extract the entire archive and run `Camera Control Studio.exe`. The guides are in the extracted `docs` folder. |
 | `SHA256SUMS.txt` | When provided, compare the published SHA-256 hash with your downloaded file. |
 
-Use Windows with .NET Framework 4.8 and a driver that supports the camera controls you need. Windows may warn about the unsigned beta. [Check the download](Source/docs/en/SETUP.md#install-and-verify-the-download)
+Use Windows with .NET Framework 4.8 and a driver that supports the camera controls you need. Windows may warn about the unsigned downloads. [Check the download](Source/docs/en/SETUP.md#install-and-verify-the-download)
 
 To uninstall the Setup version, find Camera Control Studio under **Apps** in Windows Settings and select **Uninstall**. To remove the portable version, close the app and delete its extracted folder. If you used `Install.ps1`, remove the app folder under `%LOCALAPPDATA%\Programs\Camera Control Studio` and its Start menu shortcut. Profiles and settings stay in your Windows account.
 

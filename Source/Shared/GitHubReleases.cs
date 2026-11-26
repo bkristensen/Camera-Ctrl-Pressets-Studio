@@ -12,7 +12,7 @@ namespace CameraControlStudio
 {
     internal static class GitHubReleases
     {
-        const string Repository = "bkristensen/Camera-Ctrl-Pressets-Studio";
+        internal const string Repository = "bkristensen/Camera-Ctrl-Pressets-Studio";
         const string ReleasePath = "/" + Repository + "/releases/tag/";
         const string Endpoint = "https://api.github.com/repos/" + Repository + "/releases?per_page=100";
         const string VersionPattern = @"(?<version>[0-9]+\.[0-9]+\.[0-9]+)(?:-(?<prerelease>[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?";
@@ -22,16 +22,25 @@ namespace CameraControlStudio
 
         internal sealed class AvailableRelease
         {
-            internal AvailableRelease(string version, Uri url, DateTimeOffset? publishedAt)
+            internal AvailableRelease(string version, string tag, Uri url, DateTimeOffset? publishedAt)
             {
                 Version = version;
+                Tag = tag;
                 Url = url;
                 PublishedAt = publishedAt;
             }
 
             internal string Version { get; }
+            internal string Tag { get; }
             internal Uri Url { get; }
             internal DateTimeOffset? PublishedAt { get; }
+
+            internal bool IsNewerThan(string installedVersion)
+            {
+                return TryReadVersion(VersionTag.Match(installedVersion ?? ""), out var installed, out var installedPrerelease)
+                    && TryReadVersion(VersionTag.Match(Version), out var available, out var availablePrerelease)
+                    && CompareVersions(available, availablePrerelease, installed, installedPrerelease) > 0;
+            }
         }
 
         [DataContract]
@@ -64,7 +73,12 @@ namespace CameraControlStudio
             return client;
         }
 
-        internal static async Task<AvailableRelease> CheckAsync(string installedVersion)
+        internal static Task<AvailableRelease> CheckLatestAsync() => FetchAsync(FindLatest);
+
+        internal static Task<AvailableRelease> CheckAsync(string installedVersion) =>
+            FetchAsync(payload => FindNewer(installedVersion, payload));
+
+        static async Task<AvailableRelease> FetchAsync(Func<Stream, AvailableRelease> readRelease)
         {
             try
             {
@@ -73,7 +87,7 @@ namespace CameraControlStudio
                     if (!response.IsSuccessStatusCode)
                         return null;
                     using (var payload = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
-                        return FindNewer(installedVersion, payload);
+                        return readRelease(payload);
                 }
             }
             catch (Exception ex) when (ex is HttpRequestException || ex is OperationCanceledException
@@ -86,9 +100,14 @@ namespace CameraControlStudio
 
         internal static AvailableRelease FindNewer(string installedVersion, Stream payload)
         {
-            if (!TryReadVersion(VersionTag.Match(installedVersion ?? ""), out var latest, out var latestPrerelease))
-                return null;
+            var release = FindLatest(payload);
+            return release?.IsNewerThan(installedVersion) == true ? release : null;
+        }
 
+        internal static AvailableRelease FindLatest(Stream payload)
+        {
+            Version latest = null;
+            string latestPrerelease = "";
             var releases = (Release[])new DataContractJsonSerializer(typeof(Release[])).ReadObject(payload);
             AvailableRelease latestRelease = null;
             foreach (var release in releases ?? Array.Empty<Release>())
@@ -96,7 +115,8 @@ namespace CameraControlStudio
                 if (release == null || release.Draft || !Uri.TryCreate(release.Url, UriKind.Absolute, out var url)
                     || url.Scheme != Uri.UriSchemeHttps || url.Host != "github.com" || !url.IsDefaultPort
                     || url.UserInfo.Length != 0 || !url.AbsolutePath.StartsWith(ReleasePath, StringComparison.OrdinalIgnoreCase)
-                    || url.AbsolutePath.Length == ReleasePath.Length)
+                    || url.AbsolutePath.Length == ReleasePath.Length
+                    || string.IsNullOrEmpty(release.Tag) || release.Tag == "." || release.Tag == "..")
                     continue;
 
                 var versionMatch = VersionTag.Match(release.Tag ?? "");
@@ -107,8 +127,7 @@ namespace CameraControlStudio
                 if (!TryReadVersion(versionMatch, out var version, out var prerelease))
                     continue;
 
-                int order = version.CompareTo(latest);
-                if (order < 0 || (order == 0 && ComparePrerelease(prerelease, latestPrerelease) <= 0))
+                if (latest != null && CompareVersions(version, prerelease, latest, latestPrerelease) <= 0)
                     continue;
 
                 latest = version;
@@ -116,7 +135,7 @@ namespace CameraControlStudio
                 string displayVersion = prerelease.Length == 0 ? version.ToString() : version + "-" + prerelease;
                 DateTimeOffset? publishedAt = DateTimeOffset.TryParse(release.PublishedAt, CultureInfo.InvariantCulture,
                     DateTimeStyles.AssumeUniversal, out var date) ? date : (DateTimeOffset?)null;
-                latestRelease = new AvailableRelease(displayVersion, url, publishedAt);
+                latestRelease = new AvailableRelease(displayVersion, release.Tag, url, publishedAt);
             }
             return latestRelease;
         }
@@ -125,6 +144,12 @@ namespace CameraControlStudio
         {
             prerelease = match.Groups["prerelease"].Value;
             return Version.TryParse(match.Groups["version"].Value, out version);
+        }
+
+        static int CompareVersions(Version left, string leftPrerelease, Version right, string rightPrerelease)
+        {
+            int order = left.CompareTo(right);
+            return order == 0 ? ComparePrerelease(leftPrerelease, rightPrerelease) : order;
         }
 
         static int ComparePrerelease(string left, string right)

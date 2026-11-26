@@ -1,7 +1,7 @@
 ; Build from Windows with scripts/build-installer.ps1.
 ; This installer is unsigned until a publisher signing process is configured.
 #ifndef AppVersion
-  #define AppVersion "0.7.0-beta.3"
+  #define AppVersion "1.0.0"
 #endif
 #define RepoRoot AddBackslash(SourcePath) + ".."
 

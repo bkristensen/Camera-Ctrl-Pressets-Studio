@@ -4,7 +4,7 @@ Profiles, camera IDs, positions, image settings and layout stay in your Windows 
 
 At startup, the app checks GitHub’s public release list. It sends no profile, camera or diagnostic data. Select the footer link to open the release.
 
-GuideViewer uses Microsoft Edge WebView2 to display the bundled guides. WebView2 includes Microsoft Defender SmartScreen and may send diagnostic and security information to Microsoft. See how Microsoft handles this data. [WebView2 data and privacy](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy) · [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement)
+GuideViewer checks GitHub for the latest release. When you select **Use online guides**, it requests the selected guide and its images from that release on GitHub. These requests include the guide path and language. They do not contain profile, camera or diagnostic data. GuideViewer uses Microsoft Edge WebView2 to display the guides. WebView2 includes Microsoft Defender SmartScreen and may send diagnostic and security information to Microsoft. See how Microsoft handles this data. [WebView2 data and privacy](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy) · [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement)
 
 About links open an external website only when you select them. Those websites apply their own privacy policies. Build tools may contact Microsoft, NuGet, GitHub or signing services when the developer runs them.
 

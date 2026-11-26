@@ -2,6 +2,8 @@
 
 # Ret brugerflade og oversættelser
 
+*Skrevet til Camera Control Studio 1.0.0.*
+
 ## Åbn den rigtige fil
 
 Åbn `Camera-Control-Pressets-Studio.sln`. Byg løsningen. Find derefter `CameraControlStudio → Forms → MainForm.cs` i Solution Explorer. Tryk **Shift+F7** for at åbne Windows Forms Designer. Vælg ikke `MainForm.Designer.cs` som designflade. F7 viser koden igen.

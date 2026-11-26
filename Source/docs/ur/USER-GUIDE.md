@@ -1,5 +1,9 @@
 # استعمال اور ترتیبات
 
+*یہ رہنما Camera Control Studio 1.0.0 کے لیے لکھا گیا ہے۔*
+
+[مسائل کا حل](TROUBLESHOOTING.md)
+
 [اردو · Camera Control Studio](../USER-GUIDES.md)
 
 پہلے Zoom جیسی ایپ میں وہ میٹنگ شروع کریں جسے آپ نشر کرنا چاہتے ہیں۔ پھر **Camera Control Studio** کھولیں۔

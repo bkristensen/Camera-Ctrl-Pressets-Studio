@@ -2,6 +2,10 @@
 
 # Anwendung einrichten
 
+*Geschrieben für Camera Control Studio 1.0.0.*
+
+[Fehlerbehebung](TROUBLESHOOTING.md)
+
 Klicken Sie unten auf das Zahnrad. Die Einstellungen öffnen sich rechts. Die Positionsliste bleibt sichtbar.
 
 ![Hauptfenster mit geöffnetem Einstellungsbereich rechts](../images/screenshots/0.7.0-beta.7/de/main-settings.png)

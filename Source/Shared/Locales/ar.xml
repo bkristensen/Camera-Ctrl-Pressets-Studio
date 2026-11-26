@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">طاولة المقهى اليمنى</text>
   <text key="Preset example: Lectern + café table">المنبر + طاولة المقهى</text>
   <text key="Preset example: Table + lectern">الطاولة + المنبر</text>
+  <text key="Troubleshooting">استكشاف الأخطاء وإصلاحها</text>
+  <text key="Guide language">لغة الدليل</text>
+  <text key="Use online guides">استخدام الأدلة عبر الإنترنت</text>
+  <text key="This guide is unavailable.">هذا الدليل غير متاح.</text>
+  <text key="This online guide is for the latest release.">هذا الدليل عبر الإنترنت يخص أحدث إصدار.</text>
+  <text key="The online guide is unavailable. Showing the local guide.">الدليل عبر الإنترنت غير متاح. يُعرض الدليل المحلي.</text>
+  <text key="You are viewing a local guide. A newer release is available.">أنت تعرض الدليل المحلي. يتوفر إصدار أحدث.</text>
+  <text key="This guide is shown in English.">يُعرض هذا الدليل باللغة الإنجليزية.</text>
+  <text key="Installed: {0} · Online: {1}">المثبّت: {0} · عبر الإنترنت: {1}</text>
+  <text key="View latest release">عرض أحدث إصدار</text>
+  <text key="Printed: {0}">طُبع: {0}</text>
+  <text key="Project: {0}">المشروع: {0}</text>
 </translations>

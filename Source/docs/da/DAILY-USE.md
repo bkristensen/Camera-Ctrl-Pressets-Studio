@@ -2,6 +2,10 @@
 
 # Daglig brug
 
+*Skrevet til Camera Control Studio 1.0.0.*
+
+[Fejlfinding](TROUBLESHOOTING.md)
+
 Start mødet i f.eks. Zoom. Åbn derefter **Camera Control Studio**.
 
 ![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/0.7.0-beta.7/da/main.png)

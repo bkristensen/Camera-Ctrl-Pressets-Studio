@@ -2,6 +2,10 @@
 
 # Set up the application
 
+*Written for Camera Control Studio 1.0.0.*
+
+[Troubleshooting](TROUBLESHOOTING.md)
+
 Open the gear in the footer. Settings open on the right. Your position list stays visible.
 
 ![Main window with the settings pane open on the right](../images/screenshots/0.7.0-beta.7/en/main-settings.png)

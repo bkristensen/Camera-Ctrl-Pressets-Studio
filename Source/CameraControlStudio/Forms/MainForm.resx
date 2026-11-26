@@ -168,7 +168,7 @@ Use the widest view and minimum zoom.</value>
     <value>fullFrame</value>
   </data>
   <data name="&gt;&gt;fullFrame.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fullFrame.Parent" xml:space="preserve">
     <value>zoomPanel</value>
@@ -204,7 +204,7 @@ Use the widest view and minimum zoom.</value>
     <value>wheel</value>
   </data>
   <data name="&gt;&gt;wheel.Type" xml:space="preserve">
-    <value>CameraControlStudio.PanWheel, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.PanWheel, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;wheel.Parent" xml:space="preserve">
     <value>motionPanel</value>
@@ -294,7 +294,7 @@ Use the widest view and minimum zoom.</value>
     <value>finePanPercent</value>
   </data>
   <data name="&gt;&gt;finePanPercent.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;finePanPercent.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -357,7 +357,7 @@ Use the widest view and minimum zoom.</value>
     <value>panSteps</value>
   </data>
   <data name="&gt;&gt;panSteps.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panSteps.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -420,7 +420,7 @@ Use the widest view and minimum zoom.</value>
     <value>fastPanSteps</value>
   </data>
   <data name="&gt;&gt;fastPanSteps.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;fastPanSteps.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -483,7 +483,7 @@ Use the widest view and minimum zoom.</value>
     <value>zoomSteps</value>
   </data>
   <data name="&gt;&gt;zoomSteps.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;zoomSteps.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -513,7 +513,7 @@ Use the widest view and minimum zoom.</value>
     <value>useTransitionSpeed</value>
   </data>
   <data name="&gt;&gt;useTransitionSpeed.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;useTransitionSpeed.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -579,7 +579,7 @@ Use the widest view and minimum zoom.</value>
     <value>transitionSpeedPercent</value>
   </data>
   <data name="&gt;&gt;transitionSpeedPercent.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;transitionSpeedPercent.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -642,7 +642,7 @@ Use the widest view and minimum zoom.</value>
     <value>seconds</value>
   </data>
   <data name="&gt;&gt;seconds.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;seconds.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -672,7 +672,7 @@ Use the widest view and minimum zoom.</value>
     <value>reverseX</value>
   </data>
   <data name="&gt;&gt;reverseX.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;reverseX.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -702,7 +702,7 @@ Use the widest view and minimum zoom.</value>
     <value>reverseY</value>
   </data>
   <data name="&gt;&gt;reverseY.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;reverseY.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -792,7 +792,7 @@ Use the widest view and minimum zoom.</value>
     <value>allowFov</value>
   </data>
   <data name="&gt;&gt;allowFov.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;allowFov.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -819,7 +819,7 @@ Use the widest view and minimum zoom.</value>
     <value>adjustFovAtLimits</value>
   </data>
   <data name="&gt;&gt;adjustFovAtLimits.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;adjustFovAtLimits.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -849,7 +849,7 @@ Use the widest view and minimum zoom.</value>
     <value>panWithCameraButton</value>
   </data>
   <data name="&gt;&gt;panWithCameraButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panWithCameraButton.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -879,7 +879,7 @@ Use the widest view and minimum zoom.</value>
     <value>doubleClickForCameraSource</value>
   </data>
   <data name="&gt;&gt;doubleClickForCameraSource.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;doubleClickForCameraSource.Parent" xml:space="preserve">
     <value>generalFields</value>
@@ -1035,7 +1035,7 @@ Use the widest view and minimum zoom.</value>
     <value>streamingCheck</value>
   </data>
   <data name="&gt;&gt;streamingCheck.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;streamingCheck.Parent" xml:space="preserve">
     <value>windowFields</value>
@@ -1065,7 +1065,7 @@ Use the widest view and minimum zoom.</value>
     <value>alwaysTop</value>
   </data>
   <data name="&gt;&gt;alwaysTop.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;alwaysTop.Parent" xml:space="preserve">
     <value>windowFields</value>
@@ -1326,7 +1326,7 @@ Use the widest view and minimum zoom.</value>
     <value>loadVideoControls</value>
   </data>
   <data name="&gt;&gt;loadVideoControls.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;loadVideoControls.Parent" xml:space="preserve">
     <value>videoStatus</value>
@@ -1428,7 +1428,7 @@ Use the widest view and minimum zoom.</value>
     <value>gainAutomatic</value>
   </data>
   <data name="&gt;&gt;gainAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;gainAutomatic.Parent" xml:space="preserve">
     <value>gainControl</value>
@@ -1518,7 +1518,7 @@ Use the widest view and minimum zoom.</value>
     <value>exposureAutomatic</value>
   </data>
   <data name="&gt;&gt;exposureAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;exposureAutomatic.Parent" xml:space="preserve">
     <value>exposureControl</value>
@@ -1608,7 +1608,7 @@ Use the widest view and minimum zoom.</value>
     <value>focusAutomatic</value>
   </data>
   <data name="&gt;&gt;focusAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;focusAutomatic.Parent" xml:space="preserve">
     <value>focusControl</value>
@@ -1749,7 +1749,7 @@ Use the widest view and minimum zoom.</value>
     <value>whiteBalanceAutomatic</value>
   </data>
   <data name="&gt;&gt;whiteBalanceAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;whiteBalanceAutomatic.Parent" xml:space="preserve">
     <value>whiteBalanceControl</value>
@@ -1839,7 +1839,7 @@ Use the widest view and minimum zoom.</value>
     <value>saturationAutomatic</value>
   </data>
   <data name="&gt;&gt;saturationAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;saturationAutomatic.Parent" xml:space="preserve">
     <value>saturationControl</value>
@@ -1929,7 +1929,7 @@ Use the widest view and minimum zoom.</value>
     <value>gammaAutomatic</value>
   </data>
   <data name="&gt;&gt;gammaAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;gammaAutomatic.Parent" xml:space="preserve">
     <value>gammaControl</value>
@@ -2019,7 +2019,7 @@ Use the widest view and minimum zoom.</value>
     <value>hueAutomatic</value>
   </data>
   <data name="&gt;&gt;hueAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;hueAutomatic.Parent" xml:space="preserve">
     <value>hueControl</value>
@@ -2160,7 +2160,7 @@ Use the widest view and minimum zoom.</value>
     <value>contrastAutomatic</value>
   </data>
   <data name="&gt;&gt;contrastAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;contrastAutomatic.Parent" xml:space="preserve">
     <value>contrastControl</value>
@@ -2250,7 +2250,7 @@ Use the widest view and minimum zoom.</value>
     <value>brightnessAutomatic</value>
   </data>
   <data name="&gt;&gt;brightnessAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;brightnessAutomatic.Parent" xml:space="preserve">
     <value>brightnessControl</value>
@@ -2340,7 +2340,7 @@ Use the widest view and minimum zoom.</value>
     <value>backlightAutomatic</value>
   </data>
   <data name="&gt;&gt;backlightAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backlightAutomatic.Parent" xml:space="preserve">
     <value>backlightControl</value>
@@ -2430,7 +2430,7 @@ Use the widest view and minimum zoom.</value>
     <value>sharpnessAutomatic</value>
   </data>
   <data name="&gt;&gt;sharpnessAutomatic.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;sharpnessAutomatic.Parent" xml:space="preserve">
     <value>sharpnessControl</value>
@@ -2586,7 +2586,7 @@ Use the widest view and minimum zoom.</value>
     <value>resetVideoControls</value>
   </data>
   <data name="&gt;&gt;resetVideoControls.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;resetVideoControls.Parent" xml:space="preserve">
     <value>imagePages</value>
@@ -3039,7 +3039,7 @@ Use the widest view and minimum zoom.</value>
     <value>openGuideButton</value>
   </data>
   <data name="&gt;&gt;openGuideButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;openGuideButton.Parent" xml:space="preserve">
     <value>aboutPanel</value>
@@ -3225,7 +3225,7 @@ Use the widest view and minimum zoom.</value>
     <value>normalIn</value>
   </data>
   <data name="&gt;&gt;normalIn.Type" xml:space="preserve">
-    <value>CameraControlStudio.ZoomButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.ZoomButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;normalIn.Parent" xml:space="preserve">
     <value>zoomPanel</value>
@@ -3252,7 +3252,7 @@ Use the widest view and minimum zoom.</value>
     <value>zoomSlider</value>
   </data>
   <data name="&gt;&gt;zoomSlider.Type" xml:space="preserve">
-    <value>CameraControlStudio.ZoomSlider, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.ZoomSlider, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;zoomSlider.Parent" xml:space="preserve">
     <value>zoomPanel</value>
@@ -3282,7 +3282,7 @@ Use the widest view and minimum zoom.</value>
     <value>normalOut</value>
   </data>
   <data name="&gt;&gt;normalOut.Type" xml:space="preserve">
-    <value>CameraControlStudio.ZoomButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.ZoomButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;normalOut.Parent" xml:space="preserve">
     <value>zoomPanel</value>
@@ -3474,7 +3474,7 @@ Use the widest view and minimum zoom.</value>
     <value>deleteTemporaryButton</value>
   </data>
   <data name="&gt;&gt;deleteTemporaryButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;deleteTemporaryButton.Parent" xml:space="preserve">
     <value>presetHeader</value>
@@ -3507,7 +3507,7 @@ Use the widest view and minimum zoom.</value>
     <value>temporaryButton</value>
   </data>
   <data name="&gt;&gt;temporaryButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;temporaryButton.Parent" xml:space="preserve">
     <value>presetHeader</value>
@@ -3648,7 +3648,7 @@ Use the widest view and minimum zoom.</value>
     <value>mainSplit</value>
   </data>
   <data name="&gt;&gt;mainSplit.Type" xml:space="preserve">
-    <value>CameraControlStudio.MainViewSplitter, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.MainViewSplitter, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mainSplit.Parent" xml:space="preserve">
     <value>body</value>
@@ -3753,7 +3753,7 @@ Use the widest view and minimum zoom.</value>
     <value>addPermanent</value>
   </data>
   <data name="&gt;&gt;addPermanent.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;addPermanent.Parent" xml:space="preserve">
     <value>permanentActions</value>
@@ -3786,7 +3786,7 @@ Use the widest view and minimum zoom.</value>
     <value>editPermanent</value>
   </data>
   <data name="&gt;&gt;editPermanent.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;editPermanent.Parent" xml:space="preserve">
     <value>permanentActions</value>
@@ -3819,7 +3819,7 @@ Use the widest view and minimum zoom.</value>
     <value>updatePermanent</value>
   </data>
   <data name="&gt;&gt;updatePermanent.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;updatePermanent.Parent" xml:space="preserve">
     <value>permanentActions</value>
@@ -3852,7 +3852,7 @@ Use the widest view and minimum zoom.</value>
     <value>deletePermanent</value>
   </data>
   <data name="&gt;&gt;deletePermanent.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;deletePermanent.Parent" xml:space="preserve">
     <value>permanentActions</value>
@@ -3885,7 +3885,7 @@ Use the widest view and minimum zoom.</value>
     <value>movePermanentUp</value>
   </data>
   <data name="&gt;&gt;movePermanentUp.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;movePermanentUp.Parent" xml:space="preserve">
     <value>permanentActions</value>
@@ -3918,7 +3918,7 @@ Use the widest view and minimum zoom.</value>
     <value>movePermanentDown</value>
   </data>
   <data name="&gt;&gt;movePermanentDown.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;movePermanentDown.Parent" xml:space="preserve">
     <value>permanentActions</value>
@@ -4140,7 +4140,7 @@ Use the widest view and minimum zoom.</value>
     <value>newProfile</value>
   </data>
   <data name="&gt;&gt;newProfile.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;newProfile.Parent" xml:space="preserve">
     <value>profileActions</value>
@@ -4173,7 +4173,7 @@ Use the widest view and minimum zoom.</value>
     <value>copyProfile</value>
   </data>
   <data name="&gt;&gt;copyProfile.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;copyProfile.Parent" xml:space="preserve">
     <value>profileActions</value>
@@ -4206,7 +4206,7 @@ Use the widest view and minimum zoom.</value>
     <value>renameProfile</value>
   </data>
   <data name="&gt;&gt;renameProfile.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;renameProfile.Parent" xml:space="preserve">
     <value>profileActions</value>
@@ -4665,7 +4665,7 @@ Use the widest view and minimum zoom.</value>
     <value>footerSeparator</value>
   </data>
   <data name="&gt;&gt;footerSeparator.Type" xml:space="preserve">
-    <value>CameraControlStudio.MainViewSeparator, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.MainViewSeparator, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;footerSeparator.Parent" xml:space="preserve">
     <value>root</value>
@@ -4842,7 +4842,7 @@ Use the widest view and minimum zoom.</value>
     <value>profileButton</value>
   </data>
   <data name="&gt;&gt;profileButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;profileButton.Parent" xml:space="preserve">
     <value>footer</value>
@@ -4878,7 +4878,7 @@ Use the widest view and minimum zoom.</value>
     <value>helpButton</value>
   </data>
   <data name="&gt;&gt;helpButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;helpButton.Parent" xml:space="preserve">
     <value>footer</value>
@@ -4914,7 +4914,7 @@ Use the widest view and minimum zoom.</value>
     <value>settingsButton</value>
   </data>
   <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
-    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;settingsButton.Parent" xml:space="preserve">
     <value>footer</value>
@@ -6935,6 +6935,6 @@ Use the widest view and minimum zoom.</value>
     <value>MainForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CameraControlStudio.AppForm, Camera Control Studio, Version=0.7.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>CameraControlStudio.AppForm, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

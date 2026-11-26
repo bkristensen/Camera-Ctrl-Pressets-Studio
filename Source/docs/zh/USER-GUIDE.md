@@ -1,5 +1,9 @@
 # 使用与设置
 
+*本指南适用于 Camera Control Studio 1.0.0。*
+
+[故障排查](TROUBLESHOOTING.md)
+
 [简体中文 · Camera Control Studio](../USER-GUIDES.md)
 
 先在 Zoom 等应用中开始要直播的会议，然后打开 **Camera Control Studio**。

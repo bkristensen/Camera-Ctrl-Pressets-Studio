@@ -2,6 +2,8 @@
 
 # Oberfläche und Übersetzungen bearbeiten
 
+*Geschrieben für Camera Control Studio 1.0.0.*
+
 ## Richtige Datei öffnen
 
 Öffnen Sie `Camera-Control-Pressets-Studio.sln`. Erstellen Sie die Projektmappe. Öffnen Sie dann `CameraControlStudio → Forms → MainForm.cs` im Solution Explorer. **Shift+F7** öffnet den Windows Forms Designer. Wählen Sie nicht `MainForm.Designer.cs` als Designfläche. F7 zeigt wieder den Code.

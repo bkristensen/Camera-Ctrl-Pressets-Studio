@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">右侧咖啡桌</text>
   <text key="Preset example: Lectern + café table">讲台 + 咖啡桌</text>
   <text key="Preset example: Table + lectern">桌子 + 讲台</text>
+  <text key="Troubleshooting">故障排查</text>
+  <text key="Guide language">指南语言</text>
+  <text key="Use online guides">使用在线指南</text>
+  <text key="This guide is unavailable.">此指南不可用。</text>
+  <text key="This online guide is for the latest release.">此在线指南适用于最新版本。</text>
+  <text key="The online guide is unavailable. Showing the local guide.">在线指南不可用，现显示本地指南。</text>
+  <text key="You are viewing a local guide. A newer release is available.">你正在查看本地指南。有更新版本可用。</text>
+  <text key="This guide is shown in English.">此指南以英语显示。</text>
+  <text key="Installed: {0} · Online: {1}">已安装：{0} · 在线：{1}</text>
+  <text key="View latest release">查看最新版本</text>
+  <text key="Printed: {0}">打印时间：{0}</text>
+  <text key="Project: {0}">项目：{0}</text>
 </translations>

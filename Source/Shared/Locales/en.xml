@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">Right café table</text>
   <text key="Preset example: Lectern + café table">Lectern + café table</text>
   <text key="Preset example: Table + lectern">Table + lectern</text>
+  <text key="Troubleshooting">Troubleshooting</text>
+  <text key="Guide language">Guide language</text>
+  <text key="Use online guides">Use online guides</text>
+  <text key="This guide is unavailable.">This guide is unavailable.</text>
+  <text key="This online guide is for the latest release.">This online guide is for the latest release.</text>
+  <text key="The online guide is unavailable. Showing the local guide.">The online guide is unavailable. Showing the local guide.</text>
+  <text key="You are viewing a local guide. A newer release is available.">You are viewing a local guide. A newer release is available.</text>
+  <text key="This guide is shown in English.">This guide is shown in English.</text>
+  <text key="Installed: {0} · Online: {1}">Installed: {0} · Online: {1}</text>
+  <text key="View latest release">View latest release</text>
+  <text key="Printed: {0}">Printed: {0}</text>
+  <text key="Project: {0}">Project: {0}</text>
 </translations>

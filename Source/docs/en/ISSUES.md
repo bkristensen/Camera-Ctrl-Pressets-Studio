@@ -1,5 +1,9 @@
 # Report or follow an issue
 
+*Written for Camera Control Studio 1.0.0.*
+
+[Troubleshooting](TROUBLESHOOTING.md)
+
 ## Search before reporting
 
 **Report a bug or suggest a feature**\

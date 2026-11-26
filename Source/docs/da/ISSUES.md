@@ -1,5 +1,9 @@
 # Indberet eller følg en sag
 
+*Skrevet til Camera Control Studio 1.0.0.*
+
+[Fejlfinding](TROUBLESHOOTING.md)
+
 ## Søg først
 
 **Meld en fejl eller foreslå en funktion**\

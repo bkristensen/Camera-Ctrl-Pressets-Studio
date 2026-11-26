@@ -2,6 +2,10 @@
 
 # Sæt programmet op
 
+*Skrevet til Camera Control Studio 1.0.0.*
+
+[Fejlfinding](TROUBLESHOOTING.md)
+
 Tryk på tandhjulet i bunden. Indstillinger åbner til højre. Positionslisten bliver ved med at være synlig.
 
 ![Hovedvinduet med indstillingerne åbne til højre](../images/screenshots/0.7.0-beta.7/da/main-settings.png)

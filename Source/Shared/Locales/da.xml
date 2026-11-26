@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">Højre Cafébord</text>
   <text key="Preset example: Lectern + café table">Talerstol + Cafébord</text>
   <text key="Preset example: Table + lectern">Bord + Talerstol</text>
+  <text key="Troubleshooting">Fejlfinding</text>
+  <text key="Guide language">Guidens sprog</text>
+  <text key="Use online guides">Brug onlineguider</text>
+  <text key="This guide is unavailable.">Guiden er ikke tilgængelig.</text>
+  <text key="This online guide is for the latest release.">Denne onlineguide gælder den nyeste version.</text>
+  <text key="The online guide is unavailable. Showing the local guide.">Onlineguiden er ikke tilgængelig. Den lokale guide vises.</text>
+  <text key="You are viewing a local guide. A newer release is available.">Du læser en lokal guide. En nyere version er tilgængelig.</text>
+  <text key="This guide is shown in English.">Guiden vises på engelsk.</text>
+  <text key="Installed: {0} · Online: {1}">Installeret: {0} · Online: {1}</text>
+  <text key="View latest release">Se den nyeste version</text>
+  <text key="Printed: {0}">Udskrevet: {0}</text>
+  <text key="Project: {0}">Projekt: {0}</text>
 </translations>

@@ -6,7 +6,7 @@
 
 Control a Windows camera and save your shots as named positions. Recall a position when you need it. **Brian Kristensen, Vejle Uhrhøj, Denmark**, develops the app as open source.
 
-**Source version 0.7.0-beta.7.** The beta builds are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
+**Source version 1.0.0.** The Windows downloads are unsigned. See the [validation notes](docs/VALIDATION.md) for the checks that were run.
 
 | Language | Set up | Daily use |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ Open **`Camera-Control-Pressets-Studio.sln`** in Visual Studio. Import `.vsconfi
 
 If WinGet is unavailable, install the SDK from [Microsoft](https://dotnet.microsoft.com/download/dotnet/8.0), reopen the terminal, then run the command above. The application targets .NET Framework 4.8; the tests target .NET 8. This is WinForms, not WPF.
 
-[Build and release guide](docs/en/BUILD-AND-RELEASE.md) · [Visual editing](docs/en/DEVELOPMENT.md) · [Project details](docs/PROJECT.md) · [FAQ](faq.md) · [Release checklist](docs/RELEASE-CHECKLIST.md)
+[Build and release guide](docs/en/BUILD-AND-RELEASE.md) · [Visual editing](docs/en/DEVELOPMENT.md) · [Project details](docs/PROJECT.md) · [FAQ](faq.md) · [Troubleshooting](docs/en/TROUBLESHOOTING.md) · [Release checklist](docs/RELEASE-CHECKLIST.md)
 
 ## Contribute
 

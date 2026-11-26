@@ -1,5 +1,9 @@
 # ব্যবহার ও সেটিংস
 
+*এই নির্দেশিকা Camera Control Studio 1.0.0 সংস্করণের জন্য লেখা।*
+
+[সমস্যা সমাধান](TROUBLESHOOTING.md)
+
 [বাংলা · Camera Control Studio](../USER-GUIDES.md)
 
 প্রথমে Zoom-এর মতো কোনো অ্যাপে যে মিটিংটি স্ট্রিম করবেন সেটি শুরু করুন। তারপর **Camera Control Studio** খুলুন।

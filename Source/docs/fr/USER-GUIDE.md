@@ -1,5 +1,9 @@
 # Utilisation et paramètres
 
+*Rédigé pour Camera Control Studio 1.0.0.*
+
+[Dépannage](TROUBLESHOOTING.md)
+
 [Français · Camera Control Studio](../USER-GUIDES.md)
 
 Lancez d’abord votre réunion en streaming, par exemple dans Zoom. Ouvrez ensuite **Camera Control Studio**.

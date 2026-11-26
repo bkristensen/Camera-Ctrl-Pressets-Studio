@@ -1,5 +1,9 @@
 # الاستخدام والإعدادات
 
+*كُتب هذا الدليل للإصدار 1.0.0 من Camera Control Studio.*
+
+[استكشاف الأخطاء وإصلاحها](TROUBLESHOOTING.md)
+
 [العربية الفصحى · Camera Control Studio](../USER-GUIDES.md)
 
 ابدأ أولًا الاجتماع الذي تريد بثّه، مثلًا في Zoom، ثم افتح **Camera Control Studio**.

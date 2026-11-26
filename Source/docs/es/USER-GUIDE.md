@@ -1,5 +1,9 @@
 # Uso y configuración
 
+*Escrita para Camera Control Studio 1.0.0.*
+
+[Solución de problemas](TROUBLESHOOTING.md)
+
 [Español · Camera Control Studio](../USER-GUIDES.md)
 
 Inicia primero la reunión que vas a transmitir, por ejemplo, en Zoom. Luego abre **Camera Control Studio**.

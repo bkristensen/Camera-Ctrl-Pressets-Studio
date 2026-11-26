@@ -228,4 +228,16 @@
   <text key="Preset example: Right café table">Rechter Cafétisch</text>
   <text key="Preset example: Lectern + café table">Rednerpult + Cafétisch</text>
   <text key="Preset example: Table + lectern">Tisch + Rednerpult</text>
+  <text key="Troubleshooting">Fehlerbehebung</text>
+  <text key="Guide language">Sprache der Anleitung</text>
+  <text key="Use online guides">Online-Anleitungen verwenden</text>
+  <text key="This guide is unavailable.">Diese Anleitung ist nicht verfügbar.</text>
+  <text key="This online guide is for the latest release.">Diese Online-Anleitung gilt für die neueste Version.</text>
+  <text key="The online guide is unavailable. Showing the local guide.">Die Online-Anleitung ist nicht verfügbar. Die lokale Anleitung wird angezeigt.</text>
+  <text key="You are viewing a local guide. A newer release is available.">Sie lesen eine lokale Anleitung. Eine neuere Version ist verfügbar.</text>
+  <text key="This guide is shown in English.">Diese Anleitung wird auf Englisch angezeigt.</text>
+  <text key="Installed: {0} · Online: {1}">Installiert: {0} · Online: {1}</text>
+  <text key="View latest release">Neueste Version anzeigen</text>
+  <text key="Printed: {0}">Gedruckt: {0}</text>
+  <text key="Project: {0}">Projekt: {0}</text>
 </translations>

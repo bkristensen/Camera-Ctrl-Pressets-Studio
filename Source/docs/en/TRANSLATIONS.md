@@ -1,5 +1,7 @@
 # Translate Camera Control Studio
 
+*Written for Camera Control Studio 1.0.0.*
+
 ## Edit an existing language
 
 1. Open `Source/Shared/Locales/<code>.xml`. Use `en.xml` as the reference for context and keys.
