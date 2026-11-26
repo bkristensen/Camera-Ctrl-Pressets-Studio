@@ -2,13 +2,13 @@
 
 # Sæt programmet op
 
-*Skrevet til Camera Control Studio 1.0.0.*
+*Skrevet til Camera Control Studio 1.0.1.*
 
 [Fejlfinding](TROUBLESHOOTING.md)
 
 Tryk på tandhjulet i bunden. Indstillinger åbner til højre. Positionslisten bliver ved med at være synlig.
 
-![Hovedvinduet med indstillingerne åbne til højre](../images/screenshots/0.7.0-beta.7/da/main-settings.png)
+![Hovedvinduet med indstillingerne åbne til højre](../images/screenshots/1.0.1/da/main-settings.png)
 
 ## Installér og kontrollér downloadet
 
@@ -35,7 +35,7 @@ Brug profilvælgeren i bunden til at vælge profil. Opret en profil under **Inds
 
 Dobbeltklik på kamerasymbolet midt i kamerahjulet for at vælge kamera. Programmet husker valget. Hvis kameraet mangler, skal du vælge en anden kilde. Positioner hører til et bestemt kamera i en profil.
 
-![Fanen Profiler med profillisten og knapperne](../images/screenshots/0.7.0-beta.7/da/profiles.png)
+![Fanen Profiler med profillisten og knapperne](../images/screenshots/1.0.1/da/profiles.png)
 
 ## 2. Vælg, hvornår kamerastyringen må starte
 
@@ -45,13 +45,13 @@ Med fluebenet sat spørger den første kamerafunktion, om streaming er startet. 
 
 Har du brug for denne rækkefølge, skal du sætte fluebenet før næste session. Standardindstillingen tillader forbindelse ved opstart.
 
-![Fanen Program med streamingbekræftelse, vinduesindstillinger og profilsprog](../images/screenshots/0.7.0-beta.7/da/application.png)
+![Fanen Program med streamingbekræftelse, vinduesindstillinger og profilsprog](../images/screenshots/1.0.1/da/application.png)
 
 ## 3. Indstil bevægelse og zoom
 
 Ret værdierne under **Indstillinger → Bevægelse**. Start med små trin. Se resultatet i dit optageprogram.
 
-![Fanen Bevægelse med trin til panorering, zoom og positionsskift](../images/screenshots/0.7.0-beta.7/da/settings.png)
+![Fanen Bevægelse med trin til panorering, zoom og positionsskift](../images/screenshots/1.0.1/da/settings.png)
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
@@ -85,9 +85,9 @@ Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Æld
 
 ## 4. Tilpas billedet og gem faste positioner
 
-![Fokus og eksponering på fanen Video](../images/screenshots/0.7.0-beta.7/da/image.png)
+![Fokus og eksponering på fanen Video](../images/screenshots/1.0.1/da/image.png)
 
-[Før videoindstillingerne indlæses](../images/screenshots/0.7.0-beta.7/da/video.png) · [Farve](../images/screenshots/0.7.0-beta.7/da/video-colour.png) · [Lys og detaljer](../images/screenshots/0.7.0-beta.7/da/video-light-detail.png)
+[Før videoindstillingerne indlæses](../images/screenshots/1.0.1/da/video.png) · [Farve](../images/screenshots/1.0.1/da/video-colour.png) · [Lys og detaljer](../images/screenshots/1.0.1/da/video-light-detail.png)
 
 Vælg **Video** i indstillingspanelet. Indlæs billedindstillinger, hvis det er nødvendigt. Vælg **Fokus og eksponering**, **Farve** eller **Lys og detaljer**. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
 
@@ -97,7 +97,7 @@ Under **Faste positioner** kan du holde musen over symbolerne for at se deres fu
 
 En fast position, du markerer i hovedlisten, markeres også i indstillingerne. Når du gemmer en ny fast position, markeres den i indstillingerne.
 
-![Fanen Positioner med listen over faste positioner og knapperne](../images/screenshots/0.7.0-beta.7/da/presets.png)
+![Fanen Positioner med listen over faste positioner og knapperne](../images/screenshots/1.0.1/da/presets.png)
 
 ## 5. Tilpas udseende og sprog
 
@@ -111,11 +111,11 @@ Vælg sprog under **Indstillinger → Program → Profilsprog**, og genstart for
 
 Åbn **Om** for at se versionen og projektets links. Hold musen over versionen for at se det fulde build-id. Skriv det i en fejlrapport, hvis fejlen gælder en bestemt build.
 
-![Fanen Om med version, udvikler og projektlinks](../images/screenshots/0.7.0-beta.7/da/about.png)
+![Fanen Om med version, udvikler og projektlinks](../images/screenshots/1.0.1/da/about.png)
 
 ## 7. Diagnoselogfiler og fejlrapporter
 
-![Fanen Fejlrapport med logindstillinger og rapportering på GitHub](../images/screenshots/0.7.0-beta.7/da/issues.png)
+![Fanen Fejlrapport med logindstillinger og rapportering på GitHub](../images/screenshots/1.0.1/da/issues.png)
 
 Åbn fanen **Fejlrapport** for at vælge logmappe, maksimal filstørrelse og antal logfiler inklusive den aktive. Som standard skrives loggen i programmappen eller i `%LOCALAPPDATA%\CamPressets\Logs`, hvis programmappen ikke kan bruges.
 

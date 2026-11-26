@@ -1,6 +1,6 @@
 # Indberet eller følg en sag
 
-*Skrevet til Camera Control Studio 1.0.0.*
+*Skrevet til Camera Control Studio 1.0.1.*
 
 [Fejlfinding](TROUBLESHOOTING.md)
 

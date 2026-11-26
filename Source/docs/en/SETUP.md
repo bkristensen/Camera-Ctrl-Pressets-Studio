@@ -2,13 +2,13 @@
 
 # Set up the application
 
-*Written for Camera Control Studio 1.0.0.*
+*Written for Camera Control Studio 1.0.1.*
 
 [Troubleshooting](TROUBLESHOOTING.md)
 
 Open the gear in the footer. Settings open on the right. Your position list stays visible.
 
-![Main window with the settings pane open on the right](../images/screenshots/0.7.0-beta.7/en/main-settings.png)
+![Main window with the settings pane open on the right](../images/screenshots/1.0.1/en/main-settings.png)
 
 ## Install and verify the download
 
@@ -35,7 +35,7 @@ Use the profile picker in the footer to select a profile. To create one, open **
 
 Double-click the camera symbol in the centre of the direction wheel to select a camera. The program remembers it. If that camera is missing, choose another source. Positions belong to a camera within a profile.
 
-![Profiles tab with the profile list and actions](../images/screenshots/0.7.0-beta.7/en/profiles.png)
+![Profiles tab with the profile list and actions](../images/screenshots/1.0.1/en/profiles.png)
 
 ## 2. Decide when camera control may start
 
@@ -45,13 +45,13 @@ With the option enabled, the first camera action asks whether streaming has star
 
 If you need this order on first use, set the option before your next session. The default allows the app to connect at startup.
 
-![Application tab with streaming confirmation, window and profile language settings](../images/screenshots/0.7.0-beta.7/en/application.png)
+![Application tab with streaming confirmation, window and profile language settings](../images/screenshots/1.0.1/en/application.png)
 
 ## 3. Set movement and zoom
 
 Change the values under **Settings → Movement**. Start with small steps. Test the result in your capture program.
 
-![Movement tab with pan, tilt, zoom and transition settings](../images/screenshots/0.7.0-beta.7/en/settings.png)
+![Movement tab with pan, tilt, zoom and transition settings](../images/screenshots/1.0.1/en/settings.png)
 
 | Setting | What it changes | Default |
 | --- | --- | --- |
@@ -85,9 +85,9 @@ Presets save pan, tilt, zoom and the FOV reported by the driver. Older presets k
 
 ## 4. Adjust the image and save permanent positions
 
-![Focus and exposure controls in the Video tab](../images/screenshots/0.7.0-beta.7/en/image.png)
+![Focus and exposure controls in the Video tab](../images/screenshots/1.0.1/en/image.png)
 
-[Before loading video controls](../images/screenshots/0.7.0-beta.7/en/video.png) · [Colour](../images/screenshots/0.7.0-beta.7/en/video-colour.png) · [Light and detail](../images/screenshots/0.7.0-beta.7/en/video-light-detail.png)
+[Before loading video controls](../images/screenshots/1.0.1/en/video.png) · [Colour](../images/screenshots/1.0.1/en/video-colour.png) · [Light and detail](../images/screenshots/1.0.1/en/video-light-detail.png)
 
 Open **Video** in the settings pane, then load the image controls if needed. Choose a group such as **Focus and exposure**, **Colour**, or **Light and detail**. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
 
@@ -97,7 +97,7 @@ Under **Permanent presets**, select a position. Hover over a symbol for its acti
 
 Selecting a permanent row in the main list also selects that preset in Settings. A newly saved preset is selected in Settings.
 
-![Presets tab with the permanent preset list and actions](../images/screenshots/0.7.0-beta.7/en/presets.png)
+![Presets tab with the permanent preset list and actions](../images/screenshots/1.0.1/en/presets.png)
 
 ## 5. Set layout and language
 
@@ -111,11 +111,11 @@ Choose a language under **Settings → Application → Profile language**, then 
 
 Open **About** to see the installed version and project links. Hover over the version to see the full build ID. Include it when you report a problem with a specific build.
 
-![About tab with the version, developer credit and project links](../images/screenshots/0.7.0-beta.7/en/about.png)
+![About tab with the version, developer credit and project links](../images/screenshots/1.0.1/en/about.png)
 
 ## 7. Diagnostic logs and issue reporting
 
-![Issues tab with diagnostic log and GitHub reporting options](../images/screenshots/0.7.0-beta.7/en/issues.png)
+![Issues tab with diagnostic log and GitHub reporting options](../images/screenshots/1.0.1/en/issues.png)
 
 Open **Issues** in the settings pane to choose a log folder, a maximum file size, and the number of log files to keep, including the current file. By default, logs go in the application folder or to `%LOCALAPPDATA%\CamPressets\Logs` if the first location is unavailable.
 

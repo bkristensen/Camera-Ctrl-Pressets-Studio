@@ -2,13 +2,13 @@
 
 # Daily use
 
-*Written for Camera Control Studio 1.0.0.*
+*Written for Camera Control Studio 1.0.1.*
 
 [Troubleshooting](TROUBLESHOOTING.md)
 
 Start your streaming meeting in an app such as Zoom. Then open **Camera Control Studio**.
 
-![Direction wheel and zoom slider beside the preset list](../images/screenshots/0.7.0-beta.7/en/main.png)
+![Direction wheel and zoom slider beside the preset list](../images/screenshots/1.0.1/en/main.png)
 
 ## General
 

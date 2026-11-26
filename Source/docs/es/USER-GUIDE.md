@@ -1,6 +1,6 @@
 # Uso y configuración
 
-*Escrita para Camera Control Studio 1.0.0.*
+*Escrita para Camera Control Studio 1.0.1.*
 
 [Solución de problemas](TROUBLESHOOTING.md)
 
@@ -8,7 +8,7 @@
 
 Inicia primero la reunión que vas a transmitir, por ejemplo, en Zoom. Luego abre **Camera Control Studio**.
 
-![Ventana principal con la rueda de dirección, el zoom y la lista de preajustes](../images/screenshots/0.7.0-beta.7/es/main.png)
+![Ventana principal con la rueda de dirección, el zoom y la lista de preajustes](../images/screenshots/1.0.1/es/main.png)
 
 Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué hace. Cada dirección se detiene al alcanzar el último límite de la cámara.
 
@@ -79,13 +79,13 @@ Pulsa **?** para abrir la ayuda. Pasa el cursor sobre un botón para ver qué ha
 
    Para guardar una posición de forma permanente, abre el engranaje inferior, selecciona **Preajustes → Añadir preajuste permanente**, elige un nombre y un icono y guarda.
 
-   ![Preajustes permanentes y botones de gestión](../images/screenshots/0.7.0-beta.7/es/presets.png)
+   ![Preajustes permanentes y botones de gestión](../images/screenshots/1.0.1/es/presets.png)
 
    En Configuración puedes ajustar los pasos de movimiento y zoom, el tiempo de transición y las direcciones. **Vídeo** muestra los controles disponibles del controlador. **Perfiles** permite crear o copiar perfiles. Activa la confirmación de transmisión si el programa de captura debe conectarse antes.
 
-   ![Pestaña Movimiento con los pasos y el tiempo de transición](../images/screenshots/0.7.0-beta.7/es/settings.png)
+   ![Pestaña Movimiento con los pasos y el tiempo de transición](../images/screenshots/1.0.1/es/settings.png)
 
-   ![Pestaña Aplicación con la confirmación de transmisión y el idioma del perfil](../images/screenshots/0.7.0-beta.7/es/application.png)
+   ![Pestaña Aplicación con la confirmación de transmisión y el idioma del perfil](../images/screenshots/1.0.1/es/application.png)
 
 6. Arrastra el separador vertical para cambiar el ancho de ambas zonas. La configuración está cerrada al arrancar. Cambia el idioma en **Configuración → Aplicación → Idioma del perfil** y reinicia la aplicación. Sitúa el cursor sobre los botones pequeños para ver su función.
 

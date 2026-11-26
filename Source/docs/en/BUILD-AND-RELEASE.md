@@ -1,6 +1,6 @@
 # Build and release Camera Control Studio
 
-*Written for Camera Control Studio 1.0.0.*
+*Written for Camera Control Studio 1.0.1.*
 
 Run the commands from the directory that contains `Camera-Control-Pressets-Studio.sln`. Use Windows and PowerShell for the installer and Windows testing.
 

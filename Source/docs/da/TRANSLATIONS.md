@@ -1,6 +1,6 @@
 # Oversæt Camera Control Studio
 
-*Skrevet til Camera Control Studio 1.0.0.*
+*Skrevet til Camera Control Studio 1.0.1.*
 
 ## Ret en oversættelse
 

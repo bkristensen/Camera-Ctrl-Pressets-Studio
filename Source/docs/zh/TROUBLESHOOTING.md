@@ -1,6 +1,6 @@
 # 故障排查
 
-*本指南适用于 Camera Control Studio 1.0.0。*
+*本指南适用于 Camera Control Studio 1.0.1。*
 
 ## 目录
 

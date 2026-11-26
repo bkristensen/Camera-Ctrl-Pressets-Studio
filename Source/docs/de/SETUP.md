@@ -2,13 +2,13 @@
 
 # Anwendung einrichten
 
-*Geschrieben für Camera Control Studio 1.0.0.*
+*Geschrieben für Camera Control Studio 1.0.1.*
 
 [Fehlerbehebung](TROUBLESHOOTING.md)
 
 Klicken Sie unten auf das Zahnrad. Die Einstellungen öffnen sich rechts. Die Positionsliste bleibt sichtbar.
 
-![Hauptfenster mit geöffnetem Einstellungsbereich rechts](../images/screenshots/0.7.0-beta.7/de/main-settings.png)
+![Hauptfenster mit geöffnetem Einstellungsbereich rechts](../images/screenshots/1.0.1/de/main-settings.png)
 
 ## Installation und Download prüfen
 
@@ -35,7 +35,7 @@ Wählen Sie das Profil über die Profilauswahl unten. Öffnen Sie **Einstellunge
 
 Doppelklicken Sie auf das Kamerasymbol in der Mitte des Steuerrads, um die Kamera zu wählen. Die Anwendung merkt sich die Auswahl. Fehlt die Kamera, wählen Sie eine andere Quelle. Positionen gehören zu einer Kamera innerhalb eines Profils.
 
-![Registerkarte Profile mit Profilliste und Aktionen](../images/screenshots/0.7.0-beta.7/de/profiles.png)
+![Registerkarte Profile mit Profilliste und Aktionen](../images/screenshots/1.0.1/de/profiles.png)
 
 ## 2. Kamerazugriff festlegen
 
@@ -45,13 +45,13 @@ Mit dieser Option fragt die erste Kamerafunktion, ob das Streaming begonnen hat.
 
 Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten Sitzung. Die Standardeinstellung erlaubt die Verbindung beim Start.
 
-![Registerkarte Anwendung mit Streaming-Abfrage, Fensteroptionen und Profilsprache](../images/screenshots/0.7.0-beta.7/de/application.png)
+![Registerkarte Anwendung mit Streaming-Abfrage, Fensteroptionen und Profilsprache](../images/screenshots/1.0.1/de/application.png)
 
 ## 3. Bewegung und Zoom einstellen
 
 Ändern Sie die Werte unter **Einstellungen → Bewegung**. Beginnen Sie mit kleinen Schritten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
 
-![Registerkarte Bewegung mit Schwenk-, Zoom- und Übergangseinstellungen](../images/screenshots/0.7.0-beta.7/de/settings.png)
+![Registerkarte Bewegung mit Schwenk-, Zoom- und Übergangseinstellungen](../images/screenshots/1.0.1/de/settings.png)
 
 | Einstellung | Wirkung | Standard |
 | --- | --- | --- |
@@ -85,9 +85,9 @@ Positionen speichern Schwenk- und Neigewinkel, Zoom und das vom Treiber gemeldet
 
 ## 4. Bild anpassen und feste Positionen speichern
 
-![Fokus und Belichtung auf der Registerkarte Video](../images/screenshots/0.7.0-beta.7/de/image.png)
+![Fokus und Belichtung auf der Registerkarte Video](../images/screenshots/1.0.1/de/image.png)
 
-[Vor dem Laden der Videoregler](../images/screenshots/0.7.0-beta.7/de/video.png) · [Farbe](../images/screenshots/0.7.0-beta.7/de/video-colour.png) · [Licht und Details](../images/screenshots/0.7.0-beta.7/de/video-light-detail.png)
+[Vor dem Laden der Videoregler](../images/screenshots/1.0.1/de/video.png) · [Farbe](../images/screenshots/1.0.1/de/video-colour.png) · [Licht und Details](../images/screenshots/1.0.1/de/video-light-detail.png)
 
 Öffnen Sie **Video** im Einstellungsbereich. Laden Sie die Bildregler bei Bedarf. Wählen Sie **Fokus und Belichtung**, **Farbe** oder **Licht und Details**. Es erscheinen nur Funktionen, die der Treiber bereitstellt. Stellen Sie Helligkeit, Kontrast, Farbsättigung, Fokus oder Weißabgleich ein, soweit verfügbar. Schalten Sie die Automatik vor einer manuellen Änderung aus. Bildwerte werden pro Kamera und Profil gespeichert. Die Rücksetztaste stellt die Treiberstandardwerte wieder her.
 
@@ -97,7 +97,7 @@ Wählen Sie unter **Feste Positionen** einen Eintrag. Zeigen Sie auf die Symbole
 
 Eine feste Position, die in der Hauptliste ausgewählt ist, wird auch in den Einstellungen ausgewählt. Eine neu gespeicherte feste Position wird in den Einstellungen ausgewählt.
 
-![Registerkarte Positionen mit der Liste fester Positionen und den Aktionen](../images/screenshots/0.7.0-beta.7/de/presets.png)
+![Registerkarte Positionen mit der Liste fester Positionen und den Aktionen](../images/screenshots/1.0.1/de/presets.png)
 
 ## 5. Layout und Sprache einstellen
 
@@ -111,11 +111,11 @@ Wählen Sie die Sprache unter **Einstellungen → Anwendung → Profilsprache**.
 
 Unter **Info** finden Sie die Version und Projektlinks. Zeigen Sie auf die Version, um die vollständige Build-ID zu sehen. Geben Sie sie an, wenn ein Fehler nur in einem bestimmten Build auftritt.
 
-![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/0.7.0-beta.7/de/about.png)
+![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/1.0.1/de/about.png)
 
 ## 7. Diagnoseprotokolle und Fehlermeldungen
 
-![Registerkarte Fehler melden mit Protokoll- und GitHub-Meldefunktionen](../images/screenshots/0.7.0-beta.7/de/issues.png)
+![Registerkarte Fehler melden mit Protokoll- und GitHub-Meldefunktionen](../images/screenshots/1.0.1/de/issues.png)
 
 Unter **Fehler melden** können Sie den Protokollordner, die maximale Dateigröße und die Anzahl der aufzubewahrenden Dateien einschließlich des aktiven Protokolls einstellen. Standardmäßig nutzt die Anwendung den Programmordner oder ersatzweise `%LOCALAPPDATA%\CamPressets\Logs`.
 

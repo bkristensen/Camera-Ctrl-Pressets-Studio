@@ -1,6 +1,6 @@
 # Translate Camera Control Studio
 
-*Written for Camera Control Studio 1.0.0.*
+*Written for Camera Control Studio 1.0.1.*
 
 ## Edit an existing language
 

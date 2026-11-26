@@ -1,3 +1,12 @@
+# 1.0.1
+
+- Refreshed the 73 application screenshots for 1.0.1 across all 12 languages. They show the localized interface and seven translated example positions.
+- Updated the README files, the screenshot index and the user guides to use the new images. The guides show 1.0.1 in their version subtitles.
+- Added the 1.0.0 screenshot set to the repository so the earlier captures remain available.
+- Ignore local working notes in Git.
+
+The Windows installer and portable ZIP are unsigned. See the [Code signing policy](docs/SIGNPATH.md). Use `SHA256SUMS.txt` to verify the downloads.
+
 # 1.0.0
 
 Camera Control Studio 1.0.0 is the first stable release.

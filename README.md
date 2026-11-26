@@ -1,4 +1,4 @@
-![Main window with the direction wheel, zoom slider and preset list](Source/docs/images/screenshots/0.7.0-beta.7/en/main.png)
+![Main window with the direction wheel, zoom slider and preset list](Source/docs/images/screenshots/1.0.1/en/main.png)
 
 # Camera Control Studio
 
@@ -38,35 +38,35 @@ Store permanent presets by camera and profile. Give each preset a name and optio
 
 In **Settings → Movement**, choose a fixed duration or a movement speed for preset transitions. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
 
-![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/0.7.0-beta.7/en/presets.png)
+![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/1.0.1/en/presets.png)
 
 ## Settings, image controls and profiles
 
 | Tab | What you can do |
 | --- | --- |
-| [Settings → Movement](Source/docs/images/screenshots/0.7.0-beta.7/en/settings.png) | Set Fine, Normal and Fast movement, preset duration or speed, and direction reversal. |
-| [Settings → Application](Source/docs/images/screenshots/0.7.0-beta.7/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
-| [Video](Source/docs/images/screenshots/0.7.0-beta.7/en/image.png) | Adjust the controls exposed by the camera driver, such as focus, exposure, sharpness and backlight compensation. Image settings are saved per camera and profile. |
-| [Profiles](Source/docs/images/screenshots/0.7.0-beta.7/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
-| [Issues](Source/docs/images/screenshots/0.7.0-beta.7/en/issues.png) | Set up local diagnostic logs and prepare a GitHub issue report. |
-| [About](Source/docs/images/screenshots/0.7.0-beta.7/en/about.png) | Find the installed version, developer credit and links to the project, issue tracker and discussions. |
+| [Settings → Movement](Source/docs/images/screenshots/1.0.1/en/settings.png) | Set Fine, Normal and Fast movement, preset duration or speed, and direction reversal. |
+| [Settings → Application](Source/docs/images/screenshots/1.0.1/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
+| [Video](Source/docs/images/screenshots/1.0.1/en/image.png) | Adjust the controls exposed by the camera driver, such as focus, exposure, sharpness and backlight compensation. Image settings are saved per camera and profile. |
+| [Profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
+| [Issues](Source/docs/images/screenshots/1.0.1/en/issues.png) | Set up local diagnostic logs and prepare a GitHub issue report. |
+| [About](Source/docs/images/screenshots/1.0.1/en/about.png) | Find the installed version, developer credit and links to the project, issue tracker and discussions. |
 
 Drag the vertical divider to resize the camera controls and preset list. Hover over compact buttons for tooltips. The settings pane starts closed each time the app opens.
 
 <details>
 <summary>See the settings pane and example tabs</summary>
 
-![Main window with the settings pane open](Source/docs/images/screenshots/0.7.0-beta.7/en/main-settings.png)
+![Main window with the settings pane open](Source/docs/images/screenshots/1.0.1/en/main-settings.png)
 
-![Movement tab with movement steps and transition settings](Source/docs/images/screenshots/0.7.0-beta.7/en/settings.png)
+![Movement tab with movement steps and transition settings](Source/docs/images/screenshots/1.0.1/en/settings.png)
 
-![Application tab with streaming confirmation and profile language](Source/docs/images/screenshots/0.7.0-beta.7/en/application.png)
+![Application tab with streaming confirmation and profile language](Source/docs/images/screenshots/1.0.1/en/application.png)
 
-![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/0.7.0-beta.7/en/image.png)
+![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/1.0.1/en/image.png)
 
-![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/0.7.0-beta.7/en/profiles.png)
+![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png)
 
-![About tab with developer information, project links and the installed version](Source/docs/images/screenshots/0.7.0-beta.7/en/about.png)
+![About tab with developer information, project links and the installed version](Source/docs/images/screenshots/1.0.1/en/about.png)
 
 </details>
 

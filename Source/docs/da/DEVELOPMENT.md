@@ -2,7 +2,7 @@
 
 # Ret brugerflade og oversættelser
 
-*Skrevet til Camera Control Studio 1.0.0.*
+*Skrevet til Camera Control Studio 1.0.1.*
 
 ## Åbn den rigtige fil
 

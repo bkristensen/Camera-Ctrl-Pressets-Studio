@@ -1,6 +1,6 @@
 # Camera Control Studio user guides
 
-*Written for Camera Control Studio 1.0.0.*
+*Written for Camera Control Studio 1.0.1.*
 
 The installer and portable ZIP include the guides. Click **?** to open the local guides in your profile’s language. Change **Guide language** to read a different translation. Choose **Use online guides** to read the guide from the latest GitHub release. If that release has no translation, the viewer tries English. If the online guide is unavailable, it shows the local copy when available. Open Settings first to go straight to setup. Click **Print** to print the current guide with its title, print date and time, installed version, project address and page numbers.
 
@@ -23,4 +23,4 @@ The viewer needs [Microsoft Edge WebView2 Runtime](https://developer.microsoft.c
 | Bahasa Indonesia | [Penggunaan dan pengaturan](id/USER-GUIDE.md) · [Pemecahan masalah](id/TROUBLESHOOTING.md) |
 | اردو | [استعمال اور ترتیبات](ur/USER-GUIDE.md) · [مسائل کا حل](ur/TROUBLESHOOTING.md) |
 
-The guides use shared screenshots of the English interface. See the [screenshot index](SCREENSHOTS.md) for the main window and every settings tab and subtab.
+The guides use screenshots in their own language. See the [screenshot index](SCREENSHOTS.md) for the main window and every settings tab and subtab.
