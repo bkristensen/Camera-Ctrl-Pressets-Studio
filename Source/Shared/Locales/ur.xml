@@ -240,4 +240,7 @@
   <text key="View latest release">تازہ ترین ریلیز دیکھیں</text>
   <text key="Printed: {0}">طباعت: {0}</text>
   <text key="Project: {0}">منصوبہ: {0}</text>
+  <text key="Panning">پیننگ</text>
+  <text key="Pan and tilt">پین اور ٹِلٹ</text>
+  <text key="Transitions">منتقلیاں</text>
 </translations>

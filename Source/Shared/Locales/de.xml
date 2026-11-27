@@ -240,4 +240,7 @@
   <text key="View latest release">Neueste Version anzeigen</text>
   <text key="Printed: {0}">Gedruckt: {0}</text>
   <text key="Project: {0}">Projekt: {0}</text>
+  <text key="Panning">Schwenken</text>
+  <text key="Pan and tilt">Schwenken und Neigen</text>
+  <text key="Transitions">Übergänge</text>
 </translations>

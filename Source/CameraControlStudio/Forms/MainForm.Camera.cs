@@ -84,7 +84,7 @@ namespace CameraControlStudio
             }
             RefreshMotionControls();
             RefreshActionButtons();
-            ShowVideoControls(false);
+            SetVideoTabs(Array.Empty<TabPage>());
             cameraStatus.Text = UiText.T("Camera: not connected", "Kamera: ikke tilsluttet");
         }
         void StopMotion()

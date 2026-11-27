@@ -88,7 +88,9 @@ namespace CameraControlStudio
                     permanentList.SelectedIndex = 0;
                 }),
                 ("settings", () => { settingsTabs.SelectedTab = generalTab; settingsCategories.SelectedTab = motionTab; }),
-                ("application", () => settingsCategories.SelectedTab = applicationTab)
+                ("zoom", () => settingsCategories.SelectedTab = zoomTab),
+                ("transitions", () => { settingsTabs.SelectedTab = presetsTab; presetCategories.SelectedTab = transitionsTab; }),
+                ("application", () => { settingsTabs.SelectedTab = generalTab; settingsCategories.SelectedTab = applicationTab; })
             };
             if (UiText.Language == "da")
                 stages.Insert(1, ("quick-guide", () => { }));
@@ -96,11 +98,12 @@ namespace CameraControlStudio
             {
                 stages.AddRange(new (string, Action)[]
                 {
-                    ("main-settings", () => { settingsTabs.SelectedTab = presetsTab; permanentList.ClearSelected(); }),
+                    ("main-settings", () => { settingsTabs.SelectedTab = presetsTab; presetCategories.SelectedTab = permanentPresetsTab; permanentList.ClearSelected(); }),
                     ("video", () => settingsTabs.SelectedTab = imageTab),
-                    ("image", () => { ShowVideoControls(true); imageCategories.SelectedTab = focusTab; }),
+                    ("image", () => { SetVideoTabs(videoTabs); imageCategories.SelectedTab = focusTab; }),
                     ("video-colour", () => imageCategories.SelectedTab = colourTab),
                     ("video-light-detail", () => imageCategories.SelectedTab = lightTab),
+                    ("field-of-view", () => imageCategories.SelectedTab = fieldOfViewTab),
                     ("profiles", () => settingsTabs.SelectedTab = profilesTab),
                     ("issues", () => settingsTabs.SelectedTab = issuesTab),
                     ("about", () => settingsTabs.SelectedTab = aboutTab)

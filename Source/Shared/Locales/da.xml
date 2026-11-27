@@ -240,4 +240,7 @@
   <text key="View latest release">Se den nyeste version</text>
   <text key="Printed: {0}">Udskrevet: {0}</text>
   <text key="Project: {0}">Projekt: {0}</text>
+  <text key="Panning">Panorering</text>
+  <text key="Pan and tilt">Panorering og vipning</text>
+  <text key="Transitions">Overgange</text>
 </translations>

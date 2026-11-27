@@ -22,11 +22,15 @@ namespace CameraControlStudio {
             this.saveTimer = new System.Windows.Forms.Timer(this.components);
             this.motionLimits = new System.Windows.Forms.Timer(this.components);
             this.documentationTimer = new System.Windows.Forms.Timer(this.components);
-            this.settingsCategories = new System.Windows.Forms.TabControl();
+            this.settingsCategories = new CameraControlStudio.BlueTabControl();
             this.motionTab = new System.Windows.Forms.TabPage();
             this.motionGroup = new System.Windows.Forms.GroupBox();
             this.movementScroll = new System.Windows.Forms.Panel();
             this.generalFields = new System.Windows.Forms.TableLayoutPanel();
+            this.directionSeparator = new CameraControlStudio.MainViewSeparator();
+            this.cameraButtonSeparator = new CameraControlStudio.MainViewSeparator();
+            this.zoomTab = new System.Windows.Forms.TabPage();
+            this.zoomFields = new System.Windows.Forms.TableLayoutPanel();
             this.finePanLabel = new System.Windows.Forms.Label();
             this.finePanPercent = new CameraControlStudio.BlueNumericUpDown();
             this.panStepsLabel = new System.Windows.Forms.Label();
@@ -42,6 +46,8 @@ namespace CameraControlStudio {
             this.seconds = new CameraControlStudio.BlueNumericUpDown();
             this.reverseX = new CameraControlStudio.BlueCheckBox();
             this.reverseY = new CameraControlStudio.BlueCheckBox();
+            this.fieldOfViewTab = new System.Windows.Forms.TabPage();
+            this.fieldOfViewFields = new System.Windows.Forms.TableLayoutPanel();
             this.startupFovLabel = new System.Windows.Forms.Label();
             this.startupFov = new System.Windows.Forms.ListBox();
             this.allowFov = new CameraControlStudio.BlueCheckBox();
@@ -62,7 +68,7 @@ namespace CameraControlStudio {
             this.loadVideoControls = new CameraControlStudio.BlueButton();
             this.noVideoControls = new System.Windows.Forms.Label();
             this.imagePages = new System.Windows.Forms.TableLayoutPanel();
-            this.imageCategories = new System.Windows.Forms.TabControl();
+            this.imageCategories = new CameraControlStudio.BlueTabControl();
             this.focusTab = new System.Windows.Forms.TabPage();
             this.focusPanel = new System.Windows.Forms.Panel();
             this.gainControl = new System.Windows.Forms.GroupBox();
@@ -138,10 +144,13 @@ namespace CameraControlStudio {
             this.deleteTemporaryButton = new CameraControlStudio.BlueButton();
             this.temporaryButton = new CameraControlStudio.BlueButton();
             this.presetGrid = new System.Windows.Forms.DataGridView();
-            this.settingsTabs = new System.Windows.Forms.TabControl();
+            this.settingsTabs = new CameraControlStudio.BlueTabControl();
             this.presetsTab = new System.Windows.Forms.TabPage();
+            this.presetCategories = new CameraControlStudio.BlueTabControl();
+            this.permanentPresetsTab = new System.Windows.Forms.TabPage();
+            this.transitionsTab = new System.Windows.Forms.TabPage();
+            this.transitionFields = new System.Windows.Forms.TableLayoutPanel();
             this.permanentPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.permanentTitle = new System.Windows.Forms.Label();
             this.permanentList = new System.Windows.Forms.ListBox();
             this.permanentActions = new System.Windows.Forms.FlowLayoutPanel();
             this.addPermanent = new CameraControlStudio.BlueButton();
@@ -182,12 +191,16 @@ namespace CameraControlStudio {
             this.motionGroup.SuspendLayout();
             this.movementScroll.SuspendLayout();
             this.generalFields.SuspendLayout();
+            this.zoomTab.SuspendLayout();
+            this.zoomFields.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.finePanPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panSteps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fastPanSteps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomSteps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transitionSpeedPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seconds)).BeginInit();
+            this.fieldOfViewTab.SuspendLayout();
+            this.fieldOfViewFields.SuspendLayout();
             this.applicationTab.SuspendLayout();
             this.applicationScroll.SuspendLayout();
             this.applicationFields.SuspendLayout();
@@ -246,6 +259,10 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.presetGrid)).BeginInit();
             this.settingsTabs.SuspendLayout();
             this.presetsTab.SuspendLayout();
+            this.presetCategories.SuspendLayout();
+            this.permanentPresetsTab.SuspendLayout();
+            this.transitionsTab.SuspendLayout();
+            this.transitionFields.SuspendLayout();
             this.permanentPanel.SuspendLayout();
             this.permanentActions.SuspendLayout();
             this.generalTab.SuspendLayout();
@@ -299,8 +316,10 @@ namespace CameraControlStudio {
             // settingsCategories
             // 
             this.settingsCategories.Controls.Add(this.motionTab);
+            this.settingsCategories.Controls.Add(this.zoomTab);
             this.settingsCategories.Controls.Add(this.applicationTab);
             resources.ApplyResources(this.settingsCategories, "settingsCategories");
+            this.settingsCategories.Multiline = true;
             this.settingsCategories.Name = "settingsCategories";
             this.settingsCategories.SelectedIndex = 0;
             // 
@@ -336,22 +355,25 @@ namespace CameraControlStudio {
             this.generalFields.Controls.Add(this.panSteps, 1, 1);
             this.generalFields.Controls.Add(this.fastPanStepsLabel, 0, 2);
             this.generalFields.Controls.Add(this.fastPanSteps, 1, 2);
-            this.generalFields.Controls.Add(this.zoomStepsLabel, 0, 3);
-            this.generalFields.Controls.Add(this.zoomSteps, 1, 3);
-            this.generalFields.Controls.Add(this.useTransitionSpeed, 0, 4);
-            this.generalFields.Controls.Add(this.transitionSpeedLabel, 0, 5);
-            this.generalFields.Controls.Add(this.transitionSpeedPercent, 1, 5);
-            this.generalFields.Controls.Add(this.secondsLabel, 0, 6);
-            this.generalFields.Controls.Add(this.seconds, 1, 6);
-            this.generalFields.Controls.Add(this.reverseX, 0, 7);
-            this.generalFields.Controls.Add(this.reverseY, 0, 8);
-            this.generalFields.Controls.Add(this.startupFovLabel, 0, 9);
-            this.generalFields.Controls.Add(this.startupFov, 1, 9);
-            this.generalFields.Controls.Add(this.allowFov, 0, 10);
-            this.generalFields.Controls.Add(this.adjustFovAtLimits, 0, 11);
-            this.generalFields.Controls.Add(this.panWithCameraButton, 0, 12);
-            this.generalFields.Controls.Add(this.doubleClickForCameraSource, 0, 13);
+            this.generalFields.Controls.Add(this.directionSeparator, 0, 3);
+            this.generalFields.Controls.Add(this.reverseX, 0, 4);
+            this.generalFields.Controls.Add(this.reverseY, 0, 5);
+            this.generalFields.Controls.Add(this.cameraButtonSeparator, 0, 6);
+            this.generalFields.Controls.Add(this.panWithCameraButton, 0, 7);
+            this.generalFields.Controls.Add(this.doubleClickForCameraSource, 0, 8);
             this.generalFields.Name = "generalFields";
+            //
+            // directionSeparator
+            //
+            this.generalFields.SetColumnSpan(this.directionSeparator, 2);
+            resources.ApplyResources(this.directionSeparator, "directionSeparator");
+            this.directionSeparator.Name = "directionSeparator";
+            //
+            // cameraButtonSeparator
+            //
+            this.generalFields.SetColumnSpan(this.cameraButtonSeparator, 2);
+            resources.ApplyResources(this.cameraButtonSeparator, "cameraButtonSeparator");
+            this.cameraButtonSeparator.Name = "cameraButtonSeparator";
             // 
             // finePanLabel
             // 
@@ -427,6 +449,20 @@ namespace CameraControlStudio {
             0,
             0});
             // 
+            // zoomTab
+            //
+            this.zoomTab.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.zoomTab.Controls.Add(this.zoomFields);
+            resources.ApplyResources(this.zoomTab, "zoomTab");
+            this.zoomTab.Name = "zoomTab";
+            //
+            // zoomFields
+            //
+            resources.ApplyResources(this.zoomFields, "zoomFields");
+            this.zoomFields.Controls.Add(this.zoomStepsLabel, 0, 0);
+            this.zoomFields.Controls.Add(this.zoomSteps, 1, 0);
+            this.zoomFields.Name = "zoomFields";
+            //
             // zoomStepsLabel
             // 
             this.zoomStepsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
@@ -453,7 +489,7 @@ namespace CameraControlStudio {
             // useTransitionSpeed
             // 
             this.useTransitionSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.generalFields.SetColumnSpan(this.useTransitionSpeed, 2);
+            this.transitionFields.SetColumnSpan(this.useTransitionSpeed, 2);
             resources.ApplyResources(this.useTransitionSpeed, "useTransitionSpeed");
             this.useTransitionSpeed.Name = "useTransitionSpeed";
             this.useTransitionSpeed.UseVisualStyleBackColor = false;
@@ -531,6 +567,24 @@ namespace CameraControlStudio {
             this.reverseY.Name = "reverseY";
             this.reverseY.UseVisualStyleBackColor = false;
             // 
+            // fieldOfViewTab
+            //
+            this.fieldOfViewTab.AutoScroll = true;
+            this.fieldOfViewTab.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.fieldOfViewTab.Controls.Add(this.fieldOfViewFields);
+            resources.ApplyResources(this.fieldOfViewTab, "fieldOfViewTab");
+            this.fieldOfViewTab.Name = "fieldOfViewTab";
+            //
+            // fieldOfViewFields
+            //
+            resources.ApplyResources(this.fieldOfViewFields, "fieldOfViewFields");
+            this.fieldOfViewFields.Controls.Add(this.startupFovLabel, 0, 0);
+            this.fieldOfViewFields.Controls.Add(this.startupFov, 1, 0);
+            this.fieldOfViewFields.Controls.Add(this.allowFov, 0, 1);
+            this.fieldOfViewFields.Controls.Add(this.adjustFovAtLimits, 0, 2);
+            this.fieldOfViewFields.ForeColor = System.Drawing.Color.White;
+            this.fieldOfViewFields.Name = "fieldOfViewFields";
+            //
             // startupFovLabel
             // 
             resources.ApplyResources(this.startupFovLabel, "startupFovLabel");
@@ -543,7 +597,7 @@ namespace CameraControlStudio {
             // 
             // allowFov
             // 
-            this.generalFields.SetColumnSpan(this.allowFov, 2);
+            this.fieldOfViewFields.SetColumnSpan(this.allowFov, 2);
             resources.ApplyResources(this.allowFov, "allowFov");
             this.allowFov.Name = "allowFov";
             // 
@@ -551,7 +605,7 @@ namespace CameraControlStudio {
             // 
             this.adjustFovAtLimits.Checked = true;
             this.adjustFovAtLimits.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.generalFields.SetColumnSpan(this.adjustFovAtLimits, 2);
+            this.fieldOfViewFields.SetColumnSpan(this.adjustFovAtLimits, 2);
             resources.ApplyResources(this.adjustFovAtLimits, "adjustFovAtLimits");
             this.adjustFovAtLimits.Name = "adjustFovAtLimits";
             // 
@@ -692,7 +746,9 @@ namespace CameraControlStudio {
             this.imageCategories.Controls.Add(this.focusTab);
             this.imageCategories.Controls.Add(this.colourTab);
             this.imageCategories.Controls.Add(this.lightTab);
+            this.imageCategories.Controls.Add(this.fieldOfViewTab);
             resources.ApplyResources(this.imageCategories, "imageCategories");
+            this.imageCategories.Multiline = true;
             this.imageCategories.Name = "imageCategories";
             this.imageCategories.SelectedIndex = 0;
             // 
@@ -1001,10 +1057,12 @@ namespace CameraControlStudio {
             // 
             // resetVideoControls
             // 
+            this.resetVideoControls.AutoSize = true;
             this.resetVideoControls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.resetVideoControls.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.resetVideoControls, "resetVideoControls");
             this.resetVideoControls.ForeColor = System.Drawing.Color.White;
+            this.resetVideoControls.MinimumSize = new System.Drawing.Size(0, 26);
             this.resetVideoControls.Name = "resetVideoControls";
             this.resetVideoControls.Primary = false;
             this.resetVideoControls.UseVisualStyleBackColor = false;
@@ -1357,24 +1415,51 @@ namespace CameraControlStudio {
             // presetsTab
             // 
             this.presetsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.presetsTab.Controls.Add(this.permanentPanel);
+            this.presetsTab.Controls.Add(this.presetCategories);
             resources.ApplyResources(this.presetsTab, "presetsTab");
             this.presetsTab.Name = "presetsTab";
             // 
+            // presetCategories
+            //
+            this.presetCategories.Controls.Add(this.permanentPresetsTab);
+            this.presetCategories.Controls.Add(this.transitionsTab);
+            resources.ApplyResources(this.presetCategories, "presetCategories");
+            this.presetCategories.Multiline = true;
+            this.presetCategories.Name = "presetCategories";
+            this.presetCategories.SelectedIndex = 0;
+            //
+            // permanentPresetsTab
+            //
+            this.permanentPresetsTab.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.permanentPresetsTab.Controls.Add(this.permanentPanel);
+            resources.ApplyResources(this.permanentPresetsTab, "permanentPresetsTab");
+            this.permanentPresetsTab.Name = "permanentPresetsTab";
+            //
+            // transitionsTab
+            //
+            this.transitionsTab.AutoScroll = true;
+            this.transitionsTab.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.transitionsTab.Controls.Add(this.transitionFields);
+            resources.ApplyResources(this.transitionsTab, "transitionsTab");
+            this.transitionsTab.Name = "transitionsTab";
+            //
+            // transitionFields
+            //
+            resources.ApplyResources(this.transitionFields, "transitionFields");
+            this.transitionFields.Controls.Add(this.useTransitionSpeed, 0, 0);
+            this.transitionFields.Controls.Add(this.transitionSpeedLabel, 0, 1);
+            this.transitionFields.Controls.Add(this.transitionSpeedPercent, 1, 1);
+            this.transitionFields.Controls.Add(this.secondsLabel, 0, 2);
+            this.transitionFields.Controls.Add(this.seconds, 1, 2);
+            this.transitionFields.Name = "transitionFields";
+            //
             // permanentPanel
             // 
             this.permanentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             resources.ApplyResources(this.permanentPanel, "permanentPanel");
-            this.permanentPanel.Controls.Add(this.permanentTitle, 0, 0);
-            this.permanentPanel.Controls.Add(this.permanentList, 0, 1);
-            this.permanentPanel.Controls.Add(this.permanentActions, 0, 2);
+            this.permanentPanel.Controls.Add(this.permanentList, 0, 0);
+            this.permanentPanel.Controls.Add(this.permanentActions, 0, 1);
             this.permanentPanel.Name = "permanentPanel";
-            // 
-            // permanentTitle
-            // 
-            this.permanentTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            resources.ApplyResources(this.permanentTitle, "permanentTitle");
-            this.permanentTitle.Name = "permanentTitle";
             // 
             // permanentList
             // 
@@ -1702,12 +1787,18 @@ namespace CameraControlStudio {
             this.movementScroll.ResumeLayout(false);
             this.movementScroll.PerformLayout();
             this.generalFields.ResumeLayout(false);
+            this.zoomTab.ResumeLayout(false);
+            this.zoomTab.PerformLayout();
+            this.zoomFields.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.finePanPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panSteps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fastPanSteps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomSteps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transitionSpeedPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seconds)).EndInit();
+            this.fieldOfViewTab.ResumeLayout(false);
+            this.fieldOfViewTab.PerformLayout();
+            this.fieldOfViewFields.ResumeLayout(false);
             this.applicationTab.ResumeLayout(false);
             this.applicationScroll.ResumeLayout(false);
             this.applicationScroll.PerformLayout();
@@ -1774,6 +1865,11 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.presetGrid)).EndInit();
             this.settingsTabs.ResumeLayout(false);
             this.presetsTab.ResumeLayout(false);
+            this.presetCategories.ResumeLayout(false);
+            this.permanentPresetsTab.ResumeLayout(false);
+            this.transitionsTab.ResumeLayout(false);
+            this.transitionsTab.PerformLayout();
+            this.transitionFields.ResumeLayout(false);
             this.permanentPanel.ResumeLayout(false);
             this.permanentActions.ResumeLayout(false);
             this.generalTab.ResumeLayout(false);
@@ -1806,14 +1902,24 @@ namespace CameraControlStudio {
         private TableLayoutPanel presetPanel;
         private BlueButton temporaryButton;
         private BlueButton deleteTemporaryButton;
-        private TabControl settingsTabs;
+        private BlueTabControl settingsTabs;
         private TabPage generalTab;
         private TabPage imageTab;
         private TabPage presetsTab;
+        private BlueTabControl presetCategories;
+        private TabPage permanentPresetsTab;
+        private TabPage transitionsTab;
+        private TableLayoutPanel transitionFields;
         private TabPage profilesTab;
         private TabPage aboutTab;
         private Panel movementScroll;
         private TableLayoutPanel generalFields;
+        private MainViewSeparator directionSeparator;
+        private MainViewSeparator cameraButtonSeparator;
+        private TabPage zoomTab;
+        private TableLayoutPanel zoomFields;
+        private TabPage fieldOfViewTab;
+        private TableLayoutPanel fieldOfViewFields;
         private Label startupFovLabel;
         private ListBox startupFov;
         private BlueCheckBox allowFov;
@@ -1844,7 +1950,6 @@ namespace CameraControlStudio {
         private BlueCheckBox alwaysTop;
         private ComboBox language;
         private TableLayoutPanel permanentPanel;
-        private Label permanentTitle;
         private ListBox permanentList;
         private FlowLayoutPanel permanentActions;
         private BlueButton addPermanent;
@@ -1876,7 +1981,7 @@ namespace CameraControlStudio {
         private Timer saveTimer;
         private Timer motionLimits;
         private Timer documentationTimer;
-        private TabControl settingsCategories;
+        private BlueTabControl settingsCategories;
         private TabPage motionTab;
         private TabPage applicationTab;
         private GroupBox motionGroup;
@@ -1890,7 +1995,7 @@ namespace CameraControlStudio {
         private BlueButton loadVideoControls;
         private Label noVideoControls;
         private TableLayoutPanel imagePages;
-        private TabControl imageCategories;
+        private BlueTabControl imageCategories;
         private BlueButton resetVideoControls;
         private TabPage focusTab;
         private Panel focusPanel;

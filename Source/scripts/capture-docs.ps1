@@ -36,9 +36,9 @@ foreach ($language in 'en','da','de','ar','bn','es','fr','hi','id','pt','ur','zh
         $process.Dispose()
     }
 
-    $names = @('main','presets','settings','application')
+    $names = @('main','presets','settings','zoom','transitions','application')
     if ($language -in @('en','da','de')) {
-        $names += @('main-settings','video','image','video-colour','video-light-detail','profiles','issues','about')
+        $names += @('main-settings','video','image','video-colour','video-light-detail','field-of-view','profiles','issues','about')
     }
     if ($language -eq 'da') { $names += 'quick-guide' }
     foreach ($name in $names) {

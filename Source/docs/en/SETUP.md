@@ -49,29 +49,39 @@ If you need this order on first use, set the option before your next session. Th
 
 ## 3. Set movement and zoom
 
-Change the values under **Settings → Movement**. Start with small steps. Test the result in your capture program.
+Open **Settings → Panning** to set pan and tilt steps, reverse directions, and choose how the camera button works. Start with small steps. Test the result in your capture program.
 
-![Movement tab with pan, tilt, zoom and transition settings](../images/screenshots/1.0.1/en/settings.png)
+![Panning tab with step sizes, direction controls and camera button options](../images/screenshots/settings-tabs/en/settings.png)
 
 | Setting | What it changes | Default |
 | --- | --- | --- |
 | Fine speed (% of Normal) | Rate while holding Ctrl and an arrow key | 50% |
 | Normal pan steps | Middle arrow ring | 1 |
 | Fast pan steps | Outer arrow ring | 4 |
-| Zoom steps | − and + | 1 |
-| Transition (sec.) | Time for each preset change in fixed-duration mode | 1.0 |
-| Use speed for preset transitions | Let travel distance determine the duration | Off |
-| Transition speed (%/s) | Cruise rate as a percentage of the controlling axis’s range per second | 30% |
-
-With speed-based transitions, a short move takes less time than a long one. The app accelerates and brakes, and all moving axes share the same progress so they can reach the target together.
 
 One step means one step supported by the camera driver. It is not a fixed distance or percentage. The driver limits movement and smoothness.
 
 For an upside-down camera, enable **Camera pan reverse up / down** and test Up. Enable **Camera pan reverse left / right** only if Left moves the wrong way. These settings change the controls. They do not rotate the video.
 
+### Set zoom steps
+
+Open **Settings → Zoom** to choose how far the plus and minus buttons move in one step. The default is one driver step. [See the Zoom tab](../images/screenshots/settings-tabs/en/zoom.png).
+
+### Set preset transitions
+
+Open **Presets → Transitions** to choose how the camera moves between saved positions. [See the Transitions tab](../images/screenshots/settings-tabs/en/transitions.png).
+
+| Setting | What it changes | Default |
+| --- | --- | --- |
+| Use speed for preset transitions | Let travel distance determine the duration | Off |
+| Transition speed (%/s) | Cruise rate as a percentage of the controlling axis’s range per second | 30% |
+| Transition (sec.) | Time for each preset change in fixed-duration mode | 1.0 |
+
+With speed-based transitions, a short move takes less time than a long one. The app accelerates and brakes, and all moving axes share the same progress so they can reach the target together.
+
 ### Set the field of view
 
-Open **Settings → Movement**. Under **Field of view at startup**, choose **Widest available**, an angle reported by the camera driver, or **Do nothing** to keep the current view. The app uses this choice the first time it connects. Turn on **Allow manual FOV changes** to choose among the reported angles below the direction wheel. If the driver reports no selectable angles, the FOV controls are disabled. You can still use zoom if the camera supports it.
+Open **Video → Field of view**. Under **Field of view at startup**, choose **Widest available**, an angle reported by the camera driver, or **Do nothing** to keep the current view. The app uses this choice the first time it connects. Turn on **Allow manual FOV changes** to choose among the reported angles below the direction wheel. If the driver reports no selectable angles, the FOV controls are disabled. You can still use zoom if the camera supports it. [See the Field of view tab](../images/screenshots/settings-tabs/en/field-of-view.png).
 
 **Adjust field of view at zoom and pan limits** is on by default. You can use it with the manual picker hidden. It works when the driver supports FOV.
 
@@ -85,9 +95,9 @@ Presets save pan, tilt, zoom and the FOV reported by the driver. Older presets k
 
 ## 4. Adjust the image and save permanent positions
 
-![Focus and exposure controls in the Video tab](../images/screenshots/1.0.1/en/image.png)
+![Focus and exposure controls in the Video tab](../images/screenshots/settings-tabs/en/image.png)
 
-[Before loading video controls](../images/screenshots/1.0.1/en/video.png) · [Colour](../images/screenshots/1.0.1/en/video-colour.png) · [Light and detail](../images/screenshots/1.0.1/en/video-light-detail.png)
+[Before loading video controls](../images/screenshots/settings-tabs/en/video.png) · [Colour](../images/screenshots/1.0.1/en/video-colour.png) · [Light and detail](../images/screenshots/1.0.1/en/video-light-detail.png)
 
 Open **Video** in the settings pane, then load the image controls if needed. Choose a group such as **Focus and exposure**, **Colour**, or **Light and detail**. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
 
@@ -97,11 +107,11 @@ Under **Permanent presets**, select a position. Hover over a symbol for its acti
 
 Selecting a permanent row in the main list also selects that preset in Settings. A newly saved preset is selected in Settings.
 
-![Presets tab with the permanent preset list and actions](../images/screenshots/1.0.1/en/presets.png)
+![Presets tab with the permanent preset list and actions](../images/screenshots/settings-tabs/en/presets.png)
 
 ## 5. Set layout and language
 
-Drag the divider between the camera controls and the preset list. Your profile saves the divider and the window's size and position. The initial size is 900 × 500, and the minimum is 670 × 450. Settings start closed. When you first open them after launch, the first tab is selected. Scroll down in **Movement** or **Application** if some fields are below the window. The app saves the window width with Settings closed.
+Drag the divider between the camera controls and the preset list. Your profile saves the divider and the window's size and position. The initial size is 900 × 500, and the minimum is 670 × 450. Settings start closed. When you first open them after launch, the first tab is selected. Scroll down in **Panning** or **Application** if some fields are below the window. The app saves the window width with Settings closed.
 
 When selecting a profile in the footer, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
 

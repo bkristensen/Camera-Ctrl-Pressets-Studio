@@ -103,7 +103,7 @@ If the direction changes after you open Logitech Camera Settings or Logitech BRI
 **Solution**
 
 1. Use the square frame button above the zoom buttons to restore the widest available view and minimum zoom. Test the arrows and zoom again.
-2. If the arrows move the wrong way, open **Settings → Movement**. Reverse only the affected axis.
+2. If the arrows move the wrong way, open **Settings → Panning**. Reverse only the affected axis.
 3. For smaller manual movements, try holding **Ctrl** with an arrow key. A longer transition cannot make the driver’s steps smaller.
 4. When you are off air, close the Logitech tool and test both axes in the same video app at the same zoom level. Open one Logitech tool at a time to check whether the change follows it.
 
@@ -127,7 +127,7 @@ The picture is too tight, a preset no longer frames the expected scene, or field
 **Solution**
 
 1. Check the active profile and camera. Restore the full frame and check the live picture.
-2. Check **Settings → Movement** for the startup field of view. If the driver offers angles, enable manual changes to compare them.
+2. Check **Video → Field of view** for the startup field of view. If the driver offers angles, enable manual changes to compare them.
 3. Recall the preset. If the whole view is still narrow only with Zoom running, follow the Zoom section above. Keep the preset while checking the cause.
 
 **Verification**\

@@ -81,7 +81,7 @@ namespace CameraControlStudio {
         }
 
         void WireVideoControls() {
-            videoTabs = imageCategories.TabPages.Cast<TabPage>().ToArray();
+            videoTabs = imageCategories.TabPages.Cast<TabPage>().Where(tab => tab != fieldOfViewTab).ToArray();
             foreach (var editor in videoTabs.SelectMany(VideoEditors)) {
                 SetMainToolTip(editor.Automatic, string.Format(UiText.T("Automatic {0}", "Automatisk {0}"), editor.Group.Text));
                 editor.Slider.Scroll += (sender, args) => Run(() => {
@@ -104,9 +104,14 @@ namespace CameraControlStudio {
                     });
                 };
             }
-            loadVideoControls.Click += (sender, args) => Run(NeedCamera);
+            loadVideoControls.Click += (sender, args) => Run(() => {
+                NeedCamera();
+                if (imageCategories.TabCount > 1)
+                    imageCategories.SelectedIndex = 0;
+            });
             resetVideoControls.Click += (sender, args) => Run(ResetVideoControls);
-            ShowVideoControls(false);
+            imageCategories.SelectedIndexChanged += (sender, args) => UpdateVideoResetVisibility();
+            SetVideoTabs(Array.Empty<TabPage>());
         }
 
         static IEnumerable<(GroupBox Group, TrackBar Slider, CheckBox Automatic)> VideoEditors(Control container) {
@@ -126,7 +131,6 @@ namespace CameraControlStudio {
         }
 
         void BuildImageControls() {
-            var selected = imageCategories.SelectedTab;
             var supportedTabs = new List<TabPage>();
             refreshingVideo = true;
             try {
@@ -149,13 +153,7 @@ namespace CameraControlStudio {
                     if (available)
                         supportedTabs.Add(tab);
                 }
-                if (!imageCategories.TabPages.Cast<TabPage>().SequenceEqual(supportedTabs)) {
-                    imageCategories.TabPages.Clear();
-                    imageCategories.TabPages.AddRange(supportedTabs.ToArray());
-                    if (supportedTabs.Contains(selected))
-                        imageCategories.SelectedTab = selected;
-                }
-                ShowVideoControls(supportedTabs.Count != 0);
+                SetVideoTabs(supportedTabs);
             } finally {
                 refreshingVideo = false;
             }
@@ -167,12 +165,25 @@ namespace CameraControlStudio {
             automatic.Enabled = allowsManual || !automatic.Checked;
         }
 
-        void ShowVideoControls(bool available) {
-            imagePages.Visible = available;
-            videoStatus.Visible = !available;
+        void SetVideoTabs(IReadOnlyCollection<TabPage> supportedTabs) {
+            var pages = supportedTabs.Concat(new[] { fieldOfViewTab }).ToArray();
+            if (!imageCategories.TabPages.Cast<TabPage>().SequenceEqual(pages)) {
+                var selected = imageCategories.SelectedTab;
+                imageCategories.TabPages.Clear();
+                imageCategories.TabPages.AddRange(pages);
+                if (pages.Contains(selected))
+                    imageCategories.SelectedTab = selected;
+            }
+            bool imageControlsAvailable = supportedTabs.Count != 0;
+            videoStatus.Visible = !imageControlsAvailable;
             loadVideoControls.Visible = camera == null;
-            noVideoControls.Visible = camera != null && !available;
+            noVideoControls.Visible = camera != null && !imageControlsAvailable;
+            UpdateVideoResetVisibility();
         }
+
+        void UpdateVideoResetVisibility() =>
+            resetVideoControls.Visible = imageCategories.SelectedTab != null &&
+                imageCategories.SelectedTab != fieldOfViewTab;
 
         void ResetVideoControls() {
             NeedCamera();

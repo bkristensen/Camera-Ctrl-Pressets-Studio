@@ -36,17 +36,18 @@ To uninstall the Setup version, find Camera Control Studio under **Apps** in Win
 
 Store permanent presets by camera and profile. Give each preset a name and optional symbol that makes it easy to recognise at a glance. In the **Presets** tab you can edit the name and symbol, replace the coordinates with the current position, or delete the preset. Temporary presets last for the current session and appear below permanent presets.
 
-In **Settings → Movement**, choose a fixed duration or a movement speed for preset transitions. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
+In **Presets → Transitions**, choose a fixed duration or a movement speed for preset transitions. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
 
-![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/1.0.1/en/presets.png)
+![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/settings-tabs/en/presets.png)
 
 ## Settings, image controls and profiles
 
 | Tab | What you can do |
 | --- | --- |
-| [Settings → Movement](Source/docs/images/screenshots/1.0.1/en/settings.png) | Set Fine, Normal and Fast movement, preset duration or speed, and direction reversal. |
+| [Settings → Panning](Source/docs/images/screenshots/settings-tabs/en/settings.png) | Set pan and tilt steps, reverse directions, and choose how the camera button works. |
+| [Settings → Zoom](Source/docs/images/screenshots/settings-tabs/en/zoom.png) | Set the step size for the zoom buttons. |
 | [Settings → Application](Source/docs/images/screenshots/1.0.1/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
-| [Video](Source/docs/images/screenshots/1.0.1/en/image.png) | Adjust the controls exposed by the camera driver, such as focus, exposure, sharpness and backlight compensation. Image settings are saved per camera and profile. |
+| [Video](Source/docs/images/screenshots/settings-tabs/en/image.png) | Adjust image controls, such as focus and exposure, and set the [field of view](Source/docs/images/screenshots/settings-tabs/en/field-of-view.png) if the camera driver supports it. Image settings are saved per camera and profile. |
 | [Profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
 | [Issues](Source/docs/images/screenshots/1.0.1/en/issues.png) | Set up local diagnostic logs and prepare a GitHub issue report. |
 | [About](Source/docs/images/screenshots/1.0.1/en/about.png) | Find the installed version, developer credit and links to the project, issue tracker and discussions. |
@@ -58,11 +59,11 @@ Drag the vertical divider to resize the camera controls and preset list. Hover o
 
 ![Main window with the settings pane open](Source/docs/images/screenshots/1.0.1/en/main-settings.png)
 
-![Movement tab with movement steps and transition settings](Source/docs/images/screenshots/1.0.1/en/settings.png)
+![Panning tab with step sizes, direction controls and camera button options](Source/docs/images/screenshots/settings-tabs/en/settings.png)
 
 ![Application tab with streaming confirmation and profile language](Source/docs/images/screenshots/1.0.1/en/application.png)
 
-![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/1.0.1/en/image.png)
+![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/settings-tabs/en/image.png)
 
 ![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png)
 

@@ -103,7 +103,7 @@ Hvis retningen ændrer sig, når du åbner Logitech Camera Settings eller Logite
 **Løsning**
 
 1. Brug den firkantede rammeknap over lupknapperne for at få bredeste tilgængelige synsfelt og mindste zoom. Test pilene og zoom igen.
-2. Åbn **Indstillinger → Bevægelse**, hvis pilene vender forkert. Vend kun den berørte retning.
+2. Åbn **Indstillinger → Panorering**, hvis pilene vender forkert. Vend kun den berørte retning.
 3. Prøv at holde **Ctrl** nede sammen med en piletast for at flytte langsommere. En længere skiftetid giver ikke mindre drivertrin.
 4. Luk Logitech-værktøjet uden for en udsendelse, og test begge akser i det samme videoprogram med samme zoom. Åbn kun ét Logitech-værktøj ad gangen for at se, om ændringen følger med.
 
@@ -127,7 +127,7 @@ Billedet er for tæt. En gemt position viser et uventet udsnit, eller valgene fo
 **Løsning**
 
 1. Tjek den aktive profil og det valgte kamera. Gendan fuldt billede, og tjek det levende billede.
-2. Tjek synsfelt ved opstart under **Indstillinger → Bevægelse**. Slå manuel ændring til for at sammenligne vinkler, hvis driveren tilbyder dem.
+2. Tjek synsfelt ved opstart under **Video → Synsfelt**. Slå manuel ændring til for at sammenligne vinkler, hvis driveren tilbyder dem.
 3. Åbn den gemte position. Hvis synsfeltet kun er smallere med Zoom åbent, så følg afsnittet om Zoom ovenfor. Behold positionen, mens du finder årsagen.
 
 **Kontrol**\

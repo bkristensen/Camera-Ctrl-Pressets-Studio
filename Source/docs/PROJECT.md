@@ -4,7 +4,7 @@ Camera Control Studio saves and recalls camera shots on Windows. Use it in a stu
 
 ## Core behaviour
 
-Use the inner ring for normal moves and the outer ring for fast moves. Each ring has diagonal arrows. Double-click the centre button to choose a camera, or drag it to steer. You can change both gestures under Settings → Movement. The zoom buttons move by the set step. The slider sets zoom within the current FOV. The app opens no video preview. [Set movement and FOV](en/SETUP.md#set-the-field-of-view)
+Use the inner ring for normal moves and the outer ring for fast moves. Each ring has diagonal arrows. Double-click the centre button to choose a camera, or drag it to steer. You can change both gestures under Settings → Panning. The zoom buttons move by the set step. The slider sets zoom within the current FOV. The app opens no video preview. [Set movement and FOV](en/SETUP.md#set-the-field-of-view)
 
 Permanent positions store a name, a stable symbol ID, and the pan, tilt, zoom and FOV the driver reports. Combined symbols show subjects from left to right. Permanent positions appear first in bold. Temporary positions have no icon and last until you close the app. Use Play or double-click to recall either type.
 

@@ -40,7 +40,7 @@ Use the inner ring for normal moves and the outer ring for fast moves. Each ring
 - **Double-click to choose a camera.** The camera list opens.
 - **Hold and drag.** Start on the camera icon. Drag sideways to pan or up and down to tilt. Drag a little for slow movement or farther for faster movement, up to twice the fast speed. Release the button or move the pointer back to where you started to stop.
 
-Under **Settings → Movement**, you can turn off dragging or switch to a single click for camera selection. Both options are saved in the active profile.
+Under **Settings → Panning**, you can turn off dragging or switch to a single click for camera selection. Both options are saved in the active profile.
 
 ### Zoom
 

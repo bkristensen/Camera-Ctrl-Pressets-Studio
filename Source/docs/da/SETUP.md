@@ -49,29 +49,39 @@ Har du brug for denne rækkefølge, skal du sætte fluebenet før næste session
 
 ## 3. Indstil bevægelse og zoom
 
-Ret værdierne under **Indstillinger → Bevægelse**. Start med små trin. Se resultatet i dit optageprogram.
+Åbn **Indstillinger → Panorering** for at indstille trin, vende retninger og vælge, hvordan kameraknappen virker. Start med små trin. Se resultatet i dit optageprogram.
 
-![Fanen Bevægelse med trin til panorering, zoom og positionsskift](../images/screenshots/1.0.1/da/settings.png)
+![Fanen Panorering med trinstørrelser, retninger og valg for kameraknappen](../images/screenshots/settings-tabs/da/settings.png)
 
 | Indstilling | Hvad den ændrer | Standard |
 | --- | --- | --- |
 | Fin hastighed (% af normal) | Hastighed, når Ctrl og en piletast holdes nede | 50 % |
 | Normale panoreringstrin | Den midterste ring med pile | 1 |
 | Hurtige panoreringstrin | Den yderste ring med pile | 4 |
-| Zoomtrin | − og + | 1 |
-| Skiftetid i sekunder | Tid til skift ved fast varighed | 1,0 |
-| Brug hastighed ved skift af position | Afstanden bestemmer varigheden | Fra |
-| Overgangshastighed (%/s) | Hastighed i procent af den styrende akses område pr. sekund | 30 % |
-
-Ved hastighedsbaserede skift tager en kort bevægelse mindre tid end en lang. Appen accelererer og bremser og styrer alle akser sammen, så de kan nå målet samtidigt.
 
 Et trin er ét trin, som kameradriveren understøtter. Det er ikke en fast afstand eller procent. Kameraets driver sætter grænsen for bevægelse og bløde skift.
 
 Hænger kameraet på hovedet, så prøv **Vend kamerapanorering op / ned**. Test pil op. Slå kun **Vend kamerapanorering venstre / højre** til, hvis venstre bevæger sig forkert. Disse valg vender styringen. De drejer ikke videobilledet.
 
+### Indstil zoomtrin
+
+Åbn **Indstillinger → Zoom** for at vælge, hvor meget plus- og minusknapperne ændrer zoom ved ét tryk. Standardværdien er ét drivertrin. [Se fanen Zoom](../images/screenshots/settings-tabs/da/zoom.png).
+
+### Indstil overgange mellem positioner
+
+Åbn **Positioner → Overgange** for at vælge, hvordan kameraet skifter mellem gemte positioner. [Se fanen Overgange](../images/screenshots/settings-tabs/da/transitions.png).
+
+| Indstilling | Hvad den ændrer | Standard |
+| --- | --- | --- |
+| Brug hastighed ved skift af position | Afstanden bestemmer varigheden | Fra |
+| Overgangshastighed (%/s) | Hastighed i procent af den styrende akses område pr. sekund | 30 % |
+| Skiftetid i sekunder | Tid til skift ved fast varighed | 1,0 |
+
+Ved hastighedsbaserede skift tager en kort bevægelse mindre tid end en lang. Appen accelererer og bremser og styrer alle akser sammen, så de kan nå målet samtidigt.
+
 ### Indstil synsfeltet
 
-Åbn **Indstillinger → Bevægelse**. Under **Synsfelt ved opstart** kan du vælge **Bredest muligt**, en vinkel som kameradriveren melder, eller **Gør ingenting** for at beholde det aktuelle synsfelt. Valget gælder, første gang programmet forbinder. Slå **Tillad manuel ændring af synsfelt** til for at vælge mellem vinklerne under kamerahjulet. Hvis driveren ikke melder nogen valgbare vinkler, er synsfeltets indstillinger slået fra. Du kan stadig zoome, hvis kameraet understøtter det.
+Åbn **Video → Synsfelt**. Under **Synsfelt ved opstart** kan du vælge **Bredest muligt**, en vinkel som kameradriveren melder, eller **Gør ingenting** for at beholde det aktuelle synsfelt. Valget gælder, første gang programmet forbinder. Slå **Tillad manuel ændring af synsfelt** til for at vælge mellem vinklerne under kamerahjulet. Hvis driveren ikke melder nogen valgbare vinkler, er synsfeltets indstillinger slået fra. Du kan stadig zoome, hvis kameraet understøtter det. [Se fanen Synsfelt](../images/screenshots/settings-tabs/da/field-of-view.png).
 
 **Skift synsfelt ved grænsen for zoom og panorering** er slået til som standard. Det virker også, når valglisten er skjult, hvis driveren understøtter FOV.
 
@@ -85,9 +95,9 @@ Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Æld
 
 ## 4. Tilpas billedet og gem faste positioner
 
-![Fokus og eksponering på fanen Video](../images/screenshots/1.0.1/da/image.png)
+![Fokus og eksponering på fanen Video](../images/screenshots/settings-tabs/da/image.png)
 
-[Før videoindstillingerne indlæses](../images/screenshots/1.0.1/da/video.png) · [Farve](../images/screenshots/1.0.1/da/video-colour.png) · [Lys og detaljer](../images/screenshots/1.0.1/da/video-light-detail.png)
+[Før videoindstillingerne indlæses](../images/screenshots/settings-tabs/da/video.png) · [Farve](../images/screenshots/1.0.1/da/video-colour.png) · [Lys og detaljer](../images/screenshots/1.0.1/da/video-light-detail.png)
 
 Vælg **Video** i indstillingspanelet. Indlæs billedindstillinger, hvis det er nødvendigt. Vælg **Fokus og eksponering**, **Farve** eller **Lys og detaljer**. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
 
@@ -97,11 +107,11 @@ Under **Faste positioner** kan du holde musen over symbolerne for at se deres fu
 
 En fast position, du markerer i hovedlisten, markeres også i indstillingerne. Når du gemmer en ny fast position, markeres den i indstillingerne.
 
-![Fanen Positioner med listen over faste positioner og knapperne](../images/screenshots/1.0.1/da/presets.png)
+![Fanen Positioner med listen over faste positioner og knapperne](../images/screenshots/settings-tabs/da/presets.png)
 
 ## 5. Tilpas udseende og sprog
 
-Træk skillelinjen mellem kamerastyringen og positionslisten. Profilen gemmer skillelinjen og vinduets placering og størrelse. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne starter lukket. Første gang du åbner dem efter start, vises den første fane. Rul ned på **Bevægelse** eller **Program**, hvis nogle felter ligger uden for vinduet. Appen gemmer vinduets bredde med indstillingerne lukket.
+Træk skillelinjen mellem kamerastyringen og positionslisten. Profilen gemmer skillelinjen og vinduets placering og størrelse. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne starter lukket. Første gang du åbner dem efter start, vises den første fane. Rul ned på **Panorering** eller **Program**, hvis nogle felter ligger uden for vinduet. Appen gemmer vinduets bredde med indstillingerne lukket.
 
 Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 

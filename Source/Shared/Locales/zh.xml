@@ -240,4 +240,7 @@
   <text key="View latest release">查看最新版本</text>
   <text key="Printed: {0}">打印时间：{0}</text>
   <text key="Project: {0}">项目：{0}</text>
+  <text key="Panning">平移</text>
+  <text key="Pan and tilt">平移和俯仰</text>
+  <text key="Transitions">过渡</text>
 </translations>

@@ -240,4 +240,7 @@
   <text key="View latest release">Ver la versión más reciente</text>
   <text key="Printed: {0}">Impreso: {0}</text>
   <text key="Project: {0}">Proyecto: {0}</text>
+  <text key="Panning">Paneo</text>
+  <text key="Pan and tilt">Paneo e inclinación</text>
+  <text key="Transitions">Transiciones</text>
 </translations>

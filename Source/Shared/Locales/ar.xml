@@ -240,4 +240,7 @@
   <text key="View latest release">عرض أحدث إصدار</text>
   <text key="Printed: {0}">طُبع: {0}</text>
   <text key="Project: {0}">المشروع: {0}</text>
+  <text key="Panning">التحريك الأفقي</text>
+  <text key="Pan and tilt">التحريك الأفقي والإمالة</text>
+  <text key="Transitions">الانتقالات</text>
 </translations>
