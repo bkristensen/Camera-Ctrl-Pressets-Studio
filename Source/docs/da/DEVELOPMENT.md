@@ -1,4 +1,4 @@
-[English](../en/DEVELOPMENT.md) · [Dansk](../da/DEVELOPMENT.md) · [Deutsch](../de/DEVELOPMENT.md)
+[English](../en/DEVELOPMENT.md) · [Dansk](DEVELOPMENT.md) · [Deutsch](../de/DEVELOPMENT.md)
 
 # Ret brugerflade og oversættelser
 

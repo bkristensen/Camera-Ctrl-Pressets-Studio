@@ -5,12 +5,12 @@
 ## Indholdsfortegnelse
 
 - [1. Videoprogrammer og synsfelt](#1-videoprogrammer-og-synsfelt)
-  - [Begrænset synsfelt i Zoom Workplace](#begrænset-synsfelt-i-zoom-workplace)
+  - [Begrænset synsfelt i Zoom Workplace](#begr%C3%A6nset-synsfelt-i-zoom-workplace)
 - [2. Forbindelse og kompatibilitet](#2-forbindelse-og-kompatibilitet)
-  - [Kameraet mangler eller er utilgængeligt](#kameraet-mangler-eller-er-utilgængeligt)
+  - [Kameraet mangler eller er utilgængeligt](#kameraet-mangler-eller-er-utilg%C3%A6ngeligt)
   - [Knapper mangler eller virker forskelligt i programmer](#knapper-mangler-eller-virker-forskelligt-i-programmer)
-- [3. Bevægelse og gemte positioner](#3-bevægelse-og-gemte-positioner)
-  - [Bevægelsen stopper, hakker eller vender forkert](#bevægelsen-stopper-hakker-eller-vender-forkert)
+- [3. Bevægelse og gemte positioner](#3-bev%C3%A6gelse-og-gemte-positioner)
+  - [Bevægelsen stopper, hakker eller vender forkert](#bev%C3%A6gelsen-stopper-hakker-eller-vender-forkert)
   - [Synsfeltet eller en gemt position ser forkert ud](#synsfeltet-eller-en-gemt-position-ser-forkert-ud)
 
 ## 1. Videoprogrammer og synsfelt
@@ -143,4 +143,4 @@ Profiler og gemte positioner i Camera Control Studio. Valgbare vinkler afhænger
 
 Har du stadig brug for hjælp? Gennemgå logfilerne, før du deler dem. Skriv kameramodel, programversioner, forsøg og resultater.
 
-[Indberet et problem](ISSUES.md) · [Brugervejledninger](../USER-GUIDES.md)
+[Indberet et problem](ISSUES.md) · [Brugervejledninger](USER-GUIDES.md)

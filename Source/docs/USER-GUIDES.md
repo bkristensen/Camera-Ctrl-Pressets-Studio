@@ -10,19 +10,30 @@ The viewer needs [Microsoft Edge WebView2 Runtime](https://developer.microsoft.c
 
 | Language | Guide |
 | --- | --- |
-| English | [Setup and settings](en/SETUP.md) · [Daily use](en/DAILY-USE.md) · [Troubleshooting](en/TROUBLESHOOTING.md) |
-| Dansk | [Opsætning og indstillinger](da/SETUP.md) · [Daglig brug](da/DAILY-USE.md) · [Fejlfinding](da/TROUBLESHOOTING.md) |
-| Deutsch | [Einrichtung und Einstellungen](de/SETUP.md) · [Tägliche Nutzung](de/DAILY-USE.md) · [Fehlerbehebung](de/TROUBLESHOOTING.md) |
-| 简体中文 | [使用与设置](zh/USER-GUIDE.md) · [故障排查](zh/TROUBLESHOOTING.md) |
-| हिन्दी | [इस्तेमाल और सेटिंग्स](hi/USER-GUIDE.md) · [समस्या निवारण](hi/TROUBLESHOOTING.md) |
-| Español | [Uso y configuración](es/USER-GUIDE.md) · [Solución de problemas](es/TROUBLESHOOTING.md) |
-| العربية الفصحى | [الاستخدام والإعدادات](ar/USER-GUIDE.md) · [استكشاف الأخطاء وإصلاحها](ar/TROUBLESHOOTING.md) |
-| Français | [Utilisation et paramètres](fr/USER-GUIDE.md) · [Dépannage](fr/TROUBLESHOOTING.md) |
-| বাংলা | [ব্যবহার ও সেটিংস](bn/USER-GUIDE.md) · [সমস্যা সমাধান](bn/TROUBLESHOOTING.md) |
-| Português (Brasil) | [Uso e configurações](pt/USER-GUIDE.md) · [Solução de problemas](pt/TROUBLESHOOTING.md) |
-| Bahasa Indonesia | [Penggunaan dan pengaturan](id/USER-GUIDE.md) · [Pemecahan masalah](id/TROUBLESHOOTING.md) |
-| اردو | [استعمال اور ترتیبات](ur/USER-GUIDE.md) · [مسائل کا حل](ur/TROUBLESHOOTING.md) |
+| [English](USER-GUIDES.md) | [Setup guide](en/SETUP.md) · [Daily use](en/DAILY-USE.md) · [Troubleshooting](en/TROUBLESHOOTING.md) · [Report a bug](en/Report%20a%20bug.md) · [Request a feature](en/Request%20a%20feature.md) |
+| [Dansk](da/USER-GUIDES.md) | [Setup guide](da/SETUP.md) · [Daily use](da/DAILY-USE.md) · [Troubleshooting](da/TROUBLESHOOTING.md) · [Report a bug](da/Report%20a%20bug.md) · [Request a feature](da/Request%20a%20feature.md) |
+| [Deutsch](de/USER-GUIDES.md) | [Setup guide](de/SETUP.md) · [Daily use](de/DAILY-USE.md) · [Troubleshooting](de/TROUBLESHOOTING.md) · [Report a bug](de/Report%20a%20bug.md) · [Request a feature](de/Request%20a%20feature.md) |
+| [简体中文](zh/USER-GUIDES.md) | [Setup guide](zh/SETUP.md) · [Daily use](zh/DAILY-USE.md) · [Troubleshooting](zh/TROUBLESHOOTING.md) · [Report a bug](zh/Report%20a%20bug.md) · [Request a feature](zh/Request%20a%20feature.md) |
+| [हिन्दी](hi/USER-GUIDES.md) | [Setup guide](hi/SETUP.md) · [Daily use](hi/DAILY-USE.md) · [Troubleshooting](hi/TROUBLESHOOTING.md) · [Report a bug](hi/Report%20a%20bug.md) · [Request a feature](hi/Request%20a%20feature.md) |
+| [Español](es/USER-GUIDES.md) | [Setup guide](es/SETUP.md) · [Daily use](es/DAILY-USE.md) · [Troubleshooting](es/TROUBLESHOOTING.md) · [Report a bug](es/Report%20a%20bug.md) · [Request a feature](es/Request%20a%20feature.md) |
+| [العربية الفصحى](ar/USER-GUIDES.md) | [Setup guide](ar/SETUP.md) · [Daily use](ar/DAILY-USE.md) · [Troubleshooting](ar/TROUBLESHOOTING.md) · [Report a bug](ar/Report%20a%20bug.md) · [Request a feature](ar/Request%20a%20feature.md) |
+| [Français](fr/USER-GUIDES.md) | [Setup guide](fr/SETUP.md) · [Daily use](fr/DAILY-USE.md) · [Troubleshooting](fr/TROUBLESHOOTING.md) · [Report a bug](fr/Report%20a%20bug.md) · [Request a feature](fr/Request%20a%20feature.md) |
+| [বাংলা](bn/USER-GUIDES.md) | [Setup guide](bn/SETUP.md) · [Daily use](bn/DAILY-USE.md) · [Troubleshooting](bn/TROUBLESHOOTING.md) · [Report a bug](bn/Report%20a%20bug.md) · [Request a feature](bn/Request%20a%20feature.md) |
+| [Português (Brasil)](pt/USER-GUIDES.md) | [Setup guide](pt/SETUP.md) · [Daily use](pt/DAILY-USE.md) · [Troubleshooting](pt/TROUBLESHOOTING.md) · [Report a bug](pt/Report%20a%20bug.md) · [Request a feature](pt/Request%20a%20feature.md) |
+| [Bahasa Indonesia](id/USER-GUIDES.md) | [Setup guide](id/SETUP.md) · [Daily use](id/DAILY-USE.md) · [Troubleshooting](id/TROUBLESHOOTING.md) · [Report a bug](id/Report%20a%20bug.md) · [Request a feature](id/Request%20a%20feature.md) |
+| [اردو](ur/USER-GUIDES.md) | [Setup guide](ur/SETUP.md) · [Daily use](ur/DAILY-USE.md) · [Troubleshooting](ur/TROUBLESHOOTING.md) · [Report a bug](ur/Report%20a%20bug.md) · [Request a feature](ur/Request%20a%20feature.md) |
 
-Report with GitHub and attach a support ZIP. [Report a bug](en/Report%20a%20bug.md) · [Request a feature](en/Request%20a%20feature.md) · [Rapportér en fejl](da/Report%20a%20bug.md) · [Foreslå en ny funktion](da/Request%20a%20feature.md)
+The guides use localized screenshots where available. See the [screenshot index](SCREENSHOTS.md) for the main window and every settings tab and subtab.
 
-The guides use screenshots in their own language. See the [screenshot index](SCREENSHOTS.md) for the main window and every settings tab and subtab.
+## Development guides
+
+- [Development guide](en/DEVELOPMENT.md)
+- [Build and release guide](en/BUILD-AND-RELEASE.md)
+- [Translate the app](en/TRANSLATIONS.md)
+- [GitHub project guide](en/GITHUB.md)
+- [Report or follow an issue](en/ISSUES.md)
+- [Project description](PROJECT.md)
+- [Validation for 0.7.0-beta.3](VALIDATION.md)
+- [Release checklist](RELEASE-CHECKLIST.md)
+- [MSIX and Store distribution](MSIX-AND-STORE.md)
+- [Code signing policy](SIGNPATH.md)

@@ -4,14 +4,14 @@
 
 ## Índice
 
-- [1. Aplicaciones de vídeo y campo de visión](#1-aplicaciones-de-vídeo-y-campo-de-visión)
-  - [Campo de visión limitado en Zoom Workplace](#campo-de-visión-limitado-en-zoom-workplace)
-- [2. Conexión y compatibilidad](#2-conexión-y-compatibilidad)
-  - [Cámara ausente o no disponible](#cámara-ausente-o-no-disponible)
+- [1. Aplicaciones de vídeo y campo de visión](#1-aplicaciones-de-v%C3%ADdeo-y-campo-de-visi%C3%B3n)
+  - [Campo de visión limitado en Zoom Workplace](#campo-de-visi%C3%B3n-limitado-en-zoom-workplace)
+- [2. Conexión y compatibilidad](#2-conexi%C3%B3n-y-compatibilidad)
+  - [Cámara ausente o no disponible](#c%C3%A1mara-ausente-o-no-disponible)
   - [Controles ausentes o distintos entre aplicaciones](#controles-ausentes-o-distintos-entre-aplicaciones)
 - [3. Movimiento y posiciones guardadas](#3-movimiento-y-posiciones-guardadas)
   - [El movimiento se detiene, va a saltos o se invierte](#el-movimiento-se-detiene-va-a-saltos-o-se-invierte)
-  - [Campo de visión o posición guardada incorrectos](#campo-de-visión-o-posición-guardada-incorrectos)
+  - [Campo de visión o posición guardada incorrectos](#campo-de-visi%C3%B3n-o-posici%C3%B3n-guardada-incorrectos)
 
 ## 1. Aplicaciones de vídeo y campo de visión
 
@@ -103,7 +103,7 @@ Si la dirección cambia al abrir Logitech Camera Settings o Logitech BRIO Contro
 **Solución**
 
 1. Pulsa el botón cuadrado sobre las lupas para recuperar el campo más amplio y el zoom mínimo. Vuelve a probar.
-2. En **Configuración → Movimiento**, invierte solo el eje que va al revés.
+2. En **Configuración → Paneo**, invierte solo el eje que va al revés.
 3. Para movimientos finos prueba **Ctrl** con una flecha. Un cambio más lento no reduce el paso del controlador.
 4. Fuera de la emisión, cierra la herramienta de Logitech y prueba ambos ejes en la misma aplicación y con el mismo zoom. Abre una sola herramienta de Logitech cada vez para ver si el cambio se repite.
 
@@ -127,7 +127,7 @@ El plano queda cerrado, la posición muestra otro encuadre o no se pueden elegir
 **Solución**
 
 1. Verifica el perfil y la cámara. Recupera el campo más amplio y observa la imagen.
-2. En **Configuración → Movimiento**, revisa el campo inicial. Si hay ángulos, permite el cambio manual y compáralos.
+2. En **Vídeo → Campo de visión**, revisa el campo inicial. Si hay ángulos, permite el cambio manual y compáralos.
 3. Abre la posición. Si el campo solo se reduce con Zoom abierto, sigue el apartado de Zoom. Conserva la posición mientras haces pruebas.
 
 **Comprobación**\
@@ -143,4 +143,4 @@ Perfiles y posiciones de Camera Control Studio. Los ángulos dependen de la cám
 
 ¿Necesitas ayuda? Revisa los registros antes de compartirlos. Indica el modelo, las versiones y lo que probaste.
 
-[Informar de un problema](../en/ISSUES.md) · [Guías de usuario](../USER-GUIDES.md)
+[Informar de un problema](../en/ISSUES.md) · [Guías de usuario](USER-GUIDES.md)

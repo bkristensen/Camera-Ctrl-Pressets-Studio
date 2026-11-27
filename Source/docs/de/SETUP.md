@@ -1,4 +1,4 @@
-[English](../en/SETUP.md) · [Dansk](../da/SETUP.md) · [Deutsch](../de/SETUP.md) · [Alle Sprachen](../USER-GUIDES.md)
+[English](../en/SETUP.md) · [Dansk](../da/SETUP.md) · [Deutsch](SETUP.md) · [Alle Sprachen](USER-GUIDES.md)
 
 # Anwendung einrichten
 
@@ -49,29 +49,39 @@ Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten
 
 ## 3. Bewegung und Zoom einstellen
 
-Ändern Sie die Werte unter **Einstellungen → Bewegung**. Beginnen Sie mit kleinen Schritten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
+Öffnen Sie **Einstellungen → Schwenken**, um die Schrittweite, Richtungen und Bedienung der Kamerataste einzustellen. Beginnen Sie mit kleinen Schritten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
 
-![Registerkarte Bewegung mit Schwenk-, Zoom- und Übergangseinstellungen](../images/screenshots/1.0.1/de/settings.png)
+![Registerkarte zum Einstellen von Schwenkschritten, Richtungen und Kamerataste](../images/screenshots/settings-tabs/en/settings.png)
 
 | Einstellung | Wirkung | Standard |
 | --- | --- | --- |
 | Feintempo (% von Normal) | Tempo beim Gedrückthalten von Strg und einer Pfeiltaste | 50 % |
 | Normale Schwenkschritte | Mittlerer Pfeilring | 1 |
 | Schnelle Schwenkschritte | Äußerer Pfeilring | 4 |
-| Zoomschritte | − und + | 1 |
-| Übergang in Sekunden | Zeit für einen Positionswechsel bei fester Dauer | 1,0 |
-| Tempo für Positionswechsel verwenden | Die Entfernung bestimmt die Dauer | Aus |
-| Übergangstempo (%/s) | Tempo in Prozent des Bereichs der maßgeblichen Achse pro Sekunde | 30 % |
-
-Bei tempobasierten Übergängen dauern kurze Bewegungen weniger lang als lange. Die App beschleunigt und bremst und steuert die Achsen gemeinsam, damit sie das Ziel gleichzeitig erreichen können.
 
 Ein Schritt entspricht einem Schritt des Kameratreibers. Er ist keine feste Strecke oder Prozentzahl. Der Treiber begrenzt die Bewegung und ihre Gleichmäßigkeit.
 
 Hängt die Kamera kopfüber, testen Sie **Kameraschwenk oben / unten umkehren** mit dem Pfeil nach oben. Aktivieren Sie **Kameraschwenk links / rechts umkehren** nur, wenn Links in die falsche Richtung führt. Diese Optionen ändern die Steuerung. Sie drehen das Videobild nicht.
 
+### Zoomschritte einstellen
+
+Öffnen Sie **Einstellungen → Zoom**, um die Schrittweite der Plus- und Minustasten festzulegen. Standardmäßig beträgt sie einen Treiberschritt.
+
+### Positionswechsel einstellen
+
+Öffnen Sie **Positionen → Übergänge**, um die Bewegung zwischen gespeicherten Positionen einzustellen.
+
+| Einstellung | Wirkung | Standard |
+| --- | --- | --- |
+| Tempo für Positionswechsel verwenden | Die Entfernung bestimmt die Dauer | Aus |
+| Übergangstempo (%/s) | Tempo in Prozent des Bereichs der maßgeblichen Achse pro Sekunde | 30 % |
+| Übergang in Sekunden | Zeit für einen Positionswechsel bei fester Dauer | 1,0 |
+
+Bei tempobasierten Übergängen dauern kurze Bewegungen weniger lang als lange. Die App beschleunigt und bremst und steuert die Achsen gemeinsam, damit sie das Ziel gleichzeitig erreichen können.
+
 ### Sichtfeld einstellen
 
-Öffnen Sie **Einstellungen → Bewegung**. Wählen Sie unter **Sichtfeld beim Start** das weiteste verfügbare Sichtfeld, einen vom Kameratreiber gemeldeten Winkel oder **Nichts ändern**, um das aktuelle Sichtfeld beizubehalten. Die App nutzt den Wert beim ersten Verbinden. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Winkel unter dem Kamerarad auszuwählen. Meldet der Treiber keine wählbaren Winkel, sind die Sichtfeldeinstellungen deaktiviert. Der Zoom bleibt verfügbar, wenn die Kamera ihn unterstützt.
+Öffnen Sie **Video → Sichtfeld**. Wählen Sie unter **Sichtfeld beim Start** das weiteste verfügbare Sichtfeld, einen vom Kameratreiber gemeldeten Winkel oder **Nichts ändern**, um das aktuelle Sichtfeld beizubehalten. Die App nutzt den Wert beim ersten Verbinden. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Winkel unter dem Kamerarad auszuwählen. Meldet der Treiber keine wählbaren Winkel, sind die Sichtfeldeinstellungen deaktiviert. Der Zoom bleibt verfügbar, wenn die Kamera ihn unterstützt.
 
 **Sichtfeld an Zoom- und Schwenkgrenzen wechseln** ist standardmäßig aktiv. Es funktioniert auch bei ausgeblendeter Auswahl, wenn der Treiber das Sichtfeld steuern kann.
 
@@ -81,7 +91,7 @@ Hängt die Kamera kopfüber, testen Sie **Kameraschwenk oben / unten umkehren** 
 
 Die quadratische Taste mit Rahmensymbol stellt das weiteste Sichtfeld und den kleinsten Zoom ein. Der Schieberegler zoomt im aktuellen Sichtfeld. Deaktivieren Sie den automatischen Wechsel, um dieses Sichtfeld beim Zoomen und Schwenken beizubehalten.
 
-Positionen speichern Schwenk- und Neigewinkel, Zoom und das vom Treiber gemeldete Sichtfeld. Ältere Positionen behalten das aktuelle Sichtfeld. Prüfen Sie das Livebild, wenn Zoom, Logitech Brio Control oder eine andere App den Ausschnitt steuert. [Testschritte für Brio und Zoom auf Englisch](../VALIDATION.md#brio-field-of-view-and-zoom)
+Positionen speichern Schwenk- und Neigewinkel, Zoom und das vom Treiber gemeldete Sichtfeld. Ältere Positionen behalten das aktuelle Sichtfeld. Prüfen Sie das Livebild, wenn Zoom, Logitech Brio Control oder eine andere App den Ausschnitt steuert. [Testschritte für Brio und Zoom auf Englisch](VALIDATION.md#brio-sichtfeld-und-zoom)
 
 ## 4. Bild anpassen und feste Positionen speichern
 
@@ -101,7 +111,7 @@ Eine feste Position, die in der Hauptliste ausgewählt ist, wird auch in den Ein
 
 ## 5. Layout und Sprache einstellen
 
-Ziehen Sie die Trennlinie zwischen Kamerasteuerung und Positionsliste. Das Profil speichert die Trennlinie sowie Lage und Größe des Fensters. Die Anfangsgröße beträgt 900 × 500, die Mindestgröße 670 × 450. Die Einstellungen starten geschlossen. Beim ersten Öffnen nach dem Start erscheint die erste Registerkarte. Scrollen Sie unter **Bewegung** oder **Anwendung** nach unten, wenn Felder außerhalb des Fensters liegen. Die App speichert die Fensterbreite bei geschlossenen Einstellungen.
+Ziehen Sie die Trennlinie zwischen Kamerasteuerung und Positionsliste. Das Profil speichert die Trennlinie sowie Lage und Größe des Fensters. Die Anfangsgröße beträgt 900 × 500, die Mindestgröße 670 × 450. Die Einstellungen starten geschlossen. Beim ersten Öffnen nach dem Start erscheint die erste Registerkarte. Scrollen Sie unter **Schwenken** oder **Anwendung** nach unten, wenn Felder außerhalb des Fensters liegen. Die App speichert die Fensterbreite bei geschlossenen Einstellungen.
 
 Lassen Sie beim Profilwechsel über die Profilauswahl unten die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
 
@@ -109,17 +119,17 @@ Wählen Sie die Sprache unter **Einstellungen → Anwendung → Profilsprache**.
 
 ## 6. Version und Projektinformationen
 
-Unter **Info** finden Sie die Version und Projektlinks. Zeigen Sie auf die Version, um die vollständige Build-ID zu sehen. Geben Sie sie an, wenn ein Fehler nur in einem bestimmten Build auftritt.
+Unter **Kontakt & Info → Info** finden Sie die Version und Projektlinks. Zeigen Sie auf die Version, um die vollständige Build-ID zu sehen. Geben Sie sie an, wenn ein Fehler nur in einem bestimmten Build auftritt.
 
-![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/1.0.1/de/about.png)
+![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/contact/de/about.png)
 
 ## 7. Diagnoseprotokolle und Fehlermeldungen
 
-![Registerkarte Fehler melden mit Protokoll- und GitHub-Meldefunktionen](../images/screenshots/1.0.1/de/issues.png)
+![Registerkarte Kontakt mit GitHub-Schaltflächen, Support-ZIP und Protokolleinstellungen](../images/screenshots/contact/de/issues.png)
 
-Unter **Fehler melden** können Sie den Protokollordner, die maximale Dateigröße und die Anzahl der aufzubewahrenden Dateien einschließlich des aktiven Protokolls einstellen. Standardmäßig nutzt die Anwendung den Programmordner oder ersatzweise `%LOCALAPPDATA%\CamPressets\Logs`.
+Unter **Kontakt & Info → Kontakt** können Sie den Protokollordner, die maximale Dateigröße und die Anzahl der aufzubewahrenden Dateien einschließlich des aktiven Protokolls einstellen. Standardmäßig nutzt die Anwendung den Programmordner oder ersatzweise `%LOCALAPPDATA%\CamPressets\Logs`.
 
-**Auf GitHub melden** öffnet einen Entwurf und den lokalen Ordner mit den Berichtsdateien. Prüfen Sie die Dateien und hängen Sie sie im GitHub-Editor an.
+Wählen Sie **Fehler melden** oder **Neue Funktion vorschlagen**, um den passenden GitHub-Entwurf zu öffnen. Bei Fehlern bietet die App ein Support-ZIP an. Prüfen Sie das Archiv und hängen Sie es selbst an. [Meldung erstellen oder verfolgen](ISSUES.md)
 
 **Fehler melden oder Funktion vorschlagen**\
 <https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\

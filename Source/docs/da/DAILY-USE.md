@@ -1,4 +1,4 @@
-[English](../en/DAILY-USE.md) · [Dansk](../da/DAILY-USE.md) · [Deutsch](../de/DAILY-USE.md) · [Alle guidesprog](../USER-GUIDES.md)
+[English](../en/DAILY-USE.md) · [Dansk](DAILY-USE.md) · [Deutsch](../de/DAILY-USE.md) · [Alle guidesprog](USER-GUIDES.md)
 
 # Daglig brug
 

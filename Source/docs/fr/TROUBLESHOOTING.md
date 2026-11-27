@@ -4,14 +4,14 @@
 
 ## Sommaire
 
-- [1. Applications vidéo et champ de vision](#1-applications-vidéo-et-champ-de-vision)
-  - [Champ de vision réduit dans Zoom Workplace](#champ-de-vision-réduit-dans-zoom-workplace)
-- [2. Connexion et compatibilité](#2-connexion-et-compatibilité)
-  - [Caméra introuvable ou indisponible](#caméra-introuvable-ou-indisponible)
-  - [Commandes absentes ou différentes selon l’application](#commandes-absentes-ou-différentes-selon-lapplication)
-- [3. Mouvement et positions enregistrées](#3-mouvement-et-positions-enregistrées)
-  - [Mouvement bloqué, saccadé ou inversé](#mouvement-bloqué-saccadé-ou-inversé)
-  - [Champ de vision ou position enregistrée incorrects](#champ-de-vision-ou-position-enregistrée-incorrects)
+- [1. Applications vidéo et champ de vision](#1-applications-vid%C3%A9o-et-champ-de-vision)
+  - [Champ de vision réduit dans Zoom Workplace](#champ-de-vision-r%C3%A9duit-dans-zoom-workplace)
+- [2. Connexion et compatibilité](#2-connexion-et-compatibilit%C3%A9)
+  - [Caméra introuvable ou indisponible](#cam%C3%A9ra-introuvable-ou-indisponible)
+  - [Commandes absentes ou différentes selon l’application](#commandes-absentes-ou-diff%C3%A9rentes-selon-lapplication)
+- [3. Mouvement et positions enregistrées](#3-mouvement-et-positions-enregistr%C3%A9es)
+  - [Mouvement bloqué, saccadé ou inversé](#mouvement-bloqu%C3%A9-saccad%C3%A9-ou-invers%C3%A9)
+  - [Champ de vision ou position enregistrée incorrects](#champ-de-vision-ou-position-enregistr%C3%A9e-incorrects)
 
 ## 1. Applications vidéo et champ de vision
 
@@ -103,7 +103,7 @@ Si le sens change à l’ouverture de Logitech Camera Settings ou de Logitech BR
 **Solution**
 
 1. Utilisez le bouton carré au-dessus des loupes pour rétablir le champ le plus large et le zoom minimal. Refaites le test.
-2. Dans **Paramètres → Mouvement**, inversez uniquement l’axe concerné.
+2. Dans **Paramètres → Panoramique**, inversez uniquement l’axe concerné.
 3. Pour affiner le mouvement, essayez **Ctrl** et une flèche. Une transition plus longue ne réduit pas les pas du pilote.
 4. Hors diffusion, fermez l’outil Logitech. Testez les deux axes dans la même application vidéo, au même niveau de zoom. Ouvrez les outils Logitech un à un pour voir si le changement revient.
 
@@ -127,7 +127,7 @@ Le cadrage est trop serré, une position a changé ou aucun angle n’est propos
 **Solution**
 
 1. Vérifiez le profil et la caméra. Rétablissez le cadre complet et observez l’image.
-2. Dans **Paramètres → Mouvement**, vérifiez le champ au démarrage. Autorisez le réglage manuel si le pilote propose des angles.
+2. Dans **Vidéo → Champ de vision**, vérifiez le champ au démarrage. Autorisez le réglage manuel si le pilote propose des angles.
 3. Rappelez la position. Si le champ se réduit seulement avec Zoom ouvert, suivez le premier article. Conservez la position pendant le test.
 
 **Vérification**\
@@ -143,4 +143,4 @@ Profils et positions de Camera Control Studio. Les angles dépendent de la camé
 
 Besoin d’aide ? Relisez les journaux avant de les partager. Indiquez le modèle, les versions et les résultats de vos essais.
 
-[Signaler un problème](../en/ISSUES.md) · [Guides utilisateur](../USER-GUIDES.md)
+[Signaler un problème](../en/ISSUES.md) · [Guides utilisateur](USER-GUIDES.md)

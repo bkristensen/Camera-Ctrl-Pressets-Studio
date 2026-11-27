@@ -1,4 +1,4 @@
-[English](../en/DAILY-USE.md) · [Dansk](../da/DAILY-USE.md) · [Deutsch](../de/DAILY-USE.md) · [Alle Sprachen](../USER-GUIDES.md)
+[English](../en/DAILY-USE.md) · [Dansk](../da/DAILY-USE.md) · [Deutsch](DAILY-USE.md) · [Alle Sprachen](USER-GUIDES.md)
 
 # Tägliche Nutzung
 
@@ -40,7 +40,7 @@ Der innere Ring bewegt die Kamera normal, der äußere schnell. Jeder Ring hat a
 - **Doppelklicken Sie, um eine Kamera zu wählen.** Die Kameraliste öffnet sich.
 - **Gedrückt halten und ziehen.** Beginnen Sie auf dem Kamerasymbol. Ziehen Sie seitwärts zum Schwenken oder nach oben oder unten zum Neigen. Kurzes Ziehen bewegt die Kamera langsam. Weiteres Ziehen erhöht das Tempo bis auf das Doppelte der schnellen Stufe. Lassen Sie die Taste los oder führen Sie den Zeiger zum Ausgangspunkt zurück, um anzuhalten.
 
-Unter **Einstellungen → Bewegung** können Sie das Ziehen ausschalten oder die Kamera mit einem Klick wählen. Beide Optionen werden im aktiven Profil gespeichert.
+Unter **Einstellungen → Schwenken** können Sie das Ziehen ausschalten oder die Kamera mit einem Klick wählen. Beide Optionen werden im aktiven Profil gespeichert.
 
 ### Zoomen
 
@@ -81,6 +81,6 @@ Schließen Sie die Anwendung wie gewohnt. Das aktive Profil und das Fensterlayou
 
 ## 5. Probleme melden
 
-Melden Sie Fehler oder fehlende Funktionen unter **Einstellungen → Fehler melden**.
+Melden Sie Fehler oder schlagen Sie Funktionen unter **Kontakt & Info → Kontakt** vor.
 
 Siehe [Einrichtung](SETUP.md) für Kamerarichtung, feste Positionen, Bildeinstellungen, Profile und Bewegungsschritte.

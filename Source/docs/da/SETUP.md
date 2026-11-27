@@ -1,4 +1,4 @@
-[English](../en/SETUP.md) · [Dansk](../da/SETUP.md) · [Deutsch](../de/SETUP.md) · [Alle guidesprog](../USER-GUIDES.md)
+[English](../en/SETUP.md) · [Dansk](SETUP.md) · [Deutsch](../de/SETUP.md) · [Alle guidesprog](USER-GUIDES.md)
 
 # Sæt programmet op
 
@@ -91,7 +91,7 @@ Ved hastighedsbaserede skift tager en kort bevægelse mindre tid end en lang. Ap
 
 Brug den firkantede knap med rammesymbolet for at gå direkte til bredeste synsfelt og mindste zoom. Skyderen ændrer zoom inden for det aktuelle synsfelt. Slå automatisk skift fra, hvis zoom og panorering skal holde sig inden for det valgte synsfelt.
 
-Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Ældre positioner beholder kameraets aktuelle synsfelt. Tjek livebilledet, hvis Zoom, Logitech Brio Control eller et andet program også styrer udsnittet. [Testtrin for Brio og Zoom på engelsk](../VALIDATION.md#brio-field-of-view-and-zoom)
+Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Ældre positioner beholder kameraets aktuelle synsfelt. Tjek livebilledet, hvis Zoom, Logitech Brio Control eller et andet program også styrer udsnittet. [Testtrin for Brio og Zoom på engelsk](VALIDATION.md#brio-synsfelt-og-zoom)
 
 ## 4. Tilpas billedet og gem faste positioner
 

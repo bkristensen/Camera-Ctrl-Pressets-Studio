@@ -103,7 +103,7 @@ Jika arah berubah saat Logitech Camera Settings atau Logitech BRIO Control dibuk
 **Solusi**
 
 1. Gunakan tombol bingkai persegi di atas kaca pembesar untuk mengembalikan bidang terlebar dan zoom minimum. Uji lagi.
-2. Buka **Pengaturan → Gerakan** dan balik hanya sumbu yang salah.
+2. Buka **Pengaturan → Geser kamera** dan balik hanya sumbu yang salah.
 3. Untuk gerakan lebih kecil, coba **Ctrl** dan tombol panah. Durasi peralihan tidak memperkecil langkah driver.
 4. Saat tidak bersiaran, tutup alat Logitech. Uji kedua sumbu di aplikasi video yang sama dengan tingkat zoom yang sama. Buka satu alat Logitech setiap kali untuk melihat apakah arah kembali berubah.
 
@@ -127,7 +127,7 @@ Gambar terlalu sempit, posisi tidak sesuai, atau pilihan sudut tidak tersedia.
 **Solusi**
 
 1. Periksa profil dan kamera. Kembalikan bingkai penuh dan lihat gambar langsung.
-2. Periksa bidang pandang awal di **Pengaturan → Gerakan**. Jika sudut tersedia, izinkan perubahan manual dan bandingkan.
+2. Periksa bidang pandang awal di **Video → Bidang pandang**. Jika sudut tersedia, izinkan perubahan manual dan bandingkan.
 3. Panggil posisi. Jika gambar hanya menyempit saat Zoom terbuka, ikuti bagian tentang Zoom. Pertahankan posisi yang sudah tersimpan selama mencari penyebab.
 
 **Pemeriksaan**\
@@ -143,4 +143,4 @@ Profil dan posisi Camera Control Studio. Pilihan sudut bergantung pada kamera da
 
 Masih perlu bantuan? Periksa log sebelum membagikannya. Sertakan model, versi, langkah, dan hasil.
 
-[Laporkan masalah](../en/ISSUES.md) · [Panduan pengguna](../USER-GUIDES.md)
+[Laporkan masalah](../en/ISSUES.md) · [Panduan pengguna](USER-GUIDES.md)

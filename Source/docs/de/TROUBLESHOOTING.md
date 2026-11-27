@@ -5,12 +5,12 @@
 ## Inhaltsverzeichnis
 
 - [1. Video-Apps und Sichtfeld](#1-video-apps-und-sichtfeld)
-  - [Eingeschränktes Sichtfeld in Zoom Workplace](#eingeschränktes-sichtfeld-in-zoom-workplace)
-- [2. Kameraverbindung und Kompatibilität](#2-kameraverbindung-und-kompatibilität)
-  - [Kamera fehlt oder ist nicht verfügbar](#kamera-fehlt-oder-ist-nicht-verfügbar)
+  - [Eingeschränktes Sichtfeld in Zoom Workplace](#eingeschr%C3%A4nktes-sichtfeld-in-zoom-workplace)
+- [2. Kameraverbindung und Kompatibilität](#2-kameraverbindung-und-kompatibilit%C3%A4t)
+  - [Kamera fehlt oder ist nicht verfügbar](#kamera-fehlt-oder-ist-nicht-verf%C3%BCgbar)
   - [Steuerung fehlt oder wirkt je nach App anders](#steuerung-fehlt-oder-wirkt-je-nach-app-anders)
 - [3. Bewegung und gespeicherte Positionen](#3-bewegung-und-gespeicherte-positionen)
-  - [Bewegung stoppt, ruckelt oder läuft in die falsche Richtung](#bewegung-stoppt-ruckelt-oder-läuft-in-die-falsche-richtung)
+  - [Bewegung stoppt, ruckelt oder läuft in die falsche Richtung](#bewegung-stoppt-ruckelt-oder-l%C3%A4uft-in-die-falsche-richtung)
   - [Sichtfeld oder gespeicherte Position stimmt nicht](#sichtfeld-oder-gespeicherte-position-stimmt-nicht)
 
 ## 1. Video-Apps und Sichtfeld
@@ -103,7 +103,7 @@ Schwenken, Neigen oder Zoomen stoppt früh. Ein Wechsel läuft in Stufen oder di
 **Lösung**
 
 1. Drücken Sie die quadratische Rahmentaste über den Lupen. Sie stellt das weiteste verfügbare Sichtfeld und den kleinsten Zoom wieder her. Testen Sie Pfeile und Zoom erneut.
-2. Öffnen Sie bei falscher Pfeilrichtung **Einstellungen → Bewegung**. Kehren Sie nur die betroffene Achse um.
+2. Öffnen Sie bei falscher Pfeilrichtung **Einstellungen → Schwenken**. Kehren Sie nur die betroffene Achse um.
 3. Halten Sie für eine feinere Bewegung **Strg** und eine Pfeiltaste gedrückt. Eine längere Übergangszeit verkleinert die Treiberschritte nicht.
 4. Schließen Sie das Logitech-Programm außerhalb einer Übertragung. Testen Sie beide Achsen in derselben Video-App bei gleichem Zoom. Öffnen Sie jeweils nur ein Logitech-Programm und prüfen Sie, ob die Änderung erneut auftritt.
 
@@ -127,7 +127,7 @@ Das Bild ist zu eng, eine gespeicherte Position zeigt einen anderen Ausschnitt o
 **Lösung**
 
 1. Prüfen Sie das aktive Profil und die Kamera. Stellen Sie das volle Bild wieder her und prüfen Sie das Livebild.
-2. Prüfen Sie unter **Einstellungen → Bewegung** das Sichtfeld beim Start. Wenn der Treiber Winkel anbietet, erlauben Sie manuelle Änderungen und vergleichen Sie die Winkel.
+2. Prüfen Sie unter **Video → Sichtfeld** das Sichtfeld beim Start. Wenn der Treiber Winkel anbietet, erlauben Sie manuelle Änderungen und vergleichen Sie die Winkel.
 3. Rufen Sie die gespeicherte Position auf. Ist das Bild nur bei geöffnetem Zoom enger, folgen Sie dem Abschnitt zu Zoom. Behalten Sie die Position bei der Fehlersuche bei.
 
 **Überprüfung**\
@@ -143,4 +143,4 @@ Profile und gespeicherte Positionen in Camera Control Studio. Auswählbare Winke
 
 Brauchen Sie noch Hilfe? Prüfen Sie Protokolle vor dem Teilen. Nennen Sie Kameramodell, App-Versionen, Schritte und Ergebnisse.
 
-[Problem melden](../en/ISSUES.md) · [Benutzerhandbücher](../USER-GUIDES.md)
+[Problem melden](../en/ISSUES.md) · [Benutzerhandbücher](USER-GUIDES.md)

@@ -4,14 +4,14 @@
 
 ## Sumário
 
-- [1. Aplicativos de vídeo e campo de visão](#1-aplicativos-de-vídeo-e-campo-de-visão)
-  - [Campo de visão limitado no Zoom Workplace](#campo-de-visão-limitado-no-zoom-workplace)
-- [2. Conexão e compatibilidade](#2-conexão-e-compatibilidade)
-  - [Câmera ausente ou indisponível](#câmera-ausente-ou-indisponível)
+- [1. Aplicativos de vídeo e campo de visão](#1-aplicativos-de-v%C3%ADdeo-e-campo-de-vis%C3%A3o)
+  - [Campo de visão limitado no Zoom Workplace](#campo-de-vis%C3%A3o-limitado-no-zoom-workplace)
+- [2. Conexão e compatibilidade](#2-conex%C3%A3o-e-compatibilidade)
+  - [Câmera ausente ou indisponível](#c%C3%A2mera-ausente-ou-indispon%C3%ADvel)
   - [Controles ausentes ou diferentes entre aplicativos](#controles-ausentes-ou-diferentes-entre-aplicativos)
-- [3. Movimento e posições salvas](#3-movimento-e-posições-salvas)
-  - [Movimento para, dá saltos ou segue no sentido errado](#movimento-para-dá-saltos-ou-segue-no-sentido-errado)
-  - [Campo de visão ou posição salva incorretos](#campo-de-visão-ou-posição-salva-incorretos)
+- [3. Movimento e posições salvas](#3-movimento-e-posi%C3%A7%C3%B5es-salvas)
+  - [Movimento para, dá saltos ou segue no sentido errado](#movimento-para-d%C3%A1-saltos-ou-segue-no-sentido-errado)
+  - [Campo de visão ou posição salva incorretos](#campo-de-vis%C3%A3o-ou-posi%C3%A7%C3%A3o-salva-incorretos)
 
 ## 1. Aplicativos de vídeo e campo de visão
 
@@ -103,7 +103,7 @@ Se a direção mudar ao abrir Logitech Camera Settings ou Logitech BRIO Control,
 **Solução**
 
 1. Use o botão quadrado acima das lupas para restaurar o campo mais amplo e o zoom mínimo. Teste novamente.
-2. Em **Configurações → Movimento**, inverta apenas o eixo afetado.
+2. Em **Configurações → Panorâmica**, inverta apenas o eixo afetado.
 3. Tente **Ctrl** com uma seta para movimentos menores. Uma transição mais longa não diminui os passos do driver.
 4. Fora da transmissão, feche a ferramenta da Logitech. Teste os dois eixos no mesmo aplicativo de vídeo e com o mesmo zoom. Abra uma ferramenta da Logitech por vez para ver se a mudança volta.
 
@@ -127,7 +127,7 @@ O quadro fica fechado, uma posição muda de enquadramento ou as opções de ân
 **Solução**
 
 1. Confira o perfil e a câmera. Restaure o quadro completo e observe a imagem.
-2. Em **Configurações → Movimento**, confira o campo inicial. Se o driver oferecer ângulos, permita a troca manual e compare.
+2. Em **Vídeo → Campo de visão**, confira o campo inicial. Se o driver oferecer ângulos, permita a troca manual e compare.
 3. Abra a posição. Se o campo ficar menor apenas com o Zoom aberto, siga a seção sobre o Zoom. Preserve a posição durante o teste.
 
 **Verificação**\
@@ -143,4 +143,4 @@ Perfis e posições do Camera Control Studio. Os ângulos dependem da câmera e 
 
 Precisa de ajuda? Confira os registros antes de compartilhá-los. Informe modelo, versões, testes e resultados.
 
-[Relatar um problema](../en/ISSUES.md) · [Guias do usuário](../USER-GUIDES.md)
+[Relatar um problema](../en/ISSUES.md) · [Guias do usuário](USER-GUIDES.md)
