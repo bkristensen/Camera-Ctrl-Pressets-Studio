@@ -1349,7 +1349,7 @@ namespace CameraControlStudio
             //
             this.settingsFooter.ColumnCount = 2;
             this.settingsFooter.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            this.settingsFooter.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
+            this.settingsFooter.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             this.settingsFooter.RowCount = 1;
             this.settingsFooter.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             this.settingsFooter.Controls.Add(this.settingsStatus, 0, 0);
@@ -1370,14 +1370,18 @@ namespace CameraControlStudio
             // closeSettings
             //
             this.closeSettings.AccessibleName = "Close";
+            this.closeSettings.AutoSize = true;
+            this.closeSettings.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             this.closeSettings.BackColor = Color.FromArgb(9, 52, 94);
             this.closeSettings.Cursor = Cursors.Hand;
             this.closeSettings.Dock = DockStyle.Fill;
-            this.closeSettings.Font = new Font("Segoe UI", 15F);
             this.closeSettings.ForeColor = Color.White;
+            this.closeSettings.MinimumSize = new Size(90, 0);
             this.closeSettings.Name = "closeSettings";
+            this.closeSettings.Padding = new Padding(12, 0, 12, 0);
             this.closeSettings.TabIndex = 0;
-            this.closeSettings.Text = "×";
+            this.closeSettings.Text = "Close";
+            this.closeSettings.TextAlign = ContentAlignment.MiddleCenter;
             this.closeSettings.UseVisualStyleBackColor = false;
             //
             // SettingsForm

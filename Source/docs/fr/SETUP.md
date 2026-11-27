@@ -29,110 +29,125 @@ Si la visionneuse de guide a besoin de WebView2, téléchargez le runtime depuis
 
 ![Avertissement SmartScreen étendu avec Exécuter quand même, affiché en danois](../images/reporting/smartscreen-run.png)
 
-## 1. Choisissez un profil et une caméra
+Choisissez un profil en bas de la fenêtre principale. Par défaut, double-cliquez sur le bouton caméra au centre de la roue pour choisir une source. Le profil mémorise la caméra. Si elle manque, choisissez-en une autre.
 
-Utilisez le sélecteur de profil dans le pied de page pour sélectionner un profil. Pour en créer un, ouvrez **Paramètres → Profils**. Choisissez **New** pour les paramètres par défaut ou **Copy** pour une copie du profil actif. Nommez-le d'après une personne ou une configuration. De nouveaux profils deviennent actifs. Dans **Profils**, sélectionnez un profil et cliquez sur **✎** pour le renommer. Le profil Standard a un nom fixe.
+Les sections suivent l’ordre des onglets. Un bouton grisé demande souvent de sélectionner un élément. Sous Vidéo, le pilote détermine les réglages visibles. Vérifiez le résultat dans votre application de capture.
 
-Double-cliquez sur le symbole de la caméra au centre de la roue de direction pour sélectionner une caméra. Le programme s'en souvient. Si cette caméra est manquante, choisissez une autre source. Les positions appartiennent à une caméra dans un profil.
+**Fermer**. Redimensionnez ou déplacez les deux fenêtres. Glissez le séparateur de la fenêtre principale. Le profil mémorise ces valeurs. Fermer ferme les paramètres. La fenêtre principale reste ouverte.
 
-![Onglet Profils avec la liste des profils et les actions](../images/screenshots/1.0.1/en/profiles.png)
+## Préréglages
 
-## 2. Décidez quand le contrôle de la caméra peut commencer
+### Préréglages permanents
 
-Sous **Paramètres → Application**, activez **Demander si la diffusion a commencé avant d’utiliser la caméra** si votre programme de capture doit démarrer en premier. Cette option est désactivée par défaut.
+Orientez la caméra. Une position permanente mémorise les valeurs disponibles de panoramique, d’inclinaison et de zoom. Elle garde aussi le champ de vision si la caméra le fournit. La position appartient à une caméra dans un profil.
 
-Avec l'option activée, la première action de la caméra demande si la diffusion a commencé. Choisissez **Yes** uniquement lorsque c'est le cas. Choisissez **No** pour garder le contrôle de la caméra déconnecté. Après Oui, aucune autre action ne vous sera demandée jusqu'à ce que vous changiez de profil, modifiiez cette option ou redémarriez l'application. L'application ne détecte pas et ne démarre pas de session de streaming pour vous.
+- **+ Ajouter un préréglage permanent**. Enregistrez le cadrage actuel. Choisissez un symbole et donnez un nom unique à la position. Si le champ est vide, le symbole peut proposer un nom. Saisissez un nom pour activer l’enregistrement. Annuler conserve la liste.
+- **✎ Modifier le nom et l’icône**. Modifiez le nom ou le symbole de la position sélectionnée. Le cadrage reste identique.
+- **↻ Remplacer par la position actuelle**. Remplacez le cadrage de la position choisie par le cadrage actuel. Confirmez. Le nom et le symbole restent identiques.
+- **− Supprimer le préréglage permanent**. Supprimez la position sélectionnée après confirmation.
+- **↑ / ↓ Monter le préréglage sélectionné · Descendre le préréglage sélectionné**. Déplacez la position d’une ligne dans les deux listes. En haut, la flèche haute est grisée. En bas, la flèche basse est grisée.
 
-Si vous avez besoin de cette commande lors de la première utilisation, définissez l'option avant votre prochaine session. La valeur par défaut permet à l'application de se connecter au démarrage.
-
-![Onglet Application avec confirmation de diffusion en continu, paramètres de langue de la fenêtre et du profil](../images/screenshots/1.0.1/fr/application.png)
-
-## 3. Définir le mouvement et le zoom
-
-Ouvrez **Paramètres → Panoramique** pour définir les étapes de panoramique et d'inclinaison, inverser les directions et choisir le fonctionnement du bouton de l'appareil photo. Commencez par de petites étapes. Testez le résultat dans votre programme de capture.
-
-![Onglet panoramique avec tailles de pas, commandes de direction et options de boutons de caméra](../images/screenshots/settings-tabs/en/settings.png)
-
-| Paramètre | Ce que ça change | Par défaut |
-| --- | --- | --- |
-| Vitesse fine (% de la normale) | Évaluez en maintenant Ctrl et une touche fléchée | 50% |
-| Étapes de panoramique normales | Anneau de flèche du milieu | 1 |
-| Étapes de panoramique rapide | Anneau de flèche extérieur | 4 |
-
-Une étape signifie une étape prise en charge par le pilote de la caméra. Il ne s'agit pas d'une distance ou d'un pourcentage fixe. Le conducteur limite le mouvement et la douceur.
-
-Pour une caméra à l’envers, activez **Inverser le mouvement haut/bas** et testez Up. Activez **Inverser le mouvement gauche/droite** uniquement si la gauche se déplace dans le mauvais sens. Ces paramètres modifient les contrôles. Ils ne font pas pivoter la vidéo.
-
-### Définir les étapes de zoom
-
-Ouvrez **Paramètres → Zoom** pour choisir la distance dans laquelle les boutons plus et moins se déplacent en une seule étape. La valeur par défaut est une étape du pilote. [Voir l'onglet Zoom](../images/screenshots/settings-tabs/en/zoom.png).
+Sélectionnez une position pour la modifier, la remplacer, la supprimer ou la déplacer. Ajouter et remplacer exigent un profil chargé et au moins un axe réglable. Si la caméra est déconnectée, l’application peut tenter de la connecter.
 
 ### Définir des transitions prédéfinies
 
-Ouvrez **Préréglages → Transitions** pour choisir la façon dont la caméra se déplace entre les positions enregistrées. [Voir l'onglet Transitions](../images/screenshots/settings-tabs/en/transitions.png).
+- **Utiliser la vitesse pour les transitions**. Désactivé applique une durée fixe. Activé applique une vitesse. Les déplacements courts se terminent plus vite. Les axes arrivent ensemble.
+- **Transition (s)**. Réglez la durée d’un changement de position. La valeur par défaut est 1 seconde. Le champ est grisé en mode vitesse.
+- **Vitesse de transition (%/s)**. Réglez la vitesse en pourcentage de la course de l’axe qui dicte le déplacement, par seconde. La valeur par défaut est 30 %. Le champ est grisé en mode durée fixe.
 
-| Paramètre | Ce que ça change | Par défaut |
-| --- | --- | --- |
-| Utiliser la vitesse pour les transitions prédéfinies | Laissez la distance parcourue déterminer la durée | Désactivé |
-| Vitesse de transition (%/s) | Taux de croisière en pourcentage de la plage de l'axe de contrôle par seconde | 30% |
-| Transition (sec.) | Temps pour chaque changement de préréglage en mode durée fixe | 1.0 |
+## Paramètres
 
-Avec les transitions basées sur la vitesse, un mouvement court prend moins de temps qu’un long. L'application accélère et freine, et tous les axes mobiles partagent la même progression afin qu'ils puissent atteindre la cible ensemble.
+### Panoramique
+
+- **Vitesse fine (% de la normale)**. Maintenez Ctrl et appuyez sur une flèche pour affiner le réglage. La vitesse par défaut vaut 50 % de la vitesse normale.
+- **Pas de panoramique normal**. Réglez le nombre de pas pour les flèches de l’anneau intérieur. La valeur par défaut est 1.
+- **Pas de panoramique rapide**. Réglez le nombre de pas pour les flèches de l’anneau extérieur. La valeur par défaut est 4. Ce réglage agit aussi quand vous faites glisser le bouton caméra.
+- **Inverser le mouvement gauche/droite**. Inversez gauche et droite si la caméra part dans le mauvais sens.
+- **Inverser le mouvement haut/bas**. Inversez haut et bas, par exemple si la caméra est montée à l’envers. Ces choix modifient les commandes. L’image garde son orientation.
+- **Faire glisser le bouton de caméra pour orienter la caméra**. Faites glisser le bouton au centre de la roue pour orienter la caméra. Désactivez l’option pour piloter avec les flèches.
+- **Double-cliquer sur le bouton de caméra pour choisir la source**. Activé ouvre la liste des caméras au double-clic. Désactivé l’ouvre au clic simple.
+
+Ces réglages sont disponibles avant la connexion. Le pilote fixe la taille du pas, les axes disponibles et leurs limites.
+
+### Définir les étapes de zoom
+
+- **Pas de zoom**. Réglez le déplacement du zoom à chaque appui sur + ou −. La valeur par défaut est un pas du pilote. Vous pouvez la régler avant de connecter la caméra. Il faut un zoom compatible. Le curseur choisit un niveau dans le champ de vision actuel.
+
+### Application
+
+- **Demander si la diffusion a commencé avant d’utiliser la caméra**. Activez cette option si l’application de capture doit diffuser en premier. La prochaine action caméra demande une confirmation. Répondez Oui quand le flux est prêt ou Non pour garder la caméra déconnectée. La question revient après un redémarrage, un changement de profil ou un changement de cette option. Désactivé autorise la connexion au démarrage.
+- **Toujours au premier plan**. Gardez la fenêtre principale au-dessus des autres applications. Désactivez l’option pour laisser une autre fenêtre la recouvrir.
+- **Langue du profil · Automatique**. Choisissez l’une des 12 langues. Automatique utilise la langue d’affichage de Windows si elle est disponible, sinon l’anglais. Redémarrez pour appliquer le choix. Chaque profil garde sa langue.
+
+## Vidéo
+
+- **Charger les réglages d’image**. Connectez la caméra pour charger ses réglages d’image. Le bouton apparaît quand elle est déconnectée. Si le pilote ne fournit aucun réglage d’image, seul l’onglet du champ de vision reste.
+- **Automatique**. Le pilote choisit les curseurs et onglets disponibles. Automatique laisse la caméra régler la valeur. Décochez la case pour déplacer le curseur. Si seul le mode automatique est disponible, le curseur est grisé et la case peut être bloquée. En mode manuel seul, la case est masquée.
+- **Rétablir les réglages d’image du pilote**. Rétablissez les réglages d’image pris en charge aux valeurs du pilote. Le bouton apparaît dans les onglets d’image et disparaît dans celui du champ de vision. Les valeurs sont gardées par caméra et profil.
+
+### Mise au point et exposition
+
+- **Gain**. Amplifiez le signal pour éclaircir l’image. Un gain élevé peut ajouter du bruit.
+- **Exposition**. Réglez le temps pendant lequel le capteur reçoit la lumière. Une pose plus longue éclaircit l’image et peut flouter les mouvements.
+- **Mise au point**. Choisissez la distance de mise au point. Vérifiez la netteté du sujet dans l’application de capture.
+
+### Couleur
+
+- **Balance des blancs**. Corrigez la dominante due à l’éclairage pour que le blanc paraisse blanc.
+- **Saturation**. Renforcez ou atténuez les couleurs.
+- **Gamma**. Éclaircissez ou assombrissez les tons moyens.
+- **Teinte**. Décalez les couleurs sur le cercle chromatique.
+
+### Lumière et détails
+
+- **Contraste**. Modifiez l’écart entre les parties claires et sombres.
+- **Luminosité**. Éclaircissez ou assombrissez toute l’image.
+- **Compensation du contre-jour**. Éclaircissez un sujet fortement éclairé par l’arrière.
+- **Netteté**. Rendez les contours plus ou moins marqués.
 
 ### Définir le champ de vision
 
-Ouvrez **Vidéo → Champ de vision**. Sous **Champ de vision au démarrage**, choisissez **Le plus large disponible**, un angle signalé par le pilote de la caméra, ou **Ne rien changer** pour conserver la vue actuelle. L'application utilise ce choix lors de sa première connexion. Activez **Autoriser le réglage manuel du champ de vision** pour choisir parmi les angles signalés sous la roue de direction. Si le conducteur ne signale aucun angle sélectionnable, les commandes du FOV sont désactivées. Vous pouvez toujours utiliser le zoom si l'appareil photo le prend en charge. [Voir l'onglet Champ de vision](../images/screenshots/settings-tabs/en/field-of-view.png).
+Le champ de vision (FOV) indique ce qui entre dans l’image. Un angle plus large montre davantage. Le zoom recadre dans l’angle actuel.
 
-**Changer de champ de vision aux limites du zoom et du panoramique** est activé par défaut. Vous pouvez l'utiliser avec le sélecteur manuel caché. Cela fonctionne lorsque le pilote prend en charge FOV.
+- **Champ de vision au démarrage · Le plus large disponible · Ne rien changer**. Choisissez l’angle le plus large, gardez l’angle actuel ou sélectionnez un angle du pilote. L’application le tente lors de la première connexion de la session. La liste est grisée tant que la caméra connectée ne fournit pas d’angle.
+- **Autoriser le réglage manuel du champ de vision**. Affichez un sélecteur d’angle sous la roue. Désactivé affiche l’angle actuel si l’application peut le lire. La case est grisée si le pilote offre moins de deux angles.
+- **Changer de champ de vision aux limites du zoom et du panoramique**. Appuyez à nouveau en butée de zoom. En reculant, l’application tente un angle plus large. En rapprochant, elle tente un angle plus étroit. En butée horizontale, elle essaie un angle offrant plus de marge. Elle conserve au mieux le cadrage et le rétablit si le mouvement reste bloqué. Le réglage peut fonctionner sans sélection manuelle. Il est grisé avec moins de deux angles.
 
-- **Zoom out :** Au zoom minimum sur un Brio réglé à 65°, appuyez à nouveau sur le zoom arrière pour passer à 78°. Cette pression modifie le FOV et ajuste le zoom pour garder la photo proche. La pression suivante effectue un zoom arrière normalement. Les mêmes pas vous font passer de 78° à 90°. Le bouton s'arrête à 90° et zoom minimum.
-- **Zoom in:** Au zoom maximum, appuyez à nouveau pour vous déplacer vers un FOV plus étroit. Si le conducteur signale 90°, 78° et 65°, l'application les utilise dans cet ordre. Le bouton s'arrête à l'angle disponible le plus étroit et au zoom maximum.
-- **Pan gauche ou droite :** Au bord, l'application essaie d'abord une vue plus large. Il ajuste le zoom pour garder le recadrage proche. Il peut également essayer une vue plus étroite si le zoom le permet. Si aucune vue ne lui permet de faire un panoramique plus loin, il restaure la prise de vue précédente. Le conducteur contrôle à quel point le match est serré.
+Exemple sur une Brio à 65° au zoom minimal. Appuyer sur − peut passer à 78°. Appuyez encore pour reculer dans le nouvel angle. Le bouton de cadrage tente l’angle maximal et le zoom minimal ensemble. Regardez le résultat si une autre application pilote aussi la caméra.
 
-Utilisez le bouton carré avec le symbole du cadre pour accéder directement au FOV le plus large et au zoom minimum. Le curseur définit toujours le zoom dans le FOV actuel. Désactivez le FOV automatique pour conserver le zoom et le panoramique dans la vue actuelle.
+## Profils
 
-Les préréglages enregistrent le panoramique, l'inclinaison, le zoom et le FOV signalé par le conducteur. Les préréglages plus anciens conservent le FOV actuel. Vérifiez l'image en direct si Zoom, Logitech Brio Control ou une autre application contrôle le recadrage. [Étapes de test Brio et Zoom](VALIDATION.md#champ-de-vision-brio-et-zoom)
+- **+ Nouveau profil**. Créez et activez un profil avec les valeurs par défaut. Donnez-lui un nom unique.
+- **⧉ Copier le profil actif**. Copiez les réglages et positions du profil actif, puis passez à la copie. La ligne sélectionnée ne change pas la source de la copie.
+- **✎ Renommer le profil sélectionné**. Renommez le profil choisi. Le bouton est grisé sans sélection et pour Standard. Créer et copier exigent un profil chargé. Les trois dialogues demandent un nom pour valider.
+- **Conserver la position et la disposition actuelles**. Double-cliquez sur un profil. Cochez l’option de disposition pour reprendre les tailles, positions et le séparateur. Décochez-la pour charger la disposition mémorisée du profil choisi. Le changement redémarre l’application et efface les positions temporaires.
 
-## 4. Ajustez l'image et enregistrez les positions permanentes
+## Contact et à propos
 
-![Commandes de mise au point et d'exposition dans l'onglet Vidéo](../images/screenshots/settings-tabs/en/image.png)
+### Contact
 
-[Avant de charger les contrôles vidéo](../images/screenshots/settings-tabs/en/video.png) · [Couleur](../images/screenshots/1.0.1/en/video-colour.png) · [Lumière et détails](../images/screenshots/1.0.1/en/video-light-detail.png)
+![Contact](../images/screenshots/contact/fr/issues.png)
 
-Ouvrez **Vidéo** dans le volet des paramètres, puis chargez les contrôles d'image si nécessaire. Choisissez un groupe tel que **Mise au point et exposition**, **Couleur** ou **Lumière et détails**. Seuls les contrôles exposés par le pilote apparaissent. Ajustez la luminosité, le contraste, la saturation des couleurs, la mise au point ou la balance des blancs lorsque cela est disponible. Désactivez le mode automatique avant le réglage manuel. Les valeurs d'image sont enregistrées par caméra et par profil. Le bouton de réinitialisation restaure les paramètres par défaut du pilote.
+- **Signaler un problème**. Ouvrez le modèle de rapport de bug sur GitHub. Si une version plus récente existe, l’application propose de l’ouvrir d’abord. Si vous continuez, elle propose de créer un ZIP avant d’ouvrir le brouillon.
+- **Proposer une fonctionnalité**. Ouvrez le modèle de suggestion. Essayez d’abord une version plus récente si elle existe. La fonction y est peut-être déjà.
+- **Enregistrer le ZIP de support**. Enregistrez une capture, les journaux disponibles, les profils et la disposition des fenêtres dans un ZIP. Vérifiez les données privées. Joignez le ZIP au brouillon. Les trois boutons sont grisés pendant une action.
+- **Projet sur GitHub · Versions sur GitHub · Participer aux discussions du projet**. Les trois liens GitHub ouvrent le code du projet, les téléchargements ou les discussions.
 
-Déplacez d'abord la caméra. Ouvrez **Préréglages** dans le volet des paramètres. Cliquez sur **+** pour ajouter un préréglage permanent. Sélectionnez une icône en haut, vérifiez le nom, puis enregistrez. Si le nom est vide et inutilisé, le choix d'une icône suggère son nom. Les symboles combinés montrent leurs sujets de gauche à droite.
+[Signaler un problème](Report%20a%20bug.md) · [Proposer une fonctionnalité](Request%20a%20feature.md)
 
-Sous **Préréglages permanents**, sélectionnez un poste. Survolez un symbole pour son action. Utilisez **✎** pour modifier son nom et son symbole, **↻** pour enregistrer la position actuelle de la caméra à sa place et **−** pour la supprimer. Utilisez **↑** et **↓** pour modifier l'ordre dans les deux listes. Les postes permanents restent en haut de la liste principale en gras.
+### Journaux de diagnostic
 
-La sélection d'une ligne permanente dans la liste principale sélectionne également ce préréglage dans Paramètres. Un préréglage nouvellement enregistré est sélectionné dans Paramètres.
+- **Paramètres des journaux**. Ouvrez les réglages des journaux. Ils s’appliquent à tous les profils. Enregistrer les applique. Annuler les laisse inchangés.
+- **Choisir un dossier · Automatique**. Choisissez un dossier ou le mode Automatique. Le champ du chemin est en lecture seule. Automatique utilise le dossier du programme ou, à défaut, `%LOCALAPPDATA%\CamPressets\Logs`.
+- **Taille maximale par fichier (Mio)**. Réglez le seuil de création d’un nouveau fichier. La valeur par défaut est 1 Mio par fichier.
+- **Nombre maximal de journaux (actuel inclus)**. Indiquez combien de journaux garder, fichier en cours compris. La valeur par défaut est 2.
+- **Afficher le journal**. Sélectionnez le dernier journal dans l’Explorateur. Un message s’affiche si aucun journal n’existe.
 
-![Onglet Presets avec la liste permanente des presets et les actions](../images/screenshots/settings-tabs/en/presets.png)
+### À propos
 
-## 5. Définir la mise en page et la langue
+- **Offrez-moi un café**. Consultez la version installée et le nom du développeur. Survolez la version pour voir l’identifiant de compilation complet. Le lien de soutien ouvre la page du développeur.
+- **Ouvrir les guides**. Ouvrez les guides dans cet onglet. Le bouton d’aide de la fenêtre principale les ouvre aussi.
 
-Faites glisser le séparateur entre les commandes de la caméra et la liste des préréglages. Votre profil mémorise la position du séparateur. La taille initiale est de 900 × 500 et la taille minimale est de 670 × 450. Les paramètres démarrent fermés. Lorsque vous les ouvrez pour la première fois après le lancement, le premier onglet est sélectionné. Faites défiler vers le bas dans **Panoramique** ou **Application** si certains champs se trouvent sous la fenêtre. Votre profil mémorise la taille et la position des deux fenêtres.
+Fermez l’application et copiez `%LOCALAPPDATA%\CamPressets` pour faire une sauvegarde. Les positions temporaires durent une session.
 
-Lors de la sélection d'un profil dans le pied de page, laissez **Conserver la position et la disposition actuelles** décoché pour restaurer la disposition de ce profil. Cochez-la pour transférer la mise en page actuelle dans le profil sélectionné. Le choix est mémorisé dans le profil que vous quittez ; la mise en page transportée est enregistrée dans le profil de destination.
-
-Choisissez une langue sous **Paramètres → Application → Langue du profil**, puis redémarrez pour l'appliquer. **Automatique** utilise la langue d'affichage de Windows si elle est prise en charge et l'anglais dans le cas contraire. Changer de profil redémarre l’application avec la langue du profil sélectionné. Les préréglages temporaires se terminent au redémarrage.
-
-## 6. Informations sur la version et le projet
-
-Ouvrez **Contact et à propos → À propos** pour voir la version et les liens du projet. Survolez la version pour lire l’identifiant de compilation complet. Indiquez-le si cette compilation est concernée.
-
-![À propos](../images/screenshots/contact/fr/about.png)
-
-## 7. Journaux de diagnostic et rapports de problèmes
-
-![Onglet de contact avec les boutons GitHub et ZIP de support](../images/screenshots/contact/fr/issues.png)
-
-Ouvrez **Contact et à propos → Contact** pour choisir le dossier des journaux, la taille maximale et le nombre de fichiers, fichier actif compris. L’application utilise son dossier ou, à défaut, `%LOCALAPPDATA%\CamPressets\Logs`.
-
-Choisissez **Signaler un problème** ou **Proposer une fonctionnalité** pour ouvrir le bon brouillon GitHub. Pour un problème, l’application propose un ZIP de support. Vérifiez-le et joignez-le vous-même au brouillon. [Signaler ou suivre un problème](ISSUES.md)
-
-**Signaler un bug ou suggérer une fonctionnalité**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
-Code ![QR pour les numéros GitHub du projet](../images/qr/issues.png)
-
-Suivant : [Utilisation quotidienne](DAILY-USE.md). Pour une sauvegarde, fermez l'application et copiez `%LOCALAPPDATA%\CamPressets`. Les postes temporaires ne font pas partie de la sauvegarde.
+[Utilisation quotidienne](DAILY-USE.md)

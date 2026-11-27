@@ -29,110 +29,125 @@ Aviso ![SmartScreen com mais informações, mostrado em dinamarquês](../images/
 
 ![Aviso SmartScreen expandido com Executar mesmo assim, mostrado em dinamarquês](../images/reporting/smartscreen-run.png)
 
-## 1. Escolha um perfil e câmera
+Escolha o perfil no rodapé da janela principal. Por padrão, clique duas vezes no botão da câmera, no centro da roda, para escolher a fonte. O perfil memoriza a câmera. Se ela não estiver disponível, escolha outra.
 
-Use o seletor de perfil no rodapé para selecionar um perfil. Para criar um, abra **Configurações → Perfis**. Escolha **New** para configurações padrão ou **Copy** para uma cópia do perfil ativo. Nomeie-o com o nome de uma pessoa ou configuração. Novos perfis ficam ativos. Em **Perfis**, selecione um perfil e clique em **✎** para renomeá-lo. O perfil Padrão possui um nome fixo.
+As seções seguem a ordem das abas. Um botão cinza costuma pedir uma seleção. Em Vídeo, o driver decide quais controles aparecem. Confira o resultado no aplicativo de captura.
 
-Clique duas vezes no símbolo da câmera no centro da roda de direção para selecionar uma câmera. O programa se lembra disso. Se essa câmera estiver faltando, escolha outra fonte. As posições pertencem a uma câmera dentro de um perfil.
+**Fechar**. Mova e redimensione as duas janelas ou arraste o divisor da janela principal. O perfil guarda esses valores. Clique em Fechar na parte inferior para fechar as configurações. A janela principal continua aberta.
 
-Guia ![Perfis com a lista de perfis e ações](../images/screenshots/1.0.1/en/profiles.png)
+## Predefinições
 
-## 2. Decida quando o controle da câmera pode começar
+### Predefinições permanentes
 
-Em **Configurações → Aplicativo**, habilite **Perguntar se a transmissão começou antes de usar a câmera** se seu programa de captura precisar ser iniciado primeiro. Esta opção está desativada por padrão.
+Aponte a câmera. Uma posição permanente guarda os valores disponíveis de movimento horizontal, inclinação e zoom. Também guarda o campo de visão informado pela câmera. A posição pertence a uma câmera em um perfil.
 
-Com a opção habilitada, a primeira ação da câmera pergunta se o streaming foi iniciado. Escolha **Sim** somente quando tiver. Escolha **No** para manter o controle da câmera desconectado. Depois de Sim, outras ações não serão solicitadas novamente até que você altere o perfil, altere esta opção ou reinicie o aplicativo. O aplicativo não detecta nem inicia uma sessão de streaming para você.
+- **+ Adicionar predefinição permanente**. Salve o enquadramento atual. Escolha um símbolo e digite um nome exclusivo. Se o campo estiver vazio, o símbolo pode sugerir um nome. O botão Salvar exige um nome. Cancelar deixa a lista como estava.
+- **✎ Editar nome e ícone**. Mude o nome ou o símbolo da posição selecionada. O enquadramento continua igual.
+- **↻ Substituir pela posição atual**. Substitua o enquadramento selecionado pela posição atual da câmera. Confirme. O nome e o símbolo continuam iguais.
+- **− Excluir predefinição permanente**. Exclua a posição selecionada após confirmar.
+- **↑ / ↓ Mover a predefinição selecionada para cima · Mover a predefinição selecionada para baixo**. Mova a posição uma linha nas duas listas. A seta para cima fica cinza na primeira linha. A seta para baixo fica cinza na última.
 
-Se você precisar deste pedido na primeira utilização, defina a opção antes da próxima sessão. O padrão permite que o aplicativo se conecte na inicialização.
-
-![Aguia do aplicativo com confirmação de streaming, configurações de idioma de janela e perfil](../images/screenshots/1.0.1/pt/application.png)
-
-## 3. Defina movimento e zoom
-
-Abra **Configurações → Panorâmica** para definir etapas de panorâmica e inclinação, inverter direções e escolher como o botão da câmera funciona. Comece com pequenos passos. Teste o resultado em seu programa de captura.
-
-![Guia panorâmica com tamanhos de passo, controles de direção e opções de botão de câmera](../images/screenshots/settings-tabs/en/settings.png)
-
-| Configuração | O que isso muda | Padrão |
-| --- | --- | --- |
-| Velocidade fina (% do normal) | Avalie enquanto segura Ctrl e uma tecla de seta | 50% |
-| Etapas normais de panorâmica | Anel de flecha do meio | 1 |
-| Etapas rápidas de panorâmica | Anel de flecha externo | 4 |
-
-Uma etapa significa uma etapa suportada pelo driver da câmera. Não é uma distância ou porcentagem fixa. O driver limita o movimento e a suavidade.
-
-Para uma câmera invertida, habilite **Inverter movimento da câmera para cima/baixo** e teste Up. Habilite **Inverter movimento da câmera esquerda/direita** somente se a esquerda se mover na direção errada. Essas configurações alteram os controles. Eles não giram o vídeo.
-
-### Definir etapas de zoom
-
-Abra **Configurações → Zoom** para escolher até que ponto os botões de mais e menos se movem em uma única etapa. O padrão é uma etapa do driver. [Veja a guia Zoom](../images/screenshots/settings-tabs/en/zoom.png).
+Selecione uma posição para editar, substituir, excluir ou mover. Para adicionar e substituir, carregue um perfil. A câmera deve permitir controlar pelo menos um eixo de movimento ou zoom. Se estiver desconectada, o aplicativo pode tentar conectá-la.
 
 ### Definir transições predefinidas
 
-Abra **Predefinições → Transições** para escolher como a câmera se move entre as posições salvas. [Veja a guia Transições](../images/screenshots/settings-tabs/en/transitions.png).
+- **Usar velocidade nas transições**. Desligado usa tempo fixo. Ligado usa uma velocidade e os trajetos curtos acabam antes. Os eixos em movimento chegam juntos.
+- **Transição (s)**. Defina o tempo de uma transição. O padrão é 1 segundo. O campo fica cinza no modo de velocidade.
+- **Velocidade de transição (%/s)**. Defina a velocidade em porcentagem do alcance do eixo que determina o movimento, por segundo. O padrão é 30%. O campo fica cinza no modo de tempo fixo.
 
-| Configuração | O que isso muda | Padrão |
-| --- | --- | --- |
-| Use a velocidade para transições predefinidas | Deixe a distância da viagem determinar a duração | Desligado |
-| Velocidade de transição (%/s) | Taxa de cruzeiro como porcentagem do alcance do eixo de controle por segundo | 30% |
-| Transição (seg.) | Tempo para cada alteração predefinida no modo de duração fixa | 1.0 |
+## Configurações
 
-Com transições baseadas em velocidade, um movimento curto leva menos tempo do que um movimento longo. O aplicativo acelera e freia, e todos os eixos móveis compartilham o mesmo progresso para que possam atingir a meta juntos.
+### Panorâmica
+
+- **Velocidade fina (% da normal)**. Segure Ctrl e pressione uma seta para fazer o ajuste fino. O padrão é 50% da velocidade normal.
+- **Passos de giro normal**. Defina quantos passos as setas do anel interno movem. O padrão é 1.
+- **Passos de giro rápido**. Defina quantos passos as setas do anel externo movem. O padrão é 4. O valor muda também a velocidade ao arrastar o botão da câmera.
+- **Inverter movimento da câmera esquerda/direita**. Troque esquerda e direita se a câmera se mover no sentido errado.
+- **Inverter movimento da câmera para cima/baixo**. Troque cima e baixo se a câmera estiver montada de cabeça para baixo. As duas opções mudam os comandos. A imagem mantém a orientação.
+- **Arrastar o botão da câmera para girar e inclinar**. Arraste o botão no centro da roda para apontar a câmera. Desative a opção para usar as setas.
+- **Clicar duas vezes no botão da câmera para escolher a fonte**. Ligado abre a lista de câmeras com clique duplo. Desligado abre com um clique.
+
+Você pode mudar esses ajustes antes de conectar. O driver define o tamanho do passo, os eixos disponíveis e os limites.
+
+### Definir etapas de zoom
+
+- **Passos de zoom**. Defina quantos passos o zoom muda ao pressionar + ou −. O padrão é 1 passo do driver. Você pode ajustar antes da conexão. O efeito depende do suporte a zoom. O controle deslizante escolhe um valor no campo de visão atual.
+
+### Aplicativo
+
+- **Perguntar se a transmissão começou antes de usar a câmera**. Ative se o aplicativo de captura precisar iniciar a transmissão primeiro. A próxima ação de câmera pede confirmação. Escolha Sim quando estiver pronto ou Não para manter a câmera desconectada. A pergunta volta após reiniciar, trocar de perfil ou mudar esta opção. Desativar permite conectar ao iniciar.
+- **Sempre no topo**. Mantenha a janela principal acima de outros aplicativos. Desative para permitir que outras janelas a cubram.
+- **Idioma do perfil · Automático**. Escolha um dos 12 idiomas. Automático usa o idioma de exibição do Windows se houver suporte. Caso contrário, usa inglês. Reinicie para aplicar. Cada perfil guarda seu idioma.
+
+## Vídeo
+
+- **Carregar controles de imagem**. Conecte a câmera para carregar os ajustes de imagem. O botão aparece enquanto ela está desconectada. Se o driver não oferecer ajustes de imagem, só a aba de campo de visão permanece.
+- **Automático**. O driver define os controles e abas. Automático deixa a câmera ajustar o valor. Desative para usar o controle manual. Se só houver ajuste automático, o controle fica cinza e a caixa pode ficar travada. Se só houver ajuste manual, a caixa fica oculta.
+- **Restaurar padrões de imagem do driver**. Restaure todos os ajustes de imagem compatíveis para os padrões do driver. O botão aparece nas abas de imagem e fica oculto na aba de campo de visão. Os valores são salvos por câmera e perfil.
+
+### Foco e exposição
+
+- **Ganho**. Amplifique o sinal para clarear a imagem. Ganho alto pode aumentar o ruído.
+- **Exposição**. Defina quanto tempo o sensor recebe luz. Mais tempo clareia a imagem, mas pode borrar o movimento.
+- **Foco**. Ajuste a distância em foco. Veja se o assunto está nítido no aplicativo de captura.
+
+### Cor
+
+- **Balanço de branco**. Corrija a cor da luz para que o branco pareça branco.
+- **Saturação**. Torne as cores mais fortes ou suaves.
+- **Gama**. Clareie ou escureça os tons médios.
+- **Matiz**. Desloque as cores no círculo cromático.
+
+### Luz e detalhes
+
+- **Contraste**. Mude a diferença entre as áreas claras e escuras.
+- **Brilho**. Clareie ou escureça toda a imagem.
+- **Compensação de contraluz**. Clareie o assunto quando houver luz forte atrás dele.
+- **Nitidez**. Deixe os contornos mais marcados ou suaves.
 
 ### Defina o campo de visão
 
-Abra **Vídeo → Campo de visão**. Em **Campo de visão ao iniciar**, escolha **Mais amplo disponível**, um ângulo relatado pelo driver da câmera, ou **Manter como está** para manter a visualização atual. O aplicativo usa essa opção na primeira vez que se conecta. Ative **Permitir ajuste manual do campo de visão** para escolher entre os ângulos relatados abaixo da roda de direção. Se o driver não reportar ângulos selecionáveis, os controles FOV serão desabilitados. Você ainda pode usar o zoom se a câmera suportar. [Consulte a guia Campo de visão](../images/screenshots/settings-tabs/en/field-of-view.png).
+O campo de visão (FOV) diz quanto da cena entra no quadro. Um ângulo maior mostra mais. O zoom muda o recorte dentro desse ângulo.
 
-**Mudar o campo de visão nos limites de zoom e giro** está ativado por padrão. Você pode usá-lo com o seletor manual oculto. Funciona quando o driver suporta FOV.
+- **Campo de visão ao iniciar · Mais amplo disponível · Manter como está**. Escolha o ângulo mais amplo, mantenha o atual ou selecione um ângulo do driver. O aplicativo tenta aplicá-lo na primeira conexão da sessão. A lista fica cinza até a câmera conectada informar pelo menos um ângulo.
+- **Permitir ajuste manual do campo de visão**. Mostre um seletor de ângulo abaixo da roda. Se a opção estiver desativada, o aplicativo mostra o ângulo atual quando consegue ler. A opção fica cinza quando há menos de dois ângulos.
+- **Mudar o campo de visão nos limites de zoom e giro**. No limite do zoom, pressione de novo para tentar um ângulo mais amplo ao afastar ou mais estreito ao aproximar. No limite horizontal, o aplicativo tenta outro ângulo que dê mais espaço. Ele preserva o enquadramento se possível e o restaura se o movimento continuar bloqueado. Funciona com a escolha manual desligada. A opção fica cinza com menos de dois ângulos.
 
-- **Zoom out:** No zoom mínimo em um Brio definido para 65°, pressione zoom out novamente para mudar para 78°. Esse toque altera o FOV e ajusta o zoom para manter a foto próxima. A próxima pressão diminui o zoom normalmente. As mesmas etapas levam você de 78° a 90°. O botão para em 90° e zoom mínimo.
-- **ZAumentar:** No zoom máximo, pressione novamente para mover em direção a um FOV mais estreito. Se o driver informar 90°, 78° e 65°, o aplicativo os utiliza nessa ordem. O botão para no ângulo mais estreito disponível e no zoom máximo.
-- **Deslocar para a esquerda ou para a direita:** Na borda, o aplicativo tenta primeiro uma visão mais ampla. Ele ajusta o zoom para manter o corte próximo. Também pode tentar uma visão mais estreita se o zoom permitir. Se nenhuma visualização permitir uma panorâmica mais ampla, a imagem anterior será restaurada. O driver controla o quão próxima está a partida.
+Por exemplo, numa Brio a 65° e com zoom mínimo, pressione − para tentar mudar para 78°. Pressione novamente para afastar no novo ângulo. O botão de moldura tenta definir o maior ângulo e o menor zoom de uma vez. Confira a imagem se outro aplicativo também controlar a câmera.
 
-Use o botão quadrado com o símbolo do quadro para ir direto para o FOV mais amplo e zoom mínimo. O controle deslizante ainda define o zoom no FOV atual. Desative o FOV automático para manter o zoom e a panorâmica na visualização atual.
+## Perfis
 
-As predefinições salvam panorâmica, inclinação, zoom e o FOV relatado pelo driver. As predefinições mais antigas mantêm o FOV atual. Verifique a imagem ao vivo se Zoom, Logitech Brio Control ou outro aplicativo controla o corte. [Etapas de teste Brio e Zoom](VALIDATION.md#campo-de-vis%C3%A3o-e-zoom-brio)
+- **+ Novo perfil**. Crie um perfil com os ajustes padrão e ative-o. Dê um nome exclusivo.
+- **⧉ Copiar o perfil ativo**. Copie as configurações e posições do perfil ativo. O aplicativo troca para a cópia. Selecionar outra linha não troca a origem da cópia.
+- **✎ Renomear o perfil selecionado**. Renomeie o perfil selecionado. O botão fica cinza sem uma seleção ou ao escolher Standard. Novo e Copiar precisam de um perfil carregado. Digite um nome para liberar a confirmação nos três diálogos.
+- **Manter a posição e o layout atuais**. Clique duas vezes em um perfil para abrir a troca. Ative a opção de layout para levar as posições, os tamanhos e o divisor atuais. Desative para usar o layout salvo no perfil escolhido. A troca reinicia o aplicativo e apaga as posições temporárias.
 
-## 4. Ajuste a imagem e salve posições permanentes
+## Contato e sobre
 
-![Controles de foco e exposição na guia Vídeo](../images/screenshots/settings-tabs/en/image.png)
+### Contato
 
-[Antes de carregar os controles de vídeo](../images/screenshots/settings-tabs/en/video.png) · [Cor](../images/screenshots/1.0.1/en/video-colour.png) · [Luz e detalhes](../images/screenshots/1.0.1/en/video-light-detail.png)
+![Contato](../images/screenshots/contact/pt/issues.png)
 
-Abra **Vídeo** no painel de configurações e carregue os controles de imagem, se necessário. Escolha um grupo como **Foco e exposição**, **Cor** ou **Luz e detalhes**. Somente os controles expostos pelo driver aparecem. Ajuste brilho, contraste, saturação de cor, foco ou equilíbrio de branco quando disponível. Desligue o modo automático antes do ajuste manual. Os valores da imagem são salvos por câmera e perfil. O botão reset restaura os padrões do driver.
+- **Relatar um problema**. Abra o modelo de erro no GitHub. Se houver uma versão nova, o aplicativo oferece abri-la primeiro. Se você continuar, ele oferece um ZIP antes de abrir o rascunho.
+- **Solicitar um novo recurso**. Abra o modelo de sugestão. Se houver uma versão mais recente, teste primeiro. Ela talvez já inclua o recurso.
+- **Salvar ZIP de suporte**. Salve uma captura, os logs disponíveis, os dados de perfil e o layout da janela em um ZIP. Confira os dados privados. Anexe o arquivo ao rascunho. Os três botões ficam cinza durante uma ação.
+- **Projeto no GitHub · Versões no GitHub · Participar da discussão do projeto**. Os três links do GitHub abrem o código, os downloads das versões e as discussões.
 
-Mova a câmera primeiro. Abra **Predefinições** no painel de configurações. Clique em **+** para adicionar uma predefinição permanente. Selecione um ícone na parte superior, verifique o nome e salve. Se o nome estiver em branco e não for utilizado, a escolha de um ícone sugere seu nome. Os símbolos combinados mostram seus assuntos da esquerda para a direita.
+[Relatar um problema](Report%20a%20bug.md) · [Solicitar um novo recurso](Request%20a%20feature.md)
 
-Em **Predefinições permanentes**, selecione uma posição. Passe o mouse sobre um símbolo para ver sua ação. Use **✎** para editar seu nome e símbolo, **↻** para salvar a posição atual da câmera em seu lugar e **−** para excluí-la. Use **↑** e **↓** para alterar a ordem em ambas as listas. As posições permanentes ficam no topo da lista principal em negrito.
+### Logs de diagnóstico
 
-Selecionar uma linha permanente na lista principal também seleciona essa predefinição em Configurações. Uma predefinição recém-salva é selecionada em Configurações.
+- **Configurações de logs**. Abra as configurações do log. Elas valem para todos os perfis. Salvar aplica a mudança. Cancelar mantém a anterior.
+- **Escolher pasta · Automático**. Escolha uma pasta ou use Automático. O caminho é só para leitura. Automático usa a pasta do aplicativo ou, se necessário, `%LOCALAPPDATA%\CamPressets\Logs`.
+- **Tamanho máximo por arquivo (MiB)**. Defina quando o aplicativo inicia outro arquivo. O padrão é 1 MiB por arquivo.
+- **Máximo de logs (incluindo o atual)**. Defina quantos arquivos guardar, incluindo o atual. O padrão é 2.
+- **Mostrar arquivo de log**. Selecione o log mais recente no Explorador de Arquivos. Se não houver log, o aplicativo avisa.
 
-![Guia predefinições com a lista de predefinições permanentes e ações](../images/screenshots/settings-tabs/en/presets.png)
+### Sobre
 
-## 5. Defina layout e idioma
+- **Pague-me um café**. Veja a versão instalada e o crédito do desenvolvedor. Passe o cursor sobre a versão para ver o identificador de compilação completo. O link de apoio abre a página do desenvolvedor.
+- **Abrir guias**. Abra os guias nesta aba. O botão de ajuda da janela principal também abre os guias.
 
-Arraste o divisor entre os controles da câmera e a lista de predefinições. Seu perfil guarda a posição do divisor. O tamanho inicial é 900 × 500 e o mínimo é 670 × 450. As configurações começam fechadas. Quando você os abre pela primeira vez após o lançamento, a primeira guia é selecionada. Role para baixo em **Panorâmica** ou **Aplicativo** se alguns campos estiverem abaixo da janela. Seu perfil guarda o tamanho e a posição das duas janelas.
+Para fazer backup, feche o aplicativo e copie `%LOCALAPPDATA%\CamPressets`. As posições temporárias duram uma sessão.
 
-Ao selecionar um perfil no rodapé, deixe **Manter a posição e o layout atuais** desmarcado para restaurar o layout desse perfil. Marque para transportar o layout atual para o perfil selecionado. A escolha fica lembrada no perfil que você sai; o layout transportado é salvo no perfil de destino.
-
-Escolha um idioma em **Configurações → Aplicativo → Idioma do perfil** e reinicie para aplicá-lo. **Automático** usa o idioma de exibição do Windows se for compatível e o inglês caso contrário. A troca de perfis reinicia o aplicativo com o idioma do perfil selecionado. As predefinições temporárias terminam na reinicialização.
-
-## 6. Versão e informações do projeto
-
-Abra **Contato e sobre → Sobre** para ver a versão e os links do projeto. Passe o ponteiro sobre a versão para ver o identificador completo da compilação. Inclua-o se o problema afetar essa compilação.
-
-![Sobre](../images/screenshots/contact/pt/about.png)
-
-## 7. Logs de diagnóstico e relatórios de problemas
-
-![Aba de contato com os botões do GitHub e do ZIP de suporte](../images/screenshots/contact/pt/issues.png)
-
-Abra **Contato e sobre → Contato** para escolher a pasta de registros, o tamanho máximo e a quantidade de arquivos, incluindo o atual. O padrão é a pasta do aplicativo ou, se ela estiver indisponível, `%LOCALAPPDATA%\CamPressets\Logs`.
-
-Selecione **Relatar um problema** ou **Solicitar um novo recurso** para abrir o rascunho correto no GitHub. Para problemas, o aplicativo oferece salvar um ZIP de suporte. Revise o arquivo e anexe-o ao rascunho. [Relatar ou acompanhar um problema](ISSUES.md)
-
-**Relate um bug ou sugira um recurso**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
-Código ![QR para os problemas GitHub do projeto](../images/qr/issues.png)
-
-Próximo: [Uso diário](DAILY-USE.md). Para fazer um backup, feche o aplicativo e copie `%LOCALAPPDATA%\CamPressets`. Posições temporárias não fazem parte do backup.
+[Uso diário](DAILY-USE.md)

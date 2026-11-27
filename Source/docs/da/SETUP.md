@@ -29,110 +29,127 @@ Hent WebView2 Runtime fra Microsoft, hvis guideviseren mangler den.\
 
 ![Udvidet SmartScreen-advarsel med knappen Kør alligevel](../images/reporting/smartscreen-run.png)
 
-## 1. Vælg profil og kamera
+Start med den profil og det kamera, du vil bruge. Vælg profil nederst i hovedvinduet. Dobbeltklik som standard på kameraknappen i hjulet for at vælge kilde. Profilen husker kameraet. Hvis kameraet mangler, så vælg en anden kilde.
 
-Brug profilvælgeren i bunden til at vælge profil. Opret en profil under **Indstillinger → Profiler**. Vælg **Ny** for standardindstillinger eller **Kopiér** for at kopiere den aktive profil. Brug et navn for personen eller opstillingen. Den nye profil bliver aktiv. Markér en profil under **Profiler**, og klik på **✎** for at omdøbe den. Standardprofilen har et fast navn.
+Afsnittene følger fanernes rækkefølge i indstillingsvinduet. En nedtonet knap kræver ofte, at du vælger noget først. Under Video afgør kameradriveren, hvilke valg du ser. Tjek ændringerne i dit optageprogram.
 
-Dobbeltklik på kamerasymbolet midt i kamerahjulet for at vælge kamera. Programmet husker valget. Hvis kameraet mangler, skal du vælge en anden kilde. Positioner hører til et bestemt kamera i en profil.
+**Luk**. Tilpas begge vinduer, eller træk skillelinjen i hovedvinduet. Profilen husker begge vinduers placering og størrelse samt skillelinjen. Klik på Luk nederst i Indstillinger. Hovedvinduet forbliver åbent.
 
-![Fanen Profiler med profillisten og knapperne](../images/screenshots/1.0.1/da/profiles.png)
+## Positioner
 
-## 2. Vælg, hvornår kamerastyringen må starte
+### Faste positioner
 
-Sæt flueben ved **Spørg om streaming er startet før kameraet bruges** under **Indstillinger → Program**, hvis dit optageprogram skal starte først. Fluebenet er slået fra som standard.
+Ret først kameraet ind. En fast position gemmer den panorering, vipning og zoom, kameraet understøtter. Den gemmer også synsfeltet, hvis kameraet oplyser det. Positionen hører til ét kamera i én profil.
 
-Med fluebenet sat spørger den første kamerafunktion, om streaming er startet. Vælg først **Ja**, når den er startet. **Nej** holder kamerastyringen frakoblet. Efter Ja spørger programmet ikke igen, før du skifter profil, ændrer fluebenet eller genstarter. Programmet registrerer eller starter ikke selv en stream.
+- **+ Tilføj permanent position**. Gem det aktuelle udsnit som en ny position. Vælg et symbol, og giv positionen et unikt navn. Et symbol kan foreslå et navn, hvis feltet er tomt. Gem-knappen kræver et navn. Annullér for at lade listen være som før.
+- **✎ Ret navn og symbol**. Ret navn eller symbol på den valgte position. Det gemte udsnit ændres ikke.
+- **↻ Erstat med aktuel position**. Erstat den valgte positions udsnit med kameraets aktuelle position. Bekræft ændringen. Navn og symbol bevares.
+- **− Slet permanent position**. Slet den valgte position, når du har bekræftet.
+- **↑ / ↓ Flyt valgt position op · Flyt valgt position ned**. Flyt den valgte position én plads op eller ned. Rækkefølgen ændres begge steder. Op er nedtonet på første linje. Ned er nedtonet på sidste linje.
 
-Har du brug for denne rækkefølge, skal du sætte fluebenet før næste session. Standardindstillingen tillader forbindelse ved opstart.
-
-![Fanen Program med streamingbekræftelse, vinduesindstillinger og profilsprog](../images/screenshots/1.0.1/da/application.png)
-
-## 3. Indstil bevægelse og zoom
-
-Åbn **Indstillinger → Panorering** for at indstille trin, vende retninger og vælge, hvordan kameraknappen virker. Start med små trin. Se resultatet i dit optageprogram.
-
-![Fanen Panorering med trinstørrelser, retninger og valg for kameraknappen](../images/screenshots/settings-tabs/da/settings.png)
-
-| Indstilling | Hvad den ændrer | Standard |
-| --- | --- | --- |
-| Fin hastighed (% af normal) | Hastighed, når Ctrl og en piletast holdes nede | 50 % |
-| Normale panoreringstrin | Den midterste ring med pile | 1 |
-| Hurtige panoreringstrin | Den yderste ring med pile | 4 |
-
-Et trin er ét trin, som kameradriveren understøtter. Det er ikke en fast afstand eller procent. Kameraets driver sætter grænsen for bevægelse og bløde skift.
-
-Hænger kameraet på hovedet, så prøv **Vend kamerapanorering op / ned**. Test pil op. Slå kun **Vend kamerapanorering venstre / højre** til, hvis venstre bevæger sig forkert. Disse valg vender styringen. De drejer ikke videobilledet.
-
-### Indstil zoomtrin
-
-Åbn **Indstillinger → Zoom** for at vælge, hvor meget plus- og minusknapperne ændrer zoom ved ét tryk. Standardværdien er ét drivertrin. [Se fanen Zoom](../images/screenshots/settings-tabs/da/zoom.png).
+Vælg en position for at bruge Redigér, Erstat, Slet og de relevante pile. Tilføj og Erstat kræver en indlæst profil og et kamera, hvor appen kan læse og styre mindst én af funktionerne panorering, vipning og zoom. Hvis kameraet endnu ikke er tilsluttet, kan knapperne forsøge at forbinde det.
 
 ### Indstil overgange mellem positioner
 
-Åbn **Positioner → Overgange** for at vælge, hvordan kameraet skifter mellem gemte positioner. [Se fanen Overgange](../images/screenshots/settings-tabs/da/transitions.png).
+- **Brug hastighed ved skift af position**. Slå fra for at bruge en fast tid. Slå til for at bruge en hastighed, så korte bevægelser går hurtigere end lange. De akser, der flytter sig, når målet samtidig.
+- **Skiftetid (sek.)**. Sæt tiden for en overgang. Standard er 1 sekund. Feltet er nedtonet, når du bruger hastighed.
+- **Overgangshastighed (%/s)**. Sæt hastigheden som procent af det samlede område pr. sekund for den akse, der bestemmer overgangen. Standard er 30 %. Feltet er nedtonet, når du bruger fast tid.
 
-| Indstilling | Hvad den ændrer | Standard |
-| --- | --- | --- |
-| Brug hastighed ved skift af position | Afstanden bestemmer varigheden | Fra |
-| Overgangshastighed (%/s) | Hastighed i procent af den styrende akses område pr. sekund | 30 % |
-| Skiftetid i sekunder | Tid til skift ved fast varighed | 1,0 |
+## Indstillinger
 
-Ved hastighedsbaserede skift tager en kort bevægelse mindre tid end en lang. Appen accelererer og bremser og styrer alle akser sammen, så de kan nå målet samtidigt.
+### Panorering
+
+- **Fin hastighed (% af normal)**. Hold Ctrl nede, og brug en piletast til finstyring. Standard er 50 % af normal hastighed.
+- **Normale panoreringstrin**. Vælg antal trin for de normale pile i den indre ring. Standard er 1.
+- **Hurtige panoreringstrin**. Vælg antal trin for de hurtige pile i den ydre ring. Standard er 4. Tallet ændrer også farten, når du trækker kameraknappen.
+- **Vend kamerapanorering venstre / højre**. Byt om på højre og venstre. Brug det, hvis kameraet bevæger sig den forkerte vej.
+- **Vend kamerapanorering op / ned**. Byt om på op og ned. Prøv det, hvis kameraet hænger på hovedet. De to valg ændrer styreretningen. De drejer ikke billedet.
+- **Træk i kameraknappen for at panorere og vippe**. Træk knappen midt i hjulet for at styre kameraet. Slå valget fra, hvis du vil styre med pilene.
+- **Dobbeltklik på kameraknappen for at vælge kilde**. Slå til for at åbne kameralisten med dobbeltklik. Slå fra for at åbne den med et enkelt klik.
+
+Du kan ændre bevægelsesvalg før kameraet tilsluttes. Driveren bestemmer trinnenes størrelse, hvilke retninger kameraet kan flytte sig i, og hvor det stopper.
+
+![Panorering](../images/screenshots/settings-tabs/da/settings.png)
+
+### Indstil zoomtrin
+
+- **Zoomtrin**. Vælg, hvor mange trin + og − flytter zoom pr. tryk. Standard er ét trin fra driveren. Du kan ændre tallet før tilslutning. Kameraet skal understøtte zoom, før det har effekt. Skyderen vælger en zoomværdi inden for det aktuelle synsfelt.
+
+### Program
+
+- **Spørg om streaming er startet før kameraet bruges**. Slå til, hvis dit optageprogram skal streame først. Næste kamerahandling beder om bekræftelse. Vælg Ja, når du er klar. Vælg Nej for at holde kameraet frakoblet. Appen spørger igen efter genstart, profilskift eller ændring af dette valg. Slå fra for at tillade tilslutning ved start.
+- **Altid øverst**. Hold hovedvinduet over andre programmer. Slå fra, hvis andre vinduer må dække det.
+- **Profilsprog · Automatisk**. Vælg ét af de 12 sprog. Automatisk bruger Windows' visningssprog, hvis det understøttes, ellers engelsk. Genstart for at skifte sprog. Hver profil har sit eget valg.
+
+## Video
+
+- **Indlæs billedindstillinger**. Forbind kameraet, og vis dets billedindstillinger. Knappen vises, mens kameraet er frakoblet. Hvis driveren ikke tilbyder billedindstillinger efter tilslutning, vises kun fanen Synsfelt.
+- **Automatisk**. Driveren bestemmer, hvilke skydere og faner der vises. Automatisk lader kameraet styre værdien. Slå det fra for selv at bruge skyderen. Hvis driveren kun tilbyder automatik, er skyderen nedtonet, og Automatik kan være låst til. Ved ren manuel styring skjules fluebenet.
+- **Gendan driverens billedstandarder**. Gendan driverens standarder for alle understøttede billedindstillinger. Knappen vises på billedfanerne og skjules under Synsfelt. Billedværdier gemmes pr. kamera og profil.
+
+### Fokus og eksponering
+
+- **Forstærkning**. Forstærk kameraets signal for at gøre billedet lysere. Høj forstærkning kan give korn i billedet.
+- **Eksponering**. Vælg, hvor længe sensoren samler lys. Længere tid giver et lysere billede, men kan sløre bevægelse.
+- **Fokus**. Vælg den afstand, hvor motivet er skarpt. Tjek motivet i dit optageprogram.
+
+### Farve
+
+- **Hvidbalance**. Ret lysets farvestik, så hvidt ser hvidt ud.
+- **Farveintensitet**. Gør farverne stærkere eller mere dæmpede.
+- **Gamma**. Gør mellemtonerne lysere eller mørkere.
+- **Farvetone**. Forskyd farverne rundt på farvehjulet.
+
+### Lys og detaljer
+
+- **Kontrast**. Ændr forskellen på lyse og mørke områder.
+- **Lysstyrke**. Gør hele billedet lysere eller mørkere.
+- **Modlyskompensation**. Gør motivet lysere, når der er kraftigt lys bag det.
+- **Skarphed**. Gør billedets kanter mere eller mindre tydelige.
 
 ### Indstil synsfeltet
 
-Åbn **Video → Synsfelt**. Under **Synsfelt ved opstart** kan du vælge **Bredest muligt**, en vinkel som kameradriveren melder, eller **Gør ingenting** for at beholde det aktuelle synsfelt. Valget gælder, første gang programmet forbinder. Slå **Tillad manuel ændring af synsfelt** til for at vælge mellem vinklerne under kamerahjulet. Hvis driveren ikke melder nogen valgbare vinkler, er synsfeltets indstillinger slået fra. Du kan stadig zoome, hvis kameraet understøtter det. [Se fanen Synsfelt](../images/screenshots/settings-tabs/da/field-of-view.png).
+Synsfelt (FOV) er, hvor meget af scenen der er med på billedet. En større vinkel viser mere. Zoom ændrer udsnittet inden for den aktuelle vinkel.
 
-**Skift synsfelt ved grænsen for zoom og panorering** er slået til som standard. Det virker også, når valglisten er skjult, hvis driveren understøtter FOV.
+- **Synsfelt ved opstart · Bredest muligt · Gør ingenting**. Vælg den bredeste vinkel, behold den nuværende, eller vælg en bestemt vinkel fra driveren. Appen prøver at bruge valget, første gang den forbinder i sessionen. Listen er nedtonet, indtil et tilsluttet kamera melder mindst én vinkel.
+- **Tillad manuel ændring af synsfelt**. Vis en vinkelliste under hjulet. Når valget er slået fra, viser appen den aktuelle vinkel, hvis den kan læse den. Valget er nedtonet, hvis driveren melder færre end to vinkler.
+- **Skift synsfelt ved grænsen for zoom og panorering**. Tryk igen ved en zoomgrænse for at prøve en bredere vinkel ved zoom ud eller en smallere ved zoom ind. Ved en vandret panoreringsgrænse prøver appen en anden vinkel, som kan give mere plads. Den prøver at bevare udsnittet og gendanner det, hvis bevægelsen ikke kan fortsætte. Det virker også uden manuelt valg. Valget er nedtonet, hvis driveren melder færre end to vinkler.
 
-- **Zoom ud:** Ved mindste zoom på en Brio med 65° skifter næste tryk til 78°. Trykket skifter synsfelt og justerer zoom, så udsnittet ændrer sig mindst muligt. Tryk igen for at zoome videre. Det samme sker fra 78° til 90°. Knappen stopper først ved 90° og mindste zoom.
-- **Zoom ind:** Ved højeste zoom skifter næste tryk til et smallere synsfelt. Hvis driveren melder 90°, 78° og 65°, bruger programmet dem i den rækkefølge. Knappen stopper ved det smalleste tilgængelige synsfelt og højeste zoom.
-- **Drej til venstre eller højre:** Ved kanten prøver programmet først et bredere synsfelt. Det justerer zoom, så udsnittet ændrer sig mindst muligt. Det kan også prøve et smallere synsfelt, hvis zoom tillader det. Hvis ingen af delene giver mere plads, gendanner programmet det forrige udsnit. Driveren afgør, hvor præcist udsnittet kan bevares.
+På en Brio ved 65° og mindste zoom kan et tryk på Zoom ud skifte til 78°. Tryk igen for at zoome ud i den nye vinkel. Knappen med rammesymbolet i hovedvinduet prøver at vælge bredeste vinkel og mindste zoom på én gang. Tjek billedet i dit optageprogram, hvis et andet program også styrer kameraet.
 
-Brug den firkantede knap med rammesymbolet for at gå direkte til bredeste synsfelt og mindste zoom. Skyderen ændrer zoom inden for det aktuelle synsfelt. Slå automatisk skift fra, hvis zoom og panorering skal holde sig inden for det valgte synsfelt.
+## Profiler
 
-Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Ældre positioner beholder kameraets aktuelle synsfelt. Tjek livebilledet, hvis Zoom, Logitech Brio Control eller et andet program også styrer udsnittet. [Testtrin for Brio og Zoom på engelsk](VALIDATION.md#brio-synsfelt-og-zoom)
+- **+ Ny profil**. Opret en profil med standardindstillinger, og gør den aktiv. Giv den et unikt navn.
+- **⧉ Kopiér aktiv profil**. Kopiér den aktive profils indstillinger og positioner, og skift til kopien. Et valg i listen ændrer ikke, hvilken profil der kopieres.
+- **✎ Omdøb valgt profil**. Omdøb den valgte profil. Knappen er nedtonet uden valg, og når Standard er valgt. Ny og Kopiér kræver en indlæst profil. I alle tre navnefelter skal du skrive et navn for at kunne bekræfte.
+- **Behold nuværende placering og layout**. Dobbeltklik på en profil for at åbne skiftedialogen. Brug layoutvalget til at tage vinduernes placering, størrelse og skillelinjen med over. Slå det fra for at bruge den nye profils gemte layout. Profilskift genstarter appen og fjerner midlertidige positioner.
 
-## 4. Tilpas billedet og gem faste positioner
+## Kontakt & Om
 
-![Fokus og eksponering på fanen Video](../images/screenshots/settings-tabs/da/image.png)
+### Kontakt
 
-[Før videoindstillingerne indlæses](../images/screenshots/settings-tabs/da/video.png) · [Farve](../images/screenshots/1.0.1/da/video-colour.png) · [Lys og detaljer](../images/screenshots/1.0.1/da/video-light-detail.png)
+![Kontakt](../images/screenshots/contact/da/issues.png)
 
-Vælg **Video** i indstillingsvinduet. Indlæs billedindstillinger, hvis det er nødvendigt. Vælg **Fokus og eksponering**, **Farve** eller **Lys og detaljer**. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
+- **Rapportér en fejl**. Åbn GitHubs fejlskabelon. Hvis der findes en nyere version, tilbyder appen at åbne den først. Hvis du fortsætter, tilbyder appen en supportpakke, før kladden åbnes.
+- **Foreslå en ny funktion**. Åbn GitHubs skabelon til funktionsforslag. Hvis der findes en nyere version, så afprøv den først. Funktionen kan allerede være tilføjet.
+- **Gem supportpakke (ZIP)**. Gem et skærmbillede, tilgængelige logfiler, profildata og en fil med vindueslayout i én ZIP. Tjek indholdet for private oplysninger. Vedhæft selv filen i GitHub-kladden. De tre knapper er kortvarigt nedtonet, mens en handling kører.
+- **GitHub-projektet · Udgivelser på GitHub · Deltag i projektets diskussion**. Åbn kildekoden, udgivelserne eller projektets diskussioner med de tre GitHub-links.
 
-Indstil først kameraet. Vælg **Positioner** i indstillingsvinduet, og klik på **+** for at tilføje en fast position. Vælg ikon øverst. Kontrollér navnet, og gem. Er navnefeltet tomt, og er navnet ledigt, foreslår ikonet et navn. Kombinerede symboler viser motiverne fra venstre mod højre.
+[Rapportér en fejl](Report%20a%20bug.md) · [Foreslå en ny funktion](Request%20a%20feature.md)
 
-Under **Faste positioner** kan du holde musen over symbolerne for at se deres funktion. Vælg en position, og brug **✎** til navn og symbol, **↻** til at erstatte med kameraets aktuelle position og **−** til at slette. Flyt positionen med **↑** eller **↓**. Rækkefølgen gemmes og vises også i hovedlisten.
+### Diagnoselogfiler
 
-En fast position, du markerer i hovedlisten, markeres også i indstillingerne. Når du gemmer en ny fast position, markeres den i indstillingerne.
+- **Logindstillinger**. Åbn dialogen med logindstillinger. Valgene gælder på tværs af profiler. Gem anvender ændringerne. Annuller lader dem være som før.
+- **Vælg mappe · Automatisk**. Vælg en mappe, eller brug Automatisk. Du kan ikke skrive direkte i stifeltet. Automatisk bruger programmappen og falder tilbage til `%LOCALAPPDATA%\CamPressets\Logs`.
+- **Maksimal størrelse pr. fil (MiB)**. Sæt grænsen for, hvornår appen starter en ny logfil. Standard er 1 MiB pr. fil.
+- **Maksimalt antal logfiler (inklusive den aktive)**. Vælg, hvor mange logfiler der bevares, inklusive den aktive. Standard er 2.
+- **Vis logfil**. Find den seneste log i Stifinder. Appen giver besked, hvis der ingen log er.
 
-![Fanen Positioner med listen over faste positioner og knapperne](../images/screenshots/settings-tabs/da/presets.png)
+### Om
 
-## 5. Tilpas udseende og sprog
+- **Buy me a coffee**. Se den installerede version og udviklerens navn. Hold musen over versionen for at se det fulde build-id. Supportlinket åbner udviklerens støtteside.
+- **Åbn vejledninger**. Åbn vejledningerne her. Hjælpeknappen i hovedvinduet åbner dem også.
 
-Træk skillelinjen mellem kamerastyringen og positionslisten. Profilen gemmer skillelinjens placering. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne starter lukket. Første gang du åbner dem efter start, vises den første fane. Rul ned på **Panorering** eller **Program**, hvis nogle felter ligger uden for vinduet. Profilen gemmer placering og størrelse for begge vinduer.
+Luk appen, og kopiér `%LOCALAPPDATA%\CamPressets` for at tage en sikkerhedskopi. Midlertidige positioner gælder kun i den aktuelle session.
 
-Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
-
-Vælg sprog under **Indstillinger → Program → Profilsprog**, og genstart for at anvende det. **Automatisk** følger Windows' visningssprog, hvis programmet understøtter det, og bruger ellers engelsk. Ved profilskift genstarter programmet med den valgte profils sprog. Midlertidige positioner forsvinder ved genstart.
-
-## 6. Version og projektoplysninger
-
-Åbn **Kontakt & Om → Om** for at se versionen og projektets links. Hold musen over versionen for at se det fulde build-id. Skriv det i en fejlrapport, hvis fejlen gælder en bestemt build.
-
-![Fanen Om med version, udvikler og projektlinks](../images/screenshots/contact/da/about.png)
-
-## 7. Diagnoselogfiler og fejlrapporter
-
-![Fanen Kontakt med GitHub-knapper, supportpakke og diagnoselog](../images/screenshots/contact/da/issues.png)
-
-Åbn **Kontakt & Om → Kontakt** for at vælge logmappe, maksimal filstørrelse og antal logfiler inklusive den aktive. Som standard skrives loggen i programmappen eller i `%LOCALAPPDATA%\CamPressets\Logs`, hvis programmappen ikke kan bruges.
-
-Vælg **Rapportér en fejl** eller **Foreslå en ny funktion** for at åbne det relevante udkast på GitHub. Ved en fejl tilbyder appen at gemme en supportpakke. Gennemgå pakken, og vedhæft den i udkastet. [Indberet eller følg en sag](ISSUES.md)
-
-**Meld en fejl eller foreslå en funktion**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
-![QR-kode til projektets sager på GitHub](../images/qr/issues.png)
-
-Fortsæt med [Daglig brug](DAILY-USE.md). Tag backup ved at lukke programmet og kopiere `%LOCALAPPDATA%\CamPressets`. Midlertidige positioner er ikke med i backup.
+[Daglig brug](DAILY-USE.md)

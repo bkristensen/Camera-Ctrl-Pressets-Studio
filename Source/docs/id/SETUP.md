@@ -29,110 +29,125 @@ Peringatan ![SmartScreen dengan Info lebih lanjut, ditampilkan dalam bahasa Denm
 
 ![Peringatan SmartScreen yang diperluas dengan Jalankan saja, ditampilkan dalam bahasa Denmark](../images/reporting/smartscreen-run.png)
 
-## 1. Pilih profil dan kamera
+Pilih profil di bagian bawah jendela utama. Secara bawaan, klik dua kali tombol kamera di tengah roda untuk memilih sumber. Profil mengingat kamera. Pilih sumber lain jika kamera itu tidak ada.
 
-Gunakan pemilih profil di footer untuk memilih profil. Untuk membuatnya, buka **Pengaturan → Profil**. Pilih **New** untuk pengaturan default atau **Copy** untuk salinan profil aktif. Beri nama setelah orang atau pengaturan. Profil baru menjadi aktif. Di **Profil**, pilih profil dan klik **✎** untuk mengganti namanya. Profil Standar memiliki nama tetap.
+Urutan bagian mengikuti tab di jendela Pengaturan. Tombol yang redup sering kali perlu pilihan lebih dulu. Di Video, driver menentukan pengaturan yang muncul. Periksa perubahan di aplikasi perekaman.
 
-Klik dua kali simbol kamera di tengah roda arah untuk memilih kamera. Program ini mengingatnya. Jika kamera itu hilang, pilih sumber lain. Posisi milik kamera dalam profil.
+**Tutup**. Atur ukuran dan posisi kedua jendela atau seret pemisah jendela utama. Profil mengingat semua nilai ini. Klik Tutup di bagian bawah untuk menutup Pengaturan. Jendela utama tetap terbuka.
 
-![Tab profil dengan daftar profil dan tindakan](../images/screenshots/1.0.1/en/profiles.png)
+## Preset
 
-## 2. Putuskan kapan kontrol kamera dapat dimulai
+### Preset permanen
 
-Di bawah **Pengaturan → Aplikasi**, aktifkan **Tanyakan apakah siaran sudah dimulai sebelum kamera digunakan** jika program pengambilan Anda harus dimulai terlebih dahulu. Opsi ini tidak aktif secara default.
+Arahkan kamera. Prasetel permanen menyimpan nilai geser, miring dan zoom yang didukung. Bidang pandang ikut tersimpan jika dilaporkan kamera. Prasetel berlaku untuk satu kamera dalam satu profil.
 
-Dengan opsi diaktifkan, tindakan kamera pertama menanyakan apakah streaming telah dimulai. Pilih **Yes** hanya jika sudah. Pilih **No** agar kontrol kamera tetap terputus. Setelah Ya, tindakan lebih lanjut jangan tanya lagi sampai Anda mengubah profil, mengubah opsi ini, atau memulai ulang aplikasi. Aplikasi tidak mendeteksi atau memulai sesi streaming untuk Anda.
+- **+ Tambah preset permanen**. Simpan tampilan saat ini. Pilih simbol dan masukkan nama unik. Simbol dapat menyarankan nama jika kolom kosong. Tombol Simpan perlu nama. Batal membiarkan daftar seperti semula.
+- **✎ Ubah nama dan ikon**. Ubah nama atau simbol prasetel yang dipilih. Tampilan yang tersimpan tetap sama.
+- **↻ Ganti dengan posisi saat ini**. Ganti tampilan prasetel dengan posisi kamera saat ini. Konfirmasikan perubahan. Nama dan simbol tetap sama.
+- **− Hapus preset permanen**. Hapus prasetel yang dipilih setelah mengonfirmasi.
+- **↑ / ↓ Pindahkan preset terpilih ke atas · Pindahkan preset terpilih ke bawah**. Pindahkan prasetel satu baris di kedua daftar. Panah atas redup di baris pertama. Panah bawah redup di baris terakhir.
 
-Jika Anda memerlukan pesanan ini pada penggunaan pertama, atur opsi sebelum sesi berikutnya. Defaultnya memungkinkan aplikasi untuk terhubung saat startup.
-
-![Atab aplikasi dengan konfirmasi streaming, pengaturan bahasa jendela dan profil](../images/screenshots/1.0.1/id/application.png)
-
-## 3. Atur gerakan dan zoom
-
-Buka **Pengaturan → Geser kamera** untuk mengatur langkah geser dan miring, membalikkan arah, dan memilih cara kerja tombol kamera. Mulailah dengan langkah kecil. Uji hasilnya dalam program pengambilan Anda.
-
-![Tab panning dengan ukuran langkah, kontrol arah, dan opsi tombol kamera](../images/screenshots/settings-tabs/en/settings.png)
-
-| Pengaturan | Apa yang diubahnya | Bawaan |
-| --- | --- | --- |
-| Kecepatan halus (% dari Normal) | Nilai sambil menahan Ctrl dan tombol panah | 50% |
-| Langkah panci normal | Cincin panah tengah | 1 |
-| Langkah panci cepat | Cincin panah luar | 4 |
-
-Satu langkah berarti satu langkah yang didukung oleh driver kamera. Ini bukan jarak atau persentase yang tetap. Pengemudi membatasi pergerakan dan kelancaran.
-
-Untuk kamera terbalik, aktifkan **Balik gerakan kamera atas/bawah** dan uji Up. Aktifkan **Balik gerakan kamera kiri/kanan** hanya jika Kiri bergerak ke arah yang salah. Pengaturan ini mengubah kontrol. Mereka tidak memutar videonya.
-
-### Atur langkah zoom
-
-Buka **Pengaturan → Zoom** untuk memilih seberapa jauh tombol plus dan minus bergerak dalam satu langkah. Standarnya adalah satu langkah driver. [Lihat tab Zoom](../images/screenshots/settings-tabs/en/zoom.png).
+Pilih prasetel sebelum mengedit, mengganti, menghapus, atau memindahkan. Tambah dan Ganti perlu profil yang dimuat serta satu fungsi geser, miring atau zoom yang bisa diatur. Jika kamera terputus, tindakan ini dapat mencoba menyambungkannya.
 
 ### Atur transisi yang telah ditetapkan
 
-Buka **Preset → Transisi** untuk memilih cara kamera berpindah di antara posisi yang disimpan. [Lihat tab Transisi](../images/screenshots/settings-tabs/en/transitions.png).
+- **Gunakan kecepatan untuk transisi**. Nonaktif memakai durasi tetap. Aktif memakai laju, sehingga gerakan pendek selesai lebih cepat. Sumbu yang bergerak tiba bersamaan.
+- **Transisi (dtk)**. Atur waktu perpindahan. Bawaannya 1 detik. Kolom redup saat mode laju aktif.
+- **Kecepatan transisi (%/d)**. Atur laju sebagai persentase rentang sumbu penentu per detik. Bawaannya 30%. Kolom redup saat durasi tetap digunakan.
 
-| Pengaturan | Apa yang diubahnya | Bawaan |
-| --- | --- | --- |
-| Gunakan kecepatan untuk transisi preset | Biarkan jarak perjalanan menentukan durasinya | Mati |
-| Kecepatan transisi (%/s) | Kecepatan jelajah sebagai persentase jangkauan sumbu pengendali per detik | 30% |
-| Transisi (detik) | Waktu untuk setiap perubahan preset dalam mode durasi tetap | 1.0 |
+## Pengaturan
 
-Dengan transisi berbasis kecepatan, gerakan pendek membutuhkan waktu lebih sedikit dibandingkan gerakan panjang. Aplikasi ini mempercepat dan mengerem, dan semua sumbu yang bergerak berbagi kemajuan yang sama sehingga mereka dapat mencapai target bersama-sama.
+### Geser kamera
+
+- **Kecepatan halus (% dari normal)**. Tahan Ctrl dan tekan tombol panah untuk gerakan halus. Laju bawaan adalah 50% dari normal.
+- **Langkah putar normal**. Atur jumlah langkah panah biasa di cincin dalam. Bawaannya 1.
+- **Langkah putar cepat**. Atur jumlah langkah panah cepat di cincin luar. Bawaannya 4. Ini juga mengubah laju saat tombol kamera diseret.
+- **Balik gerakan kamera kiri/kanan**. Tukar kiri dan kanan jika kamera bergerak ke arah yang salah.
+- **Balik gerakan kamera atas/bawah**. Tukar atas dan bawah, misalnya jika kamera dipasang terbalik. Kedua pilihan hanya mengubah arah kendali. Gambar tetap sama.
+- **Seret tombol kamera untuk mengubah arah kamera**. Seret tombol di tengah roda untuk mengarahkan kamera. Matikan pilihan ini jika ingin memakai panah.
+- **Klik dua kali tombol kamera untuk memilih sumber**. Aktif membuka daftar kamera dengan klik ganda. Nonaktif membukanya dengan satu klik.
+
+Anda dapat mengatur gerakan sebelum tersambung. Driver menentukan ukuran langkah, arah yang tersedia dan batasnya.
+
+### Atur langkah zoom
+
+- **Langkah zoom**. Atur langkah zoom saat menekan + atau −. Bawaannya satu langkah driver. Nilainya dapat diatur sebelum tersambung. Kamera harus mendukung zoom. Penggeser memilih nilai dalam bidang pandang saat ini.
+
+### Aplikasi
+
+- **Tanyakan apakah siaran sudah dimulai sebelum kamera digunakan**. Aktifkan jika aplikasi perekaman harus memulai siaran lebih dulu. Tindakan kamera berikutnya akan meminta konfirmasi. Pilih Ya saat siap atau Tidak agar kamera tetap terputus. Pertanyaan muncul lagi setelah mulai ulang, ganti profil, atau perubahan opsi ini. Saat nonaktif, aplikasi dapat tersambung ketika dibuka.
+- **Selalu di atas**. Pertahankan jendela utama di atas aplikasi lain. Matikan agar jendela lain dapat menutupinya.
+- **Bahasa profil · Otomatis**. Pilih satu dari 12 bahasa. Otomatis memakai bahasa tampilan Windows jika didukung, atau bahasa Inggris. Mulai ulang untuk menerapkan. Setiap profil menyimpan pilihan bahasa.
+
+## Video
+
+- **Muat kontrol gambar**. Sambungkan kamera untuk memuat pengaturan gambar. Tombol muncul saat kamera terputus. Jika driver tidak menyediakan pengaturan gambar, hanya tab bidang pandang yang tersisa.
+- **Otomatis**. Driver menentukan penggeser dan tab yang tersedia. Otomatis membiarkan kamera mengatur nilai. Matikan untuk memakai penggeser. Jika hanya ada mode otomatis, penggeser redup dan kotak bisa terkunci. Jika hanya ada mode manual, kotak Otomatis disembunyikan.
+- **Pulihkan pengaturan gambar bawaan driver**. Kembalikan semua pengaturan gambar yang didukung ke bawaan driver. Tombol muncul di tab gambar dan disembunyikan di tab bidang pandang. Nilai disimpan per kamera dan profil.
+
+### Fokus dan pencahayaan
+
+- **Penguatan**. Perkuat sinyal agar gambar lebih terang. Nilai tinggi dapat menambah bintik.
+- **Pencahayaan**. Atur lama sensor menangkap cahaya. Waktu lebih lama mencerahkan gambar, tetapi gerakan bisa kabur.
+- **Fokus**. Atur jarak fokus. Periksa ketajaman subjek di aplikasi perekaman.
+
+### Warna
+
+- **Keseimbangan putih**. Koreksi warna cahaya agar putih terlihat putih.
+- **Saturasi**. Buat warna lebih pekat atau lebih pucat.
+- **Gama**. Terangkan atau gelapkan nada tengah.
+- **Rona**. Geser warna pada roda warna.
+
+### Cahaya dan detail
+
+- **Kontras**. Ubah selisih antara bagian terang dan gelap.
+- **Kecerahan**. Terangkan atau gelapkan seluruh gambar.
+- **Kompensasi cahaya latar**. Terangkan subjek ketika cahaya kuat datang dari belakangnya.
+- **Ketajaman**. Buat tepi terlihat lebih tegas atau lebih lembut.
 
 ### Atur bidang pandang
 
-Buka **Video → Bidang pandang**. Di bawah **Bidang pandang saat mulai**, pilih **Terlebar yang tersedia**, sudut yang dilaporkan oleh driver kamera, atau **Jangan ubah** untuk mempertahankan tampilan saat ini. Aplikasi menggunakan pilihan ini saat pertama kali terhubung. Aktifkan **Izinkan perubahan bidang pandang manual** untuk memilih di antara sudut yang dilaporkan di bawah roda arah. Jika driver melaporkan tidak ada sudut yang dapat dipilih, kontrol FOV dinonaktifkan. Anda tetap dapat menggunakan zoom jika kamera mendukungnya. [Lihat tab Bidang pandang](../images/screenshots/settings-tabs/en/field-of-view.png).
+Bidang pandang (FOV) menunjukkan seberapa banyak pemandangan yang masuk ke gambar. Sudut lebih besar menunjukkan lebih banyak. Zoom mengubah potongan dalam sudut saat ini.
 
-**Ubah bidang pandang pada batas zoom dan geser** diaktifkan secara default. Anda dapat menggunakannya dengan pemilih manual tersembunyi. Ini berfungsi ketika driver mendukung FOV.
+- **Bidang pandang saat mulai · Terlebar yang tersedia · Jangan ubah**. Pilih sudut terlebar, pertahankan sudut saat ini, atau pilih sudut dari driver. Aplikasi mencobanya saat koneksi pertama dalam sesi. Daftar redup hingga kamera yang terhubung melaporkan setidaknya satu sudut.
+- **Izinkan perubahan bidang pandang manual**. Tampilkan pemilih sudut di bawah roda. Saat nonaktif, aplikasi menunjukkan sudut saat ini jika dapat membacanya. Opsi redup jika jumlah sudut kurang dari dua.
+- **Ubah bidang pandang pada batas zoom dan geser**. Tekan lagi di batas zoom untuk mencoba sudut lebih lebar saat memperkecil atau lebih sempit saat memperbesar. Pada batas geser kiri atau kanan, aplikasi mencoba sudut yang memberi ruang. Aplikasi menjaga komposisi sebisa mungkin dan memulihkannya jika gerakan tetap terhalang. Ini dapat berjalan saat pilihan manual mati. Opsi redup jika sudut kurang dari dua.
 
-- **Perkecil:** Pada zoom minimum pada Brio yang disetel ke 65°, tekan zoom out lagi untuk beralih ke 78°. Pers itu akan mengubah FOV dan menyesuaikan zoom agar bidikan tetap dekat. Penekanan selanjutnya akan memperkecil tampilan secara normal. Langkah yang sama membawa Anda dari 78° ke 90°. Tombol berhenti pada 90° dan zoom minimum.
-- **Memperbesar:** Pada zoom maksimum, tekan lagi untuk beralih ke FOV yang lebih sempit. Jika driver melaporkan 90°, 78°, dan 65°, aplikasi akan menggunakannya dalam urutan tersebut. Tombol berhenti pada sudut tersempit yang tersedia dan zoom maksimum.
-- **Pan kiri atau kanan:** Di bagian tepi, aplikasi mencoba tampilan yang lebih luas terlebih dahulu. Ini menyesuaikan zoom agar potongan tetap dekat. Ia juga dapat mencoba tampilan yang lebih sempit jika zoom memungkinkannya. Jika tidak ada tampilan yang memungkinkannya menggeser lebih jauh, maka gambar sebelumnya akan dikembalikan. Pengemudi mengontrol seberapa dekat pertandingannya.
+Contoh pada Brio dengan sudut 65° dan zoom minimum. Tekan − untuk mencoba 78°. Tekan lagi untuk memperkecil pada sudut baru. Tombol bingkai mencoba sudut terlebar dan zoom minimum sekaligus. Periksa hasilnya jika aplikasi lain juga mengendalikan kamera.
 
-Gunakan tombol persegi dengan simbol bingkai untuk langsung menuju FOV terluas dan zoom minimum. Penggeser masih menyetel zoom dalam FOV saat ini. Matikan FOV otomatis untuk menjaga zoom dan menggeser dalam tampilan saat ini.
+## Profil
 
-Preset menyimpan pan, tilt, zoom dan FOV yang dilaporkan oleh driver. Preset lama mempertahankan FOV saat ini. Periksa gambar langsung apakah Zoom, Logitech Brio Control, atau aplikasi lain mengontrol pemotongan. [Langkah pengujian Brio dan Zoom](VALIDATION.md#bidang-pandang-brio-dan-zoom)
+- **+ Profil baru**. Buat profil baru dengan pengaturan bawaan dan aktifkan. Beri nama yang unik.
+- **⧉ Salin profil aktif**. Salin pengaturan dan prasetel profil aktif, lalu beralih ke salinan. Baris lain yang dipilih tidak mengubah profil sumber.
+- **✎ Ubah nama profil terpilih**. Ubah nama profil yang dipilih. Tombol redup jika belum ada pilihan atau jika memilih Standard. Baru dan Salin perlu profil yang dimuat. Masukkan nama di ketiga dialog untuk mengaktifkan konfirmasi.
+- **Pertahankan posisi dan tata letak saat ini**. Klik dua kali profil untuk membuka dialog perpindahan. Aktifkan opsi tata letak untuk membawa posisi, ukuran dan pemisah ke profil tujuan. Matikan untuk memakai tata letak profil tujuan. Peralihan memulai ulang aplikasi dan menghapus prasetel sementara.
 
-## 4. Sesuaikan gambar dan simpan posisi permanen
+## Kontak dan Tentang
 
-![Kontrol fokus dan eksposur di tab Video](../images/screenshots/settings-tabs/en/image.png)
+### Kontak
 
-[Sebelum memuat kontrol video](../images/screenshots/settings-tabs/en/video.png) · [Warna](../images/screenshots/1.0.1/en/video-colour.png) · [Cahaya dan detail](../images/screenshots/1.0.1/en/video-light-detail.png)
+![Kontak](../images/screenshots/contact/id/issues.png)
 
-Buka **Video** di panel pengaturan, lalu muat kontrol gambar jika diperlukan. Pilih grup seperti **Fokus dan pencahayaan**, **Warna**, atau **Cahaya dan detail**. Hanya kontrol yang diekspos oleh driver yang muncul. Sesuaikan kecerahan, kontras, saturasi warna, fokus, atau keseimbangan putih bila tersedia. Matikan mode otomatis sebelum penyesuaian manual. Nilai gambar disimpan per kamera dan profil. Tombol reset mengembalikan default driver.
+- **Laporkan masalah**. Buka templat bug GitHub. Jika ada versi baru, aplikasi menawarkan untuk membukanya lebih dulu. Jika dilanjutkan, aplikasi menawarkan ZIP sebelum membuka draf.
+- **Usulkan fitur baru**. Buka templat permintaan fitur. Jika ada versi baru, coba lebih dulu. Fitur mungkin sudah ada.
+- **Simpan ZIP dukungan**. Simpan tangkapan layar, log yang tersedia, data profil dan tata letak jendela ke ZIP. Periksa data pribadi. Lampirkan ZIP sendiri ke draf. Ketiga tombol redup saat tindakan berlangsung.
+- **Proyek di GitHub · Rilis GitHub · Ikuti diskusi proyek**. Tiga tautan GitHub membuka kode sumber, unduhan rilis, atau diskusi proyek.
 
-Gerakkan kamera terlebih dahulu. Buka **Preset** di panel pengaturan. Klik **+** untuk menambahkan preset permanen. Pilih ikon di bagian atas, centang namanya, lalu simpan. Jika nama tersebut kosong dan tidak digunakan, memilih ikon akan menyarankan namanya. Simbol gabungan menunjukkan subjeknya dari kiri ke kanan.
+[Laporkan masalah](Report%20a%20bug.md) · [Usulkan fitur baru](Request%20a%20feature.md)
 
-Di bawah **Preset permanen**, pilih posisi. Arahkan kursor ke simbol untuk tindakannya. Gunakan **✎** untuk mengedit nama dan simbolnya, **↻** untuk menyimpan posisi kamera saat ini pada tempatnya, dan **−** untuk menghapusnya. Gunakan **↑** dan **↓** untuk mengubah urutan di kedua daftar. Posisi permanen tetap berada di bagian atas daftar utama yang dicetak tebal.
+### Log diagnostik
 
-Memilih baris permanen di daftar utama juga memilih preset tersebut di Pengaturan. Prasetel yang baru disimpan dipilih di Pengaturan.
+- **Pengaturan log**. Buka pengaturan log. Pengaturan berlaku untuk semua profil. Simpan menerapkan perubahan. Batal membiarkan nilai tetap.
+- **Pilih folder · Otomatis**. Pilih folder atau gunakan Otomatis. Kolom lokasi hanya dapat dibaca. Otomatis memakai folder aplikasi. Jika gagal, aplikasi memakai `%LOCALAPPDATA%\CamPressets\Logs`.
+- **Ukuran maksimum per file (MiB)**. Atur kapan berkas log baru dibuat. Bawaannya 1 MiB per berkas.
+- **Jumlah log maksimum (termasuk log aktif)**. Atur jumlah berkas yang disimpan, termasuk yang sedang dipakai. Bawaannya 2.
+- **Tampilkan file log**. Pilih log terbaru di File Explorer. Jika belum ada log, aplikasi menampilkan pesan.
 
-![Tab preset dengan daftar preset permanen dan tindakan](../images/screenshots/settings-tabs/en/presets.png)
+### Tentang
 
-## 5. Atur tata letak dan bahasa
+- **Traktir saya kopi**. Lihat versi yang terpasang dan nama pengembang. Arahkan kursor ke versi untuk melihat ID build lengkap. Tautan dukungan membuka halaman pengembang.
+- **Buka panduan**. Buka panduan di tab ini. Tombol bantuan pada jendela utama juga membukanya.
 
-Seret pemisah antara kontrol kamera dan daftar prasetel. Profil Anda menyimpan posisi pemisah. Ukuran awal adalah 900×500, dan minimum 670×450. Pengaturan mulai ditutup. Saat Anda pertama kali membukanya setelah peluncuran, tab pertama dipilih. Gulir ke bawah di **Geser kamera** atau **Aplikasi** jika beberapa bidang berada di bawah jendela. Profil Anda menyimpan ukuran dan posisi kedua jendela.
+Untuk membuat cadangan, tutup aplikasi dan salin `%LOCALAPPDATA%\CamPressets`. Prasetel sementara hanya berlaku selama satu sesi.
 
-Saat memilih profil di footer, biarkan **Pertahankan posisi dan tata letak saat ini** tidak dicentang untuk memulihkan tata letak profil tersebut. Centang untuk membawa tata letak saat ini ke profil yang dipilih. Pilihannya diingat di profil yang Anda tinggalkan; tata letak yang dibawa disimpan di profil tujuan.
-
-Pilih bahasa di bawah **Pengaturan → Aplikasi → Bahasa profil**, lalu mulai ulang untuk menerapkannya. **Otomatis** menggunakan bahasa tampilan Windows jika didukung dan bahasa Inggris jika didukung. Beralih profil akan memulai ulang aplikasi dengan bahasa profil yang dipilih. Preset sementara berakhir saat restart.
-
-## 6. Versi dan informasi proyek
-
-Buka **Kontak dan Tentang → Tentang** untuk melihat versi dan tautan proyek. Arahkan penunjuk ke versi untuk melihat ID build lengkap. Sertakan ID jika masalah terjadi pada build tersebut.
-
-![Tentang](../images/screenshots/contact/id/about.png)
-
-## 7. Log diagnostik dan pelaporan masalah
-
-![Tab kontak dengan tombol GitHub dan ZIP dukungan](../images/screenshots/contact/id/issues.png)
-
-Buka **Kontak dan Tentang → Kontak** untuk memilih folder log, ukuran maksimum, dan jumlah berkas termasuk log saat ini. Aplikasi memakai folder program atau `%LOCALAPPDATA%\CamPressets\Logs` jika folder program tidak dapat dipakai.
-
-Pilih **Laporkan masalah** atau **Usulkan fitur baru** untuk membuka draf GitHub yang sesuai. Saat melaporkan masalah, aplikasi menawarkan ZIP dukungan. Tinjau dan lampirkan sendiri ke draf. [Laporkan atau ikuti masalah](ISSUES.md)
-
-**Laporkan bug atau sarankan fitur**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
-Kode ![QR untuk masalah proyek GitHub](../images/qr/issues.png)
-
-Berikutnya: [Penggunaan sehari-hari](DAILY-USE.md). Untuk cadangan, tutup aplikasi dan salin `%LOCALAPPDATA%\CamPressets`. Posisi sementara bukan bagian dari cadangan.
+[Penggunaan sehari-hari](DAILY-USE.md)

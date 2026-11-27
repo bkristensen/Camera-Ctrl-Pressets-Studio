@@ -29,110 +29,127 @@ Falls der Leitfaden-Viewer WebView2 benötigt, laden Sie die Runtime bei Microso
 
 ![Erweiterte SmartScreen-Warnung mit Trotzdem ausführen, auf Dänisch](../images/reporting/smartscreen-run.png)
 
-## 1. Profil und Kamera wählen
+Wählen Sie unten im Hauptfenster das passende Profil. Doppelklicken Sie in der Grundeinstellung auf die Kamerataste im Steuerrad und wählen Sie eine Quelle. Das Profil merkt sich die Kamera. Fehlt sie, wählen Sie eine andere.
 
-Wählen Sie das Profil über die Profilauswahl unten. Öffnen Sie **Einstellungen → Profile**, um ein Profil anzulegen. **Neu** verwendet die Standardwerte. **Kopieren** kopiert das aktive Profil. Benennen Sie es nach einer Person oder einem Aufbau. Das neue Profil wird aktiv. Wählen Sie unter **Profile** einen Eintrag und klicken Sie zum Umbenennen auf **✎**. Das Standardprofil hat einen festen Namen.
+Die Abschnitte folgen der Reihenfolge im Einstellungsfenster. Ist eine Taste grau, fehlt oft eine Auswahl. Unter Video bestimmt der Kameratreiber, welche Regler erscheinen. Prüfen Sie das Ergebnis in Ihrer Aufnahme-App.
 
-Doppelklicken Sie auf das Kamerasymbol in der Mitte des Steuerrads, um die Kamera zu wählen. Die Anwendung merkt sich die Auswahl. Fehlt die Kamera, wählen Sie eine andere Quelle. Positionen gehören zu einer Kamera innerhalb eines Profils.
+**Schließen**. Ändern Sie Größe und Position beider Fenster und ziehen Sie die Trennlinie im Hauptfenster. Das Profil merkt sich alles. Schließen schließt das Einstellungsfenster. Das Hauptfenster bleibt offen.
 
-![Registerkarte Profile mit Profilliste und Aktionen](../images/screenshots/1.0.1/de/profiles.png)
+## Positionen
 
-## 2. Kamerazugriff festlegen
+### Feste Positionen
 
-Aktivieren Sie unter **Einstellungen → Anwendung** die Option **Vor der Kameranutzung fragen, ob das Streaming gestartet wurde**, wenn Ihr Aufnahmeprogramm zuerst starten muss. Die Option ist standardmäßig aus.
+Richten Sie die Kamera aus. Eine feste Position speichert unterstützte Werte für Schwenken, Neigen und Zoom sowie das gemeldete Sichtfeld. Die Position gehört zu einer Kamera in einem Profil.
 
-Mit dieser Option fragt die erste Kamerafunktion, ob das Streaming begonnen hat. Wählen Sie erst dann **Ja**. **Nein** lässt die Kamerasteuerung getrennt. Nach Ja wird erst wieder gefragt, wenn Sie das Profil wechseln, die Option ändern oder die Anwendung neu starten. Die Anwendung erkennt oder startet keinen Stream.
+- **+ Dauerhaftes Preset hinzufügen**. Speichern Sie den aktuellen Ausschnitt. Wählen Sie ein Symbol und tragen Sie einen eindeutigen Namen ein. Bei leerem Feld kann das Symbol einen Namen vorschlagen. Speichern setzt einen Namen voraus. Abbrechen lässt die Liste unverändert.
+- **✎ Name und Symbol bearbeiten**. Ändern Sie Name oder Symbol der gewählten Position. Der Ausschnitt bleibt gleich.
+- **↻ Durch aktuelle Position ersetzen**. Ersetzen Sie den Ausschnitt durch die aktuelle Kameraposition. Bestätigen Sie den Vorgang. Name und Symbol bleiben erhalten.
+- **− Dauerhaftes Preset löschen**. Entfernen Sie die gewählte Position nach der Bestätigung.
+- **↑ / ↓ Ausgewählte Position nach oben verschieben · Ausgewählte Position nach unten verschieben**. Verschieben Sie die Auswahl in beiden Listen um eine Zeile. Oben ist der Aufwärtspfeil grau, unten der Abwärtspfeil.
 
-Wenn Sie diese Reihenfolge brauchen, aktivieren Sie die Option vor der nächsten Sitzung. Die Standardeinstellung erlaubt die Verbindung beim Start.
-
-![Registerkarte Anwendung mit Streaming-Abfrage, Fensteroptionen und Profilsprache](../images/screenshots/1.0.1/de/application.png)
-
-## 3. Bewegung und Zoom einstellen
-
-Öffnen Sie **Einstellungen → Schwenken**, um die Schrittweite, Richtungen und Bedienung der Kamerataste einzustellen. Beginnen Sie mit kleinen Schritten. Prüfen Sie das Bild in Ihrem Aufnahmeprogramm.
-
-![Registerkarte zum Einstellen von Schwenkschritten, Richtungen und Kamerataste](../images/screenshots/settings-tabs/en/settings.png)
-
-| Einstellung | Wirkung | Standard |
-| --- | --- | --- |
-| Feintempo (% von Normal) | Tempo beim Gedrückthalten von Strg und einer Pfeiltaste | 50 % |
-| Normale Schwenkschritte | Mittlerer Pfeilring | 1 |
-| Schnelle Schwenkschritte | Äußerer Pfeilring | 4 |
-
-Ein Schritt entspricht einem Schritt des Kameratreibers. Er ist keine feste Strecke oder Prozentzahl. Der Treiber begrenzt die Bewegung und ihre Gleichmäßigkeit.
-
-Hängt die Kamera kopfüber, testen Sie **Kameraschwenk oben / unten umkehren** mit dem Pfeil nach oben. Aktivieren Sie **Kameraschwenk links / rechts umkehren** nur, wenn Links in die falsche Richtung führt. Diese Optionen ändern die Steuerung. Sie drehen das Videobild nicht.
-
-### Zoomschritte einstellen
-
-Öffnen Sie **Einstellungen → Zoom**, um die Schrittweite der Plus- und Minustasten festzulegen. Standardmäßig beträgt sie einen Treiberschritt.
+Wählen Sie zuerst eine Position für Bearbeiten, Ersetzen, Löschen oder Verschieben. Für Hinzufügen und Ersetzen braucht die App ein geladenes Profil und mindestens eine steuerbare Achse. Ist die Kamera getrennt, kann die App versuchen, sie dabei zu verbinden.
 
 ### Positionswechsel einstellen
 
-Öffnen Sie **Positionen → Übergänge**, um die Bewegung zwischen gespeicherten Positionen einzustellen.
+- **Tempo für Positionswechsel verwenden**. Aus verwendet eine feste Dauer. Ein verwendet eine Geschwindigkeit. Kurze Wege sind dann schneller fertig. Die bewegten Achsen erreichen das Ziel zusammen.
+- **Übergang (Sek.)**. Legen Sie die Zeit pro Wechsel fest. Der Standard ist 1 Sekunde. Im Geschwindigkeitsmodus ist das Feld grau.
+- **Übergangstempo (%/s)**. Legen Sie die Geschwindigkeit in Prozent des Bereichs der maßgeblichen Achse pro Sekunde fest. Der Standard ist 30 %. Bei fester Dauer ist das Feld grau.
 
-| Einstellung | Wirkung | Standard |
-| --- | --- | --- |
-| Tempo für Positionswechsel verwenden | Die Entfernung bestimmt die Dauer | Aus |
-| Übergangstempo (%/s) | Tempo in Prozent des Bereichs der maßgeblichen Achse pro Sekunde | 30 % |
-| Übergang in Sekunden | Zeit für einen Positionswechsel bei fester Dauer | 1,0 |
+## Einstellungen
 
-Bei tempobasierten Übergängen dauern kurze Bewegungen weniger lang als lange. Die App beschleunigt und bremst und steuert die Achsen gemeinsam, damit sie das Ziel gleichzeitig erreichen können.
+### Schwenken
+
+- **Feintempo (% von Normal)**. Halten Sie Strg gedrückt und drücken Sie eine Pfeiltaste. Der Standard für die Feinsteuerung ist 50 % der normalen Geschwindigkeit.
+- **Normale Schwenkschritte**. Legen Sie die Schritte für den inneren Ring fest. Der Standard ist 1.
+- **Schnelle Schwenkschritte**. Legen Sie die Schritte für den äußeren Ring fest. Der Standard ist 4. Der Wert beeinflusst auch das Ziehen der Kamerataste.
+- **Kameraschwenk links / rechts umkehren**. Vertauschen Sie links und rechts, falls die Kamera in die falsche Richtung fährt.
+- **Kameraschwenk oben / unten umkehren**. Vertauschen Sie oben und unten, etwa bei einer kopfüber montierten Kamera. Beide Optionen ändern die Steuerung. Das Bild bleibt gleich.
+- **Kamerataste zum Schwenken und Neigen ziehen**. Ziehen Sie die Taste in der Mitte des Steuerrads, um die Kamera auszurichten. Bei ausgeschalteter Option steuern Sie über die Pfeile.
+- **Kamerataste zur Quellenauswahl doppelklicken**. Ein öffnet die Kameraliste per Doppelklick. Aus öffnet sie per Einzelklick.
+
+Sie können die Werte vor dem Verbinden ändern. Der Treiber bestimmt die Schrittgröße, die verfügbaren Achsen und ihre Grenzen.
+
+![Schwenken](../images/screenshots/settings-tabs/de/settings.png)
+
+### Zoomschritte einstellen
+
+- **Zoomschritte**. Bestimmen Sie die Bewegung von + und − pro Druck. Der Standard ist 1 Treiberschritt. Der Wert lässt sich vorher einstellen und wirkt bei Kameras mit Zoom. Der Schieber wählt einen Zoomwert im aktuellen Sichtfeld.
+
+### Anwendung
+
+- **Vor der Kameranutzung fragen, ob das Streaming gestartet wurde**. Aktivieren Sie die Abfrage, wenn zuerst der Stream laufen muss. Wählen Sie bei der nächsten Kameraaktion Ja, sobald Sie bereit sind. Bei Nein bleibt die Kamera getrennt. Nach Neustart, Profilwechsel oder Änderung der Option fragt die App erneut. Aus erlaubt die Verbindung beim Start.
+- **Immer im Vordergrund**. Halten Sie das Hauptfenster über anderen Apps. Schalten Sie die Option aus, damit andere Fenster es überdecken können.
+- **Profilsprache · Automatisch**. Wählen Sie eine von zwölf Sprachen. Automatisch nutzt die Windows-Anzeigesprache, sofern verfügbar, sonst Englisch. Starten Sie die App neu. Die Sprache gehört zum Profil.
+
+## Video
+
+- **Bildeinstellungen laden**. Verbinden Sie die Kamera und laden Sie die Bildregler. Die Taste erscheint bei getrennter Kamera. Meldet der Treiber nach dem Verbinden keine Bildregler, bleibt nur die Registerkarte für das Sichtfeld.
+- **Automatisch**. Der Treiber bestimmt, welche Regler und Registerkarten erscheinen. Automatisch lässt die Kamera den Wert regeln. Schalten Sie es für den Schieber aus. Unterstützt der Treiber nur Automatik, ist der Schieber grau und die Automatik kann gesperrt sein. Bei reiner Handsteuerung fehlt das Kästchen.
+- **Bild auf Treiberstandard zurücksetzen**. Setzen Sie alle unterstützten Bildwerte auf die Treiberstandards zurück. Die Taste erscheint auf den Bildregisterkarten. In der Sichtfeldansicht fehlt sie. Das Profil speichert die Werte je Kamera.
+
+### Fokus und Belichtung
+
+- **Verstärkung**. Verstärken Sie das Signal für ein helleres Bild. Hohe Verstärkung kann Bildrauschen erzeugen.
+- **Belichtung**. Bestimmen Sie, wie lange der Sensor Licht sammelt. Längere Belichtung macht das Bild heller. Bewegung kann dabei verschwimmen.
+- **Fokus**. Stellen Sie auf den Abstand des Motivs scharf. Prüfen Sie das Bild in Ihrer Aufnahme-App.
+
+### Farbe
+
+- **Weißabgleich**. Korrigieren Sie Farbstiche, damit Weiß weiß aussieht.
+- **Sättigung**. Machen Sie die Farben kräftiger oder blasser.
+- **Gamma**. Ändern Sie die Helligkeit der Mitteltöne.
+- **Farbton**. Verschieben Sie die Farben auf dem Farbkreis.
+
+### Licht und Details
+
+- **Kontrast**. Ändern Sie den Unterschied zwischen hellen und dunklen Bereichen.
+- **Helligkeit**. Machen Sie das ganze Bild heller oder dunkler.
+- **Gegenlichtkompensation**. Hellen Sie ein Motiv auf, wenn starkes Licht von hinten kommt.
+- **Schärfe**. Lassen Sie Kanten stärker oder schwächer hervortreten.
 
 ### Sichtfeld einstellen
 
-Öffnen Sie **Video → Sichtfeld**. Wählen Sie unter **Sichtfeld beim Start** das weiteste verfügbare Sichtfeld, einen vom Kameratreiber gemeldeten Winkel oder **Nichts ändern**, um das aktuelle Sichtfeld beizubehalten. Die App nutzt den Wert beim ersten Verbinden. Aktivieren Sie **Manuelle Sichtfeldänderung erlauben**, um die Winkel unter dem Kamerarad auszuwählen. Meldet der Treiber keine wählbaren Winkel, sind die Sichtfeldeinstellungen deaktiviert. Der Zoom bleibt verfügbar, wenn die Kamera ihn unterstützt.
+Das Sichtfeld (FOV) bestimmt, wie viel ins Bild passt. Ein größerer Winkel zeigt mehr. Zoom verändert den Ausschnitt innerhalb dieses Winkels.
 
-**Sichtfeld an Zoom- und Schwenkgrenzen wechseln** ist standardmäßig aktiv. Es funktioniert auch bei ausgeblendeter Auswahl, wenn der Treiber das Sichtfeld steuern kann.
+- **Sichtfeld beim Start · Weitest verfügbar · Nichts ändern**. Wählen Sie den weitesten Winkel, behalten Sie den aktuellen bei oder wählen Sie einen angebotenen Winkel. Die App versucht, ihn bei der ersten Verbindung der Sitzung zu setzen. Die Liste bleibt grau, bis die verbundene Kamera mindestens einen Winkel meldet.
+- **Manuelle Sichtfeldänderung erlauben**. Zeigen Sie die Winkelliste unter dem Steuerrad. Bei Aus zeigt die App den aktuellen Winkel, wenn sie ihn lesen kann. Bei weniger als zwei Winkeln ist der Schalter grau.
+- **Sichtfeld an Zoom- und Schwenkgrenzen wechseln**. Drücken Sie an der Zoomgrenze erneut. Die App versucht beim Herauszoomen einen weiteren und beim Hineinzoomen einen engeren Winkel. An der horizontalen Schwenkgrenze versucht sie einen Winkel, der mehr Spielraum lässt. Sie hält den Bildausschnitt möglichst ähnlich und stellt ihn wieder her, wenn kein weiterer Schritt möglich ist. Das geht auch bei ausgeschalteter Handwahl. Bei weniger als zwei Winkeln ist der Schalter grau.
 
-- **Herauszoomen:** Bei minimalem Zoom und 65° wechselt der nächste Tastendruck bei einer Brio auf 78°. Die App passt den Zoom an, um den Ausschnitt möglichst zu halten. Drücken Sie erneut, um normal weiter herauszuzoomen. Ebenso geht es von 78° auf 90°. Die Taste stoppt bei 90° und kleinstem Zoom.
-- **Hineinzoomen:** Bei maximalem Zoom wechselt der nächste Druck zu einem engeren Sichtfeld. Meldet der Treiber 90°, 78° und 65°, nutzt die App sie in dieser Reihenfolge. Die Taste stoppt beim engsten verfügbaren Sichtfeld und größtem Zoom.
-- **Nach links oder rechts schwenken:** An der Grenze versucht die App zuerst ein weiteres Sichtfeld. Sie passt den Zoom an, um den Ausschnitt möglichst zu halten. Lässt es der Zoom zu, testet sie auch ein engeres Sichtfeld. Kann sie in keinem Sichtfeld weiter schwenken, stellt sie den vorherigen Ausschnitt wieder her. Der Treiber bestimmt, wie genau der Ausschnitt erhalten bleibt.
+Bei einer Brio mit 65° und kleinstem Zoom kann ein Druck auf Zoom − zu 78° wechseln. Der nächste Druck zoomt im neuen Sichtfeld weiter heraus. Die Rahmentaste versucht, den weitesten Winkel und kleinsten Zoom zugleich einzustellen. Prüfen Sie das Bild, wenn eine andere App die Kamera mitsteuert.
 
-Die quadratische Taste mit Rahmensymbol stellt das weiteste Sichtfeld und den kleinsten Zoom ein. Der Schieberegler zoomt im aktuellen Sichtfeld. Deaktivieren Sie den automatischen Wechsel, um dieses Sichtfeld beim Zoomen und Schwenken beizubehalten.
+## Profile
 
-Positionen speichern Schwenk- und Neigewinkel, Zoom und das vom Treiber gemeldete Sichtfeld. Ältere Positionen behalten das aktuelle Sichtfeld. Prüfen Sie das Livebild, wenn Zoom, Logitech Brio Control oder eine andere App den Ausschnitt steuert. [Testschritte für Brio und Zoom auf Englisch](VALIDATION.md#brio-sichtfeld-und-zoom)
+- **+ Neues Profil**. Legen Sie ein Profil mit Standardwerten an und aktivieren Sie es. Wählen Sie einen eindeutigen Namen.
+- **⧉ Aktives Profil kopieren**. Kopieren Sie Einstellungen und feste Positionen des aktiven Profils. Die App wechselt zur Kopie. Die Auswahl in der Liste ändert die Quelle der Kopie nicht.
+- **✎ Ausgewähltes Profil umbenennen**. Benennen Sie das gewählte Profil um. Ohne Auswahl und bei Standard ist die Taste grau. Neu und Kopieren brauchen ein geladenes Profil. In allen drei Dialogen setzt die Bestätigung einen Namen voraus.
+- **Aktuelle Position und Anordnung beibehalten**. Doppelklicken Sie auf ein Profil. Die Layoutoption übernimmt die aktuellen Fensterpositionen, Größen und die Trennlinie. Ohne Häkchen gilt das gespeicherte Layout des Zielprofils. Der Wechsel startet die App neu und leert die temporären Positionen.
 
-## 4. Bild anpassen und feste Positionen speichern
+## Kontakt & Info
 
-![Fokus und Belichtung auf der Registerkarte Video](../images/screenshots/1.0.1/de/image.png)
+### Kontakt
 
-[Vor dem Laden der Videoregler](../images/screenshots/1.0.1/de/video.png) · [Farbe](../images/screenshots/1.0.1/de/video-colour.png) · [Licht und Details](../images/screenshots/1.0.1/de/video-light-detail.png)
+![Kontakt](../images/screenshots/contact/de/issues.png)
 
-Öffnen Sie **Video** im Einstellungsbereich. Laden Sie die Bildregler bei Bedarf. Wählen Sie **Fokus und Belichtung**, **Farbe** oder **Licht und Details**. Es erscheinen nur Funktionen, die der Treiber bereitstellt. Stellen Sie Helligkeit, Kontrast, Farbsättigung, Fokus oder Weißabgleich ein, soweit verfügbar. Schalten Sie die Automatik vor einer manuellen Änderung aus. Bildwerte werden pro Kamera und Profil gespeichert. Die Rücksetztaste stellt die Treiberstandardwerte wieder her.
+- **Fehler melden**. Öffnen Sie die Fehlervorlage auf GitHub. Bei einer neueren Version bietet die App zuerst den Download an. Wenn Sie fortfahren, bietet sie vor dem Entwurf eine Support-ZIP an.
+- **Neue Funktion vorschlagen**. Öffnen Sie die Vorlage für Funktionswünsche. Prüfen Sie eine neuere Version zuerst, falls sie die Funktion schon enthält.
+- **Support-ZIP speichern**. Speichern Sie Screenshot, verfügbare Protokolle, Profildaten und Fensterlayout als ZIP. Prüfen Sie die Datei auf private Angaben. Hängen Sie sie selbst an den Entwurf an. Die drei Tasten sind während einer Aktion vorübergehend grau.
+- **GitHub-Projekt · GitHub-Releases · An der Projektdiskussion teilnehmen**. Die drei GitHub-Links öffnen den Quellcode, die Downloads oder die Diskussionen.
 
-Richten Sie zuerst die Kamera aus. Öffnen Sie **Positionen** im Einstellungsbereich und klicken Sie auf **+**, um eine feste Position hinzuzufügen. Wählen Sie oben ein Symbol. Prüfen Sie den Namen und speichern Sie. Ist das Namensfeld leer und der Name noch frei, schlägt das Symbol einen Namen vor. Kombinierte Symbole zeigen ihre Motive von links nach rechts.
+[Fehler melden](Report%20a%20bug.md) · [Neue Funktion vorschlagen](Request%20a%20feature.md)
 
-Wählen Sie unter **Feste Positionen** einen Eintrag. Zeigen Sie auf die Symbole, um ihre Funktion zu sehen. Mit **✎** ändern Sie Name und Symbol, mit **↻** übernehmen Sie die aktuelle Kameraposition und mit **−** löschen Sie den Eintrag. **↑** und **↓** ändern die Reihenfolge in beiden Listen.
+### Diagnoseprotokolle
 
-Eine feste Position, die in der Hauptliste ausgewählt ist, wird auch in den Einstellungen ausgewählt. Eine neu gespeicherte feste Position wird in den Einstellungen ausgewählt.
+- **Protokolleinstellungen**. Öffnen Sie den Dialog für Protokolle. Die Einstellungen gelten für alle Profile. Speichern übernimmt sie. Abbrechen lässt sie unverändert.
+- **Ordner auswählen · Automatisch**. Wählen Sie einen Ordner oder Automatisch. Der Pfad ist schreibgeschützt. Automatisch nutzt den Programmordner und weicht bei Bedarf auf `%LOCALAPPDATA%\CamPressets\Logs` aus.
+- **Maximale Dateigröße (MiB)**. Legen Sie fest, ab wann eine neue Datei beginnt. Der Standard ist 1 MiB pro Datei.
+- **Maximale Anzahl an Protokollen (inklusive aktivem)**. Legen Sie fest, wie viele Dateien einschließlich der aktuellen erhalten bleiben. Der Standard ist 2.
+- **Protokolldatei anzeigen**. Markieren Sie die jüngste Datei im Explorer. Fehlt ein Protokoll, zeigt die App einen Hinweis.
 
-![Registerkarte Positionen mit der Liste fester Positionen und den Aktionen](../images/screenshots/1.0.1/de/presets.png)
+### Über
 
-## 5. Layout und Sprache einstellen
+- **Buy me a coffee**. Hier stehen die installierte Version und der Entwickler. Zeigen Sie auf die Version, um die vollständige Build-ID zu sehen. Der Unterstützungslink öffnet die Seite des Entwicklers.
+- **Anleitungen öffnen**. Öffnen Sie hier die Handbücher. Die Hilfetaste im Hauptfenster öffnet dieselbe Ansicht.
 
-Ziehen Sie die Trennlinie zwischen Kamerasteuerung und Positionsliste. Das Profil speichert die Position der Trennlinie. Die Anfangsgröße beträgt 900 × 500, die Mindestgröße 670 × 450. Die Einstellungen starten geschlossen. Beim ersten Öffnen nach dem Start erscheint die erste Registerkarte. Scrollen Sie unter **Schwenken** oder **Anwendung** nach unten, wenn Felder außerhalb des Fensters liegen. Das Profil speichert Position und Größe beider Fenster.
+Schließen Sie die App und kopieren Sie `%LOCALAPPDATA%\CamPressets` für eine Sicherung. Temporäre Positionen gelten für die laufende Sitzung.
 
-Lassen Sie beim Profilwechsel über die Profilauswahl unten die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
-
-Wählen Sie die Sprache unter **Einstellungen → Anwendung → Profilsprache**. Starten Sie das Programm neu, um die Sprache anzuwenden. **Automatisch** verwendet die Windows-Anzeigesprache, sofern sie unterstützt wird, und sonst Englisch. Beim Profilwechsel startet das Programm mit der Sprache des gewählten Profils neu. Temporäre Positionen gehen beim Neustart verloren.
-
-## 6. Version und Projektinformationen
-
-Unter **Kontakt & Info → Info** finden Sie die Version und Projektlinks. Zeigen Sie auf die Version, um die vollständige Build-ID zu sehen. Geben Sie sie an, wenn ein Fehler nur in einem bestimmten Build auftritt.
-
-![Registerkarte Info mit Version, Entwickler und Projektlinks](../images/screenshots/contact/de/about.png)
-
-## 7. Diagnoseprotokolle und Fehlermeldungen
-
-![Registerkarte Kontakt mit GitHub-Schaltflächen, Support-ZIP und Protokolleinstellungen](../images/screenshots/contact/de/issues.png)
-
-Unter **Kontakt & Info → Kontakt** können Sie den Protokollordner, die maximale Dateigröße und die Anzahl der aufzubewahrenden Dateien einschließlich des aktiven Protokolls einstellen. Standardmäßig nutzt die Anwendung den Programmordner oder ersatzweise `%LOCALAPPDATA%\CamPressets\Logs`.
-
-Wählen Sie **Fehler melden** oder **Neue Funktion vorschlagen**, um den passenden GitHub-Entwurf zu öffnen. Bei Fehlern bietet die App ein Support-ZIP an. Prüfen Sie das Archiv und hängen Sie es selbst an. [Meldung erstellen oder verfolgen](ISSUES.md)
-
-**Fehler melden oder Funktion vorschlagen**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
-![QR-Code zu den GitHub-Issues des Projekts](../images/qr/issues.png)
-
-Weiter: [Tägliche Nutzung](DAILY-USE.md). Für eine Sicherung schließen Sie die Anwendung und kopieren `%LOCALAPPDATA%\CamPressets`. Temporäre Positionen sind nicht enthalten.
+[Tägliche Nutzung](DAILY-USE.md)

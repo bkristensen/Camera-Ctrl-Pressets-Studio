@@ -29,110 +29,129 @@ If the guide viewer needs WebView2, download the runtime from Microsoft.\
 
 ![Expanded SmartScreen warning with Run anyway, shown in Danish](../images/reporting/smartscreen-run.png)
 
-## 1. Choose a profile and camera
+Start with the profile and camera you plan to use. Choose a profile in the footer. By default, double-click the camera button in the wheel to choose a source. The profile remembers the camera. If it is missing, choose another source.
 
-Use the profile picker in the footer to select a profile. To create one, open **Settings → Profiles**. Choose **New** for default settings or **Copy** for a copy of the active profile. Name it after a person or setup. New profiles become active. In **Profiles**, select a profile and click **✎** to rename it. The Standard profile has a fixed name.
+The tabs below follow the order in the Settings window. A dimmed button often needs a selection first. Under Video, the camera driver decides which controls appear. Check changes in your capture app.
 
-Double-click the camera symbol in the centre of the direction wheel to select a camera. The program remembers it. If that camera is missing, choose another source. Positions belong to a camera within a profile.
+**Close**. Resize either window or drag the divider in the main window. The profile remembers both window positions and sizes and the divider position. Select Close at the bottom of Settings. The main window stays open.
 
-![Profiles tab with the profile list and actions](../images/screenshots/1.0.1/en/profiles.png)
+## Presets
 
-## 2. Decide when camera control may start
+### Permanent presets
 
-Under **Settings → Application**, enable **Ask whether streaming has started before using the camera** if your capture program must start first. This option is off by default.
+Aim the camera first. A permanent preset saves the supported pan, tilt and zoom values. It also saves the field of view if the camera reports it. Presets belong to one camera in one profile.
 
-With the option enabled, the first camera action asks whether streaming has started. Choose **Yes** only when it has. Choose **No** to keep camera control disconnected. After Yes, further actions do not ask again until you change profile, change this option or restart the app. The app does not detect or start a streaming session for you.
+- **+ Add permanent preset**. Save the current framing as a new preset. Choose a symbol and enter a unique name. Choosing a symbol can suggest a name if the field is empty. The editor's Save button needs a name. Cancel leaves the list as it was.
+- **✎ Edit name and symbol**. Change the selected preset's name or symbol. The saved framing stays the same.
+- **↻ Replace with current position**. Replace the selected preset's framing with the current camera position. Confirm the change. The name and symbol stay the same.
+- **− Delete permanent preset**. Remove the selected preset after you confirm.
+- **↑ / ↓ Move selected preset up · Move selected preset down**. Move the selected preset one place up or down. The order changes in Settings and in the main list. Up is dimmed on the first row. Down is dimmed on the last row.
 
-If you need this order on first use, set the option before your next session. The default allows the app to connect at startup.
-
-![Application tab with streaming confirmation, window and profile language settings](../images/screenshots/1.0.1/en/application.png)
-
-## 3. Set movement and zoom
-
-Open **Settings → Panning** to set pan and tilt steps, reverse directions, and choose how the camera button works. Start with small steps. Test the result in your capture program.
-
-![Panning tab with step sizes, direction controls and camera button options](../images/screenshots/settings-tabs/en/settings.png)
-
-| Setting | What it changes | Default |
-| --- | --- | --- |
-| Fine speed (% of Normal) | Rate while holding Ctrl and an arrow key | 50% |
-| Normal pan steps | Middle arrow ring | 1 |
-| Fast pan steps | Outer arrow ring | 4 |
-
-One step means one step supported by the camera driver. It is not a fixed distance or percentage. The driver limits movement and smoothness.
-
-For an upside-down camera, enable **Camera pan reverse up / down** and test Up. Enable **Camera pan reverse left / right** only if Left moves the wrong way. These settings change the controls. They do not rotate the video.
-
-### Set zoom steps
-
-Open **Settings → Zoom** to choose how far the plus and minus buttons move in one step. The default is one driver step. [See the Zoom tab](../images/screenshots/settings-tabs/en/zoom.png).
+Select a preset to enable Edit, Replace, Delete and the applicable arrows. Add and Replace need a loaded profile and a camera that lets the app read and set at least one of pan, tilt or zoom. With no camera connected yet, either action can attempt to connect instead.
 
 ### Set preset transitions
 
-Open **Presets → Transitions** to choose how the camera moves between saved positions. [See the Transitions tab](../images/screenshots/settings-tabs/en/transitions.png).
+- **Use speed for preset transitions**. Off uses a fixed duration. On sets a rate so short moves finish sooner than long moves. The moving axes reach the target together.
+- **Transition (sec.)**. Set the time for a preset move. The default is 1 second. This field is dimmed when speed mode is on.
+- **Transition speed (%/s)**. Set the rate as a percentage of the range of the axis that governs the move, per second. The default is 30%. This field is dimmed when speed mode is off.
 
-| Setting | What it changes | Default |
-| --- | --- | --- |
-| Use speed for preset transitions | Let travel distance determine the duration | Off |
-| Transition speed (%/s) | Cruise rate as a percentage of the controlling axis’s range per second | 30% |
-| Transition (sec.) | Time for each preset change in fixed-duration mode | 1.0 |
+## Settings
 
-With speed-based transitions, a short move takes less time than a long one. The app accelerates and brakes, and all moving axes share the same progress so they can reach the target together.
+### Panning
+
+- **Fine speed (% of Normal)**. Hold Ctrl and an arrow key for fine control. The default rate is 50% of normal.
+- **Normal pan steps**. Set how many steps the normal arrows move on the inner ring. The default is 1.
+- **Fast pan steps**. Set how many steps the fast arrows move on the outer ring. The default is 4. It also changes the rate when you drag the camera button.
+- **Camera pan reverse left / right**. Swap left and right. Use it if the camera moves the wrong way.
+- **Camera pan reverse up / down**. Swap up and down. Try it if the camera is mounted upside down. These two options only change which way the controls move the camera.
+- **Drag the camera button to pan and tilt**. Drag the button in the middle of the wheel to aim the camera. Turn this off if you want to steer with the arrows.
+- **Double-click the camera button to choose a source**. On opens the camera list with a double-click. Off opens it with a single click.
+
+The movement settings can be edited before the camera connects. The driver sets the step size, which axes move, and where they stop.
+
+![Panning](../images/screenshots/settings-tabs/en/settings.png)
+
+### Set zoom steps
+
+- **Zoom steps**. Set how far the + and − zoom buttons move per press. The default is 1 driver step. You can set it before connecting. The camera needs zoom support for the setting to take effect. The zoom slider sets a position within the current field of view.
+
+### Application
+
+- **Ask whether streaming has started before using the camera**. Turn this on if your capture app must start streaming first. The next camera action asks for confirmation. Choose Yes when ready, or No to leave the camera disconnected. The app asks again after a restart, profile switch or change to this option. Off allows a connection at startup. The app relies on your answer.
+- **Always on top**. Keep the main window above other apps. Turn this off to let other windows cover it.
+- **Profile language · Automatic**. Choose one of the 12 languages. Automatic uses the Windows display language if supported, or English otherwise. Restart to apply the change. Each profile has its own choice.
+
+## Video
+
+- **Load image controls**. Connect to the camera and show its image controls. This button appears while the camera is disconnected. If the camera driver offers no image controls after connecting, only the Field of view tab remains.
+- **Automatic**. The driver decides which sliders and tabs appear. Automatic lets the camera adjust that value. Turn it off to move the slider yourself. If the driver only offers automatic control, the slider stays dimmed and Automatic can be locked on. If it only offers manual control, the Automatic box is hidden.
+- **Reset image to driver defaults**. Restore all supported image settings to the driver's defaults. The button is visible on image tabs. It is hidden on Field of view. Image values are saved per camera and profile.
+
+### Focus and exposure
+
+- **Gain**. Boost the camera signal to brighten the image. Too much gain can add grain.
+- **Exposure**. Set how long the sensor collects light. A longer exposure brightens the image but can blur motion.
+- **Focus**. Set the distance that looks sharp. Check the subject in your capture app.
+
+### Colour
+
+- **White balance**. Correct the colour cast from the lights so white looks white.
+- **Saturation**. Make colours stronger or more muted.
+- **Gamma**. Change the brightness of midtones.
+- **Hue**. Shift colours around the colour wheel.
+
+### Light and detail
+
+- **Contrast**. Increase or reduce the difference between light and dark areas.
+- **Brightness**. Raise or lower the overall brightness.
+- **Backlight compensation**. Brighten a subject with strong light behind it.
+- **Sharpness**. Increase or reduce how strongly edges stand out.
 
 ### Set the field of view
 
-Open **Video → Field of view**. Under **Field of view at startup**, choose **Widest available**, an angle reported by the camera driver, or **Do nothing** to keep the current view. The app uses this choice the first time it connects. Turn on **Allow manual FOV changes** to choose among the reported angles below the direction wheel. If the driver reports no selectable angles, the FOV controls are disabled. You can still use zoom if the camera supports it. [See the Field of view tab](../images/screenshots/settings-tabs/en/field-of-view.png).
+Field of view (FOV) is how much of the scene fits in the frame. A larger angle shows more. Zoom changes the crop within the current angle.
 
-**Adjust field of view at zoom and pan limits** is on by default. You can use it with the manual picker hidden. It works when the driver supports FOV.
+- **Field of view at startup · Widest available · Do nothing**. Choose the widest angle, leave the current angle as it is, or choose a specific angle the driver reports. The app tries to apply it on the first connection of the session. The list is dimmed until a connected camera reports at least one angle.
+- **Allow manual FOV changes**. Show an angle picker below the wheel. With this off, the app shows the current angle if it can read it. The switch is dimmed if the driver reports fewer than two angles.
+- **Adjust field of view at zoom and pan limits**. At a zoom limit, press again to try a wider angle when zooming out or a narrower one when zooming in. At a left or right pan limit, the app tries another angle that may leave more room. It tries to keep the framing close and restores it if the pan cannot continue. This works with manual changes off. The switch is dimmed if the driver reports fewer than two angles.
 
-- **Zoom out:** At minimum zoom on a Brio set to 65°, press zoom out again to switch to 78°. That press changes the FOV and adjusts zoom to keep the shot close. The next press zooms out normally. The same steps take you from 78° to 90°. The button stops at 90° and minimum zoom.
-- **Zoom in:** At maximum zoom, press again to move toward a narrower FOV. If the driver reports 90°, 78° and 65°, the app uses them in that order. The button stops at the narrowest available angle and maximum zoom.
-- **Pan left or right:** At the edge, the app tries a wider view first. It adjusts zoom to keep the crop close. It can also try a narrower view if the zoom allows it. If no view lets it pan farther, it restores the previous shot. The driver controls how close the match is.
+For example, on a Brio at 65° and minimum zoom, press Zoom out to try 78°. Press again to zoom out in the new view. The frame button in the main window tries the widest angle and minimum zoom in one action. Use your capture app to check the result if another app also controls the camera.
 
-Use the square button with the frame symbol to go straight to the widest FOV and minimum zoom. The slider still sets zoom within the current FOV. Turn off automatic FOV to keep zoom and pan within the current view.
+[Field of view](../VALIDATION.md#brio-field-of-view-and-zoom)
 
-Presets save pan, tilt, zoom and the FOV reported by the driver. Older presets keep the current FOV. Check the live image if Zoom, Logitech Brio Control, or another app controls the crop. [Brio and Zoom test steps](../VALIDATION.md#brio-field-of-view-and-zoom)
+## Profiles
 
-## 4. Adjust the image and save permanent positions
+- **+ New profile**. Create a profile with default settings and make it active. Give it a unique name.
+- **⧉ Copy active profile**. Copy the active profile, including its settings and presets, and switch to the copy. Selecting another row does not change what gets copied.
+- **✎ Rename selected profile**. Change the selected profile's name. The rename button is dimmed if there is no selection or if you select Standard. New and Copy need a loaded profile. In all three name dialogs, enter a name to enable confirmation.
+- **Keep current position and layout**. Double-click a profile to open the switch dialog. Enable the layout option there to carry the current position, size and divider into the selected profile. Leave it off to use that profile's saved layout. A switch restarts the app and clears temporary presets.
 
-![Focus and exposure controls in the Video tab](../images/screenshots/settings-tabs/en/image.png)
+## Contact & About
 
-[Before loading video controls](../images/screenshots/settings-tabs/en/video.png) · [Colour](../images/screenshots/1.0.1/en/video-colour.png) · [Light and detail](../images/screenshots/1.0.1/en/video-light-detail.png)
+### Contact
 
-Open **Video** in Settings, then load the image controls if needed. Choose a group such as **Focus and exposure**, **Colour**, or **Light and detail**. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
+![Contact](../images/screenshots/contact/en/issues.png)
 
-Move the camera first. Open **Presets** in Settings. Click **+** to add a permanent preset. Select an icon at the top, check the name, then save. If the name is blank and unused, choosing an icon suggests its name. Combined symbols show their subjects from left to right.
+- **Report an issue**. Open GitHub's bug template. If a newer release is available, the app offers to open it first. If you continue with the report, the app offers a support ZIP before opening the draft.
+- **Request a new feature**. Open GitHub's feature template. If a newer release is available, try it first to see whether it already has the feature.
+- **Save support ZIP**. Save a screenshot, available log files, profile data and a window layout file in one ZIP. Open it to check for private details. Attach it yourself in the GitHub draft. The three buttons are temporarily dimmed while an action runs.
+- **Project on GitHub · GitHub releases · Join the project discussion**. Open the source project, release downloads or project discussions with the three GitHub links.
 
-Under **Permanent presets**, select a position. Hover over a symbol for its action. Use **✎** to edit its name and symbol, **↻** to save the current camera position in its place, and **−** to delete it. Use **↑** and **↓** to change the order in both lists. Permanent positions stay at the top of the main list in bold.
+[Report an issue](Report%20a%20bug.md) · [Request a new feature](Request%20a%20feature.md)
 
-Selecting a permanent row in the main list also selects that preset in Settings. A newly saved preset is selected in Settings.
+### Diagnostic logs
 
-![Presets tab with the permanent preset list and actions](../images/screenshots/settings-tabs/en/presets.png)
+- **Log settings**. Open the log settings dialog. These settings apply across profiles. Save applies them. Cancel leaves them unchanged.
+- **Choose folder · Automatic**. Choose a folder or use Automatic. The path is read-only. Automatic uses the application folder, with `%LOCALAPPDATA%\CamPressets\Logs` as a fallback.
+- **Maximum size per file (MiB)**. Set when the app starts a new log file. The default is 1 MiB per file.
+- **Maximum log files (including current)**. Set how many log files to retain, including the one in use. The default is 2.
+- **Show log file**. Select the latest log in File Explorer. If there is no log, the app tells you.
 
-## 5. Set layout and language
+### About
 
-Drag the divider between the camera controls and the preset list. Your profile saves the divider position. The initial size is 900 × 500, and the minimum is 670 × 450. Settings start closed. When you first open them after launch, the first tab is selected. Scroll down in **Panning** or **Application** if some fields are below the window. Your profile remembers the size and position of both windows.
+- **Buy me a coffee**. Find the installed version and developer credit. Hover over the version to see the full build ID. The support link opens the developer's support page.
+- **Open guides**. Open the guides from this tab. The Help button in the main window also opens them.
 
-When selecting a profile in the footer, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
+To back up profiles, close the app and copy `%LOCALAPPDATA%\CamPressets`. Temporary presets are kept for the current session.
 
-Choose a language under **Settings → Application → Profile language**, then restart to apply it. **Automatic** uses the Windows display language if supported and English otherwise. Switching profiles restarts the application with the selected profile’s language. Temporary presets end at restart.
-
-## 6. Version and project information
-
-Open **Contact & About → About** to see the installed version and project links. Hover over the version to see the full build ID. Include it when you report a problem with a specific build.
-
-![About tab with the version, developer credit and project links](../images/screenshots/contact/en/about.png)
-
-## 7. Diagnostic logs and issue reporting
-
-![Contact tab with GitHub buttons, support ZIP and diagnostic logs](../images/screenshots/contact/en/issues.png)
-
-Open **Contact & About → Contact** to choose a log folder, a maximum file size, and the number of log files to keep, including the current file. By default, logs go in the application folder or to `%LOCALAPPDATA%\CamPressets\Logs` if the first location is unavailable.
-
-Choose **Report an issue** or **Request a new feature** to open the matching GitHub draft. For a bug, the app offers to save a support ZIP. Review the archive and attach it in the issue editor. [Report or follow an issue](ISSUES.md)
-
-**Report a bug or suggest a feature**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\
-![QR code for the project’s GitHub issues](../images/qr/issues.png)
-
-Next: [Daily use](DAILY-USE.md). For a backup, close the app and copy `%LOCALAPPDATA%\CamPressets`. Temporary positions are not part of the backup.
+[Daily use](DAILY-USE.md)
