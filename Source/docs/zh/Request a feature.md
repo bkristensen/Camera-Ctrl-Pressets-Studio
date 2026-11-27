@@ -1,12 +1,14 @@
 # 请求新功能
 
+*为Camera Control Studio 1.1.0.*编写
+
 1. 点击底部的齿轮按钮打开设置。 选择 **联系与关于 → 联系 → 请求新功能**。
 2. 如果有更新版本，请选**是**打开下载页面。安装后，检查新版是否已有这个功能。选择**否**可继续打开 GitHub 草稿。
 3. 在 GitHub 的 **Feature request** 模板中说明要完成的任务、功能会带来的帮助，以及怎样判断功能可以正常使用。 填写所有带红色星号的部分。
 
 指南查看器也提供相同的 GitHub 按钮。
 
-![联系选项卡上的 GitHub 按钮和支持 ZIP 按钮](../images/screenshots/contact/zh/issues.png)
+![联系选项卡上的 GitHub 按钮和支持 ZIP 按钮](../images/screenshots/1.1.0/zh/issues.png)
 
 ## 附上示例
 

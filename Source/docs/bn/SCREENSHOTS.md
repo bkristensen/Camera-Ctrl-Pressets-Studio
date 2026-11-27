@@ -4,24 +4,34 @@
 
 | দেখুন | এটা কি দেখায় |
 | --- | --- |
-| [মেইন উইন্ডো](../images/screenshots/1.0.1/bn/main.png) | দিকনির্দেশ চাকা, ক্যামেরা নির্বাচক, জুম, প্রিসেট এবং সেটিংস বন্ধ সহ স্থিতি |
-| [মেইন উইন্ডো সেটিংস সহ open](../images/screenshots/1.0.1/en/main-settings.png) | ক্যামেরা নিয়ন্ত্রণ এবং প্রিসেট তালিকার পাশাপাশি সেটিংস ফলক |
-| [সেটিংস → Panning](../images/screenshots/settings-tabs/en/settings.png) | প্যান এবং কাত পদক্ষেপ, দিক বিপরীত এবং ক্যামেরা বোতাম বিকল্প |
-| [সেটিংস → Zoom](../images/screenshots/settings-tabs/en/zoom.png) | জুম বোতামগুলির জন্য ধাপের আকার |
-| [সেটিংস → Application](../images/screenshots/1.0.1/bn/application.png) | স্ট্রিমিং নিশ্চিতকরণ, সর্বদা-অন-টপ আচরণ এবং প্রোফাইল ভাষা |
-| [ভিডিও লোড করার আগে নিয়ন্ত্রণ ](../images/screenshots/settings-tabs/en/video.png) | ক্যামেরা ড্রাইভার থেকে উপলব্ধ নিয়ন্ত্রণগুলি কোথায় লোড করতে হবে |
-| [ভিডিও → ফোকাস এবং এক্সপোজার](../images/screenshots/settings-tabs/en/image.png) | ফোকাস, এক্সপোজার এবং লাভ |
-| [ভিডিও → Colour](../images/screenshots/1.0.1/en/video-colour.png) | হিউ, গামা, স্যাচুরেশন এবং সাদা ভারসাম্য |
-| [ভিডিও → হালকা এবং বিস্তারিত](../images/screenshots/1.0.1/en/video-light-detail.png) | তীক্ষ্ণতা, ব্যাকলাইট ক্ষতিপূরণ, উজ্জ্বলতা এবং বৈসাদৃশ্য |
-| [ভিডিও → দেখার ক্ষেত্র](../images/screenshots/settings-tabs/en/field-of-view.png) | স্টার্টআপ কোণ এবং কখন অ্যাপটি দেখার ক্ষেত্র পরিবর্তন করতে পারে |
-| [Presets → স্থায়ী প্রিসেট](../images/screenshots/settings-tabs/en/presets.png) | স্থায়ী প্রিসেট এবং সম্পাদনা কর্ম |
-| [Presets → Transitions](../images/screenshots/settings-tabs/en/transitions.png) | সংরক্ষিত অবস্থানের মধ্যে চলার জন্য নির্দিষ্ট সময়কাল বা গতি |
-| [ প্রোফাইল ](../images/screenshots/1.0.1/en/profiles.png) | প্রোফাইল তালিকা এবং একটি প্রোফাইল তৈরি, অনুলিপি বা পুনঃনামকরণ করার জন্য ক্রিয়াকলাপ |
-| [যোগাযোগ ও পরিচিতি → যোগাযোগ](../images/screenshots/contact/bn/issues.png) | ডায়াগনস্টিক লগ এবং GitHub রিপোর্টিং |
-| [যোগাযোগ ও পরিচিতি → পরিচিতি](../images/screenshots/contact/bn/about.png) | সংস্করণ, বিকাশকারী ক্রেডিট এবং প্রকল্প লিঙ্ক |
+| [মেইন উইন্ডো](../images/screenshots/1.1.0/bn/main.png) | দিকনির্দেশ চাকা, ক্যামেরা নির্বাচক, জুম, প্রিসেট এবং সেটিংস বন্ধ সহ স্থিতি |
+| [মেইন উইন্ডো সেটিংস সহ open](../images/screenshots/1.1.0/bn/main-settings.png) | ক্যামেরা নিয়ন্ত্রণ এবং প্রিসেট তালিকার পাশাপাশি সেটিংস ফলক |
+| [সেটিংস → Panning](../images/screenshots/1.1.0/bn/settings.png) | প্যান এবং কাত পদক্ষেপ, দিক বিপরীত এবং ক্যামেরা বোতাম বিকল্প |
+| [সেটিংস → Zoom](../images/screenshots/1.1.0/bn/zoom.png) | জুম বোতামগুলির জন্য ধাপের আকার |
+| [সেটিংস → Application](../images/screenshots/1.1.0/bn/application.png) | স্ট্রিমিং নিশ্চিতকরণ, সর্বদা-অন-টপ আচরণ এবং প্রোফাইল ভাষা |
+| [ভিডিও লোড করার আগে নিয়ন্ত্রণ ](../images/screenshots/1.1.0/bn/video.png) | ক্যামেরা ড্রাইভার থেকে উপলব্ধ নিয়ন্ত্রণগুলি কোথায় লোড করতে হবে |
+| [ভিডিও → ফোকাস এবং এক্সপোজার](../images/screenshots/1.1.0/bn/image.png) | ফোকাস, এক্সপোজার এবং লাভ |
+| [ভিডিও → Colour](../images/screenshots/1.1.0/bn/video-colour.png) | হিউ, গামা, স্যাচুরেশন এবং সাদা ভারসাম্য |
+| [ভিডিও → হালকা এবং বিস্তারিত](../images/screenshots/1.1.0/bn/video-light-detail.png) | তীক্ষ্ণতা, ব্যাকলাইট ক্ষতিপূরণ, উজ্জ্বলতা এবং বৈসাদৃশ্য |
+| [ভিডিও → দেখার ক্ষেত্র](../images/screenshots/1.1.0/bn/field-of-view.png) | স্টার্টআপ কোণ এবং কখন অ্যাপটি দেখার ক্ষেত্র পরিবর্তন করতে পারে |
+| [Presets → স্থায়ী প্রিসেট](../images/screenshots/1.1.0/bn/presets.png) | স্থায়ী প্রিসেট এবং সম্পাদনা কর্ম |
+| [Presets → Transitions](../images/screenshots/1.1.0/bn/transitions.png) | সংরক্ষিত অবস্থানের মধ্যে চলার জন্য নির্দিষ্ট সময়কাল বা গতি |
+| [ প্রোফাইল ](../images/screenshots/1.1.0/bn/profiles.png) | প্রোফাইল তালিকা এবং একটি প্রোফাইল তৈরি, অনুলিপি বা পুনঃনামকরণ করার জন্য ক্রিয়াকলাপ |
+| [যোগাযোগ ও পরিচিতি → যোগাযোগ](../images/screenshots/1.1.0/bn/issues.png) | ডায়াগনস্টিক লগ এবং GitHub রিপোর্টিং |
+| [যোগাযোগ ও পরিচিতি → পরিচিতি](../images/screenshots/1.1.0/bn/about.png) | সংস্করণ, বিকাশকারী ক্রেডিট এবং প্রকল্প লিঙ্ক |
+
+## অন্যান্য উইন্ডো
+
+- [ক্যামেরার উৎস বেছে নিন](../images/screenshots/1.1.0/bn/camera-source.png)
+- [প্রোফাইল বেছে নিন](../images/screenshots/1.1.0/bn/profile-picker.png)
+- [নাম ও আইকন বদলান](../images/screenshots/1.1.0/bn/preset-editor.png)
+- [নতুন প্রোফাইল](../images/screenshots/1.1.0/bn/text-entry.png)
+- [লগ সেটিংস](../images/screenshots/1.1.0/bn/log-settings.png)
+- [কাজটি হয়নি। বিস্তারিত জানতে লগ খুলুন।](../images/screenshots/1.1.0/bn/error-dialog.png)
+- [নির্দেশিকা খুলুন](../images/screenshots/1.1.0/bn/guide-viewer.png)
 
 ## গাইড ইমেজ রিফ্রেশ
 
-সমাধান ফোল্ডার থেকে, উইন্ডোজে `./scripts/capture-docs.ps1` চালান। এটি নমুনা ডেটা ব্যবহার করে এবং PNG গুলিকে `docs/images/screenshots/<version>/<language>/` তে লেখে। এটি ইংরেজি, ডেনিশ এবং জার্মানের জন্য টেবিলের সমস্ত মতামত এবং অন্য নয়টি ভাষার প্রতিটির জন্য ছয়টি মতামত ক্যাপচার করে। স্ক্রিপ্টটি [annotated ডেনিশ দ্রুত গাইড](../images/screenshots/1.0.1/da/quick-guide.png) ক্যাপচার করে।
+সমাধান ফোল্ডার থেকে, উইন্ডোজে `./scripts/capture-docs.ps1` চালান। এটি নমুনা ডেটা ব্যবহার করে এবং PNG গুলিকে `docs/images/screenshots/<version>/<language>/`। স্ক্রিপ্টটি এই পাতার সব দৃশ্য ও চিহ্নসহ দ্রুত নির্দেশিকা ১২টি ভাষায় ধারণ করে।
 
 সম্পূর্ণ উইন্ডোর জন্য 100% ডিসপ্লে স্কেলিং এবং কমপক্ষে 1440 × 800 এর একটি কাজের এলাকা ব্যবহার করুন। README এবং গাইড আপডেট করার আগে ক্যাপচারগুলি পর্যালোচনা করুন৷ আগের স্ক্রিনশট ফোল্ডার এবং ফাইলগুলিকে তাদের আসল পাথে রাখুন যাতে পুরানো রিলিজ লিঙ্কগুলি এখনও কাজ করে৷

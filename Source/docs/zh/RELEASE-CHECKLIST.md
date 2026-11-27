@@ -1,5 +1,7 @@
 # 发布清单
 
+*为Camera Control Studio 1.1.0.*编写
+
 使用 [ 构建和发布指南 ](BUILD-AND-RELEASE.md) 来获取命令和输出路径。
 
 ## 自动检查

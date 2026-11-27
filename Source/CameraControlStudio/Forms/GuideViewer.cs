@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -41,6 +43,7 @@ namespace CameraControlStudio
         string documentTitle;
         byte[] documentHtml;
         bool scrollToSettings;
+        string documentationDataDirectory;
         string documentAnchor;
 
         public GuideViewer()
@@ -72,7 +75,7 @@ namespace CameraControlStudio
             {
                 try
                 {
-                    string data = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                    string data = documentationDataDirectory ?? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         "CamPressets", "GuideViewer");
                     if (!loaderConfigured)
                     {
@@ -126,17 +129,48 @@ namespace CameraControlStudio
                 }
                 catch (WebView2RuntimeNotFoundException)
                 {
+                    if (documentationDataDirectory != null) { Close(); return; }
                     ShowMessage(UiText.T("Install Microsoft Edge WebView2 Runtime to view the guides.",
                         "Installér Microsoft Edge WebView2 Runtime for at vise vejledningerne."), Text);
                     Close();
                 }
-                catch (Exception ex) { ShowGuideError(ex); }
+                catch (Exception ex)
+                {
+                    if (documentationDataDirectory != null) { Close(); return; }
+                    ShowGuideError(ex);
+                }
             };
         }
 
         internal GuideViewer(bool setup) : this()
         {
             openSetup = setup;
+        }
+
+        internal async Task CaptureDocumentationAsync(Form owner, string directory)
+        {
+            documentationDataDirectory = Path.Combine(Path.GetTempPath(), "CameraControlStudio-docs-WebView2");
+            var area = Screen.FromControl(owner).WorkingArea;
+            Size = new Size(Math.Min(1050, area.Width), Math.Min(810, area.Height));
+            Show(owner);
+            for (int attempt = 0; attempt < 100 && !IsDisposed && !print.Enabled; attempt++)
+                await Task.Delay(100);
+            if (IsDisposed || !print.Enabled)
+                throw new IOException("Guide Viewer did not display its bundled guide.");
+
+            using (var bitmap = MainForm.CaptureForm(this))
+            using (var graphics = Graphics.FromImage(bitmap))
+            using (var content = new MemoryStream())
+            {
+                await page.CoreWebView2.CapturePreviewAsync(CoreWebView2CapturePreviewImageFormat.Png, content);
+                content.Position = 0;
+                using (var preview = Image.FromStream(content))
+                {
+                    var origin = page.PointToScreen(Point.Empty) - new Size(Left, Top);
+                    graphics.DrawImage(preview, new Rectangle(origin, page.ClientSize));
+                }
+                bitmap.Save(Path.Combine(directory, "guide-viewer.png"), ImageFormat.Png);
+            }
         }
 
         internal GitHubActions GitHubActions => githubActions;

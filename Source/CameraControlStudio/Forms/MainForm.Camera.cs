@@ -266,6 +266,7 @@ namespace CameraControlStudio
             {
                 normalOut.Enabled = negative;
                 normalIn.Enabled = positive;
+                UpdateFullFrameAvailability();
             }
             else
             {

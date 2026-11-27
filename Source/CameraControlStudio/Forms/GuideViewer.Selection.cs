@@ -85,8 +85,11 @@ namespace CameraControlStudio
                 await ShowSelectedGuide();
         }
 
-        static async Task<GitHubReleases.AvailableRelease> CheckGuideReleaseAsync()
+        async Task<GitHubReleases.AvailableRelease> CheckGuideReleaseAsync()
         {
+            if (documentationDataDirectory != null)
+                return null;
+
             await AppUpdates.ResolveDownloadUrlAsync();
             return AppUpdates.UsesGitHubForUpdates ? await GitHubReleases.CheckLatestAsync() : null;
         }

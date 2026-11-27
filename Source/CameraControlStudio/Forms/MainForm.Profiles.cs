@@ -83,8 +83,6 @@ namespace CameraControlStudio
                     config.Layout.Width = ProfileWindow.WidthWithoutSettings(config.Layout.Width, LogicalToDeviceUnits(272), MinimumSize.Width);
                 config.Layout.SettingsOpen = false;
                 settings.ApplyPlacement(config.SettingsLayout);
-                settings.settingsTabs.SelectedIndex = 0;
-                settings.settingsCategories.SelectedIndex = 0;
                 ProfileWindow.Apply(this, config.Layout, preferredMinimumSize);
                 ApplySplitter();
                 profileButton.Text = profile + " ▾";

@@ -1,5 +1,7 @@
 # Lista de verificação de lançamento
 
+*Escrito para Camera Control Studio 1.1.0.*
+
 Use o guia de construção e versão [](BUILD-AND-RELEASE.md) para comandos e caminhos de saída.
 
 ## Verificações automatizadas

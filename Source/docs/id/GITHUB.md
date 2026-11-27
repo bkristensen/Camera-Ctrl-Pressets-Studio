@@ -1,6 +1,6 @@
 # Camera Control Studio dan GitHub
 
-*Ditulis untuk Camera Control Studio 1.0.1.*
+*Ditulis untuk Camera Control Studio 1.1.0.*
 
 Buka proyek [ di GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio) untuk membaca kode, panduan, rilis, dan laporan publik. Masuk untuk memposting atau mengusulkan perubahan.
 

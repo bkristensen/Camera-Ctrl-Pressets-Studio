@@ -2,21 +2,21 @@
 
 # Siapkan aplikasi
 
-*Ditulis untuk Camera Control Studio 1.0.1.*
+*Ditulis untuk Camera Control Studio 1.1.0.*
 
 [Pemecahan Masalah](TROUBLESHOOTING.md)
 
 Klik roda gigi di bagian bawah untuk membuka Pengaturan. Pengaturan terbuka di jendela terpisah. Anda tetap dapat menggunakan jendela utama.
 
-![Jendela utama di samping jendela Pengaturan yang terpisah](../images/screenshots/settings-tabs/id/main-settings.png)
+![Jendela utama di samping jendela Pengaturan yang terpisah](../images/screenshots/1.1.0/id/main-settings.png)
 
 ## Instal dan verifikasi unduhan
 
-Unduh penginstal atau ZIP portabel dari rilis proyek [GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Jalankan penginstal atau ekstrak seluruh ZIP sebelum meluncurkan aplikasi. Jika checksum SHA-256 diterbitkan, bandingkan dengan `Get-FileHash -Algorithm SHA256` untuk unduhan Anda.
+Unduh **Camera Control Studio** dari Microsoft Store saat aplikasi tersedia di sana. Cari nama aplikasi di Store. Microsoft menandatangani paket Store dan menyediakan pembaruannya.
 
-**Unduhan resmi**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
-![QR kode untuk unduhan Camera Control Studio](../images/qr/downloads.png)
+Jika aplikasi belum tersedia di Microsoft Store, unduh penginstal atau ZIP portabel dari [rilis GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Jalankan penginstal atau ekstrak seluruh ZIP sebelum membuka aplikasi. Jika rilis menyertakan checksum SHA-256, bandingkan dengan hasil dari `Get-FileHash -Algorithm SHA256`.
+
+![Kode QR untuk mengunduh Camera Control Studio dari GitHub](../images/qr/downloads.png)
 
 Microsoft Defender SmartScreen dapat menampilkan peringatan biru ketika aplikasi yang diunduh atau penerbitnya memiliki reputasi yang buruk. Tanggapi dengan serius. Jika Anda memperoleh file yang diharapkan dari rilis resmi dan memercayai sumbernya, pilih **Info selengkapnya** dan tinjau nama file dan penerbit. Pilih **Lagi pula** hanya jika Anda memilih untuk memercayai file tersebut dan Windows menawarkan opsi tersebut. Jika tidak, tutup peringatannya. Ikuti kebijakan perangkat organisasi Anda. [Panduan Microsoft SmartScreen](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 
@@ -126,7 +126,7 @@ Contoh pada Brio dengan sudut 65° dan zoom minimum. Tekan − untuk mencoba 78�
 
 ### Kontak
 
-![Kontak](../images/screenshots/contact/id/issues.png)
+![Kontak](../images/screenshots/1.1.0/id/issues.png)
 
 - **Laporkan masalah**. Buka templat bug GitHub. Jika ada versi baru, aplikasi menawarkan untuk membukanya lebih dulu. Jika dilanjutkan, aplikasi menawarkan ZIP sebelum membuka draf.
 - **Usulkan fitur baru**. Buka templat permintaan fitur. Jika ada versi baru, coba lebih dulu. Fitur mungkin sudah ada.
@@ -151,3 +151,11 @@ Contoh pada Brio dengan sudut 65° dan zoom minimum. Tekan − untuk mencoba 78�
 Untuk membuat cadangan, tutup aplikasi dan salin `%LOCALAPPDATA%\CamPressets`. Prasetel sementara hanya berlaku selama satu sesi.
 
 [Penggunaan sehari-hari](DAILY-USE.md)
+
+## Dialog kesalahan
+
+Jika kesalahan tak terduga menghentikan tindakan, tutup dialog dan coba lagi. Jika dialog menyatakan aplikasi akan ditutup, buka kembali aplikasi.
+
+![Dialog kesalahan dengan tombol untuk melaporkan masalah, menemukan log, dan menutup dialog](../images/screenshots/1.1.0/id/error-dialog.png)
+
+**Tampilkan file log** memilih log diagnostik di File Explorer jika tersedia. **Laporkan di GitHub** menawarkan untuk menyimpan ZIP dukungan, lalu membuka templat laporan bug di GitHub. ZIP dapat berisi tangkapan layar dialog, log, pengaturan profil dan jendela, serta laporan sistem. Periksa ZIP lalu lampirkan sendiri ke draf.

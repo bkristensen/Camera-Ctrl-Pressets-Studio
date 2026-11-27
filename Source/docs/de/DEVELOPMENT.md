@@ -2,7 +2,7 @@
 
 # Oberfläche und Übersetzungen bearbeiten
 
-*Geschrieben für Camera Control Studio 1.0.1.*
+*Geschrieben für Camera Control Studio 1.1.0.*
 
 ## Richtige Datei öffnen
 

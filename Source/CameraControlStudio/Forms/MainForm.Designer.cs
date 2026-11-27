@@ -105,7 +105,7 @@ namespace CameraControlStudio {
             //
             // documentationTimer
             //
-            this.documentationTimer.Interval = 900;
+            this.documentationTimer.Interval = 200;
             //
             // iconColumn
             //
@@ -206,10 +206,10 @@ namespace CameraControlStudio {
             //
             this.zoomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             resources.ApplyResources(this.zoomPanel, "zoomPanel");
-            this.zoomPanel.Controls.Add(this.fullFrame, 0, 0);
-            this.zoomPanel.Controls.Add(this.normalIn, 0, 1);
-            this.zoomPanel.Controls.Add(this.zoomSlider, 0, 2);
-            this.zoomPanel.Controls.Add(this.normalOut, 0, 3);
+            this.zoomPanel.Controls.Add(this.normalIn, 0, 0);
+            this.zoomPanel.Controls.Add(this.zoomSlider, 0, 1);
+            this.zoomPanel.Controls.Add(this.normalOut, 0, 2);
+            this.zoomPanel.Controls.Add(this.fullFrame, 0, 3);
             this.zoomPanel.Name = "zoomPanel";
             this.motionPanel.SetRowSpan(this.zoomPanel, 3);
             //

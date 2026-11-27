@@ -2,21 +2,21 @@
 
 # Anwendung einrichten
 
-*Geschrieben für Camera Control Studio 1.0.1.*
+*Geschrieben für Camera Control Studio 1.1.0.*
 
 [Fehlerbehebung](TROUBLESHOOTING.md)
 
 Klicken Sie unten auf das Zahnrad, um die Einstellungen zu öffnen. Die Einstellungen öffnen sich in einem eigenen Fenster. Sie können das Hauptfenster weiter nutzen.
 
-![Hauptfenster neben dem separaten Einstellungsfenster](../images/screenshots/settings-tabs/de/main-settings.png)
+![Hauptfenster neben dem separaten Einstellungsfenster](../images/screenshots/1.1.0/de/main-settings.png)
 
 ## Installation und Download prüfen
 
-Laden Sie das Installationsprogramm oder die portable ZIP-Datei aus den [GitHub-Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) herunter. Starten Sie das Installationsprogramm oder entpacken Sie die gesamte ZIP-Datei. Wenn eine SHA-256-Prüfsumme veröffentlicht wurde, vergleichen Sie sie mit der Ausgabe von `Get-FileHash -Algorithm SHA256`.
+Laden Sie **Camera Control Studio** aus dem Microsoft Store, sobald die App dort verfügbar ist. Suchen Sie im Store nach dem Namen der App. Microsoft signiert das Store-Paket und liefert die Updates.
 
-**Offizieller Download**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
-![QR-Code zum Download von Camera Control Studio](../images/qr/downloads.png)
+Ist die App im Microsoft Store noch nicht verfügbar, laden Sie das Installationsprogramm oder die portable ZIP-Datei aus den [GitHub-Releases](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) herunter. Starten Sie den Installer oder entpacken Sie die gesamte ZIP-Datei. Gibt es eine SHA-256-Prüfsumme, vergleichen Sie sie mit dem Ergebnis von `Get-FileHash -Algorithm SHA256`.
+
+![QR-Code zum Download von Camera Control Studio auf GitHub](../images/qr/downloads.png)
 
 Microsoft Defender SmartScreen kann eine blaue Warnung anzeigen, wenn die Datei oder ihr Herausgeber über wenig etablierte Reputation verfügt. Nehmen Sie die Warnung ernst. Wenn Sie die erwartete Datei aus dem offiziellen Release bezogen haben und der Quelle vertrauen, wählen Sie **Weitere Informationen** und prüfen Sie Dateinamen und Herausgeber. Wählen Sie **Trotzdem ausführen** nur, wenn Sie der Datei vertrauen und Windows die Option anbietet. Schließen Sie andernfalls die Warnung. Beachten Sie die Richtlinien Ihrer Organisation. [Microsoft-Hinweise zu SmartScreen](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 
@@ -69,7 +69,7 @@ Wählen Sie zuerst eine Position für Bearbeiten, Ersetzen, Löschen oder Versch
 
 Sie können die Werte vor dem Verbinden ändern. Der Treiber bestimmt die Schrittgröße, die verfügbaren Achsen und ihre Grenzen.
 
-![Schwenken](../images/screenshots/settings-tabs/de/settings.png)
+![Schwenken](../images/screenshots/1.1.0/de/settings.png)
 
 ### Zoomschritte einstellen
 
@@ -128,7 +128,7 @@ Bei einer Brio mit 65° und kleinstem Zoom kann ein Druck auf Zoom − zu 78° w
 
 ### Kontakt
 
-![Kontakt](../images/screenshots/contact/de/issues.png)
+![Kontakt](../images/screenshots/1.1.0/de/issues.png)
 
 - **Fehler melden**. Öffnen Sie die Fehlervorlage auf GitHub. Bei einer neueren Version bietet die App zuerst den Download an. Wenn Sie fortfahren, bietet sie vor dem Entwurf eine Support-ZIP an.
 - **Neue Funktion vorschlagen**. Öffnen Sie die Vorlage für Funktionswünsche. Prüfen Sie eine neuere Version zuerst, falls sie die Funktion schon enthält.
@@ -153,3 +153,11 @@ Bei einer Brio mit 65° und kleinstem Zoom kann ein Druck auf Zoom − zu 78° w
 Schließen Sie die App und kopieren Sie `%LOCALAPPDATA%\CamPressets` für eine Sicherung. Temporäre Positionen gelten für die laufende Sitzung.
 
 [Tägliche Nutzung](DAILY-USE.md)
+
+## Fehlerdialog
+
+Wenn ein unerwarteter Fehler einen Vorgang stoppt, schließe den Dialog und versuche es erneut. Wenn der Dialog das Ende der App ankündigt, starte sie neu.
+
+![Fehlerdialog mit Schaltflächen zum Melden, Anzeigen des Protokolls und Schließen](../images/screenshots/1.1.0/de/error-dialog.png)
+
+**Protokolldatei anzeigen** markiert das Diagnoseprotokoll im Datei-Explorer, sofern es vorhanden ist. **Auf GitHub melden** bietet an, eine Support-ZIP zu speichern, und öffnet dann die Fehlervorlage auf GitHub. Die ZIP-Datei kann ein Bildschirmfoto des Dialogs, Protokolle, Profil- und Fenstereinstellungen sowie einen Systembericht enthalten. Prüfe die Datei und hänge sie selbst an den Entwurf an.

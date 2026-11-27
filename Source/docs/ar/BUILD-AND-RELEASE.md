@@ -1,6 +1,6 @@
 # بناء وإطلاق Camera Control Studio
 
-* مكتوب لـ Camera Control Studio 1.0.1.*
+* مكتوب لـ Camera Control Studio 1.1.0.*
 
 قم بتشغيل الأوامر من الدليل الذي يحتوي على `Camera-Control-Pressets-Studio.sln`. استخدم Windows وPowerShell لبرنامج التثبيت واختبار Windows.
 

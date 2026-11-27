@@ -148,7 +148,7 @@
 </value>
   </data>
   <data name="fullFrame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1</value>
+    <value>0, 303</value>
   </data>
   <data name="fullFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 1, 0, 1</value>
@@ -174,7 +174,7 @@ Use the widest view and minimum zoom.</value>
     <value>zoomPanel</value>
   </data>
   <data name="&gt;&gt;fullFrame.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="wheel.AccessibleName" xml:space="preserve">
     <value>Camera direction wheel</value>
@@ -297,7 +297,7 @@ Use the widest view and minimum zoom.</value>
     <value>2</value>
   </data>
   <data name="zoomPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="fullFrame" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="normalIn" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="zoomSlider" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="normalOut" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,48,Absolute,48,Percent,100,Absolute,48" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="normalIn" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="zoomSlider" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="normalOut" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fullFrame" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,48,Percent,100,Absolute,48,Absolute,48" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="&gt;&gt;motionPosition.Name" xml:space="preserve">
     <value>motionPosition</value>
@@ -759,7 +759,7 @@ Use the widest view and minimum zoom.</value>
     <value>zoomPanel</value>
   </data>
   <data name="&gt;&gt;normalIn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;zoomSlider.Name" xml:space="preserve">
     <value>zoomSlider</value>
@@ -771,7 +771,7 @@ Use the widest view and minimum zoom.</value>
     <value>zoomPanel</value>
   </data>
   <data name="&gt;&gt;zoomSlider.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;normalOut.Name" xml:space="preserve">
     <value>normalOut</value>
@@ -783,7 +783,7 @@ Use the widest view and minimum zoom.</value>
     <value>zoomPanel</value>
   </data>
   <data name="&gt;&gt;normalOut.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="zoomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -813,7 +813,7 @@ Use the widest view and minimum zoom.</value>
     <value>Flat</value>
   </data>
   <data name="normalIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 49</value>
+    <value>0, 1</value>
   </data>
   <data name="normalIn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 1, 0, 1</value>
@@ -828,7 +828,7 @@ Use the widest view and minimum zoom.</value>
     <value>Fill</value>
   </data>
   <data name="zoomSlider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 96</value>
+    <value>5, 48</value>
   </data>
   <data name="zoomSlider.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
@@ -846,7 +846,7 @@ Use the widest view and minimum zoom.</value>
     <value>Flat</value>
   </data>
   <data name="normalOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 303</value>
+    <value>0, 255</value>
   </data>
   <data name="normalOut.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 1, 0, 1</value>

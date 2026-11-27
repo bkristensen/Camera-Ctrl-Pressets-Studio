@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CameraControlStudio
@@ -9,6 +10,7 @@ namespace CameraControlStudio
     {
         const string NewIssueUrl = "https://github.com/" + GitHubReleases.Repository + "/issues/new";
         string logPath;
+        MainForm main;
 
         public ErrorDialog()
         {
@@ -16,7 +18,12 @@ namespace CameraControlStudio
             if (InDesigner)
                 return;
             FormText.Translate(this);
-            report.Click += (sender, args) => Report(this, logPath);
+            report.Click += async (sender, args) => await ReportAsync();
+            FormClosing += (sender, args) =>
+            {
+                if (!close.Enabled && args.CloseReason == CloseReason.UserClosing)
+                    args.Cancel = true;
+            };
             showLog.Click += (sender, args) => OpenLog(this, logPath);
         }
 
@@ -31,6 +38,14 @@ namespace CameraControlStudio
             using (var dialog = new ErrorDialog())
             {
                 dialog.logPath = logPath;
+                for (var form = owner as Form; form != null; form = form.Owner)
+                {
+                    if (form is MainForm main)
+                    {
+                        dialog.main = main;
+                        break;
+                    }
+                }
                 dialog.messageLabel.Text = message;
                 dialog.detailLabel.Text = detail;
                 dialog.showLog.Enabled = logPath != null;
@@ -50,21 +65,41 @@ namespace CameraControlStudio
                     MessageBoxDefaultButton.Button1, AppForm.MessageDirection);
         }
 
-        internal static void Report(IWin32Window owner, string logPath)
+        async Task ReportAsync()
         {
+            report.Enabled = close.Enabled = false;
             try
             {
-                var folder = SystemReport.Export(logPath);
-                Open(owner, folder);
+                if (SupportPackage.AskToSave(this, report.Text) == DialogResult.Yes)
+                {
+                    string title = UiText.T("Save support ZIP", "Gem support-ZIP");
+                    string destination = SupportPackage.ChooseDestination(packageDialog, this, title);
+                    if (destination != null)
+                    {
+                        if (main != null && !main.IsDisposed)
+                            await main.SaveSupportPackage(this, destination, title, logPath);
+                        else
+                            await SupportPackage.SaveAsync(this, destination, title, () => MainForm.CaptureForm(this),
+                                new ProfileStore().FilePath, new ProfileLayout(), logPath, includeSystemReport: true);
+                    }
+                }
             }
             catch (Exception ex)
             {
                 DiagnosticLog.Current.Write("WARNING", "Prepare report attachments", ex);
-                MessageBox.Show(owner, UiText.T("Report files could not be prepared.", "Rapportfilerne kunne ikke klargøres."),
-                    "Camera Control Studio", MessageBoxButtons.OK, MessageBoxIcon.Warning,
-                    MessageBoxDefaultButton.Button1, AppForm.MessageDirection);
+                if (!IsDisposed && Visible)
+                    MessageBox.Show(this, UiText.T("Report files could not be prepared.", "Rapportfilerne kunne ikke klargøres."),
+                        Text, MessageBoxButtons.OK, MessageBoxIcon.Warning,
+                        MessageBoxDefaultButton.Button1, AppForm.MessageDirection);
             }
-            OpenBugReport(owner);
+            finally
+            {
+                if (!IsDisposed && Visible)
+                {
+                    report.Enabled = close.Enabled = true;
+                    OpenBugReport(this);
+                }
+            }
         }
 
         internal static void OpenBugReport(IWin32Window owner) => Open(owner, NewIssueUrl + "?template=bugs.md");

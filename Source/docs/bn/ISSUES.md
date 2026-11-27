@@ -1,6 +1,6 @@
 # রিপোর্ট করুন বা একটি সমস্যা অনুসরণ করুন
 
-* Camera Control Studio 1.0.1.* এর জন্য লেখা
+* Camera Control Studio 1.1.0.* এর জন্য লেখা
 
 [সমস্যা নিবারণ](TROUBLESHOOTING.md)
 

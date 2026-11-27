@@ -1,12 +1,14 @@
 # Solicitar um novo recurso
 
+*Escrito para Camera Control Studio 1.1.0.*
+
 1. Clique na engrenagem na parte inferior para abrir as configurações. Selecione **Contato e sobre → Contato → Solicitar um novo recurso**.
 2. Se houver uma versão mais recente, escolha **Sim** para abrir a página de download. Instale-a e verifique se ela já inclui o recurso. Escolha **Não** para continuar no rascunho do GitHub.
 3. No modelo **Feature request** do GitHub, descreva a tarefa, como o recurso ajudaria e qual resultado mostraria que ele funciona. Preencha todas as seções marcadas com um asterisco vermelho.
 
 O visualizador de guias oferece os mesmos botões do GitHub.
 
-![Aba de contato com os botões do GitHub e do ZIP de suporte](../images/screenshots/contact/pt/issues.png)
+![Aba de contato com os botões do GitHub e do ZIP de suporte](../images/screenshots/1.1.0/pt/issues.png)
 
 ## Anexe um exemplo
 

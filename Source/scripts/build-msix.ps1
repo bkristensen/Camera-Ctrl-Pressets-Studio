@@ -4,11 +4,15 @@ param(
     [string]$Publisher,
     [string]$PublisherDisplayName,
     [string]$DisplayName = 'Camera Control Studio',
-    [string]$PackageVersion = '0.7.0.0',
+    [string]$PackageVersion = '',
     [string]$MakeAppxPath = 'MakeAppx.exe'
 )
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
+if (-not $PackageVersion) {
+    [xml]$properties = Get-Content -LiteralPath (Join-Path $root 'Directory.Build.props') -Raw
+    $PackageVersion = [string]$properties.Project.PropertyGroup.FileVersion
+}
 $manifestPath = Join-Path $root 'packaging/msix/Package.appxmanifest'
 if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
     $manifestPath = Join-Path $root 'packaging/msix/AppxManifest.xml'

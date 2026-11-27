@@ -1,5 +1,7 @@
 # Descriptif du projet
 
+*Écrit pour Camera Control Studio 1.1.0.*
+
 Camera Control Studio enregistre et rappelle les prises de vue de la caméra sous Windows. Utilisez-le dans un studio, une salle de classe ou une réunion en direct. Votre application de capture gère la vidéo.
 
 ## Comportement de base

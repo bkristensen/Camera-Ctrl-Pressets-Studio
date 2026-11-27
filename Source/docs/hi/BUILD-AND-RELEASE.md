@@ -1,6 +1,6 @@
 # Camera Control Studio बनाएं और रिलीज़ करें
 
-*Camera Control Studio 1.0.1.* के लिए लिखा गया
+*Camera Control Studio 1.1.0.* के लिए लिखा गया
 
 उस निर्देशिका से कमांड चलाएँ जिसमें `Camera-Control-Pressets-Studio.sln` है। इंस्टॉलर और विंडोज़ परीक्षण के लिए विंडोज़ और PowerShell का उपयोग करें।
 

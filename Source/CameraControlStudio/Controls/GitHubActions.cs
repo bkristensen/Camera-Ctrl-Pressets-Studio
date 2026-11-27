@@ -29,10 +29,6 @@ namespace CameraControlStudio
         internal void ConfigureDownloadLink()
         {
             releases.Visible = AppUpdates.DownloadUrl != null;
-            if (AppUpdates.OffersStoreMigration)
-                releases.Text = UiText.T("Get it from Microsoft Store", "Hent i Microsoft Store");
-            else if (AppUpdates.Channel == UpdateChannel.MicrosoftStore)
-                releases.Text = UiText.T("Microsoft Store updates", "Opdateringer i Microsoft Store");
         }
 
         internal event EventHandler ReportIssue;
@@ -48,11 +44,7 @@ namespace CameraControlStudio
             reportIssue.Enabled = requestFeature.Enabled = savePackage.Enabled = !busy;
         }
 
-        internal string ChoosePackagePath(Form owner)
-        {
-            packageDialog.Title = PackageTitle;
-            packageDialog.FileName = "CameraControlStudio-support-" + DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
-            return packageDialog.ShowDialog(owner) == DialogResult.OK ? packageDialog.FileName : null;
-        }
+        internal string ChoosePackagePath(Form owner) =>
+            SupportPackage.ChooseDestination(packageDialog, owner, PackageTitle);
     }
 }

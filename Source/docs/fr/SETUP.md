@@ -2,21 +2,21 @@
 
 # Configurer l'application
 
-*Écrit pour Camera Control Studio 1.0.1.*
+*Écrit pour Camera Control Studio 1.1.0.*
 
 [Dépannage](TROUBLESHOOTING.md)
 
 Cliquez sur la roue dentée en bas pour ouvrir les paramètres. Les paramètres s’ouvrent dans une fenêtre séparée. Vous pouvez continuer à utiliser la fenêtre principale.
 
-![Fenêtre principale à côté de la fenêtre des paramètres](../images/screenshots/settings-tabs/fr/main-settings.png)
+![Fenêtre principale à côté de la fenêtre des paramètres](../images/screenshots/1.1.0/fr/main-settings.png)
 
 ## Installez et vérifiez le téléchargement
 
-Téléchargez le programme d'installation ou le portable ZIP à partir des versions [GitHub du projet ](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Exécutez le programme d'installation ou extrayez l'intégralité du ZIP avant de lancer l'application. Si une somme de contrôle SHA-256 est publiée, comparez-la avec `Get-FileHash -Algorithm SHA256` pour votre téléchargement.
+Téléchargez **Camera Control Studio** depuis le Microsoft Store dès que l’application y est disponible. Recherchez son nom dans le Store. Microsoft signe le paquet et fournit les mises à jour.
 
-**Téléchargement officiel**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
-Code ![QR pour les téléchargements Camera Control Studio](../images/qr/downloads.png)
+Si l’application est encore indisponible dans le Microsoft Store, téléchargez le programme d’installation ou le fichier ZIP portable depuis les [versions GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Lancez l’installation ou extrayez tout le ZIP avant d’ouvrir l’application. Si la version fournit une somme SHA-256, comparez-la au résultat de `Get-FileHash -Algorithm SHA256`.
+
+![Code QR pour télécharger Camera Control Studio depuis GitHub](../images/qr/downloads.png)
 
 Microsoft Defender SmartScreen peut afficher un avertissement bleu lorsqu'une application téléchargée ou son éditeur a une réputation peu établie. Prenez-le au sérieux. Si vous avez obtenu le fichier attendu à partir de la version officielle et que vous faites confiance à la source, sélectionnez **Plus d'informations** et vérifiez le nom du fichier et l'éditeur. Sélectionnez **RExécuter quand même** uniquement si vous choisissez de faire confiance à ce fichier et que Windows propose cette option. Sinon, fermez l'avertissement. Suivez la politique relative aux appareils de votre organisation. [Guide Microsoft SmartScreen](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 
@@ -126,7 +126,7 @@ Exemple sur une Brio à 65° au zoom minimal. Appuyer sur − peut passer à 78�
 
 ### Contact
 
-![Contact](../images/screenshots/contact/fr/issues.png)
+![Contact](../images/screenshots/1.1.0/fr/issues.png)
 
 - **Signaler un problème**. Ouvrez le modèle de rapport de bug sur GitHub. Si une version plus récente existe, l’application propose de l’ouvrir d’abord. Si vous continuez, elle propose de créer un ZIP avant d’ouvrir le brouillon.
 - **Proposer une fonctionnalité**. Ouvrez le modèle de suggestion. Essayez d’abord une version plus récente si elle existe. La fonction y est peut-être déjà.
@@ -151,3 +151,11 @@ Exemple sur une Brio à 65° au zoom minimal. Appuyer sur − peut passer à 78�
 Fermez l’application et copiez `%LOCALAPPDATA%\CamPressets` pour faire une sauvegarde. Les positions temporaires durent une session.
 
 [Utilisation quotidienne](DAILY-USE.md)
+
+## Boîte de dialogue d’erreur
+
+Si une erreur inattendue bloque une action, fermez la boîte de dialogue et réessayez. Si elle annonce la fermeture de l’application, relancez-la.
+
+![Boîte de dialogue d’erreur avec boutons de signalement, d’accès au journal et de fermeture](../images/screenshots/1.1.0/fr/error-dialog.png)
+
+**Afficher le journal** sélectionne le journal de diagnostic dans l’Explorateur de fichiers s’il est disponible. **Signaler sur GitHub** propose d’enregistrer un ZIP de support, puis ouvre le modèle de rapport de bogue sur GitHub. Le ZIP peut contenir une capture de la boîte de dialogue, les journaux, les réglages du profil et de la fenêtre et un rapport système. Vérifiez le ZIP, puis joignez-le au brouillon.

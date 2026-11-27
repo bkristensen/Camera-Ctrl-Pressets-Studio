@@ -1,5 +1,7 @@
 # MSIX and Store distribution
 
+*Written for Camera Control Studio 1.1.0.*
+
 Use `scripts/build-msix.ps1` and the manifest template to build an MSIX package. Microsoft reviews the package before it can appear in the Store. The portable executable is unsigned.
 
 ## Choose a route

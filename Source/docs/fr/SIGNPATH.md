@@ -1,5 +1,7 @@
 # Politique de signature de code
 
+*Écrit pour Camera Control Studio 1.1.0.*
+
 La Fondation SignPath propose une signature gratuite pour les projets open source éligibles. L'acceptation est requise. Le certificat identifie la Fondation SignPath en tant qu'éditeur ; le service relie les versions vérifiées au référentiel source. Le projet a demandé la signature de la Fondation SignPath. L'application est en attente et les téléchargements GitHub ne sont pas signés.
 
 Avant de postuler, publiez la source sous sa licence. Gardez le projet à jour. Publiez une version, documentez l'application et rendez la version vérifiable. Signez uniquement vos propres fichiers de projet. Continuez à signer les informations d’identification hors du référentiel.

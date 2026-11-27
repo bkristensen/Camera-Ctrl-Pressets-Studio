@@ -2,21 +2,21 @@
 
 # 设置应用程序
 
-*为Camera Control Studio 1.0.1.*编写
+*为Camera Control Studio 1.1.0.*编写
 
 [故障排除](TROUBLESHOOTING.md)
 
 点击底部的齿轮按钮打开设置。 设置在独立窗口中打开。你可以继续使用主窗口。
 
-![主窗口和旁边的独立设置窗口](../images/screenshots/settings-tabs/zh/main-settings.png)
+![主窗口和旁边的独立设置窗口](../images/screenshots/1.1.0/zh/main-settings.png)
 
 ## 安装并验证下载
 
-下载安装程序或便携式 ZIP 从项目的 [GitHub 发布](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases)。运行安装程序或解压整个安装程序 ZIP 在启动应用程序之前。如果一个 SHA-256 校验和已发布，将其与 `Get-FileHash -Algorithm SHA256` 供您下载。
+**Camera Control Studio** 在 Microsoft Store 上架后，请从商店下载。在商店里搜索应用名称。Microsoft 会为商店安装包签名并提供更新。
 
-**官方下载**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
-![Camera Control Studio的QR代码下载](../images/qr/downloads.png)
+如果应用尚未在 Microsoft Store 上架，请从 [GitHub 发布页](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases) 下载安装程序或便携版 ZIP。打开应用前，请运行安装程序或解压整个 ZIP。如果发布页提供 SHA-256 校验值，请与 `Get-FileHash -Algorithm SHA256` 的结果比对。
+
+![从 GitHub 下载 Camera Control Studio 的二维码](../images/qr/downloads.png)
 
 当下载的应用程序或其发布者几乎没有建立声誉时，Microsoft Defender SmartScreen 可以显示蓝色警告。认真对待。如果您从官方版本获得了预期的文件并信任来源，请选择“**更多信息**”并查看文件名和发布者。仅当您选择信任该文件并且 Windows 提供了该选项时，才选择 ** 无论如何运行 **。否则关闭警告。遵循您组织的设备政策。 [Microsoft SmartScreen 指导](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 
@@ -126,7 +126,7 @@
 
 ### 联系
 
-![联系](../images/screenshots/contact/zh/issues.png)
+![联系](../images/screenshots/1.1.0/zh/issues.png)
 
 - **报告问题**. 打开 GitHub 错误报告模板。如有新版本，应用先询问是否打开。若继续报告，应用会在打开草稿前询问是否保存支持 ZIP。
 - **请求新功能**. 打开 GitHub 功能请求模板。如有新版本，请先试用。所需功能可能已经加入。
@@ -151,3 +151,11 @@
 要备份，请关闭应用并复制 `%LOCALAPPDATA%\CamPressets`。临时预设仅保留到本次会话结束。
 
 [日常使用](DAILY-USE.md)
+
+## 错误对话框
+
+如果意外错误中断了操作，请关闭对话框并重试。如果对话框提示应用将关闭，请重新打开应用。
+
+![错误对话框中用于报告问题、查找日志和关闭的按钮](../images/screenshots/1.1.0/zh/error-dialog.png)
+
+如果有诊断日志，点击 **显示日志文件** 会在文件资源管理器中选中它。点击 **在 GitHub 上报告** 后，应用会询问是否保存支持 ZIP，然后打开 GitHub 的错误报告模板。ZIP 可能包含对话框截图、日志、配置文件和窗口设置，以及系统报告。请先检查 ZIP，再自行将它附加到草稿。

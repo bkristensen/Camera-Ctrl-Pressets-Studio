@@ -36,11 +36,11 @@ foreach ($language in 'en','da','de','ar','bn','es','fr','hi','id','pt','ur','zh
         $process.Dispose()
     }
 
-    $names = @('main','presets','settings','zoom','transitions','application')
-    if ($language -in @('en','da','de')) {
-        $names += @('main-settings','video','image','video-colour','video-light-detail','field-of-view','profiles','issues','about')
-    }
-    if ($language -eq 'da') { $names += 'quick-guide' }
+    $names = @(
+        'main', 'quick-guide', 'main-settings', 'presets', 'transitions', 'settings', 'zoom', 'application',
+        'video', 'image', 'video-colour', 'video-light-detail', 'field-of-view', 'profiles', 'issues', 'about',
+        'camera-source', 'profile-picker', 'preset-editor', 'text-entry', 'log-settings', 'error-dialog', 'guide-viewer'
+    )
     foreach ($name in $names) {
         if (-not (Test-Path -LiteralPath (Join-Path $output "$name.png") -PathType Leaf)) {
             throw "Missing screenshot: $language/$name.png"

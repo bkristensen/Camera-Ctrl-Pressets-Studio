@@ -1,6 +1,4 @@
 using System;
-using System.Drawing.Imaging;
-using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -92,9 +90,7 @@ namespace CameraControlStudio
                 return;
             }
 
-            if (ShowContactMessage(owner, UiText.T("Save a support ZIP to attach to the GitHub issue?",
-                "Vil du gemme en ZIP-pakke til at vedhæfte på GitHub?"), actions.ReportTitle,
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (SupportPackage.AskToSave(owner, actions.ReportTitle) == DialogResult.Yes)
                 await SaveReportPackage(actions, owner);
 
             if (!IsDisposed && !owner.IsDisposed && owner.Visible)
@@ -105,41 +101,20 @@ namespace CameraControlStudio
             MessageBoxIcon icon, MessageBoxDefaultButton defaultButton = MessageBoxDefaultButton.Button1) =>
             MessageBox.Show(owner, message, title, buttons, icon, defaultButton, AppForm.MessageDirection);
 
-        async Task SaveReportPackage(GitHubActions actions, Form owner)
-        {
-            try
-            {
-                var destination = actions.ChoosePackagePath(owner);
-                if (destination == null)
-                    return;
+        Task SaveReportPackage(GitHubActions actions, Form owner) =>
+            SaveSupportPackage(owner, actions.ChoosePackagePath(owner), actions.PackageTitle);
 
-                var layout = config?.Layout.Copy() ?? new ProfileLayout();
-                ProfileWindow.Capture(this, layout, wasMaximized);
-                var logs = DiagnosticLog.Current.GetLogDirectories();
-                var alternateDataDirectory = Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CameraPressets");
-                using (var screenshot = new MemoryStream())
-                {
-                    using (var bitmap = CaptureWindows(settings.Visible))
-                    {
-                        bitmap.Save(screenshot, ImageFormat.Png);
-                    }
-                    screenshot.Position = 0;
-                    await Task.Run(() => SupportPackage.Export(destination, screenshot, store.FilePath, layout, logs, alternateDataDirectory));
-                }
-                if (!IsDisposed && !owner.IsDisposed && owner.Visible)
-                    ShowContactMessage(owner, UiText.T("Support ZIP saved. Review it before sharing.",
-                        "ZIP-pakken er gemt. Gennemgå den, før du deler den.") + Environment.NewLine + destination,
-                        actions.PackageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                DiagnosticLog.Current.Write("WARNING", "Save support ZIP", ex);
-                if (!IsDisposed && !owner.IsDisposed && owner.Visible)
-                    ShowContactMessage(owner, UiText.T("Could not save the support ZIP. Try a different location.",
-                        "Kunne ikke gemme ZIP-pakken. Prøv at gemme den et andet sted."), actions.PackageTitle,
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+        internal Task SaveSupportPackage(Form owner, string destination, string title, string diagnosticLog = null)
+        {
+            if (destination == null)
+                return Task.CompletedTask;
+
+            var layout = config?.Layout.Copy() ?? new ProfileLayout();
+            ProfileWindow.Capture(this, layout, wasMaximized);
+            return owner is ErrorDialog
+                ? SupportPackage.SaveAsync(owner, destination, title, () => CaptureForm(owner), store.FilePath,
+                    layout, diagnosticLog, includeSystemReport: true)
+                : SupportPackage.SaveAsync(owner, destination, title, () => CaptureWindows(settings.Visible), store.FilePath, layout);
         }
     }
 }

@@ -274,6 +274,21 @@ namespace CameraControlStudio
                 UiText.Translate(axis, axis) + " " + currentAxes[axis]));
         }
 
+        void UpdateFullFrameAvailability()
+        {
+            if (camera == null)
+            {
+                fullFrame.Enabled = loaded;
+                return;
+            }
+
+            int? minimumZoom = HasManualAxis("Zoom", out var zoom) ? zoom.Min : (int?)null;
+            int? currentZoom = currentAxes.TryGetValue("Zoom", out int position) ? position : (int?)null;
+            var angles = FieldOfViewAngles;
+            int? widestFov = angles.Length > 0 ? angles[0] : (int?)null;
+            fullFrame.Enabled = ManualMotion.CanRestoreFullFrame(minimumZoom, currentZoom, widestFov, currentFieldOfView);
+        }
+
         void RestoreFullFrame()
         {
             StopMotion();

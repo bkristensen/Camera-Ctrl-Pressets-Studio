@@ -1,5 +1,7 @@
 # Validierung für 0.7.0-beta.3
 
+*Geschrieben für Camera Control Studio 1.1.0.*
+
 Der Windows-Release-Build verwendet gesperrte Abhängigkeiten. Übersetzungsparität und die automatisierten Tests bestanden. Die Tests umfassen Bewegung, Voreinstellungen, Profilsprache, Persistenz, Protokollierung und das nach dem Ruhezustand gemeldete HRESULT „Kamera nicht bereit“.
 
 Das extrahierte tragbare ZIP wurde in x86- und x64-Windows-Prozessen getestet. Beide öffneten und öffneten die Anleitungen für den täglichen Gebrauch und die Einrichtung erneut, zeigten ihre Screenshots an und druckten sie auf PDF aus. Beim x64 PDF waren auf allen fünf Seiten Titel, Version, Datum und korrekte Seitenzahl angegeben. Die Schaltfläche **?** war während der Entwurfszeitinitialisierung von WinForms vorhanden. Der ARM64-Loader wurde auf die korrekte Binärarchitektur überprüft.

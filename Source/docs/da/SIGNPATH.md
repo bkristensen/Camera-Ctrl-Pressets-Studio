@@ -1,5 +1,7 @@
 # Kodesigneringspolitik
 
+*Skrevet til Camera Control Studio 1.1.0.*
+
 SignPath Foundation tilbyder gratis signering for kvalificerede open source-projekter. Accept er påkrævet. Certifikatet identificerer SignPath Foundation som udgiver; tjenesten forbinder verificerede builds til kildelageret. Projektet har ansøgt om SignPath Foundation-signering. Ansøgningen afventer, og GitHub-downloads forbliver usignerede.
 
 Inden du ansøger, skal du offentliggøre kilden under dens licens. Hold projektet opdateret. Udgiv en udgivelse, dokumenter appen og gør buildet verificerbart. Underskriv kun dine egne projektfiler. Fortsæt med at signere legitimationsoplysninger ud af lageret.

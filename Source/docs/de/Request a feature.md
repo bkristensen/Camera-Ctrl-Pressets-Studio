@@ -1,12 +1,14 @@
 # Neue Funktion vorschlagen
 
+*Geschrieben für Camera Control Studio 1.1.0.*
+
 1. Klicken Sie unten auf das Zahnrad, um die Einstellungen zu öffnen. Wählen Sie **Kontakt & Info → Kontakt → Neue Funktion vorschlagen**.
 2. Wenn eine neuere Version verfügbar ist, wählen Sie **Ja**, um die Downloadseite zu öffnen. Installieren Sie sie und prüfen Sie, ob sie die gewünschte Funktion enthält. Wählen Sie **Nein**, um zum GitHub-Entwurf zu gehen.
 3. Beschreiben Sie in der GitHub-Vorlage **Feature request**, was Sie tun möchten, wie die Funktion helfen würde und woran Sie erkennen, dass sie funktioniert. Füllen Sie alle Abschnitte mit einem roten Sternchen aus.
 
 Dieselben GitHub-Schaltflächen stehen im Handbuchfenster zur Verfügung.
 
-![Registerkarte Kontakt mit Schaltflächen für GitHub und das Support-ZIP](../images/screenshots/contact/de/issues.png)
+![Registerkarte Kontakt mit Schaltflächen für GitHub und das Support-ZIP](../images/screenshots/1.1.0/de/issues.png)
 
 ## Ein Beispiel anhängen
 

@@ -1,5 +1,7 @@
 # Validering for 0.7.0-beta.3
 
+*Skrevet til Camera Control Studio 1.1.0.*
+
 Windows Release build bruger låste afhængigheder. Oversættelsesparitet og de automatiserede tests bestået. Testene dækker bevægelse, forudindstillinger, profilsprog, vedholdenhed, logning og det kamera-ikke-klare HRESULT rapporteret efter dvaletilstand.
 
 Den ekstraherede bærbare ZIP blev testet i x86 og x64 Windows-processer. Både åbnede og genåbnede den daglige brug og opsætningsvejledninger, viste deres skærmbilleder og udskrev til PDF. x64 PDF havde titel, version, dato og korrekt sideantal på alle fem sider. **?**-knappen var til stede under WinForms-designtidsinitialisering. ARM64-indlæseren blev tjekket for den korrekte binære arkitektur.

@@ -1,12 +1,14 @@
 # Solicitar una función nueva
 
+*Escrito para Camera Control Studio 1.1.0.*
+
 1. Haz clic en el engranaje de la parte inferior para abrir la configuración. Elige **Contacto y acerca de → Contacto → Solicitar una función nueva**.
 2. Si hay una versión más reciente, elige **Sí** para abrir la página de descarga. Instálala y comprueba si ya incluye la función. Elige **No** para continuar al borrador de GitHub.
 3. En la plantilla **Feature request** de GitHub, describe la tarea, cómo te ayudaría la función y qué resultado indicaría que funciona. Rellena todos los apartados marcados con un asterisco rojo.
 
 Los mismos botones de GitHub están disponibles en el visor de guías.
 
-![Pestaña de contacto con los botones de GitHub y del ZIP de soporte](../images/screenshots/contact/es/issues.png)
+![Pestaña de contacto con los botones de GitHub y del ZIP de soporte](../images/screenshots/1.1.0/es/issues.png)
 
 ## Adjuntar un ejemplo
 

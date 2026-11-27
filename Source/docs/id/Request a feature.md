@@ -1,12 +1,14 @@
 # Usulkan fitur baru
 
+*Ditulis untuk Camera Control Studio 1.1.0.*
+
 1. Klik roda gigi di bagian bawah untuk membuka Pengaturan. Pilih **Kontak dan Tentang → Kontak → Usulkan fitur baru**.
 2. Jika ada versi yang lebih baru, pilih **Ya** untuk membuka halaman unduh. Instal versi itu dan periksa apakah fitur itu sudah tersedia. Pilih **Tidak** untuk melanjutkan ke draf GitHub.
 3. Di templat **Feature request** GitHub, jelaskan tugas yang ingin Anda lakukan, manfaat fitur, dan hasil yang menunjukkan bahwa fitur itu berfungsi. Isi setiap bagian yang ditandai dengan tanda bintang merah.
 
 Penampil panduan juga menyediakan tombol GitHub yang sama.
 
-![Tab kontak dengan tombol GitHub dan ZIP dukungan](../images/screenshots/contact/id/issues.png)
+![Tab kontak dengan tombol GitHub dan ZIP dukungan](../images/screenshots/1.1.0/id/issues.png)
 
 ## Lampirkan contoh
 

@@ -28,6 +28,10 @@ namespace CameraControlStudio {
             return setting.Snap(setting.Min + Math.Max(0, Math.Min(1, fraction)) * range);
         }
 
+        internal static bool CanRestoreFullFrame(int? minimumZoom, int? currentZoom, int? widestFov, int? currentFov) =>
+            (minimumZoom.HasValue && currentZoom != minimumZoom) ||
+            (widestFov.HasValue && currentFov != widestFov);
+
         internal static int? NextFieldOfView(int[] widestFirst, int current, int zoomDirection) {
             int index = Array.IndexOf(widestFirst, current);
             if (index < 0)

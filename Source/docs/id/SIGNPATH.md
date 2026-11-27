@@ -1,5 +1,7 @@
 # Kebijakan penandatanganan kode
 
+*Ditulis untuk Camera Control Studio 1.1.0.*
+
 SignPath Foundation menawarkan penandatanganan gratis untuk proyek sumber terbuka yang memenuhi syarat. Penerimaan diperlukan. Sertifikat tersebut mengidentifikasi SignPath Foundation sebagai penerbit; tautan layanan yang diverifikasi dibangun ke repositori sumber. Proyek ini telah mengajukan penandatanganan Yayasan SignPath. Aplikasi tertunda, dan unduhan GitHub tetap tidak ditandatangani.
 
 Sebelum Anda melamar, publikasikan sumber di bawah lisensinya. Jaga agar proyek tetap terkini. Publikasikan rilis, dokumentasikan aplikasi, dan buat build dapat diverifikasi. Tanda tangani hanya file proyek Anda sendiri. Tetap keluarkan kredensial dari repositori.

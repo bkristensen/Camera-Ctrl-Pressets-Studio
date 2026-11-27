@@ -84,7 +84,7 @@ namespace CameraControlStudio
                 && item.Versions?.Any(version => version?.PackageFamilies?.Any(family => !string.IsNullOrEmpty(family)) == true) == true)
                 .Select(item => item.Id).Distinct().Take(2).ToArray();
 
-            return matches.Length == 1 ? new Uri("ms-windows-store://pdp/?ProductId=" + matches[0]) : null;
+            return matches.Length == 1 ? new Uri("https://apps.microsoft.com/detail/" + matches[0]) : null;
         }
 
         [DataContract]

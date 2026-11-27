@@ -11,15 +11,15 @@ namespace CameraControlStudio
         private Label folderLabel;
         private TextBox folder;
         private FlowLayoutPanel folderButtons;
-        private Button browse;
-        private Button automatic;
+        private BlueButton browse;
+        private BlueButton automatic;
         private Label sizeLabel;
         private NumericUpDown maxSize;
         private Label filesLabel;
         private NumericUpDown maxFiles;
         private FlowLayoutPanel buttons;
-        private Button save;
-        private Button cancel;
+        private BlueButton save;
+        private BlueButton cancel;
         private ToolTip toolTips;
         private FolderBrowserDialog folderPicker;
 
@@ -41,15 +41,15 @@ namespace CameraControlStudio
             this.folderLabel = new System.Windows.Forms.Label();
             this.folder = new System.Windows.Forms.TextBox();
             this.folderButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.browse = new System.Windows.Forms.Button();
-            this.automatic = new System.Windows.Forms.Button();
+            this.browse = new BlueButton();
+            this.automatic = new BlueButton();
             this.sizeLabel = new System.Windows.Forms.Label();
             this.maxSize = new System.Windows.Forms.NumericUpDown();
             this.filesLabel = new System.Windows.Forms.Label();
             this.maxFiles = new System.Windows.Forms.NumericUpDown();
             this.buttons = new System.Windows.Forms.FlowLayoutPanel();
-            this.save = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
+            this.save = new BlueButton();
+            this.cancel = new BlueButton();
             this.toolTips = new System.Windows.Forms.ToolTip(this.components);
             this.folderPicker = new System.Windows.Forms.FolderBrowserDialog();
             this.layout.SuspendLayout();
@@ -122,26 +122,22 @@ namespace CameraControlStudio
             // browse
             // 
             this.browse.AutoSize = true;
-            this.browse.BackColor = System.Drawing.SystemColors.Control;
-            this.browse.ForeColor = System.Drawing.SystemColors.ControlText;
             this.browse.Location = new System.Drawing.Point(3, 3);
             this.browse.Name = "browse";
             this.browse.Size = new System.Drawing.Size(112, 30);
             this.browse.TabIndex = 0;
             this.browse.Text = "Choose folder";
-            this.browse.UseVisualStyleBackColor = true;
+            this.browse.UseVisualStyleBackColor = false;
             // 
             // automatic
             // 
             this.automatic.AutoSize = true;
-            this.automatic.BackColor = System.Drawing.SystemColors.Control;
-            this.automatic.ForeColor = System.Drawing.SystemColors.ControlText;
             this.automatic.Location = new System.Drawing.Point(121, 3);
             this.automatic.Name = "automatic";
             this.automatic.Size = new System.Drawing.Size(88, 30);
             this.automatic.TabIndex = 1;
             this.automatic.Text = "Automatic";
-            this.automatic.UseVisualStyleBackColor = true;
+            this.automatic.UseVisualStyleBackColor = false;
             // 
             // sizeLabel
             // 
@@ -220,28 +216,24 @@ namespace CameraControlStudio
             // save
             // 
             this.save.AutoSize = true;
-            this.save.BackColor = System.Drawing.SystemColors.Control;
             this.save.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.save.ForeColor = System.Drawing.SystemColors.ControlText;
             this.save.Location = new System.Drawing.Point(3, 3);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 30);
             this.save.TabIndex = 0;
             this.save.Text = "Save";
-            this.save.UseVisualStyleBackColor = true;
+            this.save.UseVisualStyleBackColor = false;
             // 
             // cancel
             // 
             this.cancel.AutoSize = true;
-            this.cancel.BackColor = System.Drawing.SystemColors.Control;
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cancel.Location = new System.Drawing.Point(84, 3);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 30);
             this.cancel.TabIndex = 1;
             this.cancel.Text = "Cancel";
-            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.UseVisualStyleBackColor = false;
             // 
             // LoggingDialog
             // 

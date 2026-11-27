@@ -1,6 +1,6 @@
 # Camera Control Studio 上 GitHub
 
-*为Camera Control Studio 1.0.1.*编写
+*为Camera Control Studio 1.1.0.*编写
 
 打开 [GitHub 上的项目](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio) 阅读代码、指南、版本和公开报告。登录以发布或提出更改。
 

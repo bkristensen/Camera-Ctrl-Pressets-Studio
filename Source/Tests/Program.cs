@@ -153,6 +153,16 @@ class Program {
   Check(BrioFieldOfView.ReadSupportedAngles(support, 64).SequenceEqual(new[] { 90, 78, 65 }),
     "32-bit bounds are supported and unknown device codes are skipped");
  }
+ static void CheckFullFrameAvailability() {
+  Check(!ManualMotion.CanRestoreFullFrame(100, 100, 90, 90), "full frame is already reached");
+  Check(ManualMotion.CanRestoreFullFrame(100, 125, 90, 90), "zoom can still move out");
+  Check(ManualMotion.CanRestoreFullFrame(100, 100, 90, 78), "the field of view can still widen at minimum zoom");
+  Check(!ManualMotion.CanRestoreFullFrame(100, 100, null, null), "minimum zoom is full frame on a zoom-only camera");
+  Check(ManualMotion.CanRestoreFullFrame(null, null, 90, 78), "a field-of-view-only camera can still widen");
+  Check(!ManualMotion.CanRestoreFullFrame(null, null, null, null), "a camera with neither control cannot restore full frame");
+  Check(ManualMotion.CanRestoreFullFrame(100, null, 90, 90) &&
+        ManualMotion.CanRestoreFullFrame(100, 100, 90, null), "temporarily unreadable supported axes can be retried");
+ }
  static void CheckFieldOfViewSteps() {
   var fov = new[] { 90, 78, 65 };
   Check(ManualMotion.NextFieldOfView(fov, 65, -1) == 78 && ManualMotion.NextFieldOfView(fov, 78, -1) == 90 &&
@@ -183,6 +193,7 @@ class Program {
   CheckFieldOfViewPersistence();
   CheckDriverFieldOfViewOptions();
   CheckFieldOfViewSteps();
+  CheckFullFrameAvailability();
   var setting=new Setting{Min=0,Max=200,Step=2};Check(ManualMotion.Target(setting,50,1,5,false)==60,"zoom uses driver units");Check(ManualMotion.Target(setting,50,-1,32,false)==0,"movement clamps to range");Check(ManualMotion.Target(setting,50,1,5,true)==40,"reverse direction");
   Check(!ManualMotion.CanMove(setting,0,-1,false)&&ManualMotion.CanMove(setting,0,1,false),"minimum blocks outward movement only");
   Check(!ManualMotion.CanMove(setting,200,1,false)&&ManualMotion.CanMove(setting,200,-1,false),"maximum blocks outward movement only");

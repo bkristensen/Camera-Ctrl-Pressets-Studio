@@ -1,8 +1,10 @@
 # Camera Control Studio 用户指南
 
-*为Camera Control Studio 1.0.1.*编写
+*为Camera Control Studio 1.1.0.*编写
 
 安装程序和便携式 ZIP 包含指南。单击 **?** 以您的个人资料语言打开本地指南。更改 **指南语言** 以读取不同的翻译。选择 **使用在线指南** 来阅读最新 GitHub 版本的指南。如果该版本没有翻译，观众会尝试英语。如果在线指南不可用，则会显示可用的本地副本。首先打开“设置”直接进入设置。单击 **打印** 打印当前指南及其标题、打​​印日期和时间、安装版本、项目地址和页码。
+
+如果通过 Microsoft Store 更新应用，查看器会查找已安装版本的在线指南。
 
 观众需要 [微软边缘 WebView2 运行时](https://developer.microsoft.com/microsoft-edge/webview2/)。您还可以打开 **Camera Control Studio 用户指南** 安装后从开始菜单。对于便携式版本，请打开 `docs` 解压后的文件夹中 ZIP.
 

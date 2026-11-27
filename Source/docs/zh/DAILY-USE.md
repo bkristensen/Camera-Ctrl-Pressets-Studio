@@ -2,13 +2,13 @@
 
 # 日常使用
 
-*为Camera Control Studio 1.0.1.*编写
+*为Camera Control Studio 1.1.0.*编写
 
 [故障排除](TROUBLESHOOTING.md)
 
 在 Zoom 等应用程序中开始流媒体会议。然后打开**Camera Control Studio**。
 
-![预设列表旁边的方向轮和变焦滑块](../images/screenshots/1.0.1/zh/main.png)
+![预设列表旁边的方向轮和变焦滑块](../images/screenshots/1.1.0/zh/main.png)
 
 ## 一般
 
@@ -84,3 +84,11 @@
 在 **联系与关于 → 联系** 报告问题或请求功能。
 
 有关摄像机方向、永久预设、图像设置、配置文件和移动步骤，请参阅 [Setup](SETUP.md)。
+
+## 错误对话框
+
+如果意外错误中断了操作，请关闭对话框并重试。如果对话框提示应用将关闭，请重新打开应用。
+
+![错误对话框中用于报告问题、查找日志和关闭的按钮](../images/screenshots/1.1.0/zh/error-dialog.png)
+
+如果有诊断日志，点击 **显示日志文件** 会在文件资源管理器中选中它。点击 **在 GitHub 上报告** 后，应用会询问是否保存支持 ZIP，然后打开 GitHub 的错误报告模板。ZIP 可能包含对话框截图、日志、配置文件和窗口设置，以及系统报告。请先检查 ZIP，再自行将它附加到草稿。

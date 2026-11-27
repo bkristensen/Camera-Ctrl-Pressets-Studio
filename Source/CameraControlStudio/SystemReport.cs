@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.Win32;
@@ -8,31 +7,8 @@ namespace CameraControlStudio
 {
     internal static class SystemReport
     {
-        const int MaxAttachmentBytes = 4 * 1024 * 1024;
-        internal static string Export(string logPath)
+        internal static string Describe()
         {
-            string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "CamPressets", "Reports");
-            Directory.CreateDirectory(folder);
-            string attachment = Path.Combine(folder, "CameraControlStudio-report.log");
-            File.Delete(attachment);
-            if (File.Exists(logPath))
-            {
-                using (var source = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete))
-                using (var output = File.Create(attachment))
-                {
-                    if (source.Length > MaxAttachmentBytes)
-                    {
-                        source.Position = source.Length - MaxAttachmentBytes;
-                        for (int next; (next = source.ReadByte()) != -1 && next != '\n';)
-                        {
-                        }
-                    }
-
-                    source.CopyTo(output);
-                }
-            }
-
             var hardware = new StringBuilder("Camera Control Studio system report").AppendLine()
                 .AppendLine("App version: " + DiagnosticLog.AppVersion)
                 .AppendLine("Windows version: " + WindowsBuild())
@@ -43,8 +19,7 @@ namespace CameraControlStudio
                     @"HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0", "ProcessorNameString", null) ?? "unknown"));
             if (GetPhysicallyInstalledSystemMemory(out ulong memoryKiB))
                 hardware.AppendLine("Installed RAM (MiB): " + memoryKiB / 1024);
-            File.WriteAllText(Path.Combine(folder, "CameraControlStudio-system.log"), hardware.ToString());
-            return folder;
+            return hardware.ToString();
         }
 
         static string WindowsBuild()

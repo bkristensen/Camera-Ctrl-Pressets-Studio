@@ -2,13 +2,13 @@
 
 # Tägliche Nutzung
 
-*Geschrieben für Camera Control Studio 1.0.1.*
+*Geschrieben für Camera Control Studio 1.1.0.*
 
 [Fehlerbehebung](TROUBLESHOOTING.md)
 
 Starten Sie zuerst Ihr Streaming-Meeting, zum Beispiel in Zoom. Öffnen Sie anschließend **Camera Control Studio**.
 
-![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/1.0.1/de/main.png)
+![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/1.1.0/de/main.png)
 
 ## Allgemeines
 
@@ -84,3 +84,11 @@ Schließen Sie die Anwendung wie gewohnt. Das aktive Profil und das Fensterlayou
 Melden Sie Fehler oder schlagen Sie Funktionen unter **Kontakt & Info → Kontakt** vor.
 
 Siehe [Einrichtung](SETUP.md) für Kamerarichtung, feste Positionen, Bildeinstellungen, Profile und Bewegungsschritte.
+
+## Fehlerdialog
+
+Wenn ein unerwarteter Fehler einen Vorgang stoppt, schließe den Dialog und versuche es erneut. Wenn der Dialog das Ende der App ankündigt, starte sie neu.
+
+![Fehlerdialog mit Schaltflächen zum Melden, Anzeigen des Protokolls und Schließen](../images/screenshots/1.1.0/de/error-dialog.png)
+
+**Protokolldatei anzeigen** markiert das Diagnoseprotokoll im Datei-Explorer, sofern es vorhanden ist. **Auf GitHub melden** bietet an, eine Support-ZIP zu speichern, und öffnet dann die Fehlervorlage auf GitHub. Die ZIP-Datei kann ein Bildschirmfoto des Dialogs, Protokolle, Profil- und Fenstereinstellungen sowie einen Systembericht enthalten. Prüfe die Datei und hänge sie selbst an den Entwurf an.

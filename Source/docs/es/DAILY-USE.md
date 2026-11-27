@@ -2,13 +2,13 @@
 
 # Uso diario
 
-*Escrito para Camera Control Studio 1.0.1.*
+*Escrito para Camera Control Studio 1.1.0.*
 
 [Solución de problemas](TROUBLESHOOTING.md)
 
 Inicie su reunión de transmisión en una aplicación como Zoom. Luego abra **Camera Control Studio**.
 
-![Rueda direccional y control deslizante de zoom al lado de la lista preestablecida](../images/screenshots/1.0.1/es/main.png)
+![Rueda direccional y control deslizante de zoom al lado de la lista preestablecida](../images/screenshots/1.1.0/es/main.png)
 
 ## generales
 
@@ -84,3 +84,11 @@ Si aparece **Nueva versión disponible** en el pie de página, selecciónelo par
 Informa de los fallos o solicita funciones en **Contacto y acerca de → Contacto**.
 
 Consulte [Setup](SETUP.md) para conocer la dirección de la cámara, ajustes preestablecidos permanentes, configuraciones de imagen, perfiles y pasos de movimiento.
+
+## Cuadro de error
+
+Si un error inesperado detiene una acción, cierra el cuadro y vuelve a intentarlo. Si indica que la aplicación se cerrará, ábrela de nuevo.
+
+![Cuadro de error con botones para informar del fallo, encontrar el registro y cerrar](../images/screenshots/1.1.0/es/error-dialog.png)
+
+**Mostrar registro** selecciona el registro de diagnóstico en el Explorador de archivos si está disponible. **Informar en GitHub** te ofrece guardar un ZIP de soporte y luego abre la plantilla de errores en GitHub. El ZIP puede incluir una captura del cuadro, registros, ajustes de perfil y ventana, y un informe del sistema. Revisa el ZIP y adjúntalo al borrador.

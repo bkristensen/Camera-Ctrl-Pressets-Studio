@@ -1,4 +1,4 @@
-![Main window with the direction wheel, zoom slider and preset list](Source/docs/images/screenshots/1.0.1/en/main.png)
+![Main window with the direction wheel, zoom slider and preset list](Source/docs/images/screenshots/1.1.0/en/main.png)
 
 # Camera Control Studio
 
@@ -38,36 +38,36 @@ Store permanent presets by camera and profile. Give each preset a name and optio
 
 In **Presets → Transitions**, choose a fixed duration or a movement speed for preset transitions. The camera driver determines the available positions and how finely the camera can move. Manual movement cancels a transition, and unavailable directions are disabled at the limits of the camera's range.
 
-![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/settings-tabs/en/presets.png)
+![Presets tab with the saved positions and their edit buttons](Source/docs/images/screenshots/1.1.0/en/presets.png)
 
 ## Settings, image controls and profiles
 
 | Tab | What you can do |
 | --- | --- |
-| [Settings → Panning](Source/docs/images/screenshots/settings-tabs/en/settings.png) | Set pan and tilt steps, reverse directions, and choose how the camera button works. |
-| [Settings → Zoom](Source/docs/images/screenshots/settings-tabs/en/zoom.png) | Set the step size for the zoom buttons. |
-| [Settings → Application](Source/docs/images/screenshots/1.0.1/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
-| [Video](Source/docs/images/screenshots/settings-tabs/en/image.png) | Adjust image controls, such as focus and exposure, and set the [field of view](Source/docs/images/screenshots/settings-tabs/en/field-of-view.png) if the camera driver supports it. Image settings are saved per camera and profile. |
-| [Profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
-| [Contact & About → Contact](Source/docs/images/screenshots/contact/en/issues.png) | Report a bug, request a feature, save a support ZIP, open project links, or configure diagnostic logs. |
-| [Contact & About → About](Source/docs/images/screenshots/contact/en/about.png) | Find the installed version, developer credit and the support link. |
+| [Settings → Panning](Source/docs/images/screenshots/1.1.0/en/settings.png) | Set pan and tilt steps, reverse directions, and choose how the camera button works. |
+| [Settings → Zoom](Source/docs/images/screenshots/1.1.0/en/zoom.png) | Set the step size for the zoom buttons. |
+| [Settings → Application](Source/docs/images/screenshots/1.1.0/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
+| [Video](Source/docs/images/screenshots/1.1.0/en/image.png) | Adjust image controls, such as focus and exposure, and set the [field of view](Source/docs/images/screenshots/1.1.0/en/field-of-view.png) if the camera driver supports it. Image settings are saved per camera and profile. |
+| [Profiles](Source/docs/images/screenshots/1.1.0/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
+| [Contact & About → Contact](Source/docs/images/screenshots/1.1.0/en/issues.png) | Report a bug, request a feature, save a support ZIP, open project links, or configure diagnostic logs. |
+| [Contact & About → About](Source/docs/images/screenshots/1.1.0/en/about.png) | Find the installed version, developer credit and the support link. |
 
 Drag the vertical divider to resize the camera controls and preset list. Hover over compact buttons for tooltips. Settings opens in a separate window. You can keep using the main window. Your profile remembers the size and position of both windows.
 
 <details>
 <summary>See the Settings window and example tabs</summary>
 
-![Main window beside the separate Settings window](Source/docs/images/screenshots/settings-tabs/en/main-settings.png)
+![Main window beside the separate Settings window](Source/docs/images/screenshots/1.1.0/en/main-settings.png)
 
-![Panning tab with step sizes, direction controls and camera button options](Source/docs/images/screenshots/settings-tabs/en/settings.png)
+![Panning tab with step sizes, direction controls and camera button options](Source/docs/images/screenshots/1.1.0/en/settings.png)
 
-![Application tab with streaming confirmation and profile language](Source/docs/images/screenshots/1.0.1/en/application.png)
+![Application tab with streaming confirmation and profile language](Source/docs/images/screenshots/1.1.0/en/application.png)
 
-![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/settings-tabs/en/image.png)
+![Video tab with focus, exposure and gain controls](Source/docs/images/screenshots/1.1.0/en/image.png)
 
-![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png)
+![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/1.1.0/en/profiles.png)
 
-![About tab with developer information and the installed version](Source/docs/images/screenshots/contact/en/about.png)
+![About tab with developer information and the installed version](Source/docs/images/screenshots/1.1.0/en/about.png)
 
 </details>
 

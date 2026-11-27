@@ -31,6 +31,11 @@ namespace CameraControlStudio
                 return;
             }
 
+            presetCategories.SelectedIndex = 0;
+            settingsCategories.SelectedIndex = 0;
+            imageCategories.SelectedIndex = 0;
+            contactCategories.SelectedIndex = 0;
+            settingsTabs.SelectedIndex = 0;
             SetStatus("");
             if (!hasPlacement)
             {

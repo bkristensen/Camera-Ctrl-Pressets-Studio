@@ -2,21 +2,21 @@
 
 # Configurar la aplicación
 
-*Escrito para Camera Control Studio 1.0.1.*
+*Escrito para Camera Control Studio 1.1.0.*
 
 [Solución de problemas](TROUBLESHOOTING.md)
 
 Haz clic en el engranaje de la parte inferior para abrir la configuración. La configuración se abre en otra ventana. Puedes seguir usando la ventana principal.
 
-![Ventana principal junto a la ventana de configuración independiente](../images/screenshots/settings-tabs/es/main-settings.png)
+![Ventana principal junto a la ventana de configuración independiente](../images/screenshots/1.1.0/es/main-settings.png)
 
 ## Instalar y verificar la descarga.
 
-Descargue el instalador o ZIP portátil desde las versiones [GitHub del proyecto](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Ejecute el instalador o extraiga el ZIP completo antes de iniciar la aplicación. Si se publica una suma de comprobación SHA-256, compárela con `Get-FileHash -Algorithm SHA256` para su descarga.
+Descarga **Camera Control Studio** desde Microsoft Store cuando esté disponible allí. Busca la aplicación por su nombre en la tienda. Microsoft firma el paquete de la tienda y distribuye las actualizaciones.
 
-**Descarga oficial**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
-Código ![QR para descargas de Camera Control Studio](../images/qr/downloads.png)
+Si la aplicación aún no está disponible en Microsoft Store, descarga el instalador o el ZIP portátil desde las [versiones de GitHub](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Ejecuta el instalador o extrae el ZIP completo antes de abrir la aplicación. Si la versión incluye una suma SHA-256, compárala con el resultado de `Get-FileHash -Algorithm SHA256`.
+
+![Código QR para descargar Camera Control Studio desde GitHub](../images/qr/downloads.png)
 
 Microsoft Defender SmartScreen puede mostrar una advertencia azul cuando una aplicación descargada o su editor tiene poca reputación establecida. Tómalo en serio. Si obtuvo el archivo esperado de la versión oficial y confía en la fuente, seleccione **Más información** y revise el nombre del archivo y el editor. Seleccione **Ejecutar de todos modos** solo si elige confiar en ese archivo y Windows ofrece la opción. De lo contrario, cierre la advertencia. Siga la política de dispositivos de su organización. [Guía de pantalla inteligente de Microsoft](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 
@@ -126,7 +126,7 @@ Por ejemplo, con una Brio a 65° y en el zoom mínimo, pulsar − puede cambiar 
 
 ### Contacto
 
-![Contacto](../images/screenshots/contact/es/issues.png)
+![Contacto](../images/screenshots/1.1.0/es/issues.png)
 
 - **Informar de un problema**. Abre la plantilla de errores en GitHub. Si hay una versión nueva, la aplicación ofrece abrirla primero. Si sigues, ofrece guardar un ZIP antes de abrir el borrador.
 - **Solicitar una función nueva**. Abre la plantilla de sugerencias. Si hay una versión nueva, pruébala primero. Puede que ya incluya la función.
@@ -151,3 +151,11 @@ Por ejemplo, con una Brio a 65° y en el zoom mínimo, pulsar − puede cambiar 
 Cierra la aplicación y copia `%LOCALAPPDATA%\CamPressets` para hacer una copia de seguridad. Las posiciones temporales duran una sesión.
 
 [Uso diario](DAILY-USE.md)
+
+## Cuadro de error
+
+Si un error inesperado detiene una acción, cierra el cuadro y vuelve a intentarlo. Si indica que la aplicación se cerrará, ábrela de nuevo.
+
+![Cuadro de error con botones para informar del fallo, encontrar el registro y cerrar](../images/screenshots/1.1.0/es/error-dialog.png)
+
+**Mostrar registro** selecciona el registro de diagnóstico en el Explorador de archivos si está disponible. **Informar en GitHub** te ofrece guardar un ZIP de soporte y luego abre la plantilla de errores en GitHub. El ZIP puede incluir una captura del cuadro, registros, ajustes de perfil y ventana, y un informe del sistema. Revisa el ZIP y adjúntalo al borrador.

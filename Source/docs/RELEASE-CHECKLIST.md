@@ -1,5 +1,7 @@
 # Release checklist
 
+*Written for Camera Control Studio 1.1.0.*
+
 Use the [build and release guide](en/BUILD-AND-RELEASE.md) for commands and output paths.
 
 ## Automated checks
@@ -11,7 +13,7 @@ Use the [build and release guide](en/BUILD-AND-RELEASE.md) for commands and outp
 ## Windows and camera checks
 
 - [ ] Launch at 900 × 500 and verify the 670 × 450 minimum. Resize, maximize and restore at 100%, 125%, 150% and 200% display scaling. Check the footer, inputs, combined icons and zoom glyphs.
-- [ ] Open settings on the right. Drag the divider. Close and reopen. Test a saved layout after disconnecting a monitor.
+- [ ] Open Settings in its own window. Move and resize both windows. Reopen Settings and check that the tabs reset. Test a saved layout after disconnecting a monitor.
 - [ ] Recall a position: yellow during movement, green only after matching readback. Pan/tilt/zoom clears the active colour. Disconnect during a transition: no false green. Icons never disappear after confirmation.
 - [ ] Test each combined icon, including every reversed order. Test zoom buttons, the zoom slider and both direction reversals.
 - [ ] On a supported Brio, test automatic FOV in both zoom directions and at the left and right pan edges. Follow the [Brio test steps](VALIDATION.md#brio-field-of-view-and-zoom).

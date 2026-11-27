@@ -1,5 +1,7 @@
 # Code-Signing-Richtlinie
 
+*Geschrieben für Camera Control Studio 1.1.0.*
+
 Die SignPath Foundation bietet kostenlose Signaturen für berechtigte Open-Source-Projekte. Eine Abnahme ist erforderlich. Das Zertifikat identifiziert die SignPath Foundation als Herausgeber; Der Dienst verknüpft verifizierte Builds mit dem Quell-Repository. Das Projekt hat die Unterzeichnung durch die SignPath Foundation beantragt. Der Antrag steht noch aus und GitHub-Downloads bleiben unsigniert.
 
 Bevor Sie sich bewerben, veröffentlichen Sie den Quellcode unter ihrer Lizenz. Halten Sie das Projekt aktuell. Veröffentlichen Sie ein Release, dokumentieren Sie die App und machen Sie den Build überprüfbar. Signieren Sie nur Ihre eigenen Projektdateien. Signieren Sie weiterhin Anmeldeinformationen aus dem Repository.

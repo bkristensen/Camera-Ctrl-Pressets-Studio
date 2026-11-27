@@ -1,5 +1,7 @@
 # MSIX und Store-Verteilung
 
+*Geschrieben für Camera Control Studio 1.1.0.*
+
 Verwenden Sie `scripts/build-msix.ps1` und die Manifestvorlage, um ein MSIX-Paket zu erstellen. Microsoft überprüft das Paket, bevor es im Store erscheinen kann. Die portable ausführbare Datei ist nicht signiert.
 
 ## Wählen Sie eine Route

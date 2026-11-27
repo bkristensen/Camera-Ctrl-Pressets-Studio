@@ -2,7 +2,7 @@
 
 # Modifier l'interface et les traductions
 
-*Écrit pour Camera Control Studio 1.0.1.*
+*Écrit pour Camera Control Studio 1.1.0.*
 
 ## Ouvrez le bon fichier
 

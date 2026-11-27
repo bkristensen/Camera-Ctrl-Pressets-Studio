@@ -1,3 +1,15 @@
+# 1.1.0
+
+- Moved settings into a separate window that leaves camera controls available. Each profile remembers both window layouts. Settings opens on the first tab with its subtabs reset.
+- Reorganized panning, zoom, video and field-of-view controls. Moved Full Frame below Zoom Out and disabled it when the camera already shows its widest available view.
+- Added shared support actions to Settings and GuideViewer. Open the GitHub bug or feature template, check for an update, or save a support ZIP with screenshots, settings and logs.
+- Added Microsoft Store update detection and a configurable download preference. GitHub remains the default. The Store-first option can point downloads to a verified Store listing after publication.
+- The error dialog offers a support ZIP before opening GitHub's bug template. The ZIP can include a screenshot of the error, logs, settings and a system report.
+- Updated Setup, daily use, troubleshooting, reporting and developer guides in all 12 languages. Captured 276 new images with sample data, including the settings subtabs and app dialogs.
+- Updated the issue templates and kept Store package identity in a local manifest excluded from Git.
+
+The GitHub installer and portable ZIP are unsigned. Use SHA256SUMS.txt to verify the files.
+
 # 1.0.1
 
 - Refreshed the 73 application screenshots for 1.0.1 across all 12 languages. They show the localized interface and seven translated example positions.

@@ -1,5 +1,7 @@
 # Descripción del proyecto
 
+*Escrito para Camera Control Studio 1.1.0.*
+
 Camera Control Studio guarda y recupera tomas de cámara en Windows. Úselo en un estudio, un aula o una reunión en vivo. Su aplicación de captura maneja el video.
 
 ## Comportamiento central

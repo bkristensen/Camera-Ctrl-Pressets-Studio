@@ -2,13 +2,13 @@
 
 # Daily use
 
-*Written for Camera Control Studio 1.0.1.*
+*Written for Camera Control Studio 1.1.0.*
 
 [Troubleshooting](TROUBLESHOOTING.md)
 
 Start your streaming meeting in an app such as Zoom. Then open **Camera Control Studio**.
 
-![Direction wheel and zoom slider beside the preset list](../images/screenshots/1.0.1/en/main.png)
+![Direction wheel and zoom slider beside the preset list](../images/screenshots/1.1.0/en/main.png)
 
 ## General
 
@@ -84,3 +84,11 @@ If **New release available** appears in the footer, select it to open the releas
 Report problems or request features under **Contact & About → Contact**.
 
 See [Setup](SETUP.md) for camera direction, permanent presets, image settings, profiles and movement steps.
+
+## Error dialog
+
+Close the dialog and try again if an unexpected error stops an action. If the dialog says the app will close, open it again.
+
+![Error dialog with buttons to report the issue, find the log and close](../images/screenshots/1.1.0/en/error-dialog.png)
+
+**Show log file** selects the diagnostic log in File Explorer if a log is available. **Report on GitHub** offers to save a support ZIP, then opens GitHub’s bug template. The ZIP can include a screenshot of the dialog, logs, profile and window settings, and a system report. Review it and attach it to the draft yourself.

@@ -2,7 +2,7 @@
 
 # Edit the interface and translations
 
-*Written for Camera Control Studio 1.0.1.*
+*Written for Camera Control Studio 1.1.0.*
 
 ## Open the right file
 

@@ -2,21 +2,21 @@
 
 # Sæt programmet op
 
-*Skrevet til Camera Control Studio 1.0.1.*
+*Skrevet til Camera Control Studio 1.1.0.*
 
 [Fejlfinding](TROUBLESHOOTING.md)
 
 Klik på tandhjulet nederst for at åbne Indstillinger. Indstillinger åbner i et separat vindue. Du kan stadig bruge hovedvinduet.
 
-![Hovedvinduet ved siden af det separate indstillingsvindue](../images/screenshots/settings-tabs/da/main-settings.png)
+![Hovedvinduet ved siden af det separate indstillingsvindue](../images/screenshots/1.1.0/da/main-settings.png)
 
 ## Installér og kontrollér downloadet
 
-Hent installationsfilen eller den portable ZIP fra projektets [GitHub-udgivelser](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Kør installationsfilen, eller pak hele ZIP-filen ud før start. Hvis der er udgivet en SHA-256-kontrolsum, kan du sammenligne den med resultatet fra `Get-FileHash -Algorithm SHA256`.
+Hent **Camera Control Studio** fra Microsoft Store, når appen er tilgængelig dér. Søg efter appens navn i Microsoft Store. Microsoft signerer Store-pakken og leverer opdateringerne.
 
-**Officiel download**\
-<https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>\
-![QR-kode til download af Camera Control Studio](../images/qr/downloads.png)
+Hvis appen endnu ikke er tilgængelig i Microsoft Store, kan du hente installationsfilen eller den portable ZIP fra [GitHub-udgivelserne](https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases). Kør installationsfilen, eller pak hele ZIP-filen ud før start. Hvis udgivelsen har en SHA-256-kontrolsum, så sammenlign den med resultatet fra `Get-FileHash -Algorithm SHA256`.
+
+![QR-kode til download af Camera Control Studio på GitHub](../images/qr/downloads.png)
 
 Microsoft Defender SmartScreen kan vise en blå advarsel, når en fil eller udgiver har et begrænset omdømme. Tag advarslen alvorligt. Hvis du har hentet den forventede fil fra den officielle udgivelse og stoler på kilden, kan du vælge **Flere oplysninger** og kontrollere programnavn og udgiver. Vælg kun **Kør alligevel**, hvis du vil stole på netop den fil, og Windows tilbyder valget. Luk ellers advarslen. Følg eventuelle regler for din pc. [Microsofts SmartScreen-vejledning](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)
 
@@ -69,7 +69,7 @@ Vælg en position for at bruge Redigér, Erstat, Slet og de relevante pile. Tilf
 
 Du kan ændre bevægelsesvalg før kameraet tilsluttes. Driveren bestemmer trinnenes størrelse, hvilke retninger kameraet kan flytte sig i, og hvor det stopper.
 
-![Panorering](../images/screenshots/settings-tabs/da/settings.png)
+![Panorering](../images/screenshots/1.1.0/da/settings.png)
 
 ### Indstil zoomtrin
 
@@ -128,7 +128,7 @@ På en Brio ved 65° og mindste zoom kan et tryk på Zoom ud skifte til 78°. Tr
 
 ### Kontakt
 
-![Kontakt](../images/screenshots/contact/da/issues.png)
+![Kontakt](../images/screenshots/1.1.0/da/issues.png)
 
 - **Rapportér en fejl**. Åbn GitHubs fejlskabelon. Hvis der findes en nyere version, tilbyder appen at åbne den først. Hvis du fortsætter, tilbyder appen en supportpakke, før kladden åbnes.
 - **Foreslå en ny funktion**. Åbn GitHubs skabelon til funktionsforslag. Hvis der findes en nyere version, så afprøv den først. Funktionen kan allerede være tilføjet.
@@ -153,3 +153,11 @@ På en Brio ved 65° og mindste zoom kan et tryk på Zoom ud skifte til 78°. Tr
 Luk appen, og kopiér `%LOCALAPPDATA%\CamPressets` for at tage en sikkerhedskopi. Midlertidige positioner gælder kun i den aktuelle session.
 
 [Daglig brug](DAILY-USE.md)
+
+## Fejldialog
+
+Luk dialogen, og prøv igen, hvis en uventet fejl stopper en handling. Hvis dialogen siger, at programmet lukker, skal du åbne det igen.
+
+![Fejldialog med knapper til at rapportere fejlen, finde logfilen og lukke](../images/screenshots/1.1.0/da/error-dialog.png)
+
+**Vis logfil** markerer diagnoseloggen i Stifinder, når den er tilgængelig. **Rapportér på GitHub** tilbyder at gemme en support-ZIP og åbner derefter fejlskabelonen på GitHub. ZIP-filen kan indeholde et skærmbillede af dialogen, logfiler, profil- og vinduesindstillinger samt en systemrapport. Gennemgå filen, og vedhæft den selv til kladden.

@@ -1,6 +1,6 @@
 # ترجمة Camera Control Studio
 
-* مكتوب لـ Camera Control Studio 1.0.1.*
+* مكتوب لـ Camera Control Studio 1.1.0.*
 
 ## تحرير لغة موجودة
 

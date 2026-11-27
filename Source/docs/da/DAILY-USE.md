@@ -2,13 +2,13 @@
 
 # Daglig brug
 
-*Skrevet til Camera Control Studio 1.0.1.*
+*Skrevet til Camera Control Studio 1.1.0.*
 
 [Fejlfinding](TROUBLESHOOTING.md)
 
 Start mødet i f.eks. Zoom. Åbn derefter **Camera Control Studio**.
 
-![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/1.0.1/da/main.png)
+![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/1.1.0/da/main.png)
 
 ## Generelt
 Klik på **?** for at få hjælp. Hold musen over en knap for at se, hvad den gør. En retning stopper ved den sidste grænse, kameraet kan nå. [Sådan virker automatisk synsfelt](SETUP.md#indstil-synsfeltet)
@@ -78,3 +78,11 @@ Luk programmet normalt. Den aktive profil og vinduets udseende huskes.
 Rapportér fejl eller foreslå funktioner under **Kontakt & Om → Kontakt**.
 
 Se [Opsætning](SETUP.md) for kamera retning, permanente positioner, billedindstillinger, profiler og bevægelsestrin.
+
+## Fejldialog
+
+Luk dialogen, og prøv igen, hvis en uventet fejl stopper en handling. Hvis dialogen siger, at programmet lukker, skal du åbne det igen.
+
+![Fejldialog med knapper til at rapportere fejlen, finde logfilen og lukke](../images/screenshots/1.1.0/da/error-dialog.png)
+
+**Vis logfil** markerer diagnoseloggen i Stifinder, når den er tilgængelig. **Rapportér på GitHub** tilbyder at gemme en support-ZIP og åbner derefter fejlskabelonen på GitHub. ZIP-filen kan indeholde et skærmbillede af dialogen, logfiler, profil- og vinduesindstillinger samt en systemrapport. Gennemgå filen, og vedhæft den selv til kladden.

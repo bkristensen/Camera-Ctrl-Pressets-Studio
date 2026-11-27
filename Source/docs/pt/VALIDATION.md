@@ -1,5 +1,7 @@
 # Validação para 0.7.0-beta.3
 
+*Escrito para Camera Control Studio 1.1.0.*
+
 A versão do Windows Release usa dependências bloqueadas. Paridade de tradução e testes automatizados aprovados. Os testes abrangem movimento, predefinições, idioma do perfil, persistência, registro e o HRESULT de câmera não pronta relatado após a hibernação.
 
 O ZIP portátil extraído foi testado em processos x86 e x64 do Windows. Ambos abriram e reabriram os guias de uso diário e configuração, exibiram suas capturas de tela e imprimiram em PDF. O x64 PDF tinha título, versão, data e contagem correta de páginas em todas as cinco páginas. O botão **-** estava presente durante a inicialização em tempo de design do WinForms. O carregador ARM64 foi verificado quanto à arquitetura binária correta.

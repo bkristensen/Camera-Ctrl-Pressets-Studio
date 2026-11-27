@@ -1,5 +1,7 @@
 # Validasi untuk 0.7.0-beta.3
 
+*Ditulis untuk Camera Control Studio 1.1.0.*
+
 Versi Rilis Windows menggunakan dependensi terkunci. Paritas terjemahan dan pengujian otomatis berhasil. Pengujian tersebut mencakup gerakan, preset, bahasa profil, persistensi, logging, dan HRESULT kamera yang belum siap dilaporkan setelah hibernasi.
 
 ZIP portabel yang diekstraksi telah diuji dalam proses Windows x86 dan x64. Keduanya membuka dan membuka kembali panduan penggunaan dan pengaturan sehari-hari, menampilkan tangkapan layarnya, dan mencetak ke PDF. X64 PDF memiliki judul, versi, tanggal, dan jumlah halaman yang benar di kelima halaman. Tombol **?** hadir selama inisialisasi waktu desain WinForms. Pemuat ARM64 telah diperiksa untuk arsitektur biner yang benar.

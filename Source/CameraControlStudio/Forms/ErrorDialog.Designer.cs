@@ -9,9 +9,17 @@ namespace CameraControlStudio
         private FlowLayoutPanel buttons;
         private Label messageLabel;
         private Label detailLabel;
-        private Button report;
-        private Button showLog;
-        private Button close;
+        private BlueButton report;
+        private BlueButton showLog;
+        private BlueButton close;
+        private SaveFileDialog packageDialog;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+                packageDialog?.Dispose();
+            base.Dispose(disposing);
+        }
 
         private void InitializeComponent()
         {
@@ -20,9 +28,10 @@ namespace CameraControlStudio
             this.buttons = new FlowLayoutPanel();
             this.messageLabel = new Label();
             this.detailLabel = new Label();
-            this.report = new Button();
-            this.showLog = new Button();
-            this.close = new Button();
+            this.report = new BlueButton();
+            this.showLog = new BlueButton();
+            this.close = new BlueButton();
+            this.packageDialog = new SaveFileDialog();
             this.content.SuspendLayout();
             this.buttons.SuspendLayout();
             this.SuspendLayout();
@@ -51,27 +60,24 @@ namespace CameraControlStudio
             this.buttons.Controls.Add(this.showLog);
             this.buttons.Controls.Add(this.close);
             this.report.AutoSize = true;
-            this.report.BackColor = SystemColors.Control;
-            this.report.ForeColor = SystemColors.ControlText;
-            this.report.UseVisualStyleBackColor = true;
+            this.report.UseVisualStyleBackColor = false;
             this.report.Name = "report";
             this.report.TabIndex = 0;
             this.report.Text = "Report on GitHub";
             this.showLog.AutoSize = true;
-            this.showLog.BackColor = SystemColors.Control;
-            this.showLog.ForeColor = SystemColors.ControlText;
-            this.showLog.UseVisualStyleBackColor = true;
+            this.showLog.UseVisualStyleBackColor = false;
             this.showLog.Name = "showLog";
             this.showLog.TabIndex = 1;
             this.showLog.Text = "Show log file";
             this.close.AutoSize = true;
-            this.close.BackColor = SystemColors.Control;
-            this.close.ForeColor = SystemColors.ControlText;
-            this.close.UseVisualStyleBackColor = true;
+            this.close.UseVisualStyleBackColor = false;
             this.close.DialogResult = DialogResult.OK;
             this.close.Name = "close";
             this.close.TabIndex = 2;
             this.close.Text = "Close";
+            this.packageDialog.DefaultExt = "zip";
+            this.packageDialog.Filter = "ZIP (*.zip)|*.zip";
+            this.packageDialog.RestoreDirectory = true;
             this.AcceptButton = this.close;
             this.CancelButton = this.close;
             this.AutoSize = true;

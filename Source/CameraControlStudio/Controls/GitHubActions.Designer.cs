@@ -101,7 +101,7 @@ namespace CameraControlStudio
             this.releases.Name = "releases";
             this.releases.TabIndex = 4;
             this.releases.TabStop = true;
-            this.releases.Text = "GitHub releases";
+            this.releases.Text = "Updates";
             this.releases.VisitedLinkColor = Color.LightSkyBlue;
             this.discussions.ActiveLinkColor = Color.White;
             this.discussions.AutoSize = true;

@@ -1,8 +1,10 @@
 # Camera Control Studio guías de usuario
 
-*Escrito para Camera Control Studio 1.0.1.*
+*Escrito para Camera Control Studio 1.1.0.*
 
 El instalador y portátil ZIP incluyen las guías. Haga clic en **?** para abrir las guías locales en el idioma de su perfil. Cambie **Idioma de la guía** para leer una traducción diferente. Elija **Usar guías en línea** para leer la guía de la última versión de GitHub. Si ese comunicado no tiene traducción, el espectador intenta en inglés. Si la guía en línea no está disponible, muestra la copia local cuando esté disponible. Primero abra Configuración para ir directamente a la configuración. Haga clic en **Imprimir** para imprimir la guía actual con su título, fecha y hora de impresión, versión instalada, dirección del proyecto y números de página.
+
+Si Microsoft Store es tu fuente de actualizaciones, el visor busca en línea las guías de la versión instalada.
 
 El visor necesita [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). También puede abrir **Camera Control Studio User Guides** desde el menú Inicio después de la instalación. Para la versión portátil, abra la carpeta `docs` en el ZIP extraído.
 

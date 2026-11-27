@@ -1,6 +1,6 @@
 # Camera Control Studio তৈরি করুন এবং প্রকাশ করুন
 
-* Camera Control Studio 1.0.1.* এর জন্য লেখা
+* Camera Control Studio 1.1.0.* এর জন্য লেখা
 
 `Camera-Control-Pressets-Studio.sln` ধারণকারী ডিরেক্টরি থেকে কমান্ড চালান। ইনস্টলার এবং উইন্ডোজ পরীক্ষার জন্য Windows এবং PowerShell ব্যবহার করুন।
 

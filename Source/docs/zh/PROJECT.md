@@ -1,5 +1,7 @@
 # 项目描述
 
+*为Camera Control Studio 1.1.0.*编写
+
 Camera Control Studio 在 Windows 上保存和调用相机拍摄的照片。在工作室、教室或现场会议中使用它。您的捕获应用程序处理视频。
 
 ## 核心行为

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CameraControlStudio
@@ -77,56 +78,47 @@ namespace CameraControlStudio
 
         void RunDocumentationStages()
         {
-            var stages = new List<(string Name, Action Show)>
+            var stages = new (string Name, Action Show)[]
             {
                 ("main", () => { }),
-                ("presets", () =>
-                {
-                    Height = Math.Min(750, Screen.FromControl(this).WorkingArea.Height - 24);
-                    settings.ShowFor(this);
-                    settings.settingsTabs.SelectedTab = settings.presetsTab;
-                    settings.permanentList.SelectedIndex = 0;
-                }),
-                ("settings", () => { settings.settingsTabs.SelectedTab = settings.generalTab; settings.settingsCategories.SelectedTab = settings.motionTab; }),
+                ("quick-guide", () => { }),
+                ("main-settings", () => settings.ShowFor(this)),
+                ("presets", () => settings.permanentList.SelectedIndex = 0),
+                ("transitions", () => settings.presetCategories.SelectedTab = settings.transitionsTab),
+                ("settings", () => settings.settingsTabs.SelectedTab = settings.generalTab),
                 ("zoom", () => settings.settingsCategories.SelectedTab = settings.zoomTab),
-                ("transitions", () => { settings.settingsTabs.SelectedTab = settings.presetsTab; settings.presetCategories.SelectedTab = settings.transitionsTab; }),
-                ("application", () => { settings.settingsTabs.SelectedTab = settings.generalTab; settings.settingsCategories.SelectedTab = settings.applicationTab; })
+                ("application", () => settings.settingsCategories.SelectedTab = settings.applicationTab),
+                ("video", () => settings.settingsTabs.SelectedTab = settings.imageTab),
+                ("image", () => { SetVideoTabs(videoTabs); settings.imageCategories.SelectedTab = settings.focusTab; }),
+                ("video-colour", () => settings.imageCategories.SelectedTab = settings.colourTab),
+                ("video-light-detail", () => settings.imageCategories.SelectedTab = settings.lightTab),
+                ("field-of-view", () => settings.imageCategories.SelectedTab = settings.fieldOfViewTab),
+                ("profiles", () => settings.settingsTabs.SelectedTab = settings.profilesTab),
+                ("issues", () => settings.settingsTabs.SelectedTab = settings.aboutTab),
+                ("about", () => settings.contactCategories.SelectedTab = settings.aboutInfoTab)
             };
-            if (UiText.Language == "da")
-                stages.Insert(1, ("quick-guide", () => { }));
-            if (UiText.Language == "en" || UiText.Language == "da" || UiText.Language == "de")
-            {
-                stages.AddRange(new (string, Action)[]
-                {
-                    ("main-settings", () => { settings.settingsTabs.SelectedTab = settings.presetsTab; settings.presetCategories.SelectedTab = settings.permanentPresetsTab; settings.permanentList.ClearSelected(); }),
-                    ("video", () => settings.settingsTabs.SelectedTab = settings.imageTab),
-                    ("image", () => { SetVideoTabs(videoTabs); settings.imageCategories.SelectedTab = settings.focusTab; }),
-                    ("video-colour", () => settings.imageCategories.SelectedTab = settings.colourTab),
-                    ("video-light-detail", () => settings.imageCategories.SelectedTab = settings.lightTab),
-                    ("field-of-view", () => settings.imageCategories.SelectedTab = settings.fieldOfViewTab),
-                    ("profiles", () => settings.settingsTabs.SelectedTab = settings.profilesTab),
-                    ("issues", () => { settings.settingsTabs.SelectedTab = settings.aboutTab; settings.contactCategories.SelectedTab = settings.contactTab; }),
-                    ("about", () => settings.contactCategories.SelectedTab = settings.aboutInfoTab)
-                });
-            }
 
             int stage = 0;
             stages[stage].Show();
-            documentationTimer.Tick += (sender, args) =>
+            documentationTimer.Tick += async (sender, args) =>
             {
                 try
                 {
                     CaptureDocumentation(stages[stage].Name);
                     stage++;
-                    if (stage < stages.Count)
+                    if (stage < stages.Length)
                     {
                         stages[stage].Show();
                         return;
                     }
+
+                    documentationTimer.Stop();
+                    await CaptureDocumentationDialogs();
                 }
                 catch (Exception ex)
                 {
                     DiagnosticLog.Current.Write("ERROR", "Capture documentation", ex);
+                    Console.Error.WriteLine(ex);
                     Environment.ExitCode = 1;
                 }
                 documentationTimer.Stop();
@@ -135,10 +127,39 @@ namespace CameraControlStudio
             documentationTimer.Start();
         }
 
+        async Task CaptureDocumentationDialogs()
+        {
+            settings.Hide();
+            var sources = new[]
+            {
+                new Device { Name = "Logitech BRIO", Id = "demo-brio" },
+                new Device { Name = "Logitech C920", Id = "demo-c920" }
+            };
+            string exampleProfile = UiText.Translate("Preset example: Whole stage", "Whole stage");
+            CaptureDialog(new CameraSourceForm(sources, sources[0].Id), "camera-source");
+            CaptureDialog(new ProfilePickerForm(new[] { ProfileStore.Standard, exampleProfile }, ProfileStore.Standard, true), "profile-picker");
+            CaptureDialog(new PresetEditorForm(config.Cameras[config.CameraId][1], null), "preset-editor");
+            CaptureDialog(new TextEntryForm(UiText.T("New profile", "Ny profil"), exampleProfile), "text-entry");
+            CaptureDialog(new LoggingDialog(), "log-settings");
+            CaptureDialog(new ErrorDialog(), "error-dialog");
+            using (var viewer = new GuideViewer(setup: true))
+                await viewer.CaptureDocumentationAsync(this, documentationDirectory);
+        }
+
+        void CaptureDialog(Form dialog, string name)
+        {
+            using (dialog)
+            {
+                dialog.Show(this);
+                using (var bitmap = CaptureForm(dialog))
+                    bitmap.Save(Path.Combine(documentationDirectory, name + ".png"), ImageFormat.Png);
+            }
+        }
+
         void CaptureDocumentation(string name)
         {
-            bool includeSettings = name != "main" && name != "quick-guide" && settings.Visible;
-            using (var bitmap = CaptureWindows(includeSettings))
+            bool settingsOnly = settings.Visible && name != "main-settings";
+            using (var bitmap = settingsOnly ? CaptureForm(settings) : CaptureWindows(name == "main-settings"))
             using (var graphics = Graphics.FromImage(bitmap))
             {
                 if (name == "application")
@@ -155,7 +176,23 @@ namespace CameraControlStudio
                         }
                     }
                 }
+
                 bitmap.Save(Path.Combine(documentationDirectory, name + ".png"), ImageFormat.Png);
+            }
+        }
+
+        internal static Bitmap CaptureForm(Form form)
+        {
+            var bitmap = new Bitmap(form.Width, form.Height);
+            try
+            {
+                form.DrawToBitmap(bitmap, new Rectangle(Point.Empty, form.Size));
+                return bitmap;
+            }
+            catch
+            {
+                bitmap.Dispose();
+                throw;
             }
         }
 
@@ -168,6 +205,8 @@ namespace CameraControlStudio
             var result = new Bitmap(width, height);
             try
             {
+                using (var background = Graphics.FromImage(result))
+                    background.Clear(BackColor);
                 DrawToBitmap(result, new Rectangle(Point.Empty, Size));
                 if (includeSettings)
                 {
@@ -191,7 +230,6 @@ namespace CameraControlStudio
         {
             // WinForms omits the owner-drawn combo selection when it renders off screen.
             var origin = settings.language.PointToScreen(Point.Empty) - new Size(settings.Left, settings.Top);
-            origin.X += SettingsCaptureOffset;
             var bounds = new Rectangle(origin, settings.language.ClientSize);
             bounds.Inflate(-2, -2);
             int arrowWidth = SystemInformation.VerticalScrollBarWidth;

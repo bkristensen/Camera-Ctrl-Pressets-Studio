@@ -1,6 +1,6 @@
 # Pemecahan masalah
 
-*Ditulis untuk Camera Control Studio 1.0.1.*
+*Ditulis untuk Camera Control Studio 1.1.0.*
 
 ## Daftar isi
 

@@ -2,7 +2,7 @@
 
 # تحرير الواجهة والترجمات
 
-* مكتوب لـ Camera Control Studio 1.0.1.*
+* مكتوب لـ Camera Control Studio 1.1.0.*
 
 ## افتح الملف الصحيح
 

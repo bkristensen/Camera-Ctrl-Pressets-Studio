@@ -1,5 +1,7 @@
 # Projektbeschreibung
 
+*Geschrieben für Camera Control Studio 1.1.0.*
+
 Camera Control Studio speichert und ruft Kameraaufnahmen unter Windows ab. Verwenden Sie es in einem Studio, einem Klassenzimmer oder einem Live-Meeting. Ihre Aufnahme-App verarbeitet das Video.
 
 ## Kernverhalten

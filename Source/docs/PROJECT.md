@@ -1,5 +1,7 @@
 # Project description
 
+*Written for Camera Control Studio 1.1.0.*
+
 Camera Control Studio saves and recalls camera shots on Windows. Use it in a studio, a classroom or a live meeting. Your capture app handles the video.
 
 ## Core behaviour

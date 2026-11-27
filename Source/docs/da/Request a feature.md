@@ -1,12 +1,14 @@
 # Foreslå en ny funktion
 
+*Skrevet til Camera Control Studio 1.1.0.*
+
 1. Klik på tandhjulet nederst for at åbne Indstillinger. Vælg **Kontakt & Om → Kontakt → Foreslå en ny funktion**.
 2. Hvis appen finder en nyere version, så vælg **Ja** for at åbne siden, hvor du kan hente den. Installér den, og se, om den allerede har funktionen. Vælg **Nej** for at fortsætte til udkastet på GitHub.
 3. Udfyld alle afsnit med en rød stjerne i GitHubs skabelon **Feature request**. Beskriv opgaven, hvordan funktionen vil hjælpe, og hvilket resultat der viser, at den virker.
 
 De samme GitHub-knapper findes i GuideViewer.
 
-![Fanen Kontakt med knapperne Foreslå en ny funktion og Gem supportpakke](../images/screenshots/contact/da/issues.png)
+![Fanen Kontakt med knapperne Foreslå en ny funktion og Gem supportpakke](../images/screenshots/1.1.0/da/issues.png)
 
 ## Vedhæft et eksempel
 

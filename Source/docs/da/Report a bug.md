@@ -1,12 +1,14 @@
 # Rapportér en fejl
 
+*Skrevet til Camera Control Studio 1.1.0.*
+
 1. Klik på tandhjulet nederst for at åbne Indstillinger. Vælg **Kontakt & Om → Kontakt → Rapportér en fejl**.
 2. Hvis appen finder en nyere version, så vælg **Ja** for at åbne siden, hvor du kan hente den. Installér den, og prøv at genskabe fejlen. Vælg **Nej** for at fortsætte til udkastet på GitHub.
 3. Når appen spørger, om du vil gemme en supportpakke, så vælg **Ja**, og vælg, hvor den skal gemmes. Vælg **Nej** for at åbne udkastet uden at gemme en pakke.
 
 De samme GitHub-knapper findes i GuideViewer.
 
-![Fanen Kontakt med knapperne Rapportér en fejl og Gem supportpakke](../images/screenshots/contact/da/issues.png)
+![Fanen Kontakt med knapperne Rapportér en fejl og Gem supportpakke](../images/screenshots/1.1.0/da/issues.png)
 
 ## Beskriv fejlen og vedhæft ZIP-filen
 
