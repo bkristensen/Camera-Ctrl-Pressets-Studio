@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading.Tasks;
@@ -20,33 +19,51 @@ namespace CameraControlStudio
 
         void WireContact()
         {
-            logSettingsLink.LinkClicked += (sender, args) => Run(() => LoggingDialog.ShowSettings(this));
-            showLogLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()));
-            saveReportPackage.Click += async (sender, args) => await RunContactAction(SaveReportPackage);
-            reportIssueButton.Click += async (sender, args) => await RunContactAction(() => OpenIssueDraft(false));
-            requestFeatureButton.Click += async (sender, args) => await RunContactAction(() => OpenIssueDraft(true));
+            settings.logSettingsLink.LinkClicked += (sender, args) => RunSettings(() => LoggingDialog.ShowSettings(settings));
+            settings.showLogLink.LinkClicked += (sender, args) => RunSettings(() => ErrorDialog.OpenLog(settings, DiagnosticLog.Current.FindLatest()));
+            BindGitHubActions(settings.githubActions, settings);
         }
 
-        async Task RunContactAction(Func<Task> action)
+        bool contactInProgress;
+
+        void BindGitHubActions(GitHubActions actions, Form owner)
         {
-            reportIssueButton.Enabled = requestFeatureButton.Enabled = saveReportPackage.Enabled = false;
+            actions.ReportIssue += async (sender, args) => await RunContactAction(actions, owner, () => OpenIssueDraft(false, actions, owner));
+            actions.RequestFeature += async (sender, args) => await RunContactAction(actions, owner, () => OpenIssueDraft(true, actions, owner));
+            actions.SavePackage += async (sender, args) => await RunContactAction(actions, owner, () => SaveReportPackage(actions, owner));
+        }
+
+        async Task RunContactAction(GitHubActions actions, Form owner, Func<Task> action)
+        {
+            if (contactInProgress)
+                return;
+
+            contactInProgress = true;
+            actions.SetBusy(true);
             try
             {
                 await action();
             }
+            catch (Exception ex)
+            {
+                DiagnosticLog.Current.Write("ERROR", "Contact action", ex);
+                if (!IsDisposed && !owner.IsDisposed && owner.Visible)
+                    ShowContactMessage(owner, ActionFailedMessage(), owner.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             finally
             {
-                if (!IsDisposed)
-                    reportIssueButton.Enabled = requestFeatureButton.Enabled = saveReportPackage.Enabled = true;
+                contactInProgress = false;
+                if (!actions.IsDisposed)
+                    actions.SetBusy(false);
             }
         }
 
-        async Task OpenIssueDraft(bool feature)
+        async Task OpenIssueDraft(bool feature, GitHubActions actions, Form owner)
         {
             var release = await CheckForNewerRelease(refresh: true);
-            if (IsDisposed)
+            if (IsDisposed || owner.IsDisposed || !owner.Visible)
                 return;
-            var title = feature ? requestFeatureButton.Text : reportIssueButton.Text;
+            var title = feature ? actions.FeatureTitle : actions.ReportTitle;
             if (release != null)
             {
                 string check = feature
@@ -57,65 +74,66 @@ namespace CameraControlStudio
                 string question = string.Format(UiText.T("Version {0} is available.", "Version {0} er tilgængelig."), release.Version)
                     + Environment.NewLine + check + Environment.NewLine
                     + UiText.T("Open the latest release?", "Åbn den seneste udgivelse?");
-                if (ShowMessage(question, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (ShowContactMessage(owner, question, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    ErrorDialog.OpenRelease(this, release.Url);
+                    ErrorDialog.OpenRelease(owner, release.Url);
                     return;
                 }
             }
 
             if (feature)
             {
-                ErrorDialog.OpenFeatureRequest(this);
+                ErrorDialog.OpenFeatureRequest(owner);
                 return;
             }
 
-            if (ShowMessage(UiText.T("Save a support ZIP to attach to the GitHub issue?",
-                "Vil du gemme en ZIP-pakke til at vedhæfte på GitHub?"), reportIssueButton.Text,
+            if (ShowContactMessage(owner, UiText.T("Save a support ZIP to attach to the GitHub issue?",
+                "Vil du gemme en ZIP-pakke til at vedhæfte på GitHub?"), actions.ReportTitle,
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                await SaveReportPackage();
+                await SaveReportPackage(actions, owner);
 
-            if (!IsDisposed)
-                ErrorDialog.OpenBugReport(this);
+            if (!IsDisposed && !owner.IsDisposed && owner.Visible)
+                ErrorDialog.OpenBugReport(owner);
         }
 
-        async Task SaveReportPackage()
+        DialogResult ShowContactMessage(Form owner, string message, string title, MessageBoxButtons buttons,
+            MessageBoxIcon icon, MessageBoxDefaultButton defaultButton = MessageBoxDefaultButton.Button1) =>
+            MessageBox.Show(owner, message, title, buttons, icon, defaultButton, AppForm.MessageDirection);
+
+        async Task SaveReportPackage(GitHubActions actions, Form owner)
         {
             try
             {
-                reportPackageDialog.Title = saveReportPackage.Text;
-                reportPackageDialog.FileName = "CameraControlStudio-support-" + DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
-                if (reportPackageDialog.ShowDialog(this) != DialogResult.OK)
+                var destination = actions.ChoosePackagePath(owner);
+                if (destination == null)
                     return;
 
                 var layout = config?.Layout.Copy() ?? new ProfileLayout();
-                ProfileWindow.Capture(this, layout, wasMaximized, settingsWidthAdded, settingsLeftOffset);
-                var destination = reportPackageDialog.FileName;
+                ProfileWindow.Capture(this, layout, wasMaximized);
                 var logs = DiagnosticLog.Current.GetLogDirectories();
                 var alternateDataDirectory = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CameraPressets");
                 using (var screenshot = new MemoryStream())
                 {
-                    using (var bitmap = new Bitmap(Width, Height))
+                    using (var bitmap = CaptureWindows(settings.Visible))
                     {
-                        DrawToBitmap(bitmap, new Rectangle(Point.Empty, Size));
                         bitmap.Save(screenshot, ImageFormat.Png);
                     }
                     screenshot.Position = 0;
                     await Task.Run(() => SupportPackage.Export(destination, screenshot, store.FilePath, layout, logs, alternateDataDirectory));
                 }
-                if (!IsDisposed)
-                    ShowMessage(UiText.T("Support ZIP saved. Review it before sharing.",
+                if (!IsDisposed && !owner.IsDisposed && owner.Visible)
+                    ShowContactMessage(owner, UiText.T("Support ZIP saved. Review it before sharing.",
                         "ZIP-pakken er gemt. Gennemgå den, før du deler den.") + Environment.NewLine + destination,
-                        saveReportPackage.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        actions.PackageTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 DiagnosticLog.Current.Write("WARNING", "Save support ZIP", ex);
-                if (!IsDisposed)
-                    ShowMessage(UiText.T("Could not save the support ZIP. Try a different location.",
-                        "Kunne ikke gemme ZIP-pakken. Prøv at gemme den et andet sted."),
-                        saveReportPackage.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!IsDisposed && !owner.IsDisposed && owner.Visible)
+                    ShowContactMessage(owner, UiText.T("Could not save the support ZIP. Try a different location.",
+                        "Kunne ikke gemme ZIP-pakken. Prøv at gemme den et andet sted."), actions.PackageTitle,
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

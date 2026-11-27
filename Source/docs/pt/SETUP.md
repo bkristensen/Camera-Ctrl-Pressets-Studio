@@ -6,9 +6,9 @@
 
 [Solução de problemas](TROUBLESHOOTING.md)
 
-Abra a engrenagem no rodapé. Configurações abertas à direita. Sua lista de posições permanece visível.
+Clique na engrenagem na parte inferior para abrir as configurações. As configurações abrem em uma janela separada. Você pode continuar usando a janela principal.
 
-![Janela principal com o painel de configurações aberto à direita](../images/screenshots/1.0.1/en/main-settings.png)
+![Janela principal ao lado da janela de configurações](../images/screenshots/settings-tabs/pt/main-settings.png)
 
 ## Instale e verifique o download
 
@@ -111,7 +111,7 @@ Selecionar uma linha permanente na lista principal também seleciona essa predef
 
 ## 5. Defina layout e idioma
 
-Arraste o divisor entre os controles da câmera e a lista de predefinições. Seu perfil salva a divisória e o tamanho e posição da janela. O tamanho inicial é 900 × 500 e o mínimo é 670 × 450. As configurações começam fechadas. Quando você os abre pela primeira vez após o lançamento, a primeira guia é selecionada. Role para baixo em **Panorâmica** ou **Aplicativo** se alguns campos estiverem abaixo da janela. O aplicativo salva a largura da janela com as configurações fechadas.
+Arraste o divisor entre os controles da câmera e a lista de predefinições. Seu perfil guarda a posição do divisor. O tamanho inicial é 900 × 500 e o mínimo é 670 × 450. As configurações começam fechadas. Quando você os abre pela primeira vez após o lançamento, a primeira guia é selecionada. Role para baixo em **Panorâmica** ou **Aplicativo** se alguns campos estiverem abaixo da janela. Seu perfil guarda o tamanho e a posição das duas janelas.
 
 Ao selecionar um perfil no rodapé, deixe **Manter a posição e o layout atuais** desmarcado para restaurar o layout desse perfil. Marque para transportar o layout atual para o perfil selecionado. A escolha fica lembrada no perfil que você sai; o layout transportado é salvo no perfil de destino.
 

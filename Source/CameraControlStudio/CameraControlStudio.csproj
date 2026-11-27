@@ -18,6 +18,12 @@
   <Reference Include="System.Net.Http" />
   <Compile Include="../Shared/*.cs" Link="Shared/%(Filename)%(Extension)" />
   <EmbeddedResource Include="../Shared/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" />
+  <Compile Update="Controls/GitHubActions.cs">
+    <SubType>UserControl</SubType>
+  </Compile>
+  <Compile Update="Controls/GitHubActions.Designer.cs">
+    <DependentUpon>GitHubActions.cs</DependentUpon>
+  </Compile>
   <Compile Update="Forms/*Form.cs">
     <SubType>Form</SubType>
   </Compile>

@@ -41,7 +41,7 @@ namespace CameraControlStudio
             LoadMovementSettings();
             LoadFramingSettings();
             UpdateFieldOfViewOptions(new[] { 90, 78, 65 });
-            startupFov.Enabled = allowFov.Enabled = adjustFovAtLimits.Enabled = true;
+            settings.startupFov.Enabled = settings.allowFov.Enabled = settings.adjustFovAtLimits.Enabled = true;
             UpdateMotionAxis("Zoom", new Setting { Min = 100, Max = 300, Step = 1 }, 160);
             currentAxes["Pan"] = currentAxes["Tilt"] = 0;
             SetMotionAvailability("Pan", true, true);
@@ -50,10 +50,10 @@ namespace CameraControlStudio
             fieldOfViewLabel.Text = UiText.T("Field of view", "Synsfelt") + " 78°";
             fullFrame.Enabled = true;
 
-            profilesList.Items.Add(ProfileStore.Standard);
-            profilesList.SelectedIndex = 0;
+            settings.profilesList.Items.Add(ProfileStore.Standard);
+            settings.profilesList.SelectedIndex = 0;
             profileButton.Text = ProfileStore.Standard + " ▾";
-            language.SelectedIndex = Array.IndexOf(UiText.LanguageCodes, UiText.Language);
+            settings.language.SelectedIndex = Array.IndexOf(UiText.LanguageCodes, UiText.Language);
             foreach (var editor in videoTabs.SelectMany(VideoEditors))
             {
                 editor.Slider.Maximum = 100;
@@ -61,14 +61,14 @@ namespace CameraControlStudio
             }
             cameraStatus.Text = UiText.T("Camera", "Kamera") + ": Logitech BRIO";
             status.Text = UiText.T("Ready", "Klar");
-            versionLabel.Text = "MIT · " + DiagnosticLog.DisplayAppVersion;
+            settings.versionLabel.Text = "MIT · " + DiagnosticLog.DisplayAppVersion;
             RefreshPresets();
             mainToolTips.Active = false;
 
             var area = Screen.FromControl(this).WorkingArea;
             StartPosition = FormStartPosition.Manual;
             SetBounds(area.Left + 12, area.Top + 12,
-                Math.Min(1040, area.Width - settingsPanelWidth - 24), Math.Min(660, area.Height - 24));
+                Math.Min(1040, area.Width - 24), Math.Min(660, area.Height - 24));
             config.Layout.ControllerRatio = LayoutPolicy.DefaultControllerRatio;
             ApplySplitter();
             Directory.CreateDirectory(documentationDirectory);
@@ -83,14 +83,14 @@ namespace CameraControlStudio
                 ("presets", () =>
                 {
                     Height = Math.Min(750, Screen.FromControl(this).WorkingArea.Height - 24);
-                    SetSettings(true, true);
-                    settingsTabs.SelectedTab = presetsTab;
-                    permanentList.SelectedIndex = 0;
+                    settings.ShowFor(this);
+                    settings.settingsTabs.SelectedTab = settings.presetsTab;
+                    settings.permanentList.SelectedIndex = 0;
                 }),
-                ("settings", () => { settingsTabs.SelectedTab = generalTab; settingsCategories.SelectedTab = motionTab; }),
-                ("zoom", () => settingsCategories.SelectedTab = zoomTab),
-                ("transitions", () => { settingsTabs.SelectedTab = presetsTab; presetCategories.SelectedTab = transitionsTab; }),
-                ("application", () => { settingsTabs.SelectedTab = generalTab; settingsCategories.SelectedTab = applicationTab; })
+                ("settings", () => { settings.settingsTabs.SelectedTab = settings.generalTab; settings.settingsCategories.SelectedTab = settings.motionTab; }),
+                ("zoom", () => settings.settingsCategories.SelectedTab = settings.zoomTab),
+                ("transitions", () => { settings.settingsTabs.SelectedTab = settings.presetsTab; settings.presetCategories.SelectedTab = settings.transitionsTab; }),
+                ("application", () => { settings.settingsTabs.SelectedTab = settings.generalTab; settings.settingsCategories.SelectedTab = settings.applicationTab; })
             };
             if (UiText.Language == "da")
                 stages.Insert(1, ("quick-guide", () => { }));
@@ -98,15 +98,15 @@ namespace CameraControlStudio
             {
                 stages.AddRange(new (string, Action)[]
                 {
-                    ("main-settings", () => { settingsTabs.SelectedTab = presetsTab; presetCategories.SelectedTab = permanentPresetsTab; permanentList.ClearSelected(); }),
-                    ("video", () => settingsTabs.SelectedTab = imageTab),
-                    ("image", () => { SetVideoTabs(videoTabs); imageCategories.SelectedTab = focusTab; }),
-                    ("video-colour", () => imageCategories.SelectedTab = colourTab),
-                    ("video-light-detail", () => imageCategories.SelectedTab = lightTab),
-                    ("field-of-view", () => imageCategories.SelectedTab = fieldOfViewTab),
-                    ("profiles", () => settingsTabs.SelectedTab = profilesTab),
-                    ("issues", () => { settingsTabs.SelectedTab = aboutTab; contactCategories.SelectedTab = contactTab; }),
-                    ("about", () => contactCategories.SelectedTab = aboutInfoTab)
+                    ("main-settings", () => { settings.settingsTabs.SelectedTab = settings.presetsTab; settings.presetCategories.SelectedTab = settings.permanentPresetsTab; settings.permanentList.ClearSelected(); }),
+                    ("video", () => settings.settingsTabs.SelectedTab = settings.imageTab),
+                    ("image", () => { SetVideoTabs(videoTabs); settings.imageCategories.SelectedTab = settings.focusTab; }),
+                    ("video-colour", () => settings.imageCategories.SelectedTab = settings.colourTab),
+                    ("video-light-detail", () => settings.imageCategories.SelectedTab = settings.lightTab),
+                    ("field-of-view", () => settings.imageCategories.SelectedTab = settings.fieldOfViewTab),
+                    ("profiles", () => settings.settingsTabs.SelectedTab = settings.profilesTab),
+                    ("issues", () => { settings.settingsTabs.SelectedTab = settings.aboutTab; settings.contactCategories.SelectedTab = settings.contactTab; }),
+                    ("about", () => settings.contactCategories.SelectedTab = settings.aboutInfoTab)
                 });
             }
 
@@ -137,10 +137,10 @@ namespace CameraControlStudio
 
         void CaptureDocumentation(string name)
         {
-            using (var bitmap = new Bitmap(Width, Height))
+            bool includeSettings = name != "main" && name != "quick-guide" && settings.Visible;
+            using (var bitmap = CaptureWindows(includeSettings))
             using (var graphics = Graphics.FromImage(bitmap))
             {
-                DrawToBitmap(bitmap, new Rectangle(Point.Empty, Size));
                 if (name == "application")
                     DrawDocumentationLanguage(graphics);
 
@@ -159,17 +159,47 @@ namespace CameraControlStudio
             }
         }
 
+        int SettingsCaptureOffset => Width + 8;
+
+        Bitmap CaptureWindows(bool includeSettings)
+        {
+            int width = includeSettings ? SettingsCaptureOffset + settings.Width : Width;
+            int height = includeSettings ? Math.Max(Height, settings.Height) : Height;
+            var result = new Bitmap(width, height);
+            try
+            {
+                DrawToBitmap(result, new Rectangle(Point.Empty, Size));
+                if (includeSettings)
+                {
+                    using (var settingsImage = new Bitmap(settings.Width, settings.Height))
+                    using (var graphics = Graphics.FromImage(result))
+                    {
+                        settings.DrawToBitmap(settingsImage, new Rectangle(Point.Empty, settings.Size));
+                        graphics.DrawImageUnscaled(settingsImage, SettingsCaptureOffset, 0);
+                    }
+                }
+                return result;
+            }
+            catch
+            {
+                result.Dispose();
+                throw;
+            }
+        }
+
         void DrawDocumentationLanguage(Graphics graphics)
         {
             // WinForms omits the owner-drawn combo selection when it renders off screen.
-            var bounds = new Rectangle(language.PointToScreen(Point.Empty) - new Size(Left, Top), language.ClientSize);
+            var origin = settings.language.PointToScreen(Point.Empty) - new Size(settings.Left, settings.Top);
+            origin.X += SettingsCaptureOffset;
+            var bounds = new Rectangle(origin, settings.language.ClientSize);
             bounds.Inflate(-2, -2);
             int arrowWidth = SystemInformation.VerticalScrollBarWidth;
-            if (language.RightToLeft == RightToLeft.Yes)
+            if (settings.language.RightToLeft == RightToLeft.Yes)
                 bounds.X += arrowWidth;
             bounds.Width -= arrowWidth;
-            DrawComboItem(language, new DrawItemEventArgs(graphics, language.Font, bounds, language.SelectedIndex,
-                DrawItemState.ComboBoxEdit, language.ForeColor, language.BackColor));
+            DrawComboItem(settings.language, new DrawItemEventArgs(graphics, settings.language.Font, bounds, settings.language.SelectedIndex,
+                DrawItemState.ComboBoxEdit, settings.language.ForeColor, settings.language.BackColor));
         }
     }
 }

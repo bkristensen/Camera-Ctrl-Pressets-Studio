@@ -1,8 +1,10 @@
 # Signaler un problème
 
-1. Ouvrez le volet des paramètres. Sélectionnez **Contact et à propos → Contact → Signaler un problème**.
+1. Cliquez sur la roue dentée en bas pour ouvrir les paramètres. Sélectionnez **Contact et à propos → Contact → Signaler un problème**.
 2. Si une version plus récente existe, choisissez **Oui** pour ouvrir sa page de téléchargement. Installez-la et vérifiez si vous pouvez reproduire le problème. Choisissez **Non** pour continuer vers le brouillon GitHub.
 3. Si l’application propose d’enregistrer un ZIP de support, choisissez **Oui** et indiquez où l’enregistrer. Choisissez **Non** pour ouvrir le brouillon sans créer d’archive.
+
+Le lecteur de guides propose les mêmes boutons GitHub.
 
 ![Onglet de contact avec les boutons GitHub et ZIP de support](../images/screenshots/contact/fr/issues.png)
 

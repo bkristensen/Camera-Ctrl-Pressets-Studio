@@ -53,6 +53,7 @@ namespace CameraControlStudio {
         [DataMember(Name = "WaitForStartup")] public bool RequireStreamingConfirmation;
         [DataMember] public bool KeepLayoutOnSwitch;
         [DataMember] public ProfileLayout Layout;
+        [DataMember(EmitDefaultValue = false)] public ProfileLayout SettingsLayout;
         [DataMember] public Dictionary<string, Dictionary<string, ImageValue>> ImageValues;
         public SavedData() {
             Defaults(default(StreamingContext));

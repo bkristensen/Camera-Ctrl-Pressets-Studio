@@ -41,6 +41,7 @@
   <text key="Focus">对焦</text>
   <text key="Gain">增益</text>
   <text key="Gamma">伽马</text>
+  <text key="Project on GitHub">GitHub 项目</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">直播已开始吗？请选择“是”以启用摄像头控制。</text>
   <text key="Hue">色相</text>
@@ -258,4 +259,5 @@
   <text key="Open the latest release?">打开最新版本？</text>
   <text key="Report a bug">报告问题</text>
   <text key="Request a feature">请求新功能</text>
+  <text key="Settings for Camera Control Studio">Camera Control Studio 设置</text>
 </translations>

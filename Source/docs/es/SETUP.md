@@ -6,9 +6,9 @@
 
 [Solución de problemas](TROUBLESHOOTING.md)
 
-Abra el engranaje en el pie de página. La configuración se abre a la derecha. Su lista de posiciones permanece visible.
+Haz clic en el engranaje de la parte inferior para abrir la configuración. La configuración se abre en otra ventana. Puedes seguir usando la ventana principal.
 
-![Ventana principal con el panel de configuración abierto a la derecha](../images/screenshots/1.0.1/en/main-settings.png)
+![Ventana principal junto a la ventana de configuración independiente](../images/screenshots/settings-tabs/es/main-settings.png)
 
 ## Instalar y verificar la descarga.
 
@@ -111,7 +111,7 @@ Al seleccionar una fila permanente en la lista principal también se selecciona 
 
 ## 5. Establecer diseño e idioma
 
-Arrastre el divisor entre los controles de la cámara y la lista preestablecida. Su perfil guarda el divisor y el tamaño y posición de la ventana. El tamaño inicial es 900 × 500 y el mínimo es 670 × 450. La configuración comienza cerrada. Cuando los abre por primera vez después del lanzamiento, se selecciona la primera pestaña. Desplácese hacia abajo en **Paneo** o **Aplicación** si algunos campos están debajo de la ventana. La aplicación guarda el ancho de la ventana con la Configuración cerrada.
+Arrastre el divisor entre los controles de la cámara y la lista preestablecida. Tu perfil guarda la posición del divisor. El tamaño inicial es 900 × 500 y el mínimo es 670 × 450. La configuración comienza cerrada. Cuando los abre por primera vez después del lanzamiento, se selecciona la primera pestaña. Desplácese hacia abajo en **Paneo** o **Aplicación** si algunos campos están debajo de la ventana. Tu perfil guarda el tamaño y la posición de ambas ventanas.
 
 Al seleccionar un perfil en el pie de página, deje **Mantener la posición y la disposición actuales** sin marcar para restaurar el diseño de ese perfil. Márquelo para llevar el diseño actual al perfil seleccionado. La elección se recuerda en el perfil que dejas; el diseño transportado se guarda en el perfil de destino.
 

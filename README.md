@@ -49,15 +49,15 @@ In **Presets → Transitions**, choose a fixed duration or a movement speed for 
 | [Settings → Application](Source/docs/images/screenshots/1.0.1/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
 | [Video](Source/docs/images/screenshots/settings-tabs/en/image.png) | Adjust image controls, such as focus and exposure, and set the [field of view](Source/docs/images/screenshots/settings-tabs/en/field-of-view.png) if the camera driver supports it. Image settings are saved per camera and profile. |
 | [Profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
-| [Contact & About → Contact](Source/docs/images/screenshots/contact/en/issues.png) | Report a bug, request a feature, save a support ZIP, or configure diagnostic logs. |
-| [Contact & About → About](Source/docs/images/screenshots/contact/en/about.png) | Find the installed version, developer credit and project links. |
+| [Contact & About → Contact](Source/docs/images/screenshots/contact/en/issues.png) | Report a bug, request a feature, save a support ZIP, open project links, or configure diagnostic logs. |
+| [Contact & About → About](Source/docs/images/screenshots/contact/en/about.png) | Find the installed version, developer credit and the support link. |
 
-Drag the vertical divider to resize the camera controls and preset list. Hover over compact buttons for tooltips. The settings pane starts closed each time the app opens.
+Drag the vertical divider to resize the camera controls and preset list. Hover over compact buttons for tooltips. Settings opens in a separate window. You can keep using the main window. Your profile remembers the size and position of both windows.
 
 <details>
-<summary>See the settings pane and example tabs</summary>
+<summary>See the Settings window and example tabs</summary>
 
-![Main window with the settings pane open](Source/docs/images/screenshots/1.0.1/en/main-settings.png)
+![Main window beside the separate Settings window](Source/docs/images/screenshots/settings-tabs/en/main-settings.png)
 
 ![Panning tab with step sizes, direction controls and camera button options](Source/docs/images/screenshots/settings-tabs/en/settings.png)
 
@@ -67,7 +67,7 @@ Drag the vertical divider to resize the camera controls and preset list. Hover o
 
 ![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png)
 
-![About tab with developer information, project links and the installed version](Source/docs/images/screenshots/contact/en/about.png)
+![About tab with developer information and the installed version](Source/docs/images/screenshots/contact/en/about.png)
 
 </details>
 

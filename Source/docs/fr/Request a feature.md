@@ -1,8 +1,10 @@
 # Proposer une fonctionnalité
 
-1. Ouvrez le volet des paramètres. Sélectionnez **Contact et à propos → Contact → Proposer une fonctionnalité**.
+1. Cliquez sur la roue dentée en bas pour ouvrir les paramètres. Sélectionnez **Contact et à propos → Contact → Proposer une fonctionnalité**.
 2. Si une version plus récente existe, choisissez **Oui** pour ouvrir sa page de téléchargement. Installez-la et vérifiez si elle contient déjà la fonctionnalité. Choisissez **Non** pour continuer vers le brouillon GitHub.
 3. Dans le modèle **Feature request** de GitHub, décrivez la tâche, l’intérêt de la fonctionnalité et le résultat qui montrerait qu’elle fonctionne. Remplissez toutes les sections signalées par un astérisque rouge.
+
+Le lecteur de guides propose les mêmes boutons GitHub.
 
 ![Onglet de contact avec les boutons GitHub et ZIP de support](../images/screenshots/contact/fr/issues.png)
 

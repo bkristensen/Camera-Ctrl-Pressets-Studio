@@ -1,8 +1,10 @@
 # Fehler melden
 
-1. Öffnen Sie die Einstellungen. Wählen Sie **Kontakt & Info → Kontakt → Fehler melden**.
+1. Klicken Sie unten auf das Zahnrad, um die Einstellungen zu öffnen. Wählen Sie **Kontakt & Info → Kontakt → Fehler melden**.
 2. Wenn eine neuere Version verfügbar ist, wählen Sie **Ja**, um die Downloadseite zu öffnen. Installieren Sie sie und prüfen Sie, ob sich der Fehler reproduzieren lässt. Wählen Sie **Nein**, um zum GitHub-Entwurf zu gehen.
 3. Wenn die App ein Support-ZIP anbietet, wählen Sie **Ja** und einen Speicherort. Mit **Nein** öffnen Sie den Entwurf ohne Paket.
+
+Dieselben GitHub-Schaltflächen stehen im Handbuchfenster zur Verfügung.
 
 ![Registerkarte Kontakt mit Schaltflächen für GitHub und das Support-ZIP](../images/screenshots/contact/de/issues.png)
 

@@ -6,9 +6,9 @@
 
 [Troubleshooting](TROUBLESHOOTING.md)
 
-Open the gear in the footer. Settings open on the right. Your position list stays visible.
+Click the gear at the bottom to open Settings. Settings opens in a separate window. You can still use the main window.
 
-![Main window with the settings pane open on the right](../images/screenshots/1.0.1/en/main-settings.png)
+![Main window beside the separate Settings window](../images/screenshots/settings-tabs/en/main-settings.png)
 
 ## Install and verify the download
 
@@ -99,9 +99,9 @@ Presets save pan, tilt, zoom and the FOV reported by the driver. Older presets k
 
 [Before loading video controls](../images/screenshots/settings-tabs/en/video.png) · [Colour](../images/screenshots/1.0.1/en/video-colour.png) · [Light and detail](../images/screenshots/1.0.1/en/video-light-detail.png)
 
-Open **Video** in the settings pane, then load the image controls if needed. Choose a group such as **Focus and exposure**, **Colour**, or **Light and detail**. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
+Open **Video** in Settings, then load the image controls if needed. Choose a group such as **Focus and exposure**, **Colour**, or **Light and detail**. Only controls exposed by the driver appear. Adjust brightness, contrast, colour saturation, focus or white balance when available. Turn automatic mode off before manual adjustment. Image values are saved per camera and profile. The reset button restores the driver's defaults.
 
-Move the camera first. Open **Presets** in the settings pane. Click **+** to add a permanent preset. Select an icon at the top, check the name, then save. If the name is blank and unused, choosing an icon suggests its name. Combined symbols show their subjects from left to right.
+Move the camera first. Open **Presets** in Settings. Click **+** to add a permanent preset. Select an icon at the top, check the name, then save. If the name is blank and unused, choosing an icon suggests its name. Combined symbols show their subjects from left to right.
 
 Under **Permanent presets**, select a position. Hover over a symbol for its action. Use **✎** to edit its name and symbol, **↻** to save the current camera position in its place, and **−** to delete it. Use **↑** and **↓** to change the order in both lists. Permanent positions stay at the top of the main list in bold.
 
@@ -111,7 +111,7 @@ Selecting a permanent row in the main list also selects that preset in Settings.
 
 ## 5. Set layout and language
 
-Drag the divider between the camera controls and the preset list. Your profile saves the divider and the window's size and position. The initial size is 900 × 500, and the minimum is 670 × 450. Settings start closed. When you first open them after launch, the first tab is selected. Scroll down in **Panning** or **Application** if some fields are below the window. The app saves the window width with Settings closed.
+Drag the divider between the camera controls and the preset list. Your profile saves the divider position. The initial size is 900 × 500, and the minimum is 670 × 450. Settings start closed. When you first open them after launch, the first tab is selected. Scroll down in **Panning** or **Application** if some fields are below the window. Your profile remembers the size and position of both windows.
 
 When selecting a profile in the footer, leave **Keep current position and layout** unchecked to restore that profile's layout. Check it to carry the current layout into the selected profile. The choice is remembered in the profile you leave; the carried layout is saved in the destination profile.
 

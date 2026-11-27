@@ -1,0 +1,3984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+  <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="movementScroll.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="generalFields.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="generalFields.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="generalFields.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="finePanLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="finePanLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 0</value>
+  </data>
+  <data name="finePanLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="finePanLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 46</value>
+  </data>
+  <data name="finePanLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="finePanLabel.Text" xml:space="preserve">
+    <value>Fine speed (% of Normal)</value>
+  </data>
+  <data name="finePanLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;finePanLabel.Name" xml:space="preserve">
+    <value>finePanLabel</value>
+  </data>
+  <data name="&gt;&gt;finePanLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;finePanLabel.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;finePanLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="finePanPercent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="finePanPercent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 4</value>
+  </data>
+  <data name="finePanPercent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="finePanPercent.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>65, 0</value>
+  </data>
+  <data name="finePanPercent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="finePanPercent.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;finePanPercent.Name" xml:space="preserve">
+    <value>finePanPercent</value>
+  </data>
+  <data name="&gt;&gt;finePanPercent.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;finePanPercent.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;finePanPercent.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panStepsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panStepsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 46</value>
+  </data>
+  <data name="panStepsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="panStepsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 36</value>
+  </data>
+  <data name="panStepsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panStepsLabel.Text" xml:space="preserve">
+    <value>Normal pan steps</value>
+  </data>
+  <data name="panStepsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;panStepsLabel.Name" xml:space="preserve">
+    <value>panStepsLabel</value>
+  </data>
+  <data name="&gt;&gt;panStepsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panStepsLabel.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;panStepsLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panSteps.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panSteps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 50</value>
+  </data>
+  <data name="panSteps.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panSteps.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>65, 0</value>
+  </data>
+  <data name="panSteps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="panSteps.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panSteps.Name" xml:space="preserve">
+    <value>panSteps</value>
+  </data>
+  <data name="&gt;&gt;panSteps.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;panSteps.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;panSteps.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="fastPanStepsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="fastPanStepsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 82</value>
+  </data>
+  <data name="fastPanStepsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="fastPanStepsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 36</value>
+  </data>
+  <data name="fastPanStepsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="fastPanStepsLabel.Text" xml:space="preserve">
+    <value>Fast pan steps</value>
+  </data>
+  <data name="fastPanStepsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;fastPanStepsLabel.Name" xml:space="preserve">
+    <value>fastPanStepsLabel</value>
+  </data>
+  <data name="&gt;&gt;fastPanStepsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fastPanStepsLabel.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;fastPanStepsLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="fastPanSteps.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="fastPanSteps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 86</value>
+  </data>
+  <data name="fastPanSteps.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="fastPanSteps.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>65, 0</value>
+  </data>
+  <data name="fastPanSteps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="fastPanSteps.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;fastPanSteps.Name" xml:space="preserve">
+    <value>fastPanSteps</value>
+  </data>
+  <data name="&gt;&gt;fastPanSteps.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;fastPanSteps.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;fastPanSteps.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="zoomTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="zoomTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="zoomTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="zoomTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="zoomTab.Text" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;zoomTab.Name" xml:space="preserve">
+    <value>zoomTab</value>
+  </data>
+  <data name="&gt;&gt;zoomTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomTab.Parent" xml:space="preserve">
+    <value>settingsCategories</value>
+  </data>
+  <data name="&gt;&gt;zoomTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="zoomFields.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zoomFields.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="zoomFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="zoomFields.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="zoomFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="zoomFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 42</value>
+  </data>
+  <data name="zoomFields.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="zoomFields.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="zoomFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name=&quot;zoomStepsLabel&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;zoomSteps&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;/Controls&gt;&lt;Columns Styles=&quot;Percent,100,Absolute,100&quot; /&gt;&lt;Rows Styles=&quot;Absolute,42&quot; /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;zoomFields.Name" xml:space="preserve">
+    <value>zoomFields</value>
+  </data>
+  <data name="&gt;&gt;zoomFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomFields.Parent" xml:space="preserve">
+    <value>zoomTab</value>
+  </data>
+  <data name="&gt;&gt;zoomFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="zoomStepsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="zoomStepsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 0</value>
+  </data>
+  <data name="zoomStepsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="zoomStepsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 42</value>
+  </data>
+  <data name="zoomStepsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="zoomStepsLabel.Text" xml:space="preserve">
+    <value>Zoom steps</value>
+  </data>
+  <data name="zoomStepsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;zoomStepsLabel.Name" xml:space="preserve">
+    <value>zoomStepsLabel</value>
+  </data>
+  <data name="&gt;&gt;zoomStepsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomStepsLabel.Parent" xml:space="preserve">
+    <value>zoomFields</value>
+  </data>
+  <data name="&gt;&gt;zoomStepsLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="zoomSteps.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="zoomSteps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 4</value>
+  </data>
+  <data name="zoomSteps.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="zoomSteps.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>65, 0</value>
+  </data>
+  <data name="zoomSteps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="zoomSteps.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;zoomSteps.Name" xml:space="preserve">
+    <value>zoomSteps</value>
+  </data>
+  <data name="&gt;&gt;zoomSteps.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;zoomSteps.Parent" xml:space="preserve">
+    <value>zoomFields</value>
+  </data>
+  <data name="&gt;&gt;zoomSteps.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="useTransitionSpeed.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="useTransitionSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="useTransitionSpeed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 2, 4, 2</value>
+  </data>
+  <data name="useTransitionSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 34</value>
+  </data>
+  <data name="useTransitionSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="useTransitionSpeed.Text" xml:space="preserve">
+    <value>Use speed for preset transitions</value>
+  </data>
+  <data name="&gt;&gt;useTransitionSpeed.Name" xml:space="preserve">
+    <value>useTransitionSpeed</value>
+  </data>
+  <data name="&gt;&gt;useTransitionSpeed.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;useTransitionSpeed.Parent" xml:space="preserve">
+    <value>transitionFields</value>
+  </data>
+  <data name="&gt;&gt;useTransitionSpeed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="transitionSpeedLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="transitionSpeedLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 42</value>
+  </data>
+  <data name="transitionSpeedLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="transitionSpeedLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 46</value>
+  </data>
+  <data name="transitionSpeedLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="transitionSpeedLabel.Text" xml:space="preserve">
+    <value>Transition speed (%/s)</value>
+  </data>
+  <data name="transitionSpeedLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedLabel.Name" xml:space="preserve">
+    <value>transitionSpeedLabel</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedLabel.Parent" xml:space="preserve">
+    <value>transitionFields</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="transitionSpeedPercent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="transitionSpeedPercent.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="transitionSpeedPercent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 46</value>
+  </data>
+  <data name="transitionSpeedPercent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="transitionSpeedPercent.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>65, 0</value>
+  </data>
+  <data name="transitionSpeedPercent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="transitionSpeedPercent.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedPercent.Name" xml:space="preserve">
+    <value>transitionSpeedPercent</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedPercent.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedPercent.Parent" xml:space="preserve">
+    <value>transitionFields</value>
+  </data>
+  <data name="&gt;&gt;transitionSpeedPercent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="secondsLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="secondsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 88</value>
+  </data>
+  <data name="secondsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="secondsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 42</value>
+  </data>
+  <data name="secondsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="secondsLabel.Text" xml:space="preserve">
+    <value>Transition (sec.)</value>
+  </data>
+  <data name="secondsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;secondsLabel.Name" xml:space="preserve">
+    <value>secondsLabel</value>
+  </data>
+  <data name="&gt;&gt;secondsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondsLabel.Parent" xml:space="preserve">
+    <value>transitionFields</value>
+  </data>
+  <data name="&gt;&gt;secondsLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="seconds.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="seconds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 92</value>
+  </data>
+  <data name="seconds.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="seconds.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>65, 0</value>
+  </data>
+  <data name="seconds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="seconds.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;seconds.Name" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="&gt;&gt;seconds.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueNumericUpDown, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;seconds.Parent" xml:space="preserve">
+    <value>transitionFields</value>
+  </data>
+  <data name="&gt;&gt;seconds.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="reverseX.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="reverseX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 134</value>
+  </data>
+  <data name="reverseX.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="reverseX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 34</value>
+  </data>
+  <data name="reverseX.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="reverseX.Text" xml:space="preserve">
+    <value>Camera pan reverse left / right</value>
+  </data>
+  <data name="&gt;&gt;reverseX.Name" xml:space="preserve">
+    <value>reverseX</value>
+  </data>
+  <data name="&gt;&gt;reverseX.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;reverseX.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;reverseX.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="reverseY.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="reverseY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 176</value>
+  </data>
+  <data name="reverseY.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="reverseY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 34</value>
+  </data>
+  <data name="reverseY.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="reverseY.Text" xml:space="preserve">
+    <value>Camera pan reverse up / down</value>
+  </data>
+  <data name="&gt;&gt;reverseY.Name" xml:space="preserve">
+    <value>reverseY</value>
+  </data>
+  <data name="&gt;&gt;reverseY.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;reverseY.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;reverseY.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="fieldOfViewTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="fieldOfViewTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 209</value>
+  </data>
+  <data name="fieldOfViewTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="fieldOfViewTab.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="fieldOfViewTab.Text" xml:space="preserve">
+    <value>Field of view</value>
+  </data>
+  <data name="fieldOfViewFields.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fieldOfViewFields.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="fieldOfViewFields.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="fieldOfViewFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="fieldOfViewFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="fieldOfViewFields.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="fieldOfViewFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 208</value>
+  </data>
+  <data name="fieldOfViewFields.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="fieldOfViewFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name=&quot;startupFovLabel&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;startupFov&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;allowFov&quot; Row=&quot;1&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;adjustFovAtLimits&quot; Row=&quot;2&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;/Controls&gt;&lt;Columns Styles=&quot;Percent,48,Percent,52&quot; /&gt;&lt;Rows Styles=&quot;Absolute,112,Absolute,42,Absolute,54&quot; /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewFields.Name" xml:space="preserve">
+    <value>fieldOfViewFields</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewFields.Parent" xml:space="preserve">
+    <value>fieldOfViewTab</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewTab.Name" xml:space="preserve">
+    <value>fieldOfViewTab</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewTab.Parent" xml:space="preserve">
+    <value>imageCategories</value>
+  </data>
+  <data name="&gt;&gt;fieldOfViewTab.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="startupFovLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="startupFovLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="startupFovLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 112</value>
+  </data>
+  <data name="startupFovLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="startupFovLabel.Text" xml:space="preserve">
+    <value>Field of view at startup</value>
+  </data>
+  <data name="startupFovLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;startupFovLabel.Name" xml:space="preserve">
+    <value>startupFovLabel</value>
+  </data>
+  <data name="&gt;&gt;startupFovLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startupFovLabel.Parent" xml:space="preserve">
+    <value>fieldOfViewFields</value>
+  </data>
+  <data name="&gt;&gt;startupFovLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="startupFov.AccessibleName" xml:space="preserve">
+    <value>Field of view at startup</value>
+  </data>
+  <data name="startupFov.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="startupFov.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="startupFov.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="startupFov.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 3</value>
+  </data>
+  <data name="startupFov.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 106</value>
+  </data>
+  <data name="startupFov.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;startupFov.Name" xml:space="preserve">
+    <value>startupFov</value>
+  </data>
+  <data name="&gt;&gt;startupFov.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startupFov.Parent" xml:space="preserve">
+    <value>fieldOfViewFields</value>
+  </data>
+  <data name="&gt;&gt;startupFov.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="allowFov.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="allowFov.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 115</value>
+  </data>
+  <data name="allowFov.Size" type="System.Drawing.Size, System.Drawing">
+    <value>478, 36</value>
+  </data>
+  <data name="allowFov.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="allowFov.Text" xml:space="preserve">
+    <value>Allow manual FOV changes</value>
+  </data>
+  <data name="&gt;&gt;allowFov.Name" xml:space="preserve">
+    <value>allowFov</value>
+  </data>
+  <data name="&gt;&gt;allowFov.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;allowFov.Parent" xml:space="preserve">
+    <value>fieldOfViewFields</value>
+  </data>
+  <data name="&gt;&gt;allowFov.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="adjustFovAtLimits.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="adjustFovAtLimits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 157</value>
+  </data>
+  <data name="adjustFovAtLimits.Size" type="System.Drawing.Size, System.Drawing">
+    <value>478, 48</value>
+  </data>
+  <data name="adjustFovAtLimits.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="adjustFovAtLimits.Text" xml:space="preserve">
+    <value>Adjust field of view at zoom and pan limits</value>
+  </data>
+  <data name="&gt;&gt;adjustFovAtLimits.Name" xml:space="preserve">
+    <value>adjustFovAtLimits</value>
+  </data>
+  <data name="&gt;&gt;adjustFovAtLimits.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;adjustFovAtLimits.Parent" xml:space="preserve">
+    <value>fieldOfViewFields</value>
+  </data>
+  <data name="&gt;&gt;adjustFovAtLimits.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panWithCameraButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panWithCameraButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 230</value>
+  </data>
+  <data name="panWithCameraButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panWithCameraButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 34</value>
+  </data>
+  <data name="panWithCameraButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="panWithCameraButton.Text" xml:space="preserve">
+    <value>Drag the camera button to pan and tilt</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.Name" xml:space="preserve">
+    <value>panWithCameraButton</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;panWithCameraButton.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="doubleClickForCameraSource.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="doubleClickForCameraSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 272</value>
+  </data>
+  <data name="doubleClickForCameraSource.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="doubleClickForCameraSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 34</value>
+  </data>
+  <data name="doubleClickForCameraSource.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="doubleClickForCameraSource.Text" xml:space="preserve">
+    <value>Double-click the camera button to choose a source</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.Name" xml:space="preserve">
+    <value>doubleClickForCameraSource</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;doubleClickForCameraSource.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="directionSeparator.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="directionSeparator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="directionSeparator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 118</value>
+  </data>
+  <data name="directionSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 12</value>
+  </data>
+  <data name="directionSeparator.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;directionSeparator.Name" xml:space="preserve">
+    <value>directionSeparator</value>
+  </data>
+  <data name="&gt;&gt;directionSeparator.Type" xml:space="preserve">
+    <value>CameraControlStudio.MainViewSeparator, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;directionSeparator.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;directionSeparator.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cameraButtonSeparator.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="cameraButtonSeparator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="cameraButtonSeparator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 214</value>
+  </data>
+  <data name="cameraButtonSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 12</value>
+  </data>
+  <data name="cameraButtonSeparator.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cameraButtonSeparator.Name" xml:space="preserve">
+    <value>cameraButtonSeparator</value>
+  </data>
+  <data name="&gt;&gt;cameraButtonSeparator.Type" xml:space="preserve">
+    <value>CameraControlStudio.MainViewSeparator, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cameraButtonSeparator.Parent" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;cameraButtonSeparator.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="generalFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="generalFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="generalFields.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="generalFields.RowCount" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="generalFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>473, 310</value>
+  </data>
+  <data name="generalFields.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;generalFields.Name" xml:space="preserve">
+    <value>generalFields</value>
+  </data>
+  <data name="&gt;&gt;generalFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generalFields.Parent" xml:space="preserve">
+    <value>movementScroll</value>
+  </data>
+  <data name="&gt;&gt;generalFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="generalFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name=&quot;finePanLabel&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;finePanPercent&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;panStepsLabel&quot; Row=&quot;1&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;panSteps&quot; Row=&quot;1&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;fastPanStepsLabel&quot; Row=&quot;2&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;fastPanSteps&quot; Row=&quot;2&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;directionSeparator&quot; Row=&quot;3&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;reverseX&quot; Row=&quot;4&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;reverseY&quot; Row=&quot;5&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;cameraButtonSeparator&quot; Row=&quot;6&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;panWithCameraButton&quot; Row=&quot;7&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;doubleClickForCameraSource&quot; Row=&quot;8&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;/Controls&gt;&lt;Columns Styles=&quot;Percent,100,Absolute,100&quot; /&gt;&lt;Rows Styles=&quot;Absolute,46,Absolute,36,Absolute,36,Absolute,12,Absolute,42,Absolute,42,Absolute,12,Absolute,42,Absolute,42&quot; /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="movementScroll.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="movementScroll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 24</value>
+  </data>
+  <data name="movementScroll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 297</value>
+  </data>
+  <data name="movementScroll.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;movementScroll.Name" xml:space="preserve">
+    <value>movementScroll</value>
+  </data>
+  <data name="&gt;&gt;movementScroll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;movementScroll.Parent" xml:space="preserve">
+    <value>motionGroup</value>
+  </data>
+  <data name="&gt;&gt;movementScroll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="motionGroup.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="motionGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="motionGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="motionGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="motionGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="motionGroup.Text" xml:space="preserve">
+    <value>Pan and tilt</value>
+  </data>
+  <data name="&gt;&gt;motionGroup.Name" xml:space="preserve">
+    <value>motionGroup</value>
+  </data>
+  <data name="&gt;&gt;motionGroup.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;motionGroup.Parent" xml:space="preserve">
+    <value>motionTab</value>
+  </data>
+  <data name="&gt;&gt;motionGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="motionTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="motionTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="motionTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="motionTab.Text" xml:space="preserve">
+    <value>Panning</value>
+  </data>
+  <data name="&gt;&gt;motionTab.Name" xml:space="preserve">
+    <value>motionTab</value>
+  </data>
+  <data name="&gt;&gt;motionTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;motionTab.Parent" xml:space="preserve">
+    <value>settingsCategories</value>
+  </data>
+  <data name="&gt;&gt;motionTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;applicationScroll.Name" xml:space="preserve">
+    <value>applicationScroll</value>
+  </data>
+  <data name="&gt;&gt;applicationScroll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;applicationScroll.Parent" xml:space="preserve">
+    <value>applicationTab</value>
+  </data>
+  <data name="&gt;&gt;applicationScroll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="applicationTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="applicationTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="applicationTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="applicationTab.Text" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="&gt;&gt;applicationTab.Name" xml:space="preserve">
+    <value>applicationTab</value>
+  </data>
+  <data name="&gt;&gt;applicationTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;applicationTab.Parent" xml:space="preserve">
+    <value>settingsCategories</value>
+  </data>
+  <data name="&gt;&gt;applicationTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="settingsCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="settingsCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="settingsCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 358</value>
+  </data>
+  <data name="settingsCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;settingsCategories.Name" xml:space="preserve">
+    <value>settingsCategories</value>
+  </data>
+  <data name="&gt;&gt;settingsCategories.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueTabControl, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;settingsCategories.Parent" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="&gt;&gt;settingsCategories.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="applicationScroll.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;applicationFields.Name" xml:space="preserve">
+    <value>applicationFields</value>
+  </data>
+  <data name="&gt;&gt;applicationFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;applicationFields.Parent" xml:space="preserve">
+    <value>applicationScroll</value>
+  </data>
+  <data name="&gt;&gt;applicationFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="applicationFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="windowGroup" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="languageGroup" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,114,Absolute,61" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="applicationScroll.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="applicationScroll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="applicationScroll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="applicationScroll.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="applicationFields.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="applicationFields.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="applicationFields.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;windowGroup.Name" xml:space="preserve">
+    <value>windowGroup</value>
+  </data>
+  <data name="&gt;&gt;windowGroup.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;windowGroup.Parent" xml:space="preserve">
+    <value>applicationFields</value>
+  </data>
+  <data name="&gt;&gt;windowGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;languageGroup.Name" xml:space="preserve">
+    <value>languageGroup</value>
+  </data>
+  <data name="&gt;&gt;languageGroup.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;languageGroup.Parent" xml:space="preserve">
+    <value>applicationFields</value>
+  </data>
+  <data name="&gt;&gt;languageGroup.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="applicationFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="applicationFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="applicationFields.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="applicationFields.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="applicationFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 183</value>
+  </data>
+  <data name="applicationFields.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;windowFields.Name" xml:space="preserve">
+    <value>windowFields</value>
+  </data>
+  <data name="&gt;&gt;windowFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;windowFields.Parent" xml:space="preserve">
+    <value>windowGroup</value>
+  </data>
+  <data name="&gt;&gt;windowFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="windowFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="streamingCheck" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="alwaysTop" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,52,Absolute,29" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="windowGroup.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="windowGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="windowGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="windowGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>490, 108</value>
+  </data>
+  <data name="windowGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="windowGroup.Text" xml:space="preserve">
+    <value>Window and streaming</value>
+  </data>
+  <data name="windowFields.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;streamingCheck.Name" xml:space="preserve">
+    <value>streamingCheck</value>
+  </data>
+  <data name="&gt;&gt;streamingCheck.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;streamingCheck.Parent" xml:space="preserve">
+    <value>windowFields</value>
+  </data>
+  <data name="&gt;&gt;streamingCheck.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;alwaysTop.Name" xml:space="preserve">
+    <value>alwaysTop</value>
+  </data>
+  <data name="&gt;&gt;alwaysTop.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;alwaysTop.Parent" xml:space="preserve">
+    <value>windowFields</value>
+  </data>
+  <data name="&gt;&gt;alwaysTop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="windowFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="windowFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 24</value>
+  </data>
+  <data name="windowFields.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="windowFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 80</value>
+  </data>
+  <data name="windowFields.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="streamingCheck.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="streamingCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="streamingCheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="streamingCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 44</value>
+  </data>
+  <data name="streamingCheck.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="streamingCheck.Text" xml:space="preserve">
+    <value>Ask whether streaming has started before using the camera</value>
+  </data>
+  <data name="alwaysTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="alwaysTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 56</value>
+  </data>
+  <data name="alwaysTop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="alwaysTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 21</value>
+  </data>
+  <data name="alwaysTop.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="alwaysTop.Text" xml:space="preserve">
+    <value>Always on top</value>
+  </data>
+  <data name="&gt;&gt;language.Name" xml:space="preserve">
+    <value>language</value>
+  </data>
+  <data name="&gt;&gt;language.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;language.Parent" xml:space="preserve">
+    <value>languageGroup</value>
+  </data>
+  <data name="&gt;&gt;language.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="languageGroup.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="languageGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 121</value>
+  </data>
+  <data name="languageGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="languageGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>490, 55</value>
+  </data>
+  <data name="languageGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="languageGroup.Text" xml:space="preserve">
+    <value>Profile language</value>
+  </data>
+  <data name="language.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="language.ItemHeight" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 24</value>
+  </data>
+  <data name="language.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 28</value>
+  </data>
+  <data name="language.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="videoLayout.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;videoStatus.Name" xml:space="preserve">
+    <value>videoStatus</value>
+  </data>
+  <data name="&gt;&gt;videoStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoStatus.Parent" xml:space="preserve">
+    <value>videoLayout</value>
+  </data>
+  <data name="&gt;&gt;videoStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;imagePages.Name" xml:space="preserve">
+    <value>imagePages</value>
+  </data>
+  <data name="&gt;&gt;imagePages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imagePages.Parent" xml:space="preserve">
+    <value>videoLayout</value>
+  </data>
+  <data name="&gt;&gt;imagePages.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="imagePages.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="imageCategories" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="resetVideoControls" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="videoLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="videoLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="videoLayout.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="videoLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 358</value>
+  </data>
+  <data name="videoLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;videoLayout.Name" xml:space="preserve">
+    <value>videoLayout</value>
+  </data>
+  <data name="&gt;&gt;videoLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoLayout.Parent" xml:space="preserve">
+    <value>imageTab</value>
+  </data>
+  <data name="&gt;&gt;videoLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="videoLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="videoStatus" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="imagePages" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="videoStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;loadVideoControls.Name" xml:space="preserve">
+    <value>loadVideoControls</value>
+  </data>
+  <data name="&gt;&gt;loadVideoControls.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;loadVideoControls.Parent" xml:space="preserve">
+    <value>videoStatus</value>
+  </data>
+  <data name="&gt;&gt;loadVideoControls.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;noVideoControls.Name" xml:space="preserve">
+    <value>noVideoControls</value>
+  </data>
+  <data name="&gt;&gt;noVideoControls.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;noVideoControls.Parent" xml:space="preserve">
+    <value>videoStatus</value>
+  </data>
+  <data name="&gt;&gt;noVideoControls.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="videoStatus.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="videoStatus.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="videoStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="videoStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 78</value>
+  </data>
+  <data name="videoStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="videoStatus.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="loadVideoControls.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="loadVideoControls.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="loadVideoControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="loadVideoControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 32</value>
+  </data>
+  <data name="loadVideoControls.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="loadVideoControls.Text" xml:space="preserve">
+    <value>Load image controls</value>
+  </data>
+  <data name="noVideoControls.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="noVideoControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 38</value>
+  </data>
+  <data name="noVideoControls.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>246, 0</value>
+  </data>
+  <data name="noVideoControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 40</value>
+  </data>
+  <data name="noVideoControls.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="noVideoControls.Text" xml:space="preserve">
+    <value>No image controls available through the driver.</value>
+  </data>
+  <data name="imagePages.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;imageCategories.Name" xml:space="preserve">
+    <value>imageCategories</value>
+  </data>
+  <data name="&gt;&gt;imageCategories.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueTabControl, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;imageCategories.Parent" xml:space="preserve">
+    <value>imagePages</value>
+  </data>
+  <data name="&gt;&gt;imageCategories.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;resetVideoControls.Name" xml:space="preserve">
+    <value>resetVideoControls</value>
+  </data>
+  <data name="&gt;&gt;resetVideoControls.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;resetVideoControls.Parent" xml:space="preserve">
+    <value>imagePages</value>
+  </data>
+  <data name="&gt;&gt;resetVideoControls.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="imagePages.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="imagePages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="imagePages.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="imagePages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 268</value>
+  </data>
+  <data name="imagePages.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;focusTab.Name" xml:space="preserve">
+    <value>focusTab</value>
+  </data>
+  <data name="&gt;&gt;focusTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;focusTab.Parent" xml:space="preserve">
+    <value>imageCategories</value>
+  </data>
+  <data name="&gt;&gt;focusTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;colourTab.Name" xml:space="preserve">
+    <value>colourTab</value>
+  </data>
+  <data name="&gt;&gt;colourTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colourTab.Parent" xml:space="preserve">
+    <value>imageCategories</value>
+  </data>
+  <data name="&gt;&gt;colourTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lightTab.Name" xml:space="preserve">
+    <value>lightTab</value>
+  </data>
+  <data name="&gt;&gt;lightTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lightTab.Parent" xml:space="preserve">
+    <value>imageCategories</value>
+  </data>
+  <data name="&gt;&gt;lightTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="imageCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="imageCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="imageCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 230</value>
+  </data>
+  <data name="imageCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;focusPanel.Name" xml:space="preserve">
+    <value>focusPanel</value>
+  </data>
+  <data name="&gt;&gt;focusPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;focusPanel.Parent" xml:space="preserve">
+    <value>focusTab</value>
+  </data>
+  <data name="&gt;&gt;focusPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="focusTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="focusTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 197</value>
+  </data>
+  <data name="focusTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="focusTab.Text" xml:space="preserve">
+    <value>Focus and exposure</value>
+  </data>
+  <data name="focusPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gainControl.Name" xml:space="preserve">
+    <value>gainControl</value>
+  </data>
+  <data name="&gt;&gt;gainControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gainControl.Parent" xml:space="preserve">
+    <value>focusPanel</value>
+  </data>
+  <data name="&gt;&gt;gainControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;exposureControl.Name" xml:space="preserve">
+    <value>exposureControl</value>
+  </data>
+  <data name="&gt;&gt;exposureControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;exposureControl.Parent" xml:space="preserve">
+    <value>focusPanel</value>
+  </data>
+  <data name="&gt;&gt;exposureControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;focusControl.Name" xml:space="preserve">
+    <value>focusControl</value>
+  </data>
+  <data name="&gt;&gt;focusControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;focusControl.Parent" xml:space="preserve">
+    <value>focusPanel</value>
+  </data>
+  <data name="&gt;&gt;focusControl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="focusPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="focusPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="focusPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 197</value>
+  </data>
+  <data name="focusPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gainControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gainControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;gainAutomatic.Name" xml:space="preserve">
+    <value>gainAutomatic</value>
+  </data>
+  <data name="&gt;&gt;gainAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gainAutomatic.Parent" xml:space="preserve">
+    <value>gainControl</value>
+  </data>
+  <data name="&gt;&gt;gainAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gainSlider.Name" xml:space="preserve">
+    <value>gainSlider</value>
+  </data>
+  <data name="&gt;&gt;gainSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gainSlider.Parent" xml:space="preserve">
+    <value>gainControl</value>
+  </data>
+  <data name="&gt;&gt;gainSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gainControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gainControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 150</value>
+  </data>
+  <data name="gainControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="gainControl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gainControl.Text" xml:space="preserve">
+    <value>Gain</value>
+  </data>
+  <data name="gainAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gainAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="gainAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="gainAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="gainAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gainAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="gainSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gainSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gainSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="gainSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="gainSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="exposureControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="exposureControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;exposureAutomatic.Name" xml:space="preserve">
+    <value>exposureAutomatic</value>
+  </data>
+  <data name="&gt;&gt;exposureAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;exposureAutomatic.Parent" xml:space="preserve">
+    <value>exposureControl</value>
+  </data>
+  <data name="&gt;&gt;exposureAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;exposureSlider.Name" xml:space="preserve">
+    <value>exposureSlider</value>
+  </data>
+  <data name="&gt;&gt;exposureSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exposureSlider.Parent" xml:space="preserve">
+    <value>exposureControl</value>
+  </data>
+  <data name="&gt;&gt;exposureSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="exposureControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="exposureControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 75</value>
+  </data>
+  <data name="exposureControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="exposureControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="exposureControl.Text" xml:space="preserve">
+    <value>Exposure</value>
+  </data>
+  <data name="exposureAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="exposureAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="exposureAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="exposureAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="exposureAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="exposureAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="exposureSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="exposureSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="exposureSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="exposureSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="exposureSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="focusControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="focusControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;focusAutomatic.Name" xml:space="preserve">
+    <value>focusAutomatic</value>
+  </data>
+  <data name="&gt;&gt;focusAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;focusAutomatic.Parent" xml:space="preserve">
+    <value>focusControl</value>
+  </data>
+  <data name="&gt;&gt;focusAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;focusSlider.Name" xml:space="preserve">
+    <value>focusSlider</value>
+  </data>
+  <data name="&gt;&gt;focusSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;focusSlider.Parent" xml:space="preserve">
+    <value>focusControl</value>
+  </data>
+  <data name="&gt;&gt;focusSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="focusControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="focusControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="focusControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="focusControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="focusControl.Text" xml:space="preserve">
+    <value>Focus</value>
+  </data>
+  <data name="focusAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="focusAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="focusAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="focusAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="focusAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="focusAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="focusSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="focusSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="focusSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="focusSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="focusSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;colourPanel.Name" xml:space="preserve">
+    <value>colourPanel</value>
+  </data>
+  <data name="&gt;&gt;colourPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colourPanel.Parent" xml:space="preserve">
+    <value>colourTab</value>
+  </data>
+  <data name="&gt;&gt;colourPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="colourTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="colourTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 209</value>
+  </data>
+  <data name="colourTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="colourTab.Text" xml:space="preserve">
+    <value>Colour</value>
+  </data>
+  <data name="colourPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceControl.Name" xml:space="preserve">
+    <value>whiteBalanceControl</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceControl.Parent" xml:space="preserve">
+    <value>colourPanel</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;saturationControl.Name" xml:space="preserve">
+    <value>saturationControl</value>
+  </data>
+  <data name="&gt;&gt;saturationControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;saturationControl.Parent" xml:space="preserve">
+    <value>colourPanel</value>
+  </data>
+  <data name="&gt;&gt;saturationControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gammaControl.Name" xml:space="preserve">
+    <value>gammaControl</value>
+  </data>
+  <data name="&gt;&gt;gammaControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gammaControl.Parent" xml:space="preserve">
+    <value>colourPanel</value>
+  </data>
+  <data name="&gt;&gt;gammaControl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;hueControl.Name" xml:space="preserve">
+    <value>hueControl</value>
+  </data>
+  <data name="&gt;&gt;hueControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;hueControl.Parent" xml:space="preserve">
+    <value>colourPanel</value>
+  </data>
+  <data name="&gt;&gt;hueControl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="colourPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="colourPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="colourPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 209</value>
+  </data>
+  <data name="colourPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="whiteBalanceControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="whiteBalanceControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceAutomatic.Name" xml:space="preserve">
+    <value>whiteBalanceAutomatic</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceAutomatic.Parent" xml:space="preserve">
+    <value>whiteBalanceControl</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceSlider.Name" xml:space="preserve">
+    <value>whiteBalanceSlider</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceSlider.Parent" xml:space="preserve">
+    <value>whiteBalanceControl</value>
+  </data>
+  <data name="&gt;&gt;whiteBalanceSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="whiteBalanceControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="whiteBalanceControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 225</value>
+  </data>
+  <data name="whiteBalanceControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="whiteBalanceControl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="whiteBalanceControl.Text" xml:space="preserve">
+    <value>White balance</value>
+  </data>
+  <data name="whiteBalanceAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="whiteBalanceAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="whiteBalanceAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="whiteBalanceAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="whiteBalanceAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="whiteBalanceAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="whiteBalanceSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="whiteBalanceSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="whiteBalanceSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="whiteBalanceSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="whiteBalanceSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="saturationControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="saturationControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;saturationAutomatic.Name" xml:space="preserve">
+    <value>saturationAutomatic</value>
+  </data>
+  <data name="&gt;&gt;saturationAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;saturationAutomatic.Parent" xml:space="preserve">
+    <value>saturationControl</value>
+  </data>
+  <data name="&gt;&gt;saturationAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;saturationSlider.Name" xml:space="preserve">
+    <value>saturationSlider</value>
+  </data>
+  <data name="&gt;&gt;saturationSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saturationSlider.Parent" xml:space="preserve">
+    <value>saturationControl</value>
+  </data>
+  <data name="&gt;&gt;saturationSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="saturationControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="saturationControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 150</value>
+  </data>
+  <data name="saturationControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="saturationControl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="saturationControl.Text" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="saturationAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="saturationAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="saturationAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="saturationAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="saturationAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="saturationAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="saturationSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saturationSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="saturationSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="saturationSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="saturationSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gammaControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gammaControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;gammaAutomatic.Name" xml:space="preserve">
+    <value>gammaAutomatic</value>
+  </data>
+  <data name="&gt;&gt;gammaAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gammaAutomatic.Parent" xml:space="preserve">
+    <value>gammaControl</value>
+  </data>
+  <data name="&gt;&gt;gammaAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gammaSlider.Name" xml:space="preserve">
+    <value>gammaSlider</value>
+  </data>
+  <data name="&gt;&gt;gammaSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gammaSlider.Parent" xml:space="preserve">
+    <value>gammaControl</value>
+  </data>
+  <data name="&gt;&gt;gammaSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gammaControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gammaControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 75</value>
+  </data>
+  <data name="gammaControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="gammaControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gammaControl.Text" xml:space="preserve">
+    <value>Gamma</value>
+  </data>
+  <data name="gammaAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gammaAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="gammaAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="gammaAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="gammaAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gammaAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="gammaSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gammaSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gammaSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="gammaSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="gammaSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="hueControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hueControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;hueAutomatic.Name" xml:space="preserve">
+    <value>hueAutomatic</value>
+  </data>
+  <data name="&gt;&gt;hueAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;hueAutomatic.Parent" xml:space="preserve">
+    <value>hueControl</value>
+  </data>
+  <data name="&gt;&gt;hueAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;hueSlider.Name" xml:space="preserve">
+    <value>hueSlider</value>
+  </data>
+  <data name="&gt;&gt;hueSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hueSlider.Parent" xml:space="preserve">
+    <value>hueControl</value>
+  </data>
+  <data name="&gt;&gt;hueSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="hueControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="hueControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="hueControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="hueControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="hueControl.Text" xml:space="preserve">
+    <value>Hue</value>
+  </data>
+  <data name="hueAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="hueAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="hueAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="hueAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="hueAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="hueAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="hueSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="hueSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="hueSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="hueSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="hueSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lightPanel.Name" xml:space="preserve">
+    <value>lightPanel</value>
+  </data>
+  <data name="&gt;&gt;lightPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lightPanel.Parent" xml:space="preserve">
+    <value>lightTab</value>
+  </data>
+  <data name="&gt;&gt;lightPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lightTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="lightTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 209</value>
+  </data>
+  <data name="lightTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lightTab.Text" xml:space="preserve">
+    <value>Light and detail</value>
+  </data>
+  <data name="lightPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;contrastControl.Name" xml:space="preserve">
+    <value>contrastControl</value>
+  </data>
+  <data name="&gt;&gt;contrastControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;contrastControl.Parent" xml:space="preserve">
+    <value>lightPanel</value>
+  </data>
+  <data name="&gt;&gt;contrastControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;brightnessControl.Name" xml:space="preserve">
+    <value>brightnessControl</value>
+  </data>
+  <data name="&gt;&gt;brightnessControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;brightnessControl.Parent" xml:space="preserve">
+    <value>lightPanel</value>
+  </data>
+  <data name="&gt;&gt;brightnessControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;backlightControl.Name" xml:space="preserve">
+    <value>backlightControl</value>
+  </data>
+  <data name="&gt;&gt;backlightControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;backlightControl.Parent" xml:space="preserve">
+    <value>lightPanel</value>
+  </data>
+  <data name="&gt;&gt;backlightControl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;sharpnessControl.Name" xml:space="preserve">
+    <value>sharpnessControl</value>
+  </data>
+  <data name="&gt;&gt;sharpnessControl.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;sharpnessControl.Parent" xml:space="preserve">
+    <value>lightPanel</value>
+  </data>
+  <data name="&gt;&gt;sharpnessControl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lightPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lightPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lightPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 209</value>
+  </data>
+  <data name="lightPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contrastControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="contrastControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;contrastAutomatic.Name" xml:space="preserve">
+    <value>contrastAutomatic</value>
+  </data>
+  <data name="&gt;&gt;contrastAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;contrastAutomatic.Parent" xml:space="preserve">
+    <value>contrastControl</value>
+  </data>
+  <data name="&gt;&gt;contrastAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;contrastSlider.Name" xml:space="preserve">
+    <value>contrastSlider</value>
+  </data>
+  <data name="&gt;&gt;contrastSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contrastSlider.Parent" xml:space="preserve">
+    <value>contrastControl</value>
+  </data>
+  <data name="&gt;&gt;contrastSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="contrastControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="contrastControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 225</value>
+  </data>
+  <data name="contrastControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="contrastControl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="contrastControl.Text" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="contrastAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="contrastAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="contrastAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="contrastAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="contrastAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="contrastAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="contrastSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="contrastSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="contrastSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="contrastSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="contrastSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="brightnessControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="brightnessControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;brightnessAutomatic.Name" xml:space="preserve">
+    <value>brightnessAutomatic</value>
+  </data>
+  <data name="&gt;&gt;brightnessAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;brightnessAutomatic.Parent" xml:space="preserve">
+    <value>brightnessControl</value>
+  </data>
+  <data name="&gt;&gt;brightnessAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;brightnessSlider.Name" xml:space="preserve">
+    <value>brightnessSlider</value>
+  </data>
+  <data name="&gt;&gt;brightnessSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;brightnessSlider.Parent" xml:space="preserve">
+    <value>brightnessControl</value>
+  </data>
+  <data name="&gt;&gt;brightnessSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="brightnessControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="brightnessControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 150</value>
+  </data>
+  <data name="brightnessControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="brightnessControl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="brightnessControl.Text" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="brightnessAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="brightnessAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="brightnessAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="brightnessAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="brightnessAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="brightnessAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="brightnessSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="brightnessSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="brightnessSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="brightnessSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="brightnessSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="backlightControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="backlightControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;backlightAutomatic.Name" xml:space="preserve">
+    <value>backlightAutomatic</value>
+  </data>
+  <data name="&gt;&gt;backlightAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;backlightAutomatic.Parent" xml:space="preserve">
+    <value>backlightControl</value>
+  </data>
+  <data name="&gt;&gt;backlightAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;backlightSlider.Name" xml:space="preserve">
+    <value>backlightSlider</value>
+  </data>
+  <data name="&gt;&gt;backlightSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backlightSlider.Parent" xml:space="preserve">
+    <value>backlightControl</value>
+  </data>
+  <data name="&gt;&gt;backlightSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="backlightControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="backlightControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 75</value>
+  </data>
+  <data name="backlightControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="backlightControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="backlightControl.Text" xml:space="preserve">
+    <value>Backlight compensation</value>
+  </data>
+  <data name="backlightAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="backlightAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="backlightAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="backlightAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="backlightAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="backlightAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="backlightSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="backlightSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="backlightSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="backlightSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="backlightSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="sharpnessControl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sharpnessControl.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;sharpnessAutomatic.Name" xml:space="preserve">
+    <value>sharpnessAutomatic</value>
+  </data>
+  <data name="&gt;&gt;sharpnessAutomatic.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueCheckBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;sharpnessAutomatic.Parent" xml:space="preserve">
+    <value>sharpnessControl</value>
+  </data>
+  <data name="&gt;&gt;sharpnessAutomatic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;sharpnessSlider.Name" xml:space="preserve">
+    <value>sharpnessSlider</value>
+  </data>
+  <data name="&gt;&gt;sharpnessSlider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sharpnessSlider.Parent" xml:space="preserve">
+    <value>sharpnessControl</value>
+  </data>
+  <data name="&gt;&gt;sharpnessSlider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="sharpnessControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="sharpnessControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="sharpnessControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 75</value>
+  </data>
+  <data name="sharpnessControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="sharpnessControl.Text" xml:space="preserve">
+    <value>Sharpness</value>
+  </data>
+  <data name="sharpnessAutomatic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="sharpnessAutomatic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="sharpnessAutomatic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="sharpnessAutomatic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 23</value>
+  </data>
+  <data name="sharpnessAutomatic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="sharpnessAutomatic.Text" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="sharpnessSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="sharpnessSlider.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="sharpnessSlider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="sharpnessSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 26</value>
+  </data>
+  <data name="sharpnessSlider.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="resetVideoControls.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="resetVideoControls.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="resetVideoControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 239</value>
+  </data>
+  <data name="resetVideoControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 26</value>
+  </data>
+  <data name="resetVideoControls.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resetVideoControls.Text" xml:space="preserve">
+    <value>Reset image to driver defaults</value>
+  </data>
+  <data name="&gt;&gt;issueGroups.Name" xml:space="preserve">
+    <value>issueGroups</value>
+  </data>
+  <data name="&gt;&gt;issueGroups.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;issueGroups.Parent" xml:space="preserve">
+    <value>contactTab</value>
+  </data>
+  <data name="&gt;&gt;issueGroups.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="contactTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="contactTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="contactTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="contactTab.Text" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="&gt;&gt;contactTab.Name" xml:space="preserve">
+    <value>contactTab</value>
+  </data>
+  <data name="&gt;&gt;contactTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contactTab.Parent" xml:space="preserve">
+    <value>contactCategories</value>
+  </data>
+  <data name="&gt;&gt;contactTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="issueGroups.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="issueGroups.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;logGroup.Name" xml:space="preserve">
+    <value>logGroup</value>
+  </data>
+  <data name="&gt;&gt;logGroup.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;logGroup.Parent" xml:space="preserve">
+    <value>issueGroups</value>
+  </data>
+  <data name="&gt;&gt;logGroup.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;reportGroup.Name" xml:space="preserve">
+    <value>reportGroup</value>
+  </data>
+  <data name="&gt;&gt;reportGroup.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;reportGroup.Parent" xml:space="preserve">
+    <value>issueGroups</value>
+  </data>
+  <data name="&gt;&gt;reportGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="issueGroups.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="issueGroups.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="issueGroups.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="issueGroups.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="issueGroups.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;logActions.Name" xml:space="preserve">
+    <value>logActions</value>
+  </data>
+  <data name="&gt;&gt;logActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logActions.Parent" xml:space="preserve">
+    <value>logGroup</value>
+  </data>
+  <data name="&gt;&gt;logActions.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="logGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 228</value>
+  </data>
+  <data name="logGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="logGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 95</value>
+  </data>
+  <data name="logGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="logGroup.Text" xml:space="preserve">
+    <value>Diagnostic logs</value>
+  </data>
+  <data name="&gt;&gt;logSettingsLink.Name" xml:space="preserve">
+    <value>logSettingsLink</value>
+  </data>
+  <data name="&gt;&gt;logSettingsLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logSettingsLink.Parent" xml:space="preserve">
+    <value>logActions</value>
+  </data>
+  <data name="&gt;&gt;logSettingsLink.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;showLogLink.Name" xml:space="preserve">
+    <value>showLogLink</value>
+  </data>
+  <data name="&gt;&gt;showLogLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showLogLink.Parent" xml:space="preserve">
+    <value>logActions</value>
+  </data>
+  <data name="&gt;&gt;showLogLink.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="logActions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="logActions.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="logActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 24</value>
+  </data>
+  <data name="logActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 67</value>
+  </data>
+  <data name="logActions.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="logActions.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="logSettingsLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="logSettingsLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 3</value>
+  </data>
+  <data name="logSettingsLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 3, 5, 3</value>
+  </data>
+  <data name="logSettingsLink.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="logSettingsLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="logSettingsLink.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="logSettingsLink.Text" xml:space="preserve">
+    <value>Log settings</value>
+  </data>
+  <data name="showLogLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showLogLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 29</value>
+  </data>
+  <data name="showLogLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 3, 5, 3</value>
+  </data>
+  <data name="showLogLink.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="showLogLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="showLogLink.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="showLogLink.Text" xml:space="preserve">
+    <value>Show log file</value>
+  </data>
+  <data name="reportGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="reportGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="reportGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 335</value>
+  </data>
+  <data name="reportGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="reportGroup.Text" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="openGuideButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="openGuideButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 231</value>
+  </data>
+  <data name="openGuideButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 30</value>
+  </data>
+  <data name="openGuideButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="openGuideButton.Text" xml:space="preserve">
+    <value>Open guide viewer</value>
+  </data>
+  <data name="&gt;&gt;openGuideButton.Name" xml:space="preserve">
+    <value>openGuideButton</value>
+  </data>
+  <data name="&gt;&gt;openGuideButton.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;openGuideButton.Parent" xml:space="preserve">
+    <value>aboutPanel</value>
+  </data>
+  <data name="&gt;&gt;openGuideButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;permanentPanel.Name" xml:space="preserve">
+    <value>permanentPanel</value>
+  </data>
+  <data name="&gt;&gt;permanentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;permanentPanel.Parent" xml:space="preserve">
+    <value>permanentPresetsTab</value>
+  </data>
+  <data name="&gt;&gt;permanentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="permanentPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name=&quot;permanentList&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;permanentActions&quot; Row=&quot;1&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;/Controls&gt;&lt;Columns Styles=&quot;Percent,100&quot; /&gt;&lt;Rows Styles=&quot;Percent,100,Absolute,38&quot; /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="presetCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="presetCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="presetCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 358</value>
+  </data>
+  <data name="presetCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;presetCategories.Name" xml:space="preserve">
+    <value>presetCategories</value>
+  </data>
+  <data name="&gt;&gt;presetCategories.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueTabControl, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;presetCategories.Parent" xml:space="preserve">
+    <value>presetsTab</value>
+  </data>
+  <data name="&gt;&gt;presetCategories.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="permanentPresetsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="permanentPresetsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="permanentPresetsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="permanentPresetsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="permanentPresetsTab.Text" xml:space="preserve">
+    <value>Permanent presets</value>
+  </data>
+  <data name="&gt;&gt;permanentPresetsTab.Name" xml:space="preserve">
+    <value>permanentPresetsTab</value>
+  </data>
+  <data name="&gt;&gt;permanentPresetsTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;permanentPresetsTab.Parent" xml:space="preserve">
+    <value>presetCategories</value>
+  </data>
+  <data name="&gt;&gt;permanentPresetsTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="transitionsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="transitionsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="transitionsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="transitionsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="transitionsTab.Text" xml:space="preserve">
+    <value>Transitions</value>
+  </data>
+  <data name="&gt;&gt;transitionsTab.Name" xml:space="preserve">
+    <value>transitionsTab</value>
+  </data>
+  <data name="&gt;&gt;transitionsTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transitionsTab.Parent" xml:space="preserve">
+    <value>presetCategories</value>
+  </data>
+  <data name="&gt;&gt;transitionsTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="transitionFields.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transitionFields.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="transitionFields.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="transitionFields.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="transitionFields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="transitionFields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 130</value>
+  </data>
+  <data name="transitionFields.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="transitionFields.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="transitionFields.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name=&quot;useTransitionSpeed&quot; Row=&quot;0&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;2&quot; /&gt;&lt;Control Name=&quot;transitionSpeedLabel&quot; Row=&quot;1&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;transitionSpeedPercent&quot; Row=&quot;1&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;secondsLabel&quot; Row=&quot;2&quot; RowSpan=&quot;1&quot; Column=&quot;0&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;Control Name=&quot;seconds&quot; Row=&quot;2&quot; RowSpan=&quot;1&quot; Column=&quot;1&quot; ColumnSpan=&quot;1&quot; /&gt;&lt;/Controls&gt;&lt;Columns Styles=&quot;Percent,100,Absolute,100&quot; /&gt;&lt;Rows Styles=&quot;Absolute,42,Absolute,46,Absolute,42&quot; /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;transitionFields.Name" xml:space="preserve">
+    <value>transitionFields</value>
+  </data>
+  <data name="&gt;&gt;transitionFields.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transitionFields.Parent" xml:space="preserve">
+    <value>transitionsTab</value>
+  </data>
+  <data name="&gt;&gt;transitionFields.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="presetsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="presetsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="presetsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="presetsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 378</value>
+  </data>
+  <data name="presetsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="presetsTab.Text" xml:space="preserve">
+    <value>Presets</value>
+  </data>
+  <data name="&gt;&gt;presetsTab.Name" xml:space="preserve">
+    <value>presetsTab</value>
+  </data>
+  <data name="&gt;&gt;presetsTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;presetsTab.Parent" xml:space="preserve">
+    <value>settingsTabs</value>
+  </data>
+  <data name="&gt;&gt;presetsTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="generalTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="generalTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="generalTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="generalTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 378</value>
+  </data>
+  <data name="generalTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="generalTab.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;generalTab.Name" xml:space="preserve">
+    <value>generalTab</value>
+  </data>
+  <data name="&gt;&gt;generalTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;generalTab.Parent" xml:space="preserve">
+    <value>settingsTabs</value>
+  </data>
+  <data name="&gt;&gt;generalTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="imageTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="imageTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="imageTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="imageTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 378</value>
+  </data>
+  <data name="imageTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="imageTab.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="&gt;&gt;imageTab.Name" xml:space="preserve">
+    <value>imageTab</value>
+  </data>
+  <data name="&gt;&gt;imageTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageTab.Parent" xml:space="preserve">
+    <value>settingsTabs</value>
+  </data>
+  <data name="&gt;&gt;imageTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;profilesPanel.Name" xml:space="preserve">
+    <value>profilesPanel</value>
+  </data>
+  <data name="&gt;&gt;profilesPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profilesPanel.Parent" xml:space="preserve">
+    <value>profilesTab</value>
+  </data>
+  <data name="&gt;&gt;profilesPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="profilesPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="profilesList" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="profileActions" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="profileNote" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,38,Absolute,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="profilesTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="profilesTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="profilesTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="profilesTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 378</value>
+  </data>
+  <data name="profilesTab.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="profilesTab.Text" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="&gt;&gt;profilesTab.Name" xml:space="preserve">
+    <value>profilesTab</value>
+  </data>
+  <data name="&gt;&gt;profilesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profilesTab.Parent" xml:space="preserve">
+    <value>settingsTabs</value>
+  </data>
+  <data name="&gt;&gt;profilesTab.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;aboutPanel.Name" xml:space="preserve">
+    <value>aboutPanel</value>
+  </data>
+  <data name="&gt;&gt;aboutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutPanel.Parent" xml:space="preserve">
+    <value>aboutInfoTab</value>
+  </data>
+  <data name="&gt;&gt;aboutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="contactCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="contactCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="contactCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 358</value>
+  </data>
+  <data name="contactCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.Name" xml:space="preserve">
+    <value>contactCategories</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueTabControl, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.Parent" xml:space="preserve">
+    <value>aboutTab</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="aboutInfoTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="aboutInfoTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="aboutInfoTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="aboutInfoTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="aboutInfoTab.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.Name" xml:space="preserve">
+    <value>aboutInfoTab</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.Parent" xml:space="preserve">
+    <value>contactCategories</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="aboutTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="aboutTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="aboutTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="aboutTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 378</value>
+  </data>
+  <data name="aboutTab.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="aboutTab.Text" xml:space="preserve">
+    <value>Contact &amp; About</value>
+  </data>
+  <data name="&gt;&gt;aboutTab.Name" xml:space="preserve">
+    <value>aboutTab</value>
+  </data>
+  <data name="&gt;&gt;aboutTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutTab.Parent" xml:space="preserve">
+    <value>settingsTabs</value>
+  </data>
+  <data name="&gt;&gt;aboutTab.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="settingsTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="settingsTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 8</value>
+  </data>
+  <data name="settingsTabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="settingsTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>540, 411</value>
+  </data>
+  <data name="settingsTabs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;settingsTabs.Name" xml:space="preserve">
+    <value>settingsTabs</value>
+  </data>
+  <data name="&gt;&gt;settingsTabs.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueTabControl, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;settingsTabs.Parent" xml:space="preserve">
+    <value>settingsLayout</value>
+  </data>
+  <data name="&gt;&gt;settingsTabs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="permanentPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;permanentList.Name" xml:space="preserve">
+    <value>permanentList</value>
+  </data>
+  <data name="&gt;&gt;permanentList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;permanentList.Parent" xml:space="preserve">
+    <value>permanentPanel</value>
+  </data>
+  <data name="&gt;&gt;permanentList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;permanentActions.Name" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;permanentActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;permanentActions.Parent" xml:space="preserve">
+    <value>permanentPanel</value>
+  </data>
+  <data name="&gt;&gt;permanentActions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="permanentPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="permanentPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="permanentPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="permanentPanel.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="permanentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 317</value>
+  </data>
+  <data name="permanentPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="permanentList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="permanentList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="permanentList.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="permanentList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="permanentList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="permanentList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 271</value>
+  </data>
+  <data name="permanentList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;addPermanent.Name" xml:space="preserve">
+    <value>addPermanent</value>
+  </data>
+  <data name="&gt;&gt;addPermanent.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;addPermanent.Parent" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;addPermanent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;editPermanent.Name" xml:space="preserve">
+    <value>editPermanent</value>
+  </data>
+  <data name="&gt;&gt;editPermanent.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;editPermanent.Parent" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;editPermanent.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;updatePermanent.Name" xml:space="preserve">
+    <value>updatePermanent</value>
+  </data>
+  <data name="&gt;&gt;updatePermanent.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;updatePermanent.Parent" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;updatePermanent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;deletePermanent.Name" xml:space="preserve">
+    <value>deletePermanent</value>
+  </data>
+  <data name="&gt;&gt;deletePermanent.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;deletePermanent.Parent" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;deletePermanent.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;movePermanentUp.Name" xml:space="preserve">
+    <value>movePermanentUp</value>
+  </data>
+  <data name="&gt;&gt;movePermanentUp.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;movePermanentUp.Parent" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;movePermanentUp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;movePermanentDown.Name" xml:space="preserve">
+    <value>movePermanentDown</value>
+  </data>
+  <data name="&gt;&gt;movePermanentDown.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;movePermanentDown.Parent" xml:space="preserve">
+    <value>permanentActions</value>
+  </data>
+  <data name="&gt;&gt;movePermanentDown.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="permanentActions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="permanentActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 279</value>
+  </data>
+  <data name="permanentActions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="permanentActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 38</value>
+  </data>
+  <data name="permanentActions.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="permanentActions.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="addPermanent.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="addPermanent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="addPermanent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="addPermanent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="addPermanent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="addPermanent.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="addPermanent.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="editPermanent.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="editPermanent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="editPermanent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 3</value>
+  </data>
+  <data name="editPermanent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="editPermanent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="editPermanent.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="editPermanent.Text" xml:space="preserve">
+    <value>✎</value>
+  </data>
+  <data name="updatePermanent.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="updatePermanent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="updatePermanent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 3</value>
+  </data>
+  <data name="updatePermanent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="updatePermanent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="updatePermanent.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="updatePermanent.Text" xml:space="preserve">
+    <value>↻</value>
+  </data>
+  <data name="deletePermanent.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="deletePermanent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="deletePermanent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 3</value>
+  </data>
+  <data name="deletePermanent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="deletePermanent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="deletePermanent.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="deletePermanent.Text" xml:space="preserve">
+    <value>−</value>
+  </data>
+  <data name="movePermanentUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="movePermanentUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="movePermanentUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 3</value>
+  </data>
+  <data name="movePermanentUp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="movePermanentUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="movePermanentUp.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="movePermanentUp.Text" xml:space="preserve">
+    <value>↑</value>
+  </data>
+  <data name="movePermanentDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="movePermanentDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="movePermanentDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 3</value>
+  </data>
+  <data name="movePermanentDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="movePermanentDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="movePermanentDown.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="movePermanentDown.Text" xml:space="preserve">
+    <value>↓</value>
+  </data>
+  <data name="profilesPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;profilesList.Name" xml:space="preserve">
+    <value>profilesList</value>
+  </data>
+  <data name="&gt;&gt;profilesList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profilesList.Parent" xml:space="preserve">
+    <value>profilesPanel</value>
+  </data>
+  <data name="&gt;&gt;profilesList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;profileActions.Name" xml:space="preserve">
+    <value>profileActions</value>
+  </data>
+  <data name="&gt;&gt;profileActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profileActions.Parent" xml:space="preserve">
+    <value>profilesPanel</value>
+  </data>
+  <data name="&gt;&gt;profileActions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;profileNote.Name" xml:space="preserve">
+    <value>profileNote</value>
+  </data>
+  <data name="&gt;&gt;profileNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profileNote.Parent" xml:space="preserve">
+    <value>profilesPanel</value>
+  </data>
+  <data name="&gt;&gt;profileNote.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="profilesPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="profilesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="profilesPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="profilesPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="profilesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 358</value>
+  </data>
+  <data name="profilesPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="profilesList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="profilesList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="profilesList.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="profilesList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="profilesList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="profilesList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 262</value>
+  </data>
+  <data name="profilesList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;newProfile.Name" xml:space="preserve">
+    <value>newProfile</value>
+  </data>
+  <data name="&gt;&gt;newProfile.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;newProfile.Parent" xml:space="preserve">
+    <value>profileActions</value>
+  </data>
+  <data name="&gt;&gt;newProfile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;copyProfile.Name" xml:space="preserve">
+    <value>copyProfile</value>
+  </data>
+  <data name="&gt;&gt;copyProfile.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;copyProfile.Parent" xml:space="preserve">
+    <value>profileActions</value>
+  </data>
+  <data name="&gt;&gt;copyProfile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;renameProfile.Name" xml:space="preserve">
+    <value>renameProfile</value>
+  </data>
+  <data name="&gt;&gt;renameProfile.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;renameProfile.Parent" xml:space="preserve">
+    <value>profileActions</value>
+  </data>
+  <data name="&gt;&gt;renameProfile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="profileActions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="profileActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 270</value>
+  </data>
+  <data name="profileActions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="profileActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 38</value>
+  </data>
+  <data name="profileActions.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="profileActions.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="newProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="newProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="newProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="newProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="newProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="newProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="newProfile.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="copyProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="copyProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="copyProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 3</value>
+  </data>
+  <data name="copyProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="copyProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="copyProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="copyProfile.Text" xml:space="preserve">
+    <value>⧉</value>
+  </data>
+  <data name="renameProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="renameProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Symbol, 13pt</value>
+  </data>
+  <data name="renameProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 3</value>
+  </data>
+  <data name="renameProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="renameProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 30</value>
+  </data>
+  <data name="renameProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="renameProfile.Text" xml:space="preserve">
+    <value>✎</value>
+  </data>
+  <data name="profileNote.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="profileNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 308</value>
+  </data>
+  <data name="profileNote.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="profileNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 50</value>
+  </data>
+  <data name="profileNote.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="profileNote.Text" xml:space="preserve">
+    <value>Edit the active profile in Settings.</value>
+  </data>
+  <data name="aboutPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;credit.Name" xml:space="preserve">
+    <value>credit</value>
+  </data>
+  <data name="&gt;&gt;credit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;credit.Parent" xml:space="preserve">
+    <value>aboutPanel</value>
+  </data>
+  <data name="&gt;&gt;credit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;coffeeLink.Name" xml:space="preserve">
+    <value>coffeeLink</value>
+  </data>
+  <data name="&gt;&gt;coffeeLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;coffeeLink.Parent" xml:space="preserve">
+    <value>aboutPanel</value>
+  </data>
+  <data name="&gt;&gt;coffeeLink.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
+    <value>versionLabel</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Parent" xml:space="preserve">
+    <value>aboutPanel</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="aboutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="aboutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="aboutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="aboutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="aboutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 319</value>
+  </data>
+  <data name="aboutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="aboutPanel.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="credit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="credit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 3</value>
+  </data>
+  <data name="credit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 3, 5, 3</value>
+  </data>
+  <data name="credit.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="credit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 40</value>
+  </data>
+  <data name="credit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="credit.Text" xml:space="preserve">
+    <value>Developed as open source by Brian Kristensen, Vejle Uhrhøj, DK.</value>
+  </data>
+  <data name="coffeeLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="coffeeLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 127</value>
+  </data>
+  <data name="coffeeLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 3, 5, 3</value>
+  </data>
+  <data name="coffeeLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="coffeeLink.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="coffeeLink.Text" xml:space="preserve">
+    <value>Buy me a coffee</value>
+  </data>
+  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 153</value>
+  </data>
+  <data name="versionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 3, 5, 3</value>
+  </data>
+  <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 20</value>
+  </data>
+  <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="versionLabel.Text" xml:space="preserve">
+    <value>MIT</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>120, 120</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>570, 630</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>435, 345</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Settings for Camera Control Studio</value>
+  </data>
+  <data name="$this.Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../Assets/SettingsWindow.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

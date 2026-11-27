@@ -21,8 +21,7 @@ namespace CameraControlStudio
     public partial class GuideViewer : AppForm
     {
         const string TroubleshootingFile = "TROUBLESHOOTING.md";
-        internal const string ReleasesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases";
-        internal const string IssuesUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue";
+        const string ReleasesUrl = GitHubActions.ReleasesUrl;
         const string RepositoryFilesUrl = "https://github.com/" + GitHubReleases.Repository + "/blob/";
         const string GuideDirectory = "/Source/docs/";
         const string MainGuidesUrl = RepositoryFilesUrl + "main" + GuideDirectory;
@@ -64,13 +63,6 @@ namespace CameraControlStudio
             BindGuideLink(translationsLink, "TRANSLATIONS.md");
             BindGuideLink(githubLink, "GITHUB.md");
             BindGuideLink(issuesLink, IssuesGuide);
-            BindLink(releasesLink, () => OpenBrowser(ReleasesUrl));
-            BindLink(reportIssueLink, () =>
-            {
-                SelectGuide(IssuesGuide);
-                OpenBrowser(IssuesUrl);
-            });
-            BindLink(onlineGuidesLink, () => OpenBrowser(OnlineGuidesUrl));
             print.Enabled = false;
             print.Click += async (sender, args) =>
             {
@@ -148,6 +140,8 @@ namespace CameraControlStudio
             openSetup = setup;
         }
 
+        internal GitHubActions GitHubActions => githubActions;
+
         void BindLink(LinkLabel link, Action action)
         {
             link.RightToLeft = UiText.IsRightToLeft ? RightToLeft.Yes : RightToLeft.No;
@@ -217,7 +211,7 @@ namespace CameraControlStudio
         static string CssString(string value) => "\"" + string.Concat(value.Select(character =>
             "\\" + ((int)character).ToString("X", CultureInfo.InvariantCulture) + " ")) + "\"";
 
-        const string ProjectUrl = "https://github.com/" + GitHubReleases.Repository;
+        const string ProjectUrl = GitHubActions.RepositoryUrl;
         static string InstalledReleaseUrl => ReleasesUrl + "/tag/v" + Uri.EscapeDataString(DiagnosticLog.DisplayAppVersion);
         const double PrintVerticalMargin = 50.4; // 0.7 inches, in PDF points
         const double PrintRightMargin = 39.6;    // 0.55 inches

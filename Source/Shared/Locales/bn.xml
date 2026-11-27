@@ -41,6 +41,7 @@
   <text key="Focus">ফোকাস</text>
   <text key="Gain">গেইন</text>
   <text key="Gamma">গামা</text>
+  <text key="Project on GitHub">GitHub প্রকল্প</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">স্ট্রিমিং শুরু হয়েছে? ক্যামেরা নিয়ন্ত্রণ চালু করতে ‘হ্যাঁ’ বেছে নিন।</text>
   <text key="Hue">রঙের আভা</text>
@@ -258,4 +259,5 @@
   <text key="Open the latest release?">সর্বশেষ রিলিজ খুলবেন?</text>
   <text key="Report a bug">সমস্যা জানান</text>
   <text key="Request a feature">নতুন ফিচারের অনুরোধ করুন</text>
+  <text key="Settings for Camera Control Studio">Camera Control Studio-এর সেটিংস</text>
 </translations>

@@ -6,9 +6,9 @@
 
 [Pemecahan Masalah](TROUBLESHOOTING.md)
 
-Buka roda gigi di footer. Pengaturan terbuka di sebelah kanan. Daftar posisi Anda tetap terlihat.
+Klik roda gigi di bagian bawah untuk membuka Pengaturan. Pengaturan terbuka di jendela terpisah. Anda tetap dapat menggunakan jendela utama.
 
-![Jendela utama dengan panel pengaturan terbuka di sebelah kanan](../images/screenshots/1.0.1/en/main-settings.png)
+![Jendela utama di samping jendela Pengaturan yang terpisah](../images/screenshots/settings-tabs/id/main-settings.png)
 
 ## Instal dan verifikasi unduhan
 
@@ -111,7 +111,7 @@ Memilih baris permanen di daftar utama juga memilih preset tersebut di Pengatura
 
 ## 5. Atur tata letak dan bahasa
 
-Seret pemisah antara kontrol kamera dan daftar prasetel. Profil Anda menyimpan pembagi serta ukuran dan posisi jendela. Ukuran awal adalah 900×500, dan minimum 670×450. Pengaturan mulai ditutup. Saat Anda pertama kali membukanya setelah peluncuran, tab pertama dipilih. Gulir ke bawah di **Geser kamera** atau **Aplikasi** jika beberapa bidang berada di bawah jendela. Aplikasi ini menghemat lebar jendela dengan Pengaturan ditutup.
+Seret pemisah antara kontrol kamera dan daftar prasetel. Profil Anda menyimpan posisi pemisah. Ukuran awal adalah 900×500, dan minimum 670×450. Pengaturan mulai ditutup. Saat Anda pertama kali membukanya setelah peluncuran, tab pertama dipilih. Gulir ke bawah di **Geser kamera** atau **Aplikasi** jika beberapa bidang berada di bawah jendela. Profil Anda menyimpan ukuran dan posisi kedua jendela.
 
 Saat memilih profil di footer, biarkan **Pertahankan posisi dan tata letak saat ini** tidak dicentang untuk memulihkan tata letak profil tersebut. Centang untuk membawa tata letak saat ini ke profil yang dipilih. Pilihannya diingat di profil yang Anda tinggalkan; tata letak yang dibawa disimpan di profil tujuan.
 

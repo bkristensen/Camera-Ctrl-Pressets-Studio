@@ -73,7 +73,7 @@ namespace CameraControlStudio
 
         internal static void OpenRelease(IWin32Window owner, Uri url) => Open(owner, url.AbsoluteUri);
 
-        static void Open(IWin32Window owner, string file, string arguments = "")
+        internal static void Open(IWin32Window owner, string file, string arguments = "")
         {
             try
             {

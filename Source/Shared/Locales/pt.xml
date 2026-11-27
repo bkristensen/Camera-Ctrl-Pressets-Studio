@@ -41,6 +41,7 @@
   <text key="Focus">Foco</text>
   <text key="Gain">Ganho</text>
   <text key="Gamma">Gama</text>
+  <text key="Project on GitHub">Projeto no GitHub</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">A transmissão começou? Selecione Sim para ativar os controles da câmera.</text>
   <text key="Hue">Matiz</text>
@@ -258,4 +259,5 @@
   <text key="Open the latest release?">Abrir a versão mais recente?</text>
   <text key="Report a bug">Relatar um problema</text>
   <text key="Request a feature">Solicitar um novo recurso</text>
+  <text key="Settings for Camera Control Studio">Configurações do Camera Control Studio</text>
 </translations>

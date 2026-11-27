@@ -5,7 +5,7 @@ These images show Camera Control Studio 1.0.1 with the Standard profile, a demo 
 | View | What it shows |
 | --- | --- |
 | [Main window](images/screenshots/1.0.1/en/main.png) | Direction wheel, camera selector, zoom, presets and status with Settings closed |
-| [Main window with Settings open](images/screenshots/1.0.1/en/main-settings.png) | The settings pane alongside the camera controls and preset list |
+| [Main window with Settings open](images/screenshots/settings-tabs/en/main-settings.png) | The separate Settings window alongside the main window |
 | [Settings → Panning](images/screenshots/settings-tabs/en/settings.png) | Pan and tilt steps, direction reversal and camera button options |
 | [Settings → Zoom](images/screenshots/settings-tabs/en/zoom.png) | Step size for the zoom buttons |
 | [Settings → Application](images/screenshots/1.0.1/en/application.png) | Streaming confirmation, always-on-top behaviour and profile language |

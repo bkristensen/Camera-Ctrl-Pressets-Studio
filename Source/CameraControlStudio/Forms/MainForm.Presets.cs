@@ -98,12 +98,12 @@ namespace CameraControlStudio
             if (config == null)
                 return;
             var selected = SelectedPresetRow;
-            string edited = (permanentList.SelectedItem as Preset)?.Name;
+            string edited = (settings.permanentList.SelectedItem as Preset)?.Name;
             refreshingPresets = true;
             try
             {
                 presetGrid.Rows.Clear();
-                permanentList.Items.Clear();
+                settings.permanentList.Items.Clear();
                 DataGridViewRow selectedRow = null;
                 string recall = UiText.T("Recall preset", "Kør til position");
                 foreach (var pair in Permanent.Select(x => new RowItem { Preset = x, Temporary = false, DeviceId = CameraId }).Concat(Temporary.Select(x => new RowItem { Preset = x, Temporary = true, DeviceId = CameraId })))
@@ -119,7 +119,7 @@ namespace CameraControlStudio
                         && pair.Temporary == selected.Temporary && pair.Preset.Name == selected.Preset.Name)
                         selectedRow = row;
                 }
-                permanentList.Items.AddRange(Permanent.ToArray());
+                settings.permanentList.Items.AddRange(Permanent.ToArray());
                 SelectPermanentPreset(edited);
                 presetGrid.CurrentCell = selectedRow?.Cells[positionColumn.Index];
                 presetGrid.ClearSelection();
@@ -136,7 +136,7 @@ namespace CameraControlStudio
         {
             presetGrid.CurrentCell = null;
             presetGrid.ClearSelection();
-            permanentList.ClearSelected();
+            settings.permanentList.ClearSelected();
         }
         void SelectPresetInSettings(RowItem row)
         {
@@ -145,24 +145,24 @@ namespace CameraControlStudio
         }
         void SelectPermanentPreset(string name)
         {
-            permanentList.SelectedItem = name == null ? null
-                : permanentList.Items.Cast<Preset>().FirstOrDefault(p => p.Name == name);
+            settings.permanentList.SelectedItem = name == null ? null
+                : settings.permanentList.Items.Cast<Preset>().FirstOrDefault(p => p.Name == name);
         }
         void RefreshActionButtons()
         {
-            bool presetSelected = permanentList.SelectedItem is Preset;
+            bool presetSelected = settings.permanentList.SelectedItem is Preset;
             // A disconnected camera can still connect on demand when a capture action is used.
             bool canCapture = loaded && (camera == null || axes.Any(axis => HasManualAxis(axis, out _)));
-            addPermanent.Enabled = temporaryButton.Enabled = canCapture;
-            editPermanent.Enabled = deletePermanent.Enabled = presetSelected;
-            updatePermanent.Enabled = presetSelected && canCapture;
-            movePermanentUp.Enabled = loaded && permanentList.SelectedIndex > 0;
-            movePermanentDown.Enabled = loaded && presetSelected && permanentList.SelectedIndex < permanentList.Items.Count - 1;
+            settings.addPermanent.Enabled = temporaryButton.Enabled = canCapture;
+            settings.editPermanent.Enabled = settings.deletePermanent.Enabled = presetSelected;
+            settings.updatePermanent.Enabled = presetSelected && canCapture;
+            settings.movePermanentUp.Enabled = loaded && settings.permanentList.SelectedIndex > 0;
+            settings.movePermanentDown.Enabled = loaded && presetSelected && settings.permanentList.SelectedIndex < settings.permanentList.Items.Count - 1;
             bool temporarySelected = SelectedPresetRow?.Temporary == true;
             deleteTemporaryButton.Enabled = deleteTemporaryButton.Visible = temporarySelected;
             presetHeader.ColumnStyles[1].Width = temporarySelected ? temporaryDeleteWidth : 0;
-            profileButton.Enabled = newProfile.Enabled = copyProfile.Enabled = loaded;
-            renameProfile.Enabled = loaded && profilesList.SelectedItem is string selectedProfile
+            profileButton.Enabled = settings.newProfile.Enabled = settings.copyProfile.Enabled = loaded;
+            settings.renameProfile.Enabled = loaded && settings.profilesList.SelectedItem is string selectedProfile
                 && selectedProfile != ProfileStore.Standard;
         }
         bool NameExists(string name, Preset except = null)
@@ -185,7 +185,7 @@ namespace CameraControlStudio
             NeedCamera();
             using (var dialog = new TextEntryForm(UiText.T("Temporary preset name", "Navn på midlertidig position"), ""))
             {
-                if (dialog.ShowDialog(this) != DialogResult.OK)
+                if (dialog.ShowDialog(CommandOwner) != DialogResult.OK)
                     return;
                 if (NameExists(dialog.Value))
                     throw new InvalidOperationException(UiText.T("Name already exists.", "Navnet findes allerede."));
@@ -208,7 +208,7 @@ namespace CameraControlStudio
             NeedCamera();
             using (var dialog = new PresetEditorForm(null, x => NameExists(x)))
             {
-                if (dialog.ShowDialog(this) != DialogResult.OK)
+                if (dialog.ShowDialog(CommandOwner) != DialogResult.OK)
                     return;
                 var p = new Preset { Name = dialog.PresetName, IconId = dialog.IconId, Position = ReadPose(), FieldOfView = ReadFieldOfView() };
                 Permanent.Add(p);
@@ -222,12 +222,12 @@ namespace CameraControlStudio
         }
         void EditPermanent()
         {
-            var p = permanentList.SelectedItem as Preset;
+            var p = settings.permanentList.SelectedItem as Preset;
             if (p == null)
                 return;
             using (var dialog = new PresetEditorForm(p, x => NameExists(x, p)))
             {
-                if (dialog.ShowDialog(this) != DialogResult.OK)
+                if (dialog.ShowDialog(CommandOwner) != DialogResult.OK)
                     return;
                 string old = p.Name, icon = p.IconId;
                 p.Name = dialog.PresetName;
@@ -243,7 +243,7 @@ namespace CameraControlStudio
         }
         void UpdatePermanent()
         {
-            var p = permanentList.SelectedItem as Preset;
+            var p = settings.permanentList.SelectedItem as Preset;
             if (p == null)
                 return;
             NeedCamera();
@@ -264,7 +264,7 @@ namespace CameraControlStudio
         }
         void DeletePermanent()
         {
-            var p = permanentList.SelectedItem as Preset;
+            var p = settings.permanentList.SelectedItem as Preset;
             if (p == null)
                 return;
             string confirmation = string.Format(UiText.T("Delete permanent preset: {0}?", "Slet den permanente position »{0}«?"), p.Name);
@@ -281,7 +281,7 @@ namespace CameraControlStudio
         }
         void MovePermanent(int direction)
         {
-            if (!loaded || !(permanentList.SelectedItem is Preset selected))
+            if (!loaded || !(settings.permanentList.SelectedItem is Preset selected))
                 return;
             var presets = Permanent;
             int from = presets.IndexOf(selected);

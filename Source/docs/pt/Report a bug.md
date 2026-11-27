@@ -1,8 +1,10 @@
 # Relatar um problema
 
-1. Abra o painel de configurações. Selecione **Contato e sobre → Contato → Relatar um problema**.
+1. Clique na engrenagem na parte inferior para abrir as configurações. Selecione **Contato e sobre → Contato → Relatar um problema**.
 2. Se houver uma versão mais recente, escolha **Sim** para abrir a página de download. Instale-a e verifique se o problema ainda ocorre. Escolha **Não** para continuar no rascunho do GitHub.
 3. Se o aplicativo oferecer um ZIP de suporte, escolha **Sim** e selecione onde salvá-lo. Escolha **Não** para abrir o rascunho sem criar o arquivo.
+
+O visualizador de guias oferece os mesmos botões do GitHub.
 
 ![Aba de contato com os botões do GitHub e do ZIP de suporte](../images/screenshots/contact/pt/issues.png)
 

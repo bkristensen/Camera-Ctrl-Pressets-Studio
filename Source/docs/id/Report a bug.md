@@ -1,8 +1,10 @@
 # Laporkan masalah
 
-1. Buka panel pengaturan. Pilih **Kontak dan Tentang → Kontak → Laporkan masalah**.
+1. Klik roda gigi di bagian bawah untuk membuka Pengaturan. Pilih **Kontak dan Tentang → Kontak → Laporkan masalah**.
 2. Jika ada versi yang lebih baru, pilih **Ya** untuk membuka halaman unduh. Instal versi itu dan periksa apakah masalah masih dapat diulangi. Pilih **Tidak** untuk melanjutkan ke draf GitHub.
 3. Jika aplikasi menawarkan ZIP dukungan, pilih **Ya** dan tentukan tempat menyimpannya. Pilih **Tidak** untuk membuka draf tanpa membuat arsip.
+
+Penampil panduan juga menyediakan tombol GitHub yang sama.
 
 ![Tab kontak dengan tombol GitHub dan ZIP dukungan](../images/screenshots/contact/id/issues.png)
 

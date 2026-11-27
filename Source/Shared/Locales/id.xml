@@ -41,6 +41,7 @@
   <text key="Focus">Fokus</text>
   <text key="Gain">Penguatan</text>
   <text key="Gamma">Gama</text>
+  <text key="Project on GitHub">Proyek di GitHub</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">Apakah siaran sudah dimulai? Pilih Ya untuk mengaktifkan kontrol kamera.</text>
   <text key="Hue">Rona</text>
@@ -258,4 +259,5 @@
   <text key="Open the latest release?">Buka rilis terbaru?</text>
   <text key="Report a bug">Laporkan masalah</text>
   <text key="Request a feature">Usulkan fitur baru</text>
+  <text key="Settings for Camera Control Studio">Pengaturan Camera Control Studio</text>
 </translations>

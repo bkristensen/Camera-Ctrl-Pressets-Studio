@@ -10,12 +10,10 @@ namespace CameraControlStudio {
         bool refreshingVideo;
 
         void WireSettings() {
-            panWithCameraButton.CheckedChanged += (sender, args) => ApplyCameraButtonSettings();
-            doubleClickForCameraSource.CheckedChanged += (sender, args) => ApplyCameraButtonSettings();
+            settings.panWithCameraButton.CheckedChanged += (sender, args) => RunSettings(ApplyCameraButtonSettings);
+            settings.doubleClickForCameraSource.CheckedChanged += (sender, args) => RunSettings(ApplyCameraButtonSettings);
             WireContact();
-            Link(releasesLink, GuideViewer.ReleasesUrl);
-            Link(guideIndexLink, GuideViewer.OnlineGuidesUrl);
-            openGuideButton.Click += (sender, args) => Run(OpenGuide);
+            settings.openGuideButton.Click += (sender, args) => RunSettings(OpenGuide);
             helpButton.Click += (sender, args) => Run(OpenGuide);
 
             releaseNotice.Text = DiagnosticLog.DisplayAppVersion;
@@ -34,8 +32,8 @@ namespace CameraControlStudio {
 
         void ApplyCameraButtonSettings() {
             wheel.CancelMovement();
-            wheel.PanWithCameraButton = panWithCameraButton.Checked;
-            wheel.DoubleClickForCameraSource = doubleClickForCameraSource.Checked;
+            wheel.PanWithCameraButton = settings.panWithCameraButton.Checked;
+            wheel.DoubleClickForCameraSource = settings.doubleClickForCameraSource.Checked;
             UpdateWheelToolTip();
             MarkDirty();
         }
@@ -54,36 +52,37 @@ namespace CameraControlStudio {
         }
 
         void OpenGuide() {
-            using (var viewer = new GuideViewer(settingsTabs.Visible))
-                viewer.ShowDialog(this);
+            using (var viewer = new GuideViewer(settings.Visible)) {
+                BindGitHubActions(viewer.GitHubActions, viewer);
+                viewer.ShowDialog(CommandOwner);
+            }
         }
 
         void ConfigureSettingsToolTips() {
-            SetMainToolTip(addPermanent, UiText.T("Add permanent preset", "Tilføj fast position"));
-            SetMainToolTip(editPermanent, UiText.T("Edit name and symbol", "Ret navn og symbol"));
-            SetMainToolTip(updatePermanent, UiText.T("Replace with current position", "Erstat med aktuel position"));
-            SetMainToolTip(deletePermanent, UiText.T("Delete permanent preset", "Slet fast position"));
-            SetMainToolTip(movePermanentUp, UiText.T("Move selected preset up", "Flyt valgt position op"));
-            SetMainToolTip(movePermanentDown, UiText.T("Move selected preset down", "Flyt valgt position ned"));
-            SetMainToolTip(newProfile, UiText.T("New profile", "Ny profil"));
-            SetMainToolTip(copyProfile, UiText.T("Copy active profile", "Kopiér aktiv profil"));
-            SetMainToolTip(renameProfile, UiText.T("Rename selected profile", "Omdøb valgt profil"));
-            foreach (var button in new ButtonBase[] { reverseX, reverseY, streamingCheck, alwaysTop })
+            SetMainToolTip(settings.addPermanent, UiText.T("Add permanent preset", "Tilføj fast position"));
+            SetMainToolTip(settings.editPermanent, UiText.T("Edit name and symbol", "Ret navn og symbol"));
+            SetMainToolTip(settings.updatePermanent, UiText.T("Replace with current position", "Erstat med aktuel position"));
+            SetMainToolTip(settings.deletePermanent, UiText.T("Delete permanent preset", "Slet fast position"));
+            SetMainToolTip(settings.movePermanentUp, UiText.T("Move selected preset up", "Flyt valgt position op"));
+            SetMainToolTip(settings.movePermanentDown, UiText.T("Move selected preset down", "Flyt valgt position ned"));
+            SetMainToolTip(settings.newProfile, UiText.T("New profile", "Ny profil"));
+            SetMainToolTip(settings.copyProfile, UiText.T("Copy active profile", "Kopiér aktiv profil"));
+            SetMainToolTip(settings.renameProfile, UiText.T("Rename selected profile", "Omdøb valgt profil"));
+            foreach (var button in new ButtonBase[] { settings.reverseX, settings.reverseY, settings.streamingCheck, settings.alwaysTop })
                 SetMainToolTip(button, button.Text);
-            foreach (var action in new Control[] { logSettingsLink, showLogLink, reportIssueButton, requestFeatureButton,
-                saveReportPackage, openGuideButton,
-                loadVideoControls, resetVideoControls })
+            foreach (var action in new Control[] { settings.logSettingsLink, settings.showLogLink, settings.openGuideButton,
+                settings.loadVideoControls, settings.resetVideoControls })
                 SetMainToolTip(action, action.Text);
             SetMainToolTip(helpButton, UiText.T("User guides", "Brugervejledninger"));
-            SetMainToolTip(adjustFovAtLimits, adjustFovAtLimits.Text,
+            SetMainToolTip(settings.adjustFovAtLimits, settings.adjustFovAtLimits.Text,
                 UiText.T("Keep moving when the lens view offers more room.", "Fortsæt bevægelsen, når et andet synsfelt giver mere plads."));
         }
 
         void WireVideoControls() {
-            videoTabs = imageCategories.TabPages.Cast<TabPage>().Where(tab => tab != fieldOfViewTab).ToArray();
+            videoTabs = settings.imageCategories.TabPages.Cast<TabPage>().Where(tab => tab != settings.fieldOfViewTab).ToArray();
             foreach (var editor in videoTabs.SelectMany(VideoEditors)) {
                 SetMainToolTip(editor.Automatic, string.Format(UiText.T("Automatic {0}", "Automatisk {0}"), editor.Group.Text));
-                editor.Slider.Scroll += (sender, args) => Run(() => {
+                editor.Slider.Scroll += (sender, args) => RunSettings(() => {
                     if (TryGetVideoSetting(editor.Group, out var setting)) {
                         var slider = editor.Slider;
                         double fraction = (slider.Value - (double)slider.Minimum) / (slider.Maximum - (double)slider.Minimum);
@@ -94,7 +93,7 @@ namespace CameraControlStudio {
                 editor.Automatic.CheckedChanged += (sender, args) => {
                     if (refreshingVideo)
                         return;
-                    Run(() => {
+                    RunSettings(() => {
                         if (!TryGetVideoSetting(editor.Group, out var setting))
                             return;
                         camera.Set(setting.Name, camera.Get(setting.Name), editor.Automatic.Checked);
@@ -103,13 +102,13 @@ namespace CameraControlStudio {
                     });
                 };
             }
-            loadVideoControls.Click += (sender, args) => Run(() => {
+            settings.loadVideoControls.Click += (sender, args) => RunSettings(() => {
                 NeedCamera();
-                if (imageCategories.TabCount > 1)
-                    imageCategories.SelectedIndex = 0;
+                if (settings.imageCategories.TabCount > 1)
+                    settings.imageCategories.SelectedIndex = 0;
             });
-            resetVideoControls.Click += (sender, args) => Run(ResetVideoControls);
-            imageCategories.SelectedIndexChanged += (sender, args) => UpdateVideoResetVisibility();
+            settings.resetVideoControls.Click += (sender, args) => RunSettings(ResetVideoControls);
+            settings.imageCategories.SelectedIndexChanged += (sender, args) => UpdateVideoResetVisibility();
             SetVideoTabs(Array.Empty<TabPage>());
         }
 
@@ -165,24 +164,24 @@ namespace CameraControlStudio {
         }
 
         void SetVideoTabs(IReadOnlyCollection<TabPage> supportedTabs) {
-            var pages = supportedTabs.Concat(new[] { fieldOfViewTab }).ToArray();
-            if (!imageCategories.TabPages.Cast<TabPage>().SequenceEqual(pages)) {
-                var selected = imageCategories.SelectedTab;
-                imageCategories.TabPages.Clear();
-                imageCategories.TabPages.AddRange(pages);
+            var pages = supportedTabs.Concat(new[] { settings.fieldOfViewTab }).ToArray();
+            if (!settings.imageCategories.TabPages.Cast<TabPage>().SequenceEqual(pages)) {
+                var selected = settings.imageCategories.SelectedTab;
+                settings.imageCategories.TabPages.Clear();
+                settings.imageCategories.TabPages.AddRange(pages);
                 if (pages.Contains(selected))
-                    imageCategories.SelectedTab = selected;
+                    settings.imageCategories.SelectedTab = selected;
             }
             bool imageControlsAvailable = supportedTabs.Count != 0;
-            videoStatus.Visible = !imageControlsAvailable;
-            loadVideoControls.Visible = camera == null;
-            noVideoControls.Visible = camera != null && !imageControlsAvailable;
+            settings.videoStatus.Visible = !imageControlsAvailable;
+            settings.loadVideoControls.Visible = camera == null;
+            settings.noVideoControls.Visible = camera != null && !imageControlsAvailable;
             UpdateVideoResetVisibility();
         }
 
         void UpdateVideoResetVisibility() =>
-            resetVideoControls.Visible = imageCategories.SelectedTab != null &&
-                imageCategories.SelectedTab != fieldOfViewTab;
+            settings.resetVideoControls.Visible = settings.imageCategories.SelectedTab != null &&
+                settings.imageCategories.SelectedTab != settings.fieldOfViewTab;
 
         void ResetVideoControls() {
             NeedCamera();

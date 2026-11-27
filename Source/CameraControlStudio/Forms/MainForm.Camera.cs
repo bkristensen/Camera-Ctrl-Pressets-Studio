@@ -13,7 +13,7 @@ namespace CameraControlStudio
         {
             if (!loaded)
                 throw new InvalidOperationException(UiText.T("Load a profile first.", "Indlæs først en profil."));
-            if (!permission.Allow(streamingCheck.Checked, () => ShowMessage(UiText.T("Has streaming started? Choose Yes to enable camera controls.", "Er streaming startet? Vælg Ja for at aktivere kamerastyringen."), UiText.T("Confirm streaming", "Bekræft streaming"), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes))
+            if (!permission.Allow(settings.streamingCheck.Checked, () => MessageBox.Show(CommandOwner, UiText.T("Has streaming started? Choose Yes to enable camera controls.", "Er streaming startet? Vælg Ja for at aktivere kamerastyringen."), UiText.T("Confirm streaming", "Bekræft streaming"), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageDirection) == DialogResult.Yes))
                 throw new OperationCanceledException();
         }
         void EnumerateDevices()
@@ -110,7 +110,7 @@ namespace CameraControlStudio
         void StartZoomHeld(int direction)
         {
             StopHeld();
-            int steps = (int)zoomSteps.Value;
+            int steps = (int)settings.zoomSteps.Value;
             if (!Nudge("Zoom", direction, steps) || (Control.MouseButtons & MouseButtons.Left) == 0)
                 return;
             repeatHeld = () => Nudge("Zoom", direction, steps);
@@ -122,13 +122,13 @@ namespace CameraControlStudio
         {
             StopHeld();
             NeedCamera();
-            int steps = (int)(speed == PanSpeed.Fast ? fastPanSteps.Value : panSteps.Value);
+            int steps = (int)(speed == PanSpeed.Fast ? settings.fastPanSteps.Value : settings.panSteps.Value);
             double share = pan != 0 && tilt != 0 ? PanMotion.DiagonalShare : 1;
             int clickSteps = speed == PanSpeed.Fine ? 1 : Math.Max(1,
                 (int)Math.Round(steps * share, MidpointRounding.AwayFromZero));
             if (!MovePan(pan, tilt, clickSteps, clickSteps) || !wheel.IsHoldingDirection)
                 return;
-            double rate = speed == PanSpeed.Fine ? (double)(panSteps.Value * finePanPercent.Value / 100) : steps * share;
+            double rate = speed == PanSpeed.Fine ? (double)(settings.panSteps.Value * settings.finePanPercent.Value / 100) : steps * share;
             repeatHeld = () => RepeatPan(pan * rate, tilt * rate);
             held.Interval = PanMotion.Interval;
             held.Start();
@@ -146,8 +146,8 @@ namespace CameraControlStudio
                 NeedCamera();
                 if (!wheel.Capture)
                     return;
-                repeatHeld = () => RepeatPan(dragPan * (double)fastPanSteps.Value * 2,
-                    dragTilt * (double)fastPanSteps.Value * 2);
+                repeatHeld = () => RepeatPan(dragPan * (double)settings.fastPanSteps.Value * 2,
+                    dragTilt * (double)settings.fastPanSteps.Value * 2);
                 held.Interval = PanMotion.Interval;
                 held.Start();
             }
@@ -183,7 +183,7 @@ namespace CameraControlStudio
             setting = null;
             return camera != null && camera.Settings.TryGetValue(axis, out setting) && (setting.Caps & 2) != 0;
         }
-        bool AxisReversed(string axis) => axis == "Pan" ? reverseX.Checked : axis == "Tilt" && reverseY.Checked;
+        bool AxisReversed(string axis) => axis == "Pan" ? settings.reverseX.Checked : axis == "Tilt" && settings.reverseY.Checked;
         void RefreshMotionControls()
         {
             int? fieldOfView = ReadFieldOfView();
@@ -372,10 +372,10 @@ namespace CameraControlStudio
             activity.Begin(row.Preset.Name);
             status.Text = UiText.T("Moving to position…", "Flytter til position…");
             presetGrid.Invalidate();
-            speedCurve = useTransitionSpeed.Checked ? new PresetSpeedCurve(
+            speedCurve = settings.useTransitionSpeed.Checked ? new PresetSpeedCurve(
                 target.Max(p => PresetSpeedCurve.AxisDistance(camera.Settings[p.Key], start[p.Key], p.Value)),
-                (double)transitionSpeedPercent.Value / 100) : null;
-            duration = speedCurve?.Duration ?? (double)seconds.Value;
+                (double)settings.transitionSpeedPercent.Value / 100) : null;
+            duration = speedCurve?.Duration ?? (double)settings.seconds.Value;
             clock.Restart();
             movement.Start();
             TickMotion();

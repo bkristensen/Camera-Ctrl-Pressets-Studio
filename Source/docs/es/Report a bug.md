@@ -1,8 +1,10 @@
 # Informar de un problema
 
-1. Abre el panel de configuración. Elige **Contacto y acerca de → Contacto → Informar de un problema**.
+1. Haz clic en el engranaje de la parte inferior para abrir la configuración. Elige **Contacto y acerca de → Contacto → Informar de un problema**.
 2. Si hay una versión más reciente, elige **Sí** para abrir la página de descarga. Instálala y comprueba si puedes reproducir el fallo. Elige **No** para continuar al borrador de GitHub.
 3. Si la aplicación ofrece guardar un ZIP de soporte, elige **Sí** y selecciona dónde guardarlo. Elige **No** para abrir el borrador sin crear el archivo.
+
+Los mismos botones de GitHub están disponibles en el visor de guías.
 
 ![Pestaña de contacto con los botones de GitHub y del ZIP de soporte](../images/screenshots/contact/es/issues.png)
 

@@ -6,9 +6,9 @@
 
 [Fehlerbehebung](TROUBLESHOOTING.md)
 
-Klicken Sie unten auf das Zahnrad. Die Einstellungen öffnen sich rechts. Die Positionsliste bleibt sichtbar.
+Klicken Sie unten auf das Zahnrad, um die Einstellungen zu öffnen. Die Einstellungen öffnen sich in einem eigenen Fenster. Sie können das Hauptfenster weiter nutzen.
 
-![Hauptfenster mit geöffnetem Einstellungsbereich rechts](../images/screenshots/1.0.1/de/main-settings.png)
+![Hauptfenster neben dem separaten Einstellungsfenster](../images/screenshots/settings-tabs/de/main-settings.png)
 
 ## Installation und Download prüfen
 
@@ -111,7 +111,7 @@ Eine feste Position, die in der Hauptliste ausgewählt ist, wird auch in den Ein
 
 ## 5. Layout und Sprache einstellen
 
-Ziehen Sie die Trennlinie zwischen Kamerasteuerung und Positionsliste. Das Profil speichert die Trennlinie sowie Lage und Größe des Fensters. Die Anfangsgröße beträgt 900 × 500, die Mindestgröße 670 × 450. Die Einstellungen starten geschlossen. Beim ersten Öffnen nach dem Start erscheint die erste Registerkarte. Scrollen Sie unter **Schwenken** oder **Anwendung** nach unten, wenn Felder außerhalb des Fensters liegen. Die App speichert die Fensterbreite bei geschlossenen Einstellungen.
+Ziehen Sie die Trennlinie zwischen Kamerasteuerung und Positionsliste. Das Profil speichert die Position der Trennlinie. Die Anfangsgröße beträgt 900 × 500, die Mindestgröße 670 × 450. Die Einstellungen starten geschlossen. Beim ersten Öffnen nach dem Start erscheint die erste Registerkarte. Scrollen Sie unter **Schwenken** oder **Anwendung** nach unten, wenn Felder außerhalb des Fensters liegen. Das Profil speichert Position und Größe beider Fenster.
 
 Lassen Sie beim Profilwechsel über die Profilauswahl unten die Option **Aktuelle Position und Anordnung beibehalten** aus, um das gespeicherte Layout zu laden. Aktivieren Sie sie, um das aktuelle Layout mitzunehmen. Die Wahl wird im verlassenen Profil gespeichert. Das übernommene Layout wird im Zielprofil gespeichert.
 

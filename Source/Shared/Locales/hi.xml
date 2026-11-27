@@ -41,6 +41,7 @@
   <text key="Focus">फ़ोकस</text>
   <text key="Gain">गेन</text>
   <text key="Gamma">गामा</text>
+  <text key="Project on GitHub">GitHub प्रोजेक्ट</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">क्या स्ट्रीमिंग शुरू हो गई है? कैमरा नियंत्रण चालू करने के लिए हाँ चुनें।</text>
   <text key="Hue">रंगत</text>
@@ -258,4 +259,5 @@
   <text key="Open the latest release?">नवीनतम रिलीज़ खोलें?</text>
   <text key="Report a bug">समस्या की रिपोर्ट करें</text>
   <text key="Request a feature">नई सुविधा का अनुरोध करें</text>
+  <text key="Settings for Camera Control Studio">Camera Control Studio की सेटिंग</text>
 </translations>

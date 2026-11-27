@@ -41,6 +41,7 @@
   <text key="Focus">التركيز البؤري</text>
   <text key="Gain">الكسب</text>
   <text key="Gamma">غاما</text>
+  <text key="Project on GitHub">مشروع GitHub</text>
   <text key="GitHub">GitHub</text>
   <text key="Has streaming started? Choose Yes to enable camera controls.">هل بدأ البث؟ اختر «نعم» لتفعيل عناصر التحكم في الكاميرا.</text>
   <text key="Hue">درجة اللون</text>
@@ -258,4 +259,5 @@
   <text key="Open the latest release?">هل تريد فتح أحدث إصدار؟</text>
   <text key="Report a bug">الإبلاغ عن مشكلة</text>
   <text key="Request a feature">طلب ميزة جديدة</text>
+  <text key="Settings for Camera Control Studio">إعدادات Camera Control Studio</text>
 </translations>

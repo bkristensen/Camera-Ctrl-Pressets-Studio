@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -16,6 +17,12 @@ namespace CameraControlStudio
                 Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
                 Application.ThreadException += (sender, e) =>
                 {
+                    var main = Application.OpenForms.OfType<MainForm>().FirstOrDefault(form => !form.IsDisposed);
+                    if (main != null)
+                    {
+                        main.RecoverUiError(e.Exception);
+                        return;
+                    }
                     var log = DiagnosticLog.Current.Write("CRITICAL", "Unhandled UI exception", e.Exception);
                     try
                     {

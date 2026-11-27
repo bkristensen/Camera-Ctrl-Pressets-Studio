@@ -6,9 +6,9 @@
 
 [Dépannage](TROUBLESHOOTING.md)
 
-Ouvrez l'engrenage dans le pied de page. Les paramètres s'ouvrent à droite. Votre liste de postes reste visible.
+Cliquez sur la roue dentée en bas pour ouvrir les paramètres. Les paramètres s’ouvrent dans une fenêtre séparée. Vous pouvez continuer à utiliser la fenêtre principale.
 
-![Fenêtre principale avec le volet des paramètres ouvert à droite](../images/screenshots/1.0.1/en/main-settings.png)
+![Fenêtre principale à côté de la fenêtre des paramètres](../images/screenshots/settings-tabs/fr/main-settings.png)
 
 ## Installez et vérifiez le téléchargement
 
@@ -111,7 +111,7 @@ La sélection d'une ligne permanente dans la liste principale sélectionne égal
 
 ## 5. Définir la mise en page et la langue
 
-Faites glisser le séparateur entre les commandes de la caméra et la liste des préréglages. Votre profil enregistre le séparateur ainsi que la taille et la position de la fenêtre. La taille initiale est de 900 × 500 et la taille minimale est de 670 × 450. Les paramètres démarrent fermés. Lorsque vous les ouvrez pour la première fois après le lancement, le premier onglet est sélectionné. Faites défiler vers le bas dans **Panoramique** ou **Application** si certains champs se trouvent sous la fenêtre. L'application enregistre la largeur de la fenêtre avec les paramètres fermés.
+Faites glisser le séparateur entre les commandes de la caméra et la liste des préréglages. Votre profil mémorise la position du séparateur. La taille initiale est de 900 × 500 et la taille minimale est de 670 × 450. Les paramètres démarrent fermés. Lorsque vous les ouvrez pour la première fois après le lancement, le premier onglet est sélectionné. Faites défiler vers le bas dans **Panoramique** ou **Application** si certains champs se trouvent sous la fenêtre. Votre profil mémorise la taille et la position des deux fenêtres.
 
 Lors de la sélection d'un profil dans le pied de page, laissez **Conserver la position et la disposition actuelles** décoché pour restaurer la disposition de ce profil. Cochez-la pour transférer la mise en page actuelle dans le profil sélectionné. Le choix est mémorisé dans le profil que vous quittez ; la mise en page transportée est enregistrée dans le profil de destination.
 

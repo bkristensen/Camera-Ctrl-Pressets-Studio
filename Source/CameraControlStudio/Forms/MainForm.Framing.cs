@@ -19,34 +19,34 @@ namespace CameraControlStudio
         {
             string driverTooltip = UiText.T("The camera driver determines which field-of-view angles you can select.",
                 "Kameradriveren afgør, hvilke vinkler du kan vælge.");
-            startupFovLabel.AccessibleDescription = fieldOfViewLabel.AccessibleDescription = driverTooltip;
-            mainToolTips.SetToolTip(startupFovLabel, driverTooltip);
+            settings.startupFovLabel.AccessibleDescription = fieldOfViewLabel.AccessibleDescription = driverTooltip;
+            mainToolTips.SetToolTip(settings.startupFovLabel, driverTooltip);
             mainToolTips.SetToolTip(fieldOfViewLabel, driverTooltip);
-            startupFov.SelectedIndexChanged += (sender, args) =>
+            settings.startupFov.SelectedIndexChanged += (sender, args) => RunSettings(() =>
             {
-                if (applying || config == null || startupFov.SelectedIndex < 0)
+                if (applying || config == null || settings.startupFov.SelectedIndex < 0)
                     return;
-                int selection = startupFov.SelectedIndex;
+                int selection = settings.startupFov.SelectedIndex;
                 config.StartupFieldOfView = selection < 2 ? -selection : displayedFieldOfViewAngles[selection - 2];
                 MarkDirty();
-            };
-            allowFov.CheckedChanged += (sender, args) =>
+            });
+            settings.allowFov.CheckedChanged += (sender, args) => RunSettings(() =>
             {
                 if (applying || config == null)
                     return;
-                config.AllowFieldOfViewChange = allowFov.Checked;
+                config.AllowFieldOfViewChange = settings.allowFov.Checked;
                 UpdateFieldOfViewControls();
                 MarkDirty();
-            };
-            adjustFovAtLimits.CheckedChanged += (sender, args) =>
+            });
+            settings.adjustFovAtLimits.CheckedChanged += (sender, args) => RunSettings(() =>
             {
                 if (applying || config == null)
                     return;
-                config.AdjustFieldOfViewAtLimits = adjustFovAtLimits.Checked;
+                config.AdjustFieldOfViewAtLimits = settings.adjustFovAtLimits.Checked;
                 blockedFieldOfViewSteps.Clear();
-                Run(RefreshMotionControls);
+                RefreshMotionControls();
                 MarkDirty();
-            };
+            });
             fieldOfViewPicker.SelectionChangeCommitted += (sender, args) => Run(() =>
             {
                 if (fieldOfViewPicker.SelectedIndex < 0 || camera?.FieldOfView == null)
@@ -67,8 +67,8 @@ namespace CameraControlStudio
 
         void LoadFramingSettings()
         {
-            allowFov.Checked = config.AllowFieldOfViewChange;
-            adjustFovAtLimits.Checked = config.AdjustFieldOfViewAtLimits;
+            settings.allowFov.Checked = config.AllowFieldOfViewChange;
+            settings.adjustFovAtLimits.Checked = config.AdjustFieldOfViewAtLimits;
             UpdateFieldOfViewControls();
             SelectStartupFieldOfView();
         }
@@ -77,7 +77,7 @@ namespace CameraControlStudio
         {
             int selection = config?.StartupFieldOfView ?? 0;
             int index = Array.IndexOf(displayedFieldOfViewAngles, selection);
-            startupFov.SelectedIndex = index >= 0 ? index + 2 : selection == 0 ? 0 : selection == -1 ? 1 : -1;
+            settings.startupFov.SelectedIndex = index >= 0 ? index + 2 : selection == 0 ? 0 : selection == -1 ? 1 : -1;
         }
 
         void UpdateFieldOfViewOptions(int[] angles)
@@ -89,14 +89,14 @@ namespace CameraControlStudio
             applying = true;
             try
             {
-                startupFov.Items.Clear();
-                startupFov.Items.Add(UiText.T("Widest available", "Bredest muligt"));
-                startupFov.Items.Add(UiText.T("Do nothing", "Gør ingenting"));
+                settings.startupFov.Items.Clear();
+                settings.startupFov.Items.Add(UiText.T("Widest available", "Bredest muligt"));
+                settings.startupFov.Items.Add(UiText.T("Do nothing", "Gør ingenting"));
                 fieldOfViewPicker.Items.Clear();
                 foreach (int angle in angles)
                 {
                     string text = angle + "°";
-                    startupFov.Items.Add(text);
+                    settings.startupFov.Items.Add(text);
                     fieldOfViewPicker.Items.Add(text);
                 }
                 SelectStartupFieldOfView();
@@ -257,8 +257,8 @@ namespace CameraControlStudio
         {
             var angles = FieldOfViewAngles;
             UpdateFieldOfViewOptions(angles);
-            startupFov.Enabled = angles.Length > 0;
-            allowFov.Enabled = adjustFovAtLimits.Enabled = angles.Length > 1;
+            settings.startupFov.Enabled = angles.Length > 0;
+            settings.allowFov.Enabled = settings.adjustFovAtLimits.Enabled = angles.Length > 1;
             bool editing = config?.AllowFieldOfViewChange == true && angles.Length > 1;
             fieldOfViewPicker.Visible = editing;
             fieldOfViewLabel.Visible = !editing;

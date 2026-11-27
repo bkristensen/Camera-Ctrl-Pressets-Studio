@@ -6,9 +6,9 @@
 
 [Fejlfinding](TROUBLESHOOTING.md)
 
-Tryk på tandhjulet i bunden. Indstillinger åbner til højre. Positionslisten bliver ved med at være synlig.
+Klik på tandhjulet nederst for at åbne Indstillinger. Indstillinger åbner i et separat vindue. Du kan stadig bruge hovedvinduet.
 
-![Hovedvinduet med indstillingerne åbne til højre](../images/screenshots/1.0.1/da/main-settings.png)
+![Hovedvinduet ved siden af det separate indstillingsvindue](../images/screenshots/settings-tabs/da/main-settings.png)
 
 ## Installér og kontrollér downloadet
 
@@ -99,9 +99,9 @@ Positioner gemmer pan, tilt, zoom og det synsfelt, driveren melder tilbage. Æld
 
 [Før videoindstillingerne indlæses](../images/screenshots/settings-tabs/da/video.png) · [Farve](../images/screenshots/1.0.1/da/video-colour.png) · [Lys og detaljer](../images/screenshots/1.0.1/da/video-light-detail.png)
 
-Vælg **Video** i indstillingspanelet. Indlæs billedindstillinger, hvis det er nødvendigt. Vælg **Fokus og eksponering**, **Farve** eller **Lys og detaljer**. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
+Vælg **Video** i indstillingsvinduet. Indlæs billedindstillinger, hvis det er nødvendigt. Vælg **Fokus og eksponering**, **Farve** eller **Lys og detaljer**. Kun funktioner fra kameraets driver bliver vist. Du kan ændre lysstyrke, kontrast, farvemætning, fokus eller hvidbalance, hvis de findes. Slå automatik fra før manuel justering. Billedværdier gemmes for kameraet i profilen. Knappen til nulstilling gendanner driverens standarder.
 
-Indstil først kameraet. Vælg **Positioner** i indstillingspanelet, og klik på **+** for at tilføje en fast position. Vælg ikon øverst. Kontrollér navnet, og gem. Er navnefeltet tomt, og er navnet ledigt, foreslår ikonet et navn. Kombinerede symboler viser motiverne fra venstre mod højre.
+Indstil først kameraet. Vælg **Positioner** i indstillingsvinduet, og klik på **+** for at tilføje en fast position. Vælg ikon øverst. Kontrollér navnet, og gem. Er navnefeltet tomt, og er navnet ledigt, foreslår ikonet et navn. Kombinerede symboler viser motiverne fra venstre mod højre.
 
 Under **Faste positioner** kan du holde musen over symbolerne for at se deres funktion. Vælg en position, og brug **✎** til navn og symbol, **↻** til at erstatte med kameraets aktuelle position og **−** til at slette. Flyt positionen med **↑** eller **↓**. Rækkefølgen gemmes og vises også i hovedlisten.
 
@@ -111,7 +111,7 @@ En fast position, du markerer i hovedlisten, markeres også i indstillingerne. N
 
 ## 5. Tilpas udseende og sprog
 
-Træk skillelinjen mellem kamerastyringen og positionslisten. Profilen gemmer skillelinjen og vinduets placering og størrelse. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne starter lukket. Første gang du åbner dem efter start, vises den første fane. Rul ned på **Panorering** eller **Program**, hvis nogle felter ligger uden for vinduet. Appen gemmer vinduets bredde med indstillingerne lukket.
+Træk skillelinjen mellem kamerastyringen og positionslisten. Profilen gemmer skillelinjens placering. Startstørrelsen er 900 × 500, og minimum er 670 × 450. Indstillingerne starter lukket. Første gang du åbner dem efter start, vises den første fane. Rul ned på **Panorering** eller **Program**, hvis nogle felter ligger uden for vinduet. Profilen gemmer placering og størrelse for begge vinduer.
 
 Når du vælger profil i bunden, skal **Behold nuværende placering og layout** være uden flueben for at hente profilens gemte udseende. Sæt flueben for at tage det nuværende udseende med. Valget huskes i profilen, du forlader. Det overførte udseende gemmes i den nye profil.
 

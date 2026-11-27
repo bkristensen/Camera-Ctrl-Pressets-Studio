@@ -5,7 +5,7 @@ Disse billeder viser Camera Control Studio 1.0.1 med standardprofilen, et demoka
 | Visning | Hvad det viser |
 | --- | --- |
 | [ Hovedvindue](../images/screenshots/1.0.1/da/main.png) | Retningshjul, kameravælger, zoom, forudindstillinger og status med Indstillinger lukket |
-| [ Hovedvindue med indstillinger åben](../images/screenshots/1.0.1/da/main-settings.png) | Indstillingsruden ved siden af kamerakontrollerne og listen over forudindstillede |
+| [ Hovedvindue med indstillinger åben](../images/screenshots/settings-tabs/da/main-settings.png) | Det separate indstillingsvindue ved siden af hovedvinduet |
 | [Indstillinger → Panorering](../images/screenshots/settings-tabs/da/settings.png) | Panorerings- og vippetrin, retningsvending og valgmuligheder for kameraknap |
 | [Indstillinger → Zoom](../images/screenshots/settings-tabs/da/zoom.png) | Trinstørrelse for zoomknapperne |
 | [Indstillinger → Application](../images/screenshots/1.0.1/da/application.png) | Streamingbekræftelse, altid-på-top-adfærd og profilsprog |
