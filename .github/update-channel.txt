@@ -1,1 +1,5 @@
+# Sets the download and update source for copies installed outside Microsoft Store.
+# github: Use GitHub. Keep this value until the app is available in Microsoft Store.
+# store-first: Prefer Microsoft Store when the app is listed. Use GitHub otherwise.
+# Keep one value on its own line. Changes take effect the next time the app starts.
 github

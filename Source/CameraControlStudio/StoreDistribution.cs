@@ -36,8 +36,7 @@ namespace CameraControlStudio
                 using (var policy = await Client.GetAsync(PolicyUrl).ConfigureAwait(false))
                 {
                     if (!policy.IsSuccessStatusCode ||
-                        !string.Equals((await policy.Content.ReadAsStringAsync().ConfigureAwait(false)).Trim(), StoreFirst,
-                            StringComparison.OrdinalIgnoreCase))
+                        !PrefersStore(await policy.Content.ReadAsStringAsync().ConfigureAwait(false)))
                         return null;
                 }
 
@@ -63,6 +62,16 @@ namespace CameraControlStudio
                 // An unavailable policy or catalog must not block GitHub downloads.
                 return null;
             }
+        }
+
+        internal static bool PrefersStore(string policy)
+        {
+            var values = policy.Split('\n')
+                .Select(line => line.Trim())
+                .Where(line => line.Length > 0 && !line.StartsWith("#", StringComparison.Ordinal))
+                .Take(2)
+                .ToArray();
+            return values.Length == 1 && string.Equals(values[0], StoreFirst, StringComparison.OrdinalIgnoreCase);
         }
 
         internal static Uri FindStorePage(Stream payload)
