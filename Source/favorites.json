@@ -54,6 +54,14 @@
     {
       "name": "MainForm.cs",
       "path": "CameraControlStudio\\Forms\\MainForm.cs"
+    },
+    {
+      "name": "Models.cs",
+      "path": "Shared\\Models.cs"
+    },
+    {
+      "name": "ProfileStore.cs",
+      "path": "Shared\\ProfileStore.cs"
     }
   ]
 }
