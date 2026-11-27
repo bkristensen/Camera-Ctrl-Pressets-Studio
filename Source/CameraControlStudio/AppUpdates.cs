@@ -18,16 +18,18 @@ namespace CameraControlStudio
 
     internal sealed class AppUpdate
     {
-        internal AppUpdate(Uri url, string version = null, DateTimeOffset? publishedAt = null)
+        internal AppUpdate(Uri url, string version = null, DateTimeOffset? publishedAt = null, bool isStoreMigration = false)
         {
             Url = url;
             Version = version;
             PublishedAt = publishedAt;
+            IsStoreMigration = isStoreMigration;
         }
 
         internal Uri Url { get; }
         internal string Version { get; }
         internal DateTimeOffset? PublishedAt { get; }
+        internal bool IsStoreMigration { get; }
     }
 
     internal static class AppUpdates
@@ -38,15 +40,31 @@ namespace CameraControlStudio
         static readonly Uri StoreUpdates = new Uri("ms-windows-store://downloadsandupdates");
         static readonly Lazy<UpdateChannel> InstalledChannel = new Lazy<UpdateChannel>(DetectChannel);
 
+        static readonly Lazy<Task<Uri>> StoreListing = new Lazy<Task<Uri>>(StoreDistribution.FindPreferredStorePageAsync);
+
         internal static UpdateChannel Channel => InstalledChannel.Value;
+        static Uri PublishedStorePage => Channel == UpdateChannel.GitHub && StoreListing.IsValueCreated
+            && StoreListing.Value.Status == TaskStatus.RanToCompletion ? StoreListing.Value.Result : null;
+        internal static bool OffersStoreMigration => PublishedStorePage != null;
+        internal static bool UsesGitHubForUpdates => Channel == UpdateChannel.GitHub && !OffersStoreMigration;
         internal static Uri DownloadUrl => Channel == UpdateChannel.MicrosoftStore ? StoreUpdates
-            : Channel == UpdateChannel.GitHub ? new Uri(GitHubActions.ReleasesUrl) : null;
+            : Channel == UpdateChannel.GitHub ? PublishedStorePage ?? new Uri(GitHubActions.ReleasesUrl) : null;
+
+        internal static async Task<Uri> ResolveDownloadUrlAsync()
+        {
+            if (Channel == UpdateChannel.GitHub)
+                await StoreListing.Value.ConfigureAwait(false);
+            return DownloadUrl;
+        }
 
         internal static async Task<AppUpdate> CheckAsync(IntPtr window)
         {
             switch (Channel)
             {
                 case UpdateChannel.GitHub:
+                    var storePage = await StoreListing.Value.ConfigureAwait(false);
+                    if (storePage != null)
+                        return new AppUpdate(storePage, isStoreMigration: true);
                     var release = await GitHubReleases.CheckAsync(DiagnosticLog.AppVersion).ConfigureAwait(false);
                     return release == null ? null : new AppUpdate(release.Url, release.Version, release.PublishedAt);
                 case UpdateChannel.MicrosoftStore:

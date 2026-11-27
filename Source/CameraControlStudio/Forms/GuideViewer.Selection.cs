@@ -52,7 +52,7 @@ namespace CameraControlStudio
             };
             useOnlineGuides.CheckedChanged += async (sender, args) =>
             {
-                if (AppUpdates.Channel == UpdateChannel.GitHub && useOnlineGuides.Checked
+                if (AppUpdates.UsesGitHubForUpdates && useOnlineGuides.Checked
                     && releaseCheck?.IsCompleted == true && latestRelease == null)
                     releaseCheck = GitHubReleases.CheckLatestAsync();
                 await ShowSelectedGuide();
@@ -73,16 +73,25 @@ namespace CameraControlStudio
 
         async Task StartGuides()
         {
-            releaseCheck = AppUpdates.Channel == UpdateChannel.GitHub
-                ? GitHubReleases.CheckLatestAsync() : Task.FromResult<GitHubReleases.AvailableRelease>(null);
+            releaseCheck = CheckGuideReleaseAsync();
             SelectGuide(openSetup ? SetupGuide : DailyGuide, setupSection: openSetup);
 
             latestRelease = await releaseCheck;
-            if (!IsDisposed && !printing && !useOnlineGuides.Checked && HasNewerRelease)
+            if (IsDisposed)
+                return;
+
+            githubActions.ConfigureDownloadLink();
+            if (!printing && !useOnlineGuides.Checked && (HasNewerRelease || AppUpdates.OffersStoreMigration))
                 await ShowSelectedGuide();
         }
 
-        string OnlineGuideTag => AppUpdates.Channel == UpdateChannel.GitHub
+        static async Task<GitHubReleases.AvailableRelease> CheckGuideReleaseAsync()
+        {
+            await AppUpdates.ResolveDownloadUrlAsync();
+            return AppUpdates.UsesGitHubForUpdates ? await GitHubReleases.CheckLatestAsync() : null;
+        }
+
+        string OnlineGuideTag => AppUpdates.UsesGitHubForUpdates
             ? latestRelease?.Tag : InstalledVersionTag;
 
         bool HasNewerRelease => latestRelease?.IsNewerThan(DiagnosticLog.AppVersion) == true;
@@ -227,7 +236,7 @@ namespace CameraControlStudio
             if (!available)
                 message = "This guide is unavailable.";
             else if (online)
-                message = AppUpdates.Channel == UpdateChannel.GitHub
+                message = AppUpdates.UsesGitHubForUpdates
                     ? "This online guide is for the latest release." : "This online guide is for the installed version.";
             else if (wantsOnline)
                 message = "The online guide is unavailable. Showing the local guide.";

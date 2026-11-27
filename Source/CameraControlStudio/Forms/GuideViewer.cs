@@ -212,7 +212,7 @@ namespace CameraControlStudio
 
         const string ProjectUrl = GitHubActions.RepositoryUrl;
         static string InstalledVersionTag => "v" + DiagnosticLog.DisplayAppVersion;
-        static string InstalledReleaseUrl => AppUpdates.Channel == UpdateChannel.GitHub
+        static string InstalledReleaseUrl => AppUpdates.UsesGitHubForUpdates
             ? GitHubActions.ReleasesUrl + "/tag/" + Uri.EscapeDataString(InstalledVersionTag)
             : AppUpdates.DownloadUrl?.AbsoluteUri;
         const double PrintVerticalMargin = 50.4; // 0.7 inches, in PDF points
@@ -403,7 +403,8 @@ namespace CameraControlStudio
                 var guideBase = new Uri(RepositoryFilesUrl + Uri.EscapeDataString(OnlineGuideTag) + GuideDirectory);
                 return RegisterGuideLink(destination, new Uri(guideBase, onlineRoot.MakeRelativeUri(destination)));
             }
-            if (AppUpdates.Channel == UpdateChannel.MicrosoftStore && destination.Scheme == Uri.UriSchemeHttps
+            if ((AppUpdates.Channel == UpdateChannel.MicrosoftStore || AppUpdates.OffersStoreMigration)
+                && destination.Scheme == Uri.UriSchemeHttps
                 && destination.Host == "github.com" && destination.IsDefaultPort && destination.UserInfo.Length == 0)
             {
                 var releasePage = new Uri(GitHubActions.ReleasesUrl);

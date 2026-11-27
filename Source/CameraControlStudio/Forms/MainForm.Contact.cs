@@ -65,7 +65,7 @@ namespace CameraControlStudio
             if (IsDisposed || owner.IsDisposed || !owner.Visible)
                 return;
             var title = feature ? actions.FeatureTitle : actions.ReportTitle;
-            if (release != null)
+            if (release != null && !release.IsStoreMigration)
             {
                 string check = feature
                     ? UiText.T("Try it first to see whether the feature is already included.",

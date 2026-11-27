@@ -23,10 +23,12 @@ namespace CameraControlStudio {
                     return;
 
                 var release = await CheckForNewerRelease();
-                if (release == null || IsDisposed || Disposing)
+                if (IsDisposed || Disposing)
                     return;
 
-                ShowReleaseUpdate(release);
+                settings.githubActions.ConfigureDownloadLink();
+                if (release != null)
+                    ShowReleaseUpdate(release);
             };
         }
 
@@ -40,12 +42,14 @@ namespace CameraControlStudio {
 
         void ShowReleaseUpdate(AppUpdate release) {
             string installed = DiagnosticLog.DisplayAppVersion;
-            string update = UiText.T("New release available", "Ny version tilgængelig");
+            string update = release.IsStoreMigration
+                ? UiText.T("Get it from Microsoft Store", "Hent i Microsoft Store")
+                : UiText.T("New release available", "Ny version tilgængelig");
             string suffix = $"[{update}]";
             releaseNotice.Text = installed + " " + suffix;
             releaseNotice.LinkArea = new LinkArea(installed.Length + 1, suffix.Length);
             releaseNotice.TabStop = true;
-            string detail = release.Version
+            string detail = release.IsStoreMigration ? null : release.Version
                 ?? UiText.T("Microsoft Store updates", "Opdateringer i Microsoft Store");
             if (release.PublishedAt is DateTimeOffset publishedAt)
                 detail += " · " + publishedAt.ToLocalTime().ToString("d", CultureInfo.GetCultureInfo(UiText.Language));

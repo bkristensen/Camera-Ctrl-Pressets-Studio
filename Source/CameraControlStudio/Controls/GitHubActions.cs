@@ -12,11 +12,13 @@ namespace CameraControlStudio
         {
             InitializeComponent();
             repository.LinkClicked += (sender, args) => ErrorDialog.Open(FindForm(), RepositoryUrl);
-            releases.LinkClicked += (sender, args) =>
+            releases.LinkClicked += async (sender, args) =>
             {
-                var url = AppUpdates.DownloadUrl;
-                if (url != null)
-                    ErrorDialog.OpenRelease(FindForm(), url);
+                var url = await AppUpdates.ResolveDownloadUrlAsync();
+                if (IsDisposed || url == null)
+                    return;
+                ConfigureDownloadLink();
+                ErrorDialog.OpenRelease(FindForm(), url);
             };
             discussions.LinkClicked += (sender, args) => ErrorDialog.Open(FindForm(), RepositoryUrl + "/discussions");
             reportIssue.Click += (sender, args) => ReportIssue?.Invoke(this, args);
@@ -27,7 +29,9 @@ namespace CameraControlStudio
         internal void ConfigureDownloadLink()
         {
             releases.Visible = AppUpdates.DownloadUrl != null;
-            if (AppUpdates.Channel == UpdateChannel.MicrosoftStore)
+            if (AppUpdates.OffersStoreMigration)
+                releases.Text = UiText.T("Get it from Microsoft Store", "Hent i Microsoft Store");
+            else if (AppUpdates.Channel == UpdateChannel.MicrosoftStore)
                 releases.Text = UiText.T("Microsoft Store updates", "Opdateringer i Microsoft Store");
         }
 
