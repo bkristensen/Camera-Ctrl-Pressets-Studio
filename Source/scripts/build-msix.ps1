@@ -3,7 +3,7 @@ param(
     [string]$IdentityName,
     [string]$Publisher,
     [string]$PublisherDisplayName,
-    [string]$DisplayName = 'Camera Control Studio',
+    [string]$DisplayName,
     [string]$PackageVersion = '',
     [string]$MakeAppxPath = 'MakeAppx.exe'
 )
@@ -27,6 +27,12 @@ if (-not $PSBoundParameters.ContainsKey('Publisher')) {
 }
 if (-not $PSBoundParameters.ContainsKey('PublisherDisplayName')) {
     $PublisherDisplayName = $manifest.Package.Properties.PublisherDisplayName
+}
+if (-not $PSBoundParameters.ContainsKey('DisplayName')) {
+    $DisplayName = [string]$manifest.Package.Properties.DisplayName
+}
+if ([string]::IsNullOrWhiteSpace($DisplayName)) {
+    throw 'Set the reserved Partner Center app name in Package/Properties/DisplayName or supply -DisplayName.'
 }
 if ($IdentityName -match 'REPLACE' -or $Publisher -match 'REPLACE' -or $PublisherDisplayName -match 'REPLACE') {
     throw 'Set the Partner Center identity in packaging/msix/Package.appxmanifest or supply the identity parameters.'
