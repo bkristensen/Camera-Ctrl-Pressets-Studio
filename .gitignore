@@ -55,3 +55,4 @@ nunit-*.xml
 /.vs
 .dependecies/dotnet-sdk-8.0.428-win-x64.exe
 /Source/my notes
+Source/favorites.json

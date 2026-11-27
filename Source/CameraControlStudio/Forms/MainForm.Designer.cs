@@ -12,8 +12,8 @@ namespace CameraControlStudio {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainToolTips = new System.Windows.Forms.ToolTip(this.components);
             this.fullFrame = new CameraControlStudio.BlueButton();
             this.wheel = new CameraControlStudio.PanWheel();
@@ -44,10 +44,10 @@ namespace CameraControlStudio {
             this.reverseY = new CameraControlStudio.BlueCheckBox();
             this.startupFovLabel = new System.Windows.Forms.Label();
             this.startupFov = new System.Windows.Forms.ListBox();
-            this.panWithCameraButton = new CameraControlStudio.BlueCheckBox();
-            this.doubleClickForCameraSource = new CameraControlStudio.BlueCheckBox();
             this.allowFov = new CameraControlStudio.BlueCheckBox();
             this.adjustFovAtLimits = new CameraControlStudio.BlueCheckBox();
+            this.panWithCameraButton = new CameraControlStudio.BlueCheckBox();
+            this.doubleClickForCameraSource = new CameraControlStudio.BlueCheckBox();
             this.applicationTab = new System.Windows.Forms.TabPage();
             this.applicationScroll = new System.Windows.Forms.Panel();
             this.applicationFields = new System.Windows.Forms.TableLayoutPanel();
@@ -531,28 +531,6 @@ namespace CameraControlStudio {
             this.reverseY.Name = "reverseY";
             this.reverseY.UseVisualStyleBackColor = false;
             // 
-            // panWithCameraButton
-            //
-            this.panWithCameraButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.panWithCameraButton.Checked = true;
-            this.panWithCameraButton.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.generalFields.SetColumnSpan(this.panWithCameraButton, 2);
-            resources.ApplyResources(this.panWithCameraButton, "panWithCameraButton");
-            this.panWithCameraButton.ForeColor = System.Drawing.Color.White;
-            this.panWithCameraButton.Name = "panWithCameraButton";
-            this.panWithCameraButton.UseVisualStyleBackColor = false;
-            //
-            // doubleClickForCameraSource
-            //
-            this.doubleClickForCameraSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.doubleClickForCameraSource.Checked = true;
-            this.doubleClickForCameraSource.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.generalFields.SetColumnSpan(this.doubleClickForCameraSource, 2);
-            resources.ApplyResources(this.doubleClickForCameraSource, "doubleClickForCameraSource");
-            this.doubleClickForCameraSource.ForeColor = System.Drawing.Color.White;
-            this.doubleClickForCameraSource.Name = "doubleClickForCameraSource";
-            this.doubleClickForCameraSource.UseVisualStyleBackColor = false;
-            //
             // startupFovLabel
             // 
             resources.ApplyResources(this.startupFovLabel, "startupFovLabel");
@@ -576,6 +554,28 @@ namespace CameraControlStudio {
             this.generalFields.SetColumnSpan(this.adjustFovAtLimits, 2);
             resources.ApplyResources(this.adjustFovAtLimits, "adjustFovAtLimits");
             this.adjustFovAtLimits.Name = "adjustFovAtLimits";
+            // 
+            // panWithCameraButton
+            // 
+            this.panWithCameraButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.panWithCameraButton.Checked = true;
+            this.panWithCameraButton.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.generalFields.SetColumnSpan(this.panWithCameraButton, 2);
+            resources.ApplyResources(this.panWithCameraButton, "panWithCameraButton");
+            this.panWithCameraButton.ForeColor = System.Drawing.Color.White;
+            this.panWithCameraButton.Name = "panWithCameraButton";
+            this.panWithCameraButton.UseVisualStyleBackColor = false;
+            // 
+            // doubleClickForCameraSource
+            // 
+            this.doubleClickForCameraSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.doubleClickForCameraSource.Checked = true;
+            this.doubleClickForCameraSource.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.generalFields.SetColumnSpan(this.doubleClickForCameraSource, 2);
+            resources.ApplyResources(this.doubleClickForCameraSource, "doubleClickForCameraSource");
+            this.doubleClickForCameraSource.ForeColor = System.Drawing.Color.White;
+            this.doubleClickForCameraSource.Name = "doubleClickForCameraSource";
+            this.doubleClickForCameraSource.UseVisualStyleBackColor = false;
             // 
             // applicationTab
             // 
@@ -1127,8 +1127,8 @@ namespace CameraControlStudio {
             // iconColumn
             // 
             this.iconColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.NullValue = null;
-            this.iconColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.NullValue = null;
+            this.iconColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.iconColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             resources.ApplyResources(this.iconColumn, "iconColumn");
             this.iconColumn.Name = "iconColumn";
@@ -1324,15 +1324,15 @@ namespace CameraControlStudio {
             this.iconColumn,
             this.positionColumn,
             this.recallColumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(4);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.presetGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.presetGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.presetGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(214)))));
             this.presetGrid.MultiSelect = false;
             this.presetGrid.Name = "presetGrid";
