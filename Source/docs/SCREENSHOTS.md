@@ -17,8 +17,8 @@ These images show Camera Control Studio 1.0.1 with the Standard profile, a demo 
 | [Presets → Permanent presets](images/screenshots/settings-tabs/en/presets.png) | Permanent presets and editing actions |
 | [Presets → Transitions](images/screenshots/settings-tabs/en/transitions.png) | Fixed duration or speed for moves between saved positions |
 | [Profiles](images/screenshots/1.0.1/en/profiles.png) | Profile list and actions to create, copy or rename a profile |
-| [Issues](images/screenshots/1.0.1/en/issues.png) | Diagnostic logs and GitHub reporting |
-| [About](images/screenshots/1.0.1/en/about.png) | Version, developer credit and project links |
+| [Contact & About → Contact](images/screenshots/contact/en/issues.png) | GitHub issue buttons, support ZIP and diagnostic logs |
+| [Contact & About → About](images/screenshots/contact/en/about.png) | Version, developer credit and project links |
 
 ## Refresh the guide images
 

@@ -243,4 +243,19 @@
   <text key="Panning">پیننگ</text>
   <text key="Pan and tilt">پین اور ٹِلٹ</text>
   <text key="Transitions">منتقلیاں</text>
+  <text key="Contact &amp; About">رابطہ اور تعارف</text>
+  <text key="Contact">رابطہ</text>
+  <text key="Report an issue">مسئلے کی اطلاع دیں</text>
+  <text key="Request a new feature">نئی سہولت کی درخواست کریں</text>
+  <text key="Save support ZIP">معاونت کی ZIP محفوظ کریں</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">ZIP شیئر کرنے سے پہلے اسکرین شاٹ، ترتیبات اور لاگز دیکھ لیں۔</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">GitHub رپورٹ کے ساتھ لگانے کے لیے معاونت کی ZIP محفوظ کریں؟</text>
+  <text key="Support ZIP saved. Review it before sharing.">ZIP محفوظ ہو گئی۔ شیئر کرنے سے پہلے اسے دیکھ لیں۔</text>
+  <text key="Could not save the support ZIP. Try a different location.">ZIP محفوظ نہیں ہو سکی۔ کوئی اور جگہ آزمائیں۔</text>
+  <text key="Version {0} is available.">ورژن {0} دستیاب ہے۔</text>
+  <text key="Try it first to see whether the feature is already included.">پہلے دیکھ لیں کہ اس میں یہ سہولت پہلے سے موجود ہے یا نہیں۔</text>
+  <text key="Try it first to see whether the issue is fixed.">پہلے دیکھ لیں کہ اس میں مسئلہ حل ہو چکا ہے یا نہیں۔</text>
+  <text key="Open the latest release?">تازہ ترین ریلیز کھولیں؟</text>
+  <text key="Report a bug">مسئلے کی اطلاع دیں</text>
+  <text key="Request a feature">نئی سہولت کی درخواست کریں</text>
 </translations>

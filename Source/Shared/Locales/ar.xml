@@ -243,4 +243,19 @@
   <text key="Panning">التحريك الأفقي</text>
   <text key="Pan and tilt">التحريك الأفقي والإمالة</text>
   <text key="Transitions">الانتقالات</text>
+  <text key="Contact &amp; About">التواصل وحول التطبيق</text>
+  <text key="Contact">التواصل</text>
+  <text key="Report an issue">الإبلاغ عن مشكلة</text>
+  <text key="Request a new feature">طلب ميزة جديدة</text>
+  <text key="Save support ZIP">حفظ ملف الدعم ZIP</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">راجع لقطة الشاشة والإعدادات والسجلات قبل مشاركة ملف ZIP.</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">هل تريد حفظ ملف دعم ZIP لإرفاقه ببلاغ GitHub؟</text>
+  <text key="Support ZIP saved. Review it before sharing.">تم حفظ ملف ZIP. راجعه قبل مشاركته.</text>
+  <text key="Could not save the support ZIP. Try a different location.">تعذّر حفظ ملف ZIP. جرّب موقعًا آخر.</text>
+  <text key="Version {0} is available.">الإصدار {0} متاح.</text>
+  <text key="Try it first to see whether the feature is already included.">جرّبه أولًا للتحقق مما إذا كانت الميزة مضافة بالفعل.</text>
+  <text key="Try it first to see whether the issue is fixed.">جرّبه أولًا للتحقق مما إذا كانت المشكلة قد حُلّت.</text>
+  <text key="Open the latest release?">هل تريد فتح أحدث إصدار؟</text>
+  <text key="Report a bug">الإبلاغ عن مشكلة</text>
+  <text key="Request a feature">طلب ميزة جديدة</text>
 </translations>

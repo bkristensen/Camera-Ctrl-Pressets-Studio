@@ -23,4 +23,6 @@ The viewer needs [Microsoft Edge WebView2 Runtime](https://developer.microsoft.c
 | Bahasa Indonesia | [Penggunaan dan pengaturan](id/USER-GUIDE.md) · [Pemecahan masalah](id/TROUBLESHOOTING.md) |
 | اردو | [استعمال اور ترتیبات](ur/USER-GUIDE.md) · [مسائل کا حل](ur/TROUBLESHOOTING.md) |
 
+Report with GitHub and attach a support ZIP. [Report a bug](en/Report%20a%20bug.md) · [Request a feature](en/Request%20a%20feature.md) · [Rapportér en fejl](da/Report%20a%20bug.md) · [Foreslå en ny funktion](da/Request%20a%20feature.md)
+
 The guides use screenshots in their own language. See the [screenshot index](SCREENSHOTS.md) for the main window and every settings tab and subtab.

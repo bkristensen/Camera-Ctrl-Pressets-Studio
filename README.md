@@ -49,8 +49,8 @@ In **Presets → Transitions**, choose a fixed duration or a movement speed for 
 | [Settings → Application](Source/docs/images/screenshots/1.0.1/en/application.png) | Set the profile language and always-on-top behaviour, or enable streaming confirmation. |
 | [Video](Source/docs/images/screenshots/settings-tabs/en/image.png) | Adjust image controls, such as focus and exposure, and set the [field of view](Source/docs/images/screenshots/settings-tabs/en/field-of-view.png) if the camera driver supports it. Image settings are saved per camera and profile. |
 | [Profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png) | Create or copy profiles for different operators, rooms or camera setups. Use the footer picker to switch profiles. |
-| [Issues](Source/docs/images/screenshots/1.0.1/en/issues.png) | Set up local diagnostic logs and prepare a GitHub issue report. |
-| [About](Source/docs/images/screenshots/1.0.1/en/about.png) | Find the installed version, developer credit and links to the project, issue tracker and discussions. |
+| [Contact & About → Contact](Source/docs/images/screenshots/contact/en/issues.png) | Report a bug, request a feature, save a support ZIP, or configure diagnostic logs. |
+| [Contact & About → About](Source/docs/images/screenshots/contact/en/about.png) | Find the installed version, developer credit and project links. |
 
 Drag the vertical divider to resize the camera controls and preset list. Hover over compact buttons for tooltips. The settings pane starts closed each time the app opens.
 
@@ -67,7 +67,7 @@ Drag the vertical divider to resize the camera controls and preset list. Hover o
 
 ![Profiles tab with a profile list and buttons to create, copy or rename profiles](Source/docs/images/screenshots/1.0.1/en/profiles.png)
 
-![About tab with developer information, project links and the installed version](Source/docs/images/screenshots/1.0.1/en/about.png)
+![About tab with developer information, project links and the installed version](Source/docs/images/screenshots/contact/en/about.png)
 
 </details>
 

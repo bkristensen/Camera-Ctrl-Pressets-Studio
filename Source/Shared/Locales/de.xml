@@ -243,4 +243,19 @@
   <text key="Panning">Schwenken</text>
   <text key="Pan and tilt">Schwenken und Neigen</text>
   <text key="Transitions">Übergänge</text>
+  <text key="Contact &amp; About">Kontakt &amp; Info</text>
+  <text key="Contact">Kontakt</text>
+  <text key="Report an issue">Fehler melden</text>
+  <text key="Request a new feature">Neue Funktion vorschlagen</text>
+  <text key="Save support ZIP">Support-ZIP speichern</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">Prüfen Sie Bildschirmfoto, Einstellungen und Protokolle, bevor Sie die ZIP-Datei weitergeben.</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">Eine Support-ZIP zum Anhängen an den GitHub-Issue speichern?</text>
+  <text key="Support ZIP saved. Review it before sharing.">Support-ZIP gespeichert. Prüfen Sie die Datei vor dem Teilen.</text>
+  <text key="Could not save the support ZIP. Try a different location.">Die Support-ZIP konnte nicht gespeichert werden. Wählen Sie einen anderen Speicherort.</text>
+  <text key="Version {0} is available.">Version {0} ist verfügbar.</text>
+  <text key="Try it first to see whether the feature is already included.">Testen Sie zuerst, ob die Funktion bereits enthalten ist.</text>
+  <text key="Try it first to see whether the issue is fixed.">Testen Sie zuerst, ob der Fehler behoben ist.</text>
+  <text key="Open the latest release?">Neueste Version öffnen?</text>
+  <text key="Report a bug">Fehler melden</text>
+  <text key="Request a feature">Neue Funktion vorschlagen</text>
 </translations>

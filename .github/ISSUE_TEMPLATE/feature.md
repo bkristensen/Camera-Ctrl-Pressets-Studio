@@ -1,6 +1,7 @@
 ---
 name: Feature request
 about: Suggest a focused improvement
+type: Feature
 labels: enhancement
 ---
 ## Type of feature request
@@ -21,10 +22,13 @@ Describe the feature you would like to see implemented. Please provide as much d
 Describe one task and how you would use the new feature.
 > (Please provide a clear and concise description of how you would use the proposed feature. Include any relevant details that can help us understand the intended usage scenario.))
 
-## Simpler alternatives
+## Simpler alternatives (optional)
 Could settings or an existing feature solve it?
 > (Please describe any simpler alternatives that might address the same need or provide a similar benefit without requiring significant development effort.)
 
-## Mockups
+## Mockups (optional)
 If possible, provide a screenshot or mockup of the proposed feature.
 > (Please attach any relevant mockups, screenshots, or diagrams that illustrate the proposed feature. Visual representations can help us better understand your request and its intended functionality.)
+
+## Include files (optional)
+Attach a screenshot, mockup, or files that help explain the request. In Camera Control Studio, choose **Contact & About → Contact → Save support ZIP** if your setup is relevant. The ZIP contains a screenshot, profiles, the window layout, and any available logs. Review it before dragging it into this issue.

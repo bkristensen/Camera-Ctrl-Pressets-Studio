@@ -21,6 +21,8 @@ namespace CameraControlStudio
         private LinkLabel dailyLink;
         private LinkLabel setupLink;
         private LinkLabel troubleshootingLink;
+        private LinkLabel bugGuideLink;
+        private LinkLabel featureGuideLink;
         private LinkLabel developmentLink;
         private LinkLabel buildReleaseLink;
         private LinkLabel releasesLink;
@@ -59,6 +61,8 @@ namespace CameraControlStudio
             this.dailyLink = new LinkLabel();
             this.setupLink = new LinkLabel();
             this.troubleshootingLink = new LinkLabel();
+            this.bugGuideLink = new LinkLabel();
+            this.featureGuideLink = new LinkLabel();
             this.developmentLink = new LinkLabel();
             this.buildReleaseLink = new LinkLabel();
             this.releasesLink = new LinkLabel();
@@ -101,6 +105,8 @@ namespace CameraControlStudio
             this.sidebar.Controls.Add(this.dailyLink);
             this.sidebar.Controls.Add(this.setupLink);
             this.sidebar.Controls.Add(this.troubleshootingLink);
+            this.sidebar.Controls.Add(this.bugGuideLink);
+            this.sidebar.Controls.Add(this.featureGuideLink);
             this.sidebar.Controls.Add(this.developmentHeading);
             this.sidebar.Controls.Add(this.developmentLink);
             this.sidebar.Controls.Add(this.buildReleaseLink);
@@ -158,7 +164,7 @@ namespace CameraControlStudio
             this.translationsLink.VisitedLinkColor = Color.LightSkyBlue;
             this.translationsLink.MaximumSize = new Size(170, 0);
             this.translationsLink.Name = "translationsLink";
-            this.translationsLink.TabIndex = 7;
+            this.translationsLink.TabIndex = 9;
             this.translationsLink.TabStop = true;
             this.translationsLink.Text = "Translate the app";
             this.githubLink.AutoSize = true;
@@ -168,7 +174,7 @@ namespace CameraControlStudio
             this.githubLink.VisitedLinkColor = Color.LightSkyBlue;
             this.githubLink.MaximumSize = new Size(170, 0);
             this.githubLink.Name = "githubLink";
-            this.githubLink.TabIndex = 8;
+            this.githubLink.TabIndex = 10;
             this.githubLink.TabStop = true;
             this.githubLink.Text = "GitHub project guide";
             this.issuesLink.AutoSize = true;
@@ -178,7 +184,7 @@ namespace CameraControlStudio
             this.issuesLink.VisitedLinkColor = Color.LightSkyBlue;
             this.issuesLink.MaximumSize = new Size(170, 0);
             this.issuesLink.Name = "issuesLink";
-            this.issuesLink.TabIndex = 9;
+            this.issuesLink.TabIndex = 11;
             this.issuesLink.TabStop = true;
             this.issuesLink.Text = "Report or follow an issue";
             this.dailyLink.AutoSize = true;
@@ -211,6 +217,26 @@ namespace CameraControlStudio
             this.troubleshootingLink.TabIndex = 4;
             this.troubleshootingLink.TabStop = true;
             this.troubleshootingLink.Text = "Troubleshooting";
+            this.bugGuideLink.AutoSize = true;
+            this.bugGuideLink.LinkColor = Color.LightSkyBlue;
+            this.bugGuideLink.DisabledLinkColor = Color.LightSkyBlue;
+            this.bugGuideLink.ActiveLinkColor = Color.White;
+            this.bugGuideLink.VisitedLinkColor = Color.LightSkyBlue;
+            this.bugGuideLink.MaximumSize = new Size(170, 0);
+            this.bugGuideLink.Name = "bugGuideLink";
+            this.bugGuideLink.TabIndex = 5;
+            this.bugGuideLink.TabStop = true;
+            this.bugGuideLink.Text = "Report a bug";
+            this.featureGuideLink.AutoSize = true;
+            this.featureGuideLink.LinkColor = Color.LightSkyBlue;
+            this.featureGuideLink.DisabledLinkColor = Color.LightSkyBlue;
+            this.featureGuideLink.ActiveLinkColor = Color.White;
+            this.featureGuideLink.VisitedLinkColor = Color.LightSkyBlue;
+            this.featureGuideLink.MaximumSize = new Size(170, 0);
+            this.featureGuideLink.Name = "featureGuideLink";
+            this.featureGuideLink.TabIndex = 6;
+            this.featureGuideLink.TabStop = true;
+            this.featureGuideLink.Text = "Request a feature";
             this.developmentLink.AutoSize = true;
             this.developmentLink.LinkColor = Color.LightSkyBlue;
             this.developmentLink.DisabledLinkColor = Color.LightSkyBlue;
@@ -218,7 +244,7 @@ namespace CameraControlStudio
             this.developmentLink.VisitedLinkColor = Color.LightSkyBlue;
             this.developmentLink.MaximumSize = new Size(170, 0);
             this.developmentLink.Name = "developmentLink";
-            this.developmentLink.TabIndex = 5;
+            this.developmentLink.TabIndex = 7;
             this.developmentLink.TabStop = true;
             this.developmentLink.Text = "Development guide";
             this.buildReleaseLink.AutoSize = true;
@@ -228,7 +254,7 @@ namespace CameraControlStudio
             this.buildReleaseLink.VisitedLinkColor = Color.LightSkyBlue;
             this.buildReleaseLink.MaximumSize = new Size(170, 0);
             this.buildReleaseLink.Name = "buildReleaseLink";
-            this.buildReleaseLink.TabIndex = 6;
+            this.buildReleaseLink.TabIndex = 8;
             this.buildReleaseLink.TabStop = true;
             this.buildReleaseLink.Text = "Build and release guide";
             this.releasesLink.AutoSize = true;
@@ -238,7 +264,7 @@ namespace CameraControlStudio
             this.releasesLink.VisitedLinkColor = Color.LightSkyBlue;
             this.releasesLink.MaximumSize = new Size(170, 0);
             this.releasesLink.Name = "releasesLink";
-            this.releasesLink.TabIndex = 10;
+            this.releasesLink.TabIndex = 12;
             this.releasesLink.TabStop = true;
             this.releasesLink.Text = "GitHub releases";
             this.reportIssueLink.AutoSize = true;
@@ -248,7 +274,7 @@ namespace CameraControlStudio
             this.reportIssueLink.VisitedLinkColor = Color.LightSkyBlue;
             this.reportIssueLink.MaximumSize = new Size(170, 0);
             this.reportIssueLink.Name = "reportIssueLink";
-            this.reportIssueLink.TabIndex = 11;
+            this.reportIssueLink.TabIndex = 13;
             this.reportIssueLink.TabStop = true;
             this.reportIssueLink.Text = "Report bugs or missing features";
             this.onlineGuidesLink.AutoSize = true;
@@ -258,7 +284,7 @@ namespace CameraControlStudio
             this.onlineGuidesLink.VisitedLinkColor = Color.LightSkyBlue;
             this.onlineGuidesLink.MaximumSize = new Size(170, 0);
             this.onlineGuidesLink.Name = "onlineGuidesLink";
-            this.onlineGuidesLink.TabIndex = 12;
+            this.onlineGuidesLink.TabIndex = 14;
             this.onlineGuidesLink.TabStop = true;
             this.onlineGuidesLink.Text = "User guides on GitHub";
             this.print.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;

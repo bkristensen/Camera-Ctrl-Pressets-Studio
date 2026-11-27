@@ -2847,37 +2847,37 @@ Use the widest view and minimum zoom.</value>
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;issueGroups.Parent" xml:space="preserve">
-    <value>issuesTab</value>
+    <value>contactTab</value>
   </data>
   <data name="&gt;&gt;issueGroups.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="issuesTab.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="contactTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
-  <data name="issuesTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>532, 378</value>
+  <data name="contactTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
   </data>
-  <data name="issuesTab.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="contactTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="issuesTab.Text" xml:space="preserve">
-    <value>Issues</value>
+  <data name="contactTab.Text" xml:space="preserve">
+    <value>Contact</value>
   </data>
-  <data name="&gt;&gt;issuesTab.Name" xml:space="preserve">
-    <value>issuesTab</value>
+  <data name="&gt;&gt;contactTab.Name" xml:space="preserve">
+    <value>contactTab</value>
   </data>
-  <data name="&gt;&gt;issuesTab.Type" xml:space="preserve">
+  <data name="&gt;&gt;contactTab.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;issuesTab.Parent" xml:space="preserve">
-    <value>settingsTabs</value>
+  <data name="&gt;&gt;contactTab.Parent" xml:space="preserve">
+    <value>contactCategories</value>
   </data>
-  <data name="&gt;&gt;issuesTab.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;contactTab.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="issueGroups.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="issueGroups.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="issueGroups.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2892,7 +2892,7 @@ Use the widest view and minimum zoom.</value>
     <value>issueGroups</value>
   </data>
   <data name="&gt;&gt;logGroup.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;reportGroup.Name" xml:space="preserve">
     <value>reportGroup</value>
@@ -2904,7 +2904,7 @@ Use the widest view and minimum zoom.</value>
     <value>issueGroups</value>
   </data>
   <data name="&gt;&gt;reportGroup.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="issueGroups.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
     <value>TopDown</value>
@@ -2913,7 +2913,7 @@ Use the widest view and minimum zoom.</value>
     <value>0, 0</value>
   </data>
   <data name="issueGroups.Size" type="System.Drawing.Size, System.Drawing">
-    <value>532, 378</value>
+    <value>504, 325</value>
   </data>
   <data name="issueGroups.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2934,16 +2934,16 @@ Use the widest view and minimum zoom.</value>
     <value>0</value>
   </data>
   <data name="logGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 228</value>
   </data>
   <data name="logGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
   <data name="logGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 95</value>
+    <value>286, 95</value>
   </data>
   <data name="logGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="logGroup.Text" xml:space="preserve">
     <value>Diagnostic logs</value>
@@ -3045,19 +3045,19 @@ Use the widest view and minimum zoom.</value>
     <value>0</value>
   </data>
   <data name="reportGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 104</value>
+    <value>3, 3</value>
   </data>
   <data name="reportGroup.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
   <data name="reportGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 124</value>
+    <value>286, 219</value>
   </data>
   <data name="reportGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="reportGroup.Text" xml:space="preserve">
-    <value>Report a problem</value>
+    <value>GitHub</value>
   </data>
   <data name="&gt;&gt;reportNote.Name" xml:space="preserve">
     <value>reportNote</value>
@@ -3069,19 +3069,7 @@ Use the widest view and minimum zoom.</value>
     <value>reportActions</value>
   </data>
   <data name="&gt;&gt;reportNote.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;reportLink.Name" xml:space="preserve">
-    <value>reportLink</value>
-  </data>
-  <data name="&gt;&gt;reportLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reportLink.Parent" xml:space="preserve">
-    <value>reportActions</value>
-  </data>
-  <data name="&gt;&gt;reportLink.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="reportActions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -3093,7 +3081,7 @@ Use the widest view and minimum zoom.</value>
     <value>5, 24</value>
   </data>
   <data name="reportActions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 96</value>
+    <value>276, 191</value>
   </data>
   <data name="reportActions.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3101,44 +3089,104 @@ Use the widest view and minimum zoom.</value>
   <data name="reportActions.WrapContents" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="reportIssueButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 4</value>
+  </data>
+  <data name="reportIssueButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="reportIssueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 32</value>
+  </data>
+  <data name="reportIssueButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="reportIssueButton.Text" xml:space="preserve">
+    <value>Report an issue</value>
+  </data>
+  <data name="&gt;&gt;reportIssueButton.Name" xml:space="preserve">
+    <value>reportIssueButton</value>
+  </data>
+  <data name="&gt;&gt;reportIssueButton.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;reportIssueButton.Parent" xml:space="preserve">
+    <value>reportActions</value>
+  </data>
+  <data name="&gt;&gt;reportIssueButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="requestFeatureButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 44</value>
+  </data>
+  <data name="requestFeatureButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="requestFeatureButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 32</value>
+  </data>
+  <data name="requestFeatureButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="requestFeatureButton.Text" xml:space="preserve">
+    <value>Request a new feature</value>
+  </data>
+  <data name="&gt;&gt;requestFeatureButton.Name" xml:space="preserve">
+    <value>requestFeatureButton</value>
+  </data>
+  <data name="&gt;&gt;requestFeatureButton.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;requestFeatureButton.Parent" xml:space="preserve">
+    <value>reportActions</value>
+  </data>
+  <data name="&gt;&gt;requestFeatureButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="saveReportPackage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 84</value>
+  </data>
+  <data name="saveReportPackage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="saveReportPackage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 32</value>
+  </data>
+  <data name="saveReportPackage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="saveReportPackage.Text" xml:space="preserve">
+    <value>Save support ZIP</value>
+  </data>
+  <data name="&gt;&gt;saveReportPackage.Name" xml:space="preserve">
+    <value>saveReportPackage</value>
+  </data>
+  <data name="&gt;&gt;saveReportPackage.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueButton, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;saveReportPackage.Parent" xml:space="preserve">
+    <value>reportActions</value>
+  </data>
+  <data name="&gt;&gt;saveReportPackage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="reportNote.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="reportNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>5, 125</value>
   </data>
   <data name="reportNote.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>246, 0</value>
+    <value>253, 0</value>
   </data>
   <data name="reportNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 40</value>
+    <value>253, 60</value>
   </data>
   <data name="reportNote.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="reportNote.Text" xml:space="preserve">
-    <value>Review the exported logs and attach them to your GitHub issue.</value>
-  </data>
-  <data name="reportLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="reportLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 43</value>
-  </data>
-  <data name="reportLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 3, 5, 3</value>
-  </data>
-  <data name="reportLink.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>250, 0</value>
-  </data>
-  <data name="reportLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 20</value>
-  </data>
-  <data name="reportLink.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="reportLink.Text" xml:space="preserve">
-    <value>Report on GitHub</value>
+    <value>Review the screenshot, settings and logs before sharing the ZIP.</value>
   </data>
   <data name="releasesLink.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3156,7 +3204,7 @@ Use the widest view and minimum zoom.</value>
     <value>113, 20</value>
   </data>
   <data name="releasesLink.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="releasesLink.Text" xml:space="preserve">
     <value>GitHub releases</value>
@@ -3171,7 +3219,7 @@ Use the widest view and minimum zoom.</value>
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;releasesLink.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="guideIndexLink.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3189,7 +3237,7 @@ Use the widest view and minimum zoom.</value>
     <value>158, 20</value>
   </data>
   <data name="guideIndexLink.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="guideIndexLink.Text" xml:space="preserve">
     <value>User guides on GitHub</value>
@@ -3204,7 +3252,7 @@ Use the widest view and minimum zoom.</value>
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;guideIndexLink.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="openGuideButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -3216,7 +3264,7 @@ Use the widest view and minimum zoom.</value>
     <value>225, 30</value>
   </data>
   <data name="openGuideButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="openGuideButton.Text" xml:space="preserve">
     <value>Open guide viewer</value>
@@ -3231,7 +3279,7 @@ Use the widest view and minimum zoom.</value>
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;openGuideButton.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="iconColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3747,10 +3795,61 @@ Use the widest view and minimum zoom.</value>
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;aboutPanel.Parent" xml:space="preserve">
-    <value>aboutTab</value>
+    <value>aboutInfoTab</value>
   </data>
   <data name="&gt;&gt;aboutPanel.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="contactCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="contactCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="contactCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 358</value>
+  </data>
+  <data name="contactCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.Name" xml:space="preserve">
+    <value>contactCategories</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.Type" xml:space="preserve">
+    <value>CameraControlStudio.BlueTabControl, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.Parent" xml:space="preserve">
+    <value>aboutTab</value>
+  </data>
+  <data name="&gt;&gt;contactCategories.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="aboutInfoTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="aboutInfoTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 325</value>
+  </data>
+  <data name="aboutInfoTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="aboutInfoTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="aboutInfoTab.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.Name" xml:space="preserve">
+    <value>aboutInfoTab</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.Parent" xml:space="preserve">
+    <value>contactCategories</value>
+  </data>
+  <data name="&gt;&gt;aboutInfoTab.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="aboutTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
@@ -3768,7 +3867,7 @@ Use the widest view and minimum zoom.</value>
     <value>4</value>
   </data>
   <data name="aboutTab.Text" xml:space="preserve">
-    <value>About</value>
+    <value>Contact &amp; About</value>
   </data>
   <data name="&gt;&gt;aboutTab.Name" xml:space="preserve">
     <value>aboutTab</value>
@@ -3780,7 +3879,7 @@ Use the widest view and minimum zoom.</value>
     <value>settingsTabs</value>
   </data>
   <data name="&gt;&gt;aboutTab.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="settingsTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -4883,18 +4982,6 @@ Use the widest view and minimum zoom.</value>
   <data name="&gt;&gt;repoLink.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;issuesLink.Name" xml:space="preserve">
-    <value>issuesLink</value>
-  </data>
-  <data name="&gt;&gt;issuesLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;issuesLink.Parent" xml:space="preserve">
-    <value>aboutPanel</value>
-  </data>
-  <data name="&gt;&gt;issuesLink.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;discussionLink.Name" xml:space="preserve">
     <value>discussionLink</value>
   </data>
@@ -4905,7 +4992,7 @@ Use the widest view and minimum zoom.</value>
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;discussionLink.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;coffeeLink.Name" xml:space="preserve">
     <value>coffeeLink</value>
@@ -4917,7 +5004,7 @@ Use the widest view and minimum zoom.</value>
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;coffeeLink.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
     <value>versionLabel</value>
@@ -4929,7 +5016,7 @@ Use the widest view and minimum zoom.</value>
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="aboutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -4938,13 +5025,13 @@ Use the widest view and minimum zoom.</value>
     <value>TopDown</value>
   </data>
   <data name="aboutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 10</value>
+    <value>3, 3</value>
   </data>
   <data name="aboutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="aboutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>512, 358</value>
+    <value>498, 319</value>
   </data>
   <data name="aboutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4991,24 +5078,6 @@ Use the widest view and minimum zoom.</value>
   <data name="repoLink.Text" xml:space="preserve">
     <value>GitHub</value>
   </data>
-  <data name="issuesLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="issuesLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 75</value>
-  </data>
-  <data name="issuesLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 3, 5, 3</value>
-  </data>
-  <data name="issuesLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 20</value>
-  </data>
-  <data name="issuesLink.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="issuesLink.Text" xml:space="preserve">
-    <value>Report bugs or missing features</value>
-  </data>
   <data name="discussionLink.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -5022,7 +5091,7 @@ Use the widest view and minimum zoom.</value>
     <value>182, 20</value>
   </data>
   <data name="discussionLink.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="discussionLink.Text" xml:space="preserve">
     <value>Join the project discussion</value>
@@ -5040,7 +5109,7 @@ Use the widest view and minimum zoom.</value>
     <value>116, 20</value>
   </data>
   <data name="coffeeLink.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="coffeeLink.Text" xml:space="preserve">
     <value>Buy me a coffee</value>
@@ -5058,7 +5127,7 @@ Use the widest view and minimum zoom.</value>
     <value>34, 20</value>
   </data>
   <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="versionLabel.Text" xml:space="preserve">
     <value>MIT</value>

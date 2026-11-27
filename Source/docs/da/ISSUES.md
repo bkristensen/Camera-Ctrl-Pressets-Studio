@@ -4,6 +4,8 @@
 
 [Fejlfinding](TROUBLESHOOTING.md)
 
+[Rapportér en fejl](Report%20a%20bug.md) · [Foreslå en ny funktion](Request%20a%20feature.md)
+
 ## Søg først
 
 **Meld en fejl eller foreslå en funktion**\
@@ -18,7 +20,9 @@
 
 ## Opret en sag
 
-Vælg **New issue**. Skriv helst på engelsk, så flere kan finde og følge sagen. Opret én sag pr. fejl eller ønske, og beskriv symptomet eller det ønskede resultat i titlen.
+Åbn **Kontakt & Om → Kontakt** i appen. Vælg **Rapportér en fejl** eller **Foreslå en ny funktion**. Hvis der er en nyere version, så prøv den først. Vælg **Nej**, hvis du vil fortsætte til udkastet på GitHub.
+
+Skriv helst på engelsk, så flere kan finde og følge sagen. Opret én sag pr. fejl eller ønske, og beskriv symptomet eller det ønskede resultat i titlen.
 
 Ved en fejl skal du angive programversion, Windows-version, kameramodel, anden kamera- eller mødesoftware og rækkefølgen, du startede programmerne i. Beskriv trinene, hvad du forventede, hvad der skete og hvor ofte. Ved et forslag skal du beskrive den opgave, funktionen skal hjælpe med.
 
@@ -34,6 +38,8 @@ Hvis **Type** kan vælges, så brug **Bug** ved fejl, **Feature** ved et ønske 
 
 ## Vedhæft dokumentation
 
-Åbn **Indstillinger → Fejlrapport → Rapportér på GitHub**. Programmet åbner et udkast og mappen med logfiler. Læs filerne, før du deler dem. Fjern private oplysninger som stier, mødedata og id’er. Vedhæft filer og billeder under beskrivelsen. Tjek sagen i **Preview**, og vælg **Create**.
+Når du rapporterer en fejl, tilbyder appen at gemme en supportpakke. Du kan også vælge **Gem supportpakke (ZIP)** under **Kontakt**. Pakken indeholder et skærmbillede af appen, gemte profiler, vinduets layout og tilgængelige logfiler.
+
+Gennemgå pakken, før du deler den. Fjern private oplysninger som stier, mødedata og id’er. Træk ZIP-filen eller de relevante filer ind i udkastet på GitHub. Tjek sagen i **Preview**, og vælg **Create**.
 
 [GitHubs søgevejledning](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)

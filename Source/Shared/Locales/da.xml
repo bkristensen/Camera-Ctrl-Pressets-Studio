@@ -243,4 +243,19 @@
   <text key="Panning">Panorering</text>
   <text key="Pan and tilt">Panorering og vipning</text>
   <text key="Transitions">Overgange</text>
+  <text key="Contact &amp; About">Kontakt &amp; Om</text>
+  <text key="Contact">Kontakt</text>
+  <text key="Report an issue">Rapportér en fejl</text>
+  <text key="Request a new feature">Foreslå en ny funktion</text>
+  <text key="Save support ZIP">Gem supportpakke (ZIP)</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">Gennemgå skærmbilledet, indstillingerne og logfilerne, før du deler ZIP-pakken.</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">Vil du gemme en ZIP-pakke til at vedhæfte på GitHub?</text>
+  <text key="Support ZIP saved. Review it before sharing.">ZIP-pakken er gemt. Gennemgå den, før du deler den.</text>
+  <text key="Could not save the support ZIP. Try a different location.">Kunne ikke gemme ZIP-pakken. Prøv at gemme den et andet sted.</text>
+  <text key="Version {0} is available.">Version {0} er tilgængelig.</text>
+  <text key="Try it first to see whether the feature is already included.">Prøv den først for at se, om funktionen allerede er tilføjet.</text>
+  <text key="Try it first to see whether the issue is fixed.">Prøv den først for at se, om fejlen er rettet.</text>
+  <text key="Open the latest release?">Åbn den seneste udgivelse?</text>
+  <text key="Report a bug">Rapportér en fejl</text>
+  <text key="Request a feature">Foreslå en ny funktion</text>
 </translations>

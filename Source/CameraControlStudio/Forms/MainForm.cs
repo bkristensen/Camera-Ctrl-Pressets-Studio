@@ -208,7 +208,6 @@ namespace CameraControlStudio {
             };
             Deactivate += (o, e) => { wheel.CancelMovement(); StopHeld(); };
             Link(repoLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio");
-            Link(issuesLink, GuideViewer.IssuesUrl);
             Link(discussionLink, "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/discussions");
             Link(coffeeLink, "https://buymeacoffee.com/brislingveo");
             versionLabel.Text = "MIT · " + DiagnosticLog.DisplayAppVersion;

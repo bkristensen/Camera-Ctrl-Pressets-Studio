@@ -1,6 +1,7 @@
 ---
 name: Bug report
 about: Describe unexpected behaviour
+type: Bug
 labels: bug
 ---
 ## Expected and actual behaviour
@@ -23,10 +24,5 @@ Attach a screenshot or error text. Remove personal information first.
 ### Answer:
 > (Please attach any relevant evidence that can help us understand the issue. This may include screenshots, error messages, or logs. Ensure that any personal information is removed before sharing.)
 
-## Include files
-It might help if you attach relevant files:
-- Screenshot of the issue.
-- Profile settings (\USERS\[USER]\AppData\Local\CameraPressets\profiles.json).
-- Window settings (\USERS\[USER]\AppData\Local\CameraPressets\window.json).
-- Log files from log folder (\USERS\[USER]\AppData\Local\CameraPressets\Logs\)
-- Any other files that can help reproduce the issue.
+## Support ZIP
+In Camera Control Studio, open **Contact & About → Contact → Save support ZIP**. Review the screenshot, profile settings, window layout, and logs. Drag the ZIP or the relevant files into this issue.

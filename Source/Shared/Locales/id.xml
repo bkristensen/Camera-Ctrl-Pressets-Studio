@@ -243,4 +243,19 @@
   <text key="Panning">Geser kamera</text>
   <text key="Pan and tilt">Geser dan miringkan</text>
   <text key="Transitions">Transisi</text>
+  <text key="Contact &amp; About">Kontak dan Tentang</text>
+  <text key="Contact">Kontak</text>
+  <text key="Report an issue">Laporkan masalah</text>
+  <text key="Request a new feature">Usulkan fitur baru</text>
+  <text key="Save support ZIP">Simpan ZIP dukungan</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">Tinjau tangkapan layar, pengaturan, dan log sebelum membagikan ZIP.</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">Simpan ZIP dukungan untuk dilampirkan ke laporan GitHub?</text>
+  <text key="Support ZIP saved. Review it before sharing.">ZIP tersimpan. Tinjau sebelum membagikannya.</text>
+  <text key="Could not save the support ZIP. Try a different location.">ZIP tidak dapat disimpan. Coba lokasi lain.</text>
+  <text key="Version {0} is available.">Versi {0} tersedia.</text>
+  <text key="Try it first to see whether the feature is already included.">Coba dulu untuk melihat apakah fiturnya sudah tersedia.</text>
+  <text key="Try it first to see whether the issue is fixed.">Coba dulu untuk melihat apakah masalahnya sudah diperbaiki.</text>
+  <text key="Open the latest release?">Buka rilis terbaru?</text>
+  <text key="Report a bug">Laporkan masalah</text>
+  <text key="Request a feature">Usulkan fitur baru</text>
 </translations>

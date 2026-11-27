@@ -243,4 +243,19 @@
   <text key="Panning">平移</text>
   <text key="Pan and tilt">平移和俯仰</text>
   <text key="Transitions">过渡</text>
+  <text key="Contact &amp; About">联系与关于</text>
+  <text key="Contact">联系</text>
+  <text key="Report an issue">报告问题</text>
+  <text key="Request a new feature">请求新功能</text>
+  <text key="Save support ZIP">保存支持 ZIP</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">共享 ZIP 前，请检查屏幕截图、设置和日志。</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">要保存 ZIP 支持包并将其附加到 GitHub 问题吗？</text>
+  <text key="Support ZIP saved. Review it before sharing.">ZIP 支持包已保存。请先检查再共享。</text>
+  <text key="Could not save the support ZIP. Try a different location.">无法保存 ZIP 支持包。请尝试其他位置。</text>
+  <text key="Version {0} is available.">版本 {0} 已发布。</text>
+  <text key="Try it first to see whether the feature is already included.">请先试用，看看是否已包含所需功能。</text>
+  <text key="Try it first to see whether the issue is fixed.">请先试用，看看问题是否已修复。</text>
+  <text key="Open the latest release?">打开最新版本？</text>
+  <text key="Report a bug">报告问题</text>
+  <text key="Request a feature">请求新功能</text>
 </translations>

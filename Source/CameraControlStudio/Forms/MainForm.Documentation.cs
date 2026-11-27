@@ -105,8 +105,8 @@ namespace CameraControlStudio
                     ("video-light-detail", () => imageCategories.SelectedTab = lightTab),
                     ("field-of-view", () => imageCategories.SelectedTab = fieldOfViewTab),
                     ("profiles", () => settingsTabs.SelectedTab = profilesTab),
-                    ("issues", () => settingsTabs.SelectedTab = issuesTab),
-                    ("about", () => settingsTabs.SelectedTab = aboutTab)
+                    ("issues", () => { settingsTabs.SelectedTab = aboutTab; contactCategories.SelectedTab = contactTab; }),
+                    ("about", () => contactCategories.SelectedTab = aboutInfoTab)
                 });
             }
 

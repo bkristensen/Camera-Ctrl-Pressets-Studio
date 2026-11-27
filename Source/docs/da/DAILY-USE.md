@@ -75,6 +75,6 @@ Læs beskeden i statusområdet i bunden, hvis en funktion fejler. Kameraet kan m
 Luk programmet normalt. Den aktive profil og vinduets udseende huskes.
 
 ## 5. Fejl eller mangler
-Oplever du fejl eller mangler, så rapporter dem under Indstillinger > Fejlrapport.
+Rapportér fejl eller foreslå funktioner under **Kontakt & Om → Kontakt**.
 
 Se [Opsætning](SETUP.md) for kamera retning, permanente positioner, billedindstillinger, profiler og bevægelsestrin.

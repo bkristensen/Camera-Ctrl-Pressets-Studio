@@ -81,6 +81,6 @@ If **New release available** appears in the footer, select it to open the releas
 
 <https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/releases>
 
-Report problems or missing features under **Settings → Issues**.
+Report problems or request features under **Contact & About → Contact**.
 
 See [Setup](SETUP.md) for camera direction, permanent presets, image settings, profiles and movement steps.

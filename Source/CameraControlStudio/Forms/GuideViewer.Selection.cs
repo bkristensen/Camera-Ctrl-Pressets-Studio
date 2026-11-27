@@ -16,6 +16,8 @@ namespace CameraControlStudio
         const string SetupGuide = "SETUP.md";
         const string CombinedGuide = "USER-GUIDE.md";
         const string IssuesGuide = "ISSUES.md";
+        const string BugGuide = "Report a bug.md";
+        const string FeatureGuide = "Request a feature.md";
         const string RawHost = "raw.githubusercontent.com";
         static readonly HttpClient GuideClient = new HttpClient(new HttpClientHandler
         {

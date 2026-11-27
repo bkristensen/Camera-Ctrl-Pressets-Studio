@@ -119,17 +119,17 @@ Choose a language under **Settings → Application → Profile language**, then 
 
 ## 6. Version and project information
 
-Open **About** to see the installed version and project links. Hover over the version to see the full build ID. Include it when you report a problem with a specific build.
+Open **Contact & About → About** to see the installed version and project links. Hover over the version to see the full build ID. Include it when you report a problem with a specific build.
 
-![About tab with the version, developer credit and project links](../images/screenshots/1.0.1/en/about.png)
+![About tab with the version, developer credit and project links](../images/screenshots/contact/en/about.png)
 
 ## 7. Diagnostic logs and issue reporting
 
-![Issues tab with diagnostic log and GitHub reporting options](../images/screenshots/1.0.1/en/issues.png)
+![Contact tab with GitHub buttons, support ZIP and diagnostic logs](../images/screenshots/contact/en/issues.png)
 
-Open **Issues** in the settings pane to choose a log folder, a maximum file size, and the number of log files to keep, including the current file. By default, logs go in the application folder or to `%LOCALAPPDATA%\CamPressets\Logs` if the first location is unavailable.
+Open **Contact & About → Contact** to choose a log folder, a maximum file size, and the number of log files to keep, including the current file. By default, logs go in the application folder or to `%LOCALAPPDATA%\CamPressets\Logs` if the first location is unavailable.
 
-**Report on GitHub** opens an issue draft and the local folder with the diagnostic report files. Review the files and attach them in the issue editor.
+Choose **Report an issue** or **Request a new feature** to open the matching GitHub draft. For a bug, the app offers to save a support ZIP. Review the archive and attach it in the issue editor. [Report or follow an issue](ISSUES.md)
 
 **Report a bug or suggest a feature**\
 <https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\

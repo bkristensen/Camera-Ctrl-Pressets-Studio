@@ -14,6 +14,7 @@
   <PackageReference Include="PDFsharp-GDI" Version="6.2.4" />
   <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
   <Reference Include="System.Runtime.Serialization" />
+  <Reference Include="System.IO.Compression" />
   <Reference Include="System.Net.Http" />
   <Compile Include="../Shared/*.cs" Link="Shared/%(Filename)%(Extension)" />
   <EmbeddedResource Include="../Shared/Locales/*.xml" LogicalName="CamPressets.Locales.%(Filename).xml" />

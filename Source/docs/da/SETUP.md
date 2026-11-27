@@ -119,17 +119,17 @@ Vælg sprog under **Indstillinger → Program → Profilsprog**, og genstart for
 
 ## 6. Version og projektoplysninger
 
-Åbn **Om** for at se versionen og projektets links. Hold musen over versionen for at se det fulde build-id. Skriv det i en fejlrapport, hvis fejlen gælder en bestemt build.
+Åbn **Kontakt & Om → Om** for at se versionen og projektets links. Hold musen over versionen for at se det fulde build-id. Skriv det i en fejlrapport, hvis fejlen gælder en bestemt build.
 
-![Fanen Om med version, udvikler og projektlinks](../images/screenshots/1.0.1/da/about.png)
+![Fanen Om med version, udvikler og projektlinks](../images/screenshots/contact/da/about.png)
 
 ## 7. Diagnoselogfiler og fejlrapporter
 
-![Fanen Fejlrapport med logindstillinger og rapportering på GitHub](../images/screenshots/1.0.1/da/issues.png)
+![Fanen Kontakt med GitHub-knapper, supportpakke og diagnoselog](../images/screenshots/contact/da/issues.png)
 
-Åbn fanen **Fejlrapport** for at vælge logmappe, maksimal filstørrelse og antal logfiler inklusive den aktive. Som standard skrives loggen i programmappen eller i `%LOCALAPPDATA%\CamPressets\Logs`, hvis programmappen ikke kan bruges.
+Åbn **Kontakt & Om → Kontakt** for at vælge logmappe, maksimal filstørrelse og antal logfiler inklusive den aktive. Som standard skrives loggen i programmappen eller i `%LOCALAPPDATA%\CamPressets\Logs`, hvis programmappen ikke kan bruges.
 
-**Rapportér på GitHub** åbner en kladde og den lokale mappe med rapportfilerne. Gennemgå filerne, og vedhæft dem i GitHub-editoren.
+Vælg **Rapportér en fejl** eller **Foreslå en ny funktion** for at åbne det relevante udkast på GitHub. Ved en fejl tilbyder appen at gemme en supportpakke. Gennemgå pakken, og vedhæft den i udkastet. [Indberet eller følg en sag](ISSUES.md)
 
 **Meld en fejl eller foreslå en funktion**\
 <https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues?q=is%3Aissue>\

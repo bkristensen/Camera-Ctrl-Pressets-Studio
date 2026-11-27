@@ -90,6 +90,24 @@ namespace CameraControlStudio
             }
         }
 
+        internal string[] GetLogDirectories()
+        {
+            lock (sync)
+                return new[] { userDirectory, Settings.DirectoryPath ?? programDirectory };
+        }
+
+        internal static bool IsLogFile(string path)
+        {
+            var name = Path.GetFileName(path);
+            if (string.Equals(name, FileName, StringComparison.OrdinalIgnoreCase))
+                return true;
+            if (!string.Equals(Path.GetExtension(name), ".log", StringComparison.OrdinalIgnoreCase))
+                return false;
+            var stem = Path.GetFileNameWithoutExtension(name);
+            return stem.StartsWith(LogStem + ".", StringComparison.OrdinalIgnoreCase)
+                && int.TryParse(stem.Substring(LogStem.Length + 1), out int index) && index > 0;
+        }
+
         string FindLatestCore()
         {
             var programLog = Path.Combine(Settings.DirectoryPath ?? programDirectory, FileName);

@@ -109,7 +109,7 @@ namespace CameraControlStudio {
             this.sharpnessAutomatic = new CameraControlStudio.BlueCheckBox();
             this.sharpnessSlider = new System.Windows.Forms.TrackBar();
             this.resetVideoControls = new CameraControlStudio.BlueButton();
-            this.issuesTab = new System.Windows.Forms.TabPage();
+            this.contactTab = new System.Windows.Forms.TabPage();
             this.issueGroups = new System.Windows.Forms.FlowLayoutPanel();
             this.logGroup = new System.Windows.Forms.GroupBox();
             this.logActions = new System.Windows.Forms.FlowLayoutPanel();
@@ -118,7 +118,11 @@ namespace CameraControlStudio {
             this.reportGroup = new System.Windows.Forms.GroupBox();
             this.reportActions = new System.Windows.Forms.FlowLayoutPanel();
             this.reportNote = new System.Windows.Forms.Label();
-            this.reportLink = new System.Windows.Forms.LinkLabel();
+            this.reportIssueButton = new CameraControlStudio.BlueButton();
+            this.requestFeatureButton = new CameraControlStudio.BlueButton();
+            this.saveReportPackage = new CameraControlStudio.BlueButton();
+            this.reportPackageDialog = new System.Windows.Forms.SaveFileDialog();
+            this.components.Add(this.reportPackageDialog);
             this.releasesLink = new System.Windows.Forms.LinkLabel();
             this.guideIndexLink = new System.Windows.Forms.LinkLabel();
             this.openGuideButton = new CameraControlStudio.BlueButton();
@@ -170,10 +174,11 @@ namespace CameraControlStudio {
             this.renameProfile = new CameraControlStudio.BlueButton();
             this.profileNote = new System.Windows.Forms.Label();
             this.aboutTab = new System.Windows.Forms.TabPage();
+            this.contactCategories = new CameraControlStudio.BlueTabControl();
+            this.aboutInfoTab = new System.Windows.Forms.TabPage();
             this.aboutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.credit = new System.Windows.Forms.Label();
             this.repoLink = new System.Windows.Forms.LinkLabel();
-            this.issuesLink = new System.Windows.Forms.LinkLabel();
             this.discussionLink = new System.Windows.Forms.LinkLabel();
             this.coffeeLink = new System.Windows.Forms.LinkLabel();
             this.versionLabel = new System.Windows.Forms.Label();
@@ -239,7 +244,7 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.backlightSlider)).BeginInit();
             this.sharpnessControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sharpnessSlider)).BeginInit();
-            this.issuesTab.SuspendLayout();
+            this.contactTab.SuspendLayout();
             this.issueGroups.SuspendLayout();
             this.logGroup.SuspendLayout();
             this.logActions.SuspendLayout();
@@ -271,6 +276,8 @@ namespace CameraControlStudio {
             this.profilesPanel.SuspendLayout();
             this.profileActions.SuspendLayout();
             this.aboutTab.SuspendLayout();
+            this.contactCategories.SuspendLayout();
+            this.aboutInfoTab.SuspendLayout();
             this.aboutPanel.SuspendLayout();
             this.footer.SuspendLayout();
             this.footerLabels.SuspendLayout();
@@ -1067,19 +1074,19 @@ namespace CameraControlStudio {
             this.resetVideoControls.Primary = false;
             this.resetVideoControls.UseVisualStyleBackColor = false;
             // 
-            // issuesTab
+            // contactTab
             // 
-            this.issuesTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.issuesTab.Controls.Add(this.issueGroups);
-            resources.ApplyResources(this.issuesTab, "issuesTab");
-            this.issuesTab.Name = "issuesTab";
+            this.contactTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.contactTab.Controls.Add(this.issueGroups);
+            resources.ApplyResources(this.contactTab, "contactTab");
+            this.contactTab.Name = "contactTab";
             // 
             // issueGroups
             // 
             resources.ApplyResources(this.issueGroups, "issueGroups");
             this.issueGroups.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.issueGroups.Controls.Add(this.logGroup);
             this.issueGroups.Controls.Add(this.reportGroup);
+            this.issueGroups.Controls.Add(this.logGroup);
             this.issueGroups.Name = "issueGroups";
             // 
             // logGroup
@@ -1131,8 +1138,10 @@ namespace CameraControlStudio {
             // reportActions
             // 
             this.reportActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
+            this.reportActions.Controls.Add(this.reportIssueButton);
+            this.reportActions.Controls.Add(this.requestFeatureButton);
+            this.reportActions.Controls.Add(this.saveReportPackage);
             this.reportActions.Controls.Add(this.reportNote);
-            this.reportActions.Controls.Add(this.reportLink);
             resources.ApplyResources(this.reportActions, "reportActions");
             this.reportActions.Name = "reportActions";
             // 
@@ -1142,16 +1151,39 @@ namespace CameraControlStudio {
             this.reportNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.reportNote.Name = "reportNote";
             // 
-            // reportLink
-            // 
-            this.reportLink.ActiveLinkColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.reportLink, "reportLink");
-            this.reportLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.reportLink.LinkColor = System.Drawing.Color.LightSkyBlue;
-            this.reportLink.Name = "reportLink";
-            this.reportLink.TabStop = true;
-            this.reportLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            // 
+            // reportIssueButton
+            //
+            this.reportIssueButton.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.reportIssueButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.reportIssueButton, "reportIssueButton");
+            this.reportIssueButton.ForeColor = System.Drawing.Color.White;
+            this.reportIssueButton.Name = "reportIssueButton";
+            this.reportIssueButton.UseVisualStyleBackColor = false;
+            //
+            // requestFeatureButton
+            //
+            this.requestFeatureButton.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.requestFeatureButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.requestFeatureButton, "requestFeatureButton");
+            this.requestFeatureButton.ForeColor = System.Drawing.Color.White;
+            this.requestFeatureButton.Name = "requestFeatureButton";
+            this.requestFeatureButton.UseVisualStyleBackColor = false;
+            //
+            // saveReportPackage
+            //
+            this.saveReportPackage.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.saveReportPackage.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveReportPackage, "saveReportPackage");
+            this.saveReportPackage.ForeColor = System.Drawing.Color.White;
+            this.saveReportPackage.Name = "saveReportPackage";
+            this.saveReportPackage.UseVisualStyleBackColor = false;
+            //
+            // reportPackageDialog
+            //
+            this.reportPackageDialog.DefaultExt = "zip";
+            this.reportPackageDialog.Filter = "ZIP (*.zip)|*.zip";
+            this.reportPackageDialog.RestoreDirectory = true;
+            //
             // releasesLink
             // 
             this.releasesLink.ActiveLinkColor = System.Drawing.Color.White;
@@ -1405,7 +1437,6 @@ namespace CameraControlStudio {
             this.settingsTabs.Controls.Add(this.generalTab);
             this.settingsTabs.Controls.Add(this.imageTab);
             this.settingsTabs.Controls.Add(this.profilesTab);
-            this.settingsTabs.Controls.Add(this.issuesTab);
             this.settingsTabs.Controls.Add(this.aboutTab);
             resources.ApplyResources(this.settingsTabs, "settingsTabs");
             this.settingsTabs.ForeColor = System.Drawing.Color.White;
@@ -1625,17 +1656,32 @@ namespace CameraControlStudio {
             // aboutTab
             // 
             this.aboutTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.aboutTab.Controls.Add(this.aboutPanel);
+            this.aboutTab.Controls.Add(this.contactCategories);
             resources.ApplyResources(this.aboutTab, "aboutTab");
             this.aboutTab.Name = "aboutTab";
             // 
+            // contactCategories
+            //
+            this.contactCategories.Controls.Add(this.contactTab);
+            this.contactCategories.Controls.Add(this.aboutInfoTab);
+            resources.ApplyResources(this.contactCategories, "contactCategories");
+            this.contactCategories.Multiline = true;
+            this.contactCategories.Name = "contactCategories";
+            this.contactCategories.SelectedIndex = 0;
+            //
+            // aboutInfoTab
+            //
+            this.aboutInfoTab.BackColor = System.Drawing.Color.FromArgb(9, 52, 94);
+            this.aboutInfoTab.Controls.Add(this.aboutPanel);
+            resources.ApplyResources(this.aboutInfoTab, "aboutInfoTab");
+            this.aboutInfoTab.Name = "aboutInfoTab";
+            //
             // aboutPanel
             // 
             resources.ApplyResources(this.aboutPanel, "aboutPanel");
             this.aboutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
             this.aboutPanel.Controls.Add(this.credit);
             this.aboutPanel.Controls.Add(this.repoLink);
-            this.aboutPanel.Controls.Add(this.issuesLink);
             this.aboutPanel.Controls.Add(this.discussionLink);
             this.aboutPanel.Controls.Add(this.coffeeLink);
             this.aboutPanel.Controls.Add(this.versionLabel);
@@ -1659,16 +1705,6 @@ namespace CameraControlStudio {
             this.repoLink.Name = "repoLink";
             this.repoLink.TabStop = true;
             this.repoLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
-            // 
-            // issuesLink
-            // 
-            this.issuesLink.ActiveLinkColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.issuesLink, "issuesLink");
-            this.issuesLink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.issuesLink.LinkColor = System.Drawing.Color.LightSkyBlue;
-            this.issuesLink.Name = "issuesLink";
-            this.issuesLink.TabStop = true;
-            this.issuesLink.VisitedLinkColor = System.Drawing.Color.LightSkyBlue;
             // 
             // discussionLink
             // 
@@ -1843,7 +1879,7 @@ namespace CameraControlStudio {
             ((System.ComponentModel.ISupportInitialize)(this.backlightSlider)).EndInit();
             this.sharpnessControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sharpnessSlider)).EndInit();
-            this.issuesTab.ResumeLayout(false);
+            this.contactTab.ResumeLayout(false);
             this.issueGroups.ResumeLayout(false);
             this.logGroup.ResumeLayout(false);
             this.logActions.ResumeLayout(false);
@@ -1878,6 +1914,8 @@ namespace CameraControlStudio {
             this.profilesPanel.ResumeLayout(false);
             this.profileActions.ResumeLayout(false);
             this.aboutTab.ResumeLayout(false);
+            this.contactCategories.ResumeLayout(false);
+            this.aboutInfoTab.ResumeLayout(false);
             this.aboutPanel.ResumeLayout(false);
             this.aboutPanel.PerformLayout();
             this.footer.ResumeLayout(false);
@@ -1912,6 +1950,8 @@ namespace CameraControlStudio {
         private TableLayoutPanel transitionFields;
         private TabPage profilesTab;
         private TabPage aboutTab;
+        private BlueTabControl contactCategories;
+        private TabPage aboutInfoTab;
         private Panel movementScroll;
         private TableLayoutPanel generalFields;
         private MainViewSeparator directionSeparator;
@@ -1968,7 +2008,6 @@ namespace CameraControlStudio {
         private FlowLayoutPanel aboutPanel;
         private Label credit;
         private LinkLabel repoLink;
-        private LinkLabel issuesLink;
         private LinkLabel discussionLink;
         private LinkLabel coffeeLink;
         private Label versionLabel;
@@ -2036,7 +2075,7 @@ namespace CameraControlStudio {
         private GroupBox contrastControl;
         private TrackBar contrastSlider;
         private BlueCheckBox contrastAutomatic;
-        private TabPage issuesTab;
+        private TabPage contactTab;
         private FlowLayoutPanel issueGroups;
         private GroupBox logGroup;
         private GroupBox reportGroup;
@@ -2045,7 +2084,10 @@ namespace CameraControlStudio {
         private LinkLabel logSettingsLink;
         private LinkLabel showLogLink;
         private Label reportNote;
-        private LinkLabel reportLink;
+        private BlueButton reportIssueButton;
+        private BlueButton requestFeatureButton;
+        private BlueButton saveReportPackage;
+        private SaveFileDialog reportPackageDialog;
         private LinkLabel releasesLink;
         private LinkLabel guideIndexLink;
         private BlueButton openGuideButton;

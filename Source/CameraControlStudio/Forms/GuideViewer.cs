@@ -57,6 +57,8 @@ namespace CameraControlStudio
             BindGuideLink(dailyLink, DailyGuide);
             BindGuideLink(setupLink, SetupGuide);
             BindGuideLink(troubleshootingLink, TroubleshootingFile);
+            BindGuideLink(bugGuideLink, BugGuide);
+            BindGuideLink(featureGuideLink, FeatureGuide);
             BindGuideLink(developmentLink, "DEVELOPMENT.md");
             BindGuideLink(buildReleaseLink, "BUILD-AND-RELEASE.md");
             BindGuideLink(translationsLink, "TRANSLATIONS.md");

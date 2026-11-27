@@ -7,7 +7,7 @@ namespace CameraControlStudio
 {
     public partial class ErrorDialog : AppForm
     {
-        const string NewIssueUrl = "https://github.com/bkristensen/Camera-Ctrl-Pressets-Studio/issues/new";
+        const string NewIssueUrl = "https://github.com/" + GitHubReleases.Repository + "/issues/new";
         string logPath;
 
         public ErrorDialog()
@@ -64,9 +64,14 @@ namespace CameraControlStudio
                     "Camera Control Studio", MessageBoxButtons.OK, MessageBoxIcon.Warning,
                     MessageBoxDefaultButton.Button1, AppForm.MessageDirection);
             }
-            const string body = "## What happened?\n\n## Steps to reproduce\n\n## Diagnostics\n\nReview and drag CameraControlStudio-report.log and CameraControlStudio-system.log into this issue if available.";
-            Open(owner, NewIssueUrl + "?body=" + Uri.EscapeDataString(body));
+            OpenBugReport(owner);
         }
+
+        internal static void OpenBugReport(IWin32Window owner) => Open(owner, NewIssueUrl + "?template=bugs.md");
+
+        internal static void OpenFeatureRequest(IWin32Window owner) => Open(owner, NewIssueUrl + "?template=feature.md");
+
+        internal static void OpenRelease(IWin32Window owner, Uri url) => Open(owner, url.AbsoluteUri);
 
         static void Open(IWin32Window owner, string file, string arguments = "")
         {

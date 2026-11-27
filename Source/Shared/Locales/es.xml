@@ -243,4 +243,19 @@
   <text key="Panning">Paneo</text>
   <text key="Pan and tilt">Paneo e inclinación</text>
   <text key="Transitions">Transiciones</text>
+  <text key="Contact &amp; About">Contacto y acerca de</text>
+  <text key="Contact">Contacto</text>
+  <text key="Report an issue">Informar de un problema</text>
+  <text key="Request a new feature">Solicitar una función nueva</text>
+  <text key="Save support ZIP">Guardar ZIP de soporte</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">Revisa la captura, la configuración y los registros antes de compartir el ZIP.</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">¿Guardar un ZIP para adjuntarlo en GitHub?</text>
+  <text key="Support ZIP saved. Review it before sharing.">ZIP guardado. Revísalo antes de compartirlo.</text>
+  <text key="Could not save the support ZIP. Try a different location.">No se pudo guardar el ZIP. Prueba otra ubicación.</text>
+  <text key="Version {0} is available.">La versión {0} está disponible.</text>
+  <text key="Try it first to see whether the feature is already included.">Pruébala para ver si la función ya está incluida.</text>
+  <text key="Try it first to see whether the issue is fixed.">Pruébala para ver si el problema ya se corrigió.</text>
+  <text key="Open the latest release?">¿Abrir la última versión?</text>
+  <text key="Report a bug">Informar de un problema</text>
+  <text key="Request a feature">Solicitar una función nueva</text>
 </translations>

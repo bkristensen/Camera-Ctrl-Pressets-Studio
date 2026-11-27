@@ -243,4 +243,19 @@
   <text key="Panning">Panning</text>
   <text key="Pan and tilt">Pan and tilt</text>
   <text key="Transitions">Transitions</text>
+  <text key="Contact &amp; About">Contact &amp; About</text>
+  <text key="Contact">Contact</text>
+  <text key="Report an issue">Report an issue</text>
+  <text key="Request a new feature">Request a new feature</text>
+  <text key="Save support ZIP">Save support ZIP</text>
+  <text key="Review the screenshot, settings and logs before sharing the ZIP.">Review the screenshot, settings and logs before sharing the ZIP.</text>
+  <text key="Save a support ZIP to attach to the GitHub issue?">Save a support ZIP to attach to the GitHub issue?</text>
+  <text key="Support ZIP saved. Review it before sharing.">Support ZIP saved. Review it before sharing.</text>
+  <text key="Could not save the support ZIP. Try a different location.">Could not save the support ZIP. Try a different location.</text>
+  <text key="Version {0} is available.">Version {0} is available.</text>
+  <text key="Try it first to see whether the feature is already included.">Try it first to see whether the feature is already included.</text>
+  <text key="Try it first to see whether the issue is fixed.">Try it first to see whether the issue is fixed.</text>
+  <text key="Open the latest release?">Open the latest release?</text>
+  <text key="Report a bug">Report a bug</text>
+  <text key="Request a feature">Request a feature</text>
 </translations>

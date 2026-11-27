@@ -12,9 +12,7 @@ namespace CameraControlStudio {
         void WireSettings() {
             panWithCameraButton.CheckedChanged += (sender, args) => ApplyCameraButtonSettings();
             doubleClickForCameraSource.CheckedChanged += (sender, args) => ApplyCameraButtonSettings();
-            logSettingsLink.LinkClicked += (sender, args) => Run(() => LoggingDialog.ShowSettings(this));
-            showLogLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.OpenLog(this, DiagnosticLog.Current.FindLatest()));
-            reportLink.LinkClicked += (sender, args) => Run(() => ErrorDialog.Report(this, DiagnosticLog.Current.FindLatest()));
+            WireContact();
             Link(releasesLink, GuideViewer.ReleasesUrl);
             Link(guideIndexLink, GuideViewer.OnlineGuidesUrl);
             openGuideButton.Click += (sender, args) => Run(OpenGuide);
@@ -26,7 +24,7 @@ namespace CameraControlStudio {
                 if (documentationMode)
                     return;
 
-                var release = await GitHubReleases.CheckAsync(DiagnosticLog.AppVersion);
+                var release = await CheckForNewerRelease();
                 if (release == null || IsDisposed || Disposing)
                     return;
 
@@ -72,7 +70,8 @@ namespace CameraControlStudio {
             SetMainToolTip(renameProfile, UiText.T("Rename selected profile", "Omdøb valgt profil"));
             foreach (var button in new ButtonBase[] { reverseX, reverseY, streamingCheck, alwaysTop })
                 SetMainToolTip(button, button.Text);
-            foreach (var action in new Control[] { logSettingsLink, showLogLink, reportLink, openGuideButton,
+            foreach (var action in new Control[] { logSettingsLink, showLogLink, reportIssueButton, requestFeatureButton,
+                saveReportPackage, openGuideButton,
                 loadVideoControls, resetVideoControls })
                 SetMainToolTip(action, action.Text);
             SetMainToolTip(helpButton, UiText.T("User guides", "Brugervejledninger"));
