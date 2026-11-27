@@ -38,14 +38,15 @@ namespace CameraControlStudio {
             MarkDirty();
         }
 
-        void ShowReleaseUpdate(GitHubReleases.AvailableRelease release) {
+        void ShowReleaseUpdate(AppUpdate release) {
             string installed = DiagnosticLog.DisplayAppVersion;
             string update = UiText.T("New release available", "Ny version tilgængelig");
             string suffix = $"[{update}]";
             releaseNotice.Text = installed + " " + suffix;
             releaseNotice.LinkArea = new LinkArea(installed.Length + 1, suffix.Length);
             releaseNotice.TabStop = true;
-            string detail = release.Version;
+            string detail = release.Version
+                ?? UiText.T("Microsoft Store updates", "Opdateringer i Microsoft Store");
             if (release.PublishedAt is DateTimeOffset publishedAt)
                 detail += " · " + publishedAt.ToLocalTime().ToString("d", CultureInfo.GetCultureInfo(UiText.Language));
             Link(releaseNotice, release.Url.AbsoluteUri, update, detail);

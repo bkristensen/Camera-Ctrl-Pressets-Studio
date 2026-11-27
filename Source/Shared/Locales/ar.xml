@@ -233,6 +233,9 @@
   <text key="Guide language">لغة الدليل</text>
   <text key="Use online guides">استخدام الأدلة عبر الإنترنت</text>
   <text key="This guide is unavailable.">هذا الدليل غير متاح.</text>
+  <text key="Microsoft Store updates">تحديثات Microsoft Store</text>
+  <text key="Open Microsoft Store updates?">هل تريد فتح التحديثات في Microsoft Store؟</text>
+  <text key="This online guide is for the installed version.">هذا الدليل عبر الإنترنت خاص بالإصدار المثبّت.</text>
   <text key="This online guide is for the latest release.">هذا الدليل عبر الإنترنت يخص أحدث إصدار.</text>
   <text key="The online guide is unavailable. Showing the local guide.">الدليل عبر الإنترنت غير متاح. يُعرض الدليل المحلي.</text>
   <text key="You are viewing a local guide. A newer release is available.">أنت تعرض الدليل المحلي. يتوفر إصدار أحدث.</text>

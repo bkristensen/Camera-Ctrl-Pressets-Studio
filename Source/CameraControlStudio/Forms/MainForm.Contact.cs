@@ -8,12 +8,12 @@ namespace CameraControlStudio
 {
     public partial class MainForm
     {
-        Task<GitHubReleases.AvailableRelease> releaseCheck;
+        Task<AppUpdate> releaseCheck;
 
-        Task<GitHubReleases.AvailableRelease> CheckForNewerRelease(bool refresh = false)
+        Task<AppUpdate> CheckForNewerRelease(bool refresh = false)
         {
             if (releaseCheck == null || refresh && releaseCheck.IsCompleted)
-                releaseCheck = GitHubReleases.CheckAsync(DiagnosticLog.AppVersion);
+                releaseCheck = AppUpdates.CheckAsync(Handle);
             return releaseCheck;
         }
 
@@ -28,6 +28,7 @@ namespace CameraControlStudio
 
         void BindGitHubActions(GitHubActions actions, Form owner)
         {
+            actions.ConfigureDownloadLink();
             actions.ReportIssue += async (sender, args) => await RunContactAction(actions, owner, () => OpenIssueDraft(false, actions, owner));
             actions.RequestFeature += async (sender, args) => await RunContactAction(actions, owner, () => OpenIssueDraft(true, actions, owner));
             actions.SavePackage += async (sender, args) => await RunContactAction(actions, owner, () => SaveReportPackage(actions, owner));
@@ -71,9 +72,13 @@ namespace CameraControlStudio
                         "Prøv den først for at se, om funktionen allerede er tilføjet.")
                     : UiText.T("Try it first to see whether the issue is fixed.",
                         "Prøv den først for at se, om fejlen er rettet.");
-                string question = string.Format(UiText.T("Version {0} is available.", "Version {0} er tilgængelig."), release.Version)
-                    + Environment.NewLine + check + Environment.NewLine
-                    + UiText.T("Open the latest release?", "Åbn den seneste udgivelse?");
+                string available = release.Version == null
+                    ? UiText.T("New release available", "Ny version tilgængelig")
+                    : string.Format(UiText.T("Version {0} is available.", "Version {0} er tilgængelig."), release.Version);
+                string openUpdate = AppUpdates.Channel == UpdateChannel.MicrosoftStore
+                    ? UiText.T("Open Microsoft Store updates?", "Åbn opdateringer i Microsoft Store?")
+                    : UiText.T("Open the latest release?", "Åbn den seneste udgivelse?");
+                string question = available + Environment.NewLine + check + Environment.NewLine + openUpdate;
                 if (ShowContactMessage(owner, question, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     ErrorDialog.OpenRelease(owner, release.Url);

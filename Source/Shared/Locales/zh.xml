@@ -233,6 +233,9 @@
   <text key="Guide language">指南语言</text>
   <text key="Use online guides">使用在线指南</text>
   <text key="This guide is unavailable.">此指南不可用。</text>
+  <text key="Microsoft Store updates">Microsoft Store 更新</text>
+  <text key="Open Microsoft Store updates?">打开 Microsoft Store 更新？</text>
+  <text key="This online guide is for the installed version.">此在线指南适用于已安装的版本。</text>
   <text key="This online guide is for the latest release.">此在线指南适用于最新版本。</text>
   <text key="The online guide is unavailable. Showing the local guide.">在线指南不可用，现显示本地指南。</text>
   <text key="You are viewing a local guide. A newer release is available.">你正在查看本地指南。有更新版本可用。</text>

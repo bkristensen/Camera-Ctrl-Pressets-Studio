@@ -12,11 +12,23 @@ namespace CameraControlStudio
         {
             InitializeComponent();
             repository.LinkClicked += (sender, args) => ErrorDialog.Open(FindForm(), RepositoryUrl);
-            releases.LinkClicked += (sender, args) => ErrorDialog.Open(FindForm(), ReleasesUrl);
+            releases.LinkClicked += (sender, args) =>
+            {
+                var url = AppUpdates.DownloadUrl;
+                if (url != null)
+                    ErrorDialog.OpenRelease(FindForm(), url);
+            };
             discussions.LinkClicked += (sender, args) => ErrorDialog.Open(FindForm(), RepositoryUrl + "/discussions");
             reportIssue.Click += (sender, args) => ReportIssue?.Invoke(this, args);
             requestFeature.Click += (sender, args) => RequestFeature?.Invoke(this, args);
             savePackage.Click += (sender, args) => SavePackage?.Invoke(this, args);
+        }
+
+        internal void ConfigureDownloadLink()
+        {
+            releases.Visible = AppUpdates.DownloadUrl != null;
+            if (AppUpdates.Channel == UpdateChannel.MicrosoftStore)
+                releases.Text = UiText.T("Microsoft Store updates", "Opdateringer i Microsoft Store");
         }
 
         internal event EventHandler ReportIssue;

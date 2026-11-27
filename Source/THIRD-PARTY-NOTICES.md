@@ -7,7 +7,7 @@ The app uses Windows and .NET Framework APIs. Guide Viewer runs on the Microsoft
 - [PDFsharp](docs/licenses/PDFsharp.txt) adds clickable links to GuideViewer PDF exports and is distributed under the MIT licence.
 - [Microsoft .NET libraries](docs/licenses/DotNet.txt) include the System.Buffers, System.Memory, System.Numerics.Vectors, System.Resources.Extensions and System.Runtime.CompilerServices.Unsafe packages, plus the Microsoft .NET dependencies listed for PDFsharp in the lock file. They are distributed under the MIT licence.
 
-The build restores Microsoft.NETFramework.ReferenceAssemblies 1.0.3 and its net48 reference package. These are build-only dependencies. Preserve their upstream licence files when redistributing those packages themselves. See the package metadata at https://www.nuget.org/packages/Microsoft.NETFramework.ReferenceAssemblies/1.0.3 and `packages.lock.json` for resolved versions.
+The build restores Microsoft.NETFramework.ReferenceAssemblies 1.0.3 and its net48 reference package. These are build-only dependencies. The build also restores Microsoft.Windows.SDK.Contracts 10.0.19041.1 to reference Windows Runtime APIs for Microsoft Store updates. The application uses the Windows and .NET Framework implementations already on the device. Preserve their upstream licence files when redistributing those packages themselves. See the package metadata at https://www.nuget.org/packages/Microsoft.NETFramework.ReferenceAssemblies/1.0.3 and `packages.lock.json` for resolved versions.
 
 The icon drawing code and documentation diagrams are included with this project's source. No third-party icon font or runtime UI toolkit is bundled. Inno Setup and the Windows SDK are external build tools; their installers are not bundled.
 

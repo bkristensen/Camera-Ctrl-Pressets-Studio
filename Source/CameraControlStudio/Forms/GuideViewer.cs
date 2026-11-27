@@ -21,7 +21,6 @@ namespace CameraControlStudio
     public partial class GuideViewer : AppForm
     {
         const string TroubleshootingFile = "TROUBLESHOOTING.md";
-        const string ReleasesUrl = GitHubActions.ReleasesUrl;
         const string RepositoryFilesUrl = "https://github.com/" + GitHubReleases.Repository + "/blob/";
         const string GuideDirectory = "/Source/docs/";
         const string MainGuidesUrl = RepositoryFilesUrl + "main" + GuideDirectory;
@@ -212,7 +211,10 @@ namespace CameraControlStudio
             "\\" + ((int)character).ToString("X", CultureInfo.InvariantCulture) + " ")) + "\"";
 
         const string ProjectUrl = GitHubActions.RepositoryUrl;
-        static string InstalledReleaseUrl => ReleasesUrl + "/tag/v" + Uri.EscapeDataString(DiagnosticLog.DisplayAppVersion);
+        static string InstalledVersionTag => "v" + DiagnosticLog.DisplayAppVersion;
+        static string InstalledReleaseUrl => AppUpdates.Channel == UpdateChannel.GitHub
+            ? GitHubActions.ReleasesUrl + "/tag/" + Uri.EscapeDataString(InstalledVersionTag)
+            : AppUpdates.DownloadUrl?.AbsoluteUri;
         const double PrintVerticalMargin = 50.4; // 0.7 inches, in PDF points
         const double PrintRightMargin = 39.6;    // 0.55 inches
         const double PrintLeftMargin = 64.8;     // 0.9 inches for a binder
@@ -398,8 +400,16 @@ namespace CameraControlStudio
 
             if (extension == ".md" && onlineRoot?.IsBaseOf(destination) == true)
             {
-                var guideBase = new Uri(RepositoryFilesUrl + Uri.EscapeDataString(latestRelease.Tag) + GuideDirectory);
+                var guideBase = new Uri(RepositoryFilesUrl + Uri.EscapeDataString(OnlineGuideTag) + GuideDirectory);
                 return RegisterGuideLink(destination, new Uri(guideBase, onlineRoot.MakeRelativeUri(destination)));
+            }
+            if (AppUpdates.Channel == UpdateChannel.MicrosoftStore && destination.Scheme == Uri.UriSchemeHttps
+                && destination.Host == "github.com" && destination.IsDefaultPort && destination.UserInfo.Length == 0)
+            {
+                var releasePage = new Uri(GitHubActions.ReleasesUrl);
+                string path = destination.AbsolutePath.TrimEnd('/');
+                if (path == releasePage.AbsolutePath || path == releasePage.AbsolutePath + "/latest")
+                    destination = AppUpdates.DownloadUrl;
             }
             return RegisterGuideLink(destination);
         }

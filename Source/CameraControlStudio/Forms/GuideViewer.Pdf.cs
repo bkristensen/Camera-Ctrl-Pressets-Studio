@@ -49,7 +49,8 @@ namespace CameraControlStudio
             double footerLine = PrintVerticalMargin;
 
             page.AddWebLink(LinkArea(left, headerLine + 1, left + width * PrintTitleWidth / 100, headerLine + 36), OnlineGuidesUrl);
-            page.AddWebLink(LinkArea(right - width * PrintVersionWidth / 100, headerLine + 1, right, headerLine + 22), InstalledReleaseUrl);
+            if (InstalledReleaseUrl is string versionLink)
+                page.AddWebLink(LinkArea(right - width * PrintVersionWidth / 100, headerLine + 1, right, headerLine + 22), versionLink);
             page.AddWebLink(LinkArea(left, footerLine - 24, left + width * PrintProjectWidth / 100, footerLine - 1), ProjectUrl);
         }
 

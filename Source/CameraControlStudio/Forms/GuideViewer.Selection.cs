@@ -52,7 +52,8 @@ namespace CameraControlStudio
             };
             useOnlineGuides.CheckedChanged += async (sender, args) =>
             {
-                if (useOnlineGuides.Checked && releaseCheck?.IsCompleted == true && latestRelease == null)
+                if (AppUpdates.Channel == UpdateChannel.GitHub && useOnlineGuides.Checked
+                    && releaseCheck?.IsCompleted == true && latestRelease == null)
                     releaseCheck = GitHubReleases.CheckLatestAsync();
                 await ShowSelectedGuide();
             };
@@ -72,13 +73,17 @@ namespace CameraControlStudio
 
         async Task StartGuides()
         {
-            releaseCheck = GitHubReleases.CheckLatestAsync();
+            releaseCheck = AppUpdates.Channel == UpdateChannel.GitHub
+                ? GitHubReleases.CheckLatestAsync() : Task.FromResult<GitHubReleases.AvailableRelease>(null);
             SelectGuide(openSetup ? SetupGuide : DailyGuide, setupSection: openSetup);
 
             latestRelease = await releaseCheck;
             if (!IsDisposed && !printing && !useOnlineGuides.Checked && HasNewerRelease)
                 await ShowSelectedGuide();
         }
+
+        string OnlineGuideTag => AppUpdates.Channel == UpdateChannel.GitHub
+            ? latestRelease?.Tag : InstalledVersionTag;
 
         bool HasNewerRelease => latestRelease?.IsNewerThan(DiagnosticLog.AppVersion) == true;
 
@@ -140,10 +145,11 @@ namespace CameraControlStudio
                     {
                         latestRelease = await releaseCheck;
                         request.Token.ThrowIfCancellationRequested();
-                        if (latestRelease != null)
+                        string guideTag = OnlineGuideTag;
+                        if (guideTag != null)
                         {
                             var candidateRoot = new Uri("https://" + RawHost + "/" + GitHubReleases.Repository
-                                + "/refs/tags/" + Uri.EscapeDataString(latestRelease.Tag) + GuideDirectory);
+                                + "/refs/tags/" + Uri.EscapeDataString(guideTag) + GuideDirectory);
                             try
                             {
                                 foreach (string path in paths)
@@ -221,7 +227,8 @@ namespace CameraControlStudio
             if (!available)
                 message = "This guide is unavailable.";
             else if (online)
-                message = "This online guide is for the latest release.";
+                message = AppUpdates.Channel == UpdateChannel.GitHub
+                    ? "This online guide is for the latest release." : "This online guide is for the installed version.";
             else if (wantsOnline)
                 message = "The online guide is unavailable. Showing the local guide.";
             else if (HasNewerRelease)
