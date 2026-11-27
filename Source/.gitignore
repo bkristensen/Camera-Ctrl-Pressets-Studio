@@ -5,3 +5,6 @@ artifacts/
 *.user
 *.pfx
 *.p12
+
+# Local Partner Center identity for MSIX builds.
+/packaging/msix/Package.appxmanifest

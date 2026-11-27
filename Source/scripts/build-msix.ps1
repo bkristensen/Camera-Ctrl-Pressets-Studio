@@ -1,15 +1,34 @@
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory)][ValidatePattern('^[A-Za-z0-9.-]{3,50}$')][string]$IdentityName,
-    [Parameter(Mandatory)][string]$Publisher,
-    [Parameter(Mandatory)][string]$PublisherDisplayName,
+    [string]$IdentityName,
+    [string]$Publisher,
+    [string]$PublisherDisplayName,
     [string]$DisplayName = 'Camera Control Studio',
     [string]$PackageVersion = '0.7.0.0',
     [string]$MakeAppxPath = 'MakeAppx.exe'
 )
 $ErrorActionPreference = 'Stop'
+$root = Split-Path $PSScriptRoot -Parent
+$manifestPath = Join-Path $root 'packaging/msix/Package.appxmanifest'
+if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
+    $manifestPath = Join-Path $root 'packaging/msix/AppxManifest.xml'
+}
+
+[xml]$manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8
+if (-not $PSBoundParameters.ContainsKey('IdentityName')) {
+    $IdentityName = $manifest.Package.Identity.Name
+}
+if (-not $PSBoundParameters.ContainsKey('Publisher')) {
+    $Publisher = $manifest.Package.Identity.Publisher
+}
+if (-not $PSBoundParameters.ContainsKey('PublisherDisplayName')) {
+    $PublisherDisplayName = $manifest.Package.Properties.PublisherDisplayName
+}
 if ($IdentityName -match 'REPLACE' -or $Publisher -match 'REPLACE' -or $PublisherDisplayName -match 'REPLACE') {
-    throw 'Supply the real Partner Center product identity.'
+    throw 'Set the Partner Center identity in packaging/msix/Package.appxmanifest or supply the identity parameters.'
+}
+if ($IdentityName -notmatch '^[A-Za-z0-9.-]{3,50}$') {
+    throw 'Use the exact Partner Center package Name.'
 }
 if ($Publisher -notmatch '^CN=' -or [string]::IsNullOrWhiteSpace($PublisherDisplayName)) {
     throw 'Publisher must be the exact Partner Center CN; display name is required.'
@@ -21,7 +40,6 @@ $parts = $PackageVersion.Split('.') | ForEach-Object { [int]$_ }
 if (($parts | Where-Object { $_ -gt 65535 }).Count -gt 0 -or ($parts | Measure-Object -Sum).Sum -eq 0) {
     throw 'Invalid MSIX version.'
 }
-$root = Split-Path $PSScriptRoot -Parent
 Push-Location $root
 try {
     & "$PSScriptRoot/build.ps1"
@@ -38,7 +56,6 @@ try {
     Copy-Item 'artifacts/msix-bin/runtimes/win-x64/native/WebView2Loader.dll' $loaderDirectory
     Copy-Item '*.md' $stage
     Copy-Item 'docs' (Join-Path $stage 'docs') -Recurse
-    [xml]$manifest = Get-Content 'packaging/msix/AppxManifest.xml' -Raw
     $manifest.Package.Identity.SetAttribute('Name', $IdentityName)
     $manifest.Package.Identity.SetAttribute('Publisher', $Publisher)
     $manifest.Package.Identity.SetAttribute('Version', $PackageVersion)
