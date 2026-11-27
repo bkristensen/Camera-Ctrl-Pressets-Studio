@@ -8,7 +8,7 @@
 
 ## Beskriv fejlen og vedhæft ZIP-filen
 
-Knappen åbner GitHubs skabelon **Bug report**. Skriv, hvad du forventede, hvad der skete, og hvordan fejlen kan genskabes. Angiv appversion, Windows-version, kameramodel og det optageprogram, du brugte.
+Knappen åbner GitHubs skabelon **Bug report**. Udfyld alle afsnit med en rød stjerne. Skriv, hvad du forventede, hvad der skete, og hvordan fejlen kan genskabes. Angiv appversion og Windows-version. Tilføj kamera og optageopsætning, hvis det er relevant.
 
 Du kan altid oprette den samme pakke med **Kontakt & Om → Kontakt → Gem supportpakke (ZIP)**. Den indeholder et skærmbillede af Camera Control Studio, den gemte `profiles.json`, vinduets layout i `window.json` og tilgængelige logfiler i `Logs`. Appen viser stien til den gemte fil.
 

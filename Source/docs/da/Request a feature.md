@@ -2,7 +2,7 @@
 
 1. Åbn indstillingspanelet. Vælg **Kontakt & Om → Kontakt → Foreslå en ny funktion**.
 2. Hvis appen finder en nyere version, så vælg **Ja** for at åbne siden, hvor du kan hente den. Installér den, og se, om den allerede har funktionen. Vælg **Nej** for at fortsætte til udkastet på GitHub.
-3. I GitHubs skabelon **Feature request** beskriver du opgaven, hvordan funktionen vil hjælpe, og hvordan du løser opgaven i dag.
+3. Udfyld alle afsnit med en rød stjerne i GitHubs skabelon **Feature request**. Beskriv opgaven, hvordan funktionen vil hjælpe, og hvilket resultat der viser, at den virker.
 
 ![Fanen Kontakt med knapperne Foreslå en ny funktion og Gem supportpakke](../images/screenshots/contact/da/issues.png)
 

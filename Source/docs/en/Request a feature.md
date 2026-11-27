@@ -2,7 +2,7 @@
 
 1. Open the settings pane. Choose **Contact & About → Contact → Request a new feature**.
 2. If the app finds a newer release, choose **Yes** to open its download page. Install it and check whether it has the feature. Choose **No** to continue to the GitHub draft.
-3. In GitHub’s **Feature request** template, describe the task you want to do, how the feature would help, and any workaround you use today.
+3. In GitHub’s **Feature request** template, fill in every section marked with a red asterisk. Describe the task, how the feature would help, and what result would show it works.
 
 ![Contact tab with Request a new feature and Save support ZIP](../images/screenshots/contact/en/issues.png)
 

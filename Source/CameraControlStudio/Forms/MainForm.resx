@@ -1152,7 +1152,7 @@ Use the widest view and minimum zoom.</value>
     <value>motionGroup</value>
   </data>
   <data name="&gt;&gt;motionGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;motionGroup.Parent" xml:space="preserve">
     <value>motionTab</value>
@@ -1287,7 +1287,7 @@ Use the widest view and minimum zoom.</value>
     <value>windowGroup</value>
   </data>
   <data name="&gt;&gt;windowGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;windowGroup.Parent" xml:space="preserve">
     <value>applicationFields</value>
@@ -1299,7 +1299,7 @@ Use the widest view and minimum zoom.</value>
     <value>languageGroup</value>
   </data>
   <data name="&gt;&gt;languageGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;languageGroup.Parent" xml:space="preserve">
     <value>applicationFields</value>
@@ -1746,7 +1746,7 @@ Use the widest view and minimum zoom.</value>
     <value>gainControl</value>
   </data>
   <data name="&gt;&gt;gainControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;gainControl.Parent" xml:space="preserve">
     <value>focusPanel</value>
@@ -1758,7 +1758,7 @@ Use the widest view and minimum zoom.</value>
     <value>exposureControl</value>
   </data>
   <data name="&gt;&gt;exposureControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;exposureControl.Parent" xml:space="preserve">
     <value>focusPanel</value>
@@ -1770,7 +1770,7 @@ Use the widest view and minimum zoom.</value>
     <value>focusControl</value>
   </data>
   <data name="&gt;&gt;focusControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;focusControl.Parent" xml:space="preserve">
     <value>focusPanel</value>
@@ -2055,7 +2055,7 @@ Use the widest view and minimum zoom.</value>
     <value>whiteBalanceControl</value>
   </data>
   <data name="&gt;&gt;whiteBalanceControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;whiteBalanceControl.Parent" xml:space="preserve">
     <value>colourPanel</value>
@@ -2067,7 +2067,7 @@ Use the widest view and minimum zoom.</value>
     <value>saturationControl</value>
   </data>
   <data name="&gt;&gt;saturationControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;saturationControl.Parent" xml:space="preserve">
     <value>colourPanel</value>
@@ -2079,7 +2079,7 @@ Use the widest view and minimum zoom.</value>
     <value>gammaControl</value>
   </data>
   <data name="&gt;&gt;gammaControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;gammaControl.Parent" xml:space="preserve">
     <value>colourPanel</value>
@@ -2091,7 +2091,7 @@ Use the widest view and minimum zoom.</value>
     <value>hueControl</value>
   </data>
   <data name="&gt;&gt;hueControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;hueControl.Parent" xml:space="preserve">
     <value>colourPanel</value>
@@ -2454,7 +2454,7 @@ Use the widest view and minimum zoom.</value>
     <value>contrastControl</value>
   </data>
   <data name="&gt;&gt;contrastControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;contrastControl.Parent" xml:space="preserve">
     <value>lightPanel</value>
@@ -2466,7 +2466,7 @@ Use the widest view and minimum zoom.</value>
     <value>brightnessControl</value>
   </data>
   <data name="&gt;&gt;brightnessControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;brightnessControl.Parent" xml:space="preserve">
     <value>lightPanel</value>
@@ -2478,7 +2478,7 @@ Use the widest view and minimum zoom.</value>
     <value>backlightControl</value>
   </data>
   <data name="&gt;&gt;backlightControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;backlightControl.Parent" xml:space="preserve">
     <value>lightPanel</value>
@@ -2490,7 +2490,7 @@ Use the widest view and minimum zoom.</value>
     <value>sharpnessControl</value>
   </data>
   <data name="&gt;&gt;sharpnessControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;sharpnessControl.Parent" xml:space="preserve">
     <value>lightPanel</value>
@@ -2886,7 +2886,7 @@ Use the widest view and minimum zoom.</value>
     <value>logGroup</value>
   </data>
   <data name="&gt;&gt;logGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;logGroup.Parent" xml:space="preserve">
     <value>issueGroups</value>
@@ -2898,7 +2898,7 @@ Use the widest view and minimum zoom.</value>
     <value>reportGroup</value>
   </data>
   <data name="&gt;&gt;reportGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>CameraControlStudio.BlueGroupBox, Camera Control Studio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;reportGroup.Parent" xml:space="preserve">
     <value>issueGroups</value>

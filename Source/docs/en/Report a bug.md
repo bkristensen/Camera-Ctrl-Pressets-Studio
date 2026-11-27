@@ -8,7 +8,7 @@
 
 ## Add details and attach the ZIP
 
-The button opens GitHub’s **Bug report** template. Say what you expected, what happened, and how to reproduce it. Include the app version, Windows version, camera model and capture app.
+The button opens GitHub’s **Bug report** template. Fill in every section marked with a red asterisk. Say what you expected, what happened, and how to reproduce it. Include the app and Windows versions. Add the camera and capture setup if relevant.
 
 You can create the same package at any time with **Contact & About → Contact → Save support ZIP**. It contains a screenshot of Camera Control Studio, the saved `profiles.json`, a `window.json` with the window layout, and available logs under `Logs`. The app shows the saved file path.
 
