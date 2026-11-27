@@ -4,42 +4,39 @@ about: Suggest a focused improvement
 type: Feature
 labels: enhancement
 ---
-# Type of feature request (optional)
+# Describe the feature [required]
+Describe the feature you would like to see implemented. Please provide as much detail as possible, including any relevant use cases or scenarios where this feature would be beneficial.
+
+
+---
+# Proposed behaviour [required]
+Describe one task and how you would use the new feature. Say what result would show that it works for you.
+
+
+---
+# OPTIONAL
+## Simpler alternatives [optional]
+Could settings or an existing feature solve it?
+
+
+---
+## Mockups [optional]
+If possible, provide a screenshot or mockup of the proposed feature.
+
+
+---
+## Include files [optional]
+Attach a screenshot, mockup, or files that help explain the request. In Camera Control Studio, choose **Contact & About → Contact → Save support ZIP** if your setup is relevant. The ZIP contains a screenshot, profiles, the window layout, and any available logs. Review it before dragging it into this issue.
+
+
+---
+## Type of feature request (optional)
+Please check the labels that apply to your request. 
+If you are unsure, leave them unchecked.
+
 What type of feature are you requesting? Please select one of the following:
 - [ ] New functionality
 - [ ] Improvement to existing functionality
 - [ ] Performance enhancement
 - [ ] UI/UX improvement
-- [ ] Other (please describe)
-
-Comment: 
-
-
-# Describe the feature ![Required]
-Describe the feature you would like to see implemented. Please provide as much detail as possible, including any relevant use cases or scenarios where this feature would be beneficial.
-> (Please provide a clear and concise description of the feature you are requesting. Include any relevant details that can help us understand the purpose and potential impact of the feature. If applicable, describe how this feature would improve the user experience or address a specific need.)))
-
-
-# Proposed behaviour ![Required]
-Describe one task and how you would use the new feature. Say what result would show that it works for you.
-> (Please provide a clear and concise description of how you would use the proposed feature. Include any relevant details that can help us understand the intended usage scenario.))
-
-
-# Simpler alternatives [optional]
-Could settings or an existing feature solve it?
-> (Please describe any simpler alternatives that might address the same need or provide a similar benefit without requiring significant development effort.)
-
-
-# Mockups [optional]
-If possible, provide a screenshot or mockup of the proposed feature.
-> (Please attach any relevant mockups, screenshots, or diagrams that illustrate the proposed feature. Visual representations can help us better understand your request and its intended functionality.)
-
-
-# Include files [optional]
-Attach a screenshot, mockup, or files that help explain the request. In Camera Control Studio, choose **Contact & About → Contact → Save support ZIP** if your setup is relevant. The ZIP contains a screenshot, profiles, the window layout, and any available logs. Review it before dragging it into this issue.
-
-
----
-
-![Required] **Required.** Always fill in the sections marked with a red asterisk.
-[required]: https://raw.githubusercontent.com/bkristensen/Camera-Ctrl-Pressets-Studio/main/.github/ISSUE_TEMPLATE/required.png
+- [ ] Other (please describe below)
