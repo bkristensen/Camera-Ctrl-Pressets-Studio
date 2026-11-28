@@ -1,6 +1,6 @@
 # Byg og frigiv Camera Control Studio
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 Kør kommandoerne fra den mappe, der indeholder `Camera-Control-Pressets-Studio.sln`. Brug Windows og PowerShell til installationsprogrammet og Windows-testning.
 

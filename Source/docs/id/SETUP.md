@@ -2,13 +2,13 @@
 
 # Siapkan aplikasi
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 [Pemecahan Masalah](TROUBLESHOOTING.md)
 
 Klik roda gigi di bagian bawah untuk membuka Pengaturan. Pengaturan terbuka di jendela terpisah. Anda tetap dapat menggunakan jendela utama.
 
-![Jendela utama di samping jendela Pengaturan yang terpisah](../images/screenshots/1.1.0/id/main-settings.png)
+![Jendela utama di samping jendela Pengaturan yang terpisah](../images/screenshots/1.1.1/id/main-settings.png)
 
 ## Instal dan verifikasi unduhan
 
@@ -126,7 +126,7 @@ Contoh pada Brio dengan sudut 65° dan zoom minimum. Tekan − untuk mencoba 78�
 
 ### Kontak
 
-![Kontak](../images/screenshots/1.1.0/id/issues.png)
+![Kontak](../images/screenshots/1.1.1/id/issues.png)
 
 - **Laporkan masalah**. Buka templat bug GitHub. Jika ada versi baru, aplikasi menawarkan untuk membukanya lebih dulu. Jika dilanjutkan, aplikasi menawarkan ZIP sebelum membuka draf.
 - **Usulkan fitur baru**. Buka templat permintaan fitur. Jika ada versi baru, coba lebih dulu. Fitur mungkin sudah ada.
@@ -156,6 +156,6 @@ Untuk membuat cadangan, tutup aplikasi dan salin `%LOCALAPPDATA%\CamPressets`. P
 
 Jika kesalahan tak terduga menghentikan tindakan, tutup dialog dan coba lagi. Jika dialog menyatakan aplikasi akan ditutup, buka kembali aplikasi.
 
-![Dialog kesalahan dengan tombol untuk melaporkan masalah, menemukan log, dan menutup dialog](../images/screenshots/1.1.0/id/error-dialog.png)
+![Dialog kesalahan dengan tombol untuk melaporkan masalah, menemukan log, dan menutup dialog](../images/screenshots/1.1.1/id/error-dialog.png)
 
 **Tampilkan file log** memilih log diagnostik di File Explorer jika tersedia. **Laporkan di GitHub** menawarkan untuk menyimpan ZIP dukungan, lalu membuka templat laporan bug di GitHub. ZIP dapat berisi tangkapan layar dialog, log, pengaturan profil dan jendela, serta laporan sistem. Periksa ZIP lalu lampirkan sendiri ke draf.

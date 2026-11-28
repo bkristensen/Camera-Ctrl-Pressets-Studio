@@ -2,13 +2,13 @@
 
 # Configurar la aplicación
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 [Solución de problemas](TROUBLESHOOTING.md)
 
 Haz clic en el engranaje de la parte inferior para abrir la configuración. La configuración se abre en otra ventana. Puedes seguir usando la ventana principal.
 
-![Ventana principal junto a la ventana de configuración independiente](../images/screenshots/1.1.0/es/main-settings.png)
+![Ventana principal junto a la ventana de configuración independiente](../images/screenshots/1.1.1/es/main-settings.png)
 
 ## Instalar y verificar la descarga.
 
@@ -126,7 +126,7 @@ Por ejemplo, con una Brio a 65° y en el zoom mínimo, pulsar − puede cambiar 
 
 ### Contacto
 
-![Contacto](../images/screenshots/1.1.0/es/issues.png)
+![Contacto](../images/screenshots/1.1.1/es/issues.png)
 
 - **Informar de un problema**. Abre la plantilla de errores en GitHub. Si hay una versión nueva, la aplicación ofrece abrirla primero. Si sigues, ofrece guardar un ZIP antes de abrir el borrador.
 - **Solicitar una función nueva**. Abre la plantilla de sugerencias. Si hay una versión nueva, pruébala primero. Puede que ya incluya la función.
@@ -156,6 +156,6 @@ Cierra la aplicación y copia `%LOCALAPPDATA%\CamPressets` para hacer una copia 
 
 Si un error inesperado detiene una acción, cierra el cuadro y vuelve a intentarlo. Si indica que la aplicación se cerrará, ábrela de nuevo.
 
-![Cuadro de error con botones para informar del fallo, encontrar el registro y cerrar](../images/screenshots/1.1.0/es/error-dialog.png)
+![Cuadro de error con botones para informar del fallo, encontrar el registro y cerrar](../images/screenshots/1.1.1/es/error-dialog.png)
 
 **Mostrar registro** selecciona el registro de diagnóstico en el Explorador de archivos si está disponible. **Informar en GitHub** te ofrece guardar un ZIP de soporte y luego abre la plantilla de errores en GitHub. El ZIP puede incluir una captura del cuadro, registros, ajustes de perfil y ventana, y un informe del sistema. Revisa el ZIP y adjúntalo al borrador.

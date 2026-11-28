@@ -1,6 +1,6 @@
 # 翻译 Camera Control Studio
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 ## 编辑现有语言
 

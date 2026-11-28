@@ -1,6 +1,6 @@
 # Guides d'utilisation du Camera Control Studio
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 Le programme d'installation et le portable ZIP incluent les guides. Cliquez sur **?** pour ouvrir les guides locaux dans la langue de votre profil. Modifiez **Langue du guide** pour lire une traduction différente. Choisissez **Utiliser les guides en ligne** pour lire le guide de la dernière version GitHub. Si cette version n'a pas de traduction, le spectateur essaie l'anglais. Si le guide en ligne n'est pas disponible, il affiche la copie locale lorsqu'elle est disponible. Ouvrez d’abord les paramètres pour accéder directement à la configuration. Cliquez sur **Imprimer** pour imprimer le guide actuel avec son titre, la date et l'heure d'impression, la version installée, l'adresse du projet et les numéros de page.
 

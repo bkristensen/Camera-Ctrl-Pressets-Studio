@@ -2,13 +2,13 @@
 
 # Configure o aplicativo
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 [Solução de problemas](TROUBLESHOOTING.md)
 
 Clique na engrenagem na parte inferior para abrir as configurações. As configurações abrem em uma janela separada. Você pode continuar usando a janela principal.
 
-![Janela principal ao lado da janela de configurações](../images/screenshots/1.1.0/pt/main-settings.png)
+![Janela principal ao lado da janela de configurações](../images/screenshots/1.1.1/pt/main-settings.png)
 
 ## Instale e verifique o download
 
@@ -126,7 +126,7 @@ Por exemplo, numa Brio a 65° e com zoom mínimo, pressione − para tentar muda
 
 ### Contato
 
-![Contato](../images/screenshots/1.1.0/pt/issues.png)
+![Contato](../images/screenshots/1.1.1/pt/issues.png)
 
 - **Relatar um problema**. Abra o modelo de erro no GitHub. Se houver uma versão nova, o aplicativo oferece abri-la primeiro. Se você continuar, ele oferece um ZIP antes de abrir o rascunho.
 - **Solicitar um novo recurso**. Abra o modelo de sugestão. Se houver uma versão mais recente, teste primeiro. Ela talvez já inclua o recurso.
@@ -156,6 +156,6 @@ Para fazer backup, feche o aplicativo e copie `%LOCALAPPDATA%\CamPressets`. As p
 
 Se um erro inesperado interromper uma ação, feche a caixa e tente de novo. Se a mensagem indicar que o aplicativo será fechado, abra-o novamente.
 
-![Caixa de diálogo de erro com botões para relatar o erro, localizar o log e fechar](../images/screenshots/1.1.0/pt/error-dialog.png)
+![Caixa de diálogo de erro com botões para relatar o erro, localizar o log e fechar](../images/screenshots/1.1.1/pt/error-dialog.png)
 
 **Mostrar arquivo de log** seleciona o registro de diagnóstico no Explorador de Arquivos, quando disponível. **Relatar no GitHub** oferece a opção de salvar um ZIP de suporte e depois abre o modelo de relatório de erro no GitHub. O ZIP pode incluir uma captura da caixa de diálogo, logs, configurações de perfil e janela e um relatório do sistema. Revise o ZIP e anexe-o ao rascunho.

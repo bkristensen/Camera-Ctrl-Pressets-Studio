@@ -2,7 +2,7 @@
 
 # 编辑界面和翻译
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 ## 打开正确的文件
 

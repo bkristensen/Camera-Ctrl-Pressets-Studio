@@ -1,6 +1,6 @@
 # Camera Control Studio का अनुवाद करें
 
-*Camera Control Studio 1.1.0.* के लिए लिखा गया
+*Camera Control Studio 1.1.1.* के लिए लिखा गया
 
 ## किसी मौजूदा भाषा को संपादित करें
 

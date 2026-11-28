@@ -1,6 +1,6 @@
 # Deskripsi proyek
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 Camera Control Studio menyimpan dan mengingat kembali hasil jepretan kamera di Windows. Gunakan di studio, ruang kelas, atau pertemuan langsung. Aplikasi pengambilan Anda menangani video tersebut.
 

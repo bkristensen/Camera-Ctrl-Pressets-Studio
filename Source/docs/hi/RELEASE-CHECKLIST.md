@@ -1,6 +1,6 @@
 # चेकलिस्ट जारी करें
 
-*Camera Control Studio 1.1.0.* के लिए लिखा गया
+*Camera Control Studio 1.1.1.* के लिए लिखा गया
 
 कमांड और आउटपुट पथ के लिए [बिल्ड और रिलीज़ गाइड](BUILD-AND-RELEASE.md) का उपयोग करें।
 

@@ -2,7 +2,7 @@
 
 # Daily use
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio showing how the centre camera button acts as a joystick and how presets change the framing in a video meeting](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Start your streaming meeting in an app such as Zoom. Then open **Camera Control Studio**.
 
-![Direction wheel and zoom slider beside the preset list](../images/screenshots/1.1.0/en/main.png)
+![Direction wheel and zoom slider beside the preset list](../images/screenshots/1.1.1/en/main.png)
 
 ## General
 
@@ -51,7 +51,7 @@ Drag the slider to adjust the zoom as you move it.
 
 ### Restore full frame
 
-Click the square button with the frame icon above the magnifier buttons. The camera zooms out as far as it can and selects its widest field of view if it supports that setting. This changes the camera picture. The app window keeps its size.
+Click the square button with the frame icon below the Zoom Out button. The camera zooms out as far as it can and selects its widest field of view if it supports that setting. This changes the camera picture. The app window keeps its size.
 
 ### Stop panning
 
@@ -91,6 +91,6 @@ See [Setup](SETUP.md) for camera direction, permanent presets, image settings, p
 
 Close the dialog and try again if an unexpected error stops an action. If the dialog says the app will close, open it again.
 
-![Error dialog with buttons to report the issue, find the log and close](../images/screenshots/1.1.0/en/error-dialog.png)
+![Error dialog with buttons to report the issue, find the log and close](../images/screenshots/1.1.1/en/error-dialog.png)
 
 **Show log file** selects the diagnostic log in File Explorer if a log is available. **Report on GitHub** offers to save a support ZIP, then opens GitHub’s bug template. The ZIP can include a screenshot of the dialog, logs, profile and window settings, and a system report. Review it and attach it to the draft yourself.

@@ -1,6 +1,6 @@
 # Validation for 0.7.0-beta.3
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 The Windows Release build uses locked dependencies. Translation parity and the automated tests passed. The tests cover motion, presets, profile language, persistence, logging and the camera-not-ready HRESULT reported after hibernation.
 

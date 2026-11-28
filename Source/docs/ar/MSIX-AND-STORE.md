@@ -1,6 +1,6 @@
 # MSIX وتوزيع المتجر
 
-* مكتوب لـ Camera Control Studio 1.1.0.*
+* مكتوب لـ Camera Control Studio 1.1.1.*
 
 استخدم `scripts/build-msix.ps1` وقالب البيان لإنشاء حزمة MSIX. تقوم Microsoft بمراجعة الحزمة قبل أن تظهر في المتجر. الملف القابل للتنفيذ المحمول غير موقع.
 

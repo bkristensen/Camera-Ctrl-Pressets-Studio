@@ -1,6 +1,6 @@
 # 构建并发布Camera Control Studio
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 从包含 `Camera-Control-Pressets-Studio.sln` 的目录运行命令。使用 Windows 和 PowerShell 进行安装程序和 Windows 测试。
 

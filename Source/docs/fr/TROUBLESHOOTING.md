@@ -1,6 +1,6 @@
 # Dépannage
 
-*Rédigé pour Camera Control Studio 1.1.0.*
+*Rédigé pour Camera Control Studio 1.1.1.*
 
 ## Sommaire
 

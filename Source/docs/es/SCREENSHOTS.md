@@ -1,34 +1,36 @@
 # Capturas de pantalla de la aplicación
 
-Estas imágenes muestran Camera Control Studio 1.0.1 con el perfil Estándar, una cámara de demostración y ajustes preestablecidos de muestra. El controlador de su cámara decide qué controles aparecen en Video. La tabla enlaza con las pantallas en inglés. Las guías de usuario de [](USER-GUIDES.md) utilizan capturas de pantalla en su propio idioma.
+*Camera Control Studio 1.1.1*
+
+Las capturas muestran el perfil Estándar, una cámara de demostración y posiciones de ejemplo. El controlador de la cámara determina qué controles de vídeo están disponibles. Consulte las [guías de usuario](USER-GUIDES.md) para la configuración y el uso diario.
 
 | Ver | lo que muestra |
 | --- | --- |
-| [Ventana principal](../images/screenshots/1.1.0/es/main.png) | Rueda de dirección, selector de cámara, zoom, ajustes preestablecidos y estado con Ajustes cerrados |
-| [Ventana principal con Configuración abierta](../images/screenshots/1.1.0/es/main-settings.png) | El panel de configuración junto a los controles de la cámara y la lista de ajustes preestablecidos |
-| [Configuración → Panorámica](../images/screenshots/1.1.0/es/settings.png) | Pasos de giro e inclinación, inversión de dirección y opciones de botones de cámara |
-| [Configuración → Zoom](../images/screenshots/1.1.0/es/zoom.png) | Tamaño de paso para los botones de zoom |
-| [Configuración → Aplicación](../images/screenshots/1.1.0/es/application.png) | Confirmación de transmisión, comportamiento siempre actualizado e idioma del perfil |
-| [Video antes de cargar los controles](../images/screenshots/1.1.0/es/video.png) | Dónde cargar los controles disponibles desde el controlador de la cámara |
-| [Video → Enfoque y exposición](../images/screenshots/1.1.0/es/image.png) | Enfoque, exposición y ganancia. |
-| [Vídeo → Color](../images/screenshots/1.1.0/es/video-colour.png) | Tono, gamma, saturación y balance de blancos. |
-| [Video → Luz y detalle](../images/screenshots/1.1.0/es/video-light-detail.png) | Nitidez, compensación de contraluz, brillo y contraste |
-| [Video → Campo de visión](../images/screenshots/1.1.0/es/field-of-view.png) | Ángulo de inicio y cuándo la aplicación puede cambiar el campo de visión |
-| [Presets → Presets permanentes](../images/screenshots/1.1.0/es/presets.png) | Ajustes preestablecidos permanentes y acciones de edición. |
-| [Preajustes → Transiciones](../images/screenshots/1.1.0/es/transitions.png) | Duración o velocidad fija para movimientos entre posiciones guardadas. |
-| [Perfiles](../images/screenshots/1.1.0/es/profiles.png) | Lista de perfiles y acciones para crear, copiar o cambiar el nombre de un perfil |
-| [Contacto y acerca de → Contacto](../images/screenshots/1.1.0/es/issues.png) | Registros de diagnóstico e informes GitHub |
-| [Contacto y acerca de → Acerca de](../images/screenshots/1.1.0/es/about.png) | Versión, crédito del desarrollador y enlaces al proyecto. |
+| [Ventana principal](../images/screenshots/1.1.1/es/main.png) | Rueda de dirección, selector de cámara, zoom, ajustes preestablecidos y estado con Ajustes cerrados |
+| [Ventana principal con Configuración abierta](../images/screenshots/1.1.1/es/main-settings.png) | El panel de configuración junto a los controles de la cámara y la lista de ajustes preestablecidos |
+| [Configuración → Panorámica](../images/screenshots/1.1.1/es/settings.png) | Pasos de giro e inclinación, inversión de dirección y opciones de botones de cámara |
+| [Configuración → Zoom](../images/screenshots/1.1.1/es/zoom.png) | Tamaño de paso para los botones de zoom |
+| [Configuración → Aplicación](../images/screenshots/1.1.1/es/application.png) | Confirmación de transmisión, comportamiento siempre actualizado e idioma del perfil |
+| [Video antes de cargar los controles](../images/screenshots/1.1.1/es/video.png) | Dónde cargar los controles disponibles desde el controlador de la cámara |
+| [Video → Enfoque y exposición](../images/screenshots/1.1.1/es/image.png) | Enfoque, exposición y ganancia. |
+| [Vídeo → Color](../images/screenshots/1.1.1/es/video-colour.png) | Tono, gamma, saturación y balance de blancos. |
+| [Video → Luz y detalle](../images/screenshots/1.1.1/es/video-light-detail.png) | Nitidez, compensación de contraluz, brillo y contraste |
+| [Video → Campo de visión](../images/screenshots/1.1.1/es/field-of-view.png) | Ángulo de inicio y cuándo la aplicación puede cambiar el campo de visión |
+| [Presets → Presets permanentes](../images/screenshots/1.1.1/es/presets.png) | Ajustes preestablecidos permanentes y acciones de edición. |
+| [Preajustes → Transiciones](../images/screenshots/1.1.1/es/transitions.png) | Duración o velocidad fija para movimientos entre posiciones guardadas. |
+| [Perfiles](../images/screenshots/1.1.1/es/profiles.png) | Lista de perfiles y acciones para crear, copiar o cambiar el nombre de un perfil |
+| [Contacto y acerca de → Contacto](../images/screenshots/1.1.1/es/issues.png) | Registros de diagnóstico e informes GitHub |
+| [Contacto y acerca de → Acerca de](../images/screenshots/1.1.1/es/about.png) | Versión, crédito del desarrollador y enlaces al proyecto. |
 
 ## Otras ventanas
 
-- [Elegir fuente de cámara](../images/screenshots/1.1.0/es/camera-source.png)
-- [Elegir perfil](../images/screenshots/1.1.0/es/profile-picker.png)
-- [Cambiar nombre e icono](../images/screenshots/1.1.0/es/preset-editor.png)
-- [Nuevo perfil](../images/screenshots/1.1.0/es/text-entry.png)
-- [Configuración de registros](../images/screenshots/1.1.0/es/log-settings.png)
-- [La acción falló. Abre el registro para ver los detalles.](../images/screenshots/1.1.0/es/error-dialog.png)
-- [Abrir guías](../images/screenshots/1.1.0/es/guide-viewer.png)
+- [Elegir fuente de cámara](../images/screenshots/1.1.1/es/camera-source.png)
+- [Elegir perfil](../images/screenshots/1.1.1/es/profile-picker.png)
+- [Cambiar nombre e icono](../images/screenshots/1.1.1/es/preset-editor.png)
+- [Nuevo perfil](../images/screenshots/1.1.1/es/text-entry.png)
+- [Configuración de registros](../images/screenshots/1.1.1/es/log-settings.png)
+- [La acción falló. Abre el registro para ver los detalles.](../images/screenshots/1.1.1/es/error-dialog.png)
+- [Abrir guías](../images/screenshots/1.1.1/es/guide-viewer.png)
 
 ## Actualizar las imágenes de la guía.
 

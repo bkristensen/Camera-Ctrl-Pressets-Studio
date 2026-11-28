@@ -2,7 +2,7 @@
 
 # Daglig brug
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio viser kameraknappen som joystick og hvordan gemte positioner skifter udsnittet i et videomøde](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Start mødet i f.eks. Zoom. Åbn derefter **Camera Control Studio**.
 
-![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/1.1.0/da/main.png)
+![Kamerahjul og zoomskyder ved siden af positionslisten](../images/screenshots/1.1.1/da/main.png)
 
 ## Generelt
 Klik på **?** for at få hjælp. Hold musen over en knap for at se, hvad den gør. En retning stopper ved den sidste grænse, kameraet kan nå. [Sådan virker automatisk synsfelt](SETUP.md#indstil-synsfeltet)
@@ -48,7 +48,7 @@ Træk i skyderen for at justere zoom løbende.
 
 ### Gendan fuldt billede
 
-Klik på den firkantede knap med rammeikonet over lupknapperne. Kameraet zoomer så langt ud som muligt og vælger det bredeste synsfelt, hvis kameraet understøtter det. Knappen ændrer kamerabilledet. Vinduet beholder sin størrelse.
+Klik på den firkantede knap med rammeikonet under Zoom ud. Kameraet zoomer så langt ud som muligt og vælger det bredeste synsfelt, hvis kameraet understøtter det. Knappen ændrer kamerabilledet. Vinduet beholder sin størrelse.
 
 ### Afbryd panorering
 Du kan afbryde en startet panorering ved at trykke på ESC.
@@ -85,6 +85,6 @@ Se [Opsætning](SETUP.md) for kamera retning, permanente positioner, billedindst
 
 Luk dialogen, og prøv igen, hvis en uventet fejl stopper en handling. Hvis dialogen siger, at programmet lukker, skal du åbne det igen.
 
-![Fejldialog med knapper til at rapportere fejlen, finde logfilen og lukke](../images/screenshots/1.1.0/da/error-dialog.png)
+![Fejldialog med knapper til at rapportere fejlen, finde logfilen og lukke](../images/screenshots/1.1.1/da/error-dialog.png)
 
 **Vis logfil** markerer diagnoseloggen i Stifinder, når den er tilgængelig. **Rapportér på GitHub** tilbyder at gemme en support-ZIP og åbner derefter fejlskabelonen på GitHub. ZIP-filen kan indeholde et skærmbillede af dialogen, logfiler, profil- og vinduesindstillinger samt en systemrapport. Gennemgå filen, og vedhæft den selv til kladden.

@@ -1,6 +1,6 @@
 # 代码签名政策
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 SignPath 基金会为符合条件的开源项目提供免费签名。需要接受。该证书标识SignPath基金会为发布者；该服务将经过验证的版本链接到源存储库。该项目已申请SignPath基金会签约。该申请正在等待处理，GitHub 下载仍未签名。
 

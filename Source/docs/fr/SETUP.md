@@ -2,13 +2,13 @@
 
 # Configurer l'application
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 [Dépannage](TROUBLESHOOTING.md)
 
 Cliquez sur la roue dentée en bas pour ouvrir les paramètres. Les paramètres s’ouvrent dans une fenêtre séparée. Vous pouvez continuer à utiliser la fenêtre principale.
 
-![Fenêtre principale à côté de la fenêtre des paramètres](../images/screenshots/1.1.0/fr/main-settings.png)
+![Fenêtre principale à côté de la fenêtre des paramètres](../images/screenshots/1.1.1/fr/main-settings.png)
 
 ## Installez et vérifiez le téléchargement
 
@@ -126,7 +126,7 @@ Exemple sur une Brio à 65° au zoom minimal. Appuyer sur − peut passer à 78�
 
 ### Contact
 
-![Contact](../images/screenshots/1.1.0/fr/issues.png)
+![Contact](../images/screenshots/1.1.1/fr/issues.png)
 
 - **Signaler un problème**. Ouvrez le modèle de rapport de bug sur GitHub. Si une version plus récente existe, l’application propose de l’ouvrir d’abord. Si vous continuez, elle propose de créer un ZIP avant d’ouvrir le brouillon.
 - **Proposer une fonctionnalité**. Ouvrez le modèle de suggestion. Essayez d’abord une version plus récente si elle existe. La fonction y est peut-être déjà.
@@ -156,6 +156,6 @@ Fermez l’application et copiez `%LOCALAPPDATA%\CamPressets` pour faire une sau
 
 Si une erreur inattendue bloque une action, fermez la boîte de dialogue et réessayez. Si elle annonce la fermeture de l’application, relancez-la.
 
-![Boîte de dialogue d’erreur avec boutons de signalement, d’accès au journal et de fermeture](../images/screenshots/1.1.0/fr/error-dialog.png)
+![Boîte de dialogue d’erreur avec boutons de signalement, d’accès au journal et de fermeture](../images/screenshots/1.1.1/fr/error-dialog.png)
 
 **Afficher le journal** sélectionne le journal de diagnostic dans l’Explorateur de fichiers s’il est disponible. **Signaler sur GitHub** propose d’enregistrer un ZIP de support, puis ouvre le modèle de rapport de bogue sur GitHub. Le ZIP peut contenir une capture de la boîte de dialogue, les journaux, les réglages du profil et de la fenêtre et un rapport système. Vérifiez le ZIP, puis joignez-le au brouillon.

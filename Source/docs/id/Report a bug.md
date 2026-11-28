@@ -1,6 +1,6 @@
 # Laporkan masalah
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 1. Klik roda gigi di bagian bawah untuk membuka Pengaturan. Pilih **Kontak dan Tentang → Kontak → Laporkan masalah**.
 2. Jika ada versi yang lebih baru, pilih **Ya** untuk membuka halaman unduh. Instal versi itu dan periksa apakah masalah masih dapat diulangi. Pilih **Tidak** untuk melanjutkan ke draf GitHub.
@@ -8,7 +8,7 @@
 
 Penampil panduan juga menyediakan tombol GitHub yang sama.
 
-![Tab kontak dengan tombol GitHub dan ZIP dukungan](../images/screenshots/1.1.0/id/issues.png)
+![Tab kontak dengan tombol GitHub dan ZIP dukungan](../images/screenshots/1.1.1/id/issues.png)
 
 ## Tambahkan rincian dan lampirkan ZIP
 

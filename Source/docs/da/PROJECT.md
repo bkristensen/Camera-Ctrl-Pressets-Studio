@@ -1,6 +1,6 @@
 # Projektbeskrivelse
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 Camera Control Studio gemmer og genkalder kamerabilleder på Windows. Brug den i et studie, et klasseværelse eller et livemøde. Din optagelsesapp håndterer videoen.
 

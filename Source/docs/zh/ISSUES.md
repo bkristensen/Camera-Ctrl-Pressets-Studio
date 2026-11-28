@@ -1,6 +1,6 @@
 # 报告或关注问题
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 [故障排除](TROUBLESHOOTING.md)
 

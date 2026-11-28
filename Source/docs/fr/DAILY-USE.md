@@ -2,7 +2,7 @@
 
 # Utilisation quotidienne
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio montre le bouton central utilisé comme joystick et le changement de cadrage avec les positions enregistrées pendant une visioconférence](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Démarrez votre réunion en streaming dans une application telle que Zoom. Ensuite, ouvrez **Camera Control Studio**.
 
-![Molette de direction et curseur de zoom à côté de la liste des préréglages](../images/screenshots/1.1.0/fr/main.png)
+![Molette de direction et curseur de zoom à côté de la liste des préréglages](../images/screenshots/1.1.1/fr/main.png)
 
 ## Général
 
@@ -51,7 +51,7 @@ Faites glisser le curseur pour ajuster le zoom à mesure que vous le déplacez.
 
 ### Restaurer le plein cadre
 
-Cliquez sur le bouton carré avec l'icône en forme de cadre au-dessus des boutons de loupe. La caméra effectue un zoom arrière aussi loin que possible et sélectionne son champ de vision le plus large si elle prend en charge ce paramètre. Cela modifie l'image de la caméra. La fenêtre de l'application conserve sa taille.
+Cliquez sur le bouton carré avec l'icône en forme de cadre sous le bouton de zoom arrière. La caméra effectue un zoom arrière aussi loin que possible et sélectionne son champ de vision le plus large si elle prend en charge ce paramètre. Cela modifie l'image de la caméra. La fenêtre de l'application conserve sa taille.
 
 ### Arrêter le panoramique
 
@@ -91,6 +91,6 @@ Voir [Setup](SETUP.md) pour la direction de la caméra, les préréglages perman
 
 Si une erreur inattendue bloque une action, fermez la boîte de dialogue et réessayez. Si elle annonce la fermeture de l’application, relancez-la.
 
-![Boîte de dialogue d’erreur avec boutons de signalement, d’accès au journal et de fermeture](../images/screenshots/1.1.0/fr/error-dialog.png)
+![Boîte de dialogue d’erreur avec boutons de signalement, d’accès au journal et de fermeture](../images/screenshots/1.1.1/fr/error-dialog.png)
 
 **Afficher le journal** sélectionne le journal de diagnostic dans l’Explorateur de fichiers s’il est disponible. **Signaler sur GitHub** propose d’enregistrer un ZIP de support, puis ouvre le modèle de rapport de bogue sur GitHub. Le ZIP peut contenir une capture de la boîte de dialogue, les journaux, les réglages du profil et de la fenêtre et un rapport système. Vérifiez le ZIP, puis joignez-le au brouillon.

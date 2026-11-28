@@ -1,6 +1,6 @@
 # Política de firma de código
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 La Fundación SignPath ofrece firma gratuita para proyectos de código abierto elegibles. Se requiere aceptación. El certificado identifica a la Fundación SignPath como editor; el servicio vincula las compilaciones verificadas al repositorio de origen. El proyecto ha solicitado la firma de la Fundación SignPath. La solicitud está pendiente y las descargas de GitHub permanecen sin firmar.
 

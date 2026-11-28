@@ -1,6 +1,6 @@
 # Bangun dan rilis Camera Control Studio
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 Jalankan perintah dari direktori yang berisi `Camera-Control-Pressets-Studio.sln`. Gunakan Windows dan PowerShell untuk penginstal dan pengujian Windows.
 

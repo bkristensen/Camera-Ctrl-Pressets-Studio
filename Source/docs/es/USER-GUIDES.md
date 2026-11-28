@@ -1,6 +1,6 @@
 # Camera Control Studio guías de usuario
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 El instalador y portátil ZIP incluyen las guías. Haga clic en **?** para abrir las guías locales en el idioma de su perfil. Cambie **Idioma de la guía** para leer una traducción diferente. Elija **Usar guías en línea** para leer la guía de la última versión de GitHub. Si ese comunicado no tiene traducción, el espectador intenta en inglés. Si la guía en línea no está disponible, muestra la copia local cuando esté disponible. Primero abra Configuración para ir directamente a la configuración. Haga clic en **Imprimir** para imprimir la guía actual con su título, fecha y hora de impresión, versión instalada, dirección del proyecto y números de página.
 

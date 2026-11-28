@@ -1,6 +1,6 @@
 # Validation pour 0.7.0-beta.3
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 La version Windows Release utilise des dépendances verrouillées. Parité de traduction et tests automatisés réussis. Les tests couvrent le mouvement, les préréglages, la langue du profil, la persistance, la journalisation et le HRESULT de caméra non prête signalé après la mise en veille prolongée.
 

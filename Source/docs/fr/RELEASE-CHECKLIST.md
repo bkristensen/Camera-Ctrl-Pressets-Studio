@@ -1,6 +1,6 @@
 # Liste de contrôle de sortie
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 Utilisez le guide de construction et de publication [](BUILD-AND-RELEASE.md) pour les commandes et les chemins de sortie.
 

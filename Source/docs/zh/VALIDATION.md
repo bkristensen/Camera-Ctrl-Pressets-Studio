@@ -1,6 +1,6 @@
 # 0.7.0-beta.3 的验证
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 Windows 发行版本使用锁定的依赖项。翻译奇偶校验和自动化测试均已通过。测试涵盖运动、预设、配置文件语言、持久性、日志记录以及休眠后报告的相机未就绪 HRESULT。
 

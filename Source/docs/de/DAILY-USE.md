@@ -2,7 +2,7 @@
 
 # Tägliche Nutzung
 
-*Geschrieben für Camera Control Studio 1.1.0.*
+*Geschrieben für Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio zeigt die Kamerataste als Joystick und wie gespeicherte Positionen den Bildausschnitt in einer Videokonferenz wechseln](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Starten Sie zuerst Ihr Streaming-Meeting, zum Beispiel in Zoom. Öffnen Sie anschließend **Camera Control Studio**.
 
-![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/1.1.0/de/main.png)
+![Kamerarad und Zoomregler neben der Positionsliste](../images/screenshots/1.1.1/de/main.png)
 
 ## Allgemeines
 
@@ -51,7 +51,7 @@ Der Zoom ändert sich, während Sie den Schieberegler ziehen.
 
 ### Vollbild wiederherstellen
 
-Klicken Sie auf die quadratische Taste mit dem Rahmensymbol über den Lupentasten. Die Kamera zoomt so weit wie möglich heraus und wählt ihr weitestes Sichtfeld, sofern sie diese Einstellung unterstützt. So ändert sich der Bildausschnitt. Die Fenstergröße bleibt gleich.
+Klicken Sie auf die quadratische Taste mit dem Rahmensymbol unter der Taste zum Herauszoomen. Die Kamera zoomt so weit wie möglich heraus und wählt ihr weitestes Sichtfeld, sofern sie diese Einstellung unterstützt. So ändert sich der Bildausschnitt. Die Fenstergröße bleibt gleich.
 
 ### Schwenken abbrechen
 
@@ -91,6 +91,6 @@ Siehe [Einrichtung](SETUP.md) für Kamerarichtung, feste Positionen, Bildeinstel
 
 Wenn ein unerwarteter Fehler einen Vorgang stoppt, schließe den Dialog und versuche es erneut. Wenn der Dialog das Ende der App ankündigt, starte sie neu.
 
-![Fehlerdialog mit Schaltflächen zum Melden, Anzeigen des Protokolls und Schließen](../images/screenshots/1.1.0/de/error-dialog.png)
+![Fehlerdialog mit Schaltflächen zum Melden, Anzeigen des Protokolls und Schließen](../images/screenshots/1.1.1/de/error-dialog.png)
 
 **Protokolldatei anzeigen** markiert das Diagnoseprotokoll im Datei-Explorer, sofern es vorhanden ist. **Auf GitHub melden** bietet an, eine Support-ZIP zu speichern, und öffnet dann die Fehlervorlage auf GitHub. Die ZIP-Datei kann ein Bildschirmfoto des Dialogs, Protokolle, Profil- und Fenstereinstellungen sowie einen Systembericht enthalten. Prüfe die Datei und hänge sie selbst an den Entwurf an.

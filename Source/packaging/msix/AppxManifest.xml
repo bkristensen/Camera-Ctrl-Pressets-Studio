@@ -5,7 +5,7 @@
  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
  IgnorableNamespaces="uap uap10 rescap">
   <!-- Replaced by build-msix.ps1 using your Partner Center product identity. -->
-  <Identity Name="REPLACE.Identity.Name" Publisher="CN=REPLACE" Version="1.1.0.0" ProcessorArchitecture="x64" />
+  <Identity Name="REPLACE.Identity.Name" Publisher="CN=REPLACE" Version="1.1.1.0" ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>Camera Control Studio</DisplayName>
     <PublisherDisplayName>REPLACE PUBLISHER</PublisherDisplayName>

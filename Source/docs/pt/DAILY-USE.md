@@ -2,7 +2,7 @@
 
 # Uso diário
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio mostra o botão central como joystick e como as posições salvas mudam o enquadramento em uma videochamada](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Inicie sua reunião de streaming em um aplicativo como o Zoom. Em seguida, abra **Camera Control Studio**.
 
-![Roda de direção e controle deslizante de zoom ao lado da lista predefinida](../images/screenshots/1.1.0/pt/main.png)
+![Roda de direção e controle deslizante de zoom ao lado da lista predefinida](../images/screenshots/1.1.1/pt/main.png)
 
 ## Geral
 
@@ -51,7 +51,7 @@ Arraste o controle deslizante para ajustar o zoom conforme você o move.
 
 ### Restaurar quadro completo
 
-Clique no botão quadrado com o ícone de moldura acima dos botões da lupa. A câmera diminui o zoom o máximo que pode e seleciona seu campo de visão mais amplo, se suportar essa configuração. Isso altera a imagem da câmera. A janela do aplicativo mantém seu tamanho.
+Clique no botão quadrado com o ícone de moldura abaixo do botão de diminuir o zoom. A câmera diminui o zoom o máximo que pode e seleciona seu campo de visão mais amplo, se suportar essa configuração. Isso altera a imagem da câmera. A janela do aplicativo mantém seu tamanho.
 
 ### Pare de panoramizar
 
@@ -91,6 +91,6 @@ Consulte [Setup](SETUP.md) para direção da câmera, predefinições permanente
 
 Se um erro inesperado interromper uma ação, feche a caixa e tente de novo. Se a mensagem indicar que o aplicativo será fechado, abra-o novamente.
 
-![Caixa de diálogo de erro com botões para relatar o erro, localizar o log e fechar](../images/screenshots/1.1.0/pt/error-dialog.png)
+![Caixa de diálogo de erro com botões para relatar o erro, localizar o log e fechar](../images/screenshots/1.1.1/pt/error-dialog.png)
 
 **Mostrar arquivo de log** seleciona o registro de diagnóstico no Explorador de Arquivos, quando disponível. **Relatar no GitHub** oferece a opção de salvar um ZIP de suporte e depois abre o modelo de relatório de erro no GitHub. O ZIP pode incluir uma captura da caixa de diálogo, logs, configurações de perfil e janela e um relatório do sistema. Revise o ZIP e anexe-o ao rascunho.

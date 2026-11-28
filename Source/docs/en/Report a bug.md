@@ -1,6 +1,6 @@
 # Report a bug
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 1. Click the gear at the bottom to open Settings. Choose **Contact & About → Contact → Report an issue**.
 2. If the app finds a newer release, choose **Yes** to open its download page. Install it and try to reproduce the bug. Choose **No** to continue to the GitHub draft.
@@ -8,7 +8,7 @@
 
 The same GitHub buttons are available in GuideViewer.
 
-![Contact tab with Report an issue and Save support ZIP](../images/screenshots/1.1.0/en/issues.png)
+![Contact tab with Report an issue and Save support ZIP](../images/screenshots/1.1.1/en/issues.png)
 
 ## Add details and attach the ZIP
 

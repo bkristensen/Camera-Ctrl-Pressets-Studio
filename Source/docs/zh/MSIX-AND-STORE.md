@@ -1,6 +1,6 @@
 # MSIX及商店分布
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 使用 `scripts/build-msix.ps1` 和清单模板构建 MSIX 包。 Microsoft 会先对程序包进行审核，然后再将其显示在应用商店中。可移植可执行文件未签名。
 

@@ -1,6 +1,6 @@
 # Solución de problemas
 
-*Escrita para Camera Control Studio 1.1.0.*
+*Escrita para Camera Control Studio 1.1.1.*
 
 ## Índice
 

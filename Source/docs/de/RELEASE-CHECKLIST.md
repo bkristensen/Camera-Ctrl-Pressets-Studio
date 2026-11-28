@@ -1,6 +1,6 @@
 # Release-Checkliste
 
-*Geschrieben für Camera Control Studio 1.1.0.*
+*Geschrieben für Camera Control Studio 1.1.1.*
 
 Verwenden Sie für Befehle und Ausgabepfade den Build- und Release-Leitfaden [](BUILD-AND-RELEASE.md).
 

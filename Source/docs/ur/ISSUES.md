@@ -1,6 +1,6 @@
 # کسی مسئلے کی اطلاع دیں یا اس کی پیروی کریں۔
 
-* Camera Control Studio 1.1.0.* کے لیے لکھا گیا
+* Camera Control Studio 1.1.1.* کے لیے لکھا گیا
 
 [Troublehooting](TROUBLESHOOTING.md)
 

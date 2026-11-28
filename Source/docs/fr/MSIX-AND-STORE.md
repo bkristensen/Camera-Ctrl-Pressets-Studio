@@ -1,6 +1,6 @@
 # MSIX et distribution en magasin
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 Utilisez `scripts/build-msix.ps1` et le modèle de manifeste pour créer un package MSIX. Microsoft examine le package avant qu'il puisse apparaître dans le Store. L'exécutable portable n'est pas signé.
 

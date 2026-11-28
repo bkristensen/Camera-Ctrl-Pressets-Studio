@@ -2,13 +2,13 @@
 
 # Set up the application
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 [Troubleshooting](TROUBLESHOOTING.md)
 
 Click the gear at the bottom to open Settings. Settings opens in a separate window. You can still use the main window.
 
-![Main window beside the separate Settings window](../images/screenshots/1.1.0/en/main-settings.png)
+![Main window beside the separate Settings window](../images/screenshots/1.1.1/en/main-settings.png)
 
 ## Install and verify the download
 
@@ -69,7 +69,7 @@ Select a preset to enable Edit, Replace, Delete and the applicable arrows. Add a
 
 The movement settings can be edited before the camera connects. The driver sets the step size, which axes move, and where they stop.
 
-![Panning](../images/screenshots/1.1.0/en/settings.png)
+![Panning](../images/screenshots/1.1.1/en/settings.png)
 
 ### Set zoom steps
 
@@ -130,7 +130,7 @@ For example, on a Brio at 65° and minimum zoom, press Zoom out to try 78°. Pre
 
 ### Contact
 
-![Contact](../images/screenshots/1.1.0/en/issues.png)
+![Contact](../images/screenshots/1.1.1/en/issues.png)
 
 - **Report an issue**. Open GitHub's bug template. If a newer release is available, the app offers to open it first. If you continue with the report, the app offers a support ZIP before opening the draft.
 - **Request a new feature**. Open GitHub's feature template. If a newer release is available, try it first to see whether it already has the feature.
@@ -160,6 +160,6 @@ To back up profiles, close the app and copy `%LOCALAPPDATA%\CamPressets`. Tempor
 
 Close the dialog and try again if an unexpected error stops an action. If the dialog says the app will close, open it again.
 
-![Error dialog with buttons to report the issue, find the log and close](../images/screenshots/1.1.0/en/error-dialog.png)
+![Error dialog with buttons to report the issue, find the log and close](../images/screenshots/1.1.1/en/error-dialog.png)
 
 **Show log file** selects the diagnostic log in File Explorer if a log is available. **Report on GitHub** offers to save a support ZIP, then opens GitHub’s bug template. The ZIP can include a screenshot of the dialog, logs, profile and window settings, and a system report. Review it and attach it to the draft yourself.

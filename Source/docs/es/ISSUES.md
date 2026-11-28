@@ -1,6 +1,6 @@
 # Informar o seguir un problema
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 [Solución de problemas](TROUBLESHOOTING.md)
 

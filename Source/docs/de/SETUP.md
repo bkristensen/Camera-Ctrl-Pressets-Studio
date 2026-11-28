@@ -2,13 +2,13 @@
 
 # Anwendung einrichten
 
-*Geschrieben für Camera Control Studio 1.1.0.*
+*Geschrieben für Camera Control Studio 1.1.1.*
 
 [Fehlerbehebung](TROUBLESHOOTING.md)
 
 Klicken Sie unten auf das Zahnrad, um die Einstellungen zu öffnen. Die Einstellungen öffnen sich in einem eigenen Fenster. Sie können das Hauptfenster weiter nutzen.
 
-![Hauptfenster neben dem separaten Einstellungsfenster](../images/screenshots/1.1.0/de/main-settings.png)
+![Hauptfenster neben dem separaten Einstellungsfenster](../images/screenshots/1.1.1/de/main-settings.png)
 
 ## Installation und Download prüfen
 
@@ -69,7 +69,7 @@ Wählen Sie zuerst eine Position für Bearbeiten, Ersetzen, Löschen oder Versch
 
 Sie können die Werte vor dem Verbinden ändern. Der Treiber bestimmt die Schrittgröße, die verfügbaren Achsen und ihre Grenzen.
 
-![Schwenken](../images/screenshots/1.1.0/de/settings.png)
+![Schwenken](../images/screenshots/1.1.1/de/settings.png)
 
 ### Zoomschritte einstellen
 
@@ -128,7 +128,7 @@ Bei einer Brio mit 65° und kleinstem Zoom kann ein Druck auf Zoom − zu 78° w
 
 ### Kontakt
 
-![Kontakt](../images/screenshots/1.1.0/de/issues.png)
+![Kontakt](../images/screenshots/1.1.1/de/issues.png)
 
 - **Fehler melden**. Öffnen Sie die Fehlervorlage auf GitHub. Bei einer neueren Version bietet die App zuerst den Download an. Wenn Sie fortfahren, bietet sie vor dem Entwurf eine Support-ZIP an.
 - **Neue Funktion vorschlagen**. Öffnen Sie die Vorlage für Funktionswünsche. Prüfen Sie eine neuere Version zuerst, falls sie die Funktion schon enthält.
@@ -158,6 +158,6 @@ Schließen Sie die App und kopieren Sie `%LOCALAPPDATA%\CamPressets` für eine S
 
 Wenn ein unerwarteter Fehler einen Vorgang stoppt, schließe den Dialog und versuche es erneut. Wenn der Dialog das Ende der App ankündigt, starte sie neu.
 
-![Fehlerdialog mit Schaltflächen zum Melden, Anzeigen des Protokolls und Schließen](../images/screenshots/1.1.0/de/error-dialog.png)
+![Fehlerdialog mit Schaltflächen zum Melden, Anzeigen des Protokolls und Schließen](../images/screenshots/1.1.1/de/error-dialog.png)
 
 **Protokolldatei anzeigen** markiert das Diagnoseprotokoll im Datei-Explorer, sofern es vorhanden ist. **Auf GitHub melden** bietet an, eine Support-ZIP zu speichern, und öffnet dann die Fehlervorlage auf GitHub. Die ZIP-Datei kann ein Bildschirmfoto des Dialogs, Protokolle, Profil- und Fenstereinstellungen sowie einen Systembericht enthalten. Prüfe die Datei und hänge sie selbst an den Entwurf an.

@@ -1,6 +1,6 @@
 # Panduan pengguna Camera Control Studio
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 Penginstal dan ZIP portabel menyertakan panduannya. Klik **?** untuk membuka panduan lokal dalam bahasa profil Anda. Ubah **Bahasa panduan** untuk membaca terjemahan lain. Pilih **Gunakan panduan daring** untuk membaca panduan dari rilis terbaru GitHub. Jika rilis tersebut tidak memiliki terjemahan, pemirsa akan mencoba bahasa Inggris. Jika panduan online tidak tersedia, panduan lokal akan ditampilkan bila tersedia. Buka Pengaturan terlebih dahulu untuk langsung ke pengaturan. Klik **Cetak** untuk mencetak panduan terkini beserta judulnya, tanggal dan waktu pencetakan, versi terinstal, alamat proyek, dan nomor halaman.
 

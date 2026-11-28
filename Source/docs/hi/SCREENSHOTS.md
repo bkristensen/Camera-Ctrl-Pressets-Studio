@@ -1,34 +1,36 @@
 # एप्लिकेशन स्क्रीनशॉट
 
-ये छवियां मानक प्रोफ़ाइल, एक डेमो कैमरा और नमूना प्रीसेट के साथ Camera Control Studio 1.0.1 दिखाती हैं। आपका कैमरा ड्राइवर तय करता है कि वीडियो में कौन से नियंत्रण दिखाई देंगे। तालिका अंग्रेजी स्क्रीन से लिंक करती है। [User गाइड](USER-GUIDES.md) अपनी भाषा में स्क्रीनशॉट का उपयोग करते हैं।
+*Camera Control Studio 1.1.1*
+
+स्क्रीनशॉट में मानक प्रोफ़ाइल, एक डेमो कैमरा और कुछ उदाहरण पोज़िशन हैं। उपलब्ध वीडियो नियंत्रण कैमरा ड्राइवर पर निर्भर करते हैं। सेटअप और रोज़ाना इस्तेमाल के लिए [उपयोगकर्ता गाइड](USER-GUIDES.md) देखें।
 
 | देखें | यह क्या दिखाता है |
 | --- | --- |
-| [मुख्य विंडो](../images/screenshots/1.1.0/hi/main.png) | दिशा चक्र, कैमरा चयनकर्ता, ज़ूम, प्रीसेट और सेटिंग्स बंद होने के साथ स्थिति |
-| [मुख्य विंडो सेटिंग्स के साथ खुली](../images/screenshots/1.1.0/hi/main-settings.png) | कैमरा नियंत्रण और प्रीसेट सूची के साथ सेटिंग फलक |
-| [सेटिंग्स → पैनिंग](../images/screenshots/1.1.0/hi/settings.png) | पैन और झुकाव के चरण, दिशा परिवर्तन और कैमरा बटन विकल्प |
-| [सेटिंग्स → Zoom](../images/screenshots/1.1.0/hi/zoom.png) | ज़ूम बटन के लिए चरण आकार |
-| [सेटिंग्स → एप्लिकेशन](../images/screenshots/1.1.0/hi/application.png) | स्ट्रीमिंग पुष्टिकरण, हमेशा शीर्ष पर व्यवहार और प्रोफ़ाइल भाषा |
-| नियंत्रण लोड करने से पहले [वीडियो](../images/screenshots/1.1.0/hi/video.png) | कैमरा ड्राइवर से उपलब्ध नियंत्रणों को कहां लोड करें |
-| [वीडियो → फोकस और एक्सपोज़र](../images/screenshots/1.1.0/hi/image.png) | फोकस, एक्सपोज़र और लाभ |
-| [वीडियो → Color](../images/screenshots/1.1.0/hi/video-colour.png) | रंग, गामा, संतृप्ति और श्वेत संतुलन |
-| [वीडियो → प्रकाश और विवरण](../images/screenshots/1.1.0/hi/video-light-detail.png) | कुशाग्रता, बैकलाइट मुआवजा, चमक और कंट्रास्ट |
-| [वीडियो → दृश्य क्षेत्र](../images/screenshots/1.1.0/hi/field-of-view.png) | स्टार्टअप कोण और जब ऐप दृश्य का क्षेत्र बदल सकता है |
-| [Presets → स्थायी प्रीसेट](../images/screenshots/1.1.0/hi/presets.png) | स्थायी प्रीसेट और संपादन क्रियाएँ |
-| [प्रीसेट → ट्रांज़िशन](../images/screenshots/1.1.0/hi/transitions.png) | सहेजे गए पदों के बीच चाल के लिए निश्चित अवधि या गति |
-| [प्रोफाइल](../images/screenshots/1.1.0/hi/profiles.png) | प्रोफ़ाइल सूची और प्रोफ़ाइल बनाने, कॉपी करने या नाम बदलने की क्रियाएं |
-| [संपर्क और परिचय → संपर्क](../images/screenshots/1.1.0/hi/issues.png) | डायग्नोस्टिक लॉग और GitHub रिपोर्टिंग |
-| [संपर्क और परिचय → परिचय](../images/screenshots/1.1.0/hi/about.png) | संस्करण, डेवलपर क्रेडिट और प्रोजेक्ट लिंक |
+| [मुख्य विंडो](../images/screenshots/1.1.1/hi/main.png) | दिशा चक्र, कैमरा चयनकर्ता, ज़ूम, प्रीसेट और सेटिंग्स बंद होने के साथ स्थिति |
+| [मुख्य विंडो सेटिंग्स के साथ खुली](../images/screenshots/1.1.1/hi/main-settings.png) | कैमरा नियंत्रण और प्रीसेट सूची के साथ सेटिंग फलक |
+| [सेटिंग्स → पैनिंग](../images/screenshots/1.1.1/hi/settings.png) | पैन और झुकाव के चरण, दिशा परिवर्तन और कैमरा बटन विकल्प |
+| [सेटिंग्स → Zoom](../images/screenshots/1.1.1/hi/zoom.png) | ज़ूम बटन के लिए चरण आकार |
+| [सेटिंग्स → एप्लिकेशन](../images/screenshots/1.1.1/hi/application.png) | स्ट्रीमिंग पुष्टिकरण, हमेशा शीर्ष पर व्यवहार और प्रोफ़ाइल भाषा |
+| नियंत्रण लोड करने से पहले [वीडियो](../images/screenshots/1.1.1/hi/video.png) | कैमरा ड्राइवर से उपलब्ध नियंत्रणों को कहां लोड करें |
+| [वीडियो → फोकस और एक्सपोज़र](../images/screenshots/1.1.1/hi/image.png) | फोकस, एक्सपोज़र और लाभ |
+| [वीडियो → Color](../images/screenshots/1.1.1/hi/video-colour.png) | रंग, गामा, संतृप्ति और श्वेत संतुलन |
+| [वीडियो → प्रकाश और विवरण](../images/screenshots/1.1.1/hi/video-light-detail.png) | कुशाग्रता, बैकलाइट मुआवजा, चमक और कंट्रास्ट |
+| [वीडियो → दृश्य क्षेत्र](../images/screenshots/1.1.1/hi/field-of-view.png) | स्टार्टअप कोण और जब ऐप दृश्य का क्षेत्र बदल सकता है |
+| [Presets → स्थायी प्रीसेट](../images/screenshots/1.1.1/hi/presets.png) | स्थायी प्रीसेट और संपादन क्रियाएँ |
+| [प्रीसेट → ट्रांज़िशन](../images/screenshots/1.1.1/hi/transitions.png) | सहेजे गए पदों के बीच चाल के लिए निश्चित अवधि या गति |
+| [प्रोफाइल](../images/screenshots/1.1.1/hi/profiles.png) | प्रोफ़ाइल सूची और प्रोफ़ाइल बनाने, कॉपी करने या नाम बदलने की क्रियाएं |
+| [संपर्क और परिचय → संपर्क](../images/screenshots/1.1.1/hi/issues.png) | डायग्नोस्टिक लॉग और GitHub रिपोर्टिंग |
+| [संपर्क और परिचय → परिचय](../images/screenshots/1.1.1/hi/about.png) | संस्करण, डेवलपर क्रेडिट और प्रोजेक्ट लिंक |
 
 ## अन्य विंडो
 
-- [कैमरा स्रोत चुनें](../images/screenshots/1.1.0/hi/camera-source.png)
-- [प्रोफ़ाइल चुनें](../images/screenshots/1.1.0/hi/profile-picker.png)
-- [नाम और आइकन बदलें](../images/screenshots/1.1.0/hi/preset-editor.png)
-- [नई प्रोफ़ाइल](../images/screenshots/1.1.0/hi/text-entry.png)
-- [लॉग सेटिंग्स](../images/screenshots/1.1.0/hi/log-settings.png)
-- [काम पूरा नहीं हुआ। विवरण के लिए लॉग खोलें।](../images/screenshots/1.1.0/hi/error-dialog.png)
-- [मार्गदर्शिकाएँ खोलें](../images/screenshots/1.1.0/hi/guide-viewer.png)
+- [कैमरा स्रोत चुनें](../images/screenshots/1.1.1/hi/camera-source.png)
+- [प्रोफ़ाइल चुनें](../images/screenshots/1.1.1/hi/profile-picker.png)
+- [नाम और आइकन बदलें](../images/screenshots/1.1.1/hi/preset-editor.png)
+- [नई प्रोफ़ाइल](../images/screenshots/1.1.1/hi/text-entry.png)
+- [लॉग सेटिंग्स](../images/screenshots/1.1.1/hi/log-settings.png)
+- [काम पूरा नहीं हुआ। विवरण के लिए लॉग खोलें।](../images/screenshots/1.1.1/hi/error-dialog.png)
+- [मार्गदर्शिकाएँ खोलें](../images/screenshots/1.1.1/hi/guide-viewer.png)
 
 ## गाइड छवियाँ ताज़ा करें
 

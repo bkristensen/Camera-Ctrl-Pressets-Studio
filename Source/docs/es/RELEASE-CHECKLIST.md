@@ -1,6 +1,6 @@
 # Lista de verificación de liberación
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 Utilice la guía de compilación y lanzamiento [](BUILD-AND-RELEASE.md) para comandos y rutas de salida.
 

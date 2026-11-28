@@ -1,6 +1,6 @@
 # الإبلاغ عن مشكلة أو متابعتها
 
-* مكتوب لـ Camera Control Studio 1.1.0.*
+* مكتوب لـ Camera Control Studio 1.1.1.*
 
 [استكشاف الأخطاء وإصلاحها](TROUBLESHOOTING.md)
 

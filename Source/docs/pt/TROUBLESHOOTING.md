@@ -1,6 +1,6 @@
 # Solução de problemas
 
-*Guia escrito para Camera Control Studio 1.1.0.*
+*Guia escrito para Camera Control Studio 1.1.1.*
 
 ## Sumário
 

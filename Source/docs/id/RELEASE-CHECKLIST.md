@@ -1,6 +1,6 @@
 # Daftar periksa rilis
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 Gunakan [panduan build dan rilis](BUILD-AND-RELEASE.md) untuk perintah dan jalur output.
 

@@ -1,6 +1,6 @@
 # MSIX dan distribusi Toko
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 Gunakan `scripts/build-msix.ps1` dan templat manifes untuk membuat paket MSIX. Microsoft meninjau paket tersebut sebelum dapat muncul di Store. Eksekusi portabel tidak ditandatangani.
 

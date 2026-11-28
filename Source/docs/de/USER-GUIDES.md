@@ -1,6 +1,6 @@
 # Camera Control Studio-Benutzerhandbücher
 
-*Geschrieben für Camera Control Studio 1.1.0.*
+*Geschrieben für Camera Control Studio 1.1.1.*
 
 Das Installationsprogramm und das tragbare ZIP enthalten die Anleitungen. Klicken Sie auf **?**, um die lokalen Leitfäden in der Sprache Ihres Profils zu öffnen. Ändern Sie **Sprache der Anleitung**, um eine andere Übersetzung zu lesen. Wählen Sie **Online-Anleitungen verwenden**, um die Anleitung der neuesten GitHub-Version zu lesen. Wenn diese Veröffentlichung keine Übersetzung hat, versucht der Betrachter es mit Englisch. Wenn der Online-Leitfaden nicht verfügbar ist, wird die lokale Kopie angezeigt, sofern verfügbar. Öffnen Sie zunächst die Einstellungen, um direkt zur Einrichtung zu gelangen. Klicken Sie auf **Drucken**, um das aktuelle Handbuch mit Titel, Druckdatum und -uhrzeit, installierter Version, Projektadresse und Seitenzahlen zu drucken.
 

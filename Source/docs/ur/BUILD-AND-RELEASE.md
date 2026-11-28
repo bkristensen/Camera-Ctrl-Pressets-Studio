@@ -1,6 +1,6 @@
 # Camera Control Studio بنائیں اور جاری کریں۔
 
-* Camera Control Studio 1.1.0.* کے لیے لکھا گیا
+* Camera Control Studio 1.1.1.* کے لیے لکھا گیا
 
 `Camera-Control-Pressets-Studio.sln` پر مشتمل ڈائریکٹری سے کمانڈز چلائیں۔ انسٹالر اور ونڈوز ٹیسٹنگ کے لیے Windows اور PowerShell استعمال کریں۔
 

@@ -1,6 +1,6 @@
 # Code signing policy
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 SignPath Foundation offers free signing for eligible open-source projects. Acceptance is required. The certificate identifies SignPath Foundation as publisher; the service links verified builds to the source repository. The project has applied for SignPath Foundation signing. The application is pending, and GitHub downloads remain unsigned.
 

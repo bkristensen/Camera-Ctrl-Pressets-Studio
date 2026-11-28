@@ -1,6 +1,6 @@
 # Signaler un problème
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 1. Cliquez sur la roue dentée en bas pour ouvrir les paramètres. Sélectionnez **Contact et à propos → Contact → Signaler un problème**.
 2. Si une version plus récente existe, choisissez **Oui** pour ouvrir sa page de téléchargement. Installez-la et vérifiez si vous pouvez reproduire le problème. Choisissez **Non** pour continuer vers le brouillon GitHub.
@@ -8,7 +8,7 @@
 
 Le lecteur de guides propose les mêmes boutons GitHub.
 
-![Onglet de contact avec les boutons GitHub et ZIP de support](../images/screenshots/1.1.0/fr/issues.png)
+![Onglet de contact avec les boutons GitHub et ZIP de support](../images/screenshots/1.1.1/fr/issues.png)
 
 ## Ajouter des détails et joindre le ZIP
 

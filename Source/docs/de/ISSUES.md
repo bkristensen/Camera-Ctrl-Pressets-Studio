@@ -1,6 +1,6 @@
 # Melden oder verfolgen Sie ein Problem
 
-*Geschrieben für Camera Control Studio 1.1.0.*
+*Geschrieben für Camera Control Studio 1.1.1.*
 
 [Fehlerbehebung](TROUBLESHOOTING.md)
 

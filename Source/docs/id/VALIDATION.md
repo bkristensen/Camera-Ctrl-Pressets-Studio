@@ -1,6 +1,6 @@
 # Validasi untuk 0.7.0-beta.3
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 Versi Rilis Windows menggunakan dependensi terkunci. Paritas terjemahan dan pengujian otomatis berhasil. Pengujian tersebut mencakup gerakan, preset, bahasa profil, persistensi, logging, dan HRESULT kamera yang belum siap dilaporkan setelah hibernasi.
 

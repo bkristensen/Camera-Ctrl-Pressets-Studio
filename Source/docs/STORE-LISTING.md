@@ -1,10 +1,10 @@
 # Microsoft Store listing · Camera Control Studio
 
-*Copy for version 1.1.0.*
+*Copy for version 1.1.1.*
 
 Copy the fields for the matching language into Partner Center. Each keyword line uses tabs to separate entries. Product features go in one at a time.
 
-For the first Store submission, leave **What's new in this version** blank in Partner Center. The 1.1.0 text below records the changes from the previous release. For later submissions, describe changes since the last version published in the Store.
+For the first Store submission, leave **What's new in this version** blank in Partner Center. The 1.1.1 text below records the changes from the previous release. For later submissions, describe changes since the last version published in the Store.
 
 At each release, update the version and **What's new in this version** in all 12 languages. Review the descriptions, features and keywords for changes that matter to customers. Keep one version of the app name across listings.
 
@@ -22,11 +22,7 @@ The app has been tested with a range of webcams, including models similar to the
 
 ### What's new in this version
 
-Auto-panning, zoom, and video options have been reorganized in Settings.
-
-Full Frame restores the widest available view.
-
-The guides have been updated in all 12 languages.
+Added the BK developer logo to Settings → Contact & About → About. Updated the guide banner and refreshed the screenshots in all 12 languages.
 
 ### Product features
 
@@ -72,11 +68,7 @@ Programmet er testet med forskellige webcams i stil med Logitech Brio med mere.
 
 ### What's new in this version
 
-Indstillinger for auto panorering, zoom og video er opdateret så de ligger mere logisk under indstillingerne.
-
-Fuld visning gendanner det bredeste tilgængelige udsnit.
-
-Guiderne er opdateret på alle 12 sprog.
+BK-logoet vises nu under Indstillinger → Kontakt & Om → Om. Guiderne har fået et nyt banner og nye skærmbilleder på alle 12 sprog.
 
 ### Product features
 
@@ -122,11 +114,7 @@ Die App wurde mit verschiedenen Webcams getestet, darunter Modelle, die der Logi
 
 ### What's new in this version
 
-Die Optionen für automatisches Schwenken, Zoom und Video wurden in den Einstellungen neu angeordnet.
-
-Die Vollansicht stellt den weitesten verfügbaren Bildausschnitt wieder her.
-
-Die Anleitungen wurden in allen 12 Sprachen aktualisiert.
+Das BK-Logo steht jetzt unter Einstellungen → Kontakt & Info → Info. Die Anleitungen haben ein neues Banner und neue Screenshots in allen 12 Sprachen.
 
 ### Product features
 
@@ -172,11 +160,7 @@ La aplicación se ha probado con varias cámaras web, incluidos modelos similare
 
 ### What's new in this version
 
-Las opciones de giro automático, zoom y vídeo se han reorganizado en la configuración.
-
-La vista completa recupera el encuadre más amplio disponible.
-
-Las guías se han actualizado en los 12 idiomas.
+El logotipo BK aparece en Configuración → Contacto y acerca de → Acerca de. Las guías tienen una nueva imagen de portada y capturas actualizadas en los 12 idiomas.
 
 ### Product features
 
@@ -222,11 +206,7 @@ L’application a été testée avec plusieurs webcams, dont des modèles simila
 
 ### What's new in this version
 
-Les options de panoramique automatique, de zoom et de vidéo ont été réorganisées dans les paramètres.
-
-La vue d’ensemble rétablit le cadrage le plus large disponible.
-
-Les guides ont été mis à jour dans les 12 langues.
+Le logo BK apparaît dans Paramètres → Contact et à propos → À propos. Les guides ont une nouvelle illustration et des captures à jour dans les 12 langues.
 
 ### Product features
 
@@ -272,11 +252,7 @@ O aplicativo foi testado com várias webcams, incluindo modelos semelhantes à L
 
 ### What's new in this version
 
-As opções de movimento automático, zoom e vídeo foram reorganizadas nas configurações.
-
-O enquadramento completo restaura a visão mais ampla disponível.
-
-Os guias foram atualizados nos 12 idiomas.
+O logotipo BK agora aparece na aba Sobre, nas configurações. Os guias têm um novo banner e capturas de tela atualizadas nos 12 idiomas.
 
 ### Product features
 
@@ -322,11 +298,7 @@ Aplikasi ini telah diuji dengan berbagai webcam, termasuk model yang serupa deng
 
 ### What's new in this version
 
-Opsi gerak otomatis, zoom, dan video telah ditata ulang di Pengaturan.
-
-Tampilan penuh mengembalikan bingkai terluas yang dapat ditampilkan kamera.
-
-Panduan telah diperbarui dalam semua 12 bahasa.
+Logo BK kini muncul di tab Tentang dalam Pengaturan. Panduan memiliki banner baru dan tangkapan layar terbaru dalam 12 bahasa.
 
 ### Product features
 
@@ -372,11 +344,7 @@ Brian Kristensen
 
 ### What's new in this version
 
-设置中的自动转动、缩放和视频选项已重新整理。
-
-全景按钮可恢复到当前可用的最广取景。
-
-全部 12 种语言的指南均已更新。
+设置中的“关于”页新增 BK 开发者标志。全部 12 种语言的指南都更新了横幅和截图。
 
 ### Product features
 
@@ -422,11 +390,7 @@ Camera Control Studio को अपने मीटिंग या स्ट्
 
 ### What's new in this version
 
-अपने आप कैमरा घुमाने, ज़ूम और वीडियो के विकल्प सेटिंग्स में नए क्रम में रखे गए हैं।
-
-पूरा दृश्य सबसे चौड़ा उपलब्ध फ़्रेम वापस लाता है।
-
-सभी 12 भाषाओं में गाइड अपडेट किए गए हैं।
+सेटिंग्स में परिचय टैब पर अब डेवलपर का BK लोगो दिखता है। सभी 12 भाषाओं में गाइड का बैनर और स्क्रीनशॉट अपडेट किए गए हैं।
 
 ### Product features
 
@@ -472,11 +436,7 @@ Brian Kristensen
 
 ### What's new in this version
 
-স্বয়ংক্রিয় প্যান, জুম ও ভিডিওর অপশন সেটিংসে নতুন করে সাজানো হয়েছে।
-
-পূর্ণ দৃশ্য সবচেয়ে চওড়া উপলভ্য ফ্রেম ফিরিয়ে আনে।
-
-সব ১২টি ভাষায় গাইড হালনাগাদ করা হয়েছে।
+সেটিংসের পরিচিতি ট্যাবে এখন ডেভেলপারের BK লোগো দেখা যায়। সব ১২টি ভাষার গাইডে নতুন ব্যানার ও স্ক্রিনশট রয়েছে।
 
 ### Product features
 
@@ -522,11 +482,7 @@ Brian Kristensen
 
 ### What's new in this version
 
-أُعيد ترتيب خيارات التحريك التلقائي والتقريب والفيديو في الإعدادات.
-
-يعيد العرض الكامل أوسع لقطة متاحة.
-
-حُدّثت الأدلة بجميع اللغات الـ12.
+يظهر شعار المطوّر BK الآن في علامة «حول» ضمن الإعدادات. حُدّثت صورة الغلاف ولقطات الشاشة في الأدلة بجميع اللغات الـ12.
 
 ### Product features
 
@@ -572,11 +528,7 @@ Camera Control Studio کو اپنی میٹنگ یا نشریات کی ایپ ک�
 
 ### What's new in this version
 
-خودکار پین، زوم اور ویڈیو کے اختیارات کو ترتیبات میں نئے انداز سے ترتیب دیا گیا ہے۔
-
-مکمل منظر سب سے چوڑا دستیاب فریم واپس لاتا ہے۔
-
-تمام 12 زبانوں کی گائیڈز اپ ڈیٹ کر دی گئی ہیں۔
+ترتیبات میں تعارف کے ٹیب پر اب ڈویلپر کا BK لوگو دکھائی دیتا ہے۔ تمام 12 زبانوں کی گائیڈز میں نیا بینر اور نئے اسکرین شاٹس ہیں۔
 
 ### Product features
 

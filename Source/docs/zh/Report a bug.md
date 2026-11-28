@@ -1,6 +1,6 @@
 # 报告问题
 
-*为Camera Control Studio 1.1.0.*编写
+*为Camera Control Studio 1.1.1.*编写
 
 1. 点击底部的齿轮按钮打开设置。 选择 **联系与关于 → 联系 → 报告问题**。
 2. 如果有更新版本，请选**是**打开下载页面。安装后，检查问题能否重现。选择**否**可继续打开 GitHub 草稿。
@@ -8,7 +8,7 @@
 
 指南查看器也提供相同的 GitHub 按钮。
 
-![联系选项卡上的 GitHub 按钮和支持 ZIP 按钮](../images/screenshots/1.1.0/zh/issues.png)
+![联系选项卡上的 GitHub 按钮和支持 ZIP 按钮](../images/screenshots/1.1.1/zh/issues.png)
 
 ## 补充详情并附上 ZIP
 

@@ -1,6 +1,6 @@
 # Troubleshooting
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 ## Contents
 

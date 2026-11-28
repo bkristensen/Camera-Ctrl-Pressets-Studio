@@ -1,6 +1,6 @@
 # Validierung für 0.7.0-beta.3
 
-*Geschrieben für Camera Control Studio 1.1.0.*
+*Geschrieben für Camera Control Studio 1.1.1.*
 
 Der Windows-Release-Build verwendet gesperrte Abhängigkeiten. Übersetzungsparität und die automatisierten Tests bestanden. Die Tests umfassen Bewegung, Voreinstellungen, Profilsprache, Persistenz, Protokollierung und das nach dem Ruhezustand gemeldete HRESULT „Kamera nicht bereit“.
 

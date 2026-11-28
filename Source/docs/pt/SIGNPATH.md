@@ -1,6 +1,6 @@
 # Política de assinatura de código
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 A Fundação SignPath oferece assinatura gratuita para projetos de código aberto elegíveis. A aceitação é necessária. O certificado identifica a Fundação SignPath como editora; os links de serviço compilações verificadas para o repositório de origem. O projeto solicitou assinatura da Fundação SignPath. O aplicativo está pendente e os downloads do GitHub permanecem sem assinatura.
 

@@ -1,3 +1,13 @@
+# 1.1.1
+
+- Added the BK developer logo beside the About tab credits. The layout keeps the guide button visible at the minimum window size and mirrors for right-to-left languages.
+- Added a documentation banner showing the centre camera button as a virtual joystick and how presets change the framing in a video meeting.
+- Refreshed 276 screenshots with demo presets in all 12 languages. Updated the guides and corrected the location of the Full Frame button.
+- Added three Microsoft Store listing icons and maintained the Store copy in all 12 languages.
+- The MSIX build now uses the Store display name from the local manifest. An explicit override is still supported.
+
+The GitHub installer and portable ZIP are unsigned. Use SHA256SUMS.txt to verify the downloads.
+
 # 1.1.0
 
 - Moved settings into a separate window that leaves camera controls available. Each profile remembers both window layouts. Settings opens on the first tab with its subtabs reset.

@@ -1,6 +1,6 @@
 # Fejlfinding
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 ## Indholdsfortegnelse
 

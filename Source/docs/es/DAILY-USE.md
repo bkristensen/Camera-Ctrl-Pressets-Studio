@@ -2,7 +2,7 @@
 
 # Uso diario
 
-*Escrito para Camera Control Studio 1.1.0.*
+*Escrito para Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio muestra el botón central como joystick y cómo las posiciones guardadas cambian el encuadre en una videollamada](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Inicie su reunión de transmisión en una aplicación como Zoom. Luego abra **Camera Control Studio**.
 
-![Rueda direccional y control deslizante de zoom al lado de la lista preestablecida](../images/screenshots/1.1.0/es/main.png)
+![Rueda direccional y control deslizante de zoom al lado de la lista preestablecida](../images/screenshots/1.1.1/es/main.png)
 
 ## generales
 
@@ -51,7 +51,7 @@ Arrastre el control deslizante para ajustar el zoom a medida que lo mueve.
 
 ### Restaurar fotograma completo
 
-Haga clic en el botón cuadrado con el icono de marco encima de los botones de lupa. La cámara se aleja lo más que puede y selecciona su campo de visión más amplio si admite esa configuración. Esto cambia la imagen de la cámara. La ventana de la aplicación mantiene su tamaño.
+Haga clic en el botón cuadrado con el icono de marco debajo del botón para alejar. La cámara se aleja lo más que puede y selecciona su campo de visión más amplio si admite esa configuración. Esto cambia la imagen de la cámara. La ventana de la aplicación mantiene su tamaño.
 
 ### detener la panorámica
 
@@ -91,6 +91,6 @@ Consulte [Setup](SETUP.md) para conocer la dirección de la cámara, ajustes pre
 
 Si un error inesperado detiene una acción, cierra el cuadro y vuelve a intentarlo. Si indica que la aplicación se cerrará, ábrela de nuevo.
 
-![Cuadro de error con botones para informar del fallo, encontrar el registro y cerrar](../images/screenshots/1.1.0/es/error-dialog.png)
+![Cuadro de error con botones para informar del fallo, encontrar el registro y cerrar](../images/screenshots/1.1.1/es/error-dialog.png)
 
 **Mostrar registro** selecciona el registro de diagnóstico en el Explorador de archivos si está disponible. **Informar en GitHub** te ofrece guardar un ZIP de soporte y luego abre la plantilla de errores en GitHub. El ZIP puede incluir una captura del cuadro, registros, ajustes de perfil y ventana, y un informe del sistema. Revisa el ZIP y adjúntalo al borrador.

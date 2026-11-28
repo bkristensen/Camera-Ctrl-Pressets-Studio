@@ -1,6 +1,6 @@
 # Frigiv tjekliste
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 Brug [build and release guide](BUILD-AND-RELEASE.md) til kommandoer og outputstier.
 

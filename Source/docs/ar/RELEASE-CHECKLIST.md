@@ -1,6 +1,6 @@
 # إصدار القائمة المرجعية
 
-* مكتوب لـ Camera Control Studio 1.1.0.*
+* مكتوب لـ Camera Control Studio 1.1.1.*
 
 استخدم دليل البناء والإصدار [](BUILD-AND-RELEASE.md) للأوامر ومسارات الإخراج.
 

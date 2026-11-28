@@ -1,6 +1,6 @@
 # MSIX og butiksdistribution
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 Brug `scripts/build-msix.ps1` og manifestskabelonen til at bygge en MSIX-pakke. Microsoft gennemgår pakken, før den kan vises i butikken. Den bærbare eksekverbare er usigneret.
 

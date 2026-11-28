@@ -1,6 +1,6 @@
 # Release checklist
 
-*Written for Camera Control Studio 1.1.0.*
+*Written for Camera Control Studio 1.1.1.*
 
 Use the [build and release guide](en/BUILD-AND-RELEASE.md) for commands and output paths.
 

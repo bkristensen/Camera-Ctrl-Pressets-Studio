@@ -1,6 +1,6 @@
 # রিলিজ চেকলিস্ট
 
-* Camera Control Studio 1.1.0.* এর জন্য লেখা
+* Camera Control Studio 1.1.1.* এর জন্য লেখা
 
 [build ব্যবহার করুন এবং কমান্ড এবং আউটপুট পাথের জন্য গাইড](BUILD-AND-RELEASE.md) প্রকাশ করুন।
 

@@ -1,6 +1,6 @@
 # چیک لسٹ جاری کریں۔
 
-* Camera Control Studio 1.1.0.* کے لیے لکھا گیا
+* Camera Control Studio 1.1.1.* کے لیے لکھا گیا
 
 کمانڈز اور آؤٹ پٹ پاتھز کے لیے [build استعمال کریں اور گائیڈ ](BUILD-AND-RELEASE.md) جاری کریں۔
 

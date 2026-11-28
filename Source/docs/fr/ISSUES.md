@@ -1,6 +1,6 @@
 # Signaler ou suivre un problème
 
-*Écrit pour Camera Control Studio 1.1.0.*
+*Écrit pour Camera Control Studio 1.1.1.*
 
 [Dépannage](TROUBLESHOOTING.md)
 

@@ -1,6 +1,6 @@
 # Validering for 0.7.0-beta.3
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 Windows Release build bruger låste afhængigheder. Oversættelsesparitet og de automatiserede tests bestået. Testene dækker bevægelse, forudindstillinger, profilsprog, vedholdenhed, logning og det kamera-ikke-klare HRESULT rapporteret efter dvaletilstand.
 

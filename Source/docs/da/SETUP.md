@@ -2,13 +2,13 @@
 
 # Sæt programmet op
 
-*Skrevet til Camera Control Studio 1.1.0.*
+*Skrevet til Camera Control Studio 1.1.1.*
 
 [Fejlfinding](TROUBLESHOOTING.md)
 
 Klik på tandhjulet nederst for at åbne Indstillinger. Indstillinger åbner i et separat vindue. Du kan stadig bruge hovedvinduet.
 
-![Hovedvinduet ved siden af det separate indstillingsvindue](../images/screenshots/1.1.0/da/main-settings.png)
+![Hovedvinduet ved siden af det separate indstillingsvindue](../images/screenshots/1.1.1/da/main-settings.png)
 
 ## Installér og kontrollér downloadet
 
@@ -69,7 +69,7 @@ Vælg en position for at bruge Redigér, Erstat, Slet og de relevante pile. Tilf
 
 Du kan ændre bevægelsesvalg før kameraet tilsluttes. Driveren bestemmer trinnenes størrelse, hvilke retninger kameraet kan flytte sig i, og hvor det stopper.
 
-![Panorering](../images/screenshots/1.1.0/da/settings.png)
+![Panorering](../images/screenshots/1.1.1/da/settings.png)
 
 ### Indstil zoomtrin
 
@@ -128,7 +128,7 @@ På en Brio ved 65° og mindste zoom kan et tryk på Zoom ud skifte til 78°. Tr
 
 ### Kontakt
 
-![Kontakt](../images/screenshots/1.1.0/da/issues.png)
+![Kontakt](../images/screenshots/1.1.1/da/issues.png)
 
 - **Rapportér en fejl**. Åbn GitHubs fejlskabelon. Hvis der findes en nyere version, tilbyder appen at åbne den først. Hvis du fortsætter, tilbyder appen en supportpakke, før kladden åbnes.
 - **Foreslå en ny funktion**. Åbn GitHubs skabelon til funktionsforslag. Hvis der findes en nyere version, så afprøv den først. Funktionen kan allerede være tilføjet.
@@ -158,6 +158,6 @@ Luk appen, og kopiér `%LOCALAPPDATA%\CamPressets` for at tage en sikkerhedskopi
 
 Luk dialogen, og prøv igen, hvis en uventet fejl stopper en handling. Hvis dialogen siger, at programmet lukker, skal du åbne det igen.
 
-![Fejldialog med knapper til at rapportere fejlen, finde logfilen og lukke](../images/screenshots/1.1.0/da/error-dialog.png)
+![Fejldialog med knapper til at rapportere fejlen, finde logfilen og lukke](../images/screenshots/1.1.1/da/error-dialog.png)
 
 **Vis logfil** markerer diagnoseloggen i Stifinder, når den er tilgængelig. **Rapportér på GitHub** tilbyder at gemme en support-ZIP og åbner derefter fejlskabelonen på GitHub. ZIP-filen kan indeholde et skærmbillede af dialogen, logfiler, profil- og vinduesindstillinger samt en systemrapport. Gennemgå filen, og vedhæft den selv til kladden.

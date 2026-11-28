@@ -2,7 +2,7 @@
 
 # Penggunaan sehari-hari
 
-*Ditulis untuk Camera Control Studio 1.1.0.*
+*Ditulis untuk Camera Control Studio 1.1.1.*
 
 ![Camera Control Studio menunjukkan tombol tengah sebagai joystick dan cara posisi tersimpan mengubah bingkai saat rapat video](../images/camera-control-studio-zoom-banner.png)
 
@@ -10,7 +10,7 @@
 
 Mulai rapat streaming Anda di aplikasi seperti Zoom. Kemudian buka **Camera Control Studio**.
 
-![Roda arah dan penggeser zoom di samping daftar preset](../images/screenshots/1.1.0/id/main.png)
+![Roda arah dan penggeser zoom di samping daftar preset](../images/screenshots/1.1.1/id/main.png)
 
 ## Umum
 
@@ -51,7 +51,7 @@ Seret penggeser untuk menyesuaikan zoom saat Anda memindahkannya.
 
 ### Kembalikan bingkai penuh
 
-Klik tombol persegi dengan ikon bingkai di atas tombol kaca pembesar. Kamera memperkecil sejauh mungkin dan memilih bidang pandang terluasnya jika mendukung pengaturan tersebut. Ini mengubah gambar kamera. Jendela aplikasi mempertahankan ukurannya.
+Klik tombol persegi dengan ikon bingkai di bawah tombol perkecil. Kamera memperkecil sejauh mungkin dan memilih bidang pandang terluasnya jika mendukung pengaturan tersebut. Ini mengubah gambar kamera. Jendela aplikasi mempertahankan ukurannya.
 
 ### Berhenti menggeser
 
@@ -91,6 +91,6 @@ Lihat [Setup](SETUP.md) untuk arah kamera, preset permanen, pengaturan gambar, p
 
 Jika kesalahan tak terduga menghentikan tindakan, tutup dialog dan coba lagi. Jika dialog menyatakan aplikasi akan ditutup, buka kembali aplikasi.
 
-![Dialog kesalahan dengan tombol untuk melaporkan masalah, menemukan log, dan menutup dialog](../images/screenshots/1.1.0/id/error-dialog.png)
+![Dialog kesalahan dengan tombol untuk melaporkan masalah, menemukan log, dan menutup dialog](../images/screenshots/1.1.1/id/error-dialog.png)
 
 **Tampilkan file log** memilih log diagnostik di File Explorer jika tersedia. **Laporkan di GitHub** menawarkan untuk menyimpan ZIP dukungan, lalu membuka templat laporan bug di GitHub. ZIP dapat berisi tangkapan layar dialog, log, pengaturan profil dan jendela, serta laporan sistem. Periksa ZIP lalu lampirkan sendiri ke draf.

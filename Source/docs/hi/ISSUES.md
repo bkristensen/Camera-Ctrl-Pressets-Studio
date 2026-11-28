@@ -1,6 +1,6 @@
 # किसी समस्या की रिपोर्ट करें या उसका अनुसरण करें
 
-*Camera Control Studio 1.1.0.* के लिए लिखा गया
+*Camera Control Studio 1.1.1.* के लिए लिखा गया
 
 [समस्या निवारण](TROUBLESHOOTING.md)
 
