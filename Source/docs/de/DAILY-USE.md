@@ -4,6 +4,8 @@
 
 *Geschrieben für Camera Control Studio 1.1.0.*
 
+![Camera Control Studio zeigt die Kamerataste als Joystick und wie gespeicherte Positionen den Bildausschnitt in einer Videokonferenz wechseln](../images/camera-control-studio-zoom-banner.png)
+
 [Fehlerbehebung](TROUBLESHOOTING.md)
 
 Starten Sie zuerst Ihr Streaming-Meeting, zum Beispiel in Zoom. Öffnen Sie anschließend **Camera Control Studio**.

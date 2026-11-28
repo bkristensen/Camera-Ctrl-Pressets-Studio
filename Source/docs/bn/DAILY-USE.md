@@ -4,6 +4,8 @@
 
 * Camera Control Studio 1.1.0.* এর জন্য লেখা
 
+![Camera Control Studio-তে মাঝের ক্যামেরা বোতামটি জয়স্টিকের মতো কাজ করে এবং সংরক্ষিত অবস্থান দিয়ে ভিডিও মিটিংয়ের ফ্রেম বদলানো যায়](../images/camera-control-studio-zoom-banner.png)
+
 [সমস্যা নিবারণ](TROUBLESHOOTING.md)
 
 জুমের মতো অ্যাপে আপনার স্ট্রিমিং মিটিং শুরু করুন। তারপর **Camera Control Studio** খুলুন।

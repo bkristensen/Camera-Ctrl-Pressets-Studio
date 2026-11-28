@@ -1,4 +1,4 @@
-![Main window with the direction wheel, zoom slider and preset list](Source/docs/images/screenshots/1.1.0/en/main.png)
+![Camera Control Studio showing how the centre camera button acts as a joystick and how presets change the framing in a video meeting](Source/docs/images/camera-control-studio-zoom-banner.png)
 
 # Camera Control Studio
 

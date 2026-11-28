@@ -146,7 +146,8 @@ namespace CameraControlStudio
             this.aboutTab = new System.Windows.Forms.TabPage();
             this.contactCategories = new CameraControlStudio.BlueTabControl();
             this.aboutInfoTab = new System.Windows.Forms.TabPage();
-            this.aboutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.aboutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.developerLogo = new System.Windows.Forms.PictureBox();
             this.credit = new System.Windows.Forms.Label();
             this.coffeeLink = new System.Windows.Forms.LinkLabel();
             this.versionLabel = new System.Windows.Forms.Label();
@@ -225,6 +226,7 @@ namespace CameraControlStudio
             this.contactCategories.SuspendLayout();
             this.aboutInfoTab.SuspendLayout();
             this.aboutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.developerLogo)).BeginInit();
             this.settingsLayout.SuspendLayout();
             this.settingsFooter.SuspendLayout();
             this.SuspendLayout();
@@ -1305,11 +1307,33 @@ namespace CameraControlStudio
             //
             resources.ApplyResources(this.aboutPanel, "aboutPanel");
             this.aboutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(52)))), ((int)(((byte)(94)))));
-            this.aboutPanel.Controls.Add(this.credit);
-            this.aboutPanel.Controls.Add(this.coffeeLink);
-            this.aboutPanel.Controls.Add(this.versionLabel);
-            this.aboutPanel.Controls.Add(this.openGuideButton);
+            this.aboutPanel.ColumnCount = 2;
+            this.aboutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            this.aboutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            this.aboutPanel.RowCount = 5;
+            this.aboutPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            this.aboutPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            this.aboutPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            this.aboutPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            this.aboutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            this.aboutPanel.Controls.Add(this.credit, 0, 0);
+            this.aboutPanel.Controls.Add(this.coffeeLink, 0, 1);
+            this.aboutPanel.Controls.Add(this.versionLabel, 0, 2);
+            this.aboutPanel.Controls.Add(this.openGuideButton, 0, 3);
+            this.aboutPanel.Controls.Add(this.developerLogo, 1, 0);
+            this.aboutPanel.SetRowSpan(this.developerLogo, 4);
             this.aboutPanel.Name = "aboutPanel";
+            //
+            // developerLogo
+            //
+            this.developerLogo.AccessibleName = "BK";
+            this.developerLogo.Image = ((System.Drawing.Image)(resources.GetObject("developerLogo.Image")));
+            this.developerLogo.Margin = new Padding(6, 8, 6, 8);
+            this.developerLogo.Name = "developerLogo";
+            this.developerLogo.Size = new Size(88, 88);
+            this.developerLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            this.developerLogo.TabStop = false;
+            //
             //
             // credit
             //
@@ -1482,6 +1506,7 @@ namespace CameraControlStudio
             this.aboutTab.ResumeLayout(false);
             this.contactCategories.ResumeLayout(false);
             this.aboutInfoTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.developerLogo)).EndInit();
             this.aboutPanel.ResumeLayout(false);
             this.aboutPanel.PerformLayout();
             this.settingsFooter.ResumeLayout(false);
@@ -1553,7 +1578,8 @@ namespace CameraControlStudio
         internal BlueButton copyProfile;
         internal BlueButton renameProfile;
         internal Label profileNote;
-        internal FlowLayoutPanel aboutPanel;
+        internal TableLayoutPanel aboutPanel;
+        private PictureBox developerLogo;
         internal Label credit;
         internal LinkLabel coffeeLink;
         internal Label versionLabel;

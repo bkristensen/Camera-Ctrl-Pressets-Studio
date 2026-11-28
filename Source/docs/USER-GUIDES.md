@@ -2,6 +2,8 @@
 
 *Written for Camera Control Studio 1.1.0.*
 
+![Camera Control Studio showing how the centre camera button acts as a joystick and how presets change the framing in a video meeting](images/camera-control-studio-zoom-banner.png)
+
 The installer and portable ZIP include the guides. Click **?** to open the local guides in your profile’s language. Change **Guide language** to read a different translation. Choose **Use online guides** to read the guide from the latest GitHub release. If that release has no translation, the viewer tries English. If the online guide is unavailable, it shows the local copy when available. Open Settings first to go straight to setup. Click **Print** to print the current guide with its title, print date and time, installed version, project address and page numbers.
 
 When Microsoft Store is your update source, the viewer looks for online guides for the installed version.

@@ -8,3 +8,6 @@ artifacts/
 
 # Local Partner Center identity for MSIX builds.
 /packaging/msix/Package.appxmanifest
+
+# Local Microsoft Partner Center listing exports.
+/listingData-*.csv

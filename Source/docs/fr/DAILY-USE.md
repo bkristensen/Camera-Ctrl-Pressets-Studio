@@ -4,6 +4,8 @@
 
 *Écrit pour Camera Control Studio 1.1.0.*
 
+![Camera Control Studio montre le bouton central utilisé comme joystick et le changement de cadrage avec les positions enregistrées pendant une visioconférence](../images/camera-control-studio-zoom-banner.png)
+
 [Dépannage](TROUBLESHOOTING.md)
 
 Démarrez votre réunion en streaming dans une application telle que Zoom. Ensuite, ouvrez **Camera Control Studio**.

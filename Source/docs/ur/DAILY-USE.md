@@ -4,6 +4,8 @@
 
 * Camera Control Studio 1.1.0.* کے لیے لکھا گیا
 
+![Camera Control Studio میں درمیانی کیمرا بٹن جوائے اسٹک کی طرح کام کرتا ہے اور محفوظ پوزیشنیں ویڈیو میٹنگ کا فریم بدلتی ہیں](../images/camera-control-studio-zoom-banner.png)
+
 [Troublehooting](TROUBLESHOOTING.md)
 
 زوم جیسی ایپ میں اپنی اسٹریمنگ میٹنگ شروع کریں۔ پھر **Camera Control Studio** کھولیں۔

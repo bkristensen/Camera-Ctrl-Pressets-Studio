@@ -32,6 +32,7 @@ Use the [build and release guide](en/BUILD-AND-RELEASE.md) for commands and outp
 
 - [ ] For a portable release, use `scripts/build.ps1`. For an Inno Setup installer, use `scripts/build-installer.ps1`, which also runs the portable build and tests. Verify the version shown by the installer and the app.
 - [ ] For a Store release, follow the [Store checklist](MSIX-AND-STORE.md). Test the package types you plan to publish on Windows.
+- [ ] Update the [Microsoft Store listing](STORE-LISTING.md) in all 12 languages. Set the version, refresh the release notes, and review descriptions, features and keywords.
 - [ ] If signing, verify the Authenticode signatures on the app executable and installer where applicable. Label unsigned downloads clearly. Generate SHA-256 hashes after final signing and packaging.
 - [ ] Link to the [Code signing policy](SIGNPATH.md) in the GitHub release notes. For SignPath releases, verify build provenance and manual approval and credit SignPath for files it signed.
 - [ ] Publish source, licence, release notes, hashes and binaries together. Do not claim unperformed hardware tests or Store approval.

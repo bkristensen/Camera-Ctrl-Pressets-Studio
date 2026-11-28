@@ -4,6 +4,8 @@
 
 *Camera Control Studio 1.1.0.* के लिए लिखा गया
 
+![Camera Control Studio में बीच का कैमरा बटन जॉयस्टिक की तरह काम करता है और सहेजी गई पोज़िशन वीडियो मीटिंग का फ़्रेम बदलती हैं](../images/camera-control-studio-zoom-banner.png)
+
 [समस्या निवारण](TROUBLESHOOTING.md)
 
 ज़ूम जैसे ऐप में अपनी स्ट्रीमिंग मीटिंग शुरू करें। फिर **Camera Control Studio** खोलें।

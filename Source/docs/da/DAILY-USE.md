@@ -4,6 +4,8 @@
 
 *Skrevet til Camera Control Studio 1.1.0.*
 
+![Camera Control Studio viser kameraknappen som joystick og hvordan gemte positioner skifter udsnittet i et videomøde](../images/camera-control-studio-zoom-banner.png)
+
 [Fejlfinding](TROUBLESHOOTING.md)
 
 Start mødet i f.eks. Zoom. Åbn derefter **Camera Control Studio**.

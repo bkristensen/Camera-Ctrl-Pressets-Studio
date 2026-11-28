@@ -4,6 +4,8 @@
 
 *为Camera Control Studio 1.1.0.*编写
 
+![Camera Control Studio 展示如何把中央摄像头按钮当作摇杆，以及如何用预设切换视频会议中的取景](../images/camera-control-studio-zoom-banner.png)
+
 [故障排除](TROUBLESHOOTING.md)
 
 在 Zoom 等应用程序中开始流媒体会议。然后打开**Camera Control Studio**。

@@ -3238,7 +3238,7 @@
     <value>aboutPanel</value>
   </data>
   <data name="&gt;&gt;aboutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;aboutPanel.Parent" xml:space="preserve">
     <value>aboutInfoTab</value>
@@ -3891,9 +3891,6 @@
   <data name="aboutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="aboutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
-    <value>TopDown</value>
-  </data>
   <data name="aboutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -3905,9 +3902,6 @@
   </data>
   <data name="aboutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="aboutPanel.WrapContents" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="credit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3977,6 +3971,9 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Settings for Camera Control Studio</value>
+  </data>
+  <data name="developerLogo.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../Assets/BkDeveloperLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="$this.Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>../Assets/SettingsWindow.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

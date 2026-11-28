@@ -4,6 +4,8 @@
 
 *Ditulis untuk Camera Control Studio 1.1.0.*
 
+![Camera Control Studio menunjukkan tombol tengah sebagai joystick dan cara posisi tersimpan mengubah bingkai saat rapat video](../images/camera-control-studio-zoom-banner.png)
+
 [Pemecahan Masalah](TROUBLESHOOTING.md)
 
 Mulai rapat streaming Anda di aplikasi seperti Zoom. Kemudian buka **Camera Control Studio**.

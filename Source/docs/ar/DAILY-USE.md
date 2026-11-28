@@ -4,6 +4,8 @@
 
 * مكتوب لـ Camera Control Studio 1.1.0.*
 
+![يوضح Camera Control Studio كيف يعمل زر الكاميرا الأوسط كعصا تحكم وكيف تغيّر المواضع المحفوظة اللقطة في اجتماع فيديو](../images/camera-control-studio-zoom-banner.png)
+
 [استكشاف الأخطاء وإصلاحها](TROUBLESHOOTING.md)
 
 ابدأ اجتماع البث الخاص بك في تطبيق مثل Zoom. ثم افتح **Camera Control Studio**.

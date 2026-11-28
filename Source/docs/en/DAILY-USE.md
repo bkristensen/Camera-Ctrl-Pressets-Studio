@@ -4,6 +4,8 @@
 
 *Written for Camera Control Studio 1.1.0.*
 
+![Camera Control Studio showing how the centre camera button acts as a joystick and how presets change the framing in a video meeting](../images/camera-control-studio-zoom-banner.png)
+
 [Troubleshooting](TROUBLESHOOTING.md)
 
 Start your streaming meeting in an app such as Zoom. Then open **Camera Control Studio**.

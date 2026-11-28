@@ -4,6 +4,8 @@
 
 *Escrito para Camera Control Studio 1.1.0.*
 
+![Camera Control Studio mostra o botão central como joystick e como as posições salvas mudam o enquadramento em uma videochamada](../images/camera-control-studio-zoom-banner.png)
+
 [Solução de problemas](TROUBLESHOOTING.md)
 
 Inicie sua reunião de streaming em um aplicativo como o Zoom. Em seguida, abra **Camera Control Studio**.
